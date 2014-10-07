@@ -6,7 +6,7 @@
     "active": "true",
     "children": [
       {
-        "name": "Community",
+        "name": "Ecosystem",
         "mnemo": "QM_COMMUNITY",
         "description": "The degree of maturity for the community around the project: is it active, diversified, responsive?",
         "active": "true",
@@ -228,20 +228,11 @@
                 ]
               }
             ]
-          }
-        ]
-      },
-      {
-        "name": "Usage",
-        "mnemo": "QM_USAGE",
-        "description": "The degree of usage of the project: is it widely used, by different people in different context?",
-        "active": "true",
-        "type": "attribute",
-        "children": [
+          },
           {
-            "name": "Installed base",
-            "mnemo": "QM_INSTALL_BASE",
-            "description": "How much is really used the software? In different contexts, in local or distributed teams, etc.",
+            "name": "Usage",
+            "mnemo": "QM_USAGE",
+            "description": "The degree of usage of the project: is it widely used, by different people in different context?",
             "type": "attribute",
             "active": "true",
             "children": [

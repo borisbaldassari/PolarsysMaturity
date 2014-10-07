@@ -105,7 +105,7 @@
       {
         "name": "Installations",
         "mnemo": "INSTALL",
-        "description": "The level of usage of the product.",
+        "description": "The level of usage of the product. How much is really used the software? In different contexts, in local or distributed teams, etc.",
         "composition": "SURVEY_INSTALL MKT_INSTALL_SUCCESS",
         "active": "false"
       },

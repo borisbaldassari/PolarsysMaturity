@@ -4,7 +4,7 @@
     "active": "true",
     "children": [
       {
-        "name": "Community",
+        "name": "Ecosystem",
         "mnemo": "QM_COMMUNITY",
         "active": "true",
         "children": [
@@ -31,18 +31,11 @@
           {
             "name": "Visibility",
             "mnemo": "QM_VISIBILITY",
-            "active": "true"
-          }
-        ]
-      },
-      {
-        "name": "Usage",
-        "mnemo": "QM_USAGE",
-        "active": "true",
-        "children": [
+            "active": "false"
+          },
           {
-            "name": "Installed base",
-            "mnemo": "QM_INSTALL_BASE",
+            "name": "Usage",
+            "mnemo": "QM_USAGE",
             "active": "true"
           },
           {
@@ -59,11 +52,11 @@
         "children": [
           {
             "name": "Configuration Management",
-            "active": "false"
+            "active": "true"
           },
           {
             "name": "Change Management",
-            "active": "false"
+            "active": "true"
           },
           {
             "name": "Intellectual Property Management",
@@ -71,11 +64,11 @@
           },
           {
             "name": "Planning Management",
-            "active": "false"
+            "active": "true"
           },
           {
             "name": "Test Management",
-            "active": "false"
+            "active": "true"
           }
         ]
       },
