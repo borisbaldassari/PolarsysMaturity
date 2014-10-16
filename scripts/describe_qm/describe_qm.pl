@@ -81,10 +81,16 @@ sub describe_metric($) {
     my $metric_desc = $metric->{"description"};
 
     my $text = "<h4>$metric_name ($mnemo)</h4>\n";
-    $text .= "<p class=\"desc\">Description: $metric_desc</p>\n";
+    $text .= "<p class=\"desc\">Description:</p>\n";
+    foreach my $desc (@{$metric_desc}) {
+	$text .= "<p class=\"desc\">$desc</p>\n";
+    }
 
     $full_mw_metrics .= "* $metric_name ($mnemo)\n";
-    $full_mw_metrics .= ":Description: $metric_desc\n";
+    $full_mw_metrics .= ":Description: \n";
+    foreach my $desc (@{$metric_desc}) {
+	$text .= ":$desc\n";
+    }
 
     if ( exists $metric->{"composition"} ) {
 	my @compo_metrics =  split( " ", $metric->{"composition"} );

@@ -1,211 +1,232 @@
 = Repository: Code Metrics =
 
 * Maximum depth of nesting (NEST)
-:Description: The maximum depth of nesting of the control flow structure found in the function. 
+:Description: 
 
 * Number of files (FILES)
-:Description: The number of code files (e.g. .java for Java) in code hierarchy. Often used to build indexes.
+:Description: 
 
 * Comment rate (COMR)
-:Description: The ratio of source lines of code on the the number of comment lines of code.
+:Description: 
 
 * Number of attributes (ATTRS)
-:Description: Total number of attributes defined in the class. 
+:Description: 
 
 * Number of methods (METHS)
-:Description: Total number of methods defined in the class.
+:Description: 
 
 * Number of public attributes (ATTRS_PUBLIC)
-:Description: Total number of public attributes defined in the class. 
+:Description: 
 
 * Number of public methods (METHS_PUBLIC)
-:Description: Total number of public methods defined in the class.
+:Description: 
 
 * Depth of Inheritance Tree (MDIT)
-:Description: Maximum depth of inheritance tree in the artefact.
+:Description: 
 
 * Source Lines Of Code (SLOC)
 :Description: 
 
 * Function cloning (FU_CLONE)
-:Description: The amount of duplicated lines in the code.
+:Description: 
 
 * Cyclomatic Complexity (VG)
-:Description: The number of execution paths found in the function.
+:Description: 
 
 * Number of distinct operands (DOPD)
-:Description: The number of distinct operands found in the function.
+:Description: 
 
 * Number of distinct operators (DOPT)
-:Description: The number of distinct operators found in the function.
+:Description: 
 
 * Total number of operands (TOPD)
-:Description: The total number of operands found in the function.
+:Description: 
 
 * Total number of operators (TOPT)
-:Description: The total number of operators found in the function.
+:Description: 
 
 * Number of non-conformities for changeability (NCC_CHA)
-:Description: The number of violations to rules that impact changeability in the artefact.
+:Description: 
 
 * Number of violated rules for changeability (RKO_CHA)
-:Description: The number of changeability rules that have at least one violation on the artefact.
+:Description: 
 
 * Number of rules for changeability (RULES_CHA)
-:Description: The total number of rules checked for changeability.
+:Description: 
 
 * Non conformities index for changeability (NCC_CHA_IDX)
-:Description: The total number of violations to rules that impact changeability in the artefact, divided by the number of files.
+:Description: 
 
 * Adherence to changeability rules (ROKR_CHA)
-:Description: Ratio of conform changeability practices on the number of checked changeability practices.
+:Description: 
 
 * Number of non-conformities for analysability (NCC_ANA)
-:Description: The number of violations to rules that impact analysability in the artefact.
+:Description: 
 
 * Number of violated rules for analysability (RKO_ANA)
-:Description: The number of analysability rules that have at least one violation on the artefact.
+:Description: 
 
 * Number of rules for analysability (RULES_ANA)
-:Description: The total number of rules checked for analysability.
+:Description: 
 
 * Non conformities index for analysability (NCC_ANA_IDX)
-:Description: The total number of violations to rules that impact analysability in the artefact, divided by the number of files.
+:Description: 
 
 * Adherence to analysability rules (ROKR_ANA)
-:Description: Ratio of conform analysability practices on the number of checked analysability practices.
+:Description: 
 
 * Number of non-conformities for reliability (NCC_REL)
-:Description: The number of violations to rules that impact reliability in the artefact.
+:Description: 
 
 * Number of violated rules for reliability (RKO_REL)
-:Description: The number of reliability rules that have at least one violation on the artefact.
+:Description: 
 
 * Number of rules for reliability (RULES_REL)
-:Description: The total number of rules checked for reliability.
+:Description: 
 
 * Non conformities index for reliability (NCC_REL_IDX)
-:Description: The total number of violations to rules that impact reliability in the artefact, divided by the number of files.
+:Description: 
 
 * Adherence to reliability rules (ROKR_REL)
-:Description: Ratio of conform reliability practices on the number of checked reliability practices.
+:Description: 
 
 * Number of non-conformities for reusability (NCC_REU)
-:Description: The number of violations to rules that impact reusability in the artefact.
+:Description: 
 
 * Number of violated rules for reusability (RKO_REU)
-:Description: The number of reusability rules that have at least one violation on the artefact.
+:Description: 
 
 * Number of rules for reusability (RULES_REU)
-:Description: The total number of rules checked for reusability.
+:Description: 
 
 * Non conformities index for reusability (NCC_REU_IDX)
-:Description: The total number of violations to rules that impact reusability in the artefact, divided by the number of files.
+:Description: 
 
 * Adherence to reusability rules (ROKR_REU)
-:Description: Ratio of conform reusability practices on the number of checked reusability practices.
+:Description: 
 
 * Percentage of lines of code covered by tests (TST_COV_LINES)
-:Description: The percentage of source lines of code that is exercised by the tests.
+:Description: 
 
-* Number of tests relative to the code size (TST_VOL_RATIO)
-:Description: The total number of test cases for the product.
+* Percentage of branches covered by tests (TST_COV_BRANCHES)
+:Description: 
 
-* Test success rate (TST_SUCCESS_1W)
-:Description: The percentage of failed tests during the last execution of the test plan.
+* Number of tests relative to the code size (TST_VOL_IDX)
+:Description: 
+
+* Test success density (TST_SUCCESS_LAST)
+:Description: 
 
 = Repository: Communication Metrics =
 
 * Developer ML posts (MLS_DEV_VOL_1M)
-:Description: Total number of posts on the developer mailing list during the last month.
+:Description: 
 
 * Developer ML authors (MLS_DEV_AUTH_1M)
-:Description: Number of distinct authors (according to their email address) on the developer mailing list during last month.
+:Description: 
 
 * Developer ML response time (MLS_DEV_RESP_TIME_MED_1M)
-:Description: Median time of first reply to questions in the developer mailing list during last week.
+:Description: 
 
 * Developer ML response ratio (MLS_DEV_RESP_RATIO_1M)
-:Description: Average number of responses for a question in the developer mailing list during last month.
+:Description: 
 
 * Developer ML subjects (MLS_DEV_SUBJ_1M)
-:Description: Number of threads in the developer mailing list during last month
+:Description: 
 
 * User ML posts (MLS_USR_VOL_1M)
-:Description: Total number of posts on the user mailing list during the last month.
+:Description: 
 
 * User ML authors (MLS_USR_AUTH_1M)
-:Description: Number of distinct authors (according to their email address) on the developer mailing list during last month.
-
-* User ML response ratio (MLS_USR_RESP_RATIO_1M)
-:Description: Average number of responses for a question in the user mailing list during last month.
-
-* User ML subjects (MLS_USR_SUBJ_1M)
-:Description: Number of threads in the user mailing list during last month
+:Description: 
 
 * User ML response time (MLS_USR_RESP_TIME_MED_1M)
-:Description: Median time of first reply to questions in the user mailing list during last week.
+:Description: 
+
+* User ML response ratio (MLS_USR_RESP_RATIO_1M)
+:Description: 
+
+* User ML subjects (MLS_USR_SUBJ_1M)
+:Description: 
 
 = Repository: Configuration Management Metrics =
 
 * SCM Commits (SCM_COMMITS_1M)
-:Description: Total number of commits registered on the artefact during the last month.
+:Description: 
 
 * Files committed (SCM_COMMITTED_FILES_1M)
-:Description: Total number of files found in all commits that happened during the last month.
+:Description: 
 
 * SCM committers (SCM_COMMITTERS_1M)
-:Description: Total number of different user logins found in commits during last month.
+:Description: 
 
 * File stability index (SCM_STABILITY_1M)
-:Description: Average number of commits on files during the last month.
+:Description: 
 
 = Repository: Issue Tracking System Metrics =
 
 * Median time to fix bug (ITS_FIX_MED_1M)
-:Description: Median time between the creation of an bug and its closure. Bugs are identified according to the registered type of issue.
+:Description: 
 
 * Number of open bugs (ITS_BUGS_OPEN)
-:Description: Number of bugs in an open status at the time of analysis.
+:Description: 
 
-* Number of open requests during last month (ITS_ISSUES_OPEN_1M)
-:Description: Number of change requests in an open status during last month.
+* Number of issues opened during last month (ITS_ISSUES_OPEN_1M)
+:Description: 
 
-* Number of distinct request openers during last month (ITS_ISSUES_OPENERS_1M)
-:Description: Number of bugs in an open status during last month.
+* Number of issue openers during last month (ITS_ISSUES_OPENERS_1M)
+:Description: 
 
 * ITS updates (ITS_UPDATES_1M)
-:Description: The number of updates to the issue tracking system during last month.
+:Description: 
 
 * ITS authors (ITS_AUTH_1M)
-:Description: The number of different authors (according to their login) have contributed to the issue tracking system during last month.
+:Description: 
 
 * Defect density (ITS_BUGS_DENSITY)
-:Description: Overall total number of bugs on product divided by 1000's of lines (KLOC).
+:Description: 
 
 = Repository: Process Repository Metrics =
 
 * License identification (LIC_IDENT)
-:Description: Is there a list of the different licences used in the product?
+:Description: 
 
 * IP log code coverage (IP_LOG_COV)
-:Description: Total number of commits registered on the artefact during the last month.
+:Description: 
 
 * Project is on time for next milestone (PLAN_NEXT_MILESTONE)
-:Description: Is the project on time for the next milestone?
+:Description: 
 
 * Number of milestones (PLAN_MILESTONES_VOL)
-:Description: The number of milestones since the last official release.
+:Description: 
 
-* Milestone success rate (PLAN_MILESTONES_SUCCESS)
-:Description: What is the percentage of successful milestones over the past 10 milestones?
+* Milestone success rate (PLAN_REVIEWS_SUCCESS_RATE)
+:Description: 
 
-* SCM information (PUB_SCM_INFO_CPI)
-:Description: The number of documents published for the usage, access, and conventions of the software configuration management system.
+* SCM information (PUB_SCM_INFO_PMI)
+:Description: 
 
-* ITS information (PUB_ITS_INFO_CPI)
-:Description: The number of documents published for the usage, access, and conventions of the issue tracking system.
+* ITS information (PUB_ITS_INFO_PMI)
+:Description: 
 
 * Installation survey (SURVEY_INSTALL)
-:Description: A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.
+:Description: 
+
+* Number of favourites on the Marketplace (MKT_FAV)
+:Description: 
+
+* Number of successfull installs on the Marketplace (MKT_INSTALL_SUCCESS_1M)
+:Description: 
+
+* Number of failed install on the Marketplace (MKT_INSTALL_FAILED_1M)
+:Description: 
+
+* Number of downloads on update site (DL_UPDATE_SITE_1M)
+:Description: 
+
+* Number of downloads on the web site (DL_REPO_1M)
+:Description: 
+
+* Number of publications (PUB_CONF_VOL)
+:Description: 
 
