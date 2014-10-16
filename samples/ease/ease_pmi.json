@@ -1,0 +1,86 @@
+{
+    "projects": {
+        "technology.ease": {
+            "title": "Eclipse Advanced Scripting Environment (EASE)",
+            "description": [
+                {
+                    "value": "<p>EASE allows the execution of script code (using scripting languages such as JS, Python, ...) within the context of the Eclipse Platform/RCP. As they are running in the same JRE as Eclipse itself, these scripts have direct access to any class of your application and may interact with your workbench.</p>\r\n<p>Through keywords within header data, scripts might be integrated seamlessly into the UI as toolbar and/or menu contributions. Thus the functionality could be extended by providing scripts only. No need to build, export and install a new feature, just provide a script and add it to your application at runtime.</p>\r\n<p>Scripting allows to easily extend an existing application, helps in automating everyday tasks and aids in rapid prototyping during application development.&nbsp;</p>\r\n<p>Following goals for the project have been defined:</p>\r\n<ol>\r\n\t<li>\r\n\t\tExecute scripts within the running IDE.</li>\r\n\t<li>\r\n\t\tSupport multiple script languages via a&nbsp;generic service that creates (multiple) script interpreters.</li>\r\n\t<li>\r\n\t\tScripts are capable of interacting with the IDE, like accessing classes on the Eclipse/JRE classpath and calling methods upon them.</li>\r\n\t<li>\r\n\t\tSeamless integration of scripts into UI</li>\r\n\t<li>\r\n\t\tScripts should be attachable to toolbars and menus</li>\r\n\t<li>\r\n\t\tDebuggers are aware of the script language/Java classes co-existence by providing variables access</li>\r\n\t<li>\r\n\t\tProvide means to sign scripts.</li>\r\n</ol>\r\n",
+                    "summary": "",
+                    "format": "full_html",
+                    "safe_value": "<p>EASE allows the execution of script code (using scripting languages such as JS, Python, ...) within the context of the Eclipse Platform/RCP. As they are running in the same JRE as Eclipse itself, these scripts have direct access to any class of your application and may interact with your workbench.</p>\n<p>Through keywords within header data, scripts might be integrated seamlessly into the UI as toolbar and/or menu contributions. Thus the functionality could be extended by providing scripts only. No need to build, export and install a new feature, just provide a script and add it to your application at runtime.</p>\n<p>Scripting allows to easily extend an existing application, helps in automating everyday tasks and aids in rapid prototyping during application development. </p>\n<p>Following goals for the project have been defined:</p>\n<ol><li>\n\t\tExecute scripts within the running IDE.</li>\n<li>\n\t\tSupport multiple script languages via a generic service that creates (multiple) script interpreters.</li>\n<li>\n\t\tScripts are capable of interacting with the IDE, like accessing classes on the Eclipse/JRE classpath and calling methods upon them.</li>\n<li>\n\t\tSeamless integration of scripts into UI</li>\n<li>\n\t\tScripts should be attachable to toolbars and menus</li>\n<li>\n\t\tDebuggers are aware of the script language/Java classes co-existence by providing variables access</li>\n<li>\n\t\tProvide means to sign scripts.</li>\n</ol>",
+                    "safe_summary": ""
+                }
+            ],
+            "parent_project": [
+                {
+                    "id": "technology"
+                }
+            ],
+            "bugzilla": [ ],
+            "build_url": [ ],
+            "dev_list": [ ],
+            "documentation_url": [ ],
+            "download_url": [ ],
+            "gettingstarted_url": [ ],
+            "id": [
+                {
+                    "value": "technology.ease",
+                    "format": null,
+                    "safe_value": "technology.ease"
+                }
+            ],
+            "licenses": [
+                {
+                    "name": "Eclipse Public License 1.0",
+                    "url": "http://www.eclipse.org/org/documents/epl-v10.php"
+                }
+            ],
+            "mailing_lists": [ ],
+            "other_links": [ ],
+            "plan_url": [ ],
+            "proposal_url": [ ],
+            "tags": [ ],
+            "website_url": [ ],
+            "wiki_url": [ ],
+            "scope": [
+                {
+                    "value": "<p>EASE provides a uniform environment to create, store, modify and execute user generated scripts that run within the Eclipse RCP context.</p>\r\n<p>Such scripts typically make use of the components of the running Eclipse application, although this is not mandatory.</p>\r\n<p>Included components:</p>\r\n<ul>\r\n\t<li>\r\n\t\tscript interpreters for dedicated scripting languages<br />\r\n\t\t(such as rhino, jython, groovy, ruby, nashorn - depending on their licensing policy)</li>\r\n\t<li>\r\n\t\tUI components<br />\r\n\t\tlike run targets, debugger, script management, consoles and workspace integration</li>\r\n\t<li>\r\n\t\tcommon libraries to be used by script interpreters for most common used tasks<br />\r\n\t\t(workspace interaction, UI interaction)</li>\r\n\t<li>\r\n\t\tSecurity mechanisms allowing to sign/verify scripts<br />\r\n\t\tas scripts may be consumed from external sources, users should be able to execute signed scripts only or get warnings on unsigned scripts</li>\r\n</ul>\r\n",
+                    "format": "full_html",
+                    "safe_value": "<p>EASE provides a uniform environment to create, store, modify and execute user generated scripts that run within the Eclipse RCP context.</p>\n<p>Such scripts typically make use of the components of the running Eclipse application, although this is not mandatory.</p>\n<p>Included components:</p>\n<ul><li>\n\t\tscript interpreters for dedicated scripting languages<br />\n\t\t(such as rhino, jython, groovy, ruby, nashorn - depending on their licensing policy)</li>\n<li>\n\t\tUI components<br />\n\t\tlike run targets, debugger, script management, consoles and workspace integration</li>\n<li>\n\t\tcommon libraries to be used by script interpreters for most common used tasks<br />\n\t\t(workspace interaction, UI interaction)</li>\n<li>\n\t\tSecurity mechanisms allowing to sign/verify scripts<br />\n\t\tas scripts may be consumed from external sources, users should be able to execute signed scripts only or get warnings on unsigned scripts</li>\n</ul>"
+                }
+            ],
+            "source_repo": [ ],
+            "state": [
+                {
+                    "value": "Incubating"
+                }
+            ],
+            "build_description": [ ],
+            "build_doc": [ ],
+            "build_technologies": [
+                {
+                    "tid": "8"
+                },
+                {
+                    "tid": "7"
+                },
+                {
+                    "tid": "6"
+                }
+            ],
+            "forums": [ ],
+            "logo": [ ],
+            "techology_types": [ ],
+            "contrib_message": [ ],
+            "downloads": [ ],
+            "downloads_message": [ ],
+            "marketplace": [ ],
+            "update_sites": [ ],
+            "related": [ ],
+            "team_project_sets": [ ],
+            "github_repos": [ ],
+            "documentation": [ ],
+            "working_group": [ ]
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Project metrics",
+    "children": [
+        {
+            "name": "PUB_ITS_INFO_PMI",
+            "value": "5"
+        }, 
+        {
+            "name": "PUB_SCM_INFO_PMI",
+            "value": "5"
+        }, 
+        {
+            "name": "PLAN_MILESTONES_VOL",
+            "value": "21"
+        }, 
+        {
+            "name": "PLAN_REVIEWS_SUCCESS_RATE",
+            "value": "33"
+        }, 
+        {
+            "name": "MKT_FAV",
+            "value": "0"
+        }, 
+        {
+            "name": "MKT_INSTALL_SUCCESS_1M",
+            "value": "0"
+        }, 
+        {
+            "name": "MKT_INSTALL_FAILED_1M",
+            "value": "0"
+        }, 
+        {
+            "name": "DL_UPDATE_SITE_1M",
+            "value": "0"
+        },
+        {
+            "name": "DL_REPO_1M",
+            "value": "0"
+        }
+    ]
+}

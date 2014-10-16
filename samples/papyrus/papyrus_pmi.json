@@ -1,0 +1,1400 @@
+ {
+    "projects": {
+        "modeling.mdt.papyrus": {
+            "title": "Papyrus",
+            "description": [
+                {
+                    "value": "<p>Papyrus is a component of the Model Development Tools (MDT) subproject aiming at providing an integrated, user-consumable environment for editing any kind of EMF model and particularly supporting UML and related modeling languages such as SysML and MARTE. Papyrus provides diagram editors for EMF-based modeling languages amongst them UML 2 and SysML and the glue required for integrating these editors (GMF-based or not) with other MBD and MDSD tools. It also offers a very advanced support of UML profiles that enables users to define editors for DSLs based on the UML 2 standard and its extension mechanisms. The main feature of Papyrus regarding this latter point is a set of very powerful customization mechanisms which can be leveraged to create user-defined Papyrus perspectives and give it the same look and feel as a native DSL editor.</p>\r\n<p>&nbsp;</p>\r\n<p>For more details on Papyrus, see the <a href=\"http://www.eclipse.org/papyrus\">home page</a> or the <a href=\"http://wiki.eclipse.org/MDT/Papyrus\">Wiki</a>.</p>\r\n",
+                    "summary": "",
+                    "format": "filtered_html",
+                    "safe_value": "<p>Papyrus is a component of the Model Development Tools (MDT) subproject aiming at providing an integrated, user-consumable environment for editing any kind of EMF model and particularly supporting UML and related modeling languages such as SysML and MARTE. Papyrus provides diagram editors for EMF-based modeling languages amongst them UML 2 and SysML and the glue required for integrating these editors (GMF-based or not) with other MBD and MDSD tools. It also offers a very advanced support of UML profiles that enables users to define editors for DSLs based on the UML 2 standard and its extension mechanisms. The main feature of Papyrus regarding this latter point is a set of very powerful customization mechanisms which can be leveraged to create user-defined Papyrus perspectives and give it the same look and feel as a native DSL editor.<br />\n <br />\nFor more details on Papyrus, see the <a href=\"http://www.eclipse.org/papyrus\">home page</a> or the <a href=\"http://wiki.eclipse.org/MDT/Papyrus\">Wiki</a>.</p>\n",
+                    "safe_summary": ""
+                }
+            ],
+            "parent_project": [
+                {
+                    "id": "modeling.mdt"
+                }
+            ],
+            "bugzilla": [
+                {
+                    "product": "MDT.Papyrus",
+                    "component": "",
+                    "create_url": "https://bugs.eclipse.org/bugs/enter_bug.cgi?product=MDT.Papyrus",
+                    "query_url": "https://bugs.eclipse.org/bugs/buglist.cgi?product=MDT.Papyrus"
+                }
+            ],
+            "build_url": [
+                {
+                    "url": "https://wiki.eclipse.org/Papyrus_Developer_Guide/Build_Process",
+                    "title": "Papyrus build - Wiki Page",
+                    "attributes": [ ]
+                }
+            ],
+            "dev_list": {
+                "name": "mdt-papyrus.dev",
+                "email": "mdt-papyrus.dev@eclipse.org",
+                "url": "https://dev.eclipse.org/mailman/listinfo/mdt-papyrus.dev"
+            },
+            "documentation_url": [
+                {
+                    "url": "http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php",
+                    "title": null,
+                    "attributes": [ ]
+                }
+            ],
+            "download_url": [
+                {
+                    "url": "http://www.eclipse.org/modeling/mdt/papyrus/downloads/",
+                    "title": null,
+                    "attributes": [ ]
+                }
+            ],
+            "gettingstarted_url": [
+                {
+                    "url": "http://www.eclipse.org/papyrus/updates/index.php",
+                    "title": null,
+                    "attributes": [ ]
+                }
+            ],
+            "id": [
+                {
+                    "value": "modeling.mdt.papyrus",
+                    "format": null,
+                    "safe_value": "modeling.mdt.papyrus"
+                }
+            ],
+            "licenses": [
+                {
+                    "name": "Eclipse Public License 1.0",
+                    "url": "http://www.eclipse.org/org/documents/epl-v10.php"
+                }
+            ],
+            "mailing_lists": [ ],
+            "other_links": [ ],
+            "plan_url": [
+                {
+                    "url": "http://www.eclipse.org/papyrus/project-info/plan_luna.xml",
+                    "title": null,
+                    "attributes": [ ]
+                }
+            ],
+            "proposal_url": [ ],
+            "tags": [
+                {
+                    "tid": "109"
+                },
+                {
+                    "tid": "33"
+                },
+                {
+                    "tid": "110"
+                },
+                {
+                    "tid": "111"
+                },
+                {
+                    "tid": "112"
+                }
+            ],
+            "website_url": [
+                {
+                    "url": "http://www.eclipse.org/papyrus",
+                    "title": null,
+                    "attributes": [ ]
+                }
+            ],
+            "wiki_url": [
+                {
+                    "url": "http://wiki.eclipse.org/MDT/Papyrus",
+                    "title": null,
+                    "attributes": [ ]
+                }
+            ],
+            "scope": [ ],
+            "source_repo": [
+                {
+                    "type": "git",
+                    "name": "papyrus",
+                    "path": "/gitroot/papyrus/org.eclipse.papyrus.git",
+                    "url": "http://git.eclipse.org/c/papyrus/org.eclipse.papyrus.git"
+                }
+            ],
+            "state": [
+                {
+                    "value": "Regular"
+                }
+            ],
+            "build_description": [ ],
+            "build_doc": [ ],
+            "build_technologies": [
+                {
+                    "tid": "10"
+                },
+                {
+                    "tid": "8"
+                },
+                {
+                    "tid": "7"
+                },
+                {
+                    "tid": "6"
+                }
+            ],
+            "forums": [
+                {
+                    "name": "eclipse.papyrus",
+                    "description": "Main news group of MDT Papyrus",
+                    "url": "http://www.eclipse.org/forums/eclipse.papyrus"
+                }
+            ],
+            "logo": [
+                {
+                    "fid": "9",
+                    "uid": "1974",
+                    "filename": "Papyrus.gif",
+                    "uri": "public://Papyrus.gif",
+                    "filemime": "image/gif",
+                    "filesize": "4318",
+                    "status": "1",
+                    "timestamp": "1363982544",
+                    "rdf_mapping": [ ],
+                    "alt": "",
+                    "title": "",
+                    "width": "200",
+                    "height": "123"
+                }
+            ],
+            "techology_types": [
+                {
+                    "tid": "27"
+                }
+            ],
+            "contrib_message": [ ],
+            "downloads": [ ],
+            "downloads_message": [ ],
+            "marketplace": [ ],
+            "update_sites": [
+                {
+                    "url": "http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/luna",
+                    "title": "1.0.x - Luna Release (Main + Extra)",
+                    "attributes": [ ]
+                },
+                {
+                    "url": "http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/luna",
+                    "title": "1.0.x - Luna Nightly (Main + Extra)",
+                    "attributes": [ ]
+                }
+            ],
+            "related": [ ],
+            "team_project_sets": [ ],
+            "github_repos": [ ],
+            "documentation": [ ],
+            "working_group": [ ],
+            "releases": [
+                {
+                    "title": "1.1.0",
+                    "description": [
+                        {
+                            "value": "<p>Papyrus 1.1 will be focussed on the following topics:</p>\r\n<ul>\r\n\t<li>\r\n\t\tImproved diagram customizability and extensibility</li>\r\n\t<li>\r\n\t\tUsability and ergonomy</li>\r\n\t<li>\r\n\t\tSupport for hierarchic table editors (And other table improvements)</li>\r\n\t<li>\r\n\t\tTooling &amp; Runtime for the UML-RT profile</li>\r\n</ul>\r\n",
+                            "summary": "",
+                            "format": "full_html",
+                            "safe_value": "<p>Papyrus 1.1 will be focussed on the following topics:</p>\n<ul><li>\n\t\tImproved diagram customizability and extensibility</li>\n<li>\n\t\tUsability and ergonomy</li>\n<li>\n\t\tSupport for hierarchic table editors (And other table improvements)</li>\n<li>\n\t\tTooling &amp; Runtime for the UML-RT profile</li>\n</ul>",
+                            "safe_summary": ""
+                        }
+                    ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [
+                        {
+                            "value": "<p>The Papyrus 1.1.0 project will be developed in parallel, and released simultaneously, with the following projects. As stated above, each milestone release of the Papyrus 1.1.0 project will be compatible with the corresponding milestones for each of these projects, and delivered the appropriate offset.</p>\r\n<ul>\r\n\t<li>\r\n\t\tEclipse Platform SDK version 4.5</li>\r\n\t<li>\r\n\t\tEclipse Modeling Framework (EMF) version 2.11</li>\r\n\t<li>\r\n\t\tModel Development Tools (MDT) UML2 version 5.1</li>\r\n\t<li>\r\n\t\tGraphical Modeling Framework (GMF) version 1.7</li>\r\n</ul>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>The Papyrus 1.1.0 project will be developed in parallel, and released simultaneously, with the following projects. As stated above, each milestone release of the Papyrus 1.1.0 project will be compatible with the corresponding milestones for each of these projects, and delivered the appropriate offset.</p>\n<ul><li>\n\t\tEclipse Platform SDK version 4.5</li>\n<li>\n\t\tEclipse Modeling Framework (EMF) version 2.11</li>\n<li>\n\t\tModel Development Tools (MDT) UML2 version 5.1</li>\n<li>\n\t\tGraphical Modeling Framework (GMF) version 1.7</li>\n</ul>"
+                        }
+                    ],
+                    "date": [
+                        {
+                            "value": "2015-06-24 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [
+                        {
+                            "value": "<p>The release deliverables have the same form as is found in most Eclipse projects, namely:</p>\r\n<ul>\r\n\t<li>\r\n\t\tPapyrus source code release, available as versions tagged &quot;1.1.0&quot; in the project&#39;s GIT repository.</li>\r\n\t<li>\r\n\t\tPapyrus SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</li>\r\n\t<li>\r\n\t\tPapyrus runtime binary distribution (downloadable and update site).</li>\r\n\t<li>\r\n\t\tPapyrus stand-alone binary distribution (downloadable).</li>\r\n\t<li>\r\n\t\tPapyrus tests (downloadable)</li>\r\n\t<li>\r\n\t\tPapyrus examples (downloadable)</li>\r\n</ul>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>The release deliverables have the same form as is found in most Eclipse projects, namely:</p>\n<ul><li>\n\t\tPapyrus source code release, available as versions tagged \"1.1.0\" in the project's GIT repository.</li>\n<li>\n\t\tPapyrus SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</li>\n<li>\n\t\tPapyrus runtime binary distribution (downloadable and update site).</li>\n<li>\n\t\tPapyrus stand-alone binary distribution (downloadable).</li>\n<li>\n\t\tPapyrus tests (downloadable)</li>\n<li>\n\t\tPapyrus examples (downloadable)</li>\n</ul>"
+                        }
+                    ],
+                    "endoflife": [ ],
+                    "environment": [
+                        {
+                            "value": "<p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments. The Eclipse Papyrus project depends upon on the Platform and other projects, which are mostly &quot;pure&quot; Java. The 4.5 release of the Eclipse Platform Project is written and compiled against version 6.0 of the Java Platform APIs, and targeted to run on version 6.0 of the Java Runtime Environment, Standard Edition. Papyrus will target Java 6. Eclipse Platform SDK 4.5 will be tested and validated on a number of reference platforms. Papyrus will be tested and validated against a subset of those listed for the platform.</p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments. The Eclipse Papyrus project depends upon on the Platform and other projects, which are mostly \"pure\" Java. The 4.5 release of the Eclipse Platform Project is written and compiled against version 6.0 of the Java Platform APIs, and targeted to run on version 6.0 of the Java Runtime Environment, Standard Edition. Papyrus will target Java 6. Eclipse Platform SDK 4.5 will be tested and validated on a number of reference platforms. Papyrus will be tested and validated against a subset of those listed for the platform.</p>\n"
+                        }
+                    ],
+                    "i18n": [
+                        {
+                            "value": "<p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Papyrus project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Papyrus project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</p>\n"
+                        }
+                    ],
+                    "iplog": [ ],
+                    "milestones": [
+                        {
+                            "name": "M1",
+                            "date": "2014-08-22 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M2",
+                            "date": "2014-10-03 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M3",
+                            "date": "2014-11-14 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M4",
+                            "date": "2014-12-19 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M5",
+                            "date": "2015-02-06 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M6",
+                            "date": "2015-03-27 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M7",
+                            "date": "2015-05-08 00:00:00",
+                            "description": ""
+                        }
+                    ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [
+                        {
+                            "name": "Editors",
+                            "description": "This theme addresses issues related the diagram editors of Papyrus. It concerns more precisely all generic features related any kind of Papyrus graphical editor. For the UML2, it concerns following diagram editors: [Class diagram], [Package diagram], [Composite structure diagram], [Component diagram], [Profile diagram], [Use case diagram], [State machine diagram], [Protocol state machine diagram], [Activity diagram], [Sequence diagram], [Communications diagram], [Interactions overview Diagram], [Timing diagram]. For the SysML, it concerns following specific diagram editors: [Activity diagram], [Block definition diagram], [Internal block diagram], [Package diagram], [Parametric diagram], [Requirements diagram], [Sequence diagram], and [State machine diagram].",
+                            "committed": "",
+                            "proposed": "",
+                            "deferred": ""
+                        },
+                        {
+                            "name": "Extensibility",
+                            "description": "This theme addresses the need for extensiblity improvements of the Papyrus implementation and APIs. It concerns more precisely all features related to following concerns: [Backbone] and [Metatooling]. ",
+                            "committed": "",
+                            "proposed": "",
+                            "deferred": ""
+                        },
+                        {
+                            "name": "Scalability",
+                            "description": "This theme addresses the need for scalability and performance improvements of the Papyrus implementation and APIs.",
+                            "committed": "",
+                            "proposed": "",
+                            "deferred": ""
+                        },
+                        {
+                            "name": "Usability",
+                            "description": "This theme addresses the need for usability improvements of the Papyrus implementation and APIs. It concerns more precisely all features related to following concerns: [Palette], [Properties View], [Model Explorer], [Sash Editor], and [Team Working].",
+                            "committed": "",
+                            "proposed": "",
+                            "deferred": ""
+                        },
+                        {
+                            "name": "Documentation",
+                            "description": "This theme addresses the need for documentation of the MDT Papyrus implementation and APIs. It concerns more precisely all features related to following concerns: [Documentation - User], and [Documentation - Developer]. ",
+                            "committed": "",
+                            "proposed": "",
+                            "deferred": ""
+                        },
+                        {
+                            "name": "Eclipse Compatibility",
+                            "description": "This theme adresses the support and compatibility with platform 4.X and 3.X",
+                            "committed": "",
+                            "proposed": "",
+                            "deferred": ""
+                        },
+                        {
+                            "name": "Miscellaneous",
+                            "description": "This theme addresses all tasks that may not be included in one of the previous theme. ",
+                            "committed": "",
+                            "proposed": "",
+                            "deferred": ""
+                        }
+                    ],
+                    "usability": [ ],
+                    "type": [
+                        {
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "title": "1.0.0",
+                    "description": [
+                        {
+                            "value": "<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12.222222328186035px; line-height: 16px;\">Papyrus is aiming at providing an integrated and user-consumable environment for editing any kind of EMF model and particularly supporting UML and related modeling languages such as SysML and MARTE. Papyrus provides diagram editors for EMF-based modeling languages amongst them UML 2 and SysML and the glue required for integrating these editors (GMF-based or not) with other MBD and MDSD tools.</span></p>\r\n<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12.222222328186035px; line-height: 16px;\">Papyrus also offers a very advanced support of UML profiles that enables users to define editors for DSLs based on the UML 2 standard. The main feature of Papyrus regarding this latter point is a set of very powerful customization mechanisms which can be leveraged to create user-defined Papyrus perspectives and give it the same look and feel as a &quot;pure&quot; DSL editor.</span></p>\r\n<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12.222222328186035px; line-height: 16px;\">This release, version 1.0.0, marks&nbsp;</span>a highlight of the Papyrus story.&nbsp;This release is indeed characterized not only by new features but also by major advances in performance, usability and robustness. It is fair to say that, with this release, the Papyrus project has reached true adulthood while its product has developed into a mature industrial-strength facility.</p>\r\n<p>&nbsp;</p>\r\n",
+                            "summary": "",
+                            "format": "full_html",
+                            "safe_value": "<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12.222222328186035px; line-height: 16px;\">Papyrus is aiming at providing an integrated and user-consumable environment for editing any kind of EMF model and particularly supporting UML and related modeling languages such as SysML and MARTE. Papyrus provides diagram editors for EMF-based modeling languages amongst them UML 2 and SysML and the glue required for integrating these editors (GMF-based or not) with other MBD and MDSD tools.</span></p>\n<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12.222222328186035px; line-height: 16px;\">Papyrus also offers a very advanced support of UML profiles that enables users to define editors for DSLs based on the UML 2 standard. The main feature of Papyrus regarding this latter point is a set of very powerful customization mechanisms which can be leveraged to create user-defined Papyrus perspectives and give it the same look and feel as a \"pure\" DSL editor.</span></p>\n<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12.222222328186035px; line-height: 16px;\">This release, version 1.0.0, marks </span>a highlight of the Papyrus story. This release is indeed characterized not only by new features but also by major advances in performance, usability and robustness. It is fair to say that, with this release, the Papyrus project has reached true adulthood while its product has developed into a mature industrial-strength facility.</p>\n<p> </p>\n",
+                            "safe_summary": ""
+                        }
+                    ],
+                    "apis": [
+                        {
+                            "value": "1"
+                        }
+                    ],
+                    "architecture": [
+                        {
+                            "value": "<p>The architecture of Papyrus has been designed to be highly customizable and extenssible either via specific extension points or&nbsp;via basic framework enabling to define generic services (see details here&nbsp;<a href=\"https://wiki.eclipse.org/MDT/Papyrus/Developer_Guide/Architecture\">https://wiki.eclipse.org/MDT/Papyrus/Developer_Guide/Architecture</a>).</p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>The architecture of Papyrus has been designed to be highly customizable and extenssible either via specific extension points or via basic framework enabling to define generic services (see details here <a href=\"https://wiki.eclipse.org/MDT/Papyrus/Developer_Guide/Architecture\">https://wiki.eclipse.org/MDT/Papyrus/Developer_Guide/Architecture</a>).</p>\n"
+                        }
+                    ],
+                    "communities": [
+                        {
+                            "value": "<p class=\"western\" lang=\"en-US\"><strong>Papyrus adopters community (sorted in alphabetical order):</strong></p>\r\n<ul>\r\n\t<li lang=\"en-US\">\r\n\t\tAll4Tec</li>\r\n\t<li lang=\"en-US\">\r\n\t\tATOS</li>\r\n\t<li lang=\"en-US\">\r\n\t\tCEA</li>\r\n\t<li lang=\"en-US\">\r\n\t\tEricsson</li>\r\n\t<li lang=\"en-US\">\r\n\t\tEsterelle</li>\r\n\t<li lang=\"en-US\">\r\n\t\tLIFL</li>\r\n\t<li lang=\"en-US\">\r\n\t\tSolutionsIQ</li>\r\n\t<li lang=\"en-US\">\r\n\t\tST micro electronics</li>\r\n\t<li lang=\"en-US\">\r\n\t\tSherpa Engineering</li>\r\n\t<li lang=\"en-US\">\r\n\t\tSpacebel</li>\r\n\t<li lang=\"en-US\">\r\n\t\tZeligsoft</li>\r\n</ul>\r\n<h2 class=\"western\" lang=\"en-US\">\r\n\tPapyrus users community</h2>\r\n<ul>\r\n\t<li lang=\"en-US\">\r\n\t\tAirbus Group</li>\r\n\t<li lang=\"en-US\">\r\n\t\tCNES</li>\r\n\t<li>\r\n\t\tCEA</li>\r\n\t<li lang=\"en-US\">\r\n\t\tEricsson</li>\r\n\t<li lang=\"en-US\">\r\n\t\tPolarsys</li>\r\n\t<li>\r\n\t\tSpacebel</li>\r\n\t<li>\r\n\t\tST</li>\r\n</ul>\r\n<h2>\r\n\t<span style=\"font-size: 12px;\">Pap</span><span style=\"font-size: 12px;\">yrus committers community</span></h2>\r\n<ul>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Arnaud Cuccuru&nbsp;</span></span>&nbsp;(CEA)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Christian Damus&nbsp;</span>&nbsp;(independant)</li>\r\n\t<li>\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Arthur Daussy&nbsp;</span></font></span></span>&nbsp;(ATOS)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Saadia Dhouib&nbsp;</span>&nbsp;(CEA)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Cedric Dumoulin&nbsp;</span></font></span></font></span></font></span></span>&nbsp;(LIFL)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Raphael Faudou (Samares, project co leader)</span></li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Tristan Faure&nbsp;</span>&nbsp;(ATOS)</li>\r\n\t<li>\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Sebastien Gerard</span></font>&nbsp;(CEA, project main leader)</span></li>\r\n\t<li>\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Camille Letavernier&nbsp;</span>&nbsp;(CEA)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Vincent Lorenzo&nbsp;</span>&nbsp;(CEA)</li>\r\n\t<li>\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Chokri Mraidha&nbsp;</span></font></span></font></span></font></span></font></span></span>&nbsp;(CEA)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Florian Noyrit&nbsp;</span></font></span></font></span></font></span></font></span></font></span></font></span></span>&nbsp;(CEA)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Ansgar Radermacher (CEA)</span></li>\r\n\t<li>\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Remi Schnekenburger&nbsp;</span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></span>&nbsp;(CEA)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Patrick Tessier&nbsp;</span>&nbsp;(CEA)</li>\r\n\t<li class=\"western\">\r\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Mathieu Velten&nbsp;</span>&nbsp;(ATOS)</li>\r\n</ul>\r\n<h2 class=\"western\">\r\n\tPapyrus contributors community</h2>\r\n<ul>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Mickael ADAM (All4Tec)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Boutheina Bannour (CEA Tech/List)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Ronan Baret (Ercisson)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Jean-Michel Bruel (IRIT)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Andrew Eidsness (Zeligsfot)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Maged Elaasar (Crossplatform Software)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Michael Golubev (Montages AG)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Per-Arne Gussander (Nigus)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Patrik Nandorf (Ericsson)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Gabriel Pascual (All4Tec)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Charles Rivet (Zeligsoft)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Ed Seidewitz (Ivar Jacobson Intl.)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Bran Selic (Malina Sofware Corp.)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Toni Siljamaki (Ercisson)</font></font></li>\r\n\t<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\r\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Laurent Wouters (CEA)</font></font></li>\r\n</ul>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p class=\"western\" lang=\"en-US\" xml:lang=\"en-US\"><strong>Papyrus adopters community (sorted in alphabetical order):</strong></p>\n<ul><li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tAll4Tec</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tATOS</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tCEA</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tEricsson</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tEsterelle</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tLIFL</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tSolutionsIQ</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tST micro electronics</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tSherpa Engineering</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tSpacebel</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tZeligsoft</li>\n</ul><h2 class=\"western\" lang=\"en-US\" xml:lang=\"en-US\">\n\tPapyrus users community</h2>\n<ul><li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tAirbus Group</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tCNES</li>\n<li>\n\t\tCEA</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tEricsson</li>\n<li lang=\"en-US\" xml:lang=\"en-US\">\n\t\tPolarsys</li>\n<li>\n\t\tSpacebel</li>\n<li>\n\t\tST</li>\n</ul><h2>\n\t<span style=\"font-size: 12px;\">Pap</span><span style=\"font-size: 12px;\">yrus committers community</span></h2>\n<ul><li class=\"western\">\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Arnaud Cuccuru </span></span> (CEA)</li>\n<li class=\"western\">\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Christian Damus </span> (independant)</li>\n<li>\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Arthur Daussy </span></font></span></span> (ATOS)</li>\n<li class=\"western\">\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Saadia Dhouib </span> (CEA)</li>\n<li class=\"western\">\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Cedric Dumoulin </span></font></span></font></span></font></span></span> (LIFL)</li>\n<li class=\"western\">\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Raphael Faudou (Samares, project co leader)</span></li>\n<li class=\"western\">\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Tristan Faure </span> (ATOS)</li>\n<li>\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Sebastien Gerard</span></font> (CEA, project main leader)</span></li>\n<li>\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Camille Letavernier </span> (CEA)</li>\n<li class=\"western\">\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Vincent Lorenzo </span> (CEA)</li>\n<li>\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Chokri Mraidha </span></font></span></font></span></font></span></font></span></span> (CEA)</li>\n<li class=\"western\">\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Florian Noyrit </span></font></span></font></span></font></span></font></span></font></span></font></span></span> (CEA)</li>\n<li class=\"western\">\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Ansgar Radermacher (CEA)</span></li>\n<li>\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\"><font face=\"inherit\"><span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Remi Schnekenburger </span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></font></span></span> (CEA)</li>\n<li class=\"western\">\n\t\t<span style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit;\">Patrick Tessier </span> (CEA)</li>\n<li class=\"western\">\n\t\t<span style=\"font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-family: inherit; font-size: inherit;\">Mathieu Velten </span> (ATOS)</li>\n</ul><h2 class=\"western\">\n\tPapyrus contributors community</h2>\n<ul><li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Mickael ADAM (All4Tec)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Boutheina Bannour (CEA Tech/List)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Ronan Baret (Ercisson)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Jean-Michel Bruel (IRIT)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Andrew Eidsness (Zeligsfot)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Maged Elaasar (Crossplatform Software)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Michael Golubev (Montages AG)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Per-Arne Gussander (Nigus)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Patrik Nandorf (Ericsson)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Gabriel Pascual (All4Tec)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Charles Rivet (Zeligsoft)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Ed Seidewitz (Ivar Jacobson Intl.)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Bran Selic (Malina Sofware Corp.)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Toni Siljamaki (Ercisson)</font></font></li>\n<li align=\"LEFT\" style=\"margin-bottom: 0cm; line-height: 0.42cm;\">\n\t\t<font color=\"#333333\"><font face=\"sans-serif\">Laurent Wouters (CEA)</font></font></li>\n</ul>"
+                        }
+                    ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2014-06-25 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [
+                        {
+                            "value": "<p>The plan for Papyrus in the context of Luna is available here:&nbsp;<a href=\"https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/papyrus/project-info/plan_luna.xml\">https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/papyrus/project-info/plan_luna.xml</a></p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>The plan for Papyrus in the context of Luna is available here: <a href=\"https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/papyrus/project-info/plan_luna.xml\">https://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/papyrus/project-info/plan_luna.xml</a></p>\n"
+                        }
+                    ],
+                    "endoflife": [
+                        {
+                            "value": "<p>Papyrus 1.0.0 does not remove many APIs from previous releases. Some plugins (org.eclipse.papyrus.core.queries.configuration.*) have been removed from the main plugin area and from the distribution. As they have not been used in the official release, no user can be impacted by such modifications.</p>\r\n<p>Some documentation plugins have been moved in the repository to the documentation area, with no impact on users.</p>\r\n<p>More removal of deprecated APIs are planned for the next major release, especially for evolution between 3.X and 4.X versions of the Eclipse platform.&nbsp;</p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>Papyrus 1.0.0 does not remove many APIs from previous releases. Some plugins (org.eclipse.papyrus.core.queries.configuration.*) have been removed from the main plugin area and from the distribution. As they have not been used in the official release, no user can be impacted by such modifications.</p>\n<p>Some documentation plugins have been moved in the repository to the documentation area, with no impact on users.</p>\n<p>More removal of deprecated APIs are planned for the next major release, especially for evolution between 3.X and 4.X versions of the Eclipse platform. </p>\n"
+                        }
+                    ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [
+                        {
+                            "value": "<p>Papyrus is currently built on the Eclipse Hudson shared server. A &quot;<a href=\"https://hudson.eclipse.org/hudson/job/papyrus-trunk-nightly/\">nightly</a>&quot; is built against Luna&nbsp;several times a day when the SCM polling sees a change from the last build. The results are automatically published at well-defined URLs, as described&nbsp;on the <a href=\"https://www.eclipse.org/papyrus/updates/index.php\">Papyrus website</a>. Based on the results of the first job, a second job is automatically launched to test the deployment of Papyrus on a new platform, build a series of 8500+ JUnit tests and run them. The same pattern is building and testing the &ldquo;extra&rdquo; components of Papyrus. These components are not part of the official distribution, but that can be easily installed from Papyrus. They provide new languages and new components for specific usages of the tool.</p>\r\n<p>A migration to a new <a href=\"https://hudson.eclipse.org/papyrus/\">HIPP server for Papyrus</a> is ongoing. At the same time, Papyrus project is switching to a tycho/maven based build. The main goal here is to rely on the <a href=\"https://www.eclipse.org/community/eclipse_newsletter/2013/august/article3.php\">Common Build Infrastructure</a>.</p>\r\n<p><a href=\"https://git.eclipse.org/r/#/q/project:papyrus/org.eclipse.papyrus+-status:draft,n,z\">Gerrit</a>&nbsp;is used for almost all external contributions. The contributions are currently build on the HIPP for Papyrus. We are currently working on running also the test jobs against these contributions.</p>\r\n<p>The complete documentation is published for each release&nbsp;<a href=\"https://www.eclipse.org/papyrus/project-info/new_and_noteworthy_0.10.0.php\">on the Papyrus website</a>. It includes the detailed&nbsp;<a href=\"http://www.eclipse.org/sirius/doc/Release%20Notes.html\">release notes</a>&nbsp;for all changes between releases.&nbsp;</p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>Papyrus is currently built on the Eclipse Hudson shared server. A \"<a href=\"https://hudson.eclipse.org/hudson/job/papyrus-trunk-nightly/\">nightly</a>\" is built against Luna several times a day when the SCM polling sees a change from the last build. The results are automatically published at well-defined URLs, as described on the <a href=\"https://www.eclipse.org/papyrus/updates/index.php\">Papyrus website</a>. Based on the results of the first job, a second job is automatically launched to test the deployment of Papyrus on a new platform, build a series of 8500+ JUnit tests and run them. The same pattern is building and testing the “extra” components of Papyrus. These components are not part of the official distribution, but that can be easily installed from Papyrus. They provide new languages and new components for specific usages of the tool.</p>\n<p>A migration to a new <a href=\"https://hudson.eclipse.org/papyrus/\">HIPP server for Papyrus</a> is ongoing. At the same time, Papyrus project is switching to a tycho/maven based build. The main goal here is to rely on the <a href=\"https://www.eclipse.org/community/eclipse_newsletter/2013/august/article3.php\">Common Build Infrastructure</a>.</p>\n<p><a href=\"https://git.eclipse.org/r/#/q/project:papyrus/org.eclipse.papyrus+-status:draft,n,z\">Gerrit</a> is used for almost all external contributions. The contributions are currently build on the HIPP for Papyrus. We are currently working on running also the test jobs against these contributions.</p>\n<p>The complete documentation is published for each release <a href=\"https://www.eclipse.org/papyrus/project-info/new_and_noteworthy_0.10.0.php\">on the Papyrus website</a>. It includes the detailed <a href=\"http://www.eclipse.org/sirius/doc/Release%20Notes.html\">release notes</a> for all changes between releases. </p>\n"
+                        }
+                    ],
+                    "noteworthy": [
+                        {
+                            "url": "https://wiki.eclipse.org/Papyrus/NewAndNoteworthy/Luna",
+                            "title": null,
+                            "attributes": [ ]
+                        }
+                    ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [
+                        {
+                            "value": "<p>None.</p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>None.</p>\n"
+                        }
+                    ],
+                    "standards": [
+                        {
+                            "value": "<p>Papyrus provides a support to following standards:</p>\r\n<ul>\r\n\t<li>\r\n\t\tOMG::UML 2.5</li>\r\n\t<li>\r\n\t\tOMG::SysML 1.2</li>\r\n\t<li>\r\n\t\tOMG::MARTE 1.1</li>\r\n\t<li>\r\n\t\tISO 42010</li>\r\n</ul>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>Papyrus provides a support to following standards:</p>\n<ul><li>\n\t\tOMG::UML 2.5</li>\n<li>\n\t\tOMG::SysML 1.2</li>\n<li>\n\t\tOMG::MARTE 1.1</li>\n<li>\n\t\tISO 42010</li>\n</ul>"
+                        }
+                    ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [
+                        {
+                            "value": "1"
+                        }
+                    ],
+                    "review": {
+                        "title": "1.0.0 Release Review",
+                        "description": [
+                            {
+                                "value": "<p>Release Review</p>\r\n",
+                                "summary": "",
+                                "format": "filtered_html",
+                                "safe_value": "<p>Release Review</p>\n",
+                                "safe_summary": ""
+                            }
+                        ],
+                        "end_date": [
+                            {
+                                "value": "2014-06-11 00:00:00",
+                                "timezone": "America/New_York",
+                                "timezone_db": "America/New_York",
+                                "date_type": "datetime"
+                            }
+                        ],
+                        "links": [ ],
+                        "project": [
+                            {
+                                "id": "modeling.mdt.papyrus"
+                            }
+                        ],
+                        "reference": [
+                            {
+                                "title": "1.0.0"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "value": "success"
+                            }
+                        ],
+                        "top_level": [
+                            {
+                                "id": "modeling"
+                            }
+                        ],
+                        "type": [
+                            {
+                                "value": "release"
+                            },
+                            {
+                                "value": "graduation"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "0.10.2",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2014-02-28 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.10.1",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2013-09-27 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.10.0",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [
+                        {
+                            "value": "<ul>\r\n\t<li>\r\n\t\tNo Architectural issues for this release.</li>\r\n</ul>\r\n<p>Papyrus architecture</p>\r\n<ul>\r\n\t<li>\r\n\t\tPapyrus graphical editors are based on the GMF framework and are been generated using the GMF tooling.</li>\r\n\t<li>\r\n\t\tPapyrus architecture is based on a component called the backbone that enable Papyrus to support various kinds of editors designed with different technologies. Currentlty, Papyrus provides adaptors for GMF-based, Nattable-based or XText-based editors.</li>\r\n</ul>\r\n",
+                            "format": "filtered_html",
+                            "safe_value": "<ul><li>\n\t\tNo Architectural issues for this release.</li>\n</ul><p>Papyrus architecture</p>\n<ul><li>\n\t\tPapyrus graphical editors are based on the GMF framework and are been generated using the GMF tooling.</li>\n<li>\n\t\tPapyrus architecture is based on a component called the backbone that enable Papyrus to support various kinds of editors designed with different technologies. Currentlty, Papyrus provides adaptors for GMF-based, Nattable-based or XText-based editors.</li>\n</ul>"
+                        }
+                    ],
+                    "communities": [
+                        {
+                            "value": "<ul>\r\n\t<li>\r\n\t\tInteractions in Bugzilla</li>\r\n\t<li>\r\n\t\tActivity on the Papyrus newsgroup</li>\r\n\t<li>\r\n\t\tCollaboration with other projects at Eclipse (e.g., CDO, GMT tooling, EMF Compare, XText and EMF Facet)</li>\r\n\t<li>\r\n\t\tIntegration done in the TopCASED environment 5.x: <a href=\"http://wwww.topcased.org\">http://wwww.topcased.org</a></li>\r\n\t<li>\r\n\t\tUsed as basis for the Scade System Designer for providing the system view on top of SCADE:&nbsp;<a href=\"http://www.esterel-technologies.com/products/scade-system/\">http://www.esterel-technologies.com/products/scade-system/</a></li>\r\n\t<li>\r\n\t\tLarge diffusion in the academics community using UML</li>\r\n</ul>\r\n",
+                            "format": "filtered_html",
+                            "safe_value": "<ul><li>\n\t\tInteractions in Bugzilla</li>\n<li>\n\t\tActivity on the Papyrus newsgroup</li>\n<li>\n\t\tCollaboration with other projects at Eclipse (e.g., CDO, GMT tooling, EMF Compare, XText and EMF Facet)</li>\n<li>\n\t\tIntegration done in the TopCASED environment 5.x: <a href=\"http://wwww.topcased.org\">http://wwww.topcased.org</a></li>\n<li>\n\t\tUsed as basis for the Scade System Designer for providing the system view on top of SCADE: <a href=\"http://www.esterel-technologies.com/products/scade-system/\">http://www.esterel-technologies.com/products/scade-system/</a></li>\n<li>\n\t\tLarge diffusion in the academics community using UML</li>\n</ul>"
+                        }
+                    ],
+                    "compatibility": [
+                        {
+                            "value": "<p>The Papyrus 0.10.0 project will be developed in parallel, and released simultaneously, with the following projects. As stated above, each milestone release of the Papyrus 0.10.0 project will be compatible with the corresponding milestones for each of these projects, and delivered the appropriate offset.</p>\r\n<ul>\r\n\t<li>\r\n\t\tEclipse Platform SDK version 4.3</li>\r\n\t<li>\r\n\t\tEclipse Modeling Framework (EMF) version 2.9</li>\r\n\t<li>\r\n\t\tModel Development Tools (MDT) UML2 version 4.1</li>\r\n\t<li>\r\n\t\tGraphical Modeling Framework (GMF) version 2.5</li>\r\n</ul>\r\n",
+                            "format": "filtered_html",
+                            "safe_value": "<p>The Papyrus 0.10.0 project will be developed in parallel, and released simultaneously, with the following projects. As stated above, each milestone release of the Papyrus 0.10.0 project will be compatible with the corresponding milestones for each of these projects, and delivered the appropriate offset.</p>\n<ul><li>\n\t\tEclipse Platform SDK version 4.3</li>\n<li>\n\t\tEclipse Modeling Framework (EMF) version 2.9</li>\n<li>\n\t\tModel Development Tools (MDT) UML2 version 4.1</li>\n<li>\n\t\tGraphical Modeling Framework (GMF) version 2.5</li>\n</ul>"
+                        }
+                    ],
+                    "date": [
+                        {
+                            "value": "2013-06-26 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [
+                        {
+                            "value": "<p>The release deliverables have the same form as is found in most Eclipse projects, namely:</p>\r\n<ul>\r\n\t<li>\r\n\t\tMDT Papyrus source code release, available as versions tagged &quot;0.10.0&quot; in the project&#39;s SVN repository.</li>\r\n\t<li>\r\n\t\tMDT Papyrus SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</li>\r\n\t<li>\r\n\t\tMDT Papyrus runtime binary distribution (downloadable and update site).</li>\r\n\t<li>\r\n\t\tMDT Papyrus stand-alone binary distribution (downloadable).</li>\r\n\t<li>\r\n\t\tMDT Papyrus tests (downloadable)</li>\r\n\t<li>\r\n\t\tMDT Papyrus examples (downloadable)</li>\r\n</ul>\r\n",
+                            "format": "filtered_html",
+                            "safe_value": "<p>The release deliverables have the same form as is found in most Eclipse projects, namely:</p>\n<ul><li>\n\t\tMDT Papyrus source code release, available as versions tagged \"0.10.0\" in the project's SVN repository.</li>\n<li>\n\t\tMDT Papyrus SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</li>\n<li>\n\t\tMDT Papyrus runtime binary distribution (downloadable and update site).</li>\n<li>\n\t\tMDT Papyrus stand-alone binary distribution (downloadable).</li>\n<li>\n\t\tMDT Papyrus tests (downloadable)</li>\n<li>\n\t\tMDT Papyrus examples (downloadable)</li>\n</ul>"
+                        }
+                    ],
+                    "endoflife": [
+                        {
+                            "value": "<ul>\r\n\t<li>\r\n\t\t<span>Nothing has been deprecated.</span></li>\r\n</ul>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<ul><li>\n\t\t<span>Nothing has been deprecated.</span></li>\n</ul>"
+                        }
+                    ],
+                    "environment": [
+                        {
+                            "value": "<p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments. The Eclipse Papyrus project depends upon on the Platform and other projects, which are mostly &quot;pure&quot; Java. The 4.3 release of the Eclipse Platform Project is written and compiled against version 5.0 of the Java Platform APIs, and targeted to run on version 5.0 of the Java Runtime Environment, Standard Edition. Papyrus will target the same Java version as EMF and UML2, which currently require Java 5. Eclipse Platform SDK 4.3 will be tested and validated on a number of reference platforms. MDT Papyrus will be tested and validated against a subset of those listed for the platform.</p>\r\n",
+                            "format": "filtered_html",
+                            "safe_value": "<p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments. The Eclipse Papyrus project depends upon on the Platform and other projects, which are mostly \"pure\" Java. The 4.3 release of the Eclipse Platform Project is written and compiled against version 5.0 of the Java Platform APIs, and targeted to run on version 5.0 of the Java Runtime Environment, Standard Edition. Papyrus will target the same Java version as EMF and UML2, which currently require Java 5. Eclipse Platform SDK 4.3 will be tested and validated on a number of reference platforms. MDT Papyrus will be tested and validated against a subset of those listed for the platform.</p>\n"
+                        }
+                    ],
+                    "i18n": [
+                        {
+                            "value": "<p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Papyrus project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</p>\r\n",
+                            "format": "filtered_html",
+                            "safe_value": "<p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Papyrus project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</p>\n"
+                        }
+                    ],
+                    "iplog": [ ],
+                    "milestones": [
+                        {
+                            "name": "M1",
+                            "date": "2012-08-22 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M2",
+                            "date": "2012-10-03 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M3",
+                            "date": "2012-11-14 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M4",
+                            "date": "2012-12-19 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M5",
+                            "date": "2013-02-06 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "M6",
+                            "date": "2013-03-20 00:00:00",
+                            "description": "API Freeze"
+                        },
+                        {
+                            "name": "M7",
+                            "date": "2013-05-07 00:00:00",
+                            "description": "Feature Freeze"
+                        },
+                        {
+                            "name": "RC1",
+                            "date": "2013-05-22 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "RC2",
+                            "date": "2013-05-29 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "RC3",
+                            "date": "2013-06-05 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "RC4",
+                            "date": "2013-06-12 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "Kepler",
+                            "date": "2013-06-26 00:00:00",
+                            "description": ""
+                        },
+                        {
+                            "name": "Kepler SR1",
+                            "date": "2013-09-28 00:00:00",
+                            "description": "1st Maintenance release"
+                        },
+                        {
+                            "name": "Kepler SR2",
+                            "date": "2014-02-22 00:00:00",
+                            "description": "2nd Maintenance release"
+                        }
+                    ],
+                    "noncode": [
+                        {
+                            "value": "<ul>\r\n\t<li style=\"margin-bottom: 0.1em;\">\r\n\t\tUser documentation hosted at&nbsp;<a href=\"http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php\">http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php</a></li>\r\n\t<li style=\"margin-bottom: 0.1em;\">\r\n\t\tDeveloper documentation on the Papyrus Wiki :&nbsp;<a href=\"http://wiki.eclipse.org/Papyrus_Developer_Guide\">http://wiki.eclipse.org/Papyrus_Developer_Guide</a></li>\r\n</ul>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<ul><li style=\"margin-bottom: 0.1em;\">\n\t\tUser documentation hosted at <a href=\"http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php\">http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php</a></li>\n<li style=\"margin-bottom: 0.1em;\">\n\t\tDeveloper documentation on the Papyrus Wiki : <a href=\"http://wiki.eclipse.org/Papyrus_Developer_Guide\">http://wiki.eclipse.org/Papyrus_Developer_Guide</a></li>\n</ul>"
+                        }
+                    ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [
+                        {
+                            "value": "<p>No security issue for Papyrus known for this release</p>\r\n",
+                            "format": "filtered_html",
+                            "safe_value": "<p>No security issue for Papyrus known for this release</p>\n"
+                        }
+                    ],
+                    "standards": [
+                        {
+                            "value": "<p>MDT Papyrus 0.10.0 is compliant with both following OMG standards:</p>\r\n<ul>\r\n\t<li>\r\n\t\t<p>UML 2.4.1 standard:&nbsp;<a href=\"http://www.omg.org/spec/UML/2.4.1\">http://www.omg.org/spec/UML/2.4.1</a></p>\r\n\t</li>\r\n\t<li>\r\n\t\t<p>SysML 1.2 standard:&nbsp;<a href=\"http://www.omg.org/spec/SysML/1.2\">http://www.omg.org/spec/SysML/1.2</a></p>\r\n\t</li>\r\n</ul>\r\n<p>Papyrus 0.10.0 provides also support for the following Domain Specific Modeling Languages based on UML:</p>\r\n<ul>\r\n\t<li>\r\n\t\t<p>MARTE Standard:&nbsp;<a href=\"http://www.omgmarte.org/\">http://www.omgmarte.org/</a></p>\r\n\t</li>\r\n\t<li>\r\n\t\t<p>EAST-ADL Standard:&nbsp;<a href=\"http://east-adl.info/Specification.html\">http://east-adl.info/Specification.html</a></p>\r\n\t</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<p>MDT Papyrus 0.10.0 is compliant with both following OMG standards:</p>\n<ul><li>\n<p>UML 2.4.1 standard: <a href=\"http://www.omg.org/spec/UML/2.4.1\">http://www.omg.org/spec/UML/2.4.1</a></p>\n</li>\n<li>\n<p>SysML 1.2 standard: <a href=\"http://www.omg.org/spec/SysML/1.2\">http://www.omg.org/spec/SysML/1.2</a></p>\n</li>\n</ul><p>Papyrus 0.10.0 provides also support for the following Domain Specific Modeling Languages based on UML:</p>\n<ul><li>\n<p>MARTE Standard: <a href=\"http://www.omgmarte.org/\">http://www.omgmarte.org/</a></p>\n</li>\n<li>\n<p>EAST-ADL Standard: <a href=\"http://east-adl.info/Specification.html\">http://east-adl.info/Specification.html</a></p>\n</li>\n</ul><p> </p>\n"
+                        }
+                    ],
+                    "subprojects": [ ],
+                    "themes": [
+                        {
+                            "name": "Editors",
+                            "description": "This theme addresses issues related the diagram editors of Papyrus. It concerns\r\n more precisely all generic features related any kind of Papyrus diagram editor.\r\nFor the UML2, it concerns following diagram editors: [Class diagram], [Package diagram], [Composite structure diagram],\r\n[Component diagram], [Profile diagram], [Use case diagram],\r\n[State machine diagram], [Protocol state machine diagram], [Activity diagram],\r\n[Sequence diagram], [Communications diagram], [Interactions overview Diagram],\r\n[Timing diagram].\r\nFor the SysML, it concerns following specific diagram editors: [Activity diagram], [Block definition diagram], [Internal block diagram],\r\n[Package diagram], [Parametric diagram], [Requirements diagram],\r\n[Sequence diagram], and [State machine diagram].",
+                            "committed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "proposed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=kepler&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "deferred": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=kepler-"
+                        },
+                        {
+                            "name": "Extensibility",
+                            "description": "This theme addresses the need for extensiblity improvements of the MDT Papyrus\r\nimplementation and APIs. It concerns more precisely all features related to\r\nfollowing concerns: [Backbone] and [Metatooling].",
+                            "committed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "proposed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=kepler&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "deferred": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=kepler-"
+                        },
+                        {
+                            "name": "Scalability",
+                            "description": "This theme addresses the need for scalability and performance improvements\r\nof the MDT Papyrus implementation and APIs.",
+                            "committed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "proposed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=kepler&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "deferred": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=kepler-"
+                        },
+                        {
+                            "name": "Usability",
+                            "description": "This theme addresses the need for usability improvements of the MDT Papyrus\r\nimplementation and APIs. It concerns more precisely all features related to\r\nfollowing concerns: [Palette], [Property View], [Model Explorer], [Sash Editor],\r\nand [Team Working].",
+                            "committed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "proposed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=kepler&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "deferred": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=kepler-"
+                        },
+                        {
+                            "name": "Documentation",
+                            "description": "This theme addresses the need for documentation of the MDT Papyrus\r\nimplementation and APIs. It concerns more precisely all features related to\r\nfollowing concerns: [Documentation - User], and [Documentation - Developer].",
+                            "committed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "proposed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=kepler&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "deferred": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=kepler-"
+                        },
+                        {
+                            "name": "Miscellaneous",
+                            "description": "This theme addresses all tasks that may not be included in one of the previous theme.",
+                            "committed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "proposed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=kepler&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "deferred": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=kepler-"
+                        },
+                        {
+                            "name": "Eclipse Compatibility",
+                            "description": "This theme adresses the support and compatibility with platform 4.X and 3.X",
+                            "committed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Eclipse_Compatibility&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "proposed": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Eclipse_Compatibility&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;target_milestone=kepler&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=kepler&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=kepler-",
+                            "deferred": "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Eclipse_Compatibility&amp;classification=Modeling&amp;product=MDT.Papyrus&amp;component=Core&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=kepler-"
+                        }
+                    ],
+                    "usability": [
+                        {
+                            "value": "<ul>\r\n\t<li>\r\n\t\tPapyrus may be used to denote UML2 or SysML models.</li>\r\n\t<li>\r\n\t\tPapyrus may be used to design and apply UML profiles.</li>\r\n\t<li>\r\n\t\tPapyrus UI may be customized in order to fit specific domain needs.</li>\r\n</ul>\r\n",
+                            "format": "full_html",
+                            "safe_value": "<ul><li>\n\t\tPapyrus may be used to denote UML2 or SysML models.</li>\n<li>\n\t\tPapyrus may be used to design and apply UML profiles.</li>\n<li>\n\t\tPapyrus UI may be customized in order to fit specific domain needs.</li>\n</ul>"
+                        }
+                    ],
+                    "type": [ ],
+                    "review": {
+                        "title": "0.10.0 Release Review",
+                        "description": [
+                            {
+                                "value": "<p>Release Review</p>\r\n",
+                                "summary": "",
+                                "format": "filtered_html",
+                                "safe_value": "<p>Release Review</p>\n",
+                                "safe_summary": ""
+                            }
+                        ],
+                        "end_date": [
+                            {
+                                "value": "2013-06-12 00:00:00",
+                                "timezone": "America/New_York",
+                                "timezone_db": "America/New_York",
+                                "date_type": "datetime"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "url": "https://bugs.eclipse.org/bugs/attachment.cgi",
+                                "title": "Approved IP Log",
+                                "attributes": [ ]
+                            }
+                        ],
+                        "project": [
+                            {
+                                "id": "modeling.mdt.papyrus"
+                            }
+                        ],
+                        "reference": [
+                            {
+                                "title": "0.10.0"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "value": "success"
+                            }
+                        ],
+                        "top_level": [
+                            {
+                                "id": "modeling"
+                            }
+                        ],
+                        "type": [
+                            {
+                                "value": "release"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "0.9.2",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2013-03-01 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.9.1",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2012-09-28 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.9.0",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2012-06-27 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ],
+                    "review": {
+                        "title": "0.9.0 Release Review",
+                        "description": [ ],
+                        "end_date": [
+                            {
+                                "value": "2012-06-13 00:00:00",
+                                "timezone": "America/New_York",
+                                "timezone_db": "America/New_York",
+                                "date_type": "datetime"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "url": "https://bugs.eclipse.org/bugs/attachment.cgi?id=216866",
+                                "title": "Approved IP Log",
+                                "attributes": [ ]
+                            },
+                            {
+                                "url": "http://wiki.eclipse.org/MDT/Papyrus/Reviews/v0.9.0",
+                                "title": "Review Documentation",
+                                "attributes": [ ]
+                            }
+                        ],
+                        "project": [
+                            {
+                                "id": "modeling.mdt.papyrus"
+                            }
+                        ],
+                        "reference": [
+                            {
+                                "title": "0.9.0"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "value": "success"
+                            }
+                        ],
+                        "top_level": [
+                            {
+                                "id": "modeling"
+                            }
+                        ],
+                        "type": [
+                            {
+                                "value": "release"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "0.8.2",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2012-02-24 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.8.1",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2011-09-30 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.8.0",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2011-06-30 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ],
+                    "review": {
+                        "title": "0.8.0 Release Review",
+                        "description": [ ],
+                        "end_date": [
+                            {
+                                "value": "2011-06-08 00:00:00",
+                                "timezone": "America/New_York",
+                                "timezone_db": "America/New_York",
+                                "date_type": "datetime"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "url": "https://bugs.eclipse.org/bugs/attachment.cgi?id=197174",
+                                "title": "Approved IP Log",
+                                "attributes": [ ]
+                            },
+                            {
+                                "url": "https://bugs.eclipse.org/bugs/attachment.cgi?id=197148",
+                                "title": "Review Documentation",
+                                "attributes": [ ]
+                            }
+                        ],
+                        "project": [
+                            {
+                                "id": "modeling.mdt.papyrus"
+                            }
+                        ],
+                        "reference": [
+                            {
+                                "title": "0.8.0"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "value": "success"
+                            }
+                        ],
+                        "top_level": [
+                            {
+                                "id": "modeling"
+                            }
+                        ],
+                        "type": [
+                            {
+                                "value": "release"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "0.7.3",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2011-04-30 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.7.2",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2011-01-19 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.7.1",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2010-12-15 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ]
+                },
+                {
+                    "title": "0.7.0",
+                    "description": [ ],
+                    "apis": [
+                        {
+                            "value": "0"
+                        }
+                    ],
+                    "architecture": [ ],
+                    "communities": [ ],
+                    "compatibility": [ ],
+                    "date": [
+                        {
+                            "value": "2010-07-14 00:00:00",
+                            "timezone": "America/New_York",
+                            "timezone_db": "America/New_York",
+                            "date_type": "datetime"
+                        }
+                    ],
+                    "deliverables": [ ],
+                    "endoflife": [ ],
+                    "environment": [ ],
+                    "i18n": [ ],
+                    "iplog": [ ],
+                    "milestones": [ ],
+                    "noncode": [ ],
+                    "noteworthy": [ ],
+                    "parent_project": [
+                        {
+                            "id": "modeling.mdt.papyrus"
+                        }
+                    ],
+                    "security": [ ],
+                    "standards": [ ],
+                    "subprojects": [ ],
+                    "themes": [ ],
+                    "usability": [ ],
+                    "type": [ ],
+                    "review": {
+                        "title": "0.7.0 Release Review",
+                        "description": [ ],
+                        "end_date": [
+                            {
+                                "value": "2010-12-01 00:00:00",
+                                "timezone": "America/New_York",
+                                "timezone_db": "America/New_York",
+                                "date_type": "datetime"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "url": "https://bugs.eclipse.org/bugs/attachment.cgi?id=183325",
+                                "title": "Approved IP Log",
+                                "attributes": [ ]
+                            },
+                            {
+                                "url": "http://wiki.eclipse.org/MDT/Papyrus/Reviews/v0.7.0",
+                                "title": "Review Documentation",
+                                "attributes": [ ]
+                            }
+                        ],
+                        "project": [
+                            {
+                                "id": "modeling.mdt.papyrus"
+                            }
+                        ],
+                        "reference": [
+                            {
+                                "title": "0.7.0"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "value": "success"
+                            }
+                        ],
+                        "top_level": [
+                            {
+                                "id": "modeling"
+                            }
+                        ],
+                        "type": [
+                            {
+                                "value": "release"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
