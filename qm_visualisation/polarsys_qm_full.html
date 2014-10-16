@@ -57,14 +57,21 @@ div#details-box {
   right: 5px;
 }
 
-p.title {
+.title {
   font-weight: bold;
   font-size: 120%;
   margin: 10px;
 }
 
-p.details {
+.details {
   color: black;
+  margin: 10px;
+  font-weight: normal;
+}
+
+.details-title {
+  color: black;
+  font-weight: bold;
   margin: 10px;
 }
 
@@ -99,6 +106,7 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var mymetrics;
+var myconcepts;
 
 // Load file for concepts.
 d3.json("/PolarsysMaturity/data/polarsys_concepts.json", function(error, concepts) {
@@ -177,7 +185,6 @@ function update(source) {
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { return d.name; })
       .style("fill-opacity", 1e-6);
-      //.text(function(d) { return d.name + " (" + d.value + ")"; })
 
   // Transition nodes to their new position.
   var nodeUpdate = node.transition()
@@ -190,16 +197,6 @@ function update(source) {
 
   nodeUpdate.select("text")
       .style("fill-opacity", 1);
-
-  nodeUpdate.select("text")
-      .style("color", function(d) { 
-        var isActive = 0;
-        if ( d.active == "true" ) {
-          return "black";
-        } else {
-          return "red";
-        }
-      });
 
   // Transition exiting nodes to the parent's new position.
   var nodeExit = node.exit().transition()
@@ -262,12 +259,8 @@ function click(d) {
     if (d.type == "metric") {
 
       for (repo = 0 ; repo < mymetrics.children.length ; repo++) { 
-        //alert("in metric repo " + repo + " is " + mymetrics.children[repo].name);
-        //alert("in metric repo " + mymetrics.children[repo].children.length);
         while (i < mymetrics.children[repo].children.length) {
-          //alert("testing mnemo " + mymetrics.children[repo].children[i]["mnemo"] + " against " + d.mnemo);
           if (d.mnemo == mymetrics.children[repo].children[i]["mnemo"]) {
-            //alert("gotcha! found " + mymetrics.children[repo].children[i]["mnemo"]);
             type = "metric";
             mynode = d;
             mynode.description = mymetrics.children[repo].children[i]["description"]; 
@@ -279,29 +272,35 @@ function click(d) {
 
             mydiv.text("");
 
-            var ptitle = mydiv.append("p");
+            var ptitle = mydiv.append('p');
             ptitle.classed("title", true);
-            ptitle.text("Description of the " + type); 
+            ptitle.text(type.charAt(0).toUpperCase() + type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
   
-            var pname = mydiv.append('p');
-            pname.classed("details", true);
-            pname.text("Name: " + mynode.name);
-  
-            var pmnemo = mydiv.append('p');
-            pmnemo.classed("details", true);
-            pmnemo.text("Mnemo: " + mynode.mnemo);
-    
-            var pactive = mydiv.append('p');
-            pactive.classed("details", true);
-            pactive.text("Active: " + mynode.active);
-    
-            var pdesc = mydiv.append('p');
-            pdesc.classed("details", true);
-            pdesc.text("Description: " + mynode.description);
-    
-            var psource = mydiv.append('p');
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Data source:")
+            psource = ptitle.append('span');
             psource.classed("details", true);
-            psource.text("Data source: " + mynode.datasource);
+            psource.text(mynode.datasource);
+
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Active:")
+            pactive = p.append('span');
+            pactive.classed("details", true);
+            pactive.text(mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1));
+
+            pdesct = mydiv.append('p');
+            pdesct.classed("details-title", true); 
+            pdesct.text("Description:")
+            for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+                var pdesc = mydiv.append('p');
+                pdesc.classed("details", true);
+                pdesc.text(mynode.description[desc_idx]);
+            }
+    
 //--------------------------
 
             break;
@@ -323,25 +322,27 @@ function click(d) {
 
             mydiv.text("");
 
-            var ptitle = mydiv.append("p");
+            var ptitle = mydiv.append('p');
             ptitle.classed("title", true);
-            ptitle.text("Description of the " + type); 
+            ptitle.text(type.charAt(0).toUpperCase() + type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
   
-            var pname = mydiv.append('p');
-            pname.classed("details", true);
-            pname.text("Name: " + mynode.name);
-  
-            var pmnemo = mydiv.append('p');
-            pmnemo.classed("details", true);
-            pmnemo.text("Mnemo: " + mynode.mnemo);
-    
-            var pactive = mydiv.append('p');
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Active:")
+            pactive = p.append('span');
             pactive.classed("details", true);
-            pactive.text("Active: " + mynode.active);
-    
-            var pdesc = mydiv.append('p');
-            pdesc.classed("details", true);
-            pdesc.text("Description: " + mynode.description);
+            pactive.text(mynode.active);
+
+            pdesct = mydiv.append('p');
+            pdesct.classed("details-title", true); 
+            pdesct.text("Description:")
+            for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+                var pdesc = mydiv.append('p');
+                pdesc.classed("details", true);
+                pdesc.text(mynode.description[desc_idx]);
+            }
+
 //--------------------------
 
           break;
@@ -381,24 +382,14 @@ function click(d) {
     }
 
     // Do that only if we actually found the item.
-    if (type != "none" && type != "undefined") {
-      //d.style("font-weight", "bold");
-    } else if (type == "none") {
+    if ( type == "none" && type != "undefined" ) {
       alert("Could not find node " + d.mnemo + " in " + d.type + " definition files.");
     }
   }
 
-// alert("key pressed: " + d.shiftKey() );
   if (d.shiftKey) {
     alert("Shift key pressed!");
   }
-//    d._children = d.children;
-//    d.children = null;
-//  } else {
-//    d.children = d._children;
-//    d._children = null;
-//  }
-//  update(d);
 }
 
 </script>

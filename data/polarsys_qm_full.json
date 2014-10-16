@@ -215,13 +215,13 @@
             "children": [
               {
                 "name": "Visibility in conferences",
-                "mnemo": "VISIBILITY_CONF",
+                "mnemo": "PUB_CONF",
                 "type": "concept",
                 "active": "false",
                 "children": [
                   {
                     "name": "Number of appearances in conferences",
-                    "mnemo": "VISIBILITY_CONF_VOL",
+                    "mnemo": "PUB_CONF_VOL",
                     "type": "metric",
                     "active": "false"
                   }
@@ -491,8 +491,14 @@
                 "active": "true",
                 "children": [
                   {
-                    "name": "Tests line coverage",
+                    "name": "Test line coverage",
                     "mnemo": "TST_COV_LINES",
+                    "type": "metric",
+                    "active": "true"
+                  },
+                  {
+                    "name": "Test branches coverage",
+                    "mnemo": "TST_COV_BRANCHES",
                     "type": "metric",
                     "active": "true"
                   }
@@ -506,21 +512,21 @@
                 "children": [
                   {
                     "name": "Ratio of tests on code",
-                    "mnemo": "TST_VOL_RATIO",
+                    "mnemo": "TST_VOL_IDX",
                     "type": "metric",
                     "active": "true"
                   }
                 ]
               },
               {
-                "name": "Test success rate",
+                "name": "Test success density",
                 "mnemo": "TST_SUCCESS",
                 "type": "concept",
                 "active": "true",
                 "children": [
                   {
-                    "name": "Test success rate",
-                    "mnemo": "TST_SUCCESS_1W",
+                    "name": "Test success density",
+                    "mnemo": "TST_SUCCESS_LAST",
                     "type": "metric",
                     "active": "true"
                   }
