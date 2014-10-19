@@ -1,0 +1,162 @@
+
+body {
+    background-color: #ebeef1;
+    font-family: Arial;
+}
+
+/* unvisited link */
+a:link {
+    color: #513b76;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #513b76;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #513b76;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #513b76;
+    text-decoration: none;
+}
+
+div#intro {
+    margin: 10px 0px;
+    padding: 20px;
+    
+    background-image: url("images/logo_polarsys.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+div#menu {
+    width: 170px;
+    float: left;
+    
+    margin: 0px;
+    padding: 10px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0f1d41;
+    border-radius: 10px;
+}
+
+div#content {
+    width: auto;
+    background-color: #f6f6f6;
+    
+    margin: 0px;
+    margin-right: 430px;
+    padding: 10px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0f1d41;
+    border-radius: 10px;
+}
+
+div#content-full {
+    width: auto;
+    background-color: #f6f6f6;
+    
+    margin: 0px;
+    margin-right: 0px;
+    padding: 10px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0f1d41;
+    border-radius: 10px;
+}
+
+div#moreinfo {
+    width: 400px;
+    position: fixed;
+    
+    margin: 0px;
+    padding: 10px;
+    top: 10px;
+    right: 10px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0f1d41;
+    border-radius: 10px;
+    
+    background-color: #f6f6f6;
+}
+
+h1 {
+    margin: 10px 0px 100px 400px;
+    padding: 0px;
+
+    color: #0f1d41;
+    font-size: 18pt;
+}
+
+h4 {
+    margin: 20px 0px 10px 0px;
+    padding: 0px;
+}
+
+p {
+    padding: 0px;
+}
+
+.hid {
+    display: none;
+}
+
+div.subpar {
+    margin: 0px 10px;
+}
+
+p.desc {
+    padding: 0px;
+    margin: 0px;
+}
+
+p.subdesc {
+    padding: 0px 0px 0px 10px;
+    margin: 0px;
+}
+
+p.menu-entry {
+    width: 180px;
+    margin: 0px;
+    padding: 0px;
+}
+
+p.menu-subentry {
+    width: 180px;
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
+}
+
+table.measures {
+    border-collapse: collapse;
+    width: 100%;
+}
+table.measures tr:nth-child(2n+1) {
+    background-color: #f1f1f1;
+}
+table.measures tr:nth-child(2n) {
+    background-color: #ffffff;
+}
+table.measures th {
+    background-color: #555555;
+    border: 1px solid #555555;
+    color: #ffffff;
+    padding: 3px;
+    text-align: left;
+    vertical-align: top;
+}
