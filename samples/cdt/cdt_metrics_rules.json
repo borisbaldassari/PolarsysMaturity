@@ -1,32 +1,17 @@
 {
-    "name": "CDT metrics values",
-    "project": "CDT",
-    "version": "HEAD",
-    "date": "2014-10-13",
+    "name": "Project metrics",
     "children": [
         {
             "name": "NCC_ANA",
             "value": "28410"
         }, 
         {
-            "name": "NCC_ANA_IDX",
-            "value": "31.07"
-        }, 
-        {
             "name": "NCC_CHA",
             "value": "5153"
         }, 
         {
-            "name": "NCC_CHA_IDX",
-            "value": "5.63"
-        }, 
-        {
             "name": "NCC_COR",
-            "value": "209"
-        }, 
-        {
-            "name": "NCC_COR_IDX",
-            "value": "0.22"
+            "value": "216"
         }, 
         {
             "name": "NCC_EFF",
@@ -34,7 +19,7 @@
         }, 
         {
             "name": "NCC_MAT",
-            "value": "22"
+            "value": "201"
         }, 
         {
             "name": "NCC_POR",
@@ -45,20 +30,12 @@
             "value": "7183"
         }, 
         {
-            "name": "NCC_REL_IDX",
-            "value": "7.86"
-        }, 
-        {
             "name": "NCC_RES",
             "value": "0"
         }, 
         {
             "name": "NCC_REU",
             "value": "139754"
-        }, 
-        {
-            "name": "NCC_REU_IDX",
-            "value": "152.84"
         }, 
         {
             "name": "NCC_SEC",
@@ -82,7 +59,7 @@
         }, 
         {
             "name": "RKO_COR",
-            "value": "20"
+            "value": "22"
         }, 
         {
             "name": "RKO_EFF",
@@ -90,7 +67,7 @@
         }, 
         {
             "name": "RKO_MAT",
-            "value": "1"
+            "value": "2"
         }, 
         {
             "name": "RKO_POR",
@@ -126,7 +103,7 @@
         }, 
         {
             "name": "ROKR_COR",
-            "value": "70.1492537313433"
+            "value": "68.1159420289855"
         }, 
         {
             "name": "ROKR_EFF",
@@ -214,7 +191,7 @@
         }, 
         {
             "name": "RULES",
-            "value": "210"
+            "value": "213"
         }, 
         {
             "name": "RULES_ANA",
@@ -226,7 +203,7 @@
         }, 
         {
             "name": "RULES_COR",
-            "value": "67"
+            "value": "69"
         }, 
         {
             "name": "RULES_EFF",
@@ -234,7 +211,7 @@
         }, 
         {
             "name": "RULES_MAT",
-            "value": "1"
+            "value": "2"
         }, 
         {
             "name": "RULES_POR",
@@ -263,107 +240,6 @@
         {
             "name": "RULES_THR",
             "value": "8"
-        }, 
-        {
-            "name": "PUB_ITS_INFO_PMI",
-            "value": "5"
-        }, 
-        {
-            "name": "PUB_SCM_INFO_PMI",
-            "value": "5"
-        }, 
-        {
-            "name": "PLAN_MILESTONES_VOL",
-            "value": "0"
-        }, 
-        {
-            "name": "PLAN_REVIEWS_SUCCESS_RATE",
-            "value": "40"
-        }, 
-        {
-            "name": "MKT_FAV",
-            "value": "7"
-        }, 
-        {
-            "name": "MKT_INSTALL_SUCCESS_1M",
-            "value": "3058"
-        }, 
-        {
-            "name": "MKT_INSTALL_FAILED_1M",
-            "value": "301"
-        }, 
-        {
-            "name": "DL_UPDATE_SITE_1M",
-            "value": "3359"
-        },
-        {
-            "name": "DL_REPO_1M",
-            "value": "572801"
-        },
-        {
-            "name": "ITS_AUTH_1M",
-            "value": "55"
-        },
-        {
-            "name": "ITS_BUGS_DENSITY",
-            "value": "0.08530612869851283"
-        },
-        {
-            "name": "SCM_COMMITS_1M",
-            "value": "112"
-        },
-        {
-            "name": "MLS_DEV_SUBJ_1M",
-            "value": "32"
-        },
-        {
-            "name": "MLS_DEV_AUTH_1M",
-            "value": "32"
-        },
-        {
-            "name": "MLS_DEV_VOL_1M",
-            "value": "119"
-        },
-        {
-            "name": "ITS_UPDATES_1M",
-            "value": "237"
-        },
-        {
-            "name": "ITS_FIX_MED_1M",
-            "value": "14.95"
-        },
-        {
-            "name": "SCM_COMMITTERS_1M",
-            "value": "18"
-        },
-        {
-            "name": "MLS_DEV_RESP_RATIO_1M",
-            "value": "2.71875"
-        },
-        {
-            "name": "SCM_COMMITTED_FILES_1M",
-            "value": "301"
-        },
-        {
-            "name": "VG",
-            "value": "225705"
-        },
-        {
-            "name": "COMR",
-            "value": "16.4"
-        },
-        {
-            "name": "FU_CLONE",
-            "value": "115314"
-        },
-        {
-            "name": "TST_COV_LINES",
-            "value": "63.18"
-        },
-        {
-            "name": "SLOC",
-            "value": "914354"
         }
-        
     ]
 }

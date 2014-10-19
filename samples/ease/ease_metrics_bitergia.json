@@ -1,1 +1,14 @@
-{'scm_commits_1m': 0, 'scm_committers_1m': 0, 'scm_committed_files_1m': 0, 'mls_dev_vol_1m': 52, 'mls_dev_resp_ratio_1m': 0.4444444444444444, 'mls_dev_subj_1m': 36, 'mls_usr_resp_time_med_1m': 0.56, 'its_updates_1m': 54L, 'its_auth_1m': 1, 'its_bugs_density': 0.1370463764938055, 'its_fix_med_1m': 0.0}
+{
+        "scm_commits_1m": "0", 
+        "scm_committers_1m": "0", 
+        "scm_committed_files_1m": "0", 
+        "mls_dev_vol_1m": "52", 
+        "mls_dev_resp_ratio_1m": "0.4444444444444444", 
+        "mls_dev_subj_1m": "36", 
+        "mls_usr_resp_time_med_1m": "0.56", 
+        "its_updates_1m": "54", 
+        "its_auth_1m": "1", 
+        "its_bugs_density": "0.1370463764938055", 
+        "its_fix_med_1m": "0.0"
+}
+

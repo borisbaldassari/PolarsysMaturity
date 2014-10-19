@@ -1,1 +1,1 @@
-ts_1m': 124, 'mls_dev_vol_1m': 0, 'its_updates_1m': 138L, 'scm_committers_1m': 11, 'mls_dev_resp_ratio_1m': 0, 'its_auth_1m': 15, 'its_bugs_density': 0.09677339892810265, 'mls_dev_subj_1m': 0, 'its_fix_med_1m': 9.03, 'mls_usr_resp_time_med_1m': 0.0, 'scm_committed_files_1m': 4162}
+{ "mls_dev_vol_1m": 0, "its_updates_1m": 138, "scm_committers_1m": 11, "mls_dev_resp_ratio_1m": 0, "its_auth_1m": 15, "its_bugs_density": 0.09677339892810265, "mls_dev_subj_1m": 0, "its_fix_med_1m": 9.03, "mls_usr_resp_time_med_1m": 0.0, "scm_committed_files_1m": 4162}
