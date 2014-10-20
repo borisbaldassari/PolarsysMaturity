@@ -281,6 +281,8 @@ foreach my $cat (sort keys %categories) {
     $metrics{ 'ROKR_' . $cat } = 100 * $metrics{ 'ROK_' . $cat } / $metrics{ 'RULES_' . $cat };
 }
 
+$metrics{"ROKR"} = $length * 100 / $vol_rules;
+
 if (defined($opt_verbose)) {
     
     print "Found $length rules violated.\n";
@@ -297,6 +299,16 @@ if (defined($opt_verbose)) {
     }
 }
 
+my $total = 0;
+print Dumper(%violations);
+foreach my $violation (keys %violations) {
+	if ( exists( $rules{$violation} ) ) {
+	    $total += $violations{$violation}->{"vol"};
+    }
+}
+print "Found $total violations.";
+$metrics{"NCC"} = $total;
+    
 # Write violations to a file if demanded
 if (defined($opt_output_v) && $opt_output_v =~ m!\S+!) {
     print "Writing violations to file [$opt_output_v].\n";
