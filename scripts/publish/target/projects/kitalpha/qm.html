@@ -125,11 +125,33 @@ d3.json("../../docs/data/polarsys_metrics.json", function(error, metrics) {
   mymetrics = metrics;
 });
 
-// Load file for values.
+// Load file for metrics values.
 d3.json("project_metrics.json", function(error, values) {
   if (error) return console.warn(error);
   
   myvalues = values;
+});
+
+// Load file for attributes values.
+d3.json("project_attributes.json", function(error, values) {
+  if (error) return console.warn(error);
+  
+  for (var property in values) {
+    if (values.hasOwnProperty(property)) {
+      myvalues[property] = values[property];
+    }
+  }
+});
+
+// Load file for concepts values.
+d3.json("project_concepts.json", function(error, values) {
+  if (error) return console.warn(error);
+
+  for (var property in values) {
+    if (values.hasOwnProperty(property)) {
+      myvalues[property] = values[property];
+    }
+  }
 });
 
 d3.json("../../docs/data/polarsys_qm_full.json", function(error, qm) {
