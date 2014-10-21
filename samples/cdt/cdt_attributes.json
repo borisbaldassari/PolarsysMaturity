@@ -1,0 +1,80 @@
+{
+    "name": "CDT metrics values",
+    "project": "CDT",
+    "version": "HEAD",
+    "date": "2014-10-13",
+    "children": [
+        {
+            "name": "QM_QUALITY",
+            "value": "4"
+        }, 
+        {
+            "name": "QM_COMMUNITY",
+            "value": "3"
+        }, 
+        {
+            "name": "QM_ACTIVITY",
+            "value": "5"
+        }, 
+        {
+            "name": "QM_DIVERSITY",
+            "value": "4"
+        }, 
+        {
+            "name": "QM_RESPONSIVENESS",
+            "value": "3"
+        }, 
+        {
+            "name": "QM_SUPPORT",
+            "value": "2"
+        }, 
+        {
+            "name": "QM_USAGE",
+            "value": "2"
+        }, 
+        {
+            "name": "QM_FEEDBACK",
+            "value": "4"
+        }, 
+        {
+            "name": "QM_PROCESS",
+            "value": "3"
+        }, 
+        {
+            "name": "QM_SCM",
+            "value": "5"
+        }, 
+        {
+            "name": "QM_ITS",
+            "value": "4"
+        }, 
+        {
+            "name": "QM_PLAN",
+            "value": "3"
+        }, 
+        {
+            "name": "QM_TST",
+            "value": "2"
+        }, 
+        {
+            "name": "QM_PRODUCT",
+            "value": "2"
+        }, 
+        {
+            "name": "QM_ANA",
+            "value": "5"
+        }, 
+        {
+            "name": "QM_CHA",
+            "value": "4"
+        }, 
+        {
+            "name": "QM_REL",
+            "value": "2"
+        }, 
+        {
+            "name": "QM_REU",
+            "value": "1"
+        }
+    ]
+}

@@ -266,6 +266,7 @@ sub create_doc_rules($$) {
     $full_text_rules .= "</head>\n<body>\n";
     $full_text_rules .= "<div id=\"content-full\">\n";
     $full_text_rules .= "<h1>List of rules for the PolarSys Maturity Assessment quality model</h1>\n\n";
+    $full_text_rules .= "<p>Download the rule set [ <a href=\"rules.csv\">CSV</a> ]</p>\n";
 
     # Loop through rules
     my $rules_vol = 0;
@@ -595,7 +596,9 @@ sub describe_project_home($$) {
     
     # More info box    
     $full_text_project_home .= "<div id=\"moreinfo\"><h4>More info</h4>\n";
-    $full_text_project_home .= "<p>Most of the information displayed in this page comes from the PMI web site: <a href=\"http://projects.eclipse.org\">projects.eclipse.org</a></p></div>\n";
+    $full_text_project_home .= "<p>Most of the information displayed in this page comes from the PMI web site: <a href=\"http://projects.eclipse.org\">projects.eclipse.org</a></p>\n";
+    $full_text_project_home .= &describe_downloads();
+    $full_text_project_home .= "</div>\n";
     
     # Close html tags in output
     $full_text_project_home .= "</body></html>\n";
@@ -606,6 +609,17 @@ sub describe_project_home($$) {
     &write_file($target_project . "/home.html", $full_text_project_home);
 }
 
+sub describe_downloads() {
+    my $full_text_project;
+    $full_text_project = "<h4>Download data for this project</h4>\n";
+    $full_text_project .= "<ul>\n";
+    $full_text_project .= "<li>Metrics [ <a href=\"project_metrics.json\">JSON</a> ]</li>";
+    $full_text_project .= "<li>Concepts [ <a href=\"project_concepts.json\">JSON</a> ]</li>";
+    $full_text_project .= "<li>Attributes [ <a href=\"project_attributes.json\">JSON</a> ]</li>";
+    $full_text_project .= "</ul>\n";
+
+    return $full_text_project;
+}
 
 
 sub describe_project_measures($$) {
@@ -613,6 +627,8 @@ sub describe_project_measures($$) {
     my $project_path = shift;
     
     my %project_values;
+    my %project_concepts;
+    my %project_attributes;
 
     print "* Building measures for project [$project_name]..\n";
 
@@ -623,7 +639,7 @@ sub describe_project_measures($$) {
        	print "* Reading values from [$file]..\n";
 	# Open json file
 	my $json_values;
-	do { 
+	if (-e $file) { 
 	    local $/; 
 	    open my $fh, "<", $file;
 	    $json_values = <$fh>;
@@ -635,7 +651,7 @@ sub describe_project_measures($$) {
 	eval {
 	    $raw_values = decode_json( $json_values );
 	} or do {
-	    print "WARN Cannot read input file [$file]. $@. Skiping...\n";
+	    print "ERR: Cannot read input file [$file]. $@. Skiping...\n";
 	    next;
 	};
 
@@ -654,7 +670,103 @@ sub describe_project_measures($$) {
 	    }	    
 	}
     }
-	    
+
+    # Read attributes
+
+    # Open json file
+    my ($json_values, $raw_values);
+    my $file_in_attributes = "$samples_dir/$project_name/${project_name}_attributes.json";
+    print "* Reading attributes from [$file_in_attributes]..\n";
+    if (-e $file_in_attributes) { 
+	local $/; 
+	open my $fh, "<", $file_in_attributes;
+	$json_values = <$fh>;
+	close $fh;
+    };
+    
+    # Decode the entire JSON
+    eval {
+	$raw_values = decode_json( $json_values );
+
+	for (my $i = 0 ; $i < scalar @{$raw_values->{"children"}} ; $i++) {
+	    $project_attributes{$raw_values->{"children"}->[$i]->{"name"}} 
+	    = $raw_values->{"children"}->[$i]->{"value"};
+	}
+
+	# Copy attributes to target_projects
+	my $json_path = $target_projects . "/" . $project_name . "/" . "project_attributes.json";
+	print "* Writing project attributes to [$json_path].\n";
+	
+	eval {
+	    $raw_values = encode_json( \%project_attributes );
+	} or do {
+	    print "ERR: Cannot write project attributes to json. $@. Skiping...\n";
+	    next;
+	};
+	
+	# Open json file
+	do { 
+	    local $/; 
+	    open my $fh, ">", $json_path 
+		or print "ERR: Cannot write project attributes to json [$json_path]. $@. Skiping...\n";
+	    print $fh $raw_values;
+	    close $fh;
+	};
+    } or do {
+	print "ERR: Cannot read input file [$file_in_attributes]. Skiping...\n";
+	print "$@.\n" if ($debug);
+    };
+
+    # Read concepts
+
+    # Open json file
+    my $file_in_concepts = "$samples_dir/$project_name/${project_name}_concepts.json";
+    print "* Reading concepts from [$file_in_concepts]..\n";
+    if (-e $file_in_concepts) { 
+	local $/; 
+	open my $fh, "<", $file_in_concepts;
+	$json_values = <$fh>;
+	close $fh;
+    } else {
+	print "ERR: Could not find $file_in_concepts.\n";
+    }
+
+    #print Dumper($json_values);
+    
+    # Decode the entire JSON
+    eval {
+	$raw_values = decode_json( $json_values );
+
+	for (my $i = 0 ; $i < scalar @{$raw_values->{"children"}} ; $i++) {
+	    $project_concepts{$raw_values->{"children"}->[$i]->{"name"}} 
+	    = $raw_values->{"children"}->[$i]->{"value"};
+	}
+
+	# Copy concepts to target_projects
+	my $json_path = $target_projects . "/" . $project_name . "/" . "project_concepts.json";
+	print "* Writing project concepts to [$json_path].\n";
+
+	eval {
+	    $raw_values = encode_json( \%project_concepts );
+	} or do {
+	    print "ERR: Cannot encode project concepts to json. $@. Skiping...\n";
+	};
+	
+	# Open json file
+	do { 
+	    local $/; 
+	    open my $fh, ">", $json_path 
+		or print "ERR: Cannot write project attributes to json [$json_path]. $@. Skiping...\n";
+	    print $fh $raw_values;
+	    close $fh;
+	};
+	
+    } or do {
+	print "ERR: Cannot read input file [$file_in_concepts]. Skiping...\n";
+	print "$@.\n" if ($debug);
+    };
+
+    
     my $full_text_project_measures = "<!DOCTYPE html><head>\n";
     $full_text_project_measures .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"../../styles.css\"/>\n";
     # $full_text_project_measures .= "<script language=\"javascript\" type=\"text/javascript\">\n";
@@ -684,7 +796,7 @@ sub describe_project_measures($$) {
 	    $full_text_project_measures .= "<td>" . $project_values{$v_mnemo} . "</td></tr>\n";
 	} else {
 	    if ($debug) {
-		print "WARN metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n";
+		print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n";
 	    }
 	}
     }
@@ -697,27 +809,39 @@ sub describe_project_measures($$) {
     
     # More info box    
     $full_text_project_measures .= "<div id=\"moreinfo\"><h4>More info</h4>\n";
-    $full_text_project_measures .= "You can get more information by clicking on the metric name or mnemo.</div>\n";
-    
+    $full_text_project_measures .= "You can get more information by clicking on the metric name or mnemo.\n";
+    $full_text_project_measures .= &describe_downloads();    
+    $full_text_project_measures .= "</div>\n";
     # Close html tags in output
     $full_text_project_measures .= "</body></html>\n";
 
     
     # Copy values to target_projects
-    my $raw_values;
+    my $json_path = $target_projects . "/" . $project_name . "/" . "project_metrics.json";
+    print "* Writing project values to [$json_path].\n";
+
     eval {
 	$raw_values = encode_json( \%project_values );
     } or do {
-	print "WARN Cannot write project values to json. $@. Skiping...\n";
+	print "ERR: Cannot write project values to json. $@. Skiping...\n";
 	next;
     };
 
     # Open json file
-    my $json_path = $target_projects . "/" . $project_name . "/" . "project_metrics.json";
     do { 
 	local $/; 
 	open my $fh, ">", $json_path 
-	    or print "WARN Cannot write project values to json [$json_path]. $@. Skiping...\n";
+	    or print "ERR: Cannot write project values to json [$json_path]. $@. Skiping...\n";
+	print $fh $raw_values;
+	close $fh;
+    };
+
+    
+    # Open json file
+    do { 
+	local $/; 
+	open my $fh, ">", $json_path 
+	    or print "ERR: Cannot write project concepts to json [$json_path]. $@. Skiping...\n";
 	print $fh $raw_values;
 	close $fh;
     };
@@ -766,7 +890,7 @@ sub describe_project_violations($$) {
     eval {
 	$raw_values = decode_json( $json_values );
     } or do {
-	print "WARN Cannot read input file [$json_violations]. $@. Skiping...\n";
+	print "ERR: Cannot read input file [$json_violations]. $@. Skiping...\n";
 	return;
     };
     
@@ -802,7 +926,7 @@ sub describe_project_violations($$) {
 	    $full_text_project_measures .= "<td>" . $project_violations{$v_mnemo} . "</td></tr>\n";
 	} else {
 	    if ($debug) {
-		print "WARN rule [" . $v_mnemo . "] is not referenced in rules definition file.\n" if ($debug);
+		print "WARN: rule [" . $v_mnemo . "] is not referenced in rules definition file.\n" if ($debug);
 	    }
 	}
     }
@@ -815,7 +939,9 @@ sub describe_project_violations($$) {
     
     # More info box    
     $full_text_project_measures .= "<div id=\"moreinfo\"><h4>More info</h4>\n";
-    $full_text_project_measures .= "<p>Rule violations are retrieved from well-known rule-checking tools like PMD and FindBugs. Rules can be assimilated to good and bad practices. They are all attached to a category (quality attribute, check the <a href=\"../../docs/quality_model.html\">quality model</a> for more information) and have a priority.</p>\n</div>\n";
+    $full_text_project_measures .= "<p>Rule violations are retrieved from well-known rule-checking tools like PMD and FindBugs. Rules can be assimilated to good and bad practices. They are all attached to a category (quality attribute, check the <a href=\"../../docs/quality_model.html\">quality model</a> for more information) and have a priority.</p>\n";
+    $full_text_project_measures .= &describe_downloads();
+    $full_text_project_measures .= "</div>\n";
     
     # Close html tags in output
     $full_text_project_measures .= "</body></html>\n";
@@ -838,7 +964,7 @@ sub create_projects() {
             print "# Working on project [$project_name] located at [$project].\n";
             &describe_project($project_name, $project);
         } else {
-            print "WARN [$project] does not look like a project dir.\n\n";
+            print "WARN: [$project] does not look like a project dir.\n\n";
         }
     }
     
