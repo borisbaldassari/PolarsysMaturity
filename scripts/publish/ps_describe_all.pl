@@ -727,9 +727,9 @@ sub describe_project_measures($$) {
 	open my $fh, "<", $file_in_concepts;
 	$json_values = <$fh>;
 	close $fh;
-    } else {
-	print "ERR: Could not find $file_in_concepts.\n";
-    }
+    } #else {
+#	print "ERR: Could not find [$file_in_concepts].\n";
+#    }
 
     #print Dumper($json_values);
     
