@@ -10,10 +10,12 @@
 
 use strict;
 use warnings;
+
 use Data::Dumper;
 use File::Basename;
 use File::Copy::Recursive qw(rcopy);
 use JSON qw( decode_json encode_json );
+use REST::Client;
 
 my $usage = <<EOU;
 $0
@@ -27,6 +29,10 @@ See Bitbucket repo at https://bitbucket.org/PolarSys/polarsysmaturity.git
 EOU
 
 die $usage if (scalar @ARGV != 0);
+
+my $plotly_key = '1mys04h2le';
+my $plotly_name = 'BorisBaldassari';
+my $plotly_url =  'https://plot.ly/clientresp';
 
 my $rules_dir = "../../rules/";
 my $metrics_dir = "../../data/";
@@ -47,6 +53,7 @@ my $json = JSON->new;
 $json->allow_singlequote("true");
 
 my %flat_metrics;
+my %flat_attributes;
 my %flat_rules;
 my $full_csv_rules;
 
@@ -769,13 +776,6 @@ sub describe_project_measures($$) {
     
     my $full_text_project_measures = "<!DOCTYPE html><head>\n";
     $full_text_project_measures .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"../../styles.css\"/>\n";
-    # $full_text_project_measures .= "<script language=\"javascript\" type=\"text/javascript\">\n";
-    # $full_text_project_measures .= "function myFunction() { \n";
-    # $full_text_project_measures .= "    document.getElementById(\"#moreinfo\")\n";
-    # $full_text_project_measures .= "    getElementById(\"#moreinfo\")\n";
-    # $full_text_project_measures .= "    document.getElementById(\"#moreinfo\")\n";
-    # $full_text_project_measures .= "}\n";
-    # $full_text_project_measures .= "</script>\n";
     $full_text_project_measures .= "</head>\n<body>\n";
     $full_text_project_measures .= "<div id=\"content\">\n";
     $full_text_project_measures .= "<h2>Measures for [$project_name]</h2>\n";
@@ -815,8 +815,46 @@ sub describe_project_measures($$) {
     # Close html tags in output
     $full_text_project_measures .= "</body></html>\n";
 
+
+    # Create html description for attributes.
+    my $full_text_project_attributes = "<!DOCTYPE html><head>\n";
+    $full_text_project_attributes .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"../../styles.css\"/>\n";
+    $full_text_project_attributes .= "</head>\n<body>\n";
+    $full_text_project_attributes .= "<div id=\"content\">\n";
+    $full_text_project_attributes .= "<h2>Attributes for [$project_name]</h2>\n";
     
-    # Copy values to target_projects
+    # loop through values and display them in a table.
+    $full_text_project_attributes .= "<table class=\"measures\">\n";
+    $full_text_project_attributes .= "<tr>" 
+	. "<th width=\"30%\">Mnemo</th>" 
+	. "<th width=\"20%\">Value</th></tr>\n";
+    foreach my $v_mnemo (sort keys %project_attributes) {
+#	print "DBG Looking for $v_mnemo in project_values.\n";
+	#my $v_name = $flat_metrics{$v_mnemo}->{"name"};
+	$full_text_project_attributes .= "<tr>" ;
+	$full_text_project_attributes .= "<td><a href=\"../../docs/attributes.html#" 
+	    . $v_mnemo . "\">" . $v_mnemo . "</a> (TODO)</td>";
+	$full_text_project_attributes .= "<td>" . $project_attributes{$v_mnemo} . "</td></tr>\n";
+    }
+    $full_text_project_attributes .= "</table>\n";
+    $full_text_project_attributes .= "</div>\n";
+    
+    
+    # Close div id="content" tag
+    $full_text_project_attributes .= "</div>";
+    
+    # More info box    
+    $full_text_project_attributes .= "<div id=\"moreinfo\"><h4>More info</h4>\n";
+    $full_text_project_attributes .= "<p>You can get more information by clicking on the metric name or mnemo.</p>\n";
+    $full_text_project_attributes .= "<p><img src=\"../../images/cdt_attributes.svg\" /></p>;
+    #<iframe width=\"400\" height=\"600\" frameborder=\"0\" seamless=\"seamless\" scrolling=\"no\" src=\"https://plot.ly/~BorisBaldassari/39/800/600\"></iframe></p>";
+    $full_text_project_attributes .= &describe_downloads();    
+    $full_text_project_attributes .= "</div>\n";
+    # Close html tags in output
+    $full_text_project_attributes .= "</body></html>\n";
+
+    
+    # Copy metrics values to target_projects
     my $json_path = $target_projects . "/" . $project_name . "/" . "project_metrics.json";
     print "* Writing project values to [$json_path].\n";
 
@@ -837,18 +875,22 @@ sub describe_project_measures($$) {
     };
 
     
-    # Open json file
-    do { 
-	local $/; 
-	open my $fh, ">", $json_path 
-	    or print "ERR: Cannot write project concepts to json [$json_path]. $@. Skiping...\n";
-	print $fh $raw_values;
-	close $fh;
-    };
+    # # Open json file
+    # do { 
+    # 	local $/; 
+    # 	open my $fh, ">", $json_path 
+    # 	    or print "ERR: Cannot write project concepts to json [$json_path]. $@. Skiping...\n";
+    # 	print $fh $raw_values;
+    # 	close $fh;
+    # };
 
+
+    # Write html description for attributes to file.
+    my $target_project = $target_projects . "/" . $project_name;
+    print "* Writing html description to [" . $target_project . "/attributes.html].\n\n";
+    &write_file($target_project . "/attributes.html", $full_text_project_attributes);
 
     # Write measures page to target dir.
-    my $target_project = $target_projects . "/" . $project_name;
     print "* Writing html description to [" . $target_project . "/measures.html].\n\n";
     &write_file($target_project . "/measures.html", $full_text_project_measures);
 }
@@ -941,6 +983,8 @@ sub describe_project_violations($$) {
     $full_text_project_measures .= "<div id=\"moreinfo\"><h4>More info</h4>\n";
     $full_text_project_measures .= "<p>Rule violations are retrieved from well-known rule-checking tools like PMD and FindBugs. Rules can be assimilated to good and bad practices. They are all attached to a category (quality attribute, check the <a href=\"../../docs/quality_model.html\">quality model</a> for more information) and have a priority.</p>\n";
     $full_text_project_measures .= &describe_downloads();
+    $full_text_project_measures .= "<h4>Plot it!</h4>\n";
+    $full_text_project_measures .= "<p><img src=\"../../images/cdt_violations.png\" width= \"100%\"/></p>\n";
     $full_text_project_measures .= "</div>\n";
     
     # Close html tags in output
