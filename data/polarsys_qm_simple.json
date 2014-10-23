@@ -75,7 +75,7 @@
       {
         "name": "Product",
         "mnemo": "QM_PRODUCT",
-        "active": "false",
+        "active": "true",
             "children": [
           {
             "name": "Analysability",

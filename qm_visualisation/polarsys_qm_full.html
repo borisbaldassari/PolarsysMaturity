@@ -109,20 +109,20 @@ var mymetrics;
 var myconcepts;
 
 // Load file for concepts.
-d3.json("/PolarsysMaturity/data/polarsys_concepts.json", function(error, concepts) {
+d3.json("../data/polarsys_concepts.json", function(error, concepts) {
   if (error) return console.warn(error);
   
   myconcepts = concepts;
 });
 
 // Load file for metrics.
-d3.json("/PolarsysMaturity/data/polarsys_metrics.json", function(error, metrics) {
+d3.json("../data/polarsys_metrics.json", function(error, metrics) {
   if (error) return console.warn(error);
   
   mymetrics = metrics;
 });
 
-d3.json("/PolarsysMaturity/data/polarsys_qm_full.json", function(error, qm) {
+d3.json("../data/polarsys_qm_full.json", function(error, qm) {
   if (error) return console.warn(error);
 
 
