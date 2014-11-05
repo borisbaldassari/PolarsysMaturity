@@ -307,6 +307,76 @@ sub create_doc_rules($$) {
 
 }
 
+sub create_doc_attributes($$) {
+    my $source = shift;
+    my $target = shift;
+    
+    print "# Reading attributes, looping...\n";
+    
+    ## Read rules from json files in the rules directory
+    
+    my $file_attrs = $metrics_dir . "/polarsys_qm_full.json";
+
+    print "* Reading attributes file [$file_attrs]..\n";
+
+    # Open json file
+    my $json_attrs;
+    do { 
+	local $/;
+	open my $fh, "<", $file_attrs;
+	$json_attrs = <$fh>;
+	close $fh;
+    };
+    
+    # Decode the entire JSON
+    my $raw_attrs = decode_json( $json_attrs );
+    
+    foreach my $attr_child (@{$raw_attrs->{"children"}}) {
+	$flat_attributes{$attr_child->{"mnemo"}} = $attr_child;
+    }
+    
+    #print Dumper( %flat_attrs ) if ($debug);
+
+    # $full_text_* contain the full html page string for rules and concepts.
+    my $full_text_attrs = "<!DOCTYPE html><head>\n";
+    $full_text_attrs .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"../styles.css\"/>\n";
+    $full_text_attrs .= "</head>\n<body>\n";
+    $full_text_attrs .= "<div id=\"content-full\">\n";
+    $full_text_attrs .= "<h1>List of rules for the PolarSys Maturity Assessment quality model</h1>\n\n";
+    $full_text_attrs .= "<p>Download the rule set [ <a href=\"rules.csv\">CSV</a> ]</p>\n";
+
+    # Loop through rules
+    my $attrs_vol = 0;
+    foreach my $rule ( keys %flat_attributes ) {
+    
+        if (exists($flat_attributes{$rule}{'priority'})) {
+
+            my $rule_name = $flat_attributes{$rule}{"name"};
+            print "Working on $rule_name: $rule.\n" if ($debug);
+    
+            #$full_text_concepts .= "<h2>Concept name</h2>\n";
+    
+            $full_text_attrs .= &describe_rule($rule) or die "Cannot find rule '$rule_name'.";
+            $attrs_vol++;
+        }
+    }
+    print "Found a total of [$attrs_vol] attributes.\n\n";
+
+    # Close html tags in output
+    $full_text_attrs .= "</div></body></html>\n";
+    
+    # Write results to html file.
+    print "# Writing rules files...\n";
+
+    print "* Writing rules html description to [" . $target_docs . "/rules.html].\n";
+    &write_file($target_docs . "/rules.html", $full_text_attrs);
+
+    # Write results to csv file.
+#    print "* Writing rules csv formatting to [" . $target_docs . "/rules.csv].\n";
+#    &write_file($target_docs . "/rules.csv", $full_csv_attrs);
+
+}
+
 sub create_doc_metrics($$) {
     my $source = shift;
     my $target = shift;
@@ -620,9 +690,9 @@ sub describe_downloads() {
     my $full_text_project;
     $full_text_project = "<h4>Download data for this project</h4>\n";
     $full_text_project .= "<ul>\n";
-    $full_text_project .= "<li>Metrics [ <a href=\"project_metrics.json\">JSON</a> ]</li>";
-    $full_text_project .= "<li>Concepts [ <a href=\"project_concepts.json\">JSON</a> ]</li>";
-    $full_text_project .= "<li>Attributes [ <a href=\"project_attributes.json\">JSON</a> ]</li>";
+    $full_text_project .= "<li>Metrics [ <a href=\"project_metrics.json\">JSON</a>, <a href=\"project_metrics.json\">CSV</a> ]</li>";
+    $full_text_project .= "<li>Concepts [ <a href=\"project_concepts.json\">JSON</a>, <a href=\"project_concepts.json\">CSV</a> ]</li>";
+    $full_text_project .= "<li>Attributes [ <a href=\"project_attributes.json\">JSON</a>, <a href=\"project_attributes.json\">CSV</a> ]</li>";
     $full_text_project .= "</ul>\n";
 
     return $full_text_project;
@@ -846,7 +916,7 @@ sub describe_project_measures($$) {
     # More info box    
     $full_text_project_attributes .= "<div id=\"moreinfo\"><h4>More info</h4>\n";
     $full_text_project_attributes .= "<p>You can get more information by clicking on the metric name or mnemo.</p>\n";
-    $full_text_project_attributes .= "<p><img src=\"../../images/cdt_attributes.svg\" /></p>;
+    $full_text_project_attributes .= "<p><img src=\"../../images/cdt_attributes.svg\" /></p>";
     #<iframe width=\"400\" height=\"600\" frameborder=\"0\" seamless=\"seamless\" scrolling=\"no\" src=\"https://plot.ly/~BorisBaldassari/39/800/600\"></iframe></p>";
     $full_text_project_attributes .= &describe_downloads();    
     $full_text_project_attributes .= "</div>\n";
@@ -1058,6 +1128,7 @@ print "Executing $0 on " . localtime . "\n\n";
 &init();
 &create_doc_rules($rules_dir, $target_docs);
 &create_doc_metrics($metrics_dir, $target_docs);
+#&create_doc_attributes($qm_dir, $tarege_docs);
 &create_projects();
 
 

@@ -1,0 +1,180 @@
+sub create_plotly_plot($) {
+    my $project_name = shift;
+
+    my $req_body = "un=${plotly_name}&";
+    $req_body .= "key=${plotly_key}&";
+    $req_body .= 'origin=plot&';
+    $req_body .= 'platform=perl&';
+    $req_body .= 'args=[["Activity", "Diversity", "Support", "Usage", "User feedback", "Configuration management", "Change management", "Planning management", "Test Management", "Analysability", "Changeability", "Reliability", "Reusability"], [3, 4, 5, 1, 2, 3, 6, 6, 5, 5, 4, 3, 4]]&';
+    $req_body .= 'kwargs={';
+    $req_body .= '    "filename":"CDT Attributes"';
+#     $req_body .= 'xaxis:{
+#         range:[
+#             -0.5,
+#             13.5
+#         ],
+#         type:"category",
+#         showline:false,
+#         mirror:false,
+#         linecolor:"#444",
+#         linewidth:1,
+#         tick0:0,
+#         dtick:1,
+#         ticks:"",
+#         ticklen:5,
+#         tickwidth:1,
+#         tickcolor:"#444",
+#         nticks:0,
+#         showticklabels:true,
+#         tickangle:"auto",
+#         exponentformat:"B",
+#         showexponent:"all",
+#         showgrid:false,
+#         gridcolor:"#eee",
+#         gridwidth:1,
+#         autorange:true,
+#         rangemode:"normal",
+#         autotick:true,
+#         zeroline:false,
+#         zerolinecolor:"#444",
+#         zerolinewidth:1,
+#         titlefont:{
+#             family:"",
+#             size:0,
+#             color:""
+#         },
+#         tickfont:{
+#             family:"",
+#             size:0,
+#             color:""
+#         },
+#         overlaying:false,
+#         domain:[
+#             0,
+#             1
+#         ],
+#         position:0,
+#         anchor:"y",
+#         title:"Click to enter X axis title"
+#     },
+#     yaxis:{
+#         range:[
+#             0,
+#             5.2631578947368425
+#         ],
+#         type:"linear",
+#         showline:false,
+#         mirror:false,
+#         linecolor:"#444",
+#         linewidth:1,
+#         tick0:0,
+#         dtick:1,
+#         ticks:"",
+#         ticklen:5,
+#         tickwidth:1,
+#         tickcolor:"#444",
+#         nticks:0,
+#         showticklabels:true,
+#         tickangle:"auto",
+#         exponentformat:"B",
+#         showexponent:"all",
+#         showgrid:true,
+#         gridcolor:"#eee",
+#         gridwidth:1,
+#         autorange:true,
+#         rangemode:"normal",
+#         autotick:true,
+#         zeroline:true,
+#         zerolinecolor:"#444",
+#         zerolinewidth:1,
+#         titlefont:{
+#             family:"",
+#             size:0,
+#             color:""
+#         },
+#         tickfont:{
+#             family:"",
+#             size:0,
+#             color:""
+#         },
+#         overlaying:false,
+#         domain:[
+#             0,
+#             1
+#         ],
+#         position:0,
+#         anchor:"x",
+#         title:"Click to enter Y axis title"
+#     },
+#     legend:{
+#         bgcolor:"#fff",
+#         bordercolor:"#444",
+#         borderwidth:0,
+#         font:{
+#             family:"",
+#             size:0,
+#             color:""
+#         },
+#         traceorder:"normal",
+#         xanchor:"left",
+#         yanchor:"top",
+#         x:1.02,
+#         y:1
+#     },
+#     width:1548,
+#     height:703,
+#     autosize:true,
+#     margin:{
+#         l:80,
+#         r:80,
+#         t:100,
+#         b:80,
+#         pad:0,
+#         autoexpand:true
+#     },
+#     paper_bgcolor:"#fff",
+#     plot_bgcolor:"#fff",
+#     barmode:"group",
+#     bargap:0.2,
+#     bargroupgap:0,
+#     boxmode:"overlay",
+#     boxgap:0.3,
+#     boxgroupgap:0.3,
+#     font:{
+#         family:""Open sans", verdana, arial, sans-serif",
+#         size:12,
+#         color:"#444"
+#     },
+#     titlefont:{
+#         family:"",
+#         size:0,
+#         color:""
+#     },
+#     dragmode:"zoom",
+#     hovermode:"x",
+#     separators:".,",
+#     hidesources:false,
+#     smith:false,
+#     showlegend:true
+
+# }"filename": "plot from api",';
+    $req_body .= '        "fileopt": "overwrite",';
+    $req_body .= '        "style": {';
+    $req_body .= '            "type": "bar"';
+    $req_body .= '        },';
+    $req_body .= '    "traces": [1],';
+    $req_body .= '    "layout": {';
+    $req_body .= '        "title": "CDT attributes"';
+    $req_body .= '    },';
+    $req_body .= '    "world_readable": true';
+    $req_body .= '}';
+    
+    my $client = REST::Client->new();
+    
+    $client->POST($plotly_url, $req_body); 
+    
+    print $client->responseContent();
+    
+}
+
+

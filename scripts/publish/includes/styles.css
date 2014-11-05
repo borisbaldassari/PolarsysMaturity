@@ -113,10 +113,10 @@ p {
 }
 
 p.warning {
-    color: darkred;
+    color: red;
     background-color: pink;
     padding: 10px;
-    opacity: 0.8;
+    opacity: 0.6;
     
     border-style: solid;
     border-width: 1px;
