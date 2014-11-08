@@ -12,7 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Our CSS sheets -->
-    <!-- link rel="stylesheet" href="/styles/main.css" -->
+    <link rel="stylesheet" href="/css/main.css">
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <link href="/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/css/plugins/morris.css" rel="stylesheet">
+    <!-- link href="/css/plugins/morris.css" rel="stylesheet" -->
 
     <!-- Custom Fonts -->
     <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -82,7 +82,7 @@
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h3 class="page-header">Example Home</h3>
+              <h3 class="page-header">Maturity Assessment Home</h3>
               <p>This page is an example of what could be the home page on this web site.</p>
         
               <div class="alert alert-warning alert-dismissible" role="alert">
@@ -90,52 +90,38 @@
                   <span aria-hidden="true">&times;</span>
                   <span class="sr-only">Close</span>
                 </button>
-                <strong>Warning!</strong> Check the <a href="http://getbootsrap.com">bootstrap sugar</a> available for customisation.
+                <strong>Warning!</strong> This site is an on-going work. You can participate or just wait for us to advance.
               </div>
+              
+              <p><a href="http://polarsys.org">PolarSys</a> is an Eclipse <a href="http://www.eclipse.org/org/industry-workgroups/">Industry Working Group</a> created by large industry players and by tools providers to collaborate on the creation and support of Open Source tools for the development of embedded systems. Members of PolarSys started working on a <a href="https://polarsys.org/wiki/Maturity_Assessment_WG">Maturity Assessment task force</a> back in 2013, to assess and help improve quality of projects entering the PolarSys umbrella.</p>
+    
+              <p>This web site is automatically generated from the definition files stored in a git repository, so it can not be modified directly. Instead, please send your remarks to the <a href="https://dev.eclipse.org/mailman/listinfo/polarsys-iwg">PolarSys mailing list</a> or <a href="https://wiki.eclipse.org/index.php?title=User_talk:Boris.chrysalice.org">contact me</a> (Boris Baldassari).</p>
+          
+          
 
               <div class="panel panel-default">
-                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-heading"><b>Documentation</b></div>
                   <div class="panel-body">
-                    Panel content
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="width: 60%;">3 / 5</div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"  style="width: 40%;">2 / 5</div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"  style="width: 80%;">4 / 5</div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar progress-bar-striped" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"  style="width: 60%;">3 / 5</div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"  style="width: 100%">5 / 5</div>
+                    <div class="list-group">
+                      <a href="documentation/attributes.html" class="list-group-item"><i class="glyphicon glyphicon-help"></i> Quality attributes definition</a>
+                      <a href="documentation/metrics.html" class="list-group-item"><i class="glyphicon glyphicon-folder-help"></i> Metrics definition</a>
+                      <a href="documentation/questions.html" class="list-group-item"><i class="glyphicon glyphicon-folder-help"></i> Questions definition</a>
                     </div>
                   </div>
                 </div>
-          
-          
-
+                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><b>Sub-folders</b></div>
-                    <div class="panel-body">
-                      <div class="list-group">
-                        <a href="project_1" class="list-group-item"><span class="glyphicon glyphicon-folder-close" />&nbsp;Project 1</a>
-                        <a href="project_2" class="list-group-item"><span class="glyphicon glyphicon-folder-close" />&nbsp;Project 2</a>
-                        <a href="project_3" class="list-group-item"><span class="glyphicon glyphicon-folder-close" />&nbsp;Project 3</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div class="panel-heading"><b>Files</b></div>
-                    <div class="panel-body">
-                      <div class="list-group">
-                        <a href="custom.html" class="list-group-item"><span class="glyphicon glyphicon-file" />&nbsp;custom.html</a>
-                      </div>
+                  <div class="panel-heading"><b>Projects</b></div>
+                  <div class="panel-body">
+                    <div class="list-group">
+                      <a href="projects/cdt.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;projects/cdt.html</a>
+                      <a href="projects/papyrus.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;projects/papyrus.html</a>
+                      <a href="projects/sirius.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;projects/sirius.html</a>
                     </div>
                   </div>
                 </div>
+              </div>
+                
               </div>
             </div>
           
@@ -168,9 +154,9 @@
     <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="/js/plugins/morris/raphael.min.js"></script>
+    <!-- script src="/js/plugins/morris/raphael.min.js"></script>
     <script src="/js/plugins/morris/morris.min.js"></script>
-    <script src="/js/plugins/morris/morris-data.js"></script>
+    <script src="/js/plugins/morris/morris-data.js"></script -->
 
     <!-- Custom Theme JavaScript -->
     <script src="/js/sb-admin-2.js"></script>
