@@ -19,6 +19,8 @@ my $dir_src = "src/";
 my $dir_src_doc = $dir_src . "documentation/";
 my $dir_src_projects = $dir_src . "projects/";
 
+my $dir_rules = "../../rules/";
+
 my $dir_inc = "includes/";
 
 my $dir_out = "dist/";
@@ -28,7 +30,6 @@ my $dir_projects = "../../samples/";
 my $dir_data = "../../data/";
 my $file_metrics = $dir_data . "polarsys_metrics.json";
 my $file_questions = $dir_data . "polarsys_questions.json";
-my $file_rules = $dir_data . "polarsys_rules.json";
 my $file_attributes = $dir_data . "polarsys_attributes.json";
 my $file_qm = $dir_data . "polarsys_qm_full.json";
 
@@ -70,6 +71,13 @@ if (not -e $dir_src_doc) {
 my $filename = $dir_src_doc . '/metrics.inc';
 open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
 print $fh $doc_metrics;
+close $fh;
+
+print " * Generating rules doc from [$dir_rules] in [$dir_src_doc].\n";
+my $doc_rules = $publish_ps->generate_doc_rules($dir_rules);
+$filename = $dir_src_doc . '/rules.inc';
+open($fh, '>', $filename) or die "Could not open file '$filename' $!";
+print $fh $doc_rules;
 close $fh;
 
 # my $doc_questions = generate_doc_questions($dir_questions);
