@@ -4,9 +4,8 @@ use strict;
 use warnings;
 
 use Data::Dumper;
-use JSON qw( decode_json encode_json );
 
-use Castalia::PublishStatic qw( build_page );
+use Castalia::PublishStatic qw( build_page read_json);
 
 use Exporter qw( import );
  
@@ -24,6 +23,7 @@ my $debug = 0;
 my %flat_metrics;
 my %flat_attributes;
 my %flat_rules;
+my %flat_refs;
 
 my %metrics_ds;
 
@@ -37,23 +37,6 @@ sub new($$$) {
 
     bless $self, $class;
     return $self;
-}
-
-sub read_json($) {
-    my $file = shift;
-
-    my $json;
-    do { 
-        local $/;
-        open my $fhm, "<", $file;
-        $json = <$fhm>;
-    close $fhm;
-    };
-
-    # Decode the entire JSON
-    my $raw = decode_json( $json );
-    
-    return $raw;
 }
 
 
@@ -163,7 +146,7 @@ sub generate_project($) {
                 = $raw_values->{"children"}->{$metric};
         }
     } else {
-        print "WARN Deprecated format for metrics values file [$file]. Reading anyway.\n";
+        print "WARN Deprecated format for metrics values file [$file]. Reading anyway.\n" if ($debug);
         # Bitergia format
         foreach my $metric (keys %{$raw_values}) {
         $project_values{uc($metric)} = $raw_values->{$metric};
@@ -187,7 +170,7 @@ sub generate_project($) {
         $html_ret .= "<td>" . $project_values{$v_mnemo} . "</td></tr>\n";
     } else {
         if ($debug) {
-        #print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n";
+        print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n" if ($debug);
         }
     }
     }
@@ -197,8 +180,7 @@ sub generate_project($) {
                   <div role="tabpanel" class="tab-pane" id="practices">';
 
     # Import Rules file for project
-    my %project_rules;
-    
+
     # We read rules from file named "<project>_violations.json"
     my $json_violations = "${project_path}/${project_id}_violations.json";
 
@@ -207,33 +189,32 @@ sub generate_project($) {
     
         my $raw_rules = &read_json($json_violations);
 
-        # XXX
+	# loop through values and display them in a table.
+	$html_ret .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+	$html_ret .= "<tr><th width=\"40%\">Name</th>" 
+	    . "<th width=\"40%\">Mnemo</th>" 
+	    . "<th width=\"20%\">NCC</th></tr>\n";
+	foreach my $rule (@{$raw_rules->{"children"}}) {
+	    if (exists($flat_rules{$rule->{"name"}})) {
+		my $v_mnemo = $rule->{'name'};
+		$html_ret .= "<tr><td><a href=\"/documentation/rules.html#" 
+		    . $v_mnemo . '">' . $flat_rules{$v_mnemo}{'name'} . "</a></td>" ;
+		$html_ret .= "<td><a href=\"/documentation/rules.html#" 
+		    . $v_mnemo . '">' . $v_mnemo . "</a></td>";
+		$html_ret .= "<td>" . $rule->{'value'} . "</td></tr>\n";
+	    } else {
+		if ($debug) {
+		    print "WARN: metric [" . $rule->{'name'} . "] is not referenced in metrics definition file.\n" if ($debug);
+		}
+	    }
+	}
+
+	$html_ret .= "</table>\n";
+ 
     } else {
         print "ERR: Cannot find violations file [$json_violations] for [$project_id].\n";
     }
     
-    # loop through values and display them in a table.
-    $html_ret .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-    $html_ret .= "<tr><th width=\"50%\">Name</th>" 
-    . "<th width=\"30%\">Mnemo</th>" 
-    . "<th width=\"20%\">Value</th></tr>\n";
-#    print Dumper(%project_values);
-    foreach my $v_mnemo (sort keys %project_values) {
-    if (exists($flat_rules{$v_mnemo})) {
-        my $v_name = $flat_rules{$v_mnemo}->{"name"};
-        $html_ret .= "<tr><td><a href=\"/documentation/metrics.html#" 
-        . $v_mnemo . "\">" . $v_name . "</a></td>" ;
-        $html_ret .= "<td><a href=\"/documentation/metrics.html#" 
-        . $v_mnemo . "\">" . $v_mnemo . "</a></td>";
-        $html_ret .= "<td>" . $project_values{$v_mnemo} . "</td></tr>\n";
-    } else {
-        if ($debug) {
-        #print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n";
-        }
-    }
-    }
-    $html_ret .= "</table>\n";
- 
     $html_ret .= '</div>
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
                 </div>
@@ -270,7 +251,7 @@ sub describe_metric($) {
     my $mnemo = shift;
 
     if (not exists $flat_metrics{$mnemo}) {
-    die "Could not find metric (internal inconsistency).\n";
+        die "Could not find metric (internal inconsistency).\n";
     }
 
     my $metric = $flat_metrics{$mnemo};
@@ -281,7 +262,7 @@ sub describe_metric($) {
     my $text = "<p id=\"$mnemo\"><!-- span class=\"glyphicon glyphicon-record\" / -->&nbsp;<strong>$metric_name</strong> ( $mnemo )</p>\n";
 
     foreach my $desc (@{$metric_desc}) {
-    $text .= "<p class=\"desc\">$desc</p>\n";
+        $text .= "<p class=\"desc\">$desc</p>\n";
     }
 
     return $text;
@@ -314,20 +295,23 @@ sub generate_doc_metrics($) {
     foreach my $tmp_metric (@{$raw_metrics->{"children"}}) {
         my $metric_mnemo = $tmp_metric->{"mnemo"};
         my $metric_ds = $tmp_metric->{"ds"};
+    if (exists $flat_metrics{$metric_mnemo}) {
+        print "WARN: Metric $metric_mnemo already exists!.\n",
+    } else {
         $flat_metrics{$metric_mnemo} = $tmp_metric;
+    }
 
         # Populate metrics_ds
         $metrics_ds{$metric_ds}++;
     }
     
-    print Dumper(%flat_metrics);
-
     # Create the tabs.
     $html_ret .= ' 
               <div class="tabbable">
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#repo_all" role="tab" data-toggle="tab">All&nbsp;<span class="badge">' . 
                   scalar keys(%flat_metrics) . '</span></a></li>';
+
     foreach my $repo (sort keys %metrics_ds) {
         $html_ret .= '
                   <li role="presentation">
@@ -341,10 +325,10 @@ sub generate_doc_metrics($) {
                 <div role="tabpanel" class="tab-pane active" id="repo_all"><br />
                   <ul class="list-group">';
                   
-    foreach my $tmp_metric (@{$raw_metrics->{"children"}}) {
+    foreach my $tmp_metric (sort keys %flat_metrics) {
         $html_ret .= '
                 <li class="list-group-item">';
-        $html_ret .= &describe_metric($tmp_metric->{"mnemo"});
+        $html_ret .= &describe_metric($tmp_metric);
         $html_ret .= "</li>";
     }
     $html_ret .= '
@@ -357,11 +341,11 @@ sub generate_doc_metrics($) {
         $html_ret .= '
                     <ul class="list-group">';
                   
-        foreach my $tmp_metric (@{$raw_metrics->{"children"}}) {
-            if ($tmp_metric->{"ds"} eq $repo) {
+        foreach my $tmp_metric (sort keys %flat_metrics) {
+            if ($flat_metrics{$tmp_metric}->{"ds"} eq $repo) {
             $html_ret .= '
                       <li class="list-group-item">';
-            $html_ret .= &describe_metric($tmp_metric->{"mnemo"});
+            $html_ret .= &describe_metric($tmp_metric);
             $html_ret .= "</li>";
             }
         }
@@ -458,6 +442,54 @@ sub generate_doc_rules() {
 
     return $html_ret;
 
+}
+
+sub generate_doc_refs($) {
+    my $class = shift;
+    my $file_refs = shift;
+    
+    ## Read refs file
+
+    # Open references file and read.
+    print "  * Reading references from [$file_refs]...\n";
+
+    my $raw_refs = &read_json($file_refs);
+    
+    # Import references.
+    foreach my $tmp_ref (keys %{$raw_refs->{"children"}}) {
+        $flat_refs{$tmp_ref} = $raw_refs->{"children"}->{$tmp_ref};
+    }
+    
+    my $html_ret = '
+        <div id="page-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="page-header">References</h2>
+              <p>All refs used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
+        
+';
+    
+    $html_ret .= '
+              <ul class="list-group">';
+
+    foreach my $ref (sort keys %flat_refs) {
+    my $ref_desc = $flat_refs{$ref};
+        $html_ret .= '
+                <li class="list-group-item">';
+        $html_ret .= "<p id=\"$ref\"><strong>[$ref]</strong> $ref_desc</p></li>\n";
+    
+    }
+
+    $html_ret .= '
+              </ul>';
+        
+    $html_ret .= '
+            </div>
+          </div>
+        </div>';
+
+
+    return $html_ret;
 }
 
 sub generate_all_docs() {

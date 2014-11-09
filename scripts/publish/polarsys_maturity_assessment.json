@@ -1,0 +1,64 @@
+{
+    "name": "Publish configuration file forPolarSys",
+    "menu": [
+	{
+	    "name": "About",
+	    "url": "/about.html"
+	},
+	{
+	    "name": "Documentation",
+	    "url": "/documentation/",
+	    "children": [
+		{ 
+		    "name": "Metrics",
+		    "url": "/documentation/metrics.html" 
+		},
+		{
+		    "name": "Practices",
+		    "url": "/documentation/rules.html" 
+		},
+		{
+		    "name": "Questions",
+		    "url": "/documentation/questions.html" 
+		},
+		{
+		    "name": "Actions",
+		    "url": "/documentation/actions.html"
+		}
+	    ]
+	},
+	{
+	    "name": "Projects",
+	    "url": "/projects/",
+	    "children": [
+		{
+		    "name": "CDT",
+		    "url": "/projects/cdt.html" 
+		},
+		{
+		    "name": "Papyrus",
+		    "url": "/projects/papyrus.html" 
+		},
+		{
+		    "name": "Sirius",
+		    "url": "/projects/sirius.html" 
+		},
+		{
+		    "name": "EASE",
+		    "url": "/projects/ease.html" 
+		}
+	    ]
+	}
+    ],
+    "website": {
+	"title": "Maturity Assessment Dashboard"
+    },
+    "init": {
+	"dir_src": "src/",
+	"dir_rules": "../../rules/",
+	"dir_inc": "includes/",
+	"dir_out": "dist/",
+	"dir_projects": "../../samples/",
+	"dir_data": "../../data/"	
+    }
+}

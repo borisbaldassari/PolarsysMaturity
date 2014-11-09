@@ -3,10 +3,11 @@ package Castalia::PublishStatic;
 
 use strict;
 use warnings;
+use JSON qw( decode_json encode_json );
 
 use Exporter qw(import);
  
-our @EXPORT_OK = qw( build_page );#get_HTML_start get_HTML_end build_title build_crumbs build_menu build_content_dir build_content_inc build_home);
+our @EXPORT_OK = qw( build_page read_json );#get_HTML_start get_HTML_end build_title build_crumbs build_menu build_content_dir build_content_inc build_home);
 
 # Piece of HTML that be printed at the beginning of every HTML  document.
 my $html_start = <<'EOHS';
@@ -117,6 +118,23 @@ my $html_end = <<'EOHE';
 EOHE
 #'
 
+sub read_json($) {
+    my $file = shift;
+
+    my $json;
+    do { 
+        local $/;
+        open my $fhm, "<", $file;
+        $json = <$fhm>;
+    close $fhm;
+    };
+
+    # Decode the entire JSON
+    my $raw = decode_json( $json );
+    
+    return $raw;
+}
+
 sub get_HTML_start() { return $html_start; }
 
 sub get_HTML_end() { return $html_end; }
@@ -126,11 +144,11 @@ sub build_page($$$$$) {
     my $file = shift;
     my $dir_src = shift;
     my $dir_out = shift;
-    my $cats = shift; # array ref => for the menu
+    my $menu_ref = shift; # array ref => for the menu
 
     my $html_ret = &get_HTML_start();
     $html_ret .= &build_title("PolarSys Maturity Assessment Dashboard &mdash; " . $title);
-    $html_ret .= &build_menu($cats);
+    $html_ret .= &build_menu($menu_ref);
     # if file is a directory, create index
     if (-d $file) {
 	# Create the target directory if it doesn't exists
@@ -212,20 +230,40 @@ sub build_crumbs($) {
 
 
 sub build_menu($) {
-    my $cats = shift;
+    my $array_ref = shift;
+
     my $html_ret = '
               <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                  <ul class="nav" id="side-menu">';
-#    $html_ret .= '  <nav>';
-    $html_ret .= '    <li><a class="active" href="/">Home</a></li>';
-#    $html_ret .= '      <a href="/" class="list-group-item active">Home</a>';
-    foreach my $cat (@{$cats}) {
-	$html_ret .= '<li><a href="/' . $cat . '">' .
-	    ucfirst($cat) . '</a></li>';
-    }
+                <div class="sidebar-nav navbar-collapse">';
     $html_ret .= '
-            </ul>
+                  <ul class="nav" id="side-menu">';
+    $html_ret .= '
+                    <li><a class="active" href="/">Home</a></li>';
+
+    foreach my $entry (@{$array_ref}) {
+	$html_ret .= '
+                    <li><a href="' . $entry->{'url'} . '">' . 
+		    $entry->{"name"};
+	if (exists $entry->{"children"}) {
+	    $html_ret .= '<span class="fa arrow"></span></a>';
+	    $html_ret .= '
+                      <ul class="nav nav-second-level">';
+
+	    foreach my $entry (@{$entry->{"children"}}) {
+		$html_ret .= '
+                    <li><a href="' . $entry->{'url'} . '">' . 
+		    $entry->{"name"} . '</a></li>';
+	    }
+	    $html_ret .= '
+                  </ul>';
+	} else {
+	    $html_ret .=  '</a>';
+	}
+	$html_ret .= '</li>';
+    }
+    $html_ret .= "</ul>";
+
+    $html_ret .= '
           </div></div>
         </nav>
 
