@@ -1,5 +1,7 @@
 {
     "name": "Project metrics",
+    "project": "cdt",
+    "version": "HEAD-20141013",
     "children": {
       "NCC_ANA": "28410",
       "NCC_CHA": "5153",

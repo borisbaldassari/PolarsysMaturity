@@ -1,0 +1,24 @@
+{
+    "name": "CDT questions values",
+    "project": "cdt",
+    "version": "HEAD-20141013",
+    "children": {
+      "MLS_DEV_ACTIVITY": "4",
+      "MLS_USR_ACTIVITY": "5",
+      "SCM_ACTIVITY": "5",
+      "MLS_DEV_DIVERSITY": "3",
+      "MLS_USR_DIVERSITY": "4",
+      "SCM_DIVERSITY": "5",
+      "MLS_DEV_RESPONSIVENESS": "3",
+      "MLS_USR_RESPONSIVENESS": "4",
+      "MLS_DEV_SUPPORT": "3",
+      "MLS_USR_SUPPORT": "4",
+      "INSTALL": "2",
+      "MKT_FEEDBACK": "3",
+      "PUB_SCM_INFO": "5",
+      "PUB_ITS_INFO": "5",
+      "CPX": "4",
+      "CODE_CLONE": "1",
+      "TST_COV": "4"
+  }
+}

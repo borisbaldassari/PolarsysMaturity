@@ -1,5 +1,7 @@
 {
     "name": "Project metrics",
+    "project": "sirius",
+    "version": "HEAD-20141013",
     "children": {
       "NCC_ANA": "8965",
       "NCC_CHA": "1980",

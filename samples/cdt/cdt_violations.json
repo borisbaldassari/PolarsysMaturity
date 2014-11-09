@@ -1,5 +1,7 @@
 {
     "name": "Project violations",
+    "project": "cdt",
+    "version": "HEAD-20141013",
     "children": [
 
         {

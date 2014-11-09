@@ -1,5 +1,7 @@
 {
     "name": "Project metrics",
+    "project": "sirius",
+    "version": "HEAD-20141013",
     "children": {
       "PUB_ITS_INFO_PMI": "5",
       "PUB_SCM_INFO_PMI": "5",

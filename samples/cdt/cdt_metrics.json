@@ -1,8 +1,7 @@
 {
     "name": "CDT metrics values",
-    "project": "CDT",
-    "version": "HEAD",
-    "date": "2014-10-13",
+    "project": "cdt",
+    "version": "HEAD-20141013",
     "children": {
       "NCC_ANA": "28410",
       "NCC_ANA_IDX": "31.07",
