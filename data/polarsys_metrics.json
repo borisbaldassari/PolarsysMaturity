@@ -6,129 +6,286 @@
         "name": "Maximum depth of nesting",
         "mnemo": "NEST",
         "desc": [
-            "The maximum depth of nesting of the control flow structure found in the function. "
+	    "The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. ",
+	    "Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works."
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Number of files",
         "mnemo": "FILES",
         "desc": [
-            "The number of code files (e.g. .java for Java) in code hierarchy. Often used to build indexes."
+            "The number of code files (e.g. with a <code>.java</code> for the Java language) in the source code hierarchy. The SonarQube measure used for this purpose is <mark>files</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives."
         ],
-        "ds": "SonarQube"
+        "scale": [100,1000,10000,100000],
+	"ds": "SonarQube"
+      },
+      {
+        "name": "Number of functions",
+        "mnemo": "FUNCTIONS",
+        "desc": [
+            "The number of functions defined in the source files. The SonarQube measure used for this purpose is <mark>functions</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.",
+	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Methods\">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>."
+        ],
+        "scale": [100,1000,10000,100000],
+	"ds": "SonarQube"
+      },
+      {
+        "name": "Number of classes",
+        "mnemo": "CLASSES",
+        "desc": [
+            "The number of Java classes, including nested classes, interfaces, enums and annotations. The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.",
+	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.",
+	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
+        ],
+        "scale": [100,1000,10000,100000],
+	"ds": "SonarQube"
       },
       {
         "name": "Comment rate",
         "mnemo": "COMR",
         "desc": [
-            "The ratio of source lines of code on the the number of comment lines of code."
+            "The ratio of source lines of code on the number of comment lines of code. Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. ",
+	    "See also SonarQube's page on comment lines metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines\">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>."
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Number of attributes",
         "mnemo": "ATTRS",
         "desc": [
-            "Total number of attributes defined in the class. "
+            "Total number of attributes defined in the class. This can be compared to the <a href=\"/documentation/metrics.html#TOPD\">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).",
+	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Number of methods",
         "mnemo": "METHS",
         "desc": [
-            "Total number of methods defined in the class."
+            "Total number of methods defined in the class. This can be compared to the <a href=\"/documentation/metrics.html#TOPD\">total number of operators</a> (TOPT) considered at the class level.",
+	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
-        "name": "Number of public attributes",
+        "name": "Public API",
+        "mnemo": "PUBLIC_API",
+        "desc": [
+            "Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.",
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API\">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a>",
+	    "<span class=\"label label-primary\">TODO: Add the metric from sonar.</span>"
+        ],
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
+      },
+      {
+        "name": "Public documented API",
+        "mnemo": "PUBLIC_API_DOC",
+        "desc": [
+            "The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.",
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. ",
+	    "<span class=\"label label-primary\">TODO: Add the metric from sonar.</span>"
+        ],
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
+      },
+      {
+        "name": "Average number of public attributes",
         "mnemo": "ATTRS_PUBLIC",
         "desc": [
-            "Total number of public attributes defined in the class. "
+            "Average number of attributes defined in classes with a <code>public</code> modifier.",
+	    "Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.",
+	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
-        "name": "Number of public methods",
+        "name": "Average number of public methods",
         "mnemo": "METHS_PUBLIC",
         "desc": [
-            "Total number of public methods defined in the class."
+            "Average number of methods defined in classes with a <code>public</code> modifier.",
+	    "Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.",
+	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Depth of Inheritance Tree",
         "mnemo": "MDIT",
         "desc": [
-            "Maximum depth of inheritance tree in the artefact."
+	    "The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>].", 
+	    "A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>].",
+	    "See also SonarQube's page on the depth in tree: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree\">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a>",
+	    "<span class=\"label label-primary\">TODO: Add the Depth in Tree metric from SonarQube.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Source Lines Of Code",
         "mnemo": "SLOC",
         "desc": [
-            ""
+            "Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.",
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code\">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a>"
         ],
-        "ds": "SonarQube"
+        "scale": [50000,100000,500000,1000000],
+	"ds": "SonarQube"
       },
       {
-        "name": "Function cloning",
-        "mnemo": "FU_CLONE",
+        "name": "Cloning density",
+        "mnemo": "CLONE_IDX",
         "desc": [
-            "The amount of duplicated lines in the code."
+            "The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.",
+	    "See also SonarQube's definition for duplications: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href=\"http://docs.codehaus.org/display/SONAR/Duplications\">http://docs.codehaus.org/display/SONAR/Duplications</a>.",
+	    "<span class=\"label label-primary\">TODO: Map this to the SonarQube metric.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [10,20,30,50],
+	"ds": "SonarQube"
       },
       {
-        "name": "Cyclomatic Complexity",
+        "name": "Average Cyclomatic Complexity",
         "mnemo": "VG",
         "desc": [
-            "The number of execution paths found in the function."
+            "The average number of execution paths found in functions.",
+	    "Basically, the counter is incremented every time the control flow of the function splits, with any function having at least a cyclomatic number of 1. The sum of cyclomatic numbers for all functions is then divided by the number of functions. In SonarQube the measure is <code>function_complexity</code>.",
+	    "The cyclomatic number is a measure borrowed from graph theory and was introduced to software engineering by McCabe in [<a href=\"/documentation/references.html\">McCabe1976</a>]. It is defined as the number of linearly independent paths that comprise the program. To have good testability and maintainability, McCabe recommends that no program modules (or functions as for Java) should exceed a cyclomatic number of 10. It is primarily defined at the function level and is summed up for higher levels of artefacts.",
+	    "See also Wikipedia's entry on cyclomatic complexity: <a href=\"http://en.wikipedia.org/wiki/Cyclomatic_complexity\">http://en.wikipedia.org/wiki/Cyclomatic_complexity</a>.",
+	    "See also SonarQube's definition for code complexity: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity\">http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity</a>. There is also a discussion about its meaning here: <a href=\"http://www.sonarqube.org/discussing-cyclomatic-complexity/\">http://www.sonarqube.org/discussing-cyclomatic-complexity/</a>",
+	    "See also the Maisqual wiki for more details on complexity measures: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics</a>."
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Number of distinct operands",
         "mnemo": "DOPD",
         "desc": [
-            "The number of distinct operands found in the function."
+            "The number of distinct operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href=\"Halstead1977\">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.",
+	    "Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).",
+	    "See also the Maisqual wiki: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>."
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Number of distinct operators",
         "mnemo": "DOPT",
         "desc": [
-            "The number of distinct operators found in the function."
+            "The number of distinct operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href=\"Halstead1977\">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.",
+	    "Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).",
+	    "See also the Maisqual wiki: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>."
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Total number of operands",
         "mnemo": "TOPD",
         "desc": [
-            "The total number of operands found in the function."
+            "The total number of operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href=\"Halstead1977\">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.",
+	    "Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).",
+	    "See also the Maisqual wiki: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>."
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Total number of operators",
         "mnemo": "TOPT",
         "desc": [
-            "The total number of operators found in the function."
+            "The total number of operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href=\"Halstead1977\">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.",
+	    "Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).",
+	    "See also the Maisqual wiki: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>."
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
+      },
+      {
+        "name": "Number of non-conformities for analysability",
+        "mnemo": "NCC_ANA",
+        "desc": [
+            "The total number of violations of rules that impact analysability in the source code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
+        ],
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of non-conformities for changeability",
         "mnemo": "NCC_CHA",
         "desc": [
-            "The number of violations to rules that impact changeability in the artefact."
+            "The total number of violations of rules that impact changeability in the source code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
+      },
+      {
+        "name": "Number of non-conformities for reliability",
+        "mnemo": "NCC_REL",
+        "desc": [
+            "The total number of violations of rules that impact reliability in the source code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
+        ],
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
+      },
+      {
+        "name": "Number of non-conformities for reusability",
+        "mnemo": "NCC_REU",
+        "desc": [
+            "The total number of violations of rules that impact reusability in the source code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
+        ],
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
+      },
+      {
+        "name": "Average number of non-conformities for analysability",
+        "mnemo": "NCC_ANA_IDX",
+        "desc": [
+            "The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
+        ],
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
+      },
+      {
+        "name": "Average number of non-conformities for changeability",
+        "mnemo": "NCC_CHA_IDX",
+        "desc": [
+            "The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
+        ],
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
+      },
+      {
+        "name": "Average number of non-conformities for reliability",
+        "mnemo": "NCC_REL_IDX",
+        "desc": [
+            "The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
+        ],
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
+      },
+      {
+        "name": "Average number of non-conformities for reusability",
+        "mnemo": "NCC_REU_IDX",
+        "desc": [
+            "The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.",
+	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
+        ],
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of violated rules for changeability",
@@ -136,7 +293,8 @@
         "desc": [
             "The number of changeability rules that have at least one violation on the artefact."
         ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of rules for changeability",
@@ -144,15 +302,8 @@
         "desc": [
             "The total number of rules checked for changeability."
         ],
-        "ds": "RuleCheckingScript"
-      },
-      {
-        "name": "Non conformities index for changeability",
-        "mnemo": "NCC_CHA_IDX",
-        "desc": [
-            "The total number of violations to rules that impact changeability in the artefact, divided by the number of files."
-        ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Adherence to changeability rules",
@@ -160,15 +311,8 @@
         "desc": [
             "Ratio of conform changeability practices on the number of checked changeability practices."
         ],
-        "ds": "RuleCheckingScript"
-      },
-      {
-        "name": "Number of non-conformities for analysability",
-        "mnemo": "NCC_ANA",
-        "desc": [
-            "The number of violations to rules that impact analysability in the artefact."
-        ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of violated rules for analysability",
@@ -176,7 +320,8 @@
         "desc": [
             "The number of analysability rules that have at least one violation on the artefact."
         ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of rules for analysability",
@@ -184,15 +329,8 @@
         "desc": [
             "The total number of rules checked for analysability."
         ],
-        "ds": "RuleCheckingScript"
-      },
-      {
-        "name": "Non conformities index for analysability",
-        "mnemo": "NCC_ANA_IDX",
-        "desc": [
-            "The total number of violations to rules that impact analysability in the artefact, divided by the number of files."
-        ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Adherence to analysability rules",
@@ -200,15 +338,8 @@
         "desc": [
             "Ratio of conform analysability practices on the number of checked analysability practices."
         ],
-        "ds": "RuleCheckingScript"
-      },
-      {
-        "name": "Number of non-conformities for reliability",
-        "mnemo": "NCC_REL",
-        "desc": [
-            "The number of violations to rules that impact reliability in the artefact."
-        ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of violated rules for reliability",
@@ -216,7 +347,8 @@
         "desc": [
             "The number of reliability rules that have at least one violation on the artefact."
         ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of rules for reliability",
@@ -224,15 +356,8 @@
         "desc": [
             "The total number of rules checked for reliability."
         ],
-        "ds": "RuleCheckingScript"
-      },
-      {
-        "name": "Non conformities index for reliability",
-        "mnemo": "NCC_REL_IDX",
-        "desc": [
-            "The total number of violations to rules that impact reliability in the artefact, divided by the number of files."
-        ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Adherence to reliability rules",
@@ -240,15 +365,8 @@
         "desc": [
             "Ratio of conform reliability practices on the number of checked reliability practices."
         ],
-        "ds": "RuleCheckingScript"
-      },
-      {
-        "name": "Number of non-conformities for reusability",
-        "mnemo": "NCC_REU",
-        "desc": [
-            "The number of violations to rules that impact reusability in the artefact."
-        ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of violated rules for reusability",
@@ -256,7 +374,8 @@
         "desc": [
             "The number of reusability rules that have at least one violation on the artefact."
         ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Number of rules for reusability",
@@ -264,15 +383,8 @@
         "desc": [
             "The total number of rules checked for reusability."
         ],
-        "ds": "RuleCheckingScript"
-      },
-      {
-        "name": "Non conformities index for reusability",
-        "mnemo": "NCC_REU_IDX",
-        "desc": [
-            "The total number of violations to rules that impact reusability in the artefact, divided by the number of files."
-        ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Adherence to reusability rules",
@@ -280,249 +392,281 @@
         "desc": [
             "Ratio of conform reusability practices on the number of checked reusability practices."
         ],
-        "ds": "RuleCheckingScript"
+        "scale": [12,10,8,6],
+	"ds": "RuleCheckingScript"
       },
       {
         "name": "Percentage of lines of code covered by tests",
         "mnemo": "TST_COV_LINES",
         "desc": [
-            "The percentage of source lines of code that is exercised by the tests."
+            "The percentage of source lines of code that is exercised by the tests.",
+	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Percentage of branches covered by tests",
         "mnemo": "TST_COV_BRANCHES",
         "desc": [
             "The percentage of branches that is exercised by the tests.",
-            "On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?. It is the density of covered lines by unit tests."
+            "On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?",
+	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Number of tests relative to the code size",
         "mnemo": "TST_VOL_IDX",
         "desc": [
             "The total number of test cases for the product, divided by the number of thousands of SLOC.",
-            "Metric is computed from SonarQube's metrics tests and ncloc )."
+            "Metric is computed from SonarQube's metrics tests and ncloc ).",
+	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
         ],
-        "ds": "UNKNOWN"
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
       },
       {
         "name": "Test success density",
         "mnemo": "TST_SUCCESS_LAST",
         "desc": [
             "The percentage of failed tests during the last execution of the test plan.",
-            "Computation is as follows: ",
-            "Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100",
-            "Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception."
+            "Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.",
+	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
         ],
-        "ds": "SonarQube"
+        "scale": [12,10,8,6],
+	"ds": "SonarQube"
       },
       {
         "name": "Developer ML posts",
         "mnemo": "MLS_DEV_VOL_1M",
         "desc": [
-            "Total number of posts on the developer mailing list during the last month.",
-            "Number of messages dated during the last month, in developer mailing list archives. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of messages dated during the last month, in developer mailing list archives. ",
+	    "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Developer ML authors",
         "mnemo": "MLS_DEV_AUTH_1M",
         "desc": [
-            "Number of distinct authors (according to their email address) on the developer mailing list during last month.",
-            "Number of distinct senders for messages dated during the last month, in developer mailing list archives. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
+            "Number of distinct senders for messages dated during the last month, in developer mailing list archives. ",
+	    "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Developer ML response time",
         "mnemo": "MLS_DEV_RESP_TIME_MED_1M",
         "desc": [
-            "Median time of first reply to questions in the developer mailing list during last month.",
-            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. ",
+	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Developer ML response ratio",
         "mnemo": "MLS_DEV_RESP_RATIO_1M",
         "desc": [
-            "Average number of responses for a question in the developer mailing list during last month.",
-            "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. ",
+	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Developer ML subjects",
         "mnemo": "MLS_DEV_SUBJ_1M",
         "desc": [
-            "Number of threads in the developer mailing list during last month",
-            "Number of threds of messages dated during the last month, in developer mailing list archives. Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of threds of messages dated during the last month, in developer mailing list archives. ",
+	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "User ML posts",
         "mnemo": "MLS_USR_VOL_1M",
         "desc": [
-            "Total number of posts on the user mailing list during the last month.",
-           "Number of messages dated during the last month, in user mailing list archives. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+           "Number of messages dated during the last month, in user mailing list archives. ",
+	    "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "User ML authors",
         "mnemo": "MLS_USR_AUTH_1M",
         "desc": [
-            "Number of distinct authors (according to their email address) on the developer mailing list during last month.",
-            "Number of distinct senders for messages dated during the last month, in user mailing list archives. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
+            "Number of distinct senders for messages dated during the last month, in user mailing list archives. ",
+	    "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "User ML response time",
         "mnemo": "MLS_USR_RESP_TIME_MED_1M",
         "desc": [
-            "Median time of first reply to questions in the user mailing list during last week.",
-            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. ",
+	    "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "User ML response ratio",
         "mnemo": "MLS_USR_RESP_RATIO_1M",
         "desc": [
-            "Average number of responses for a question in the user mailing list during last month.",
-            "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. ",
+	    "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "User ML subjects",
         "mnemo": "MLS_USR_SUBJ_1M",
         "desc": [
-            "Number of threads in the user mailing list during last month",
-            "Number of threds of messages dated during the last month, in user mailing list archives. Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of threds of messages dated during the last month, in user mailing list archives. ",
+	    "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "SCM Commits",
         "mnemo": "SCM_COMMITS_1M",
         "desc": [
-            "Total number of commits registered on the artefact during the last month.",
-            "Total number of commits in source code management repositories dated during the last month. Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Total number of commits in source code management repositories dated during the last month. ",
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Files committed",
         "mnemo": "SCM_COMMITTED_FILES_1M",
         "desc": [
-            "Total number of files found in all commits that happened during the last month.",
-            "Total number of files touched by commits in source code management repositories dated during the last month. Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Total number of files touched by commits in source code management repositories dated during the last month. ",
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "SCM committers",
         "mnemo": "SCM_COMMITTERS_1M",
         "desc": [
-            "Total number of different author identities found in commits during last month.",
-            "Total number of identities found as authors of commits in source code management repositories dated during the last month. Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Total number of identities found as authors of commits in source code management repositories dated during the last month. ",
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "File stability index",
         "mnemo": "SCM_STABILITY_1M",
         "desc": [
-            "Average number of commits on files during the last month.",
-    	    "Average number of commits touching each file in source code management repositories dated during the last month. Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+    	    "Average number of commits touching each file in source code management repositories dated during the last month. ",
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Median time to fix bug",
         "mnemo": "ITS_FIX_MED_1M",
         "desc": [
-            "Median time between the creation of a bug report and its closure. Bugs are identified according to the registered type of issue.",
-            "Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+            "Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. ",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Number of open bugs",
         "mnemo": "ITS_BUGS_OPEN",
         "desc": [
-            "Number of bugs in an open status at the time of analysis.",
-            "Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system. The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed."
+            "Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system. ",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Number of issues opened during last month",
         "mnemo": "ITS_ISSUES_OPEN_1M",
         "desc": [
-            "Number of issues open during last month.",
-            "Number of tickets opened (new) during the last month, in the issue tracking system. The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of tickets opened (new) during the last month, in the issue tracking system. ",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Number of issue openers during last month",
         "mnemo": "ITS_ISSUES_OPENERS_1M",
         "desc": [
-            "Number of distinct openers of issues during last month.",
-            "Number of distinct identities opening tickets during the last month, in the issue tracking system. The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of distinct identities opening tickets during the last month, in the issue tracking system. ",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "ITS updates",
         "mnemo": "ITS_UPDATES_1M",
         "desc": [
-            "Number of updates to the issue tracking system during last month.",
-            "Number of updates to tickets during the last month, in the issue tracking system. The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of updates to tickets during the last month, in the issue tracking system. ",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "ITS authors",
         "mnemo": "ITS_AUTH_1M",
         "desc": [
-            "Number of different authors have contributed to the issue tracking system during last month.",
-            "Number of distinct identities updating tickets during the last month, in the issue tracking system. The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of distinct identities updating tickets during the last month, in the issue tracking system. ",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "Defect density",
         "mnemo": "ITS_BUGS_DENSITY",
         "desc": [
-            "Overall total number of bugs on product divided by 1000's of lines (KLOC).",
-            "Ratio of the total number of tickets in the issue tracking system to the size of the source code in KLOC, at the time of the data retrieval. The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository."
+            "Ratio of the total number of tickets in the issue tracking system to the size of the source code in KLOC, at the time of the data retrieval. ",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository."
         ],
-        "ds": "Grimoire"
+        "scale": [12,10,8,6],
+	"ds": "Grimoire"
       },
       {
         "name": "License identification",
         "mnemo": "LIC_IDENT",
         "desc": [
-            "Is there a list of the different licences used in the product?"
+            "Is there a list of the different licences used in the product?",
+	    "<span class=\"label label-info\">TODO: Run nimca to get information about licences. Check also cosaq from Eclipse.</span>"
         ],
-        "ds": "PMI"
+        "scale": [12,10,8,6],
+	"ds": "PMI"
       },
       {
         "name": "IP log code coverage",
         "mnemo": "IP_LOG_COV",
         "desc": [
-            "Total number of commits registered on the artefact during the last month."
+            "Percentage of contributions covered by an appropriate IP log.",
+	    "Eclipse foundation has a very strict <a href=\"https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf\">IP policy</a> and this measure should always be 100%."
         ],
-        "ds": "PMI"
+        "scale": [12,10,8,6],
+	"ds": "PMI"
       },
       {
         "name": "Project is on time for next milestone",
@@ -530,7 +674,8 @@
         "desc": [
             "Is the project on time for the next milestone?"
         ],
-        "ds": "PMI"
+        "scale": [12,10,8,6],
+	"ds": "PMI"
       },
       {
         "name": "Number of milestones",
@@ -538,7 +683,8 @@
         "desc": [
             "The number of milestones since the last official release."
         ],
-        "ds": "PMI"
+        "scale": [12,10,8,6],
+	"ds": "PMI"
       },
       {
         "name": "Milestone success rate",
@@ -546,23 +692,26 @@
         "desc": [
             "What is the percentage of successful reviews over the past 10 releases?"
         ],
-        "ds": "PMI"
+        "scale": [12,10,8,6],
+	"ds": "PMI"
       },
       {
         "name": "SCM information",
         "mnemo": "PUB_SCM_INFO_PMI",
         "desc": [
-            "Is the source_repo info correctly filled in the PMI? OLD: The number of documents published for the usage, access, and conventions of the software configuration management system."
+            "Is the source_repo info correctly filled in the project management infrastructure records? "
         ],
-        "ds": "PMI"
+        "scale": [12,10,8,6],
+	"ds": "PMI"
       },
       {
         "name": "ITS information",
         "mnemo": "PUB_ITS_INFO_PMI",
         "desc": [
-            "Is the bugzilla info correctly filled in the PMI? OLD: The number of documents published for the usage, access, and conventions of the issue tracking system. "
+            "Is the bugzilla info correctly filled in the project management infrastructure records?"
         ],
-        "ds": "PMI"
+        "scale": [12,10,8,6],
+	"ds": "PMI"
       },
       {
         "name": "Installation survey",
@@ -570,31 +719,38 @@
         "desc": [
             "A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc."
         ],
-        "ds": "SURVEY"
+        "scale": [12,10,8,6],
+	"ds": "SURVEY"
       },
       {
         "name": "Number of favourites on the Marketplace",
         "mnemo": "MKT_FAV",
         "desc": [
-            "The number of favourites on the Eclipse Marketplace."
+            "The number of favourites on the Eclipse Marketplace.",
+	    "<span class=\"label label-info\">TODO: Use marketplace's REST API for querying.</span>"
         ],
-        "ds": "UNKNOWN"
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
       },
       {
         "name": "Number of successfull installs on the Marketplace",
         "mnemo": "MKT_INSTALL_SUCCESS_1M",
         "desc": [
-            "The number of successful installs as reported on the http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling page, metrics tab."
+            "The number of successful installs as reported on the Marketplace. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab.",
+	    "<span class=\"label label-info\">TODO: Use marketplace's REST API for querying.</span>"
         ],
-        "ds": "UNKNOWN"
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
       },
       {
         "name": "Number of failed install on the Marketplace",
         "mnemo": "MKT_INSTALL_FAILED_1M",
         "desc": [
-            "The number of failed installs as reported on the http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv page, errors tab."
+            "The number of failed installs as reported on the Marketplace. Here is <a href=\"http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv\">an example of log page</a>, errors tab.",
+	    "<span class=\"label label-info\">TODO: Use marketplace's REST API for querying.</span>"
         ],
-        "ds": "UNKNOWN"
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
       },
       {
         "name": "Number of downloads on update site",
@@ -602,7 +758,8 @@
         "desc": [
             "The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace."
         ],
-        "ds": "UNKNOWN"
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
       },
       {
         "name": "Number of downloads on the web site",
@@ -610,7 +767,8 @@
         "desc": [
             "The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ ."
         ],
-        "ds": "UNKNOWN"
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
       },
       {
         "name": "Number of publications",
@@ -618,7 +776,8 @@
         "desc": [
             "The number of papers published in a recognised conference."
         ],
-        "ds": "UNKNOWN"
+        "scale": [12,10,8,6],
+	"ds": "UNKNOWN"
       }
     ]
   }

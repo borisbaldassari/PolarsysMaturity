@@ -7,63 +7,63 @@
         "mnemo": "CPX",
         "desc": [
             "The computational complexity of the code: control, data, inheritance."
-        ],
+        ]
       },
       {
         "name": "Control flow complexity",
         "mnemo": "CPX_CF",
         "desc": [
             "The computational complexity of the control flow structure in the code functions."
-        ],
+        ]
       },
       {
         "name": "Data flow complexity",
         "mnemo": "CPX_DF",
         "desc": [
             "The complexity of the data flow structure in the code functions."
-        ],
+        ]
       },
       {
         "name": "OO complexity",
         "mnemo": "CPX_OO",
         "desc": [
             "The complexity of the object-oriented architecture and structure. Composed of MDIT (maximum depth of inheritance tree)."
-        ],
+        ]
       },
       {
         "name": "Code documentation",
         "mnemo": "CODE_DOC",
         "desc": [
             "The amount of documentation in the code: comment rate, javadoc, etc."
-        ],
+        ]
       },
       {
         "name": "Code size",
         "mnemo": "CODE_SIZE",
         "desc": [
             "The overall size of the code."
-        ],
+        ]
       },
       {
         "name": "Access points",
         "mnemo": "ALL_DATA",
         "desc": [
             "The amount of attributes and methods on the class, whatever their visibility is."
-        ],
+        ]
       },
       {
         "name": "Public access points",
         "mnemo": "PUBLIC_DATA",
         "desc": [
             "Total number of public classes, interfaces, methods, constructors, annotations and attributes."
-        ],
+        ]
       },
       {
         "name": "Code cloning",
         "mnemo": "CODE_CLONE",
         "desc": [
             "The amount of duplicated lines in the code."
-        ],
+        ]
         "datasource": "SonarQube"
       },
       {
@@ -71,126 +71,126 @@
         "mnemo": "LIC",
         "desc": [
             "Are licensing issues considered?"
-        ],
+        ]
       },
       {
         "name": "IP Log",
         "mnemo": "IP_LOG",
         "desc": [
             "Is the intellectual property of contributions checked and enforced?"
-        ],
+        ]
       },
       {
         "name": "SCM Documentation",
         "mnemo": "SCM_DOCS",
         "desc": [
             "Is there some documentation about the SCM process, rules and conventions?"
-        ],
+        ]
       },
       {
         "name": "ITS information access",
         "mnemo": "PUB_ITS_INFO",
         "desc": [
             "Measures the availability of information regarding ITS usage, conventions, access."
-        ],
+        ]
       },
       {
         "name": "ITS usage",
         "mnemo": "ITS_USAGE",
         "desc": [
             "How much the ITS system was used recently."
-        ],
+        ]
       },
       {
         "name": "Installations",
         "mnemo": "INSTALL",
         "desc": [
             "The level of usage of the product. How much is really used the software? In different contexts, in local or distributed teams, etc."
-        ],
+        ]
       },
       {
         "name": "SCM information access",
         "mnemo": "PUB_SCM_INFO",
         "desc": [
             "Measures the availability of information regarding SCM usage, conventions, access."
-        ],
+        ]
       },
       {
         "name": "SCM usage",
         "mnemo": "SCM_USAGE",
         "desc": [
             "How much the SCM system was used during last month."
-        ],
+        ]
       },
       {
         "name": "SCM Stability",
         "mnemo": "SCM_STABILITY",
         "desc": [
             "How much the files are stable according to the SCM system. \nA file which has been heavily modified recently lacks experience, tests and feedback. "
-        ],
+        ]
       },
       {
         "name": "Analysability practices",
         "mnemo": "PRACTICES_ANA",
         "desc": [
             "What practices (rules checked) related to analysability are violated, and how often?"
-        ],
+        ]
       },
       {
         "name": "Changeability practices",
         "mnemo": "PRACTICES_CHA",
         "desc": [
             "What practices (rules checked) related to changeability are violated, and how often?"
-        ],
+        ]
       },
       {
         "name": "Reliability practices",
         "mnemo": "PRACTICES_REL",
         "desc": [
             "What practices (rules checked) related to reliability are violated, and how often?"
-        ],
+        ]
       },
       {
         "name": "Reusability practices",
         "mnemo": "PRACTICES_REU",
         "desc": [
             "What practices (rules checked) related to reusability are violated, and how often?"
-        ],
+        ]
       },
       {
         "name": "ITS Reliability",
         "mnemo": "ITS_REL",
         "desc": [
             "The reliability assessment of the project regarding registered bugs."
-        ],
+        ]
       },
       {
         "name": "Test coverage",
         "mnemo": "TST_COV",
         "desc": [
             "What percentage of the product has tests?"
-        ],
+        ]
       },
       {
         "name": "Number of tests",
         "mnemo": "TST_VOL",
         "desc": [
             "The overall amount of tests executed for the project."
-        ],
+        ]
       },
       {
         "name": "Test success density",
         "mnemo": "TST_SUCCESS",
         "desc": [
             "Are the available tests successful when executed?"
-        ],
+        ]
       },
       {
         "name": "Developer ML activity",
         "mnemo": "MLS_DEV_ACTIVITY",
         "desc": [
             "Activity on the developer mailing list."
-        ],
+        ]
         "question": "How active is the developer mailing list?",
       },
       {
@@ -198,7 +198,7 @@
         "mnemo": "MLS_USR_ACTIVITY",
         "desc": [
             "Activity on the user mailing list."
-        ],
+        ]
         "question": "How active is the user mailing list?",
       },
       {
@@ -206,7 +206,7 @@
         "mnemo": "SCM_ACTIVITY",
         "desc": [
             "Activity on the software configuration management system."
-        ],
+        ]
         "question": "How active is the developer mailing list?",
       },
       {
@@ -214,7 +214,7 @@
         "mnemo": "MLS_DEV_DIVERSITY",
         "desc": [
             "Diversity of users on the developer mailing list."
-        ],
+        ]
         "question": "How many users have contributed to the developer mailing list?",
       },
       {
@@ -222,7 +222,7 @@
         "mnemo": "MLS_USR_DIVERSITY",
         "desc": [
             "Diversity of users on the user mailing list."
-        ],
+        ]
         "question": "How many users have contributed to the user mailing list?",
       },
       {
@@ -230,7 +230,7 @@
         "mnemo": "SCM_DIVERSITY",
         "desc": [
             "Diversity of users on the software configuration management system."
-        ],
+        ]
         "question": "How many users have contributed to the software configuration management system?",
       },
       {
@@ -238,7 +238,7 @@
         "mnemo": "MLS_DEV_RESPONSIVENESS",
         "desc": [
             "The delay of answers on the developer mailing list."
-        ],
+        ]
         "question": "How long have questions on the developer mailing list to wait before being answered?",
       },
       {
@@ -246,7 +246,7 @@
         "mnemo": "MLS_USR_RESPONSIVENESS",
         "desc": [
             "The delay of answers on the developer mailing list."
-        ],
+        ]
         "question": "How long have questions on the user mailing list to wait before being answered?",
       },
       {
@@ -254,7 +254,7 @@
         "mnemo": "MLS_DEV_SUPPORT",
         "desc": [
             "The quantity of information gathered by questions on the developer mailing list."
-        ],
+        ]
         "question": "What amount of resources can be gathered from the developer mailing list?",
       },
       {
@@ -262,7 +262,7 @@
         "mnemo": "MLS_USR_SUPPORT",
         "desc": [
             "The quantity of information gathered by questions on the user mailing list."
-        ],
+        ]
         "question": "What amount of resources can be gathered from the user mailing list?",
       },
       {
@@ -270,21 +270,21 @@
         "mnemo": "PLAN_ON_TIME",
         "desc": [
             "Is the project on time according to its schedule?"
-        ],
+        ]
       },
       {
         "name": "Milestones",
         "mnemo": "PLAN_RELEASES",
         "desc": [
             "Is the project having regular milestones, do they prove to be effective?"
-        ],
+        ]
       },
       {
         "name": "Downloads",
         "mnemo": "DOWNLOADS",
         "desc": [
             "What is the amount of downloads?"
-        ],
+        ]
       },
       {
         "name": "Marketplace feedback",
@@ -292,14 +292,14 @@
         "desc": [
             "What is the feedback of users of the Eclipse Marketplace on the product?",
             "If the product is not registered on the marketplace, the measure is set to zero."
-        ],
+        ]
       },
       {
         "name": "Visibility in research",
         "mnemo": "PUB_CONF",
         "desc": [
             "How well-known is the software project in the academic field?"
-        ],
+        ]
       } 
     ]
   }

@@ -6,7 +6,7 @@
         "name": "Project Quality",
         "mnemo": "QM_QUALITY",
         "desc": [
-            "The computational complexity of the code: control, data, inheritance."
+            "The overall quality of the project. In the context of embedded software, this is often assimilated to Maturity."
         ]
       },
       {
