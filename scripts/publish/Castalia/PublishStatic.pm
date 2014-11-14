@@ -24,9 +24,6 @@ my $html_start = <<'EOHS';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- Our CSS sheets -->
-    <link rel="stylesheet" href="/css/main.css">
-
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,6 +41,9 @@ my $html_start = <<'EOHS';
 
     <!-- Custom Fonts -->
     <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Our CSS sheets -->
+    <link rel="stylesheet" href="/css/main.css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -175,6 +175,8 @@ sub build_title($) {
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <!-- div class="navbar-inner" -->
+          <!-- div class="container" -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -182,22 +184,14 @@ sub build_title($) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">' . $title . '</a>
-            </div>
-            <!-- /.navbar-header -->
+                <a class="navbar-brand" href="index.html"><big>' . $title . '</big></a>
+              </div>
+            <!-- /div -->
+            <!-- /div -->
+            <!-- /.navbar-header -->';
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->';
+
+
 
     return $html_title;
 }
@@ -247,7 +241,7 @@ sub build_menu($) {
 	if (exists $entry->{"children"}) {
 	    $html_ret .= '<span class="fa arrow"></span></a>';
 	    $html_ret .= '
-                      <ul class="nav nav-second-level">';
+                      <ul class="nav nav-second-level active">';
 
 	    foreach my $entry (@{$entry->{"children"}}) {
 		$html_ret .= '
@@ -299,16 +293,10 @@ sub build_content_dir($) {
 	    $folders_list .= '<a href="' . $file_strip . 
 		'" class="list-group-item"><span class="glyphicon ' .
 		'glyphicon-folder-close" />&nbsp;' . $file_name . '</a>';
-	} elsif ($file =~ m!\.inc$!) {
-	    # Remove .inc extension if available.
-	    $file_strip =~ s/\.inc$/\.html/;
-	    $file_name =~ s/\.inc$/\.html/;
-
+	} elsif ($file !~ m'index.html') {
 	    $files_list .= '<a href="' . $file_strip . 
 		'" class="list-group-item"><span class="glyphicon ' .
 		'glyphicon-file" />&nbsp;' . $file_name . '</a>';
-	} else {
-	    print "ERR: cannot recognise file $file.\n";
 	}
     }	
     

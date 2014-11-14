@@ -21,6 +21,7 @@ our @EXPORT_OK = qw(
 my $debug = 0;
 
 my %flat_metrics;
+my %flat_questions;
 my %flat_attributes;
 my %flat_rules;
 my %flat_refs;
@@ -51,7 +52,7 @@ sub generate_project($) {
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h2 class="page-header">Project ' . $project_id . '</h2>
+              <h2>Project ' . $project_id . '</h2>
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
@@ -285,7 +286,7 @@ sub generate_doc_metrics($) {
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h2 class="page-header">Definition of metrics</h2>
+              <h2>Definition of metrics</h2>
               <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
         
 ';
@@ -366,6 +367,72 @@ sub generate_doc_metrics($) {
 
 sub generate_doc_questions() {
     my $class = shift;
+    my $file_questions = shift;
+    
+    ## Read question file
+
+    # Open rules file and read.
+    print "  * Reading questions from file [$file_questions]...\n";
+    
+    my $vol_questions;
+    
+    my $raw_questions = &read_json($file_questions);
+    
+    my $questions_name = $raw_questions->{"name"};
+    my $questions_version = $raw_questions->{"version"};
+    print "      Ruleset: [", $questions_name, "],";
+    print " version [", $questions_version, "],";
+    
+    my $file_vol_questions;
+    foreach my $question (@{$raw_questions->{"children"}}) {
+	$flat_questions{$question->{"mnemo"}} = $question;
+	$file_vol_questions++;
+    }
+    
+    print " [$file_vol_questions] rules found.\n";
+    
+    my $html_ret = '
+        <div id="page-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Definition of Questions</h2>
+              <p>Questions are mapped to quality attributes, on one side, and to metrics on the other side. It acts as a generic definition for measurement, allowing users to analyse different types of projects with the same quality tree. Questions also preserve the semantics and consistency of measures regarding associated the quality attribute, see Basili\'s Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>] for more information on this approach.</p><br />
+        
+';
+    
+    $html_ret .= '
+              <ul class="list-group">';
+
+    foreach my $question (sort keys %flat_questions) {
+        $html_ret .= '
+                <li class="list-group-item">';
+        my $question_name = $flat_questions{$question}{"name"};
+        my $question_desc = $flat_questions{$question}{"desc"};
+	my $question_question = "";
+	if (exists $flat_questions{$question}{"question"}) {
+	    $question_question = $flat_questions{$question}{"question"} ;
+	}
+
+        $html_ret .= "<p id=\"$question\"><strong>$question_name</strong> ( $question )</p>\n";
+        $html_ret .= "<p class=\"desc\">" . $question_question . "</a>\n";
+        foreach my $desc (@{$question_desc}) {
+            $html_ret .= "<p class=\"desc\">$desc</p>\n";
+        }
+        $html_ret .= '
+                </li>';
+    
+    }
+
+    $html_ret .= '
+              </ul>';
+        
+    $html_ret .= '
+            </div>
+          </div>
+        </div>';
+
+
+    return $html_ret;
 
 }
 
@@ -407,7 +474,7 @@ sub generate_doc_rules() {
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h2 class="page-header">Definition of rules</h2>
+              <h2>Definition of rules</h2>
               <p>Rules are mapped to good and bad practices, as defined by the open-source community. They are computed by open-source rule-checking tools like PMD or FindBugs. They are classified by category associated to some quality characteristics.</p><br />
         
 ';
@@ -464,7 +531,7 @@ sub generate_doc_refs($) {
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h2 class="page-header">References</h2>
+              <h2>References</h2>
               <p>All refs used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
         
 ';

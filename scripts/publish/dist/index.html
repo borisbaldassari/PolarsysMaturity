@@ -11,9 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- Our CSS sheets -->
-    <link rel="stylesheet" href="/css/main.css">
-
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,6 +29,9 @@
     <!-- Custom Fonts -->
     <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Our CSS sheets -->
+    <link rel="stylesheet" href="/css/main.css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,6 +48,8 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <!-- div class="navbar-inner" -->
+          <!-- div class="container" -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -55,40 +57,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">PolarSys Maturity Assessment Dashboard &mdash; Index</a>
-            </div>
+                <a class="navbar-brand" href="index.html"><big>PolarSys Maturity Assessment Dashboard &mdash; Index</big></a>
+              </div>
+            <!-- /div -->
+            <!-- /div -->
             <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
               <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                   <ul class="nav" id="side-menu">
                     <li><a class="active" href="/">Home</a></li>
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/documentation/">Documentation<span class="fa arrow"></span></a>
-                      <ul class="nav nav-second-level">
+                      <ul class="nav nav-second-level active">
                     <li><a href="/documentation/metrics.html">Metrics</a></li>
                     <li><a href="/documentation/rules.html">Practices</a></li>
                     <li><a href="/documentation/questions.html">Questions</a></li>
                     <li><a href="/documentation/actions.html">Actions</a></li>
+                    <li><a href="/documentation/references.html">References</a></li>
                   </ul></li>
                     <li><a href="/projects/">Projects<span class="fa arrow"></span></a>
-                      <ul class="nav nav-second-level">
+                      <ul class="nav nav-second-level active">
                     <li><a href="/projects/cdt.html">CDT</a></li>
+                    <li><a href="/projects/ease.html">EASE</a></li>
+                    <li><a href="/projects/example.html">Example</a></li>
                     <li><a href="/projects/papyrus.html">Papyrus</a></li>
                     <li><a href="/projects/sirius.html">Sirius</a></li>
-                    <li><a href="/projects/ease.html">EASE</a></li>
                   </ul></li></ul>
           </div></div>
         </nav>
@@ -97,20 +90,26 @@
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h3 class="page-header">Maturity Assessment Home</h3>
-              <p>This page is an example of what could be the home page on this web site.</p>
-        
-              <div class="alert alert-warning alert-dismissible" role="alert">
+
+              <h3>Maturity Assessment Home</h3>
+              
+              <div class="alert alert-info alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert">
                   <span aria-hidden="true">&times;</span>
                   <span class="sr-only">Close</span>
                 </button>
-                <strong>Warning!</strong> This site is an on-going work. You can participate or just wait for us to advance.
+                <strong>Info:</strong> This site is an on-going work. You can <a href="/about.html">participate</a> or tell us what you think. 
               </div>
               
-              <p><a href="http://polarsys.org">PolarSys</a> is an Eclipse <a href="http://www.eclipse.org/org/industry-workgroups/">Industry Working Group</a> created by large industry players and by tools providers to collaborate on the creation and support of Open Source tools for the development of embedded systems. Members of PolarSys started working on a <a href="https://polarsys.org/wiki/Maturity_Assessment_WG">Maturity Assessment task force</a> back in 2013, to assess and help improve quality of projects entering the PolarSys umbrella.</p>
+              
+
+              <img src="/images/logo_polarsys.png" class="img-responsive pull-right" style="margin: 5px" alt="PolarSys logo" /> 
+              <p>You just landed on the <strong>PolarSys Maturity Assessment dashboard</strong>. <a href="http://polarsys.org">PolarSys</a> is an Eclipse <a href="http://www.eclipse.org/org/industry-workgroups/">Industry Working Group</a> created by large industry players and by tools providers to collaborate on the creation and support of Open Source tools for the development of embedded systems. </p>
+              <p>Members of PolarSys started working on a <a href="https://polarsys.org/wiki/Maturity_Assessment_WG">Maturity Assessment task force</a> back in 2013, to provide an evaluation of the quality of software components entering the PolarSys umbrella, and provides advice and guidance to improve it. </p>
+
+              <p>The complete process is fully documented, from <a href="https://polarsys.org/wiki/EclipseQualityRequirements">quality requirements</a> to <a href="/documentation/metrics.html">metrics</a> used to assess them. </p>
     
-              <p>This web site is automatically generated from the definition files stored in a git repository, so it can not be modified directly. Instead, please send your remarks to the <a href="https://dev.eclipse.org/mailman/listinfo/polarsys-iwg">PolarSys mailing list</a> or <a href="https://wiki.eclipse.org/index.php?title=User_talk:Boris.chrysalice.org">contact me</a> (Boris Baldassari).</p>
+              <p>This web site is automatically generated from the definition files stored in a git repository, so it can not be modified directly. Instead, please send your remarks to the <a href="https://dev.eclipse.org/mailman/listinfo/polarsys-iwg">PolarSys mailing list</a> or <a href="https://wiki.eclipse.org/index.php?title=User_talk:Boris.chrysalice.org">contact us</a>.</p>
 
             </div>
           </div>
@@ -120,9 +119,11 @@
                 <div class="panel-heading"><b>Documentation</b></div>
                 <div class="panel-body">
                   <div class="list-group">
-                    <a href="documentation/attributes.html" class="list-group-item"><i class="glyphicon glyphicon-help"></i> Quality attributes definition</a>
-                    <a href="documentation/metrics.html" class="list-group-item"><i class="glyphicon glyphicon-folder-help"></i> Metrics definition</a>
-                    <a href="documentation/questions.html" class="list-group-item"><i class="glyphicon glyphicon-folder-help"></i> Questions definition</a>
+                    <a href="documentation/attributes.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Quality attributes definition</a>
+                    <a href="documentation/metrics.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Metrics definition</a>
+                    <a href="documentation/questions.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Questions definition</a>
+                    <a href="documentation/quality_model.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Quality Model</a>
+                    <a href="documentation/rules.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Rules</a>
                   </div>
                 </div>
               </div>
@@ -132,9 +133,12 @@
                 <div class="panel-heading"><b>Projects</b></div>
                 <div class="panel-body">
                   <div class="list-group">
-                    <a href="projects/cdt.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;projects/cdt.html</a>
-                    <a href="projects/papyrus.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;projects/papyrus.html</a>
-                    <a href="projects/sirius.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;projects/sirius.html</a>
+                    <a href="projects/cdt.html" class="list-group-item">
+                        <i class="glyphicon glyphicon-folder-open"></i>&nbsp; CDT</a>
+                    <a href="projects/ease.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; EASE</a>
+                    <a href="projects/example.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Example</a>
+                    <a href="projects/papyrus.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Papyrus</a>
+                    <a href="projects/sirius.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Sirius</a>
                   </div>
                 </div>
               </div>

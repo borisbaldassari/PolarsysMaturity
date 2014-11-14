@@ -1,0 +1,359 @@
+<!doctype html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/css/plugins/timeline.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!-- link href="/css/plugins/morris.css" rel="stylesheet" -->
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Our CSS sheets -->
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="#wrapper">
+
+
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <!-- div class="navbar-inner" -->
+          <!-- div class="container" -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><big>PolarSys Maturity Assessment Dashboard &mdash; Questions</big></a>
+              </div>
+            <!-- /div -->
+            <!-- /div -->
+            <!-- /.navbar-header -->
+              <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <ul class="nav" id="side-menu">
+                    <li><a class="active" href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/documentation/">Documentation<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/documentation/metrics.html">Metrics</a></li>
+                    <li><a href="/documentation/rules.html">Practices</a></li>
+                    <li><a href="/documentation/questions.html">Questions</a></li>
+                    <li><a href="/documentation/actions.html">Actions</a></li>
+                    <li><a href="/documentation/references.html">References</a></li>
+                  </ul></li>
+                    <li><a href="/projects/">Projects<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/projects/cdt.html">CDT</a></li>
+                    <li><a href="/projects/ease.html">EASE</a></li>
+                    <li><a href="/projects/example.html">Example</a></li>
+                    <li><a href="/projects/papyrus.html">Papyrus</a></li>
+                    <li><a href="/projects/sirius.html">Sirius</a></li>
+                  </ul></li></ul>
+          </div></div>
+        </nav>
+
+
+        <div id="page-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Definition of Questions</h2>
+              <p>Questions are mapped to quality attributes, on one side, and to metrics on the other side. It acts as a generic definition for measurement, allowing users to analyse different types of projects with the same quality tree. Questions also preserve the semantics and consistency of measures regarding associated the quality attribute, see Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>] for more information on this approach.</p><br />
+        
+
+              <ul class="list-group">
+                <li class="list-group-item"><p id="ALL_DATA"><strong>Access points</strong> ( ALL_DATA )</p>
+<p class="desc"></a>
+<p class="desc">The amount of attributes and methods on the class, whatever their visibility is.</p>
+
+                </li>
+                <li class="list-group-item"><p id="CODE_CLONE"><strong>Code cloning</strong> ( CODE_CLONE )</p>
+<p class="desc"></a>
+<p class="desc">The amount of duplicated lines in the code.</p>
+
+                </li>
+                <li class="list-group-item"><p id="CODE_DOC"><strong>Code documentation</strong> ( CODE_DOC )</p>
+<p class="desc"></a>
+<p class="desc">The amount of documentation in the code: comment rate, javadoc, etc.</p>
+
+                </li>
+                <li class="list-group-item"><p id="CODE_SIZE"><strong>Code size</strong> ( CODE_SIZE )</p>
+<p class="desc"></a>
+<p class="desc">The overall size of the code.</p>
+
+                </li>
+                <li class="list-group-item"><p id="CPX"><strong>Code complexity</strong> ( CPX )</p>
+<p class="desc"></a>
+<p class="desc">The computational complexity of the code: control, data, inheritance.</p>
+
+                </li>
+                <li class="list-group-item"><p id="CPX_CF"><strong>Control flow complexity</strong> ( CPX_CF )</p>
+<p class="desc"></a>
+<p class="desc">The computational complexity of the control flow structure in the code functions.</p>
+
+                </li>
+                <li class="list-group-item"><p id="CPX_DF"><strong>Data flow complexity</strong> ( CPX_DF )</p>
+<p class="desc"></a>
+<p class="desc">The complexity of the data flow structure in the code functions.</p>
+
+                </li>
+                <li class="list-group-item"><p id="CPX_OO"><strong>OO complexity</strong> ( CPX_OO )</p>
+<p class="desc"></a>
+<p class="desc">The complexity of the object-oriented architecture and structure. Composed of MDIT (maximum depth of inheritance tree).</p>
+
+                </li>
+                <li class="list-group-item"><p id="DOWNLOADS"><strong>Downloads</strong> ( DOWNLOADS )</p>
+<p class="desc"></a>
+<p class="desc">What is the amount of downloads?</p>
+
+                </li>
+                <li class="list-group-item"><p id="INSTALL"><strong>Installations</strong> ( INSTALL )</p>
+<p class="desc"></a>
+<p class="desc">The level of usage of the product. How much is really used the software? In different contexts, in local or distributed teams, etc.</p>
+
+                </li>
+                <li class="list-group-item"><p id="IP_LOG"><strong>IP Log</strong> ( IP_LOG )</p>
+<p class="desc"></a>
+<p class="desc">Is the intellectual property of contributions checked and enforced?</p>
+
+                </li>
+                <li class="list-group-item"><p id="ITS_REL"><strong>ITS Reliability</strong> ( ITS_REL )</p>
+<p class="desc"></a>
+<p class="desc">The reliability assessment of the project regarding registered bugs.</p>
+
+                </li>
+                <li class="list-group-item"><p id="ITS_USAGE"><strong>ITS usage</strong> ( ITS_USAGE )</p>
+<p class="desc"></a>
+<p class="desc">How much the ITS system was used recently.</p>
+
+                </li>
+                <li class="list-group-item"><p id="LIC"><strong>Licensing</strong> ( LIC )</p>
+<p class="desc"></a>
+<p class="desc">Are licensing issues considered?</p>
+
+                </li>
+                <li class="list-group-item"><p id="MKT_FEEDBACK"><strong>Marketplace feedback</strong> ( MKT_FEEDBACK )</p>
+<p class="desc"></a>
+<p class="desc">What is the feedback of users of the Eclipse Marketplace on the product?</p>
+<p class="desc">If the product is not registered on the marketplace, the measure is set to zero.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_DEV_ACTIVITY"><strong>Developer ML activity</strong> ( MLS_DEV_ACTIVITY )</p>
+<p class="desc">How active is the developer mailing list?</a>
+<p class="desc">Activity on the developer mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_DEV_DIVERSITY"><strong>Developer ML diversity</strong> ( MLS_DEV_DIVERSITY )</p>
+<p class="desc">How many users have contributed to the developer mailing list?</a>
+<p class="desc">Diversity of users on the developer mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_DEV_RESPONSIVENESS"><strong>Developer ML responsiveness</strong> ( MLS_DEV_RESPONSIVENESS )</p>
+<p class="desc">How long have questions on the developer mailing list to wait before being answered?</a>
+<p class="desc">The delay of answers on the developer mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_DEV_SUPPORT"><strong>Developer ML support</strong> ( MLS_DEV_SUPPORT )</p>
+<p class="desc">What amount of resources can be gathered from the developer mailing list?</a>
+<p class="desc">The quantity of information gathered by questions on the developer mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_USR_ACTIVITY"><strong>User ML activity</strong> ( MLS_USR_ACTIVITY )</p>
+<p class="desc">How active is the user mailing list?</a>
+<p class="desc">Activity on the user mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_USR_DIVERSITY"><strong>User ML diversity</strong> ( MLS_USR_DIVERSITY )</p>
+<p class="desc">How many users have contributed to the user mailing list?</a>
+<p class="desc">Diversity of users on the user mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_USR_RESPONSIVENESS"><strong>User ML responsiveness</strong> ( MLS_USR_RESPONSIVENESS )</p>
+<p class="desc">How long have questions on the user mailing list to wait before being answered?</a>
+<p class="desc">The delay of answers on the developer mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="MLS_USR_SUPPORT"><strong>User ML support</strong> ( MLS_USR_SUPPORT )</p>
+<p class="desc">What amount of resources can be gathered from the user mailing list?</a>
+<p class="desc">The quantity of information gathered by questions on the user mailing list.</p>
+
+                </li>
+                <li class="list-group-item"><p id="PLAN_ON_TIME"><strong>Plan on time</strong> ( PLAN_ON_TIME )</p>
+<p class="desc"></a>
+<p class="desc">Is the project on time according to its schedule?</p>
+
+                </li>
+                <li class="list-group-item"><p id="PLAN_RELEASES"><strong>Milestones</strong> ( PLAN_RELEASES )</p>
+<p class="desc"></a>
+<p class="desc">Is the project having regular milestones, do they prove to be effective?</p>
+
+                </li>
+                <li class="list-group-item"><p id="PRACTICES_ANA"><strong>Analysability practices</strong> ( PRACTICES_ANA )</p>
+<p class="desc"></a>
+<p class="desc">What practices (rules checked) related to analysability are violated, and how often?</p>
+
+                </li>
+                <li class="list-group-item"><p id="PRACTICES_CHA"><strong>Changeability practices</strong> ( PRACTICES_CHA )</p>
+<p class="desc"></a>
+<p class="desc">What practices (rules checked) related to changeability are violated, and how often?</p>
+
+                </li>
+                <li class="list-group-item"><p id="PRACTICES_REL"><strong>Reliability practices</strong> ( PRACTICES_REL )</p>
+<p class="desc"></a>
+<p class="desc">What practices (rules checked) related to reliability are violated, and how often?</p>
+
+                </li>
+                <li class="list-group-item"><p id="PRACTICES_REU"><strong>Reusability practices</strong> ( PRACTICES_REU )</p>
+<p class="desc"></a>
+<p class="desc">What practices (rules checked) related to reusability are violated, and how often?</p>
+
+                </li>
+                <li class="list-group-item"><p id="PUBLIC_DATA"><strong>Public access points</strong> ( PUBLIC_DATA )</p>
+<p class="desc"></a>
+<p class="desc">Total number of public classes, interfaces, methods, constructors, annotations and attributes.</p>
+
+                </li>
+                <li class="list-group-item"><p id="PUB_CONF"><strong>Visibility in research</strong> ( PUB_CONF )</p>
+<p class="desc"></a>
+<p class="desc">How well-known is the software project in the academic field?</p>
+
+                </li>
+                <li class="list-group-item"><p id="PUB_ITS_INFO"><strong>ITS information access</strong> ( PUB_ITS_INFO )</p>
+<p class="desc"></a>
+<p class="desc">Measures the availability of information regarding ITS usage, conventions, access.</p>
+
+                </li>
+                <li class="list-group-item"><p id="PUB_SCM_INFO"><strong>SCM information access</strong> ( PUB_SCM_INFO )</p>
+<p class="desc"></a>
+<p class="desc">Measures the availability of information regarding SCM usage, conventions, access.</p>
+
+                </li>
+                <li class="list-group-item"><p id="SCM_ACTIVITY"><strong>SCM activity</strong> ( SCM_ACTIVITY )</p>
+<p class="desc">How active is the developer mailing list?</a>
+<p class="desc">Activity on the software configuration management system.</p>
+
+                </li>
+                <li class="list-group-item"><p id="SCM_DIVERSITY"><strong>SCM diversity</strong> ( SCM_DIVERSITY )</p>
+<p class="desc">How many users have contributed to the software configuration management system?</a>
+<p class="desc">Diversity of users on the software configuration management system.</p>
+
+                </li>
+                <li class="list-group-item"><p id="SCM_DOCS"><strong>SCM Documentation</strong> ( SCM_DOCS )</p>
+<p class="desc"></a>
+<p class="desc">Is there some documentation about the SCM process, rules and conventions?</p>
+
+                </li>
+                <li class="list-group-item"><p id="SCM_STABILITY"><strong>SCM Stability</strong> ( SCM_STABILITY )</p>
+<p class="desc"></a>
+<p class="desc">How much the files are stable according to the SCM system. 
+A file which has been heavily modified recently lacks experience, tests and feedback. </p>
+
+                </li>
+                <li class="list-group-item"><p id="SCM_USAGE"><strong>SCM usage</strong> ( SCM_USAGE )</p>
+<p class="desc"></a>
+<p class="desc">How much the SCM system was used during last month.</p>
+
+                </li>
+                <li class="list-group-item"><p id="TST_COV"><strong>Test coverage</strong> ( TST_COV )</p>
+<p class="desc"></a>
+<p class="desc">What percentage of the product has tests?</p>
+
+                </li>
+                <li class="list-group-item"><p id="TST_SUCCESS"><strong>Test success density</strong> ( TST_SUCCESS )</p>
+<p class="desc"></a>
+<p class="desc">Are the available tests successful when executed?</p>
+
+                </li>
+                <li class="list-group-item"><p id="TST_VOL"><strong>Number of tests</strong> ( TST_VOL )</p>
+<p class="desc"></a>
+<p class="desc">The overall amount of tests executed for the project.</p>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>    </div>
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <!-- script src="/js/plugins/morris/raphael.min.js"></script>
+    <script src="/js/plugins/morris/morris.min.js"></script>
+    <script src="/js/plugins/morris/morris-data.js"></script -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/sb-admin-2.js"></script>
+
+    
+    <!-- JavaScripts -->
+    <!-- script src="/bower_components/modernizr/modernizr.js"></script-->
+    
+    <!-- script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/bootstrap/js/button.js"></script>
+    <script src="/bower_components/bootstrap/js/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/tab.js"></script -->
+        
+</body>
+</html>

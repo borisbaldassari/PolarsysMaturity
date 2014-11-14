@@ -1,9 +1,23 @@
 
+div.navbar-inner {
+#    background: url("/images/polarsys_p.png") no-repeat left;
+}
+
+div.container {
+    height: 92px;
+    color: #15213a;
+}
+
 p.desc {
     margin-left: 20px;
 }
 
 .desc-title {
     font-size: 120%;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-brand {
+    color: #15213a;
     font-weight: bold;
 }

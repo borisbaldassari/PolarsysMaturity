@@ -2,7 +2,7 @@
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h2 class="page-header">References</h2>
+              <h2>References</h2>
               <p>All refs used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
         
 

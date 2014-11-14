@@ -24,6 +24,10 @@
 		{
 		    "name": "Actions",
 		    "url": "/documentation/actions.html"
+		},
+		{
+		    "name": "References",
+		    "url": "/documentation/references.html"
 		}
 	    ]
 	},
@@ -36,16 +40,20 @@
 		    "url": "/projects/cdt.html" 
 		},
 		{
+		    "name": "EASE",
+		    "url": "/projects/ease.html" 
+		},
+		{
+		    "name": "Example",
+		    "url": "/projects/example.html" 
+		},
+		{
 		    "name": "Papyrus",
 		    "url": "/projects/papyrus.html" 
 		},
 		{
 		    "name": "Sirius",
 		    "url": "/projects/sirius.html" 
-		},
-		{
-		    "name": "EASE",
-		    "url": "/projects/ease.html" 
 		}
 	    ]
 	}

@@ -2,7 +2,7 @@
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h2 class="page-header">Project example</h2>
+              <h2>Project example</h2>
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">

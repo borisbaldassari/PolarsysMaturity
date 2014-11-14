@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<!-- Displays the structure of a quality model, itself provided by a json -->
+<!-- file on the same server (/data/). -->
+<!--  -->
+<!-- Licensing: Eclipse Public License - v 1.0 -->
+<!-- http://www.eclipse.org/org/documents/epl-v10.html -->
+<head>
+
+<meta charset="utf-8">
+<style>
+
+body {
+  margin-top: 20px;
+  margin-bottom: 200px;
+  
+  background-color: #ebeef1;
+}
+
+div#tree {
+  background-image: url("background.png");
+  background-repeat: repeat-y;
+
+}
+
+.node {
+  cursor: pointer;
+  margin: 0px;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  background-color: #ffffff;
+}
+
+.link {
+  fill: none;
+  stroke: #717171;/* #ccc; */
+  stroke-width: 1.5px;
+}
+
+div#details-box {
+  width: 600px;
+  margin: 10px 40px 10px 40px;
+  background-color: white;
+  opacity: 0.8;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: steelblue;
+
+  padding: 20px;
+  float: right;
+  clear: right;
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 120%;
+  margin: 10px;
+}
+
+.details {
+  color: black;
+  margin: 10px;
+  font-weight: normal;
+}
+
+.details-title {
+  color: black;
+  font-weight: bold;
+  margin: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="log" style="display: none"></div>
+
+<div id="tree"></div>
+
+<script src="/js/d3/d3.min.js"></script>
+<script>
+
+var margin = {top: 20, right: 120, bottom: 20, left: 100},
+    width = 1100 - margin.right - margin.left,
+    height = 1024 - margin.top - margin.bottom;
+    
+var i = 0,
+    duration = 750,
+    root;
+
+var tree = d3.layout.tree()
+    .size([height, width]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var svg = d3.select("div#tree").append("svg")
+    .attr("width", width + margin.right + margin.left)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var myattrs = {};
+var mymetrics = {};
+var myconcepts = {};
+
+// Load file for attributes.
+d3.json("../data/polarsys_attributes.json", function(error, attributes) {
+  if (error) return console.warn(error);
+
+  for(i=0;i<attributes.children.length;i++) {
+    attr_mnemo = attributes.children[i]['mnemo'];
+    myattrs[attr_mnemo] = attributes.children[i];
+  }
+});
+
+// Load file for concepts.
+d3.json("../data/polarsys_questions.json", function(error, concepts) {
+  if (error) return console.warn(error);
+  
+  for(i=0;i<concepts.children.length;i++) {
+    concept_name = concepts.children[i].mnemo;
+    myconcepts[concept_name] = concepts.children[i];
+  }
+});
+
+// Load file for metrics.
+d3.json("../data/polarsys_metrics.json", function(error, metrics) {
+  if (error) return console.warn(error);
+  
+  for(i=0;i<metrics.children.length;i++) {
+    metric_name = metrics.children[i].mnemo;
+    mymetrics[metric_name] = metrics.children[i];
+  }
+});
+
+d3.json("../data/polarsys_qm_full.json", function(error, qm) {
+  if (error) return console.warn(error);
+
+
+  root = qm;
+  root.x0 = height / 2;
+  root.y0 = 0;
+
+  function collapse(d) {
+    if (d.children) {
+      d._children = d.children;
+      d._children.forEach(collapse);
+      d.children = null;
+    }
+  }
+
+  function firstCollapse(d) {
+    if (d.children) {
+      d._children = d.children;
+      for(i=0;i<d._children.length;i++) {
+        d._children[i].children.forEach(collapse);
+      }
+    }
+  }
+
+  //root.children.forEach(firstCollapse);
+  update(root);
+});
+
+function update(source) {
+
+  var tabs = [0, 100, 250, 450, 680, 750];
+
+  // Compute the new tree layout.
+  var nodes = tree.nodes(root).reverse(),
+      links = tree.links(nodes);
+
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d, i) { 
+    d.y = tabs[d.depth];
+  });
+
+  // Update the nodes…
+  var node = svg.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  // Enter any new nodes at the parent's previous position.
+  var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+      .on("click", click);
+
+  nodeEnter.append("circle")
+      .attr("r", 1e-6)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+  nodeEnter.append("text")
+      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
+      .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
+      .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
+      .text(function(d) { 
+        var keys = Object.keys(d);
+        if (d.type == 'attribute' && myattrs.hasOwnProperty(d.mnemo)) { 
+//          alert("Hey " + d.mnemo + " is " + d.type + ": " + myattrs[d.mnemo]["name"]);
+          return myattrs[d.mnemo]["name"]; 
+        } else if (d.type == 'concept' && myconcepts.hasOwnProperty(d.mnemo)) {
+          return myconcepts[d.mnemo]["name"]; 
+        } else if (d.type == 'metric' && mymetrics.hasOwnProperty(d.mnemo)) {
+          return mymetrics[d.mnemo]["name"]; 
+        } else {
+          //alert("Keys for " + d.mnemo + " are " + keys + " \ntype: " + d.type + " \nqsdf");
+          
+        }
+      })
+      .style("fill-opacity", 1e-6);
+
+  // Transition nodes to their new position.
+  var nodeUpdate = node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+  nodeUpdate.select("circle")
+      .attr("r", 7)
+      .style("fill", function(d) { return d._children ? "red" : "#fff"; });
+
+  nodeUpdate.select("text")
+      .style("fill-opacity", 1);
+
+  // Transition exiting nodes to the parent's new position.
+  var nodeExit = node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .remove();
+
+  nodeExit.select("circle")
+      .attr("r", 1e-6);
+
+  nodeExit.select("text")
+      .style("fill-opacity", 1e-6);
+
+  // Update the links…
+  var link = svg.selectAll("path.link")
+      .data(links, function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      });
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+}
+
+// Toggle children on click.
+function click(d) {
+
+  var i = 0;
+  var mynode;
+  var type = "none";
+
+  // find element in our json files (metrics, concepts, attributes of quality).
+  if (typeof d.type == "undefined") {
+    alert("No type defined on node.");
+    type = "undefined";
+  } else {
+    if (d.type == "metric") {
+            mynode = d;
+            mynode.description = mymetrics[d.mnemo]["desc"]; 
+            mynode.name = mymetrics[d.mnemo]["name"]; 
+            mynode.datasource = mymetrics[d.mnemo]["ds"]; 
+
+            var mydiv = d3.select("div#details-box");
+
+            mydiv.text("");
+
+            var ptitle = mydiv.append('p');
+            ptitle.classed("title", true);
+            ptitle.text(d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+  
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Data source:")
+            psource = ptitle.append('span');
+            psource.classed("details", true);
+            psource.text(mynode.datasource);
+
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Active:")
+            pactive = p.append('span');
+            pactive.classed("details", true);
+            pactive.text(mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1));
+
+            pdesct = mydiv.append('p');
+            pdesct.classed("details-title", true); 
+            pdesct.text("Description:")
+            for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+                var pdesc = mydiv.append('p');
+                pdesc.classed("details", true);
+                pdesc.text(mynode.description[desc_idx]);
+            }
+    }
+    if (d.type == "metric" && 0==1) {
+
+//      for (repo = 0 ; repo < mymetrics.children.length ; repo++) { 
+        i = 0;
+        while (i < mymetrics.children[repo].children.length) {
+          if (d.mnemo == mymetrics.children[repo].children[i]["mnemo"]) {
+            type = "metric";
+            mynode = d;
+            mynode.description = mymetrics.children[repo].children[i]["description"]; 
+            mynode.name = mymetrics.children[repo].children[i]["name"]; 
+            mynode.datasource = mymetrics.children[repo].children[i]["datasource"]; 
+
+//--------------------------
+            var mydiv = d3.select("div#details-box");
+
+            mydiv.text("");
+
+            var ptitle = mydiv.append('p');
+            ptitle.classed("title", true);
+            ptitle.text(type.charAt(0).toUpperCase() + type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+  
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Data source:")
+            psource = ptitle.append('span');
+            psource.classed("details", true);
+            psource.text(mynode.datasource);
+
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Active:")
+            pactive = p.append('span');
+            pactive.classed("details", true);
+            pactive.text(mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1));
+
+            pdesct = mydiv.append('p');
+            pdesct.classed("details-title", true); 
+            pdesct.text("Description:")
+            for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+                var pdesc = mydiv.append('p');
+                pdesc.classed("details", true);
+                pdesc.text(mynode.description[desc_idx]);
+            }
+    
+//--------------------------
+
+            break;
+          }
+          i++;
+        }
+    } else if (d.type == "concept") {
+      while (i < myconcepts.children.length) {
+        if (d.mnemo == myconcepts.children[i]["mnemo"]) {
+          type = "concept";
+          mynode = d;
+          mynode.description = myconcepts.children[i]["description"]; 
+          mynode.name = myconcepts.children[i]["name"]; 
+
+//--------------------------
+            var mydiv = d3.select("div#details-box");
+
+            mydiv.text("");
+
+            var ptitle = mydiv.append('p');
+            ptitle.classed("title", true);
+            ptitle.text(type.charAt(0).toUpperCase() + type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+  
+            p = mydiv.append('p');
+            ptitle = p.append('span');
+            ptitle.classed("details-title", true); 
+            ptitle.text("Active:")
+            pactive = p.append('span');
+            pactive.classed("details", true);
+            pactive.text(mynode.active);
+
+            pdesct = mydiv.append('p');
+            pdesct.classed("details-title", true); 
+            pdesct.text("Description:")
+            for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+                var pdesc = mydiv.append('p');
+                pdesc.classed("details", true);
+                pdesc.text(mynode.description[desc_idx]);
+            }
+
+//--------------------------
+
+          break;
+        }
+        i++;
+      }
+    } else if (d.type == "attribute") {
+          type = "attribute";
+          mynode = d;
+
+//--------------------------
+            var mydiv = d3.select("div#details-box");
+
+            mydiv.text("");
+
+            var ptitle = mydiv.append("p");
+            ptitle.classed("title", true);
+            ptitle.text("Description of the " + type); 
+  
+            var pname = mydiv.append('p');
+            pname.classed("details", true);
+            pname.text("Name: " + mynode.name);
+  
+            var pmnemo = mydiv.append('p');
+            pmnemo.classed("details", true);
+            pmnemo.text("Mnemo: " + mynode.mnemo);
+    
+            var pactive = mydiv.append('p');
+            pactive.classed("details", true);
+            pactive.text("Active: " + mynode.active);
+    
+            var pdesc = mydiv.append('p');
+            pdesc.classed("details", true);
+            pdesc.text("Description: " + mynode.description);
+//--------------------------
+
+    }
+
+    // Do that only if we actually found the item.
+    if ( type == "none" && type != "undefined" ) {
+      alert("Could not find node " + d.mnemo + " in " + d.type + " definition files.");
+    }
+  }
+
+  if (d.shiftKey) {
+    alert("Shift key pressed!");
+  }
+}
+
+</script>
+
+<div id="details-box"><p>Click on a node to get more details.</p></div>
+
+</body>
+</html>

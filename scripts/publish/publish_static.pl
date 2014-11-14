@@ -49,6 +49,8 @@ my $file_attributes = $dir_data . "polarsys_attributes.json";
 my $file_qm = $dir_data . "polarsys_qm_full.json";
 my $file_refs = $dir_data . "references.json";
 
+my $dir_out_data = $dir_out . "data/";
+
 # Define categories.
 print "Selecting categories.. ";
 my @cats_all = <${dir_src}/*>;
@@ -60,6 +62,9 @@ print scalar @cats . " found.\n";
 # Get names out of categories.
 my @cats_n = map {basename($_)} @cats;
 
+# Clear dest
+my @cmd_out = `rm -r $dir_out`;
+
 # Copy includes to dest
 rcopy($dir_inc, $dir_out);
 
@@ -67,6 +72,32 @@ rcopy($dir_inc, $dir_out);
 #
 # Generate files into the src directory.
 #
+
+print "# Copying download data to [$dir_out_data].\n";
+
+# Create documentation dir if needed
+if (not -e $dir_out_data) { 
+    print "  * Creating folder [$dir_out_data].\n";
+    mkdir $dir_out_data or die "Cannot create folder $dir_out_data.\n";
+}
+
+# Copy downloadable data
+rcopy( $file_metrics, $dir_out_data ) 
+    or print "ERR: could not copy data file [$file_metrics] to [$dir_out_data].\n";
+rcopy( $file_questions, $dir_out_data ) 
+    or print "ERR: could not copy data file [$file_questions] to [$dir_out_data].\n";
+rcopy( $file_attributes, $dir_out_data ) 
+    or print "ERR: could not copy data file [$file_attributes] to [$dir_out_data].\n";
+rcopy( $file_qm, $dir_out_data ) 
+    or print "ERR: could not copy data file [$file_qm] to [$dir_out_data].\n";
+rcopy( $file_refs, $dir_out_data ) 
+    or print "ERR: could not copy data file [$file_refs] to [$dir_out_data].\n";
+
+
+#
+# Now generate all dynamic pages (.inc's): documentation, projects, etc.
+#
+
 print "\n# Generating inc files from data...\n";
 
 my $publish_ps = Castalia::PublishPolarSys->new();
@@ -77,17 +108,18 @@ if (not -e $dir_src_doc) {
     mkdir $dir_src_doc or die "Cannot create folder $dir_src_doc.\n";
 }
 
-# my $doc_qm = generate_doc_qm($dir_qm);
-# my $filename = $dir_out . '/quality_model.html';
-# open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
-# print $fh $doc_qm;
-# close $fh;
-
 print " * Generating metrics doc from [$file_metrics] in [$dir_src_doc].\n";
 my $doc_metrics = $publish_ps->generate_doc_metrics($file_metrics);
 my $filename = $dir_src_doc . '/metrics.inc';
 open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
 print $fh $doc_metrics;
+close $fh;
+
+print " * Generating questions doc from [$file_questions] in [$dir_src_doc].\n";
+my $doc_questions = $publish_ps->generate_doc_questions($file_questions);
+$filename = $dir_src_doc . '/questions.inc';
+open($fh, '>', $filename) or die "Could not open file '$filename' $!";
+print $fh $doc_questions;
 close $fh;
 
 print " * Generating rules doc from [$dir_rules] in [$dir_src_doc].\n";
@@ -145,39 +177,39 @@ print "\n# Generating site from src...\n";
 
 # Loop through all files.
 my @files;
-find({ wanted => sub { push @files, $_ } , no_chdir => 1 }, ($dir_src));
+find({ wanted => sub { push @files, $_ if ( m!\.inc$! )} , no_chdir => 1 }, ($dir_src));
 
 # Treat the home page first.
 my $root = shift(@files);
 # This may be needed if no index.inc is present at the root.
-# It is recommended anyway to have a custom home page..
+# But it is recommended anyway to have a custom home page..
 # build_home($root);
 
 foreach my $file (@files) {
     
     my @file_path = File::Spec->splitdir($file);
+
     my $title = ucfirst($file_path[-1]);
     $title =~ s/.inc$//;
-    
-    my $file_target_dir = substr $file, length($dir_src);
-    $file_target_dir = $dir_out . $file_target_dir;
     
     my $html = build_page($title, $file, $dir_src, $dir_out, $menu_ref);
 
     # File name is different if we have a dir or an inc.
-    my $file_target = "";
-    if (-d $file) {
-	$file_target= $file_target_dir . "/index.html";
-	print "  * Dir src [$file] dest [${file_target}].\n";
+    if ($file =~ m!\.inc$!) {
+	my $file_target = substr $file, length($dir_src);
+	$file_target = $dir_out . $file_target;
+	
+	my $cont_dir = dirname($file_target);
 
-	open(my $fh, '>', $file_target) or die "Could not open file [$file_target] $!";
-	print $fh $html;
-	close $fh;
-    } elsif ($file =~ m!\.inc$!) {
-	$file_target = $file_target_dir;
+	# Create projects dir if needed
+	if (not -e $cont_dir) { 
+	    print "  * Creating folder [$cont_dir].\n";
+	    mkdir $cont_dir or die "Cannot create folder $cont_dir.\n";
+	}
+	
 	$file_target =~ s/\.inc$/.html/;
 	print "  * File src [$file] dest [${file_target}].\n";
-
+	
 	open(my $fh, '>', $file_target) or die "Could not open file [$file_target] $!";
 	print $fh $html;
 	close $fh;
@@ -185,6 +217,31 @@ foreach my $file (@files) {
 	print "WARN Could not identify file $file.\n";
     }
     
+}
+
+# Now create all indexes for directories
+my @dirs;
+find({ wanted => sub { push @dirs, $_ if ( -d )} , no_chdir => 1 }, ($dir_out));
+
+foreach my $dir (@dirs) {
+    
+    my @dir_path = File::Spec->splitdir($dir);
+    my $title = ucfirst($dir_path[-1]);
+    $title =~ s/.inc$//;
+    
+    my $dir_target = substr $dir, length($dir_src);
+    $dir_target = $dir_out . $dir_target . "/index.html";
+
+    # Don't overwrite existing indexes.
+    if (-e $dir_target) { next; }
+
+    my $html = build_page($title, $dir, $dir_src, $dir_out, $menu_ref);
+
+    print "  * Dir src [$dir] dest [${dir_target}].\n";
+    
+    open(my $fh, '>', $dir_target) or die "Could not open dir [$dir_target] $!";
+    print $fh $html;
+    close $fh;
 }
 
 

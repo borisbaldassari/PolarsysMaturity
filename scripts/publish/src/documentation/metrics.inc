@@ -2,7 +2,7 @@
         <div id="page-wrapper">
           <div class="row">
             <div class="col-lg-12">
-              <h2 class="page-header">Definition of metrics</h2>
+              <h2>Definition of metrics</h2>
               <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
         
  
@@ -27,22 +27,18 @@
                   <ul class="list-group">
                 <li class="list-group-item"><p id="ATTRS"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of attributes</strong> ( ATTRS )</p>
 <p class="desc">Total number of attributes defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                 <li class="list-group-item"><p id="ATTRS_PUBLIC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
 <p class="desc">Average number of attributes defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                 <li class="list-group-item"><p id="CLASSES"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of classes</strong> ( CLASSES )</p>
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations. The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                 <li class="list-group-item"><p id="CLONE_IDX"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Cloning density</strong> ( CLONE_IDX )</p>
 <p class="desc">The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for duplications: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href="http://docs.codehaus.org/display/SONAR/Duplications">http://docs.codehaus.org/display/SONAR/Duplications</a>.</p>
-<p class="desc"><span class="label label-primary">TODO: Map this to the SonarQube metric.</span></p>
 </li>
                 <li class="list-group-item"><p id="COMR"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Comment rate</strong> ( COMR )</p>
 <p class="desc">The ratio of source lines of code on the number of comment lines of code. Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
@@ -105,34 +101,27 @@
 </li>
                 <li class="list-group-item"><p id="LIC_IDENT"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>License identification</strong> ( LIC_IDENT )</p>
 <p class="desc">Is there a list of the different licences used in the product?</p>
-<p class="desc"><span class="label label-info">TODO: Run nimca to get information about licences. Check also cosaq from Eclipse.</span></p>
 </li>
                 <li class="list-group-item"><p id="MDIT"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
 <p class="desc">The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">See also SonarQube's page on the depth in tree: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a></p>
-<p class="desc"><span class="label label-primary">TODO: Add the Depth in Tree metric from SonarQube.</span></p>
 </li>
                 <li class="list-group-item"><p id="METHS"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of methods</strong> ( METHS )</p>
 <p class="desc">Total number of methods defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operators</a> (TOPT) considered at the class level.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                 <li class="list-group-item"><p id="METHS_PUBLIC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
 <p class="desc">Average number of methods defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                 <li class="list-group-item"><p id="MKT_FAV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
 <p class="desc">The number of favourites on the Eclipse Marketplace.</p>
-<p class="desc"><span class="label label-info">TODO: Use marketplace's REST API for querying.</span></p>
 </li>
                 <li class="list-group-item"><p id="MKT_INSTALL_FAILED_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of failed install on the Marketplace</strong> ( MKT_INSTALL_FAILED_1M )</p>
 <p class="desc">The number of failed installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab.</p>
-<p class="desc"><span class="label label-info">TODO: Use marketplace's REST API for querying.</span></p>
 </li>
                 <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
 <p class="desc">The number of successful installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab.</p>
-<p class="desc"><span class="label label-info">TODO: Use marketplace's REST API for querying.</span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives. </p>
@@ -222,12 +211,10 @@
                 <li class="list-group-item"><p id="PUBLIC_API"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public API</strong> ( PUBLIC_API )</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
-<p class="desc"><span class="label label-primary">TODO: Add the metric from sonar.</span></p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API_DOC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
-<p class="desc"><span class="label label-primary">TODO: Add the metric from sonar.</span></p>
 </li>
                 <li class="list-group-item"><p id="PUB_CONF_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
 <p class="desc">The number of papers published in a recognised conference.</p>
@@ -310,21 +297,17 @@
                 <li class="list-group-item"><p id="TST_COV_BRANCHES"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Percentage of branches covered by tests</strong> ( TST_COV_BRANCHES )</p>
 <p class="desc">The percentage of branches that is exercised by the tests.</p>
 <p class="desc">On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                 <li class="list-group-item"><p id="TST_COV_LINES"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Percentage of lines of code covered by tests</strong> ( TST_COV_LINES )</p>
 <p class="desc">The percentage of source lines of code that is exercised by the tests.</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                 <li class="list-group-item"><p id="TST_SUCCESS_LAST"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Test success density</strong> ( TST_SUCCESS_LAST )</p>
 <p class="desc">The percentage of failed tests during the last execution of the test plan.</p>
 <p class="desc">Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                 <li class="list-group-item"><p id="TST_VOL_IDX"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of tests relative to the code size</strong> ( TST_VOL_IDX )</p>
 <p class="desc">The total number of test cases for the product, divided by the number of thousands of SLOC.</p>
 <p class="desc">Metric is computed from SonarQube's metrics tests and ncloc ).</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                 <li class="list-group-item"><p id="VG"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average Cyclomatic Complexity</strong> ( VG )</p>
 <p class="desc">The average number of execution paths found in functions.</p>
@@ -431,7 +414,6 @@
 </li>
                       <li class="list-group-item"><p id="LIC_IDENT"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>License identification</strong> ( LIC_IDENT )</p>
 <p class="desc">Is there a list of the different licences used in the product?</p>
-<p class="desc"><span class="label label-info">TODO: Run nimca to get information about licences. Check also cosaq from Eclipse.</span></p>
 </li>
                       <li class="list-group-item"><p id="PLAN_MILESTONES_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL )</p>
 <p class="desc">The number of milestones since the last official release.</p>
@@ -533,22 +515,18 @@
                     <ul class="list-group">
                       <li class="list-group-item"><p id="ATTRS"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of attributes</strong> ( ATTRS )</p>
 <p class="desc">Total number of attributes defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                       <li class="list-group-item"><p id="ATTRS_PUBLIC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
 <p class="desc">Average number of attributes defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                       <li class="list-group-item"><p id="CLASSES"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of classes</strong> ( CLASSES )</p>
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations. The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                       <li class="list-group-item"><p id="CLONE_IDX"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Cloning density</strong> ( CLONE_IDX )</p>
 <p class="desc">The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for duplications: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href="http://docs.codehaus.org/display/SONAR/Duplications">http://docs.codehaus.org/display/SONAR/Duplications</a>.</p>
-<p class="desc"><span class="label label-primary">TODO: Map this to the SonarQube metric.</span></p>
 </li>
                       <li class="list-group-item"><p id="COMR"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Comment rate</strong> ( COMR )</p>
 <p class="desc">The ratio of source lines of code on the number of comment lines of code. Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
@@ -575,16 +553,13 @@
 <p class="desc">The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">See also SonarQube's page on the depth in tree: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a></p>
-<p class="desc"><span class="label label-primary">TODO: Add the Depth in Tree metric from SonarQube.</span></p>
 </li>
                       <li class="list-group-item"><p id="METHS"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of methods</strong> ( METHS )</p>
 <p class="desc">Total number of methods defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operators</a> (TOPT) considered at the class level.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                       <li class="list-group-item"><p id="METHS_PUBLIC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
 <p class="desc">Average number of methods defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.</p>
-<p class="desc"><span class="label label-primary">TODO: Make the function relative: divide by number of classes.</span></p>
 </li>
                       <li class="list-group-item"><p id="NEST"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Maximum depth of nesting</strong> ( NEST )</p>
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
@@ -607,16 +582,13 @@
                       <li class="list-group-item"><p id="TST_COV_BRANCHES"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Percentage of branches covered by tests</strong> ( TST_COV_BRANCHES )</p>
 <p class="desc">The percentage of branches that is exercised by the tests.</p>
 <p class="desc">On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                       <li class="list-group-item"><p id="TST_COV_LINES"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Percentage of lines of code covered by tests</strong> ( TST_COV_LINES )</p>
 <p class="desc">The percentage of source lines of code that is exercised by the tests.</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                       <li class="list-group-item"><p id="TST_SUCCESS_LAST"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Test success density</strong> ( TST_SUCCESS_LAST )</p>
 <p class="desc">The percentage of failed tests during the last execution of the test plan.</p>
 <p class="desc">Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                       <li class="list-group-item"><p id="VG"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average Cyclomatic Complexity</strong> ( VG )</p>
 <p class="desc">The average number of execution paths found in functions.</p>
@@ -638,25 +610,20 @@
 </li>
                       <li class="list-group-item"><p id="MKT_FAV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
 <p class="desc">The number of favourites on the Eclipse Marketplace.</p>
-<p class="desc"><span class="label label-info">TODO: Use marketplace's REST API for querying.</span></p>
 </li>
                       <li class="list-group-item"><p id="MKT_INSTALL_FAILED_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of failed install on the Marketplace</strong> ( MKT_INSTALL_FAILED_1M )</p>
 <p class="desc">The number of failed installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab.</p>
-<p class="desc"><span class="label label-info">TODO: Use marketplace's REST API for querying.</span></p>
 </li>
                       <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
 <p class="desc">The number of successful installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab.</p>
-<p class="desc"><span class="label label-info">TODO: Use marketplace's REST API for querying.</span></p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public API</strong> ( PUBLIC_API )</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
-<p class="desc"><span class="label label-primary">TODO: Add the metric from sonar.</span></p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API_DOC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
-<p class="desc"><span class="label label-primary">TODO: Add the metric from sonar.</span></p>
 </li>
                       <li class="list-group-item"><p id="PUB_CONF_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
 <p class="desc">The number of papers published in a recognised conference.</p>
@@ -664,7 +631,6 @@
                       <li class="list-group-item"><p id="TST_VOL_IDX"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of tests relative to the code size</strong> ( TST_VOL_IDX )</p>
 <p class="desc">The total number of test cases for the product, divided by the number of thousands of SLOC.</p>
 <p class="desc">Metric is computed from SonarQube's metrics tests and ncloc ).</p>
-<p class="desc"><span class="label label-info">TODO: Find the corresponding metric in SonarQube.</span></p>
 </li>
                     </ul>
                   </div>  
