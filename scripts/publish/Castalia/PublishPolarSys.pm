@@ -26,6 +26,8 @@ my %flat_attributes;
 my %flat_rules;
 my %flat_refs;
 
+my %project_errors;
+
 my %metrics_ds;
 
 sub new($$$) {
@@ -57,6 +59,7 @@ sub generate_project($) {
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
+                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
@@ -126,6 +129,68 @@ sub generate_project($) {
     }
     
     $html_ret .= '
+                  <div role="tabpanel" class="tab-pane" id="attrs">';
+    
+    # Import attributes file for project
+
+    # We read attributes from file named "<project>_attributes.json"
+    my $json_attrs = "${project_path}/${project_id}_attributes.json";
+
+    if (-e $json_attrs) {
+        print "    - Reading attributes from [$json_attrs]..\n";    
+    
+        my $raw_attrs = &read_json($json_attrs);
+
+	# $html_ret .= '
+        #       <div class="row">
+        #         <div class="col-lg-6">';
+
+	$html_ret .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+	$html_ret .= "<tr><th width=\"50%\">Name</th>" 
+	    . "<th width=\"30%\">Mnemo</th>" 
+	    . "<th width=\"20%\">Value</th></tr>\n";
+	foreach my $a_mnemo (sort keys %{$raw_attrs->{"children"}}) {
+	    my $a_value = $raw_attrs->{"children"}->{$a_mnemo};
+	    if (exists($flat_attributes{$a_mnemo})) {
+		$html_ret .= "<tr><td><a href=\"/documentation/attributes.html#" 
+		    . $a_mnemo . '">' . $flat_attributes{$a_mnemo}{'name'} . "</a></td><td>" ;
+		$html_ret .= "<a href=\"/documentation/attributes.html#" 
+		    . $a_mnemo . '">' . $a_mnemo . "</a></td><td>";
+		$html_ret .= "" . $a_value . "</td></tr>\n";
+	    } else {
+		my $err = "WARN: attribute [" . $a_mnemo . 
+		    "] is not referenced in attributes definition file.\n";
+		push( @{$project_errors{$project_id}}, $err);
+		if ($debug) {
+		    print $err;
+		}
+	    }
+	}
+
+	$html_ret .= "</table>\n";
+
+# 	$html_ret .= '
+#                 </div>
+#                 <div class="col-lg-6">';
+
+# 	$html_ret .= "<p>Here is some more info.</p>\n";
+
+# 	$html_ret .= '
+#                 </div>
+#               </div>
+# ';
+	
+	$html_ret .= "\n";
+ 
+    } else {
+	my $err = "ERR: Cannot find attributes file [$json_attrs] for [$project_id].\n";
+	push( @{$project_errors{$project_id}}, $err);
+        print $err;
+    }
+    
+
+    $html_ret .= '
+                  </div>
                   <div role="tabpanel" class="tab-pane" id="qm">...</div>
                   <div role="tabpanel" class="tab-pane" id="metrics">';
 
@@ -143,8 +208,7 @@ sub generate_project($) {
     if (exists($raw_values->{"name"})) {
         # Our format 
         foreach my $metric (sort keys %{$raw_values->{"children"}}) {
-        $project_values{$metric} 
-                = $raw_values->{"children"}->{$metric};
+        $project_values{$metric} = $raw_values->{"children"}->{$metric};
         }
     } else {
         print "WARN Deprecated format for metrics values file [$file]. Reading anyway.\n" if ($debug);
@@ -236,11 +300,71 @@ sub generate_all_projects($) {
 
 # Generate all documentation.
 
-# Generate page for quality model.
+# Generate page for quality model attributes.
 # Params: 
-sub generate_doc_qm() {
+sub generate_doc_attributes() {
     my $class = shift;
 
+    my $file_attrs = shift;
+    
+    ## Read attributes file
+
+    # Open attributes file and read.
+    print "  * Reading attributes from file [$file_attrs]...\n";
+    
+    my $raw_attrs = &read_json($file_attrs);
+    
+    my $attrs_name = $raw_attrs->{"name"};
+    my $attrs_version = $raw_attrs->{"version"};
+    print "      Ruleset: [", $attrs_name, "],";
+    print " version [", $attrs_version, "],";
+    
+    my $vol_attrs;
+    foreach my $attr (@{$raw_attrs->{"children"}}) {
+	$flat_attributes{$attr->{"mnemo"}} = $attr;
+	$vol_attrs++;
+    }
+    
+    print " [$vol_attrs] attributes found.\n";
+    
+    my $html_ret = '
+        <div id="page-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Definition of Attributes</h2>
+              <p>Attributes of quality represent our measurement goals for the given context. The first step when defining attributes is to gather quality requirements, in this case both for the Eclipse foundation and the PolarSys working group. These have been summarised <a href="https://polarsys.org/wiki/EclipseQualityRequirements">on a dedicated page of the wiki</a>. We relied on different standards and norms to formalise them: ISO 9126 and 250xx for the product, CMMi for the process, and open-source quality models for the community. </p><br />
+        
+';
+    
+    $html_ret .= '
+              <ul class="list-group">';
+
+    foreach my $attr (sort keys %flat_attributes) {
+        $html_ret .= '
+                <li class="list-group-item">';
+        my $attr_name = $flat_attributes{$attr}{"name"};
+        my $attr_desc = $flat_attributes{$attr}{"desc"};
+
+        $html_ret .= "<p id=\"$attr\"><strong>$attr_name</strong> ( $attr )</p>\n";
+        foreach my $desc (@{$attr_desc}) {
+            $html_ret .= "<p class=\"desc\">$desc</p>\n";
+        }
+        $html_ret .= '
+                </li>';
+    
+    }
+
+    $html_ret .= '
+              </ul>';
+        
+    $html_ret .= '
+            </div>
+          </div>
+        </div>';
+
+
+    return $html_ret;
+    
 }
 
 

@@ -9,10 +9,7 @@ use Data::Dumper;
 use File::Copy::Recursive qw(rcopy);
 use JSON qw( decode_json encode_json );
  
-use Castalia::PublishPolarSys qw(
-      generate_all_docs 
-      generate_doc_metrics
-      generate_all_projects);
+use Castalia::PublishPolarSys;
  
 use Castalia::PublishStatic qw( build_page read_json);
 
@@ -108,10 +105,17 @@ if (not -e $dir_src_doc) {
     mkdir $dir_src_doc or die "Cannot create folder $dir_src_doc.\n";
 }
 
+print " * Generating attributes doc from [$file_attributes] in [$dir_src_doc].\n";
+my $doc_attrs = $publish_ps->generate_doc_attributes($file_attributes);
+my $filename = $dir_src_doc . '/attributes.inc';
+open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
+print $fh $doc_attrs;
+close $fh;
+
 print " * Generating metrics doc from [$file_metrics] in [$dir_src_doc].\n";
 my $doc_metrics = $publish_ps->generate_doc_metrics($file_metrics);
-my $filename = $dir_src_doc . '/metrics.inc';
-open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
+$filename = $dir_src_doc . '/metrics.inc';
+open($fh, '>', $filename) or die "Could not open file '$filename' $!";
 print $fh $doc_metrics;
 close $fh;
 

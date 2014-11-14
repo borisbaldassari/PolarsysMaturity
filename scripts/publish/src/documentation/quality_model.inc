@@ -1,99 +1,19 @@
-<!DOCTYPE html>
 
-<!-- Displays the structure of a quality model, itself provided by a json -->
-<!-- file on the same server (/data/). -->
-<!--  -->
-<!-- Licensing: Eclipse Public License - v 1.0 -->
-<!-- http://www.eclipse.org/org/documents/epl-v10.html -->
-<head>
 
-<meta charset="utf-8">
-<style>
-
-body {
-  margin-top: 20px;
-  margin-bottom: 200px;
-  
-  background-color: #ebeef1;
-}
-
-div#tree {
-  background-image: url("background.png");
-  background-repeat: repeat-y;
-
-}
-
-.node {
-  cursor: pointer;
-  margin: 0px;
-}
-
-.node circle {
-  fill: #fff;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
-
-.node text {
-  font: 10px sans-serif;
-  background-color: #ffffff;
-}
-
-.link {
-  fill: none;
-  stroke: #717171;/* #ccc; */
-  stroke-width: 1.5px;
-}
-
-div#details-box {
-  width: 600px;
-  margin: 10px 40px 10px 40px;
-  background-color: white;
-  opacity: 0.8;
-
-  border-style: solid;
-  border-width: 1px;
-  border-color: steelblue;
-
-  padding: 20px;
-  float: right;
-  clear: right;
-  position: fixed;
-  bottom: 50px;
-  right: 5px;
-}
-
-.title {
-  font-weight: bold;
-  font-size: 120%;
-  margin: 10px;
-}
-
-.details {
-  color: black;
-  margin: 10px;
-  font-weight: normal;
-}
-
-.details-title {
-  color: black;
-  font-weight: bold;
-  margin: 10px;
-}
-
-</style>
-</head>
-
-<body>
-
-<div id="log" style="display: none"></div>
-
+        <div id="page-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+            
+              <h3>The Quality model</h3>
+            
+            <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>
+            
 <div id="tree"></div>
 
 <script src="/js/d3/d3.min.js"></script>
 <script>
 
-var margin = {top: 20, right: 120, bottom: 20, left: 100},
+var margin = {top: 20, right: 120, bottom: 20, left: 10},
     width = 1100 - margin.right - margin.left,
     height = 1024 - margin.top - margin.bottom;
     
@@ -178,7 +98,7 @@ d3.json("../data/polarsys_qm_full.json", function(error, qm) {
 
 function update(source) {
 
-  var tabs = [0, 100, 250, 450, 680, 750];
+  var tabs = [0, 100, 200, 400, 630, 700];
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse(),
@@ -230,7 +150,7 @@ function update(source) {
       .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
 
   nodeUpdate.select("circle")
-      .attr("r", 7)
+      .attr("r", 5)
       .style("fill", function(d) { return d._children ? "red" : "#fff"; });
 
   nodeUpdate.select("text")
@@ -351,14 +271,13 @@ function click(d) {
       pactive.classed("details", true);
       pactive.text(mynode.active);
 
-      p = mydiv.append('p');
-      ptitle = p.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Question:")
-      psource = ptitle.append('span');
-      psource.classed("details", true);
-      psource.text(mynode.question);
-
+      pdesct = mydiv.append('p');
+      pdesct.classed("details-title", true); 
+      pdesct.text("Question:")
+      var pdesc = mydiv.append('p');
+      pdesc.classed("details", true);
+      pdesc.text(mynode.question);
+      
       pdesct = mydiv.append('p');
       pdesct.classed("details-title", true); 
       pdesct.text("Description:")
@@ -409,5 +328,7 @@ function click(d) {
 
 <div id="details-box"><p>Click on a node to get more details.</p></div>
 
-</body>
-</html>
+            </div>
+          </div>
+        </div>
+        

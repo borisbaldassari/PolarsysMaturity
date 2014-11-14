@@ -7,6 +7,7 @@
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
+                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
@@ -16,6 +17,8 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="home"><br />
+                  <div role="tabpanel" class="tab-pane" id="attrs">
+                  </div>
                   <div role="tabpanel" class="tab-pane" id="qm">...</div>
                   <div role="tabpanel" class="tab-pane" id="metrics"><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>

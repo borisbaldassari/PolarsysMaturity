@@ -10,6 +10,18 @@
 	    "url": "/documentation/",
 	    "children": [
 		{ 
+		    "name": "Quality Model",
+		    "url": "/documentation/quality_model.html" 
+		},
+		{ 
+		    "name": "Attributes",
+		    "url": "/documentation/attributes.html" 
+		},
+		{
+		    "name": "Questions",
+		    "url": "/documentation/questions.html" 
+		},
+		{ 
 		    "name": "Metrics",
 		    "url": "/documentation/metrics.html" 
 		},
@@ -18,12 +30,8 @@
 		    "url": "/documentation/rules.html" 
 		},
 		{
-		    "name": "Questions",
-		    "url": "/documentation/questions.html" 
-		},
-		{
 		    "name": "Actions",
-		    "url": "/documentation/actions.html"
+		    "url": "/"
 		},
 		{
 		    "name": "References",
