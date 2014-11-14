@@ -36,8 +36,7 @@
         "mnemo": "CLASSES",
         "desc": [
             "The number of Java classes, including nested classes, interfaces, enums and annotations. The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.",
-	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.",
-	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
+	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>."
         ],
         "scale": [100,1000,10000,100000],
 	"ds": "SonarQube"
@@ -56,8 +55,7 @@
         "name": "Number of attributes",
         "mnemo": "ATTRS",
         "desc": [
-            "Total number of attributes defined in the class. This can be compared to the <a href=\"/documentation/metrics.html#TOPD\">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).",
-	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
+            "Total number of attributes defined in the class. This can be compared to the <a href=\"/documentation/metrics.html#TOPD\">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods)."
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -66,8 +64,7 @@
         "name": "Number of methods",
         "mnemo": "METHS",
         "desc": [
-            "Total number of methods defined in the class. This can be compared to the <a href=\"/documentation/metrics.html#TOPD\">total number of operators</a> (TOPT) considered at the class level.",
-	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
+            "Total number of methods defined in the class. This can be compared to the <a href=\"/documentation/metrics.html#TOPD\">total number of operators</a> (TOPT) considered at the class level."
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -77,8 +74,7 @@
         "mnemo": "PUBLIC_API",
         "desc": [
             "Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.",
-	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API\">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a>",
-	    "<span class=\"label label-primary\">TODO: Add the metric from sonar.</span>"
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API\">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a>"
         ],
         "scale": [12,10,8,6],
 	"ds": "UNKNOWN"
@@ -88,8 +84,7 @@
         "mnemo": "PUBLIC_API_DOC",
         "desc": [
             "The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.",
-	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. ",
-	    "<span class=\"label label-primary\">TODO: Add the metric from sonar.</span>"
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. "
         ],
         "scale": [12,10,8,6],
 	"ds": "UNKNOWN"
@@ -99,8 +94,7 @@
         "mnemo": "ATTRS_PUBLIC",
         "desc": [
             "Average number of attributes defined in classes with a <code>public</code> modifier.",
-	    "Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.",
-	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
+	    "Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases."
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -110,8 +104,7 @@
         "mnemo": "METHS_PUBLIC",
         "desc": [
             "Average number of methods defined in classes with a <code>public</code> modifier.",
-	    "Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.",
-	    "<span class=\"label label-primary\">TODO: Make the function relative: divide by number of classes.</span>"
+	    "Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one."
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -122,8 +115,7 @@
         "desc": [
 	    "The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>].", 
 	    "A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>].",
-	    "See also SonarQube's page on the depth in tree: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree\">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a>",
-	    "<span class=\"label label-primary\">TODO: Add the Depth in Tree metric from SonarQube.</span>"
+	    "See also SonarQube's page on the depth in tree: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree\">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a>"
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -143,8 +135,7 @@
         "mnemo": "CLONE_IDX",
         "desc": [
             "The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.",
-	    "See also SonarQube's definition for duplications: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href=\"http://docs.codehaus.org/display/SONAR/Duplications\">http://docs.codehaus.org/display/SONAR/Duplications</a>.",
-	    "<span class=\"label label-primary\">TODO: Map this to the SonarQube metric.</span>"
+	    "See also SonarQube's definition for duplications: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href=\"http://docs.codehaus.org/display/SONAR/Duplications\">http://docs.codehaus.org/display/SONAR/Duplications</a>."
         ],
         "scale": [10,20,30,50],
 	"ds": "SonarQube"
@@ -399,8 +390,7 @@
         "name": "Percentage of lines of code covered by tests",
         "mnemo": "TST_COV_LINES",
         "desc": [
-            "The percentage of source lines of code that is exercised by the tests.",
-	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
+            "The percentage of source lines of code that is exercised by the tests."
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -410,8 +400,7 @@
         "mnemo": "TST_COV_BRANCHES",
         "desc": [
             "The percentage of branches that is exercised by the tests.",
-            "On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?",
-	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
+            "On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?"
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -421,8 +410,7 @@
         "mnemo": "TST_VOL_IDX",
         "desc": [
             "The total number of test cases for the product, divided by the number of thousands of SLOC.",
-            "Metric is computed from SonarQube's metrics tests and ncloc ).",
-	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
+            "Metric is computed from SonarQube's metrics tests and ncloc )."
         ],
         "scale": [12,10,8,6],
 	"ds": "UNKNOWN"
@@ -432,8 +420,7 @@
         "mnemo": "TST_SUCCESS_LAST",
         "desc": [
             "The percentage of failed tests during the last execution of the test plan.",
-            "Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.",
-	    "<span class=\"label label-info\">TODO: Find the corresponding metric in SonarQube.</span>"
+            "Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception."
         ],
         "scale": [12,10,8,6],
 	"ds": "SonarQube"
@@ -652,8 +639,7 @@
         "name": "License identification",
         "mnemo": "LIC_IDENT",
         "desc": [
-            "Is there a list of the different licences used in the product?",
-	    "<span class=\"label label-info\">TODO: Run nimca to get information about licences. Check also cosaq from Eclipse.</span>"
+            "Is there a list of the different licences used in the product?"
         ],
         "scale": [12,10,8,6],
 	"ds": "PMI"
@@ -726,8 +712,7 @@
         "name": "Number of favourites on the Marketplace",
         "mnemo": "MKT_FAV",
         "desc": [
-            "The number of favourites on the Eclipse Marketplace.",
-	    "<span class=\"label label-info\">TODO: Use marketplace's REST API for querying.</span>"
+            "The number of favourites on the Eclipse Marketplace."
         ],
         "scale": [12,10,8,6],
 	"ds": "UNKNOWN"
@@ -736,8 +721,7 @@
         "name": "Number of successfull installs on the Marketplace",
         "mnemo": "MKT_INSTALL_SUCCESS_1M",
         "desc": [
-            "The number of successful installs as reported on the Marketplace. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab.",
-	    "<span class=\"label label-info\">TODO: Use marketplace's REST API for querying.</span>"
+            "The number of successful installs as reported on the Marketplace. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab."
         ],
         "scale": [12,10,8,6],
 	"ds": "UNKNOWN"
@@ -746,8 +730,7 @@
         "name": "Number of failed install on the Marketplace",
         "mnemo": "MKT_INSTALL_FAILED_1M",
         "desc": [
-            "The number of failed installs as reported on the Marketplace. Here is <a href=\"http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv\">an example of log page</a>, errors tab.",
-	    "<span class=\"label label-info\">TODO: Use marketplace's REST API for querying.</span>"
+            "The number of failed installs as reported on the Marketplace. Here is <a href=\"http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv\">an example of log page</a>, errors tab."
         ],
         "scale": [12,10,8,6],
 	"ds": "UNKNOWN"

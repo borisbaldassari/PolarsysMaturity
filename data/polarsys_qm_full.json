@@ -8,7 +8,7 @@
         "active": "true",
         "children": [
           {
-            "mnemo": "QM_COMMUNITY",
+            "mnemo": "QM_ECOSYSTEM",
             "active": "true",
             "type": "attribute",
             "children": [
@@ -583,7 +583,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "FU_CLONE",
+                        "mnemo": "CLONE_IDX",
                         "type": "metric",
                         "active": "true"
                       }
@@ -717,7 +717,7 @@
                       }, 
                       {
                         "mnemo": "METHS_PUBLIC",
-                        "type": "false",
+                        "type": "metric",
                         "active": "false"
                       }
                     ]

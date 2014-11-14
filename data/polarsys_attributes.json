@@ -99,42 +99,42 @@
       },
       {
         "name": "Planning Management",
-        "mnemo": "QM_IP",
+        "mnemo": "QM_PLAN",
         "desc" : [
             "Is the project behaviour predicable? Are outputs delivered on planned time and quality?"
         ]
       },
       {
         "name": "Test Management",
-        "mnemo": "QM_IP",
+        "mnemo": "QM_TST",
         "desc" : [
             "Is the product thoroughly tested? How many tests are there, what is the code coverage?"
         ]
       },
       {
         "name": "Analysability",
-        "mnemo": "QM_IP",
+        "mnemo": "QM_ANA",
         "desc" : [
             "Degree of effectiveness and efficiency with which it is possible to assess the impact on a product or system of an intended change to one or more of its parts, or to diagnose a product for deficiencies or causes of failures, or to identify parts to be modified. (ISO/IEC 25010)"
         ]
       },
       {
         "name": "Changeability",
-        "mnemo": "QM_IP",
+        "mnemo": "QM_CHA",
         "desc" : [
             "Degree to which a product or system can be effectively and efficiently modified without introducing defects or degrading existing product quality. (ISO/IEC 25010)"
         ]
       },
       {
         "name": "Reliability",
-        "mnemo": "QM_IP",
+        "mnemo": "QM_REL",
         "desc" : [
             "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time. (ISO/IEC 25010)"
         ]
       },
       {
         "name": "Reusability",
-        "mnemo": "QM_REUSABILITY",
+        "mnemo": "QM_REU",
         "desc" : [
             "Degree to which an asset can be used in more than one system, or in building other assets. (ISO/IEC 25010)"
         ]
