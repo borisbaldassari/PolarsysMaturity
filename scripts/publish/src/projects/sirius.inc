@@ -6,9 +6,10 @@
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
+                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
+                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
-                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
+                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Atrributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
@@ -18,7 +19,12 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />
+                  <div role="tabpanel" class="tab-pane active" id="home"><br />...<h4>Project rating</h4><h4>Main caracteristics</h4><h4>Errors during the analysis</h4>
+                    <ul class="list-group">
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//sirius/sirius_attributes.json] for [sirius].</li>
+                    </ul>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="pmi"><br />
                     <dl class="dl-horizontal">
                       <dt>Description</dt>
                       <dd><p>Sirius enables the specification of a modeling workbench in terms of <strong>graphical</strong>, <strong>table</strong> or <strong>tree</strong> editors with validation rules and actions using declarative descriptions.</p>
@@ -40,11 +46,11 @@
                     </dl>
                   </div>
                   <div role="tabpanel" class="tab-pane" id="qm">...</div>
-                  <div role="tabpanel" class="tab-pane" id="attrs">
+                  <div role="tabpanel" class="tab-pane" id="attrs"><br />
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="questions">
+                  <div role="tabpanel" class="tab-pane" id="questions"><br />
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="metrics"><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/metrics.html#DL_REPO_1M">Number of downloads on the web site</a></td><td><a href="/documentation/metrics.html#DL_REPO_1M">DL_REPO_1M</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#DL_UPDATE_SITE_1M">Number of downloads on update site</a></td><td><a href="/documentation/metrics.html#DL_UPDATE_SITE_1M">DL_UPDATE_SITE_1M</a></td><td>0</td></tr>
@@ -84,7 +90,7 @@
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>9</td></tr>
 </table>
 </div>
-                  <div role="tabpanel" class="tab-pane" id="practices"><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane" id="practices"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="40%">Mnemo</th><th width="20%">NCC</th></tr>
 <tr><td><a href="/documentation/rules.html#UnusedFormalParameter">Unused Formal Parameter</a></td><td><a href="/documentation/rules.html#UnusedFormalParameter">UnusedFormalParameter</a></td><td>174</td></tr>
 <tr><td><a href="/documentation/rules.html#AvoidProtectedFieldInFinalClass">Avoid Protected Field In Final Class</a></td><td><a href="/documentation/rules.html#AvoidProtectedFieldInFinalClass">AvoidProtectedFieldInFinalClass</a></td><td>7</td></tr>
@@ -164,7 +170,7 @@
 </table>
 </div>
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
-                  <div role="tabpanel" class="tab-pane" id="log">
+                  <div role="tabpanel" class="tab-pane" id="log"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//sirius/sirius_attributes.json] for [sirius].</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find questions file [../../samples//sirius/sirius_attributes.json] for [sirius].</li>

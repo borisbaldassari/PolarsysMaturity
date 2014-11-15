@@ -98,7 +98,8 @@
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
+                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
+                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
@@ -110,7 +111,11 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />
+                  <div role="tabpanel" class="tab-pane active" id="home"><br />...<h4>Project rating</h4><h4>Main caracteristics</h4><h4>Errors during the analysis</h4>
+                    <ul class="list-group">
+                    </ul>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="pmi"><br />
                     <dl class="dl-horizontal">
                       <dt>Description</dt>
                       <dd><p>The CDT Project provides a fully functional C and C++ Integrated Development Environment based on the Eclipse platform. Features include: support for project creation and managed build for various toolchains, standard make build, source navigation, various source knowledge tools, such as type hierarchy, call graph, include browser, macro definition browser, code editor with syntax highlighting, folding and hyperlink navigation, source code refactoring and code generation, visual debugging tools, including memory, registers, and disassembly viewers.</p>
@@ -128,7 +133,7 @@
                     </dl>
                   </div>
                   <div role="tabpanel" class="tab-pane" id="qm">...</div>
-                  <div role="tabpanel" class="tab-pane" id="attrs"><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane" id="attrs"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>5</td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>5</td></tr>
@@ -152,7 +157,7 @@
 
 
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="questions"><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane" id="questions"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/questions.html#CODE_CLONE">Code cloning</a></td><td><a href="/documentation/questions.html#CODE_CLONE">CODE_CLONE</a></td><td>1</td></tr>
 <tr><td><a href="/documentation/questions.html#CPX">Code complexity</a></td><td><a href="/documentation/questions.html#CPX">CPX</a></td><td>4</td></tr>
@@ -175,7 +180,7 @@
 
 
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="metrics"><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/metrics.html#COMR">Comment rate</a></td><td><a href="/documentation/metrics.html#COMR">COMR</a></td><td>16.4</td></tr>
 <tr><td><a href="/documentation/metrics.html#DL_REPO_1M">Number of downloads on the web site</a></td><td><a href="/documentation/metrics.html#DL_REPO_1M">DL_REPO_1M</a></td><td>572801</td></tr>
@@ -223,7 +228,7 @@
 <tr><td><a href="/documentation/metrics.html#VG">Average Cyclomatic Complexity</a></td><td><a href="/documentation/metrics.html#VG">VG</a></td><td>225705</td></tr>
 </table>
 </div>
-                  <div role="tabpanel" class="tab-pane" id="practices"><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane" id="practices"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="40%">Mnemo</th><th width="20%">NCC</th></tr>
 <tr><td><a href="/documentation/rules.html#DMI_INVOKING_TOSTRING_ON_ARRAY">USELESS_STRING: Invocation of toString on an array </a></td><td><a href="/documentation/rules.html#DMI_INVOKING_TOSTRING_ON_ARRAY">DMI_INVOKING_TOSTRING_ON_ARRAY</a></td><td>4</td></tr>
 <tr><td><a href="/documentation/rules.html#JLM_JSR166_UTILCONCURRENT_MONITORENTER">JLM: Synchronization performed on util.concurrent instance </a></td><td><a href="/documentation/rules.html#JLM_JSR166_UTILCONCURRENT_MONITORENTER">JLM_JSR166_UTILCONCURRENT_MONITORENTER</a></td><td>2</td></tr>
@@ -345,7 +350,7 @@
 </table>
 </div>
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
-                  <div role="tabpanel" class="tab-pane" id="log">
+                  <div role="tabpanel" class="tab-pane" id="log"><br />
                     <ul class="list-group">
                     </ul>
                   </div>

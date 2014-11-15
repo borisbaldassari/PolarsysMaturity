@@ -50,6 +50,81 @@ sub generate_project($) {
     my @path = File::Spec->splitdir($project_path);
     my $project_id = $path[-1];
 
+
+
+    # Import PMI file
+    my %project_pmi;
+    my $pmi_ok = 0;
+    my $path_pmi = $project_path . "/" . $project_id . "_pmi.json";
+    print "    - Reading PMI file from [$path_pmi].. ";    
+    if ( -f $path_pmi ) {
+        print " Exists, OK.\n";
+	my $json_pmi = &read_json($path_pmi);
+	# Retrieve project information from the array
+	my @projects_pmi = keys( $json_pmi->{"projects"} );
+	my $project = $json_pmi->{"projects"}->{$projects_pmi[0]};
+	$project_pmi{'title'} = $project->{"title"};
+	$project_pmi{'desc'} = $project->{"description"}->[0]->{"safe_value"} || "";
+	$project_pmi{'web'} = $project->{"website_url"}->[0]->{"url"} || "";
+	$project_pmi{'wiki'} = $project->{"wiki_url"}->[0]->{"url"} || "";
+	$project_pmi{'dl'} = $project->{"download_url"}->[0]->{"url"} || "";
+	$project_pmi{'doc'} = $project->{"documentation_url"}->[0]->{"url"} || "";
+	$project_pmi{'gs'} = $project->{"gettingstarted_url"}->[0]->{"url"} || "";
+	$pmi_ok = 1;
+    } else {
+	my $err = "ERR: Cannot find PMI file [$path_pmi] for [$project_id].";
+	push( @{$project_errors{$project_id}}, $err);
+        print "\n$err\n";
+    }
+
+    # Import attributes file for project
+
+    # We read attributes from file named "<project>_attributes.json"
+    my $attrs_ok = 0;
+    my $json_attrs = "${project_path}/${project_id}_attributes.json";
+    my $html_ret_attrs = "";
+    if (-e $json_attrs) {
+        print "    - Reading attributes from [$json_attrs]..\n";    
+    
+        my $raw_attrs = &read_json($json_attrs);
+
+	# $html_ret_attr .= '
+        #       <div class="row">
+        #         <div class="col-lg-6">';
+
+	$html_ret_attrs .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+	$html_ret_attrs .= "<tr><th width=\"50%\">Name</th>" 
+	    . "<th width=\"30%\">Mnemo</th>" 
+	    . "<th width=\"20%\">Value</th></tr>\n";
+	foreach my $a_mnemo (sort keys %{$raw_attrs->{"children"}}) {
+	    my $a_value = $raw_attrs->{"children"}->{$a_mnemo};
+	    if (exists($flat_attributes{$a_mnemo})) {
+		$html_ret_attrs .= "<tr><td><a href=\"/documentation/attributes.html#" 
+		    . $a_mnemo . '">' . $flat_attributes{$a_mnemo}{'name'} . "</a></td><td>" ;
+		$html_ret_attrs .= "<a href=\"/documentation/attributes.html#" 
+		    . $a_mnemo . '">' . $a_mnemo . "</a></td><td>";
+		$html_ret_attrs .= "" . $a_value . "</td></tr>\n";
+	    } else {
+		my $err = "WARN: attribute [" . $a_mnemo . 
+		    "] is not referenced in attributes definition file.\n";
+		push( @{$project_errors{$project_id}}, $err);
+		if ($debug) {
+		    print $err;
+		}
+	    }
+	}
+
+	$html_ret_attrs .= "</table>\n";
+	
+	$html_ret_attrs .= "\n";
+	$attrs_ok = 1;
+    } else {
+	my $err = "ERR: Cannot find attributes file [$json_attrs] for [$project_id].\n";
+	push( @{$project_errors{$project_id}}, $err);
+        print $err;
+    }
+
+
     my $html_ret = '
         <div id="page-wrapper">
           <div class="row">
@@ -58,9 +133,26 @@ sub generate_project($) {
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
-                  <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
-                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
+                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>';
+
+    if ($pmi_ok) {
+	$html_ret .= '
+                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
+    } else { 
+	$html_ret .= '
+                  <li role="presentation" class="disabled"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
+    }
+    $html_ret .= '
+                  <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>';
+
+    if ($attrs_ok) {
+	$html_ret .= '
+                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>';
+    } else { 
+	$html_ret .= '
+                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Atrributes</a></li>';
+    }
+    $html_ret .= '
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
@@ -70,43 +162,47 @@ sub generate_project($) {
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />';
+                  <div role="tabpanel" class="tab-pane active" id="home"><br />...';
 
-    # Import PMI file
-    my $path_pmi = $project_path . "/" . $project_id . "_pmi.json";
-    print "    - Reading PMI file from [$path_pmi].. ";    
-    if ( -f $path_pmi ) {
-        print " Exists, OK.\n";
+    $html_ret .= '<h4>Project rating</h4>';
 
-    my $json_pmi = &read_json($path_pmi);
-    
-    # Retrieve project information from the array
-    my @projects_pmi = keys( $json_pmi->{"projects"} );
-    my $project = $json_pmi->{"projects"}->{$projects_pmi[0]};
-    
-    my $project_title = $project->{"title"};
-    my $project_desc = $project->{"description"}->[0]->{"safe_value"} || "";
-    my $project_web = $project->{"website_url"}->[0]->{"url"} || "";
-    my $project_wiki = $project->{"wiki_url"}->[0]->{"url"} || "";
-    my $project_dl = $project->{"download_url"}->[0]->{"url"} || "";
-    my $project_doc = $project->{"documentation_url"}->[0]->{"url"} || "";
-    my $project_gs = $project->{"gettingstarted_url"}->[0]->{"url"} || "";
+    $html_ret .= '<h4>Main caracteristics</h4>';
+
+    $html_ret .= '<h4>Errors during the analysis</h4>';
+
+    $html_ret .= '
+                    <ul class="list-group">';
+
+    foreach my $logline (@{$project_errors{$project_id}}) {
+	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
+	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
+	    $html_ret .= '
+                      <li class="list-group-item">' . $logline . '</li>';;
+	}
+    }
+
+    $html_ret .= '
+                    </ul>';    
+
+    $html_ret .= '
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="pmi"><br />';
 
     # Generic information
     $html_ret .= '
                     <dl class="dl-horizontal">
                       <dt>Description</dt>
-                      <dd>' . $project_desc . '</dd>
+                      <dd>' . ($project_pmi{'desc'} || "") . '</dd>
                       <dt>Web</dt>
-                      <dd><a href="' . $project_web . '">' . $project_web . '</a></dd>
+                      <dd><a href="' . ($project_pmi{'web'} || "") . '">' . ($project_pmi{'web'} || "") . '</a></dd>
                       <dt>Wiki</dt>
-                      <dd><a href="' . $project_wiki . '">' . $project_wiki . '</a></dd>
+                      <dd><a href="' . ($project_pmi{'wiki'} || "") . '">' . ($project_pmi{'wiki'} || "") . '</a></dd>
                       <dt>Downloads</dt>
-                      <dd><a href="' . $project_dl . '">' . $project_dl . '</a></dd>
+                      <dd><a href="' . ($project_pmi{'dl'} || "") . '">' . ($project_pmi{'dl'} || "") . '</a></dd>
                       <dt>Documentation</dt>
-                      <dd><a href="' . $project_doc . '">' . $project_doc . '</a></dd>
+                      <dd><a href="' . ($project_pmi{'doc'} || "") . '">' . ($project_pmi{'doc'} || "") . '</a></dd>
                       <dt>Getting Started</dt>
-                      <dd><a href="' . $project_gs . '">' . $project_gs . '</a></dd>
+                      <dd><a href="' . ($project_pmi{'gs'} || "") . '">' . ($project_pmi{'gs'} || "") . '</a></dd>
                     </dl>';
 
                 # <div class="panel panel-default">
@@ -125,67 +221,16 @@ sub generate_project($) {
 
     # Milestone
 
-    } else {
-	my $err = "ERR: Cannot find PMI file [$path_pmi] for [$project_id].";
-	push( @{$project_errors{$project_id}}, $err);
-        print "\n$err\n";
-    }
-    
     $html_ret .= '
                   </div>
                   <div role="tabpanel" class="tab-pane" id="qm">...</div>
-                  <div role="tabpanel" class="tab-pane" id="attrs">';
+                  <div role="tabpanel" class="tab-pane" id="attrs"><br />';
     
-    # Import attributes file for project
-
-    # We read attributes from file named "<project>_attributes.json"
-    my $json_attrs = "${project_path}/${project_id}_attributes.json";
-
-    if (-e $json_attrs) {
-        print "    - Reading attributes from [$json_attrs]..\n";    
-    
-        my $raw_attrs = &read_json($json_attrs);
-
-	# $html_ret .= '
-        #       <div class="row">
-        #         <div class="col-lg-6">';
-
-	$html_ret .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-	$html_ret .= "<tr><th width=\"50%\">Name</th>" 
-	    . "<th width=\"30%\">Mnemo</th>" 
-	    . "<th width=\"20%\">Value</th></tr>\n";
-	foreach my $a_mnemo (sort keys %{$raw_attrs->{"children"}}) {
-	    my $a_value = $raw_attrs->{"children"}->{$a_mnemo};
-	    if (exists($flat_attributes{$a_mnemo})) {
-		$html_ret .= "<tr><td><a href=\"/documentation/attributes.html#" 
-		    . $a_mnemo . '">' . $flat_attributes{$a_mnemo}{'name'} . "</a></td><td>" ;
-		$html_ret .= "<a href=\"/documentation/attributes.html#" 
-		    . $a_mnemo . '">' . $a_mnemo . "</a></td><td>";
-		$html_ret .= "" . $a_value . "</td></tr>\n";
-	    } else {
-		my $err = "WARN: attribute [" . $a_mnemo . 
-		    "] is not referenced in attributes definition file.\n";
-		push( @{$project_errors{$project_id}}, $err);
-		if ($debug) {
-		    print $err;
-		}
-	    }
-	}
-
-	$html_ret .= "</table>\n";
-	
-	$html_ret .= "\n";
- 
-    } else {
-	my $err = "ERR: Cannot find attributes file [$json_attrs] for [$project_id].\n";
-	push( @{$project_errors{$project_id}}, $err);
-        print $err;
-    }
-    
+    $html_ret .= $html_ret_attrs;
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="questions">';
+                  <div role="tabpanel" class="tab-pane" id="questions"><br />';
 
     # Import questions file for project
 
@@ -232,7 +277,7 @@ sub generate_project($) {
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="metrics">';
+                  <div role="tabpanel" class="tab-pane" id="metrics"><br />';
 
     # Import Measures file for project
     my %project_values;
@@ -282,7 +327,7 @@ sub generate_project($) {
     $html_ret .= "</table>\n";
  
     $html_ret .= '</div>
-                  <div role="tabpanel" class="tab-pane" id="practices">';
+                  <div role="tabpanel" class="tab-pane" id="practices"><br />';
 
     # Import Rules file for project
 
@@ -325,7 +370,7 @@ sub generate_project($) {
     
     $html_ret .= '</div>
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
-                  <div role="tabpanel" class="tab-pane" id="log">
+                  <div role="tabpanel" class="tab-pane" id="log"><br />
                     <ul class="list-group">';
     foreach my $logline (@{$project_errors{$project_id}}) {
 	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
