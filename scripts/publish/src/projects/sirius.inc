@@ -9,7 +9,7 @@
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
-                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Metrics</a></li>
+                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
@@ -41,6 +41,8 @@
                   </div>
                   <div role="tabpanel" class="tab-pane" id="qm">...</div>
                   <div role="tabpanel" class="tab-pane" id="attrs">
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="questions">
                   </div>
                   <div role="tabpanel" class="tab-pane" id="metrics"><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
@@ -165,6 +167,7 @@
                   <div role="tabpanel" class="tab-pane" id="log">
                     <ul class="list-group">
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//sirius/sirius_attributes.json] for [sirius].</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find questions file [../../samples//sirius/sirius_attributes.json] for [sirius].</li>
                     </ul>
                   </div>
                 </div>

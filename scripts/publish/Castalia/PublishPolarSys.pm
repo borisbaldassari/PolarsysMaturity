@@ -60,7 +60,8 @@ sub generate_project($) {
                 <ul class="nav nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
-                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Metrics</a></li>
+                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
+                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
@@ -84,12 +85,12 @@ sub generate_project($) {
     my $project = $json_pmi->{"projects"}->{$projects_pmi[0]};
     
     my $project_title = $project->{"title"};
-    my $project_desc = $project->{"description"}->[0]->{"safe_value"} || "undefined";
-    my $project_web = $project->{"website_url"}->[0]->{"url"} || "undefined";
-    my $project_wiki = $project->{"wiki_url"}->[0]->{"url"} || "undefined";
-    my $project_dl = $project->{"download_url"}->[0]->{"url"} || "undefined";
-    my $project_doc = $project->{"documentation_url"}->[0]->{"url"} || "undefined";
-    my $project_gs = $project->{"gettingstarted_url"}->[0]->{"url"} || "undefined";
+    my $project_desc = $project->{"description"}->[0]->{"safe_value"} || "";
+    my $project_web = $project->{"website_url"}->[0]->{"url"} || "";
+    my $project_wiki = $project->{"wiki_url"}->[0]->{"url"} || "";
+    my $project_dl = $project->{"download_url"}->[0]->{"url"} || "";
+    my $project_doc = $project->{"documentation_url"}->[0]->{"url"} || "";
+    my $project_gs = $project->{"gettingstarted_url"}->[0]->{"url"} || "";
 
     # Generic information
     $html_ret .= '
@@ -177,6 +178,53 @@ sub generate_project($) {
  
     } else {
 	my $err = "ERR: Cannot find attributes file [$json_attrs] for [$project_id].\n";
+	push( @{$project_errors{$project_id}}, $err);
+        print $err;
+    }
+    
+
+    $html_ret .= '
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="questions">';
+
+    # Import questions file for project
+
+    # We read questions from file named "<project>_questions.json"
+    my $json_questions = "${project_path}/${project_id}_questions.json";
+
+    if (-e $json_questions) {
+        print "    - Reading questions from [$json_questions]..\n";    
+    
+        my $raw_questions = &read_json($json_questions);
+
+	$html_ret .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+	$html_ret .= "<tr><th width=\"50%\">Name</th>" 
+	    . "<th width=\"30%\">Mnemo</th>" 
+	    . "<th width=\"20%\">Value</th></tr>\n";
+	foreach my $q_mnemo (sort keys %{$raw_questions->{"children"}}) {
+	    my $q_value = $raw_questions->{"children"}->{$q_mnemo};
+	    if (exists($flat_questions{$q_mnemo})) {
+		$html_ret .= "<tr><td><a href=\"/documentation/questions.html#" 
+		    . $q_mnemo . '">' . $flat_questions{$q_mnemo}{'name'} . "</a></td><td>" ;
+		$html_ret .= "<a href=\"/documentation/questions.html#" 
+		    . $q_mnemo . '">' . $q_mnemo . "</a></td><td>";
+		$html_ret .= "" . $q_value . "</td></tr>\n";
+	    } else {
+		my $err = "WARN: question [" . $q_mnemo . 
+		    "] is not referenced in questions definition file.\n";
+		push( @{$project_errors{$project_id}}, $err);
+		if ($debug) {
+		    print $err;
+		}
+	    }
+	}
+
+	$html_ret .= "</table>\n";
+	
+	$html_ret .= "\n";
+ 
+    } else {
+	my $err = "ERR: Cannot find questions file [$json_attrs] for [$project_id].\n";
 	push( @{$project_errors{$project_id}}, $err);
         print $err;
     }
