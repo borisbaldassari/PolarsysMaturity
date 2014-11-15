@@ -4,7 +4,7 @@
     "version": "HEAD-20141013",
     "children": {
       "QM_QUALITY": "4",
-      "QM_COMMUNITY": "3",
+      "QM_ECOSYSTEM": "3",
       "QM_ACTIVITY": "5",
       "QM_DIVERSITY": "4",
       "QM_RESPONSIVENESS": "3",

@@ -42,6 +42,7 @@
 <tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>5</td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>4</td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>4</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>3</td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_FEEDBACK">User feedback</a></td><td><a href="/documentation/attributes.html#QM_FEEDBACK">QM_FEEDBACK</a></td><td>4</td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>4</td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a></td><td><a href="/documentation/attributes.html#QM_PLAN">QM_PLAN</a></td><td>3</td></tr>
@@ -254,8 +255,6 @@
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
                   <div role="tabpanel" class="tab-pane" id="log">
                     <ul class="list-group">
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span> WARN: attribute [QM_COMMUNITY] is not referenced in attributes definition file.
-</li>
                     </ul>
                   </div>
                 </div>
