@@ -59,11 +59,12 @@ sub generate_project($) {
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
-                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
+                  <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -105,8 +106,7 @@ sub generate_project($) {
                       <dd><a href="' . $project_doc . '">' . $project_doc . '</a></dd>
                       <dt>Getting Started</dt>
                       <dd><a href="' . $project_gs . '">' . $project_gs . '</a></dd>
-                    </dl>
-                  </div>';
+                    </dl>';
 
                 # <div class="panel panel-default">
                 #   <!-- Default panel contents -->
@@ -125,10 +125,14 @@ sub generate_project($) {
     # Milestone
 
     } else {
-        print "\nERR: Cannot find PMI file [$path_pmi] for [$project_id].\n";
+	my $err = "ERR: Cannot find PMI file [$path_pmi] for [$project_id].";
+	push( @{$project_errors{$project_id}}, $err);
+        print "\n$err\n";
     }
     
     $html_ret .= '
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="qm">...</div>
                   <div role="tabpanel" class="tab-pane" id="attrs">';
     
     # Import attributes file for project
@@ -168,17 +172,6 @@ sub generate_project($) {
 	}
 
 	$html_ret .= "</table>\n";
-
-# 	$html_ret .= '
-#                 </div>
-#                 <div class="col-lg-6">';
-
-# 	$html_ret .= "<p>Here is some more info.</p>\n";
-
-# 	$html_ret .= '
-#                 </div>
-#               </div>
-# ';
 	
 	$html_ret .= "\n";
  
@@ -191,7 +184,6 @@ sub generate_project($) {
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="qm">...</div>
                   <div role="tabpanel" class="tab-pane" id="metrics">';
 
     # Import Measures file for project
@@ -268,20 +260,39 @@ sub generate_project($) {
 		    . $v_mnemo . '">' . $v_mnemo . "</a></td>";
 		$html_ret .= "<td>" . $rule->{'value'} . "</td></tr>\n";
 	    } else {
-		if ($debug) {
-		    print "WARN: metric [" . $rule->{'name'} . "] is not referenced in metrics definition file.\n" if ($debug);
-		}
+		my $err = "WARN: metric [" . $rule->{'name'} . 
+		    "] is not referenced in metrics definition file.";
+		push( @{$project_errors{$project_id}}, $err);
+		print "$err\n" if ($debug);
 	    }
 	}
 
 	$html_ret .= "</table>\n";
  
     } else {
-        print "ERR: Cannot find violations file [$json_violations] for [$project_id].\n";
+	my $err = "ERR: Cannot find violations file [$json_violations] for [$project_id].";
+	push( @{$project_errors{$project_id}}, $err);
+        print "$err\n";
     }
     
     $html_ret .= '</div>
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
+                  <div role="tabpanel" class="tab-pane" id="log">
+                    <ul class="list-group">';
+    foreach my $logline (@{$project_errors{$project_id}}) {
+	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
+	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
+	}
+	if ($logline =~ m!^WARN\s*:?!) { 
+	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $logline;
+	}
+	$html_ret .= '
+                      <li class="list-group-item">' . $logline . '</li>';;
+    }
+
+    $html_ret .= '
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -421,7 +432,9 @@ sub generate_doc_metrics($) {
         my $metric_mnemo = $tmp_metric->{"mnemo"};
         my $metric_ds = $tmp_metric->{"ds"};
     if (exists $flat_metrics{$metric_mnemo}) {
-        print "WARN: Metric $metric_mnemo already exists!.\n",
+	my $err = "WARN: Metric [$metric_mnemo] already exists!.";
+	push( @{$project_errors{'MAIN'}}, $err);
+	print "$err\n",
     } else {
         $flat_metrics{$metric_mnemo} = $tmp_metric;
     }

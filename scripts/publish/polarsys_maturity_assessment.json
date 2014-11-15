@@ -56,6 +56,14 @@
 		    "url": "/projects/example.html" 
 		},
 		{
+		    "name": "Gendoc",
+		    "url": "/projects/gendoc.html" 
+		},
+		{
+		    "name": "Kitalpha",
+		    "url": "/projects/kitalpha.html" 
+		},
+		{
 		    "name": "Papyrus",
 		    "url": "/projects/papyrus.html" 
 		},

@@ -7,11 +7,13 @@
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">PMI</a></li>
-                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
+                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
+                  <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -33,6 +35,7 @@
                       <dd><a href="http://dev.eclipse.org/viewcvs/indextools.cgi/%7Echeckout%7E/cdt-home/user/Tutorials.html">http://dev.eclipse.org/viewcvs/indextools.cgi/%7Echeckout%7E/cdt-home/user/Tutorials.html</a></dd>
                     </dl>
                   </div>
+                  <div role="tabpanel" class="tab-pane" id="qm">...</div>
                   <div role="tabpanel" class="tab-pane" id="attrs"><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>5</td></tr>
@@ -56,7 +59,6 @@
 
 
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="qm">...</div>
                   <div role="tabpanel" class="tab-pane" id="metrics"><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/metrics.html#COMR">Comment rate</a></td><td><a href="/documentation/metrics.html#COMR">COMR</a></td><td>16.4</td></tr>
@@ -228,6 +230,12 @@
 </table>
 </div>
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
+                  <div role="tabpanel" class="tab-pane" id="log">
+                    <ul class="list-group">
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span> WARN: attribute [QM_COMMUNITY] is not referenced in attributes definition file.
+</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
