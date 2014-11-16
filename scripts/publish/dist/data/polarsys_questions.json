@@ -48,28 +48,29 @@
         "name": "Access points",
         "mnemo": "ALL_DATA",
         "desc": [
-            "The amount of attributes and methods on the class, whatever their visibility is."
+            "The average amount of attributes and methods defined on a class, whatever their visibility is."
         ]
       },
       {
         "name": "Public access points",
         "mnemo": "PUBLIC_DATA",
         "desc": [
-            "Total number of public classes, interfaces, methods, constructors, annotations and attributes."
+            "Average number of public classes, interfaces, methods, constructors, annotations and attributes."
         ]
       },
       {
         "name": "Code cloning",
         "mnemo": "CODE_CLONE",
         "desc": [
-            "The amount of duplicated lines in the code."
+            "The amount of duplicated lines in the code.",
+            "Duplication makes changes to the code difficult, because the maintainer has to look for all instances of the modified code to propagate a fix."
         ]
       },
       {
         "name": "Licensing",
         "mnemo": "LIC",
         "desc": [
-            "Are licensing issues considered?"
+            "Are licensing issues considered? Is there a list of licences used in the product?"
         ]
       },
       {
@@ -83,15 +84,17 @@
         "name": "SCM Documentation",
         "mnemo": "SCM_DOCS",
         "desc": [
-            "Is there some documentation about the SCM process, rules and conventions?"
-        ]
+            "Measures the availability of information regarding SCM usage, conventions, access."
+        ],
+        "question": "Is there some documentation about the SCM process, rules and conventions? How easy is it for a newcomer to use the configuration management tool?"
       },
       {
         "name": "ITS information access",
         "mnemo": "PUB_ITS_INFO",
         "desc": [
             "Measures the availability of information regarding ITS usage, conventions, access."
-        ]
+        ],
+        "question": "Is there some documentation about the ITS process, rules and conventions? How easy is it for a newcomer to use the issue tracking system?"
       },
       {
         "name": "ITS usage",

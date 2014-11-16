@@ -9,12 +9,13 @@
               <ul class="list-group">
                 <li class="list-group-item"><p id="ALL_DATA"><strong>Access points</strong> ( ALL_DATA )</p>
 <p class="desc"></a>
-<p class="desc">The amount of attributes and methods on the class, whatever their visibility is.</p>
+<p class="desc">The average amount of attributes and methods defined on a class, whatever their visibility is.</p>
 
                 </li>
                 <li class="list-group-item"><p id="CODE_CLONE"><strong>Code cloning</strong> ( CODE_CLONE )</p>
 <p class="desc"></a>
 <p class="desc">The amount of duplicated lines in the code.</p>
+<p class="desc">Duplication makes changes to the code difficult, because the maintainer has to look for all instances of the modified code to propagate a fix.</p>
 
                 </li>
                 <li class="list-group-item"><p id="CODE_DOC"><strong>Code documentation</strong> ( CODE_DOC )</p>
@@ -74,7 +75,7 @@
                 </li>
                 <li class="list-group-item"><p id="LIC"><strong>Licensing</strong> ( LIC )</p>
 <p class="desc"></a>
-<p class="desc">Are licensing issues considered?</p>
+<p class="desc">Are licensing issues considered? Is there a list of licences used in the product?</p>
 
                 </li>
                 <li class="list-group-item"><p id="MKT_FEEDBACK"><strong>Marketplace feedback</strong> ( MKT_FEEDBACK )</p>
@@ -155,7 +156,7 @@
                 </li>
                 <li class="list-group-item"><p id="PUBLIC_DATA"><strong>Public access points</strong> ( PUBLIC_DATA )</p>
 <p class="desc"></a>
-<p class="desc">Total number of public classes, interfaces, methods, constructors, annotations and attributes.</p>
+<p class="desc">Average number of public classes, interfaces, methods, constructors, annotations and attributes.</p>
 
                 </li>
                 <li class="list-group-item"><p id="PUB_CONF"><strong>Visibility in research</strong> ( PUB_CONF )</p>
@@ -164,7 +165,7 @@
 
                 </li>
                 <li class="list-group-item"><p id="PUB_ITS_INFO"><strong>ITS information access</strong> ( PUB_ITS_INFO )</p>
-<p class="desc"></a>
+<p class="desc">Is there some documentation about the ITS process, rules and conventions? How easy is it for a newcomer to use the issue tracking system?</a>
 <p class="desc">Measures the availability of information regarding ITS usage, conventions, access.</p>
 
                 </li>
@@ -184,8 +185,8 @@
 
                 </li>
                 <li class="list-group-item"><p id="SCM_DOCS"><strong>SCM Documentation</strong> ( SCM_DOCS )</p>
-<p class="desc"></a>
-<p class="desc">Is there some documentation about the SCM process, rules and conventions?</p>
+<p class="desc">Is there some documentation about the SCM process, rules and conventions? How easy is it for a newcomer to use the configuration management tool?</a>
+<p class="desc">Measures the availability of information regarding SCM usage, conventions, access.</p>
 
                 </li>
                 <li class="list-group-item"><p id="SCM_STABILITY"><strong>SCM Stability</strong> ( SCM_STABILITY )</p>

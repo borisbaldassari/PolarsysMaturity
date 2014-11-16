@@ -20,14 +20,14 @@
         "name": "Process",
         "mnemo": "QM_PROCESS",
         "desc" : [
-            "The complexity of the data flow structure in the code functions."
+            "The maturity of the process: is it predictable, are good practices enforced, etc."
         ]
       },
       {
         "name": "Product",
         "mnemo": "QM_PRODUCT",
         "desc" : [
-            "The complexity of the object-oriented architecture and structure. Composed of MDIT (maximum depth of inheritance tree)."
+            "The software product produced by the project, i.e. the source code, binaries, tests."
         ]
       },
       {
