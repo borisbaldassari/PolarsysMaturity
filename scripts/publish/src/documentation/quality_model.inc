@@ -131,7 +131,6 @@ function update(source) {
       .text(function(d) { 
         var keys = Object.keys(d);
         if (d.type == 'attribute' && myattrs.hasOwnProperty(d.mnemo)) { 
-//          alert("Hey " + d.mnemo + " is " + d.type + ": " + myattrs[d.mnemo]["name"]);
           return myattrs[d.mnemo]["name"]; 
         } else if (d.type == 'concept' && myconcepts.hasOwnProperty(d.mnemo)) {
           return myconcepts[d.mnemo]["name"]; 
@@ -247,7 +246,7 @@ function click(d) {
       for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
           var pdesc = mydiv.append('p');
           pdesc.classed("details", true);
-          pdesc.text(mynode.description[desc_idx]);
+          pdesc.html(mynode.description[desc_idx]);
       }
     } else if (d.type == "concept") {
       mynode = d;
@@ -284,7 +283,7 @@ function click(d) {
       for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
           var pdesc = mydiv.append('p');
           pdesc.classed("details", true);
-          pdesc.text(mynode.description[desc_idx]);
+          pdesc.html(mynode.description[desc_idx]);
       }
     } else if (d.type == "attribute") {
       mynode = d;
