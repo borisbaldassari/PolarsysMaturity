@@ -388,7 +388,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "PLAN_MILESTONES_VOL",
+                        "mnemo": "PLAN_MILESTONES_VOL_1Y",
                         "type": "metric",
                         "active": "true"
                       },

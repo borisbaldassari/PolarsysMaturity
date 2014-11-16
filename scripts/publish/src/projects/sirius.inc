@@ -69,7 +69,6 @@
 <tr><td><a href="/documentation/metrics.html#NCC_CHA">Number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA">NCC_CHA</a></td><td>1980</td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REL">Number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL">NCC_REL</a></td><td>4093</td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REU">Number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU">NCC_REU</a></td><td>96110</td></tr>
-<tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Milestone success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">ITS information</a></td><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">PUB_ITS_INFO_PMI</a></td><td>5</td></tr>
 <tr><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">SCM information</a></td><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">PUB_SCM_INFO_PMI</a></td><td>5</td></tr>

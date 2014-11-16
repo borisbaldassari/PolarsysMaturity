@@ -115,13 +115,16 @@
 <p class="desc">Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.</p>
 </li>
                 <li class="list-group-item"><p id="MKT_FAV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
-<p class="desc">The number of favourites on the Eclipse Marketplace.</p>
+<p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
+<p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
 </li>
                 <li class="list-group-item"><p id="MKT_INSTALL_FAILED_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of failed install on the Marketplace</strong> ( MKT_INSTALL_FAILED_1M )</p>
-<p class="desc">The number of failed installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab.</p>
+<p class="desc">The number of failed installs for the project as reported on the Marketplace during the last month.</p>
+<p class="desc">THis measure uses the list of failed installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
 </li>
                 <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
-<p class="desc">The number of successful installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab.</p>
+<p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
+<p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives. </p>
@@ -199,14 +202,16 @@
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
 <p class="desc">Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works.</p>
 </li>
-                <li class="list-group-item"><p id="PLAN_MILESTONES_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL )</p>
-<p class="desc">The number of milestones since the last official release.</p>
+                <li class="list-group-item"><p id="PLAN_MILESTONES_VOL_1Y"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL_1Y )</p>
+<p class="desc">The number of milestones that occured during the last year.</p>
+<p class="desc">Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time.</p>
 </li>
                 <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
 <p class="desc">Is the project on time for the next milestone?</p>
 </li>
                 <li class="list-group-item"><p id="PLAN_REVIEWS_SUCCESS_RATE"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Milestone success rate</strong> ( PLAN_REVIEWS_SUCCESS_RATE )</p>
-<p class="desc">What is the percentage of successful reviews over the past 10 releases?</p>
+<p class="desc">What is the percentage of successful reviews over the past 5 releases?</p>
+<p class="desc">The reviews are retrieved from the project management infrastructure record, and are considered successful if the entry is equal to <code>success</code>. If there are less than 5 releases defined, the percentage is computed on these only.</p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public API</strong> ( PUBLIC_API )</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
@@ -217,13 +222,16 @@
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
 </li>
                 <li class="list-group-item"><p id="PUB_CONF_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
-<p class="desc">The number of papers published in a recognised conference.</p>
+<p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
+<p class="desc">This metric is not yet active because its retrieval is being debated.</p>
 </li>
                 <li class="list-group-item"><p id="PUB_ITS_INFO_PMI"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>ITS information</strong> ( PUB_ITS_INFO_PMI )</p>
-<p class="desc">Is the bugzilla info correctly filled in the project management infrastructure records?</p>
+<p class="desc">Is the bugzilla info correctly filled in the PMI records?</p>
+<p class="desc">The project management infrastructure file holds information about one or more bugzilla instances. This test checks that at least one bugzilla instance is defined, with a product identifier, a create_url to enter a new issue, and a query_url to fetch all the issues for the project.</p>
 </li>
                 <li class="list-group-item"><p id="PUB_SCM_INFO_PMI"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>SCM information</strong> ( PUB_SCM_INFO_PMI )</p>
-<p class="desc">Is the source_repo info correctly filled in the project management infrastructure records? </p>
+<p class="desc">Is the source_repo info correctly filled in the PMI records? </p>
+<p class="desc">The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible.</p>
 </li>
                 <li class="list-group-item"><p id="RKO_ANA"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of violated rules for analysability</strong> ( RKO_ANA )</p>
 <p class="desc">The number of analysability rules that have at least one violation on the artefact.</p>
@@ -415,20 +423,24 @@
                       <li class="list-group-item"><p id="LIC_IDENT"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>License identification</strong> ( LIC_IDENT )</p>
 <p class="desc">Is there a list of the different licences used in the product?</p>
 </li>
-                      <li class="list-group-item"><p id="PLAN_MILESTONES_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL )</p>
-<p class="desc">The number of milestones since the last official release.</p>
+                      <li class="list-group-item"><p id="PLAN_MILESTONES_VOL_1Y"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL_1Y )</p>
+<p class="desc">The number of milestones that occured during the last year.</p>
+<p class="desc">Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time.</p>
 </li>
                       <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
 <p class="desc">Is the project on time for the next milestone?</p>
 </li>
                       <li class="list-group-item"><p id="PLAN_REVIEWS_SUCCESS_RATE"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Milestone success rate</strong> ( PLAN_REVIEWS_SUCCESS_RATE )</p>
-<p class="desc">What is the percentage of successful reviews over the past 10 releases?</p>
+<p class="desc">What is the percentage of successful reviews over the past 5 releases?</p>
+<p class="desc">The reviews are retrieved from the project management infrastructure record, and are considered successful if the entry is equal to <code>success</code>. If there are less than 5 releases defined, the percentage is computed on these only.</p>
 </li>
                       <li class="list-group-item"><p id="PUB_ITS_INFO_PMI"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>ITS information</strong> ( PUB_ITS_INFO_PMI )</p>
-<p class="desc">Is the bugzilla info correctly filled in the project management infrastructure records?</p>
+<p class="desc">Is the bugzilla info correctly filled in the PMI records?</p>
+<p class="desc">The project management infrastructure file holds information about one or more bugzilla instances. This test checks that at least one bugzilla instance is defined, with a product identifier, a create_url to enter a new issue, and a query_url to fetch all the issues for the project.</p>
 </li>
                       <li class="list-group-item"><p id="PUB_SCM_INFO_PMI"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>SCM information</strong> ( PUB_SCM_INFO_PMI )</p>
-<p class="desc">Is the source_repo info correctly filled in the project management infrastructure records? </p>
+<p class="desc">Is the source_repo info correctly filled in the PMI records? </p>
+<p class="desc">The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible.</p>
 </li>
                     </ul>
                   </div>  
@@ -609,13 +621,16 @@
 <p class="desc">The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace.</p>
 </li>
                       <li class="list-group-item"><p id="MKT_FAV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
-<p class="desc">The number of favourites on the Eclipse Marketplace.</p>
+<p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
+<p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
 </li>
                       <li class="list-group-item"><p id="MKT_INSTALL_FAILED_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of failed install on the Marketplace</strong> ( MKT_INSTALL_FAILED_1M )</p>
-<p class="desc">The number of failed installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab.</p>
+<p class="desc">The number of failed installs for the project as reported on the Marketplace during the last month.</p>
+<p class="desc">THis measure uses the list of failed installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
 </li>
                       <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
-<p class="desc">The number of successful installs as reported on the Marketplace. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab.</p>
+<p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
+<p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public API</strong> ( PUBLIC_API )</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
@@ -626,7 +641,8 @@
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
 </li>
                       <li class="list-group-item"><p id="PUB_CONF_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
-<p class="desc">The number of papers published in a recognised conference.</p>
+<p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
+<p class="desc">This metric is not yet active because its retrieval is being debated.</p>
 </li>
                       <li class="list-group-item"><p id="TST_VOL_IDX"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of tests relative to the code size</strong> ( TST_VOL_IDX )</p>
 <p class="desc">The total number of test cases for the product, divided by the number of thousands of SLOC.</p>
