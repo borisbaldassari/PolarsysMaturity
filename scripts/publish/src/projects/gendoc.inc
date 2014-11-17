@@ -8,12 +8,12 @@
                 <ul class="nav nav-pills" role="tablist">
                   <!-- li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li -->
                   <li role="presentation" class="active"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
-                  <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
-                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
+                  <li role="presentation" class="disabled"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation" class="disabled"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
-                  <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
+                  <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
                 </ul>
 
@@ -73,7 +73,29 @@
                     </dl>
                   </div>
                   <div role="tabpanel" class="tab-pane" id="qm">...</div>
-                  <div role="tabpanel" class="tab-pane" id="attrs"><br />
+                  <div role="tabpanel" class="tab-pane" id="attrs"><br /><table class="table table-striped table-condensed table-hover">
+<tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>5</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>5</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>4</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>4</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>3</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_FEEDBACK">User feedback</a></td><td><a href="/documentation/attributes.html#QM_FEEDBACK">QM_FEEDBACK</a></td><td>4</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>4</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a></td><td><a href="/documentation/attributes.html#QM_PLAN">QM_PLAN</a></td><td>3</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>3</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>2</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>4</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>2</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a></td><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">QM_RESPONSIVENESS</a></td><td>3</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REU">Reusability</a></td><td><a href="/documentation/attributes.html#QM_REU">QM_REU</a></td><td>1</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>5</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_SUPPORT">Support</a></td><td><a href="/documentation/attributes.html#QM_SUPPORT">QM_SUPPORT</a></td><td>2</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_TST">Test Management</a></td><td><a href="/documentation/attributes.html#QM_TST">QM_TST</a></td><td>2</td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_USAGE">Usage</a></td><td><a href="/documentation/attributes.html#QM_USAGE">QM_USAGE</a></td><td>2</td></tr>
+</table>
+
+
                   </div>
                   <div role="tabpanel" class="tab-pane" id="questions"><br />
                   </div>
@@ -92,7 +114,6 @@
                   <div role="tabpanel" class="tab-pane" id="actions">...</div>
                   <div role="tabpanel" class="tab-pane" id="log"><br />
                     <ul class="list-group">
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//gendoc/gendoc_attributes.json] for [gendoc].</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find questions file [../../samples//gendoc/gendoc_attributes.json] for [gendoc].</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find violations file [../../samples//gendoc/gendoc_violations.json] for [gendoc].</li>
                     </ul>

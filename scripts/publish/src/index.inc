@@ -10,7 +10,7 @@
                   <span aria-hidden="true">&times;</span>
                   <span class="sr-only">Close</span>
                 </button>
-                <strong>Info:</strong> This site is an on-going work. You can <a href="/about.html">participate</a> or tell us what you think. 
+                <strong>Info:</strong> This site is an on-going work. You can <a href="/about.html">participate</a> or <a href="/contact.html">tell us what you think</a>. 
               </div>
               
               

@@ -8,12 +8,12 @@
                 <ul class="nav nav-pills" role="tablist">
                   <!-- li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li -->
                   <li role="presentation" class="active"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
-                  <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation" class="disabled"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
-                  <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
+                  <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
                 </ul>
 
