@@ -111,9 +111,9 @@
                   <li role="presentation">
                     <a href="#repo_SURVEY" role="tab" data-toggle="tab">SURVEY&nbsp;<span class="badge">1</span></a></li>
                   <li role="presentation">
-                    <a href="#repo_SonarQube" role="tab" data-toggle="tab">SonarQube&nbsp;<span class="badge">20</span></a></li>
+                    <a href="#repo_SonarQube" role="tab" data-toggle="tab">SonarQube&nbsp;<span class="badge">23</span></a></li>
                   <li role="presentation">
-                    <a href="#repo_UNKNOWN" role="tab" data-toggle="tab">UNKNOWN&nbsp;<span class="badge">9</span></a></li>
+                    <a href="#repo_UNKNOWN" role="tab" data-toggle="tab">UNKNOWN&nbsp;<span class="badge">6</span></a></li>
                 </ul>
                 <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="repo_all"><br />
@@ -678,6 +678,14 @@
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
 <p class="desc">Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works.</p>
 </li>
+                      <li class="list-group-item"><p id="PUBLIC_API"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public API</strong> ( PUBLIC_API )</p>
+<p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
+<p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
+</li>
+                      <li class="list-group-item"><p id="PUBLIC_API_DOC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
+<p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
+<p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
+</li>
                       <li class="list-group-item"><p id="SLOC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Source Lines Of Code</strong> ( SLOC )</p>
 <p class="desc">Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a></p>
@@ -702,6 +710,10 @@
                       <li class="list-group-item"><p id="TST_SUCCESS_LAST"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Test success density</strong> ( TST_SUCCESS_LAST )</p>
 <p class="desc">The percentage of failed tests during the last execution of the test plan.</p>
 <p class="desc">Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.</p>
+</li>
+                      <li class="list-group-item"><p id="TST_VOL_IDX"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of tests relative to the code size</strong> ( TST_VOL_IDX )</p>
+<p class="desc">The total number of test cases for the product, divided by the number of thousands of SLOC.</p>
+<p class="desc">Metric is computed from SonarQube <mark>tests</mark> and <mark>ncloc</mark> metrics.</p>
 </li>
                       <li class="list-group-item"><p id="VG"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average Cyclomatic Complexity</strong> ( VG )</p>
 <p class="desc">The average number of execution paths found in functions.</p>
@@ -733,21 +745,9 @@
 <p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
 <p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
 </li>
-                      <li class="list-group-item"><p id="PUBLIC_API"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public API</strong> ( PUBLIC_API )</p>
-<p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
-<p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
-</li>
-                      <li class="list-group-item"><p id="PUBLIC_API_DOC"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
-<p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
-<p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
-</li>
                       <li class="list-group-item"><p id="PUB_CONF_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
 <p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
 <p class="desc">This metric is not yet active because its retrieval is being debated.</p>
-</li>
-                      <li class="list-group-item"><p id="TST_VOL_IDX"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of tests relative to the code size</strong> ( TST_VOL_IDX )</p>
-<p class="desc">The total number of test cases for the product, divided by the number of thousands of SLOC.</p>
-<p class="desc">Metric is computed from SonarQube <mark>tests</mark> and <mark>ncloc</mark> metrics.</p>
 </li>
                     </ul>
                   </div>  

@@ -80,7 +80,7 @@
 	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API\">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a>"
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "SonarQube"
       },
       {
         "name": "Public documented API",
@@ -90,7 +90,7 @@
 	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. "
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "SonarQube"
       },
       {
         "name": "Average number of public attributes",
@@ -416,7 +416,7 @@
             "Metric is computed from SonarQube <mark>tests</mark> and <mark>ncloc</mark> metrics."
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "SonarQube"
       },
       {
         "name": "Test success density",
