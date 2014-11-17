@@ -3,20 +3,9 @@
           <div class="row">
             <div class="col-lg-12">
 
-              <h3>Maturity Assessment Home</h3>
-              
-              <div class="alert alert-info alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert">
-                  <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
-                </button>
-                <strong>Info:</strong> This site is an on-going work. You can <a href="/about.html">participate</a> or tell us what you think. 
-              </div>
-              
-              
+              <h3>Maturity Assessment Documentation</h3>
 
-              <img src="/images/logo_polarsys.png" class="img-responsive pull-right" style="margin: 5px" alt="PolarSys logo" /> 
-              <p>You just landed on the <strong>PolarSys Maturity Assessment dashboard</strong>. </p>
+              <p>The full process is self-documented; everything needed to get the most out of the analysis process should be available from this web site. If anything is missing, please do not hesitate to <a href="/contact.html">contact us</a>.</p>
               <p><a href="http://polarsys.org">PolarSys</a> is an Eclipse <a href="http://www.eclipse.org/org/industry-workgroups/">Industry Working Group</a> created by large industry players and by tools providers to collaborate on the creation and support of Open Source tools for the development of embedded systems. Members of PolarSys started working on a <a href="https://polarsys.org/wiki/Maturity_Assessment_WG">Maturity Assessment task force</a> back in 2013, to provide an evaluation of the quality of software components entering the PolarSys umbrella, and provides advice and guidance to improve it. </p>
 
               <p>The complete process is fully documented, from <a href="https://polarsys.org/wiki/EclipseQualityRequirements">quality requirements</a> to <a href="/documentation/metrics.html">metrics</a> used to assess them. It leverages the <a href="http://dashboard.eclipse.org">Eclipse Dashboard</a>, the <a href="http://wiki.eclipse.org/Project_Management_Infrastructure">Project Management Infrastructure</a> and <a href="http://wiki.eclipse.org/Sonar">SonarQube</a> instances to take advantage of open development data of projects: mailing lists, configuration management, issue tracking system, source code, and more.</p>
