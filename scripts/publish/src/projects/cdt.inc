@@ -6,8 +6,8 @@
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
-                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
+                  <!-- li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li -->
+                  <li role="presentation" class="active"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
@@ -19,11 +19,9 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />...<h4>Project rating</h4><h4>Main caracteristics</h4><h4>Errors during the analysis</h4>
-                    <ul class="list-group">
-                    </ul>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="pmi"><br />
+                  <!-- div role="tabpanel" class="tab-pane active" id="home"><br />...
+                  </div -->
+                  <div role="tabpanel" class="tab-pane active" id="pmi"><br />
                     <dl class="dl-horizontal">
                       <dt>Description</dt>
                       <dd><p>The CDT Project provides a fully functional C and C++ Integrated Development Environment based on the Eclipse platform. Features include: support for project creation and managed build for various toolchains, standard make build, source navigation, various source knowledge tools, such as type hierarchy, call graph, include browser, macro definition browser, code editor with syntax highlighting, folding and hyperlink navigation, source code refactoring and code generation, visual debugging tools, including memory, registers, and disassembly viewers.</p>

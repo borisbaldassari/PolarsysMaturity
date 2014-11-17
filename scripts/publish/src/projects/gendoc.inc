@@ -6,11 +6,11 @@
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
-                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
+                  <!-- li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li -->
+                  <li role="presentation" class="active"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
-                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Atrributes</a></li>
-                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
+                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
+                  <li role="presentation" class="disabled"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
@@ -19,12 +19,9 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />...<h4>Project rating</h4><h4>Main caracteristics</h4><h4>Errors during the analysis</h4>
-                    <ul class="list-group">
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//gendoc/gendoc_attributes.json] for [gendoc].</li>
-                    </ul>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="pmi"><br />
+                  <!-- div role="tabpanel" class="tab-pane active" id="home"><br />...
+                  </div -->
+                  <div role="tabpanel" class="tab-pane active" id="pmi"><br />
                     <dl class="dl-horizontal">
                       <dt>Description</dt>
                       <dd><p>Gendoc extracts data from EMF models and generates documents that fully respect the appearance of your document template.</p>

@@ -124,6 +124,50 @@ sub generate_project($) {
         print $err;
     }
 
+    # Import questions file for project
+
+    # We read questions from file named "<project>_questions.json"
+    my $questions_ok = 0;
+    my $json_questions = "${project_path}/${project_id}_questions.json";
+    my $html_ret_questions = "";
+
+    if (-e $json_questions) {
+        print "    - Reading questions from [$json_questions]..\n";    
+    
+        my $raw_questions = &read_json($json_questions);
+
+	$html_ret_questions .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+	$html_ret_questions .= "<tr><th width=\"50%\">Name</th>" 
+	    . "<th width=\"30%\">Mnemo</th>" 
+	    . "<th width=\"20%\">Value</th></tr>\n";
+	foreach my $q_mnemo (sort keys %{$raw_questions->{"children"}}) {
+	    my $q_value = $raw_questions->{"children"}->{$q_mnemo};
+	    if (exists($flat_questions{$q_mnemo})) {
+		$html_ret_questions .= "<tr><td><a href=\"/documentation/questions.html#" 
+		    . $q_mnemo . '">' . $flat_questions{$q_mnemo}{'name'} . "</a></td><td>" ;
+		$html_ret_questions .= "<a href=\"/documentation/questions.html#" 
+		    . $q_mnemo . '">' . $q_mnemo . "</a></td><td>";
+		$html_ret_questions .= "" . $q_value . "</td></tr>\n";
+	    } else {
+		my $err = "WARN: question [" . $q_mnemo . 
+		    "] is not referenced in questions definition file.\n";
+		push( @{$project_errors{$project_id}}, $err);
+		if ($debug) {
+		    print $err;
+		}
+	    }
+	}
+
+	$html_ret_questions .= "</table>\n";
+	
+	$html_ret_questions .= "\n";
+	$questions_ok = 1;
+    } else {
+	my $err = "ERR: Cannot find questions file [$json_attrs] for [$project_id].\n";
+	push( @{$project_errors{$project_id}}, $err);
+        print $err;
+    }
+
 
     my $html_ret = '
         <div id="page-wrapper">
@@ -133,14 +177,14 @@ sub generate_project($) {
 
               <div class="tabbable">
                 <ul class="nav nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>';
+                  <!-- li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li -->';
 
     if ($pmi_ok) {
 	$html_ret .= '
-                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
+                  <li role="presentation" class="active"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
     } else { 
 	$html_ret .= '
-                  <li role="presentation" class="disabled"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
+                  <li role="presentation" class="active"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
     }
     $html_ret .= '
                   <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>';
@@ -150,10 +194,18 @@ sub generate_project($) {
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>';
     } else { 
 	$html_ret .= '
-                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Atrributes</a></li>';
+                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>';
     }
+
+    if ($attrs_ok) {
+	$html_ret .= '
+                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>';
+    } else { 
+	$html_ret .= '
+                  <li role="presentation" class="disabled"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>';
+    }
+
     $html_ret .= '
-                  <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
@@ -162,31 +214,31 @@ sub generate_project($) {
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />...';
+                  <!-- div role="tabpanel" class="tab-pane active" id="home"><br />...';
 
-    $html_ret .= '<h4>Project rating</h4>';
+    # $html_ret .= '<h4>Project rating</h4>';
 
-    $html_ret .= '<h4>Main caracteristics</h4>';
+    # $html_ret .= '<h4>Main caracteristics</h4>';
 
-    $html_ret .= '<h4>Errors during the analysis</h4>';
+    # $html_ret .= '<h4>Errors during the analysis</h4>';
+
+    # $html_ret .= '
+    #                 <ul class="list-group">';
+
+    # foreach my $logline (@{$project_errors{$project_id}}) {
+    # 	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
+    # 	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
+    # 	    $html_ret .= '
+    #                   <li class="list-group-item">' . $logline . '</li>';;
+    # 	}
+    # }
+
+    # $html_ret .= '
+    #                 </ul>';    
 
     $html_ret .= '
-                    <ul class="list-group">';
-
-    foreach my $logline (@{$project_errors{$project_id}}) {
-	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
-	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
-	    $html_ret .= '
-                      <li class="list-group-item">' . $logline . '</li>';;
-	}
-    }
-
-    $html_ret .= '
-                    </ul>';    
-
-    $html_ret .= '
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="pmi"><br />';
+                  </div -->
+                  <div role="tabpanel" class="tab-pane active" id="pmi"><br />';
 
     # Generic information
     $html_ret .= '
@@ -232,48 +284,7 @@ sub generate_project($) {
                   </div>
                   <div role="tabpanel" class="tab-pane" id="questions"><br />';
 
-    # Import questions file for project
-
-    # We read questions from file named "<project>_questions.json"
-    my $json_questions = "${project_path}/${project_id}_questions.json";
-
-    if (-e $json_questions) {
-        print "    - Reading questions from [$json_questions]..\n";    
-    
-        my $raw_questions = &read_json($json_questions);
-
-	$html_ret .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-	$html_ret .= "<tr><th width=\"50%\">Name</th>" 
-	    . "<th width=\"30%\">Mnemo</th>" 
-	    . "<th width=\"20%\">Value</th></tr>\n";
-	foreach my $q_mnemo (sort keys %{$raw_questions->{"children"}}) {
-	    my $q_value = $raw_questions->{"children"}->{$q_mnemo};
-	    if (exists($flat_questions{$q_mnemo})) {
-		$html_ret .= "<tr><td><a href=\"/documentation/questions.html#" 
-		    . $q_mnemo . '">' . $flat_questions{$q_mnemo}{'name'} . "</a></td><td>" ;
-		$html_ret .= "<a href=\"/documentation/questions.html#" 
-		    . $q_mnemo . '">' . $q_mnemo . "</a></td><td>";
-		$html_ret .= "" . $q_value . "</td></tr>\n";
-	    } else {
-		my $err = "WARN: question [" . $q_mnemo . 
-		    "] is not referenced in questions definition file.\n";
-		push( @{$project_errors{$project_id}}, $err);
-		if ($debug) {
-		    print $err;
-		}
-	    }
-	}
-
-	$html_ret .= "</table>\n";
-	
-	$html_ret .= "\n";
- 
-    } else {
-	my $err = "ERR: Cannot find questions file [$json_attrs] for [$project_id].\n";
-	push( @{$project_errors{$project_id}}, $err);
-        print $err;
-    }
-    
+    $html_ret .= $html_ret_questions;
 
     $html_ret .= '
                   </div>
