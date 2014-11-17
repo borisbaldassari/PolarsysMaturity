@@ -72,6 +72,10 @@
 		    "url": "/projects/sirius.html" 
 		}
 	    ]
+	},
+	{
+	    "name": "Contact",
+	    "url": "/contact.html"
 	}
     ],
     "website": {
