@@ -129,12 +129,10 @@ sub build_menu($) {
                 <div class="sidebar-nav navbar-collapse">';
     $html_ret .= '
                   <ul class="nav" id="side-menu">';
-    $html_ret .= '
-                    <li><a class="active" href="/">Home</a></li>';
 
     foreach my $entry (@{$array_ref}) {
 	$html_ret .= '
-                    <li><a href="' . $entry->{'url'} . '">' . 
+                    <li class="active"><a href="' . $entry->{'url'} . '">' . 
 		    $entry->{"name"};
 	if (exists $entry->{"children"}) {
 	    $html_ret .= '<span class="fa arrow"></span></a>';
@@ -156,6 +154,11 @@ sub build_menu($) {
     $html_ret .= "</ul>";
 
     $html_ret .= '
+              <script type="javascript">
+                $("#side-menu").metisMenu({
+                  toggle: false
+                });
+            </script>
           </div></div>
         </nav>
 

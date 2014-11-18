@@ -2,6 +2,10 @@
     "name": "Publish configuration file forPolarSys",
     "menu": [
 	{
+	    "name": "Home",
+	    "url": "/index.html"
+	},
+	{
 	    "name": "About",
 	    "url": "/about.html"
 	},
