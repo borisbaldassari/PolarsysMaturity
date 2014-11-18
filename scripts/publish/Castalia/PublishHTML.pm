@@ -1,64 +1,129 @@
+package Castalia::PublishHTML;
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-              <h2>Project kitalpha</h2>
+use strict;
+use warnings;
 
-              <div class="tabbable">
-                <ul class="nav nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
-                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
-                  <li role="presentation" class="disabled"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
-                  <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
-                  <li role="presentation" class="disabled"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
-                  <li role="presentation" class="disabled"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
-                  <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
-                  <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
-                  <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
-                </ul>
+use Data::Dumper;
 
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="panel panel-info"><div class="panel-heading">Rating for main quality attributes</div><div class="panel-body">
-                          <dl>
-                            <dt>Quality</dt><dd><div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="5"  style="width: 0%;"> / 5</div></div></dd>
-                            <dt>Ecosystem Quality</dt><dd><div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="5"  style="width: 0%;"> / 5</div></div></dd>
-                            <dt>Process Quality</dt><dd><div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="5"  style="width: 0%;"> / 5</div></div></dd>
-                            <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="5"  style="width: 0%;"> / 5</div></div></dd>
-                          </dl>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="panel panel-info"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="kitalpha_attributes.json">JSON</a> ] [ <a href="kitalpha_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="kitalpha_questions.json">JSON</a> ] [ <a href="kitalpha_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="kitalpha_metrics.json">JSON</a> ] [ <a href="kitalpha_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="kitalpha_violations.json">JSON</a> ] [ <a href="kitalpha_violations.csv">CSV</a> ]</li></ul></div>
-                      </div>
-                    </div><br />
-                    <h4>Main caracteristics</h4><h4>Project rating</h4><h4>Errors during the analysis</h4>
-                    <ul class="list-group">
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find PMI file [../../samples//kitalpha/kitalpha_pmi.json] for [kitalpha].</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//kitalpha/kitalpha_attributes.json] for [kitalpha].</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find questions file [../../samples//kitalpha/kitalpha_attributes.json] for [kitalpha].</li>
-                    </ul>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="pmi"><br />
-                    <dl class="dl-horizontal">
-                      <dt>Description</dt>
-                      <dd></dd>
-                      <dt>Web</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Wiki</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Downloads</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Documentation</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Getting Started</dt>
-                      <dd><a href=""></a></dd>
-                    </dl>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="qm">              <h3>The Quality model</h3>
+use Exporter qw(import); 
+our @EXPORT_OK = qw( 
+  get_html_start
+  get_html_end
+  get_html_qm
+);
+
+
+# Piece of HTML that be printed at the beginning of every HTML  document.
+my $html_start = <<'EOHS';
+<!doctype html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/css/plugins/timeline.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!-- link href="/css/plugins/morris.css" rel="stylesheet" -->
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Our CSS sheets -->
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="#wrapper">
+
+EOHS
+#'
+
+
+# Piece of HTML that be printed at the end of every HTML document.
+my $html_end = <<'EOHE';
+    </div>
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <!-- script src="/js/plugins/morris/raphael.min.js"></script>
+    <script src="/js/plugins/morris/morris.min.js"></script>
+    <script src="/js/plugins/morris/morris-data.js"></script -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/sb-admin-2.js"></script>
+
+    
+    <!-- JavaScripts -->
+    <!-- script src="/bower_components/modernizr/modernizr.js"></script-->
+    
+    <!-- script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/bootstrap/js/button.js"></script>
+    <script src="/bower_components/bootstrap/js/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/tab.js"></script -->
+        
+</body>
+</html>
+EOHE
+#'
+
+my $html_qm = <<EOHQ;
+              <h3>The Quality model</h3>
             
             <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>
             
@@ -191,9 +256,7 @@ function update(source) {
         } else if (d.type == 'metric' && mymetrics.hasOwnProperty(d.mnemo)) {
           return mymetrics[d.mnemo]["name"]; 
         } else {
-          //alert("Keys for " + d.mnemo + " are " + keys + " 
-type: " + d.type + " 
-qsdf");
+          //alert("Keys for " + d.mnemo + " are " + keys + " \ntype: " + d.type + " \nqsdf");
           
         }
       })
@@ -383,35 +446,23 @@ function click(d) {
 
 <div id="details-box"><p>Click on a node to get more details.</p></div>
 
+EOHQ
+#'
 
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="attrs"><br />
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="questions"><br />
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
-<tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS_AUTH_1M</a></td><td>3</td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>0.0105164635236463</td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">ITS_FIX_MED_1M</a></td><td>0.12</td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS_UPDATES_1M</a></td><td>8</td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM_COMMITS_1M</a></td><td>80</td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">SCM_COMMITTED_FILES_1M</a></td><td>1582</td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>3</td></tr>
-</table>
-</div>
-                  <div role="tabpanel" class="tab-pane" id="practices"><br /></div>
-                  <div role="tabpanel" class="tab-pane" id="actions">...</div>
-                  <div role="tabpanel" class="tab-pane" id="log"><br />
-                    <ul class="list-group">
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find PMI file [../../samples//kitalpha/kitalpha_pmi.json] for [kitalpha].</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//kitalpha/kitalpha_attributes.json] for [kitalpha].</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find questions file [../../samples//kitalpha/kitalpha_attributes.json] for [kitalpha].</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find violations file [../../samples//kitalpha/kitalpha_violations.json] for [kitalpha].</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+sub get_html_start() {
+    return $html_start;							      
+}
+
+sub get_html_end() {
+    return $html_end;
+}
+
+sub get_html_qm($$$) {
+    my $file_attrs = shift;
+    my $file_questions = shift;
+    my $file_values = shift;
+
+    return $html_qm;
+}
+
+1;

@@ -47,6 +47,7 @@ my $file_qm = $dir_data . "polarsys_qm_full.json";
 my $file_refs = $dir_data . "references.json";
 
 my $dir_out_data = $dir_out . "data/";
+my $dir_out_projects = $dir_out . "projects/";
 
 # Define categories.
 print "Selecting categories.. ";
@@ -154,6 +155,12 @@ close $fh;
 
 print "\n# Generating inc files for projects...\n";
 
+# Create projects dir if needed
+if (not -e $dir_out_projects) { 
+    print "  * Creating folder [$dir_out_projects].\n";
+    mkdir $dir_out_projects or die "Cannot create folder $dir_out_projects.\n";
+}
+
 my @projects = <$dir_projects/*>;
 
 foreach my $project (@projects) {
@@ -166,7 +173,7 @@ foreach my $project (@projects) {
     }
     print "  * Generating project analysis for [$project_id] from [$project] in [$dir_src_projects].\n";
     
-    my $doc_project = $publish_ps->generate_project($project);
+    my $doc_project = $publish_ps->generate_project($project, $dir_out_projects);
     my $filename = $dir_src_projects . '/' . $project_id . ".inc";
     open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
     print $fh $doc_project;
@@ -182,12 +189,6 @@ print "\n# Generating site from src...\n";
 # Loop through all files.
 my @files;
 find({ wanted => sub { push @files, $_ if ( m!\.inc$! )} , no_chdir => 1 }, ($dir_src));
-
-# Treat the home page first.
-my $root = shift(@files);
-# This may be needed if no index.inc is present at the root.
-# But it is recommended anyway to have a custom home page..
-# build_home($root);
 
 foreach my $file (@files) {
     
