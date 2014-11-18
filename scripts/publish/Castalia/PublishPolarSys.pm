@@ -74,15 +74,24 @@ sub generate_downloads() {
     close $fh;
 }
 
-sub generate_progressbar($) {
-    my $value = shift || "";
+sub generate_progressbar($$) {
+    my $value = shift;
+    my $project_id = shift || "";
+
+    if ($value < 0 or $value > 5) {
+	my $err = "ERR: Value $value should be between 1 and 5.";
+	push( @{$project_errors{$project_id}}, $err);
+        print "\n$err\n";
+    }
+#    my @colours = ("#ebebeb", "#ccffff", "#99d9ff", "#66b3ff", "#338cff", "#0066ff");
+    my @colours = ("#ebebeb", "#FFFF66", "#CCF24D", "#99E633", "#66D91A", "#33CC00");
 
     my $percent = 20 * $value;
 
     my $ret = '<div class="progress">';
-    $ret .= '<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'
-	. $value . '" aria-valuemin="0" aria-valuemax="5"  style="width: ' . $percent . '%;">' 
-	. $value .  ' / 5</div></div>';
+    $ret .= '<div class="progress-bar" role="progressbar" aria-valuenow="'
+	. $value . '" aria-valuemin="0" aria-valuemax="5"  style="background-color: ' . $colours[$value]
+	. ';width: ' . $percent . '%;">' . $value .  ' / 5</div></div>';
 
     return $ret;
 }
@@ -273,7 +282,7 @@ sub generate_project($$) {
               <h2>Project ' . $project_id . '</h2>
 
               <div class="tabbable">
-                <ul class="nav nav-pills" role="tablist">
+                <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>';
 
     if ($pmi_ok) {
@@ -323,38 +332,40 @@ sub generate_project($$) {
     # Start grid for summary header
     $html_ret .= '
                     <div class="row">
-                      <div class="col-lg-6">';
+                      <div class="col-lg-8">';
 
     # Display rating for project
     $html_ret .= '
-                        <div class="panel panel-info"><div class="panel-heading">'
-	. 'Rating for main quality attributes</div><div class="panel-body">
-                          <dl>'; 
+                        <div class="panel panel-default"><div class="panel-heading">'
+	. 'Rating for main quality attributes</div>
+                          <div class="panel-body">
+                            <dl>'; 
     $html_ret .= '
                             <dt>Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_QUALITY"});
+    $html_ret .= &generate_progressbar($project_attrs{"QM_QUALITY"} || 0, $project_id);
     $html_ret .= '</dd>';
     $html_ret .= '
                             <dt>Ecosystem Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_ECOSYSTEM"});
+    $html_ret .= &generate_progressbar($project_attrs{"QM_ECOSYSTEM"} || 0, $project_id);
     $html_ret .= '</dd>';
     $html_ret .= '
                             <dt>Process Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_PROCESS"});
+    $html_ret .= &generate_progressbar($project_attrs{"QM_PROCESS"} || 0, $project_id);
     $html_ret .= '</dd>';
     $html_ret .= '
                             <dt>Product Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_PRODUCT"});
+    $html_ret .= &generate_progressbar($project_attrs{"QM_PRODUCT"} || 0, $project_id);
     $html_ret .= '</dd>
-                          </dl>
+                            </dl>
+                          </div>
                         </div>
                       </div>';
     $html_ret .= '
-                      <div class="col-lg-6">';
+                      <div class="col-lg-4">';
     
     # Display download box.
     $html_ret .= '
-                        <div class="panel panel-info"><div class="panel-heading">Downloads</div><ul class="list-group">'; 
+                        <div class="panel panel-default"><div class="panel-heading">Downloads</div><ul class="list-group">'; 
     $html_ret .= "<li class=\"list-group-item\">Project attributes: [ <a href=\"${project_id}_attributes.json\">JSON</a> ]" 
 	. " [ <a href=\"${project_id}_attributes.csv\">CSV</a> ]</li>";
     $html_ret .= "<li class=\"list-group-item\">Project questions: [ <a href=\"${project_id}_questions.json\">JSON</a> ]" 
@@ -365,11 +376,114 @@ sub generate_project($$) {
 	. " [ <a href=\"${project_id}_violations.csv\">CSV</a> ]</li>";
     $html_ret .= "</ul></div>";    
 
-    # Close grid for summary header
+    # Close grid (col & row) for summary header
     $html_ret .= '
                       </div>
-                    </div><br />';   
+                    </div>';   
 
+    # Display sub-attributes
+    $html_ret .= '
+                    <div class="row">
+                      <div class="col-lg-4">';
+
+    # Display rating for project: ECOSYSTEM
+    $html_ret .= '
+                        <div class="panel panel-default"><div class="panel-heading">'
+	. 'Rating for main quality attributes</div>
+                          <div class="panel-body">
+                            <dl>'; 
+    $html_ret .= '
+                            <dt>Activity</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_ACTIVITY"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Diversity</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_DIVERSITY"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Responsiveness</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_RESPONSIVENESS"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Support</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_SUPPORT"} || 0, $project_id);
+    $html_ret .= '</dd>
+                            </dl>
+                            <dt>Usage</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_USAGE"} || 0, $project_id);
+    $html_ret .= '</dd>
+                            </dl>
+                            <dt>User feedback</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_FEEDBACK"} || 0, $project_id);
+    $html_ret .= '</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>';
+    
+    # Display rating for project: process
+    $html_ret .= '
+                      <div class="col-lg-4">';
+    $html_ret .= '
+                        <div class="panel panel-default"><div class="panel-heading">'
+	. 'Rating for main quality attributes</div>
+                          <div class="panel-body">
+                            <dl>'; 
+    $html_ret .= '
+                            <dt>Configuration Management</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_SCM"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Change Management</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_ITS"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Planning Management</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_PLAN"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Test Management</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_TST"} || 0, $project_id);
+    $html_ret .= '</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>';
+
+    # Display rating for project: PRODUCT
+    $html_ret .= '
+                      <div class="col-lg-4">';
+    $html_ret .= '
+                        <div class="panel panel-default"><div class="panel-heading">'
+	. 'Rating for main quality attributes</div>
+                          <div class="panel-body">
+                            <dl>'; 
+    $html_ret .= '
+                            <dt>Quality</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_QUALITY"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Ecosystem Quality</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_ECOSYSTEM"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Process Quality</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_PROCESS"} || 0, $project_id);
+    $html_ret .= '</dd>';
+    $html_ret .= '
+                            <dt>Product Quality</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_PRODUCT"} || 0, $project_id);
+    $html_ret .= '</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>';
+
+   # Close grid (row) for summary
+    $html_ret .= '
+                    </div>';   
+
+ 
     # Display some more information about the project.
     $html_ret .= '
                     <h4>Main caracteristics</h4>';
@@ -434,8 +548,8 @@ sub generate_project($$) {
                   </div>
                   <div role="tabpanel" class="tab-pane" id="qm">';
 
-    $html_ret .= get_html_qm($json_attrs, $json_questions, 
-			     $dir_out_projects . "/$project_id" . "_metrics.json");
+#    $html_ret .= get_html_qm($json_attrs, $json_questions, 
+#			     $dir_out_projects . "/$project_id" . "_metrics.json");
 
     $html_ret .= '
                   </div>
