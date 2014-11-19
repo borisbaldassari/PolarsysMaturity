@@ -21,8 +21,8 @@
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="home"><br />
                     <div class="row">
-                      <div class="col-lg-8">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-8">
+                        <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
@@ -33,13 +33,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="sirius_attributes.json">JSON</a> ] [ <a href="sirius_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="sirius_questions.json">JSON</a> ] [ <a href="sirius_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="sirius_metrics.json">JSON</a> ] [ <a href="sirius_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="sirius_violations.json">JSON</a> ] [ <a href="sirius_violations.csv">CSV</a> ]</li></ul></div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="sirius_attributes.json">JSON</a> ] [ <a href="sirius_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="sirius_questions.json">JSON</a> ] [ <a href="sirius_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="sirius_metrics.json">JSON</a> ] [ <a href="sirius_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="sirius_violations.json">JSON</a> ] [ <a href="sirius_violations.csv">CSV</a> ]</li></ul></div>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Ecosystem quality</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Activity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
@@ -54,8 +54,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Configuration Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
@@ -66,29 +66,19 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Product quality</div>
                           <div class="panel-body">
                             <dl>
-                            <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
-                            <dt>Ecosystem Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
-                            <dt>Process Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
-                            <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Analysability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Changeability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Reliability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Reusability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
                             </dl>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <h4>Main caracteristics</h4><p>Sirius enables the specification of a modeling workbench in terms of <strong>graphical</strong>, <strong>table</strong> or <strong>tree</strong> editors with validation rules and actions using declarative descriptions.</p>
-<p>All shape characteristics and behaviors can be easily configured with a <strong>minimum technical knowledge</strong>. This description is <strong>dynamically interpreted </strong>to materialize the workbench within the Eclipse IDE.<strong> No code generation</strong> is involved, the specifier of the workbench can have instant feedback while adapting the description.</p>
-<p>Once completed, the modeling workbench can be deployed as a <strong>standard Eclipse plugin</strong>.</p>
-<p>Thanks to this short feedback loop a workbench or its specialization can be created in a matter of hours.</p>
-<p><a href="https://lh4.googleusercontent.com/-18UIHb--FDQ/Uht2vfYQqwI/AAAAAAAAMBw/fmGZ83aQGsI/s0/sirius-pan.png"><img alt="Graphical and Table editors made with Sirius" src="https://lh3.googleusercontent.com/-oWnvyr7hoFE/Uht0vwRViZI/AAAAAAAAMAo/lj7a_evd_jw/w600-h806-no/sirius-pan-small.png" style="width: 600px; height: 806px;" /></a></p>
-<h4>Project rating</h4><h4>Errors during the analysis</h4>
-                    <ul class="list-group">
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//sirius/sirius_attributes.json] for [sirius].</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find questions file [../../samples//sirius/sirius_attributes.json] for [sirius].</li>
-                    </ul>
                   </div>
                   <div role="tabpanel" class="tab-pane" id="pmi"><br />
                     <dl class="dl-horizontal">

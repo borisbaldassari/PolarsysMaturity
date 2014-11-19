@@ -332,11 +332,11 @@ sub generate_project($$) {
     # Start grid for summary header
     $html_ret .= '
                     <div class="row">
-                      <div class="col-lg-8">';
+                      <div class="col-sm-8">';
 
     # Display rating for project
     $html_ret .= '
-                        <div class="panel panel-default"><div class="panel-heading">'
+                        <div class="panel panel-primary"><div class="panel-heading">'
 	. 'Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>'; 
@@ -361,11 +361,11 @@ sub generate_project($$) {
                         </div>
                       </div>';
     $html_ret .= '
-                      <div class="col-lg-4">';
+                      <div class="col-sm-4">';
     
     # Display download box.
     $html_ret .= '
-                        <div class="panel panel-default"><div class="panel-heading">Downloads</div><ul class="list-group">'; 
+                        <div class="panel panel-primary"><div class="panel-heading">Downloads</div><ul class="list-group">'; 
     $html_ret .= "<li class=\"list-group-item\">Project attributes: [ <a href=\"${project_id}_attributes.json\">JSON</a> ]" 
 	. " [ <a href=\"${project_id}_attributes.csv\">CSV</a> ]</li>";
     $html_ret .= "<li class=\"list-group-item\">Project questions: [ <a href=\"${project_id}_questions.json\">JSON</a> ]" 
@@ -384,12 +384,12 @@ sub generate_project($$) {
     # Display sub-attributes
     $html_ret .= '
                     <div class="row">
-                      <div class="col-lg-4">';
+                      <div class="col-sm-4">';
 
     # Display rating for project: ECOSYSTEM
     $html_ret .= '
-                        <div class="panel panel-default"><div class="panel-heading">'
-	. 'Rating for main quality attributes</div>
+                        <div class="panel panel-primary"><div class="panel-heading">'
+	. 'Ecosystem quality</div>
                           <div class="panel-body">
                             <dl>'; 
     $html_ret .= '
@@ -423,10 +423,10 @@ sub generate_project($$) {
     
     # Display rating for project: process
     $html_ret .= '
-                      <div class="col-lg-4">';
+                      <div class="col-sm-4">';
     $html_ret .= '
-                        <div class="panel panel-default"><div class="panel-heading">'
-	. 'Rating for main quality attributes</div>
+                        <div class="panel panel-primary"><div class="panel-heading">'
+	. 'Process quality</div>
                           <div class="panel-body">
                             <dl>'; 
     $html_ret .= '
@@ -452,27 +452,27 @@ sub generate_project($$) {
 
     # Display rating for project: PRODUCT
     $html_ret .= '
-                      <div class="col-lg-4">';
+                      <div class="col-sm-4">';
     $html_ret .= '
-                        <div class="panel panel-default"><div class="panel-heading">'
-	. 'Rating for main quality attributes</div>
+                        <div class="panel panel-primary"><div class="panel-heading">'
+	. 'Product quality</div>
                           <div class="panel-body">
                             <dl>'; 
     $html_ret .= '
-                            <dt>Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_QUALITY"} || 0, $project_id);
+                            <dt>Analysability</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_ANA"} || 0, $project_id);
     $html_ret .= '</dd>';
     $html_ret .= '
-                            <dt>Ecosystem Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_ECOSYSTEM"} || 0, $project_id);
+                            <dt>Changeability</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_CHA"} || 0, $project_id);
     $html_ret .= '</dd>';
     $html_ret .= '
-                            <dt>Process Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_PROCESS"} || 0, $project_id);
+                            <dt>Reliability</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_REL"} || 0, $project_id);
     $html_ret .= '</dd>';
     $html_ret .= '
-                            <dt>Product Quality</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_PRODUCT"} || 0, $project_id);
+                            <dt>Reusability</dt><dd>';
+    $html_ret .= &generate_progressbar($project_attrs{"QM_REU"} || 0, $project_id);
     $html_ret .= '</dd>
                             </dl>
                           </div>
@@ -484,28 +484,28 @@ sub generate_project($$) {
                     </div>';   
 
  
-    # Display some more information about the project.
-    $html_ret .= '
-                    <h4>Main caracteristics</h4>';
-    $html_ret .= $project_pmi{'desc'} || "";
+    # # Display some more information about the project.
+    # $html_ret .= '
+    #                 <h4>Main caracteristics</h4>';
+    # $html_ret .= $project_pmi{'desc'} || "";
 
-    $html_ret .= '<h4>Project rating</h4>';
+    # $html_ret .= '<h4>Project rating</h4>';
 
-    $html_ret .= '<h4>Errors during the analysis</h4>';
+    # $html_ret .= '<h4>Errors during the analysis</h4>';
 
-    $html_ret .= '
-                    <ul class="list-group">';
+    # $html_ret .= '
+    #                 <ul class="list-group">';
 
-    foreach my $logline (@{$project_errors{$project_id}}) {
-    	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
-    	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
-    	    $html_ret .= '
-                      <li class="list-group-item">' . $logline . '</li>';;
-    	}
-    }
+    # foreach my $logline (@{$project_errors{$project_id}}) {
+    # 	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
+    # 	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
+    # 	    $html_ret .= '
+    #                   <li class="list-group-item">' . $logline . '</li>';;
+    # 	}
+    # }
 
-    $html_ret .= '
-                    </ul>';    
+    # $html_ret .= '
+    #                 </ul>';    
 
     $html_ret .= '
                   </div>

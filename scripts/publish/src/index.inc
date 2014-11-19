@@ -28,7 +28,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="panel panel-default">
-                <div class="panel-heading"><b>Documentation</b></div>
+                <div class="panel-heading">Documentation</div>
                 <div class="panel-body">
                   <div class="list-group">
                     <a href="documentation/quality_model.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> The full quality model</a>
@@ -43,7 +43,7 @@
             </div>
             <div class="col-lg-6">
               <div class="panel panel-default">
-                <div class="panel-heading"><b>Projects</b></div>
+                <div class="panel-heading">Projects</div>
                 <div class="panel-body">
                   <div class="list-group">
                     <a href="projects/cdt.html" class="list-group-item">

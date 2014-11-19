@@ -21,8 +21,8 @@
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="home"><br />
                     <div class="row">
-                      <div class="col-lg-8">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-8">
+                        <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
@@ -33,13 +33,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="cdt_attributes.json">JSON</a> ] [ <a href="cdt_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="cdt_questions.json">JSON</a> ] [ <a href="cdt_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="cdt_metrics.json">JSON</a> ] [ <a href="cdt_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="cdt_violations.json">JSON</a> ] [ <a href="cdt_violations.csv">CSV</a> ]</li></ul></div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="cdt_attributes.json">JSON</a> ] [ <a href="cdt_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="cdt_questions.json">JSON</a> ] [ <a href="cdt_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="cdt_metrics.json">JSON</a> ] [ <a href="cdt_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="cdt_violations.json">JSON</a> ] [ <a href="cdt_violations.csv">CSV</a> ]</li></ul></div>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Ecosystem quality</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Activity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div></div></dd>
@@ -54,8 +54,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Configuration Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div></div></dd>
@@ -66,23 +66,19 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Product quality</div>
                           <div class="panel-body">
                             <dl>
-                            <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
-                            <dt>Ecosystem Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div></div></dd>
-                            <dt>Process Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div></div></dd>
-                            <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div></div></dd>
+                            <dt>Analysability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div></div></dd>
+                            <dt>Changeability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
+                            <dt>Reliability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div></div></dd>
+                            <dt>Reusability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
                             </dl>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <h4>Main caracteristics</h4><p>The CDT Project provides a fully functional C and C++ Integrated Development Environment based on the Eclipse platform. Features include: support for project creation and managed build for various toolchains, standard make build, source navigation, various source knowledge tools, such as type hierarchy, call graph, include browser, macro definition browser, code editor with syntax highlighting, folding and hyperlink navigation, source code refactoring and code generation, visual debugging tools, including memory, registers, and disassembly viewers.</p>
-<h4>Project rating</h4><h4>Errors during the analysis</h4>
-                    <ul class="list-group">
-                    </ul>
                   </div>
                   <div role="tabpanel" class="tab-pane" id="pmi"><br />
                     <dl class="dl-horizontal">

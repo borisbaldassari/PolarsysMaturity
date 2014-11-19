@@ -1,13 +1,4 @@
 
-div.navbar-inner {
-#    background: url("/images/polarsys_p.png") no-repeat left;
-}
-
-div.container {
-    height: 92px;
-    color: #15213a;
-}
-
 .desc {
     margin-left: 20px;
 }
@@ -23,10 +14,6 @@ div.container {
 }
 
 body {
-  margin-top: 20px;
-  margin-bottom: 200px;
-  
-  background-color: #ebeef1;
 }
 
 div#tree {
@@ -55,6 +42,15 @@ div#tree {
   fill: none;
   stroke: #717171;/* #ccc; */
   stroke-width: 1.5px;
+}
+
+div.progress-bar {
+  color: black;
+  font-weight: bold;
+}
+
+div.panel-heading {
+  font-weight: bold;
 }
 
 div#details-box {

@@ -21,8 +21,8 @@
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="home"><br />
                     <div class="row">
-                      <div class="col-lg-8">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-8">
+                        <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
@@ -33,13 +33,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="papyrus_attributes.json">JSON</a> ] [ <a href="papyrus_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="papyrus_questions.json">JSON</a> ] [ <a href="papyrus_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="papyrus_metrics.json">JSON</a> ] [ <a href="papyrus_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="papyrus_violations.json">JSON</a> ] [ <a href="papyrus_violations.csv">CSV</a> ]</li></ul></div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="papyrus_attributes.json">JSON</a> ] [ <a href="papyrus_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="papyrus_questions.json">JSON</a> ] [ <a href="papyrus_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="papyrus_metrics.json">JSON</a> ] [ <a href="papyrus_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="papyrus_violations.json">JSON</a> ] [ <a href="papyrus_violations.csv">CSV</a> ]</li></ul></div>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Ecosystem quality</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Activity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
@@ -54,8 +54,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
                           <div class="panel-body">
                             <dl>
                             <dt>Configuration Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
@@ -66,26 +66,19 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="panel panel-default"><div class="panel-heading">Rating for main quality attributes</div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Product quality</div>
                           <div class="panel-body">
                             <dl>
-                            <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
-                            <dt>Ecosystem Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
-                            <dt>Process Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
-                            <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Analysability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Changeability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Reliability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
+                            <dt>Reusability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
                             </dl>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <h4>Main caracteristics</h4><p>Papyrus is a component of the Model Development Tools (MDT) subproject aiming at providing an integrated, user-consumable environment for editing any kind of EMF model and particularly supporting UML and related modeling languages such as SysML and MARTE. Papyrus provides diagram editors for EMF-based modeling languages amongst them UML 2 and SysML and the glue required for integrating these editors (GMF-based or not) with other MBD and MDSD tools. It also offers a very advanced support of UML profiles that enables users to define editors for DSLs based on the UML 2 standard and its extension mechanisms. The main feature of Papyrus regarding this latter point is a set of very powerful customization mechanisms which can be leveraged to create user-defined Papyrus perspectives and give it the same look and feel as a native DSL editor.<br />
- <br />
-For more details on Papyrus, see the <a href="http://www.eclipse.org/papyrus">home page</a> or the <a href="http://wiki.eclipse.org/MDT/Papyrus">Wiki</a>.</p>
-<h4>Project rating</h4><h4>Errors during the analysis</h4>
-                    <ul class="list-group">
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find attributes file [../../samples//papyrus/papyrus_attributes.json] for [papyrus].</li>
-                    </ul>
                   </div>
                   <div role="tabpanel" class="tab-pane" id="pmi"><br />
                     <dl class="dl-horizontal">

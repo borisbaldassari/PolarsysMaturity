@@ -76,14 +76,14 @@ sub build_title($) {
           <!-- div class="navbar-inner" -->
           <!-- div class="container" -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><big>' . $title . '</big></a>
-              </div>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><big>' . $title . '</big></a>
+            </div>
             <!-- /div -->
             <!-- /div -->
             <!-- /.navbar-header -->';
@@ -154,11 +154,6 @@ sub build_menu($) {
     $html_ret .= "</ul>";
 
     $html_ret .= '
-              <script type="javascript">
-                $("#side-menu").metisMenu({
-                  toggle: false
-                });
-            </script>
           </div></div>
         </nav>
 
