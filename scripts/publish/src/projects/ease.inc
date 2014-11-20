@@ -143,7 +143,7 @@ var svg = d3.select("div#tree").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var mycolours = ["#fff", "#ff0000", "#cc3300", "#996600", "#669900", "#33CC00"];
+//var mycolours = ["#fff", "#ff0000", "#cc3300", "#996600", "#669900", "#33CC00"];
 var mycolours = ["#ebebeb", "#FFFF66", "#CCF24D", "#99E633", "#66D91A", "#33CC00"];
 
 var myattrs = {};
@@ -181,37 +181,7 @@ d3.json("../data/polarsys_metrics.json", function(error, metrics) {
   }
 });
 
-// Load file for metrics values.
-d3.json("cdt_metrics.json", function(error, values) {
-  if (error) return console.warn(error);
-//  var keys = Object.keys(values['children']);
-
-  myvalues = values.children;
-});
-
-// Load file for attributes values.
-d3.json("cdt_attributes.json", function(error, values_a) {
-  if (error) return console.warn(error);
-
-  for (var property_a in values_a.children) {
-    if (values_a.children.hasOwnProperty(property_a)) {
-      myvalues[property_a] = values_a.children[property_a];
-    } 
-  }
-});
-
-// Load file for concepts values.
-d3.json("cdt_questions.json", function(error, values) {
-  if (error) return console.warn(error);
-
-  for (var property in values.children) {
-    if (values.children.hasOwnProperty(property)) {
-      myvalues[property] = values.children[property];
-    }
-  }
-});
-
-d3.json("../data/polarsys_qm_full.json", function(error, qm) {
+d3.json("ease_qm.json", function(error, qm) {
   if (error) return console.warn(error);
 
 //  alert("Length of myvalues: " + myvalues.length);
@@ -267,7 +237,13 @@ function update(source) {
 
   nodeEnter.append("circle")
       .attr("r", 1e-6)
-      .style("fill", function(d) { return myvalues[d.mnemo] ? mycolours[myvalues[d.mnemo]] : "gray"; });
+      .style("fill", function(d) { 
+        return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+      })
+      .style("stroke", function(d) {
+	  return "black";
+	  //return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+      });
 
   nodeEnter.append("text")
       .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
@@ -275,22 +251,7 @@ function update(source) {
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-//        var keys = Object.keys(d);
-//	alert("Keys for " + d.mnemo + " / type: " + d.type);
-        if (d.type == 'attribute' && myattrs.hasOwnProperty(d.mnemo)) { 
-          return myvalues[d.mnemo] ? myattrs[d.mnemo]["name"] + " (" + myvalues[d.mnemo] + ")" : myattrs[d.mnemo]["name"];
-        } else if (d.type == 'concept' && myconcepts.hasOwnProperty(d.mnemo)) {
-          return myvalues[d.mnemo] ? myconcepts[d.mnemo]["name"] + " (" + myvalues[d.mnemo] + ")" : myconcepts[d.mnemo]["name"];
-        } else if (d.type == 'metric' && mymetrics.hasOwnProperty(d.mnemo)) {
-	  //alert("value for " + d.mnemo + " is: " + myvalues[d.mnemo]);
-	  //if (myvalues.hasOwnProperty(d.mnemo)) {
-	  //    alert(d.mnemo + " is in myvalues.");
-	  //}
-	  return myvalues[d.mnemo] ? mymetrics[d.mnemo]["name"] + " (" + myvalues[d.mnemo] + ")" : mymetrics[d.mnemo]["name"];
-        } else {
-          var keys = Object.keys(d);
-//          alert("Keys for " + d.mnemo + " Keys: " + keys + " / type: " + d.type);          
-        }
+        return d.value ? d.name + " (" + d.value + ")" : d.name;
       })
       .style("fill-opacity", 1e-6);
 
@@ -300,8 +261,14 @@ function update(source) {
       .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
 
   nodeUpdate.select("circle")
-      .attr("r", 5)
-      .style("fill", function(d) { return myvalues[d.mnemo] ? mycolours[myvalues[d.mnemo]] : "gray"; });
+      .attr("r", 7)
+      .style("fill", function(d) { 
+        return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+      })
+      .style("stroke", function(d) {
+	  return "black";
+	  //return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+      });
 
   nodeUpdate.select("text")
       .style("fill-opacity", 1);

@@ -12,11 +12,9 @@ use Castalia::PublishHTML qw( get_html_qm );
 use Exporter qw( import );
  
 our @EXPORT_OK = qw( 
-    generate_all_docs 
     generate_doc_metrics
     generate_doc_questions
     generate_doc_attributes
-    generate_doc_qm
     generate_all_projects 
 );
 
@@ -74,6 +72,7 @@ sub generate_downloads() {
     close $fh;
 }
 
+
 sub generate_progressbar($$) {
     my $value = shift;
     my $project_id = shift || "";
@@ -97,10 +96,38 @@ sub generate_progressbar($$) {
 }
 
 
-sub generate_project($$) {
+sub populate_qm($$$$) {
+    my $qm = shift;
+    my $attrs = shift;
+    my $questions = shift;
+    my $metrics = shift;
+
+    foreach my $child (@{$qm}) {
+	my $mnemo = $child->{"mnemo"};
+	
+	if ($child->{"type"} =~ m!attribute!) {
+	    $child->{"name"} = $flat_attributes{$mnemo}{"name"};
+	    $child->{"value"} = $attrs->{$mnemo};
+	} elsif ($child->{"type"} =~ m!concept!) {
+	    $child->{"name"} = $flat_questions{$mnemo}{"name"};
+	    $child->{"value"} = $questions->{$mnemo};
+	} elsif ($child->{"type"} =~ m!metric!) {
+	    $child->{"name"} = $flat_metrics{$mnemo}{"name"};
+	    $child->{"value"} = $metrics->{$mnemo};
+	} else { print "WARN: cannot recognize type " . $child->{"type"} . "\n"; }
+
+	if ( exists($child->{"children"}) ) {
+	    &populate_qm($child->{"children"}, $attrs, $questions, $metrics);
+	}
+    }
+}
+
+
+sub generate_project($$$) {
     my $class = shift;
     my $project_path = shift;
     my $dir_out_projects = shift;
+    my $qm_file = shift;
 
     my @path = File::Spec->splitdir($project_path);
     my $project_id = $path[-1];
@@ -260,7 +287,6 @@ sub generate_project($$) {
     $html_ret_values .= "<tr><th width=\"50%\">Name</th>" 
 	. "<th width=\"30%\">Mnemo</th>" 
 	. "<th width=\"20%\">Value</th></tr>\n";
-#    print Dumper(%project_values);
     foreach my $v_mnemo (sort keys %project_values) {
 	if (exists($flat_metrics{$v_mnemo})) {
 	    my $v_name = $flat_metrics{$v_mnemo}->{"name"};
@@ -271,13 +297,26 @@ sub generate_project($$) {
 	    $html_ret_values .= "<td>" . $project_values{$v_mnemo} . "</td></tr>\n";
 	} else {
 	    if ($debug) {
-		print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n" if ($debug);
+		print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n";
 	    }
 	}
     }
     $html_ret_values .= "</table>\n";
 
     &generate_downloads($project_id, 'metrics', $dir_out_projects, \%project_values);
+
+
+    # Generate quality model json file for project with values.
+    my $raw_qm = &read_json($qm_file);
+#    print Dumper($raw_qm);
+#    print "DBG " . keys(%project_attrs) . " " . keys(%project_questions) . " " . keys(%project_values) . "\n";
+    &populate_qm($raw_qm->{"children"}, \%project_attrs, \%project_questions, \%project_values);
+    my $out_json = $dir_out_projects . "/${project_id}_qm.json";
+    print "    - Writing qm JSON to file [$out_json]..\n";    
+#    print Dumper($raw_qm);    
+    open(my $fh, '>', $out_json) or die "Could not open file '$out_json' $!";
+    print $fh encode_json($raw_qm);
+    close $fh;
 
     my $html_ret = '
         <div id="page-wrapper">
@@ -552,6 +591,7 @@ sub generate_project($$) {
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="qm">';
 
+    print "    - Writing quality model for [$project_id].\n";
     $html_ret .= get_html_qm($project_id);
 
     $html_ret .= '
@@ -652,7 +692,7 @@ sub generate_all_projects($) {
 
 # Generate page for quality model attributes.
 # Params: 
-sub generate_doc_attributes() {
+sub generate_doc_attributes($) {
     my $class = shift;
 
     my $file_attrs = shift;
@@ -841,7 +881,7 @@ sub generate_doc_metrics($) {
     return $html_ret;
 }
 
-sub generate_doc_questions() {
+sub generate_doc_questions($) {
     my $class = shift;
     my $file_questions = shift;
     
@@ -912,7 +952,7 @@ sub generate_doc_questions() {
 
 }
 
-sub generate_doc_rules() {
+sub generate_doc_rules($) {
     my $class = shift;
     my $dir_rules = shift;
     
@@ -1033,11 +1073,6 @@ sub generate_doc_refs($) {
 
 
     return $html_ret;
-}
-
-sub generate_all_docs() {
-    my $class = shift;
-
 }
 
 1;

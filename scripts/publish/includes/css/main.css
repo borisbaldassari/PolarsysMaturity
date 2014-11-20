@@ -40,7 +40,7 @@ div#tree {
 
 .link {
   fill: none;
-  stroke: #717171;/* #ccc; */
+  stroke: #ccc; /*#717171; #ccc; */
   stroke-width: 1.5px;
 }
 

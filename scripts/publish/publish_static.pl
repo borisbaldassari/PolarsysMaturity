@@ -173,7 +173,7 @@ foreach my $project (@projects) {
     }
     print "  * Generating project analysis for [$project_id] from [$project] in [$dir_src_projects].\n";
     
-    my $doc_project = $publish_ps->generate_project($project, $dir_out_projects);
+    my $doc_project = $publish_ps->generate_project($project, $dir_out_projects, $file_qm);
     my $filename = $dir_src_projects . '/' . $project_id . ".inc";
     open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
     print $fh $doc_project;
