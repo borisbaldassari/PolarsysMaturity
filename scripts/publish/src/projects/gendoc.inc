@@ -19,7 +19,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />
+                  <div role="tabpanel" class="tab-pane fade in active" id="home"><br />
                     <div class="row">
                       <div class="col-sm-8">
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
@@ -80,7 +80,7 @@
                       </div>
                     </div>
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="pmi"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="pmi"><br />
                     <dl class="dl-horizontal">
                       <dt>Description</dt>
                       <dd><p>Gendoc extracts data from EMF models and generates documents that fully respect the appearance of your document template.</p>
@@ -131,9 +131,334 @@
                       <dd><a href=""></a></dd>
                     </dl>
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="qm">
+                  <div role="tabpanel" class="tab-pane fade" id="qm">              <h3>The Quality model</h3>
+            
+            <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>
+            
+<div id="tree"></div>
+
+<script src="/js/d3/d3.min.js"></script>
+<script>
+
+var margin = {top: 20, right: 120, bottom: 20, left: 10},
+    width = 1100 - margin.right - margin.left,
+    height = 1024 - margin.top - margin.bottom;
+    
+var i = 0,
+    duration = 750,
+    root;
+
+var tree = d3.layout.tree()
+    .size([height, width]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var svg = d3.select("div#tree").append("svg")
+    .attr("width", width + margin.right + margin.left)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var myattrs = {};
+var mymetrics = {};
+var myconcepts = {};
+
+// Load file for attributes.
+d3.json("../data/polarsys_attributes.json", function(error, attributes) {
+  if (error) return console.warn(error);
+
+  for(i=0;i<attributes.children.length;i++) {
+    attr_mnemo = attributes.children[i]['mnemo'];
+    myattrs[attr_mnemo] = attributes.children[i];
+  }
+});
+
+// Load file for concepts.
+d3.json("../data/polarsys_questions.json", function(error, concepts) {
+  if (error) return console.warn(error);
+  
+  for(i=0;i<concepts.children.length;i++) {
+    concept_name = concepts.children[i].mnemo;
+    myconcepts[concept_name] = concepts.children[i];
+  }
+});
+
+// Load file for metrics.
+d3.json("../data/polarsys_metrics.json", function(error, metrics) {
+  if (error) return console.warn(error);
+  
+  for(i=0;i<metrics.children.length;i++) {
+    metric_name = metrics.children[i].mnemo;
+    mymetrics[metric_name] = metrics.children[i];
+  }
+});
+
+d3.json("../data/polarsys_qm_full.json", function(error, qm) {
+  if (error) return console.warn(error);
+
+
+  root = qm;
+  root.x0 = height / 2;
+  root.y0 = 0;
+
+  function collapse(d) {
+    if (d.children) {
+      d._children = d.children;
+      d._children.forEach(collapse);
+      d.children = null;
+    }
+  }
+
+  function firstCollapse(d) {
+    if (d.children) {
+      d._children = d.children;
+      for(i=0;i<d._children.length;i++) {
+        d._children[i].children.forEach(collapse);
+      }
+    }
+  }
+
+  //root.children.forEach(firstCollapse);
+  update(root);
+});
+
+function update(source) {
+
+  var tabs = [0, 100, 200, 400, 630, 700];
+
+  // Compute the new tree layout.
+  var nodes = tree.nodes(root).reverse(),
+      links = tree.links(nodes);
+
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d, i) { 
+    d.y = tabs[d.depth];
+  });
+
+  // Update the nodes…
+  var node = svg.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  // Enter any new nodes at the parent's previous position.
+  var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+      .on("click", click);
+
+  nodeEnter.append("circle")
+      .attr("r", 1e-6)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+  nodeEnter.append("text")
+      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
+      .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
+      .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
+      .text(function(d) { 
+        var keys = Object.keys(d);
+        if (d.type == 'attribute' && myattrs.hasOwnProperty(d.mnemo)) { 
+          return myattrs[d.mnemo]["name"]; 
+        } else if (d.type == 'concept' && myconcepts.hasOwnProperty(d.mnemo)) {
+          return myconcepts[d.mnemo]["name"]; 
+        } else if (d.type == 'metric' && mymetrics.hasOwnProperty(d.mnemo)) {
+          return mymetrics[d.mnemo]["name"]; 
+        } else {
+          //alert("Keys for " + d.mnemo + " are " + keys + " 
+type: " + d.type + " 
+qsdf");
+          
+        }
+      })
+      .style("fill-opacity", 1e-6);
+
+  // Transition nodes to their new position.
+  var nodeUpdate = node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+  nodeUpdate.select("circle")
+      .attr("r", 5)
+      .style("fill", function(d) { return d._children ? "red" : "#fff"; });
+
+  nodeUpdate.select("text")
+      .style("fill-opacity", 1);
+
+  // Transition exiting nodes to the parent's new position.
+  var nodeExit = node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .remove();
+
+  nodeExit.select("circle")
+      .attr("r", 1e-6);
+
+  nodeExit.select("text")
+      .style("fill-opacity", 1e-6);
+
+  // Update the links…
+  var link = svg.selectAll("path.link")
+      .data(links, function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      });
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+}
+
+// Toggle children on click.
+function click(d) {
+
+  var i = 0;
+  var mynode;
+
+  // find element in our json files (metrics, concepts, attributes of quality).
+  if (typeof d.type == "undefined") {
+    alert("No type defined on node.");
+  } else {
+    if (d.type == "metric") {
+      mynode = d;
+      mynode.description = mymetrics[d.mnemo]["desc"]; 
+      mynode.name = mymetrics[d.mnemo]["name"]; 
+      mynode.datasource = mymetrics[d.mnemo]["ds"]; 
+
+      var mydiv = d3.select("div#details-box");
+
+      mydiv.text("");
+
+      var ptitle = mydiv.append('p');
+      ptitle.classed("title", true);
+      ptitle.text(d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+  
+      p = mydiv.append('p');
+      ptitle = p.append('span');
+      ptitle.classed("details-title", true); 
+      ptitle.text("Active:")
+      pactive = p.append('span');
+      pactive.classed("details", true);
+      pactive.text(mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1));
+
+      p = mydiv.append('p');
+      ptitle = p.append('span');
+      ptitle.classed("details-title", true); 
+      ptitle.text("Data source:")
+      psource = ptitle.append('span');
+      psource.classed("details", true);
+      psource.text(mynode.datasource);
+
+      pdesct = mydiv.append('p');
+      pdesct.classed("details-title", true); 
+      pdesct.text("Description:")
+      for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+          var pdesc = mydiv.append('p');
+          pdesc.classed("details", true);
+          pdesc.html(mynode.description[desc_idx]);
+      }
+    } else if (d.type == "concept") {
+      mynode = d;
+      mynode.description = myconcepts[d.mnemo]["desc"]; 
+      mynode.name = myconcepts[d.mnemo]["name"]; 
+      mynode.question = myconcepts[d.mnemo]["question"]; 
+
+      var mydiv = d3.select("div#details-box");
+
+      mydiv.text("");
+
+      var ptitle = mydiv.append('p');
+      ptitle.classed("title", true);
+      ptitle.text(d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+  
+      p = mydiv.append('p');
+      ptitle = p.append('span');
+      ptitle.classed("details-title", true); 
+      ptitle.text("Active:")
+      pactive = p.append('span');
+      pactive.classed("details", true);
+      pactive.text(mynode.active);
+
+      pdesct = mydiv.append('p');
+      pdesct.classed("details-title", true); 
+      pdesct.text("Question:")
+      var pdesc = mydiv.append('p');
+      pdesc.classed("details", true);
+      pdesc.text(mynode.question);
+      
+      pdesct = mydiv.append('p');
+      pdesct.classed("details-title", true); 
+      pdesct.text("Description:")
+      for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+          var pdesc = mydiv.append('p');
+          pdesc.classed("details", true);
+          pdesc.html(mynode.description[desc_idx]);
+      }
+    } else if (d.type == "attribute") {
+      mynode = d;
+      mynode.description = myattrs[d.mnemo]["desc"]; 
+      mynode.name = myattrs[d.mnemo]["name"]; 
+
+      var mydiv = d3.select("div#details-box");
+
+      mydiv.text("");
+
+      var ptitle = mydiv.append('p');
+      ptitle.classed("title", true);
+      ptitle.text(d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+    
+      var pactive = mydiv.append('p');
+      ptitle = pactive.append('span');
+      ptitle.classed("details-title", true); 
+      ptitle.text("Active:")
+      pactive = pactive.append('span');
+      pactive.classed("details", true);
+      pactive.text(mynode.active);
+
+      pdesct = mydiv.append('p');
+      pdesct.classed("details-title", true); 
+      pdesct.text("Description:")
+      for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
+          var pdesc = mydiv.append('p');
+          pdesc.classed("details", true);
+          pdesc.text(mynode.description[desc_idx]);
+      }
+    
+    }
+  }
+
+  if (d.shiftKey) {
+    alert("Shift key pressed!");
+  }
+}
+
+</script>
+
+<div id="details-box"><p>Click on a node to get more details.</p></div>
+
+
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="attrs"><br /><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane fade" id="attrs"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>5</td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>5</td></tr>
@@ -157,9 +482,9 @@
 
 
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="questions"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="questions"><br />
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
+                  <div role="tabpanel" class="tab-pane fade" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS_AUTH_1M</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>500</td></tr>
@@ -170,9 +495,9 @@
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>0</td></tr>
 </table>
 </div>
-                  <div role="tabpanel" class="tab-pane" id="practices"><br /></div>
-                  <div role="tabpanel" class="tab-pane" id="actions">...</div>
-                  <div role="tabpanel" class="tab-pane" id="log"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="practices"><br /></div>
+                  <div role="tabpanel" class="tab-pane fade" id="actions">...</div>
+                  <div role="tabpanel" class="tab-pane fade" id="log"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find questions file [../../samples//gendoc/gendoc_attributes.json] for [gendoc].</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find violations file [../../samples//gendoc/gendoc_violations.json] for [gendoc].</li>

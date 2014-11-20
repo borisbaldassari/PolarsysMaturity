@@ -327,7 +327,7 @@ sub generate_project($$) {
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home"><br />';
+                  <div role="tabpanel" class="tab-pane fade in active" id="home"><br />';
 
     # Start grid for summary header
     $html_ret .= '
@@ -509,7 +509,7 @@ sub generate_project($$) {
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="pmi"><br />';
+                  <div role="tabpanel" class="tab-pane fade" id="pmi"><br />';
 
     # Generic information
     $html_ret .= '
@@ -546,31 +546,31 @@ sub generate_project($$) {
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="qm">';
+                  <div role="tabpanel" class="tab-pane fade" id="qm">';
 
-#    $html_ret .= get_html_qm($json_attrs, $json_questions, 
-#			     $dir_out_projects . "/$project_id" . "_metrics.json");
+    $html_ret .= get_html_qm($json_attrs, $json_questions, 
+			     $dir_out_projects . "/$project_id" . "_metrics.json");
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="attrs"><br />';
+                  <div role="tabpanel" class="tab-pane fade" id="attrs"><br />';
     
     $html_ret .= $html_ret_attrs;
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="questions"><br />';
+                  <div role="tabpanel" class="tab-pane fade" id="questions"><br />';
 
     $html_ret .= $html_ret_questions;
 
     $html_ret .= '
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="metrics"><br />';
+                  <div role="tabpanel" class="tab-pane fade" id="metrics"><br />';
 
     $html_ret .= $html_ret_values;
  
     $html_ret .= '</div>
-                  <div role="tabpanel" class="tab-pane" id="practices"><br />';
+                  <div role="tabpanel" class="tab-pane fade" id="practices"><br />';
 
     # Import Rules file for project
 
@@ -612,8 +612,8 @@ sub generate_project($$) {
     }
     
     $html_ret .= '</div>
-                  <div role="tabpanel" class="tab-pane" id="actions">...</div>
-                  <div role="tabpanel" class="tab-pane" id="log"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="actions">...</div>
+                  <div role="tabpanel" class="tab-pane fade" id="log"><br />
                     <ul class="list-group">';
     foreach my $logline (@{$project_errors{$project_id}}) {
 	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
@@ -796,7 +796,7 @@ sub generate_doc_metrics($) {
     $html_ret .= '
                 </ul>
                 <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="repo_all"><br />
+                <div role="tabpanel" class="tab-pane fade in active" id="repo_all"><br />
                   <ul class="list-group">';
                   
     foreach my $tmp_metric (sort keys %flat_metrics) {
@@ -811,7 +811,7 @@ sub generate_doc_metrics($) {
     # Create tab contents
     foreach my $repo (sort keys %metrics_ds) {
         $html_ret .= '
-                  <div role="tabpanel" class="tab-pane" id="repo_' . $repo . '"><br />';
+                  <div role="tabpanel" class="tab-pane fade" id="repo_' . $repo . '"><br />';
         $html_ret .= '
                     <ul class="list-group">';
                   

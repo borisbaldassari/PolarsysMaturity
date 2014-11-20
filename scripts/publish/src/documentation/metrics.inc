@@ -23,7 +23,7 @@
                     <a href="#repo_UNKNOWN" role="tab" data-toggle="tab">UNKNOWN&nbsp;<span class="badge">6</span></a></li>
                 </ul>
                 <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="repo_all"><br />
+                <div role="tabpanel" class="tab-pane fade in active" id="repo_all"><br />
                   <ul class="list-group">
                 <li class="list-group-item"><p id="ATTRS"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average number of attributes</strong> ( ATTRS )</p>
 <p class="desc">Average number of attributes defined in a class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
@@ -330,7 +330,7 @@
 <p class="desc">See also the Maisqual wiki for more details on complexity measures: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics</a>.</p>
 </li>
                   </ul></div>
-                  <div role="tabpanel" class="tab-pane" id="repo_Grimoire"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_Grimoire"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="ITS_AUTH_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>ITS authors</strong> ( ITS_AUTH_1M )</p>
 <p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
@@ -418,7 +418,7 @@
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane" id="repo_PMI"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_PMI"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="IP_LOG_COV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
 <p class="desc">Percentage of contributions covered by an appropriate IP log.</p>
@@ -449,7 +449,7 @@
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane" id="repo_RuleCheckingScript"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_RuleCheckingScript"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="NCC_ANA"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of non-conformities for analysability</strong> ( NCC_ANA )</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code.</p>
@@ -521,14 +521,14 @@
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane" id="repo_SURVEY"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_SURVEY"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="SURVEY_INSTALL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
 <p class="desc">A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.</p>
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane" id="repo_SonarQube"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_SonarQube"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="ATTRS"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Average number of attributes</strong> ( ATTRS )</p>
 <p class="desc">Average number of attributes defined in a class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
@@ -632,7 +632,7 @@
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane" id="repo_UNKNOWN"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_UNKNOWN"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="DL_REPO_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
 <p class="desc">The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ .</p>
