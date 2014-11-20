@@ -160,7 +160,7 @@ d3.json("../data/polarsys_metrics.json", function(error, metrics) {
   }
 });
 
-d3.json("../data/polarsys_qm_full.json", function(error, qm) {
+d3.json("polarsys_qm_full_doc.json", function(error, qm) {
   if (error) return console.warn(error);
 
 
@@ -222,17 +222,7 @@ function update(source) {
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        var keys = Object.keys(d);
-        if (d.type == 'attribute' && myattrs.hasOwnProperty(d.mnemo)) { 
-          return myattrs[d.mnemo]["name"]; 
-        } else if (d.type == 'concept' && myconcepts.hasOwnProperty(d.mnemo)) {
-          return myconcepts[d.mnemo]["name"]; 
-        } else if (d.type == 'metric' && mymetrics.hasOwnProperty(d.mnemo)) {
-          return mymetrics[d.mnemo]["name"]; 
-        } else {
-          //alert("Keys for " + d.mnemo + " are " + keys + " \ntype: " + d.type + " \nqsdf");
-          
-        }
+        return d.value ? d.name + " (" + d.value + ")" : d.name;
       })
       .style("fill-opacity", 1e-6);
 
@@ -449,30 +439,8 @@ function click(d) {
     <!-- Metis Menu Plugin JavaScript -->
     <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <!-- script src="/js/plugins/morris/raphael.min.js"></script>
-    <script src="/js/plugins/morris/morris.min.js"></script>
-    <script src="/js/plugins/morris/morris-data.js"></script -->
-
     <!-- Custom Theme JavaScript -->
     <script src="/js/sb-admin-2.js"></script>
-
-    
-    <!-- JavaScripts -->
-    <!-- script src="/bower_components/modernizr/modernizr.js"></script-->
-    
-    <!-- script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap/js/button.js"></script>
-    <script src="/bower_components/bootstrap/js/popover.js"></script>
-    <script src="/bower_components/bootstrap/js/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/tab.js"></script -->
         
 </body>
 </html>

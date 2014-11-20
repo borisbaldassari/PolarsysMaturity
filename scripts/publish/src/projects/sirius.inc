@@ -8,10 +8,10 @@
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
                   <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
-                  <li role="presentation" class="disabled"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation" class=""><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation" class="disabled"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation" class="disabled"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
-                  <li role="presentation" class="disabled"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
+                  <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
@@ -104,7 +104,9 @@
                   <div role="tabpanel" class="tab-pane fade" id="qm">              <h3>The Quality model</h3>
             
             <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>
-            
+              <div class="row">
+            <div class="col-lg-7">
+        
 <div id="tree"></div>
 
 <script src="/js/d3/d3.min.js"></script>
@@ -171,9 +173,6 @@ d3.json("../data/polarsys_metrics.json", function(error, metrics) {
 d3.json("sirius_qm.json", function(error, qm) {
   if (error) return console.warn(error);
 
-//  alert("Length of myvalues: " + myvalues.length);
-//  alert("myvalues: " + Object.keys(myvalues));
-
   root = qm;
   root.x0 = height / 2;
   root.y0 = 0;
@@ -186,16 +185,6 @@ d3.json("sirius_qm.json", function(error, qm) {
     }
   }
 
-  function firstCollapse(d) {
-    if (d.children) {
-      d._children = d.children;
-      for(i=0;i<d._children.length;i++) {
-        d._children[i].children.forEach(collapse);
-      }
-    }
-  }
-
-  //root.children.forEach(firstCollapse);
   update(root);
 });
 
@@ -260,7 +249,7 @@ function update(source) {
   nodeUpdate.select("text")
       .style("fill-opacity", 1);
 
-  // Transition exiting nodes to the parent's new position.
+  // Transition exiting nodes to the parent's new position. '
   var nodeExit = node.exit().transition()
       .duration(duration)
       .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
@@ -276,7 +265,7 @@ function update(source) {
   var link = svg.selectAll("path.link")
       .data(links, function(d) { return d.target.id; });
 
-  // Enter any new links at the parent's previous position.
+  // Enter any new links at the parent's previous position. '
   link.enter().insert("path", "g")
       .attr("class", "link")
       .attr("d", function(d) {
@@ -289,7 +278,7 @@ function update(source) {
       .duration(duration)
       .attr("d", diagonal);
 
-  // Transition exiting nodes to the parent's new position.
+  // Transition exiting nodes to the parent's new position. '
   link.exit().transition()
       .duration(duration)
       .attr("d", function(d) {
@@ -422,16 +411,14 @@ function click(d) {
     
     }
   }
-
-  if (d.shiftKey) {
-    alert("Shift key pressed!");
-  }
 }
 
 </script>
-
-<div id="details-box"><p>Click on a node to get more details.</p></div>
-
+</div>
+<div class="col-lg-5">
+<div id="details-box-project"><p>Click on a node to get more details.</p></div>
+</div> <!-- col -->
+</div> <!-- row -->
 
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="attrs"><br />

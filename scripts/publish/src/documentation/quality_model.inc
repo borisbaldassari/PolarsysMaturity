@@ -67,7 +67,7 @@ d3.json("../data/polarsys_metrics.json", function(error, metrics) {
   }
 });
 
-d3.json("../data/polarsys_qm_full.json", function(error, qm) {
+d3.json("polarsys_qm_full_doc.json", function(error, qm) {
   if (error) return console.warn(error);
 
 
@@ -129,17 +129,7 @@ function update(source) {
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        var keys = Object.keys(d);
-        if (d.type == 'attribute' && myattrs.hasOwnProperty(d.mnemo)) { 
-          return myattrs[d.mnemo]["name"]; 
-        } else if (d.type == 'concept' && myconcepts.hasOwnProperty(d.mnemo)) {
-          return myconcepts[d.mnemo]["name"]; 
-        } else if (d.type == 'metric' && mymetrics.hasOwnProperty(d.mnemo)) {
-          return mymetrics[d.mnemo]["name"]; 
-        } else {
-          //alert("Keys for " + d.mnemo + " are " + keys + " \ntype: " + d.type + " \nqsdf");
-          
-        }
+        return d.value ? d.name + " (" + d.value + ")" : d.name;
       })
       .style("fill-opacity", 1e-6);
 

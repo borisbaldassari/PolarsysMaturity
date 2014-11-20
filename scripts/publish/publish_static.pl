@@ -47,6 +47,7 @@ my $file_qm = $dir_data . "polarsys_qm_full.json";
 my $file_refs = $dir_data . "references.json";
 
 my $dir_out_data = $dir_out . "data/";
+my $dir_out_doc = $dir_out . "documentation/";
 my $dir_out_projects = $dir_out . "projects/";
 
 # Define categories.
@@ -141,17 +142,17 @@ open($fh, '>', $filename) or die "Could not open file '$filename' $!";
 print $fh $doc_refs;
 close $fh;
 
-# my $doc_questions = generate_doc_questions($dir_questions);
-# my $filename = $dir_out . '/questions.html';
-# open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
-# print $fh $doc_questions;
-# close $fh;
-
-# my $doc_attributes = generate_doc_attributes($dir_attributes);
-# my $filename = $dir_out . '/attributes.html';
-# open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
-# print $fh $doc_attributes;
-# close $fh;
+$filename = $dir_out_doc . 'polarsys_qm_full_doc.json';
+print " * Generating extended JSON for quality model [$file_qm] in [$filename].\n";
+my $doc_qm = $publish_ps->generate_doc_qm($file_qm);
+print "    - Writing qm to [$filename].\n";
+if (not -e $dir_out_doc) { 
+    print "  * Creating folder [$dir_out_doc].\n";
+    mkdir $dir_out_doc or die "Cannot create folder $dir_out_doc.\n";
+}
+open($fh, '>', $filename) or die "Could not open file '$filename' $!";
+print $fh $doc_qm;
+close $fh;
 
 print "\n# Generating inc files for projects...\n";
 

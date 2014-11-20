@@ -96,6 +96,18 @@ sub generate_progressbar($$) {
 }
 
 
+sub generate_doc_qm($$) {
+    my $class = shift;
+    my $qm_file = shift;
+
+    print "    - Reading qm from [$qm_file].\n";
+    my $raw_qm = &read_json($qm_file);
+    &populate_qm($raw_qm->{"children"}, undef, undef, undef);
+    
+    return encode_json($raw_qm);
+}
+
+
 sub populate_qm($$$$) {
     my $qm = shift;
     my $attrs = shift;
@@ -308,16 +320,56 @@ sub generate_project($$$) {
 
     # Generate quality model json file for project with values.
     my $raw_qm = &read_json($qm_file);
-#    print Dumper($raw_qm);
-#    print "DBG " . keys(%project_attrs) . " " . keys(%project_questions) . " " . keys(%project_values) . "\n";
     &populate_qm($raw_qm->{"children"}, \%project_attrs, \%project_questions, \%project_values);
     my $out_json = $dir_out_projects . "/${project_id}_qm.json";
     print "    - Writing qm JSON to file [$out_json]..\n";    
-#    print Dumper($raw_qm);    
     open(my $fh, '>', $out_json) or die "Could not open file '$out_json' $!";
     print $fh encode_json($raw_qm);
     close $fh;
 
+
+    # Import Rules file for project
+    # We read rules from file named "<project>_violations.json"
+    my $rules_ok = 0;
+    my $json_violations = "${project_path}/${project_id}_violations.json";
+    my $html_ret_rules = "";
+
+    if (-e $json_violations) {
+        print "    - Reading rules violations from [$json_violations]..\n";    
+    
+        my $raw_rules = &read_json($json_violations);
+
+	# loop through values and display them in a table.
+	$html_ret_rules .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+	$html_ret_rules .= "<tr><th width=\"40%\">Name</th>" 
+	    . "<th width=\"40%\">Mnemo</th>" 
+	    . "<th width=\"20%\">NCC</th></tr>\n";
+	foreach my $rule (@{$raw_rules->{"children"}}) {
+	    if (exists($flat_rules{$rule->{"name"}})) {
+		my $v_mnemo = $rule->{'name'};
+		$html_ret_rules .= "<tr><td><a href=\"/documentation/rules.html#" 
+		    . $v_mnemo . '">' . $flat_rules{$v_mnemo}{'name'} . "</a></td>" ;
+		$html_ret_rules .= "<td><a href=\"/documentation/rules.html#" 
+		    . $v_mnemo . '">' . $v_mnemo . "</a></td>";
+		$html_ret_rules .= "<td>" . $rule->{'value'} . "</td></tr>\n";
+	    } else {
+		my $err = "WARN: metric [" . $rule->{'name'} . 
+		    "] is not referenced in metrics definition file.";
+		push( @{$project_errors{$project_id}}, $err);
+		print "$err\n" if ($debug);
+	    }
+	}
+
+	$html_ret_rules .= "</table>\n";
+	$rules_ok = 1;
+    } else {
+	my $err = "ERR: Cannot find violations file [$json_violations] for [$project_id].";
+	push( @{$project_errors{$project_id}}, $err);
+        print "$err\n";
+    }
+    
+
+    # Create tabs
     my $html_ret = '
         <div id="page-wrapper">
           <div class="row">
@@ -336,7 +388,7 @@ sub generate_project($$$) {
                   <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
     }
     $html_ret .= '
-                  <li role="presentation" class="disabled"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>';
+                  <li role="presentation" class=""><a href="#qm" role="tab" data-toggle="tab">QM</a></li>';
 
     if ($attrs_ok) {
 	$html_ret .= '
@@ -354,7 +406,7 @@ sub generate_project($$$) {
                   <li role="presentation" class="disabled"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>';
     }
 
-    if ($questions_ok) {
+    if ($metrics_ok) {
 	$html_ret .= '
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>';
     } else { 
@@ -362,8 +414,15 @@ sub generate_project($$$) {
                   <li role="presentation" class="disabled"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>';
     }
 
+    if ($rules_ok) {
+	$html_ret .= '
+                  <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>';
+    } else { 
+	$html_ret .= '
+                  <li role="presentation" class="disabled"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>';
+    }
+
     $html_ret .= '
-                  <li role="presentation"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
                 </ul>
@@ -615,45 +674,8 @@ sub generate_project($$$) {
     $html_ret .= '</div>
                   <div role="tabpanel" class="tab-pane fade" id="practices"><br />';
 
-    # Import Rules file for project
+    $html_ret .= $html_ret_rules;
 
-    # We read rules from file named "<project>_violations.json"
-    my $json_violations = "${project_path}/${project_id}_violations.json";
-
-    if (-e $json_violations) {
-        print "    - Reading rules violations from [$json_violations]..\n";    
-    
-        my $raw_rules = &read_json($json_violations);
-
-	# loop through values and display them in a table.
-	$html_ret .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-	$html_ret .= "<tr><th width=\"40%\">Name</th>" 
-	    . "<th width=\"40%\">Mnemo</th>" 
-	    . "<th width=\"20%\">NCC</th></tr>\n";
-	foreach my $rule (@{$raw_rules->{"children"}}) {
-	    if (exists($flat_rules{$rule->{"name"}})) {
-		my $v_mnemo = $rule->{'name'};
-		$html_ret .= "<tr><td><a href=\"/documentation/rules.html#" 
-		    . $v_mnemo . '">' . $flat_rules{$v_mnemo}{'name'} . "</a></td>" ;
-		$html_ret .= "<td><a href=\"/documentation/rules.html#" 
-		    . $v_mnemo . '">' . $v_mnemo . "</a></td>";
-		$html_ret .= "<td>" . $rule->{'value'} . "</td></tr>\n";
-	    } else {
-		my $err = "WARN: metric [" . $rule->{'name'} . 
-		    "] is not referenced in metrics definition file.";
-		push( @{$project_errors{$project_id}}, $err);
-		print "$err\n" if ($debug);
-	    }
-	}
-
-	$html_ret .= "</table>\n";
- 
-    } else {
-	my $err = "ERR: Cannot find violations file [$json_violations] for [$project_id].";
-	push( @{$project_errors{$project_id}}, $err);
-        print "$err\n";
-    }
-    
     $html_ret .= '</div>
                   <div role="tabpanel" class="tab-pane fade" id="actions">...</div>
                   <div role="tabpanel" class="tab-pane fade" id="log"><br />
