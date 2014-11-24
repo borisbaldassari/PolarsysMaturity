@@ -12,15 +12,17 @@
                   <li role="presentation">
                     <a href="#repo_Grimoire" role="tab" data-toggle="tab">Grimoire&nbsp;<span class="badge">21</span></a></li>
                   <li role="presentation">
-                    <a href="#repo_PMI" role="tab" data-toggle="tab">PMI&nbsp;<span class="badge">7</span></a></li>
+                    <a href="#repo_Manual" role="tab" data-toggle="tab">Manual&nbsp;<span class="badge">2</span></a></li>
+                  <li role="presentation">
+                    <a href="#repo_MarketplaceScript" role="tab" data-toggle="tab">MarketplaceScript&nbsp;<span class="badge">3</span></a></li>
+                  <li role="presentation">
+                    <a href="#repo_PMI" role="tab" data-toggle="tab">PMI&nbsp;<span class="badge">5</span></a></li>
                   <li role="presentation">
                     <a href="#repo_RuleCheckingScript" role="tab" data-toggle="tab">RuleCheckingScript&nbsp;<span class="badge">20</span></a></li>
                   <li role="presentation">
-                    <a href="#repo_SURVEY" role="tab" data-toggle="tab">SURVEY&nbsp;<span class="badge">1</span></a></li>
-                  <li role="presentation">
                     <a href="#repo_SonarQube" role="tab" data-toggle="tab">SonarQube&nbsp;<span class="badge">23</span></a></li>
                   <li role="presentation">
-                    <a href="#repo_UNKNOWN" role="tab" data-toggle="tab">UNKNOWN&nbsp;<span class="badge">6</span></a></li>
+                    <a href="#repo_Unknown" role="tab" data-toggle="tab">Unknown&nbsp;<span class="badge">4</span></a></li>
                 </ul>
                 <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="repo_all"><br />
@@ -418,16 +420,35 @@
 </li>
                     </ul>
                   </div>  
+                  <div role="tabpanel" class="tab-pane fade" id="repo_Manual"><br />
+                    <ul class="list-group">
+                      <li class="list-group-item"><p id="PUB_CONF_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
+<p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
+<p class="desc">This metric is not yet active because its retrieval is being debated.</p>
+</li>
+                      <li class="list-group-item"><p id="SURVEY_INSTALL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
+<p class="desc">A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.</p>
+</li>
+                    </ul>
+                  </div>  
+                  <div role="tabpanel" class="tab-pane fade" id="repo_MarketplaceScript"><br />
+                    <ul class="list-group">
+                      <li class="list-group-item"><p id="MKT_FAV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
+<p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
+<p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
+</li>
+                      <li class="list-group-item"><p id="MKT_INSTALL_FAILED_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of failed install on the Marketplace</strong> ( MKT_INSTALL_FAILED_1M )</p>
+<p class="desc">The number of failed installs for the project as reported on the Marketplace during the last month.</p>
+<p class="desc">THis measure uses the list of failed installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
+</li>
+                      <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
+<p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
+<p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
+</li>
+                    </ul>
+                  </div>  
                   <div role="tabpanel" class="tab-pane fade" id="repo_PMI"><br />
                     <ul class="list-group">
-                      <li class="list-group-item"><p id="IP_LOG_COV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
-<p class="desc">Percentage of contributions covered by an appropriate IP log.</p>
-<p class="desc">Eclipse foundation has a very strict <a href="https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf">IP policy</a> and this measure should always be 100%.</p>
-</li>
-                      <li class="list-group-item"><p id="LIC_IDENT"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>License identification</strong> ( LIC_IDENT )</p>
-<p class="desc">Is there a list of the different licences used in the product?</p>
-<p class="desc">This measure may use an external tool like Ninka (<a href="http://ninka.turingmachine.org/">ninka.turingmachine.org</a>) to identify the licence of components used in the project. Another way would be to identify a file named LICENCES in the root folder.</p>
-</li>
                       <li class="list-group-item"><p id="PLAN_MILESTONES_VOL_1Y"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL_1Y )</p>
 <p class="desc">The number of milestones that occured during the last year.</p>
 <p class="desc">Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time.</p>
@@ -518,13 +539,6 @@
 </li>
                       <li class="list-group-item"><p id="RULES_REU"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of rules for reusability</strong> ( RULES_REU )</p>
 <p class="desc">The total number of rules checked for reusability.</p>
-</li>
-                    </ul>
-                  </div>  
-                  <div role="tabpanel" class="tab-pane fade" id="repo_SURVEY"><br />
-                    <ul class="list-group">
-                      <li class="list-group-item"><p id="SURVEY_INSTALL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
-<p class="desc">A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.</p>
 </li>
                     </ul>
                   </div>  
@@ -632,7 +646,7 @@
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane fade" id="repo_UNKNOWN"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_Unknown"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="DL_REPO_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
 <p class="desc">The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ .</p>
@@ -640,21 +654,13 @@
                       <li class="list-group-item"><p id="DL_UPDATE_SITE_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of downloads on update site</strong> ( DL_UPDATE_SITE_1M )</p>
 <p class="desc">The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace.</p>
 </li>
-                      <li class="list-group-item"><p id="MKT_FAV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
-<p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
-<p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
+                      <li class="list-group-item"><p id="IP_LOG_COV"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
+<p class="desc">Percentage of contributions covered by an appropriate IP log.</p>
+<p class="desc">Eclipse foundation has a very strict <a href="https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf">IP policy</a> and this measure should always be 100%.</p>
 </li>
-                      <li class="list-group-item"><p id="MKT_INSTALL_FAILED_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of failed install on the Marketplace</strong> ( MKT_INSTALL_FAILED_1M )</p>
-<p class="desc">The number of failed installs for the project as reported on the Marketplace during the last month.</p>
-<p class="desc">THis measure uses the list of failed installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv">an example of log page</a>, errors tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
-</li>
-                      <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
-<p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
-<p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
-</li>
-                      <li class="list-group-item"><p id="PUB_CONF_VOL"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
-<p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
-<p class="desc">This metric is not yet active because its retrieval is being debated.</p>
+                      <li class="list-group-item"><p id="LIC_IDENT"><!-- span class="glyphicon glyphicon-record" / -->&nbsp;<strong>License identification</strong> ( LIC_IDENT )</p>
+<p class="desc">Is there a list of the different licences used in the product?</p>
+<p class="desc">This measure may use an external tool like Ninka (<a href="http://ninka.turingmachine.org/">ninka.turingmachine.org</a>) to identify the licence of components used in the project. Another way would be to identify a file named LICENCES in the root folder.</p>
 </li>
                     </ul>
                   </div>  

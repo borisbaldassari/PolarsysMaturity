@@ -646,7 +646,7 @@
             "This measure may use an external tool like Ninka (<a href=\"http://ninka.turingmachine.org/\">ninka.turingmachine.org</a>) to identify the licence of components used in the project. Another way would be to identify a file named LICENCES in the root folder."
         ],
         "scale": [12,10,8,6],
-        "ds": "PMI"
+        "ds": "Unknown"
       },
       {
         "name": "IP log code coverage",
@@ -656,7 +656,7 @@
 	    "Eclipse foundation has a very strict <a href=\"https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf\">IP policy</a> and this measure should always be 100%."
         ],
         "scale": [12,10,8,6],
-        "ds": "PMI"
+        "ds": "Unknown"
       },
       {
         "name": "Project is on time for next milestone",
@@ -714,7 +714,7 @@
             "A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc."
         ],
         "scale": [12,10,8,6],
-        "ds": "SURVEY"
+        "ds": "Manual"
       },
       {
         "name": "Number of favourites on the Marketplace",
@@ -724,7 +724,7 @@
             "This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero."
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "MarketplaceScript"
       },
       {
         "name": "Number of successfull installs on the Marketplace",
@@ -734,7 +734,7 @@
             "This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero."
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "MarketplaceScript"
       },
       {
         "name": "Number of failed install on the Marketplace",
@@ -744,7 +744,7 @@
             "THis measure uses the list of failed installs available on the Marketplace for every registered project. Here is <a href=\"http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv\">an example of log page</a>, errors tab. If the project is not registered on the Marketplace, the metric should be zero."
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "MarketplaceScript"
       },
       {
         "name": "Number of downloads on update site",
@@ -753,7 +753,7 @@
             "The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace."
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "Unknown"
       },
       {
         "name": "Number of downloads on the web site",
@@ -762,7 +762,7 @@
             "The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ ."
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "Unknown"
       },
       {
         "name": "Number of publications",
@@ -772,7 +772,7 @@
             "This metric is not yet active because its retrieval is being debated."
         ],
         "scale": [12,10,8,6],
-        "ds": "UNKNOWN"
+        "ds": "Manual"
       }
     ]
   }
