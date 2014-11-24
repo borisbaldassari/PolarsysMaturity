@@ -796,6 +796,7 @@ sub describe_metric($) {
     my $metric_desc = $metric->{"desc"};
     my $metric_from = $metric->{"ds"};
     my $metric_active = $metric->{"active"};
+    my $metric_scale = $metric->{"scale"};
 
     my $text = "<p id=\"$mnemo\"><strong>$metric_name</strong> ( $mnemo )</p>\n";
 
@@ -809,7 +810,7 @@ sub describe_metric($) {
         $text .= "<p class=\"desc\">$desc</p>\n";
     }
 
-    my $scale_str = ']-inf,0[ [0,10]';
+    my $scale_str = Dumper($metric_scale);
 
     $text .= "<p class=\"desc\"><strong>Scale</strong>: $scale_str</p>\n";
 

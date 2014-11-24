@@ -32,7 +32,13 @@
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in a class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ATTRS_PUBLIC"><strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -40,7 +46,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="CLASSES"><strong>Number of classes</strong> ( CLASSES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -49,7 +61,13 @@
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          1000,
+          10000,
+          100000
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="CLONE_IDX"><strong>Cloning density</strong> ( CLONE_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -57,7 +75,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for duplications: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href="http://docs.codehaus.org/display/SONAR/Duplications">http://docs.codehaus.org/display/SONAR/Duplications</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          10,
+          20,
+          30,
+          50
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="COMR"><strong>Comment rate</strong> ( COMR )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -66,21 +90,39 @@
 <p class="desc">The ratio of source lines of code on the number of comment lines of code.</p>
 <p class="desc">Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
 <p class="desc">See also SonarQube's page on comment lines metrics: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="DL_REPO_1M"><strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ .</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="DL_UPDATE_SITE_1M"><strong>Number of downloads on update site</strong> ( DL_UPDATE_SITE_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="DOPD"><strong>Number of distinct operands</strong> ( DOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -89,7 +131,13 @@
 <p class="desc">The number of distinct operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="DOPT"><strong>Number of distinct operators</strong> ( DOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -98,14 +146,26 @@
 <p class="desc">The number of distinct operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="FILES"><strong>Number of files</strong> ( FILES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of code files (e.g. with a <code>.java</code> for the Java language) in the source code hierarchy. The SonarQube measure used for this purpose is <mark>files</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          1000,
+          10000,
+          100000
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="FUNCTIONS"><strong>Number of functions</strong> ( FUNCTIONS )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -114,7 +174,13 @@
 <p class="desc">The number of functions defined in the source files.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>functions</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Methods">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          1000,
+          10000,
+          100000
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="IP_LOG_COV"><strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -122,7 +188,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Percentage of contributions covered by an appropriate IP log.</p>
 <p class="desc">Eclipse foundation has a very strict <a href="https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf">IP policy</a> and this measure should always be 100%.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ITS_AUTH_1M"><strong>ITS authors</strong> ( ITS_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -130,7 +202,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ITS_BUGS_DENSITY"><strong>Defect density</strong> ( ITS_BUGS_DENSITY )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -138,7 +216,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of the total number of tickets in the issue tracking system to the size of the source code in KLOC, at the time of the data retrieval. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ITS_BUGS_OPEN"><strong>Number of open bugs</strong> ( ITS_BUGS_OPEN )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -146,7 +230,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed. Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ITS_FIX_MED_1M"><strong>Median time to fix bug</strong> ( ITS_FIX_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -154,7 +244,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ITS_ISSUES_OPENERS_1M"><strong>Number of issue openers during last month</strong> ( ITS_ISSUES_OPENERS_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -162,7 +258,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ITS_ISSUES_OPEN_1M"><strong>Number of issues opened during last month</strong> ( ITS_ISSUES_OPEN_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -170,7 +272,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ITS_UPDATES_1M"><strong>ITS updates</strong> ( ITS_UPDATES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -178,7 +286,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -186,7 +300,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is there a list of the different licences used in the product?</p>
 <p class="desc">This measure may use an external tool like Ninka (<a href="http://ninka.turingmachine.org/">ninka.turingmachine.org</a>) to identify the licence of components used in the project. Another way would be to identify a file named LICENCES in the root folder.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MDIT"><strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -195,14 +315,26 @@
 <p class="desc">The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">See also SonarQube's page on the depth in tree: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a></p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="METHS"><strong>Average number of methods</strong> ( METHS )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operators</a> (TOPT) considered at the class level.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="METHS_PUBLIC"><strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -210,7 +342,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MKT_FAV"><strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -218,7 +356,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
 <p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          10,
+          30,
+          70,
+          300
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -226,7 +370,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
 <p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          500,
+          1000,
+          10000
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -234,7 +384,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_RESP_RATIO_1M"><strong>Developer ML response ratio</strong> ( MLS_DEV_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -242,7 +398,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_RESP_TIME_MED_1M"><strong>Developer ML response time</strong> ( MLS_DEV_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -250,7 +412,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_SUBJ_1M"><strong>Developer ML subjects</strong> ( MLS_DEV_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -258,7 +426,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_VOL_1M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -266,7 +440,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_AUTH_1M"><strong>User ML authors</strong> ( MLS_USR_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -274,7 +454,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_RESP_RATIO_1M"><strong>User ML response ratio</strong> ( MLS_USR_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -282,7 +468,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_RESP_TIME_MED_1M"><strong>User ML response time</strong> ( MLS_USR_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -290,7 +482,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_SUBJ_1M"><strong>User ML subjects</strong> ( MLS_USR_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -298,7 +496,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_VOL_1M"><strong>User ML posts</strong> ( MLS_USR_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -306,7 +510,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_ANA"><strong>Number of non-conformities for analysability</strong> ( NCC_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -314,7 +524,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_ANA_IDX"><strong>Average number of non-conformities for analysability</strong> ( NCC_ANA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -322,7 +538,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_CHA"><strong>Number of non-conformities for changeability</strong> ( NCC_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -330,7 +552,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -338,7 +566,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_REL"><strong>Number of non-conformities for reliability</strong> ( NCC_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -346,7 +580,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -354,7 +594,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_REU"><strong>Number of non-conformities for reusability</strong> ( NCC_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -362,7 +608,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -370,7 +622,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="NEST"><strong>Maximum depth of nesting</strong> ( NEST )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -378,7 +636,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
 <p class="desc">Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PLAN_MILESTONES_VOL"><strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -386,14 +650,26 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of milestones that occured during the last five releases.</p>
 <p class="desc">Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the project on time for the next milestone?</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PLAN_REVIEWS_SUCCESS_RATE"><strong>Milestone success rate</strong> ( PLAN_REVIEWS_SUCCESS_RATE )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -401,7 +677,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">What is the percentage of successful reviews over the past 5 releases?</p>
 <p class="desc">The reviews are retrieved from the project management infrastructure record, and are considered successful if the entry is equal to <mark>success</mark>. If there are less than 5 releases defined, the percentage is computed on these only.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API"><strong>Public API</strong> ( PUBLIC_API )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -409,7 +691,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -417,7 +705,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PUB_CONF_VOL"><strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -425,7 +719,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
 <p class="desc">This metric is not yet active because its retrieval is being debated.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PUB_ITS_INFO_PMI"><strong>ITS information</strong> ( PUB_ITS_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -433,7 +733,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the bugzilla info correctly filled in the PMI records?</p>
 <p class="desc">The project management infrastructure file holds information about one or more bugzilla instances. This test checks that at least one bugzilla instance is defined, with a product identifier, a create_url to enter a new issue, and a query_url to fetch all the issues for the project.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="PUB_SCM_INFO_PMI"><strong>SCM information</strong> ( PUB_SCM_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -441,91 +747,169 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the source_repo info correctly filled in the PMI records? </p>
 <p class="desc">The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RKO_ANA"><strong>Number of violated rules for analysability</strong> ( RKO_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of analysability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RKO_CHA"><strong>Number of violated rules for changeability</strong> ( RKO_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of changeability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RKO_REL"><strong>Number of violated rules for reliability</strong> ( RKO_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reliability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RKO_REU"><strong>Number of violated rules for reusability</strong> ( RKO_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reusability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ROKR_ANA"><strong>Adherence to analysability rules</strong> ( ROKR_ANA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform analysability practices on the number of checked analysability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ROKR_CHA"><strong>Adherence to changeability rules</strong> ( ROKR_CHA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform changeability practices on the number of checked changeability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ROKR_REL"><strong>Adherence to reliability rules</strong> ( ROKR_REL )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reliability practices on the number of checked reliability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="ROKR_REU"><strong>Adherence to reusability rules</strong> ( ROKR_REU )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reusability practices on the number of checked reusability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RULES_ANA"><strong>Number of rules for analysability</strong> ( RULES_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for analysability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RULES_CHA"><strong>Number of rules for changeability</strong> ( RULES_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for changeability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RULES_REL"><strong>Number of rules for reliability</strong> ( RULES_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reliability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="RULES_REU"><strong>Number of rules for reusability</strong> ( RULES_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reusability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITS_1M"><strong>SCM Commits</strong> ( SCM_COMMITS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -533,7 +917,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITTED_FILES_1M"><strong>Files committed</strong> ( SCM_COMMITTED_FILES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -541,7 +931,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITTERS_1M"><strong>SCM committers</strong> ( SCM_COMMITTERS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -549,7 +945,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="SCM_STABILITY_1M"><strong>File stability index</strong> ( SCM_STABILITY_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -557,7 +959,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of commits touching each file in source code management repositories dated during the last month. </p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="SLOC"><strong>Source Lines Of Code</strong> ( SLOC )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -565,14 +973,26 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a></p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          50000,
+          100000,
+          500000,
+          1000000
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="SURVEY_INSTALL"><strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="TOPD"><strong>Total number of operands</strong> ( TOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -581,7 +1001,13 @@
 <p class="desc">The total number of operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="TOPT"><strong>Total number of operators</strong> ( TOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -590,7 +1016,13 @@
 <p class="desc">The total number of operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="TST_COV_BRANCHES"><strong>Percentage of branches covered by tests</strong> ( TST_COV_BRANCHES )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -598,14 +1030,26 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of branches that is exercised by the tests.</p>
 <p class="desc">On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="TST_COV_LINES"><strong>Percentage of lines of code covered by tests</strong> ( TST_COV_LINES )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of source lines of code that is exercised by the tests.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="TST_SUCCESS_LAST"><strong>Test success density</strong> ( TST_SUCCESS_LAST )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -613,7 +1057,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of failed tests during the last execution of the test plan.</p>
 <p class="desc">Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="TST_VOL_IDX"><strong>Number of tests relative to the code size</strong> ( TST_VOL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -621,7 +1071,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of test cases for the product, divided by the number of thousands of SLOC.</p>
 <p class="desc">Metric is computed from SonarQube <mark>tests</mark> and <mark>ncloc</mark> metrics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                 <li class="list-group-item"><p id="VG"><strong>Average Cyclomatic Complexity</strong> ( VG )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -633,7 +1089,13 @@
 <p class="desc">See also Wikipedia's entry on cyclomatic complexity: <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity">http://en.wikipedia.org/wiki/Cyclomatic_complexity</a>.</p>
 <p class="desc">See also SonarQube's definition for code complexity: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity">http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity</a>. There is also a discussion about its meaning here: <a href="http://www.sonarqube.org/discussing-cyclomatic-complexity/">http://www.sonarqube.org/discussing-cyclomatic-complexity/</a></p>
 <p class="desc">See also the Maisqual wiki for more details on complexity measures: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                   </ul></div>
                   <div role="tabpanel" class="tab-pane fade" id="repo_Grimoire"><br />
@@ -644,7 +1106,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ITS_BUGS_DENSITY"><strong>Defect density</strong> ( ITS_BUGS_DENSITY )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -652,7 +1120,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of the total number of tickets in the issue tracking system to the size of the source code in KLOC, at the time of the data retrieval. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ITS_BUGS_OPEN"><strong>Number of open bugs</strong> ( ITS_BUGS_OPEN )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -660,7 +1134,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed. Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ITS_FIX_MED_1M"><strong>Median time to fix bug</strong> ( ITS_FIX_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -668,7 +1148,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ITS_ISSUES_OPENERS_1M"><strong>Number of issue openers during last month</strong> ( ITS_ISSUES_OPENERS_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -676,7 +1162,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ITS_ISSUES_OPEN_1M"><strong>Number of issues opened during last month</strong> ( ITS_ISSUES_OPEN_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -684,7 +1176,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ITS_UPDATES_1M"><strong>ITS updates</strong> ( ITS_UPDATES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -692,7 +1190,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -700,7 +1204,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_RESP_RATIO_1M"><strong>Developer ML response ratio</strong> ( MLS_DEV_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -708,7 +1218,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_RESP_TIME_MED_1M"><strong>Developer ML response time</strong> ( MLS_DEV_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -716,7 +1232,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_SUBJ_1M"><strong>Developer ML subjects</strong> ( MLS_DEV_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -724,7 +1246,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_VOL_1M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -732,7 +1260,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_AUTH_1M"><strong>User ML authors</strong> ( MLS_USR_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -740,7 +1274,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_RESP_RATIO_1M"><strong>User ML response ratio</strong> ( MLS_USR_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -748,7 +1288,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_RESP_TIME_MED_1M"><strong>User ML response time</strong> ( MLS_USR_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -756,7 +1302,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_SUBJ_1M"><strong>User ML subjects</strong> ( MLS_USR_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -764,7 +1316,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_VOL_1M"><strong>User ML posts</strong> ( MLS_USR_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -772,7 +1330,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITS_1M"><strong>SCM Commits</strong> ( SCM_COMMITS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -780,7 +1344,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITTED_FILES_1M"><strong>Files committed</strong> ( SCM_COMMITTED_FILES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -788,7 +1358,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITTERS_1M"><strong>SCM committers</strong> ( SCM_COMMITTERS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -796,7 +1372,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="SCM_STABILITY_1M"><strong>File stability index</strong> ( SCM_STABILITY_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -804,7 +1386,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of commits touching each file in source code management repositories dated during the last month. </p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                     </ul>
                   </div>  
@@ -816,14 +1404,26 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
 <p class="desc">This metric is not yet active because its retrieval is being debated.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="SURVEY_INSTALL"><strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                     </ul>
                   </div>  
@@ -835,7 +1435,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
 <p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          10,
+          30,
+          70,
+          300
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -843,7 +1449,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
 <p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          500,
+          1000,
+          10000
+        ];
+</p>
 </li>
                     </ul>
                   </div>  
@@ -855,14 +1467,26 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of milestones that occured during the last five releases.</p>
 <p class="desc">Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the project on time for the next milestone?</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="PLAN_REVIEWS_SUCCESS_RATE"><strong>Milestone success rate</strong> ( PLAN_REVIEWS_SUCCESS_RATE )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -870,7 +1494,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">What is the percentage of successful reviews over the past 5 releases?</p>
 <p class="desc">The reviews are retrieved from the project management infrastructure record, and are considered successful if the entry is equal to <mark>success</mark>. If there are less than 5 releases defined, the percentage is computed on these only.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="PUB_ITS_INFO_PMI"><strong>ITS information</strong> ( PUB_ITS_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -878,7 +1508,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the bugzilla info correctly filled in the PMI records?</p>
 <p class="desc">The project management infrastructure file holds information about one or more bugzilla instances. This test checks that at least one bugzilla instance is defined, with a product identifier, a create_url to enter a new issue, and a query_url to fetch all the issues for the project.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="PUB_SCM_INFO_PMI"><strong>SCM information</strong> ( PUB_SCM_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -886,7 +1522,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the source_repo info correctly filled in the PMI records? </p>
 <p class="desc">The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                     </ul>
                   </div>  
@@ -898,7 +1540,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NCC_ANA_IDX"><strong>Average number of non-conformities for analysability</strong> ( NCC_ANA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -906,7 +1554,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NCC_CHA"><strong>Number of non-conformities for changeability</strong> ( NCC_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -914,7 +1568,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -922,7 +1582,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NCC_REL"><strong>Number of non-conformities for reliability</strong> ( NCC_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -930,7 +1596,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -938,7 +1610,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NCC_REU"><strong>Number of non-conformities for reusability</strong> ( NCC_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -946,7 +1624,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -954,91 +1638,169 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RKO_ANA"><strong>Number of violated rules for analysability</strong> ( RKO_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of analysability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RKO_CHA"><strong>Number of violated rules for changeability</strong> ( RKO_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of changeability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RKO_REL"><strong>Number of violated rules for reliability</strong> ( RKO_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reliability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RKO_REU"><strong>Number of violated rules for reusability</strong> ( RKO_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reusability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ROKR_ANA"><strong>Adherence to analysability rules</strong> ( ROKR_ANA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform analysability practices on the number of checked analysability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ROKR_CHA"><strong>Adherence to changeability rules</strong> ( ROKR_CHA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform changeability practices on the number of checked changeability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ROKR_REL"><strong>Adherence to reliability rules</strong> ( ROKR_REL )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reliability practices on the number of checked reliability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ROKR_REU"><strong>Adherence to reusability rules</strong> ( ROKR_REU )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reusability practices on the number of checked reusability practices.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RULES_ANA"><strong>Number of rules for analysability</strong> ( RULES_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for analysability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RULES_CHA"><strong>Number of rules for changeability</strong> ( RULES_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for changeability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RULES_REL"><strong>Number of rules for reliability</strong> ( RULES_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reliability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="RULES_REU"><strong>Number of rules for reusability</strong> ( RULES_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reusability.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                     </ul>
                   </div>  
@@ -1049,7 +1811,13 @@
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in a class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="ATTRS_PUBLIC"><strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1057,7 +1825,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="CLASSES"><strong>Number of classes</strong> ( CLASSES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1066,7 +1840,13 @@
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          1000,
+          10000,
+          100000
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="CLONE_IDX"><strong>Cloning density</strong> ( CLONE_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1074,7 +1854,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for duplications: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href="http://docs.codehaus.org/display/SONAR/Duplications">http://docs.codehaus.org/display/SONAR/Duplications</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          10,
+          20,
+          30,
+          50
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="COMR"><strong>Comment rate</strong> ( COMR )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1083,7 +1869,13 @@
 <p class="desc">The ratio of source lines of code on the number of comment lines of code.</p>
 <p class="desc">Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
 <p class="desc">See also SonarQube's page on comment lines metrics: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="DOPD"><strong>Number of distinct operands</strong> ( DOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1092,7 +1884,13 @@
 <p class="desc">The number of distinct operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="DOPT"><strong>Number of distinct operators</strong> ( DOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1101,14 +1899,26 @@
 <p class="desc">The number of distinct operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="FILES"><strong>Number of files</strong> ( FILES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of code files (e.g. with a <code>.java</code> for the Java language) in the source code hierarchy. The SonarQube measure used for this purpose is <mark>files</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          1000,
+          10000,
+          100000
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="FUNCTIONS"><strong>Number of functions</strong> ( FUNCTIONS )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1117,7 +1927,13 @@
 <p class="desc">The number of functions defined in the source files.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>functions</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Methods">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          100,
+          1000,
+          10000,
+          100000
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="MDIT"><strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1126,14 +1942,26 @@
 <p class="desc">The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">See also SonarQube's page on the depth in tree: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a></p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="METHS"><strong>Average number of methods</strong> ( METHS )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operators</a> (TOPT) considered at the class level.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="METHS_PUBLIC"><strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1141,7 +1969,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="NEST"><strong>Maximum depth of nesting</strong> ( NEST )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1149,7 +1983,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
 <p class="desc">Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API"><strong>Public API</strong> ( PUBLIC_API )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1157,7 +1997,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1165,7 +2011,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="SLOC"><strong>Source Lines Of Code</strong> ( SLOC )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1173,7 +2025,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a></p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          50000,
+          100000,
+          500000,
+          1000000
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="TOPD"><strong>Total number of operands</strong> ( TOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1182,7 +2040,13 @@
 <p class="desc">The total number of operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="TOPT"><strong>Total number of operators</strong> ( TOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1191,7 +2055,13 @@
 <p class="desc">The total number of operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="TST_COV_BRANCHES"><strong>Percentage of branches covered by tests</strong> ( TST_COV_BRANCHES )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1199,14 +2069,26 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of branches that is exercised by the tests.</p>
 <p class="desc">On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="TST_COV_LINES"><strong>Percentage of lines of code covered by tests</strong> ( TST_COV_LINES )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of source lines of code that is exercised by the tests.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="TST_SUCCESS_LAST"><strong>Test success density</strong> ( TST_SUCCESS_LAST )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1214,7 +2096,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of failed tests during the last execution of the test plan.</p>
 <p class="desc">Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="TST_VOL_IDX"><strong>Number of tests relative to the code size</strong> ( TST_VOL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1222,7 +2110,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of test cases for the product, divided by the number of thousands of SLOC.</p>
 <p class="desc">Metric is computed from SonarQube <mark>tests</mark> and <mark>ncloc</mark> metrics.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="VG"><strong>Average Cyclomatic Complexity</strong> ( VG )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1234,7 +2128,13 @@
 <p class="desc">See also Wikipedia's entry on cyclomatic complexity: <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity">http://en.wikipedia.org/wiki/Cyclomatic_complexity</a>.</p>
 <p class="desc">See also SonarQube's definition for code complexity: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity">http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity</a>. There is also a discussion about its meaning here: <a href="http://www.sonarqube.org/discussing-cyclomatic-complexity/">http://www.sonarqube.org/discussing-cyclomatic-complexity/</a></p>
 <p class="desc">See also the Maisqual wiki for more details on complexity measures: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                     </ul>
                   </div>  
@@ -1245,14 +2145,26 @@
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ .</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="DL_UPDATE_SITE_1M"><strong>Number of downloads on update site</strong> ( DL_UPDATE_SITE_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="IP_LOG_COV"><strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1260,7 +2172,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Percentage of contributions covered by an appropriate IP log.</p>
 <p class="desc">Eclipse foundation has a very strict <a href="https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf">IP policy</a> and this measure should always be 100%.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                       <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1268,7 +2186,13 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is there a list of the different licences used in the product?</p>
 <p class="desc">This measure may use an external tool like Ninka (<a href="http://ninka.turingmachine.org/">ninka.turingmachine.org</a>) to identify the licence of components used in the project. Another way would be to identify a file named LICENCES in the root folder.</p>
-<p class="desc"><strong>Scale</strong>: ]-inf,0[ [0,10]</p>
+<p class="desc"><strong>Scale</strong>: $VAR1 = [
+          12,
+          10,
+          8,
+          6
+        ];
+</p>
 </li>
                     </ul>
                   </div>  
