@@ -795,21 +795,62 @@ sub describe_metric($) {
     my $metric_name = $metric->{"name"};
     my $metric_desc = $metric->{"desc"};
     my $metric_from = $metric->{"ds"};
+    my $metric_active = $metric->{"active"};
 
-    my $text = "<p id=\"$mnemo\"><!-- span class=\"glyphicon glyphicon-record\" / -->&nbsp;<strong>$metric_name</strong> ( $mnemo )</p>\n";
+    my $text = "<p id=\"$mnemo\"><strong>$metric_name</strong> ( $mnemo )</p>\n";
 
+    $text .= "<p class=\"desc\"><strong>Active</strong>: $metric_active</p>\n";
+
+    my $used_by_str = "";
+    $text .= "<p class=\"desc\"><strong>Used by</strong>: $used_by_str</p>\n";
+
+    $text .= "<p class=\"desc\"><strong>Description</strong>:</p>\n";
     foreach my $desc (@{$metric_desc}) {
         $text .= "<p class=\"desc\">$desc</p>\n";
     }
+
+    my $scale_str = ']-inf,0[ [0,10]';
+
+    $text .= "<p class=\"desc\"><strong>Scale</strong>: $scale_str</p>\n";
 
     return $text;
 } 
 
 
+sub find_qm_node($$$) {
+    my $raw_qm_array = shift;
+    my $type = shift;
+    my $mnemo = shift;
+    my $nodes_array = shift;
+
+#    print "DBG Dumper node\n";
+#    print Dumper(@{$raw_qm_array});
+    
+    foreach my $child (@{$raw_qm_array}) {
+#	print "DBG search $mnemo type $type in node " . $child->{"mnemo"} . "\n";
+#	print "DBG Dumper child\n";
+#	print Dumper($child);
+	if (($child->{"type"} eq $type) and ($child->{"mnemo"} eq $mnemo)) {
+#	    print "DBG found node " . $child->{"name"} . "\n";
+	    push(@{$nodes_array}, $child);
+	    next;
+	}
+	if (exists($child->{"children"})) {
+#		print "DBG Invoking func on children of " . $child->{"mnemo"} . ".\n";
+	    &find_qm_node($child->{"children"}, $type, $mnemo, $nodes_array);
+	} else {
+#		print "DBG No more children found (leaf).\n";
+	}
+#	print "DBG Next child now.\n";
+    }
+#    print "DBG No more children (end of func).\n";
+}
+
 
 sub generate_doc_metrics($) {
     my $class = shift;
     my $file_metrics = shift;
+    my $qm_file = shift;
     
     ## Read metrics file
 
@@ -828,22 +869,38 @@ sub generate_doc_metrics($) {
 ';
 
     
+    print "    - Reading qm from [$qm_file].\n";
+    my $raw_qm = &read_json($qm_file);
+
     # Import metrics.
     foreach my $tmp_metric (@{$raw_metrics->{"children"}}) {
         my $metric_mnemo = $tmp_metric->{"mnemo"};
         my $metric_ds = $tmp_metric->{"ds"};
-    if (exists $flat_metrics{$metric_mnemo}) {
-	my $err = "WARN: Metric [$metric_mnemo] already exists!.";
-	push( @{$project_errors{'MAIN'}}, $err);
-	print "$err\n",
-    } else {
-        $flat_metrics{$metric_mnemo} = $tmp_metric;
-    }
-
+	if (exists $flat_metrics{$metric_mnemo}) {
+	    my $err = "WARN: Metric [$metric_mnemo] already exists!.";
+	    push( @{$project_errors{'MAIN'}}, $err);
+	    print "$err\n",
+	} else {
+	    $flat_metrics{$metric_mnemo} = $tmp_metric;
+	}
+	
         # Populate metrics_ds
         $metrics_ds{$metric_ds}++;
+
+	# Check if the metric is active in the qm 
+	# XXX
+	my @nodes_array;
+	&find_qm_node($raw_qm->{"children"}, "metric", $metric_mnemo, \@nodes_array);
+	print Dumper(@nodes_array);
+	if ($nodes_array[0]{"active"} =~ m!true!i) { 
+	    $flat_metrics{$metric_mnemo}{"active"} = "true"; 
+	} else {
+	    $flat_metrics{$metric_mnemo}{"active"} = "false"; 
+	}
     }
-    
+ 
+#    print Dumper(%flat_metrics);
+   
     # Create the tabs.
     $html_ret .= ' 
               <div class="tabbable">

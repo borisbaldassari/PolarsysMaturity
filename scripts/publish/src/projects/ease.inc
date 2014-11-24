@@ -447,7 +447,6 @@ function click(d) {
 <tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">ITS_FIX_MED_1M</a></td><td>0.0</td></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS_UPDATES_1M</a></td><td>54</td></tr>
 <tr><td><a href="/documentation/metrics.html#MKT_FAV">Number of favourites on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_FAV">MKT_FAV</a></td><td>0</td></tr>
-<tr><td><a href="/documentation/metrics.html#MKT_INSTALL_FAILED_1M">Number of failed install on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_INSTALL_FAILED_1M">MKT_INSTALL_FAILED_1M</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">Number of successfull installs on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">MKT_INSTALL_SUCCESS_1M</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_1M">Developer ML response ratio</a></td><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_1M">MLS_DEV_RESP_RATIO_1M</a></td><td>0.4444444444444444</td></tr>
 <tr><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_1M">Developer ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_1M">MLS_DEV_SUBJ_1M</a></td><td>36</td></tr>
@@ -457,6 +456,7 @@ function click(d) {
 <tr><td><a href="/documentation/metrics.html#NCC_CHA">Number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA">NCC_CHA</a></td><td>107</td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REL">Number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL">NCC_REL</a></td><td>265</td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REU">Number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU">NCC_REU</a></td><td>2517</td></tr>
+<tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Milestone success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">ITS information</a></td><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">PUB_ITS_INFO_PMI</a></td><td>0</td></tr>
 <tr><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">SCM information</a></td><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">PUB_SCM_INFO_PMI</a></td><td>0</td></tr>

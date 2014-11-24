@@ -108,21 +108,21 @@ if (not -e $dir_src_doc) {
 }
 
 print " * Generating attributes doc from [$file_attributes] in [$dir_src_doc].\n";
-my $doc_attrs = $publish_ps->generate_doc_attributes($file_attributes);
+my $doc_attrs = $publish_ps->generate_doc_attributes($file_attributes, $file_qm);
 my $filename = $dir_src_doc . '/attributes.inc';
 open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
 print $fh $doc_attrs;
 close $fh;
 
 print " * Generating metrics doc from [$file_metrics] in [$dir_src_doc].\n";
-my $doc_metrics = $publish_ps->generate_doc_metrics($file_metrics);
+my $doc_metrics = $publish_ps->generate_doc_metrics($file_metrics, $file_qm);
 $filename = $dir_src_doc . '/metrics.inc';
 open($fh, '>', $filename) or die "Could not open file '$filename' $!";
 print $fh $doc_metrics;
 close $fh;
 
 print " * Generating questions doc from [$file_questions] in [$dir_src_doc].\n";
-my $doc_questions = $publish_ps->generate_doc_questions($file_questions);
+my $doc_questions = $publish_ps->generate_doc_questions($file_questions, $file_qm);
 $filename = $dir_src_doc . '/questions.inc';
 open($fh, '>', $filename) or die "Could not open file '$filename' $!";
 print $fh $doc_questions;

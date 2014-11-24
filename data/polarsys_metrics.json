@@ -669,9 +669,9 @@
       },
       {
         "name": "Number of milestones",
-        "mnemo": "PLAN_MILESTONES_VOL_1Y",
+        "mnemo": "PLAN_MILESTONES_VOL",
         "desc": [
-            "The number of milestones that occured during the last year.",
+            "The number of milestones that occured during the last five releases.",
             "Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time."
         ],
         "scale": [12,10,8,6],
@@ -723,7 +723,7 @@
             "The number of favourites on the Eclipse Marketplace for the project.",
             "This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero."
         ],
-        "scale": [12,10,8,6],
+        "scale": [10,30,70,300],
         "ds": "MarketplaceScript"
       },
       {
@@ -733,17 +733,7 @@
             "The number of successful installs for the project as reported on the Marketplace during the last month.",
             "This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero."
         ],
-        "scale": [12,10,8,6],
-        "ds": "MarketplaceScript"
-      },
-      {
-        "name": "Number of failed install on the Marketplace",
-        "mnemo": "MKT_INSTALL_FAILED_1M",
-        "desc": [
-            "The number of failed installs for the project as reported on the Marketplace during the last month.",
-            "THis measure uses the list of failed installs available on the Marketplace for every registered project. Here is <a href=\"http://marketplace.eclipse.org/unsuccessful/installs/1373403/error_report.csv\">an example of log page</a>, errors tab. If the project is not registered on the Marketplace, the metric should be zero."
-        ],
-        "scale": [12,10,8,6],
+        "scale": [100,500,1000,10000],
         "ds": "MarketplaceScript"
       },
       {
