@@ -305,7 +305,7 @@
         "desc": [
             "Ratio of conform changeability practices on the number of checked changeability practices."
         ],
-        "scale": [12,10,8,6],
+        "scale": [20,40,60,80],
         "ds": "RuleCheckingScript"
       },
       {
@@ -332,7 +332,7 @@
         "desc": [
             "Ratio of conform analysability practices on the number of checked analysability practices."
         ],
-        "scale": [12,10,8,6],
+        "scale": [20,40,60,80],
         "ds": "RuleCheckingScript"
       },
       {
@@ -359,7 +359,7 @@
         "desc": [
             "Ratio of conform reliability practices on the number of checked reliability practices."
         ],
-        "scale": [12,10,8,6],
+        "scale": [20,40,60,80],
         "ds": "RuleCheckingScript"
       },
       {
@@ -386,7 +386,7 @@
         "desc": [
             "Ratio of conform reusability practices on the number of checked reusability practices."
         ],
-        "scale": [12,10,8,6],
+        "scale": [20,40,60,80],
         "ds": "RuleCheckingScript"
       },
       {
@@ -694,7 +694,7 @@
             "Is the source_repo info correctly filled in the PMI records? ",
             "The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible."
         ],
-        "scale": [12,10,8,6],
+        "scale": [2,3,4,5],
         "ds": "PMI"
       },
       {

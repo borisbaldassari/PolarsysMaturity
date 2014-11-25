@@ -26,6 +26,9 @@ my %flat_attributes;
 my %flat_rules;
 my %flat_refs;
 
+#    my @colours = ("#ebebeb", "#ccffff", "#99d9ff", "#66b3ff", "#338cff", "#0066ff");
+my @colours = ("#ebebeb", "#FFFF66", "#CCF24D", "#99E633", "#66D91A", "#33CC00");
+
 my %project_errors;
 
 my %metrics_ds;
@@ -82,8 +85,6 @@ sub generate_progressbar($$) {
 	push( @{$project_errors{$project_id}}, $err);
         print "\n$err\n";
     }
-#    my @colours = ("#ebebeb", "#ccffff", "#99d9ff", "#66b3ff", "#338cff", "#0066ff");
-    my @colours = ("#ebebeb", "#FFFF66", "#CCF24D", "#99E633", "#66D91A", "#33CC00");
 
     my $percent = 20 * $value;
 
@@ -132,6 +133,22 @@ sub populate_qm($$$$) {
 	    &populate_qm($child->{"children"}, $attrs, $questions, $metrics);
 	}
     }
+}
+
+sub compute_scale($@) {
+    my $value = shift;
+    my $scale = shift;
+
+    my $is_ordered = 0;
+    my $indicator = 0;
+
+    if ( $value < $scale->[0] ) { $indicator = 1 }
+    elsif ( $value < $scale->[1] ) { $indicator = 2 }
+    elsif ( $value < $scale->[2] ) { $indicator = 3 }
+    elsif ( $value < $scale->[3] ) { $indicator = 4 }
+    else { $indicator = 5 }
+    
+    return $indicator;
 }
 
 
@@ -184,9 +201,10 @@ sub generate_project($$$) {
 	my $raw_attrs = &read_json($json_attrs);
 
 	$html_ret_attrs .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-	$html_ret_attrs .= "<tr><th width=\"50%\">Name</th>" 
-	    . "<th width=\"30%\">Mnemo</th>" 
-	    . "<th width=\"20%\">Value</th></tr>\n";
+	$html_ret_attrs .= "<tr><th width=\"40%\">Name</th>" 
+	    . "<th width=\"20%\">Mnemo</th>" 
+	    . "<th width=\"20%\">Value</th>" 
+	    . "<th width=\"20%\">Indicator</th></tr>\n";
 	foreach my $a_mnemo (sort keys %{$raw_attrs->{"children"}}) {
 	    my $a_value = $raw_attrs->{"children"}->{$a_mnemo};
 	    $project_attrs{$a_mnemo} = $a_value;
@@ -195,7 +213,9 @@ sub generate_project($$$) {
 		    . $a_mnemo . '">' . $flat_attributes{$a_mnemo}{'name'} . "</a></td><td>" ;
 		$html_ret_attrs .= "<a href=\"/documentation/attributes.html#" 
 		    . $a_mnemo . '">' . $a_mnemo . "</a></td><td>";
-		$html_ret_attrs .= "" . $a_value . "</td></tr>\n";
+		$html_ret_attrs .= "" . $a_value . "</td>";
+		$html_ret_attrs .= "<td><span class=\"label label-scale\" style=\"background-color: " 
+		    . $colours[$a_value] . "\">" . $a_value . "</span></td></tr>\n";
 	    } else {
 		my $err = "WARN: attribute [" . $a_mnemo . 
 		    "] is not referenced in attributes definition file.\n";
@@ -231,9 +251,10 @@ sub generate_project($$$) {
         my $raw_questions = &read_json($json_questions);
 
 	$html_ret_questions .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-	$html_ret_questions .= "<tr><th width=\"50%\">Name</th>" 
-	    . "<th width=\"30%\">Mnemo</th>" 
-	    . "<th width=\"20%\">Value</th></tr>\n";
+	$html_ret_questions .= "<tr><th width=\"40%\">Name</th>" 
+	    . "<th width=\"20%\">Mnemo</th>" 
+	    . "<th width=\"20%\">Value</th>"
+	    . "<th width=\"20%\">Indicator</th></tr>\n";
 	foreach my $q_mnemo (sort keys %{$raw_questions->{"children"}}) {
 	    my $q_value = $raw_questions->{"children"}->{$q_mnemo};
 	    $project_questions{$q_mnemo} = $q_value;
@@ -242,7 +263,9 @@ sub generate_project($$$) {
 		    . $q_mnemo . '">' . $flat_questions{$q_mnemo}{'name'} . "</a></td><td>" ;
 		$html_ret_questions .= "<a href=\"/documentation/questions.html#" 
 		    . $q_mnemo . '">' . $q_mnemo . "</a></td><td>";
-		$html_ret_questions .= "" . $q_value . "</td></tr>\n";
+		$html_ret_questions .= "" . $q_value . "</td>";
+		$html_ret_questions .= "<td><span class=\"label label-scale\" style=\"background-color: " 
+		    . $colours[$q_value] . "\">" . $q_value . "</span></td></tr>\n";
 	    } else {
 		my $err = "WARN: question [" . $q_mnemo . 
 		    "] is not referenced in questions definition file.\n";
@@ -296,9 +319,10 @@ sub generate_project($$$) {
     
     # loop through values and display them in a table.
     $html_ret_values .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-    $html_ret_values .= "<tr><th width=\"50%\">Name</th>" 
-	. "<th width=\"30%\">Mnemo</th>" 
-	. "<th width=\"20%\">Value</th></tr>\n";
+    $html_ret_values .= "<tr><th width=\"40%\">Name</th>" 
+	. "<th width=\"20%\">Mnemo</th>" 
+	. "<th width=\"20%\">Value</th>" 
+	. "<th width=\"20%\">Indicator</th></tr>\n";
     foreach my $v_mnemo (sort keys %project_values) {
 	if (exists($flat_metrics{$v_mnemo})) {
 	    my $v_name = $flat_metrics{$v_mnemo}->{"name"};
@@ -306,7 +330,15 @@ sub generate_project($$$) {
 		. $v_mnemo . "\">" . $v_name . "</a></td>" ;
 	    $html_ret_values .= "<td><a href=\"/documentation/metrics.html#" 
 		. $v_mnemo . "\">" . $v_mnemo . "</a></td>";
-	    $html_ret_values .= "<td>" . $project_values{$v_mnemo} . "</td></tr>\n";
+	    $html_ret_values .= "<td>" . $project_values{$v_mnemo} . "</td>";
+	    if ($flat_metrics{$v_mnemo}{"active"}) {
+		my $ind = &compute_scale($project_values{$v_mnemo}, $flat_metrics{$v_mnemo}{"scale"});
+		$html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
+		    . $colours[$ind] . "\">" . $ind . "</span></td></tr>\n";
+	    } else {
+		$html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
+		    . "lightgray\"> Not Active </span></td></tr>\n";
+	    }
 	} else {
 	    if ($debug) {
 		print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n";
@@ -806,7 +838,12 @@ sub describe_metric($) {
 	$text .= "<p class=\"desc\"><strong>Active</strong>: undefined</p>\n";
     }
 
-    my $used_by_str = $metric->{"parents"} || "undefined";
+    my @used_by;
+    foreach my $parent (sort keys %{$metric->{"parents"}}) {
+	push(@used_by, "<a href=\"questions.html#$parent\">" . $parent . "</a>\n");
+    }
+    my $used_by_str = join(', ', @used_by);
+
     $text .= "<p class=\"desc\"><strong>Used by</strong>: $used_by_str</p>\n";
 
     $text .= "<p class=\"desc\"><strong>Description</strong>:</p>\n";
@@ -814,8 +851,14 @@ sub describe_metric($) {
         $text .= "<p class=\"desc\">$desc</p>\n";
     }
 
-    my $scale_str = join(',', @{$metric_scale});
-
+    my @scales;
+    for (my $i = 0 ; $i < 4 ; $i++) {
+	push(@scales, "</span> &lt; " . $metric_scale->[$i] 
+	     . " &le; <span class=\"label label-scale\" style=\"background-color: " 
+	     . $colours[$i+2] . ";\"> " . (${i} + 2) . " ");
+    }
+    my $scale_str = "<span class=\"label label-scale\" style=\"background-color: " . $colours[1] 
+	. "\"> 1 " . join(' ', @scales) . "</span>";
     $text .= "<p class=\"desc\"><strong>Scale</strong>: $scale_str</p>\n";
 
     return $text;
@@ -912,7 +955,7 @@ sub generate_doc_metrics($) {
 		$flat_metrics{$metric_mnemo}{"active"} = "false"; 
 	    }
 	}
-	$flat_metrics{$metric_mnemo}{"parents"} = join(", ", sort keys %tmp_nodes);
+	$flat_metrics{$metric_mnemo}{"parents"} = \%tmp_nodes;
     }
  
 #    print Dumper(%flat_metrics);

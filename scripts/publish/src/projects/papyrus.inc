@@ -237,7 +237,7 @@ function update(source) {
   nodeUpdate.select("circle")
       .attr("r", 7)
       .style("fill", function(d) { 
-        return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+        return d.value ? mycolours[parseInt(d.value)] : "lightgray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
@@ -308,7 +308,7 @@ function click(d) {
       mynode.name = mymetrics[d.mnemo]["name"]; 
       mynode.datasource = mymetrics[d.mnemo]["ds"]; 
 
-      var mydiv = d3.select("div#details-box");
+      var mydiv = d3.select("div#details-box-project");
 
       mydiv.text("");
 
@@ -346,7 +346,7 @@ function click(d) {
       mynode.name = myconcepts[d.mnemo]["name"]; 
       mynode.question = myconcepts[d.mnemo]["question"]; 
 
-      var mydiv = d3.select("div#details-box");
+      var mydiv = d3.select("div#details-box-project");
 
       mydiv.text("");
 
@@ -382,7 +382,7 @@ function click(d) {
       mynode.description = myattrs[d.mnemo]["desc"]; 
       mynode.name = myattrs[d.mnemo]["name"]; 
 
-      var mydiv = d3.select("div#details-box");
+      var mydiv = d3.select("div#details-box-project");
 
       mydiv.text("");
 
@@ -422,49 +422,49 @@ function click(d) {
                   <div role="tabpanel" class="tab-pane fade" id="attrs"><br />
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="questions"><br /><table class="table table-striped table-condensed table-hover">
-<tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
-<tr><td><a href="/documentation/questions.html#CODE_CLONE">Code cloning</a></td><td><a href="/documentation/questions.html#CODE_CLONE">CODE_CLONE</a></td><td>1</td></tr>
-<tr><td><a href="/documentation/questions.html#CPX">Code complexity</a></td><td><a href="/documentation/questions.html#CPX">CPX</a></td><td>4</td></tr>
-<tr><td><a href="/documentation/questions.html#INSTALL">Installations</a></td><td><a href="/documentation/questions.html#INSTALL">INSTALL</a></td><td>2</td></tr>
-<tr><td><a href="/documentation/questions.html#MKT_FEEDBACK">Marketplace feedback</a></td><td><a href="/documentation/questions.html#MKT_FEEDBACK">MKT_FEEDBACK</a></td><td>3</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_DEV_ACTIVITY">Developer ML activity</a></td><td><a href="/documentation/questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a></td><td>4</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_DEV_DIVERSITY">Developer ML diversity</a></td><td><a href="/documentation/questions.html#MLS_DEV_DIVERSITY">MLS_DEV_DIVERSITY</a></td><td>3</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_DEV_RESPONSIVENESS">Developer ML responsiveness</a></td><td><a href="/documentation/questions.html#MLS_DEV_RESPONSIVENESS">MLS_DEV_RESPONSIVENESS</a></td><td>3</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_DEV_SUPPORT">Developer ML support</a></td><td><a href="/documentation/questions.html#MLS_DEV_SUPPORT">MLS_DEV_SUPPORT</a></td><td>3</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_USR_ACTIVITY">User ML activity</a></td><td><a href="/documentation/questions.html#MLS_USR_ACTIVITY">MLS_USR_ACTIVITY</a></td><td>5</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_USR_DIVERSITY">User ML diversity</a></td><td><a href="/documentation/questions.html#MLS_USR_DIVERSITY">MLS_USR_DIVERSITY</a></td><td>4</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">User ML responsiveness</a></td><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">MLS_USR_RESPONSIVENESS</a></td><td>4</td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">User ML support</a></td><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">MLS_USR_SUPPORT</a></td><td>4</td></tr>
-<tr><td><a href="/documentation/questions.html#PUB_ITS_INFO">ITS information access</a></td><td><a href="/documentation/questions.html#PUB_ITS_INFO">PUB_ITS_INFO</a></td><td>5</td></tr>
-<tr><td><a href="/documentation/questions.html#PUB_SCM_INFO">SCM information access</a></td><td><a href="/documentation/questions.html#PUB_SCM_INFO">PUB_SCM_INFO</a></td><td>5</td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>5</td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>5</td></tr>
-<tr><td><a href="/documentation/questions.html#TST_COV">Test coverage</a></td><td><a href="/documentation/questions.html#TST_COV">TST_COV</a></td><td>4</td></tr>
+<tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
+<tr><td><a href="/documentation/questions.html#CODE_CLONE">Code cloning</a></td><td><a href="/documentation/questions.html#CODE_CLONE">CODE_CLONE</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/questions.html#CPX">Code complexity</a></td><td><a href="/documentation/questions.html#CPX">CPX</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/questions.html#INSTALL">Installations</a></td><td><a href="/documentation/questions.html#INSTALL">INSTALL</a></td><td>2</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MKT_FEEDBACK">Marketplace feedback</a></td><td><a href="/documentation/questions.html#MKT_FEEDBACK">MKT_FEEDBACK</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_DEV_ACTIVITY">Developer ML activity</a></td><td><a href="/documentation/questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_DEV_DIVERSITY">Developer ML diversity</a></td><td><a href="/documentation/questions.html#MLS_DEV_DIVERSITY">MLS_DEV_DIVERSITY</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_DEV_RESPONSIVENESS">Developer ML responsiveness</a></td><td><a href="/documentation/questions.html#MLS_DEV_RESPONSIVENESS">MLS_DEV_RESPONSIVENESS</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_DEV_SUPPORT">Developer ML support</a></td><td><a href="/documentation/questions.html#MLS_DEV_SUPPORT">MLS_DEV_SUPPORT</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_USR_ACTIVITY">User ML activity</a></td><td><a href="/documentation/questions.html#MLS_USR_ACTIVITY">MLS_USR_ACTIVITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_USR_DIVERSITY">User ML diversity</a></td><td><a href="/documentation/questions.html#MLS_USR_DIVERSITY">MLS_USR_DIVERSITY</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">User ML responsiveness</a></td><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">MLS_USR_RESPONSIVENESS</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">User ML support</a></td><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">MLS_USR_SUPPORT</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/questions.html#PUB_ITS_INFO">ITS information access</a></td><td><a href="/documentation/questions.html#PUB_ITS_INFO">PUB_ITS_INFO</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#PUB_SCM_INFO">SCM information access</a></td><td><a href="/documentation/questions.html#PUB_SCM_INFO">PUB_SCM_INFO</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#TST_COV">Test coverage</a></td><td><a href="/documentation/questions.html#TST_COV">TST_COV</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 </table>
 
 
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
-<tr><th width="50%">Name</th><th width="30%">Mnemo</th><th width="20%">Value</th></tr>
-<tr><td><a href="/documentation/metrics.html#DL_REPO_1M">Number of downloads on the web site</a></td><td><a href="/documentation/metrics.html#DL_REPO_1M">DL_REPO_1M</a></td><td>0</td></tr>
-<tr><td><a href="/documentation/metrics.html#DL_UPDATE_SITE_1M">Number of downloads on update site</a></td><td><a href="/documentation/metrics.html#DL_UPDATE_SITE_1M">DL_UPDATE_SITE_1M</a></td><td>0</td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS_AUTH_1M</a></td><td>41</td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>0.03</td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">ITS_FIX_MED_1M</a></td><td>33.67</td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS_UPDATES_1M</a></td><td>243</td></tr>
-<tr><td><a href="/documentation/metrics.html#MKT_FAV">Number of favourites on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_FAV">MKT_FAV</a></td><td>0</td></tr>
-<tr><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">Number of successfull installs on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">MKT_INSTALL_SUCCESS_1M</a></td><td>0</td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_1M">Developer ML response ratio</a></td><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_1M">MLS_DEV_RESP_RATIO_1M</a></td><td>2.64</td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_1M">Developer ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_1M">MLS_DEV_SUBJ_1M</a></td><td>11</td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_VOL_1M">Developer ML posts</a></td><td><a href="/documentation/metrics.html#MLS_DEV_VOL_1M">MLS_DEV_VOL_1M</a></td><td>40</td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_1M">User ML response time</a></td><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_1M">MLS_USR_RESP_TIME_MED_1M</a></td><td>0.02</td></tr>
-<tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>21</td></tr>
-<tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Milestone success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>33</td></tr>
-<tr><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">ITS information</a></td><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">PUB_ITS_INFO_PMI</a></td><td>5</td></tr>
-<tr><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">SCM information</a></td><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">PUB_SCM_INFO_PMI</a></td><td>5</td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM_COMMITS_1M</a></td><td>34</td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">SCM_COMMITTED_FILES_1M</a></td><td>635</td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>8</td></tr>
+<tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
+<tr><td><a href="/documentation/metrics.html#DL_REPO_1M">Number of downloads on the web site</a></td><td><a href="/documentation/metrics.html#DL_REPO_1M">DL_REPO_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#DL_UPDATE_SITE_1M">Number of downloads on update site</a></td><td><a href="/documentation/metrics.html#DL_UPDATE_SITE_1M">DL_UPDATE_SITE_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS_AUTH_1M</a></td><td>41</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>0.03</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">ITS_FIX_MED_1M</a></td><td>33.67</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS_UPDATES_1M</a></td><td>243</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MKT_FAV">Number of favourites on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_FAV">MKT_FAV</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">Number of successfull installs on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">MKT_INSTALL_SUCCESS_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_1M">Developer ML response ratio</a></td><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_1M">MLS_DEV_RESP_RATIO_1M</a></td><td>2.64</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_1M">Developer ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_1M">MLS_DEV_SUBJ_1M</a></td><td>11</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_DEV_VOL_1M">Developer ML posts</a></td><td><a href="/documentation/metrics.html#MLS_DEV_VOL_1M">MLS_DEV_VOL_1M</a></td><td>40</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_1M">User ML response time</a></td><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_1M">MLS_USR_RESP_TIME_MED_1M</a></td><td>0.02</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>21</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Milestone success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>33</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">ITS information</a></td><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">PUB_ITS_INFO_PMI</a></td><td>5</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">SCM information</a></td><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">PUB_SCM_INFO_PMI</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM_COMMITS_1M</a></td><td>34</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">SCM_COMMITTED_FILES_1M</a></td><td>635</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>8</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 </table>
 </div>
                   <div role="tabpanel" class="tab-pane fade" id="practices"><br /></div>

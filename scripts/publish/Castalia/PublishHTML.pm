@@ -239,7 +239,7 @@ function update(source) {
   nodeUpdate.select("circle")
       .attr("r", 7)
       .style("fill", function(d) { 
-        return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+        return d.value ? mycolours[parseInt(d.value)] : "lightgray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
@@ -310,7 +310,7 @@ function click(d) {
       mynode.name = mymetrics[d.mnemo]["name"]; 
       mynode.datasource = mymetrics[d.mnemo]["ds"]; 
 
-      var mydiv = d3.select("div#details-box");
+      var mydiv = d3.select("div#details-box-project");
 
       mydiv.text("");
 
@@ -348,7 +348,7 @@ function click(d) {
       mynode.name = myconcepts[d.mnemo]["name"]; 
       mynode.question = myconcepts[d.mnemo]["question"]; 
 
-      var mydiv = d3.select("div#details-box");
+      var mydiv = d3.select("div#details-box-project");
 
       mydiv.text("");
 
@@ -384,7 +384,7 @@ function click(d) {
       mynode.description = myattrs[d.mnemo]["desc"]; 
       mynode.name = myattrs[d.mnemo]["name"]; 
 
-      var mydiv = d3.select("div#details-box");
+      var mydiv = d3.select("div#details-box-project");
 
       mydiv.text("");
 
