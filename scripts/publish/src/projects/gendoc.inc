@@ -244,11 +244,11 @@ function update(source) {
   nodeEnter.append("circle")
       .attr("r", 1e-6)
       .style("fill", function(d) { 
-        return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+        return d.ind ? mycolours[d.ind] : "gray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
-	  //return d.value ? mycolours[parseInt(d.value)] : "gray"; 
+	  //return d.ind ? mycolours[d.ind] : "gray"; 
       });
 
   nodeEnter.append("text")
@@ -257,7 +257,7 @@ function update(source) {
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + ")" : d.name;
+        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
       })
       .style("fill-opacity", 1e-6);
 
@@ -269,11 +269,10 @@ function update(source) {
   nodeUpdate.select("circle")
       .attr("r", 7)
       .style("fill", function(d) { 
-        return d.value ? mycolours[parseInt(d.value)] : "lightgray"; 
+        return d.ind ? mycolours[d.ind] : "lightgray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
-	  //return d.value ? mycolours[parseInt(d.value)] : "gray"; 
       });
 
   nodeUpdate.select("text")
@@ -338,6 +337,8 @@ function click(d) {
       mynode = d;
       mynode.description = mymetrics[d.mnemo]["desc"]; 
       mynode.name = mymetrics[d.mnemo]["name"]; 
+//      mynode.ind = mymetrics[d.mnemo]["ind"];
+//      mynode.value = mymetrics[d.mnemo]["value"];
       mynode.datasource = mymetrics[d.mnemo]["ds"]; 
 
       var mydiv = d3.select("div#details-box-project");
@@ -355,6 +356,14 @@ function click(d) {
       pactive = p.append('span');
       pactive.classed("details", true);
       pactive.text(mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1));
+
+      p = mydiv.append('p');
+      ptitle = p.append('span');
+      ptitle.classed("details-title", true); 
+      ptitle.text("Value:")
+      pactive = p.append('span');
+      pactive.classed("details", true);
+      pactive.text(d.value + " ( " + d.ind + " )");
 
       p = mydiv.append('p');
       ptitle = p.append('span');
@@ -394,6 +403,14 @@ function click(d) {
       pactive.classed("details", true);
       pactive.text(mynode.active);
 
+      p = mydiv.append('p');
+      ptitle = p.append('span');
+      ptitle.classed("details-title", true); 
+      ptitle.text("Value:")
+      pactive = p.append('span');
+      pactive.classed("details", true);
+      pactive.text(d.ind);
+
       pdesct = mydiv.append('p');
       pdesct.classed("details-title", true); 
       pdesct.text("Question:")
@@ -429,6 +446,14 @@ function click(d) {
       pactive = pactive.append('span');
       pactive.classed("details", true);
       pactive.text(mynode.active);
+
+      p = mydiv.append('p');
+      ptitle = p.append('span');
+      ptitle.classed("details-title", true); 
+      ptitle.text("Value:")
+      pactive = p.append('span');
+      pactive.classed("details", true);
+      pactive.text(d.ind);
 
       pdesct = mydiv.append('p');
       pdesct.classed("details-title", true); 

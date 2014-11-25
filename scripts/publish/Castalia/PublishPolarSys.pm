@@ -103,39 +103,54 @@ sub generate_doc_qm($$) {
 
     print "    - Reading qm from [$qm_file].\n";
     my $raw_qm = &read_json($qm_file);
-    &populate_qm($raw_qm->{"children"}, undef, undef, undef);
+    &populate_qm($raw_qm->{"children"}, undef, undef, undef, undef);
     
     return encode_json($raw_qm);
 }
 
 
-sub populate_qm($$$$) {
+# Recursive function to populate the quality model with information from 
+# external files (metrics/questions/attributes definition). 
+# Params:
+#   $qm a ref to an array of children
+#   $attrs a ref to hash of values for attributes
+#   $questions a ref to hash of values for questions
+#   $metrics a ref to hash of values for metrics
+#   $inds a ref to hash of indicators for metrics
+sub populate_qm($$$$$) {
     my $qm = shift;
     my $attrs = shift;
     my $questions = shift;
     my $metrics = shift;
-
+    my $inds = shift;
+    
     foreach my $child (@{$qm}) {
 	my $mnemo = $child->{"mnemo"};
 	
 	if ($child->{"type"} =~ m!attribute!) {
 	    $child->{"name"} = $flat_attributes{$mnemo}{"name"};
-	    $child->{"value"} = $attrs->{$mnemo};
+	    $child->{"ind"} = $attrs->{$mnemo};
 	} elsif ($child->{"type"} =~ m!concept!) {
 	    $child->{"name"} = $flat_questions{$mnemo}{"name"};
-	    $child->{"value"} = $questions->{$mnemo};
+	    $child->{"ind"} = $questions->{$mnemo};
 	} elsif ($child->{"type"} =~ m!metric!) {
 	    $child->{"name"} = $flat_metrics{$mnemo}{"name"};
 	    $child->{"value"} = $metrics->{$mnemo};
+	    $child->{"ind"} = $inds->{$mnemo};
 	} else { print "WARN: cannot recognize type " . $child->{"type"} . "\n"; }
 
 	if ( exists($child->{"children"}) ) {
-	    &populate_qm($child->{"children"}, $attrs, $questions, $metrics);
+	    &populate_qm($child->{"children"}, $attrs, $questions, $metrics, $inds);
 	}
     }
 }
 
-sub compute_scale($@) {
+
+# Computes indicators (range 1-5) from metrics (wide range).
+# Params:
+#   $value the value to be converted
+#   $scale a ref to an array of 4 values describing the scale
+sub compute_scale($$) {
     my $value = shift;
     my $scale = shift;
 
@@ -291,6 +306,7 @@ sub generate_project($$$) {
     # Import Measures file for project
     my $metrics_ok = 0;
     my %project_values;
+    my %project_inds;
     my $html_ret_values = "";
 
     # We read metrics from all files named "*_metrics*.json"
@@ -333,6 +349,7 @@ sub generate_project($$$) {
 	    $html_ret_values .= "<td>" . $project_values{$v_mnemo} . "</td>";
 	    if ($flat_metrics{$v_mnemo}{"active"}) {
 		my $ind = &compute_scale($project_values{$v_mnemo}, $flat_metrics{$v_mnemo}{"scale"});
+		$project_inds{$v_mnemo} = $ind;
 		$html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
 		    . $colours[$ind] . "\">" . $ind . "</span></td></tr>\n";
 	    } else {
@@ -352,7 +369,7 @@ sub generate_project($$$) {
 
     # Generate quality model json file for project with values.
     my $raw_qm = &read_json($qm_file);
-    &populate_qm($raw_qm->{"children"}, \%project_attrs, \%project_questions, \%project_values);
+    &populate_qm($raw_qm->{"children"}, \%project_attrs, \%project_questions, \%project_values, \%project_inds);
     my $out_json = $dir_out_projects . "/${project_id}_qm.json";
     print "    - Writing qm JSON to file [$out_json]..\n";    
     open(my $fh, '>', $out_json) or die "Could not open file '$out_json' $!";
