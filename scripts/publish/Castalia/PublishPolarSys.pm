@@ -832,10 +832,10 @@ sub describe_metric($) {
 
     my $text = "<p id=\"$mnemo\"><strong>$metric_name</strong> ( $mnemo )</p>\n";
 
-    if (defined($metric_active)) {
-	$text .= "<p class=\"desc\"><strong>Active</strong>: $metric_active</p>\n";
+    if (defined($metric_active) && $metric_active) {
+	$text .= "<p class=\"desc\"><strong>Active</strong>: true</p>\n";
     } else {
-	$text .= "<p class=\"desc\"><strong>Active</strong>: undefined</p>\n";
+	$text .= "<p class=\"desc\"><strong>Active</strong>: false</p>\n";
     }
 
     my @used_by;

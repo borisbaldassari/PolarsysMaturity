@@ -674,7 +674,7 @@
             "The number of milestones that occured during the last five releases.",
             "Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time."
         ],
-        "scale": [12,10,8,6],
+        "scale": [1,5,10,20],
 	    "ds": "PMI"
       },
       {
@@ -684,7 +684,7 @@
             "What is the percentage of successful reviews over the past 5 releases?",
             "The reviews are retrieved from the project management infrastructure record, and are considered successful if the entry is equal to <mark>success</mark>. If there are less than 5 releases defined, the percentage is computed on these only."
         ],
-        "scale": [12,10,8,6],
+        "scale": [20,40,60,80],
         "ds": "PMI"
       },
       {
@@ -704,7 +704,7 @@
             "Is the bugzilla info correctly filled in the PMI records?",
             "The project management infrastructure file holds information about one or more bugzilla instances. This test checks that at least one bugzilla instance is defined, with a product identifier, a create_url to enter a new issue, and a query_url to fetch all the issues for the project."
         ],
-        "scale": [12,10,8,6],
+        "scale": [2,3,4,5],
         "ds": "PMI"
       },
       {

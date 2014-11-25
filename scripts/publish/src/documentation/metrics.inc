@@ -28,7 +28,7 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="repo_all"><br />
                   <ul class="list-group">
                 <li class="list-group-item"><p id="ATTRS"><strong>Average number of attributes</strong> ( ATTRS )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -36,7 +36,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ATTRS_PUBLIC"><strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -45,7 +45,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="CLASSES"><strong>Number of classes</strong> ( CLASSES )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations.</p>
@@ -73,7 +73,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DL_REPO_1M"><strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -81,7 +81,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DL_UPDATE_SITE_1M"><strong>Number of downloads on update site</strong> ( DL_UPDATE_SITE_1M )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -89,7 +89,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DOPD"><strong>Number of distinct operands</strong> ( DOPD )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of distinct operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -98,7 +98,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DOPT"><strong>Number of distinct operators</strong> ( DOPT )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of distinct operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -107,14 +107,14 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="FILES"><strong>Number of files</strong> ( FILES )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of code files (e.g. with a <code>.java</code> for the Java language) in the source code hierarchy. The SonarQube measure used for this purpose is <mark>files</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="FUNCTIONS"><strong>Number of functions</strong> ( FUNCTIONS )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of functions defined in the source files.</p>
@@ -123,7 +123,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="IP_LOG_COV"><strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#IP_LOG">IP_LOG</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -168,7 +168,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_ISSUES_OPENERS_1M"><strong>Number of issue openers during last month</strong> ( ITS_ISSUES_OPENERS_1M )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
@@ -176,7 +176,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_ISSUES_OPEN_1M"><strong>Number of issues opened during last month</strong> ( ITS_ISSUES_OPEN_1M )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code</p>
@@ -193,7 +193,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#LIC">LIC</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -202,7 +202,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MDIT"><strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#CPX">CPX</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -212,7 +212,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="METHS"><strong>Average number of methods</strong> ( METHS )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -220,7 +220,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="METHS_PUBLIC"><strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -337,7 +337,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_ANA"><strong>Number of non-conformities for analysability</strong> ( NCC_ANA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code.</p>
@@ -354,7 +354,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_CHA"><strong>Number of non-conformities for changeability</strong> ( NCC_CHA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code.</p>
@@ -371,7 +371,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REL"><strong>Number of non-conformities for reliability</strong> ( NCC_REL )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code.</p>
@@ -388,7 +388,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REU"><strong>Number of non-conformities for reusability</strong> ( NCC_REU )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code.</p>
@@ -405,7 +405,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NEST"><strong>Maximum depth of nesting</strong> ( NEST )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
@@ -419,10 +419,10 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of milestones that occured during the last five releases.</p>
 <p class="desc">Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PLAN_ON_TIME">PLAN_ON_TIME</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -436,10 +436,10 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">What is the percentage of successful reviews over the past 5 releases?</p>
 <p class="desc">The reviews are retrieved from the project management infrastructure record, and are considered successful if the entry is equal to <mark>success</mark>. If there are less than 5 releases defined, the percentage is computed on these only.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API"><strong>Public API</strong> ( PUBLIC_API )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
@@ -447,7 +447,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
@@ -455,7 +455,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUB_CONF_VOL"><strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUB_CONF">PUB_CONF</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -470,7 +470,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the bugzilla info correctly filled in the PMI records?</p>
 <p class="desc">The project management infrastructure file holds information about one or more bugzilla instances. This test checks that at least one bugzilla instance is defined, with a product identifier, a create_url to enter a new issue, and a query_url to fetch all the issues for the project.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUB_SCM_INFO_PMI"><strong>SCM information</strong> ( PUB_SCM_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -482,28 +482,28 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_ANA"><strong>Number of violated rules for analysability</strong> ( RKO_ANA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of analysability rules that have at least one violation on the artefact.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_CHA"><strong>Number of violated rules for changeability</strong> ( RKO_CHA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of changeability rules that have at least one violation on the artefact.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_REL"><strong>Number of violated rules for reliability</strong> ( RKO_REL )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reliability rules that have at least one violation on the artefact.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_REU"><strong>Number of violated rules for reusability</strong> ( RKO_REU )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reusability rules that have at least one violation on the artefact.</p>
@@ -542,28 +542,28 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RULES_ANA"><strong>Number of rules for analysability</strong> ( RULES_ANA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for analysability.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RULES_CHA"><strong>Number of rules for changeability</strong> ( RULES_CHA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for changeability.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RULES_REL"><strong>Number of rules for reliability</strong> ( RULES_REL )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reliability.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RULES_REU"><strong>Number of rules for reusability</strong> ( RULES_REU )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reusability.</p>
@@ -617,7 +617,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 50000 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 500000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1000000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SURVEY_INSTALL"><strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#INSTALL">INSTALL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -625,7 +625,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="TOPD"><strong>Total number of operands</strong> ( TOPD )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -634,7 +634,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="TOPT"><strong>Total number of operators</strong> ( TOPT )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -730,7 +730,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_ISSUES_OPENERS_1M"><strong>Number of issue openers during last month</strong> ( ITS_ISSUES_OPENERS_1M )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
@@ -738,7 +738,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_ISSUES_OPEN_1M"><strong>Number of issues opened during last month</strong> ( ITS_ISSUES_OPEN_1M )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code</p>
@@ -887,7 +887,7 @@
                   <div role="tabpanel" class="tab-pane fade" id="repo_Manual"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="PUB_CONF_VOL"><strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUB_CONF">PUB_CONF</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -896,7 +896,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SURVEY_INSTALL"><strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#INSTALL">INSTALL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -936,10 +936,10 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of milestones that occured during the last five releases.</p>
 <p class="desc">Milestones are retrieved from the PMI file and are counted whatever their target release is. Milestones are useful to assess the maturity of the release and improves predictability of the project's output, in terms of quality and time.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PLAN_ON_TIME">PLAN_ON_TIME</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -953,7 +953,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">What is the percentage of successful reviews over the past 5 releases?</p>
 <p class="desc">The reviews are retrieved from the project management infrastructure record, and are considered successful if the entry is equal to <mark>success</mark>. If there are less than 5 releases defined, the percentage is computed on these only.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PUB_ITS_INFO_PMI"><strong>ITS information</strong> ( PUB_ITS_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -962,7 +962,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the bugzilla info correctly filled in the PMI records?</p>
 <p class="desc">The project management infrastructure file holds information about one or more bugzilla instances. This test checks that at least one bugzilla instance is defined, with a product identifier, a create_url to enter a new issue, and a query_url to fetch all the issues for the project.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PUB_SCM_INFO_PMI"><strong>SCM information</strong> ( PUB_SCM_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -978,7 +978,7 @@
                   <div role="tabpanel" class="tab-pane fade" id="repo_RuleCheckingScript"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="NCC_ANA"><strong>Number of non-conformities for analysability</strong> ( NCC_ANA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code.</p>
@@ -995,7 +995,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_CHA"><strong>Number of non-conformities for changeability</strong> ( NCC_CHA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code.</p>
@@ -1012,7 +1012,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REL"><strong>Number of non-conformities for reliability</strong> ( NCC_REL )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code.</p>
@@ -1029,7 +1029,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REU"><strong>Number of non-conformities for reusability</strong> ( NCC_REU )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code.</p>
@@ -1046,28 +1046,28 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_ANA"><strong>Number of violated rules for analysability</strong> ( RKO_ANA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of analysability rules that have at least one violation on the artefact.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_CHA"><strong>Number of violated rules for changeability</strong> ( RKO_CHA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of changeability rules that have at least one violation on the artefact.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_REL"><strong>Number of violated rules for reliability</strong> ( RKO_REL )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reliability rules that have at least one violation on the artefact.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_REU"><strong>Number of violated rules for reusability</strong> ( RKO_REU )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reusability rules that have at least one violation on the artefact.</p>
@@ -1106,28 +1106,28 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RULES_ANA"><strong>Number of rules for analysability</strong> ( RULES_ANA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for analysability.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RULES_CHA"><strong>Number of rules for changeability</strong> ( RULES_CHA )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for changeability.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RULES_REL"><strong>Number of rules for reliability</strong> ( RULES_REL )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reliability.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RULES_REU"><strong>Number of rules for reusability</strong> ( RULES_REU )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reusability.</p>
@@ -1138,7 +1138,7 @@
                   <div role="tabpanel" class="tab-pane fade" id="repo_SonarQube"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="ATTRS"><strong>Average number of attributes</strong> ( ATTRS )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1146,7 +1146,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ATTRS_PUBLIC"><strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1155,7 +1155,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="CLASSES"><strong>Number of classes</strong> ( CLASSES )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations.</p>
@@ -1183,7 +1183,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="DOPD"><strong>Number of distinct operands</strong> ( DOPD )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of distinct operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -1192,7 +1192,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="DOPT"><strong>Number of distinct operators</strong> ( DOPT )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of distinct operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -1201,14 +1201,14 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="FILES"><strong>Number of files</strong> ( FILES )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of code files (e.g. with a <code>.java</code> for the Java language) in the source code hierarchy. The SonarQube measure used for this purpose is <mark>files</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="FUNCTIONS"><strong>Number of functions</strong> ( FUNCTIONS )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of functions defined in the source files.</p>
@@ -1217,7 +1217,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MDIT"><strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#CPX">CPX</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1227,7 +1227,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="METHS"><strong>Average number of methods</strong> ( METHS )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1235,7 +1235,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="METHS_PUBLIC"><strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1244,7 +1244,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NEST"><strong>Maximum depth of nesting</strong> ( NEST )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
@@ -1252,7 +1252,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API"><strong>Public API</strong> ( PUBLIC_API )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
@@ -1260,7 +1260,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
@@ -1277,7 +1277,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 50000 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 500000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1000000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="TOPD"><strong>Total number of operands</strong> ( TOPD )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -1286,7 +1286,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="TOPT"><strong>Total number of operators</strong> ( TOPT )</p>
-<p class="desc"><strong>Active</strong>: undefined</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
@@ -1347,7 +1347,7 @@
                   <div role="tabpanel" class="tab-pane fade" id="repo_Unknown"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="DL_REPO_1M"><strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1355,7 +1355,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="DL_UPDATE_SITE_1M"><strong>Number of downloads on update site</strong> ( DL_UPDATE_SITE_1M )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1363,7 +1363,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="IP_LOG_COV"><strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#IP_LOG">IP_LOG</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
@@ -1372,7 +1372,7 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 12 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 8 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
-<p class="desc"><strong>Active</strong>: false</p>
+<p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#LIC">LIC</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
