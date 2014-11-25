@@ -172,10 +172,17 @@ foreach my $project (@projects) {
 	print "  * Creating folder [$dir_src_projects].\n";
 	mkdir $dir_src_projects or die "Cannot create folder $dir_src_projects.\n";
     }
+
+    # Generating single metrics file for project.
+    my $metrics_full = $publish_ps->generate_project_metrics($project_id, $project, $dir_out_projects);    
+
+    # Generating project indicators, questions and attributes for $project_id.
+    my $quality = $publish_ps->generate_inds($project_id, $file_qm, $metrics_full, $dir_out_projects);
+
     print "  * Generating project analysis for [$project_id] from [$project] in [$dir_src_projects].\n";
     
     my $doc_project = $publish_ps->generate_project($project, $dir_out_projects, $file_qm);
-    my $filename = $dir_src_projects . '/' . $project_id . ".inc";
+    $filename = $dir_src_projects . '/' . $project_id . ".inc";
     open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
     print $fh $doc_project;
     close $fh;

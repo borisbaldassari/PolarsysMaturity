@@ -45,7 +45,7 @@ sub new($$$) {
     return $self;
 }
 
-sub generate_downloads() {
+sub generate_downloads($$$$) {
     my $project_id = shift;
     my $type = shift;
     my $dir_out_projects = shift;
@@ -104,7 +104,7 @@ sub generate_doc_qm($$) {
     print "    - Reading qm from [$qm_file].\n";
     my $raw_qm = &read_json($qm_file);
     &populate_qm($raw_qm->{"children"}, undef, undef, undef, undef);
-    
+
     return encode_json($raw_qm);
 }
 
@@ -155,15 +155,167 @@ sub compute_scale($$) {
     my $scale = shift;
 
     my $is_ordered = 0;
-    my $indicator = 0;
+    my $indicator;
 
-    if ( $value < $scale->[0] ) { $indicator = 1 }
-    elsif ( $value < $scale->[1] ) { $indicator = 2 }
-    elsif ( $value < $scale->[2] ) { $indicator = 3 }
-    elsif ( $value < $scale->[3] ) { $indicator = 4 }
-    else { $indicator = 5 }
-    
+    if (defined($value)) {
+	if ( $value < $scale->[0] ) { $indicator = 1 }
+	elsif ( $value < $scale->[1] ) { $indicator = 2 }
+	elsif ( $value < $scale->[2] ) { $indicator = 3 }
+	elsif ( $value < $scale->[3] ) { $indicator = 4 }
+	else { $indicator = 5 }
+    }
+
     return $indicator;
+}
+
+
+sub aggregate_inds($$$$$) {
+    my $raw_qm = shift;
+    my $values = shift;
+    my $inds_ref = shift;
+    my $questions_ref = shift;
+    my $attrs_ref = shift;
+
+    my $mnemo = $raw_qm->{"mnemo"};
+    my $coef;
+
+    # Are we in a leaf?
+    if (exists($raw_qm->{"children"})) {
+	# No: we have children beneath.
+	my @children = @{$raw_qm->{"children"}};
+	my @coefs;
+	my $full_weight;
+	foreach my $child (@children) {
+	    my $child_value = &aggregate_inds($child, $values, $inds_ref, $questions_ref, $attrs_ref);
+#	    print "DBG Child indicator is [$child_value] for " . $child->{"mnemo"} . "\n";
+	    if (defined($child_value)) {
+		if (exists($child->{"weight"})) {
+		    $full_weight += $child->{"weight"};
+		    push(@coefs, $child_value * $child->{"weight"});
+		} else {
+		    # Default value for weight is 1.
+		    $full_weight += 1; 
+		    push(@coefs, $child_value) if (defined($child_value));
+		}
+	    }
+	}
+
+	# Only store indicator if it is not null
+	if ((scalar @coefs) != 0) {
+	    my $sum;
+	    map { $sum += $_ } @coefs;
+	    
+	    $coef = $sum / $full_weight;
+	    my $coef_round = int($coef);
+	    print "DBG $coef rounded to $coef_round.\n";
+	    $raw_qm->{"ind"} = $coef_round;
+	    $coef = $coef_round;
+	}
+    } else {
+	# Yes: compute the ind value of leaf.
+	$coef = &compute_scale($values->{$mnemo}, $flat_metrics{$mnemo}{"scale"});
+	$raw_qm->{"ind"} = $coef;
+    }
+
+    # Populate hashes of values for indicators, questions, attributes.
+    if (defined($coef)) {
+	if ($raw_qm->{"type"} =~ m!attribute!) {
+	    $attrs_ref->{$mnemo} = $coef;
+	} elsif ($raw_qm->{"type"} =~ m!concept!) {
+	    $questions_ref->{$mnemo} = $coef;
+	} elsif ($raw_qm->{"type"} =~ m!metric!) {
+	    $inds_ref->{$mnemo} = $coef;
+	}
+    }
+    
+    my $tmp_coef = $coef || "undef";
+    print "    - Computed [$tmp_coef] [$mnemo].\n" if ($debug);
+
+    return $coef;
+}
+
+
+sub generate_inds($$$) {
+    my $self = shift;
+    my $project_id = shift;
+    my $file_qm = shift;
+    my $values = shift;
+    my $dir_out_projects = shift;
+
+    print "  * Generating project data for [$project_id] from [$file_qm] and values in [$dir_out_projects].\n";
+
+    my $raw_qm = &read_json($file_qm);
+
+    my %project_indicators;
+    my %project_questions;
+    my %project_attrs;
+
+    print "    - Aggregating data from leaves up to attributes.\n";
+    &aggregate_inds($raw_qm->{"children"}->[0], $values, \%project_indicators, \%project_questions, \%project_attrs);
+
+    print "    - Generating project indicators..\n";
+    &generate_downloads($project_id, 'indicators', $dir_out_projects, \%project_indicators);
+
+    print "    - Generating project questions..\n";
+    &generate_downloads($project_id, 'questions', $dir_out_projects, \%project_questions);
+
+    print "    - Generating project attributes..\n";
+    &generate_downloads($project_id, 'attributes', $dir_out_projects, \%project_attrs);
+
+    &populate_qm($raw_qm->{"children"}, 
+		 \%project_attrs, 
+		 \%project_questions, 
+		 $values, 
+		 \%project_indicators);
+
+    # And write json file with full qm for visualisation
+    my $out_json = $dir_out_projects . "/${project_id}_qm.json";
+    print "    - Writing qm JSON to file [$out_json]..\n";    
+    open(my $fh, '>', $out_json) or die "Could not open file '$out_json' $!";
+    print $fh encode_json($raw_qm);
+    close $fh;
+}
+
+
+# Import measures files for project and write a single
+# file including all metrics in the projects/ directory
+#
+sub generate_project_metrics($$$) {
+    my $self = shift;
+    my $project_id = shift;
+    my $project_from = shift;
+    my $dir_out_projects = shift;
+
+    print "  * Generating single metric file for [$project_id] from [$project_from] in [$dir_out_projects].\n";
+
+    my %project_values;
+    
+    # We read metrics from all files named "*_metrics*.json"
+    my @json_metrics_files = <${project_from}/${project_id}*_metrics*.json>;
+    for my $file (@json_metrics_files) {
+	print "    - Reading metrics values file from [$file]..\n";    
+	
+	my $raw_values = &read_json($file);
+	
+	# We want to be able to read files from bitergia (raw) AND
+	# from our scripts (extended).
+	if (exists($raw_values->{"name"})) {
+	    # Our format 
+	    foreach my $metric (sort keys %{$raw_values->{"children"}}) {
+		$project_values{uc($metric)} = $raw_values->{"children"}->{$metric};
+	    }
+	} else {
+	    print "WARN Deprecated format for metrics values file [$file]. Reading anyway.\n" if ($debug);
+	    # Bitergia format
+	    foreach my $metric (keys %{$raw_values}) {
+		$project_values{uc($metric)} = $raw_values->{$metric};
+	    }        
+	}
+    }
+    
+    &generate_downloads($project_id, 'metrics', $dir_out_projects, \%project_values);
+
+    return \%project_values;
 }
 
 
@@ -175,8 +327,6 @@ sub generate_project($$$) {
 
     my @path = File::Spec->splitdir($project_path);
     my $project_id = $path[-1];
-
-
 
     # Import PMI file
     my %project_pmi;
@@ -207,7 +357,7 @@ sub generate_project($$$) {
 
     # We read attributes from file named "<project>_attributes.json"
     my $attrs_ok = 0;
-    my $json_attrs = "${project_path}/${project_id}_attributes.json";
+    my $json_attrs = "${dir_out_projects}/${project_id}_attributes.json";
     my $html_ret_attrs = "";
     my %project_attrs;
     if (-e $json_attrs) {
@@ -243,7 +393,7 @@ sub generate_project($$$) {
 
 	$html_ret_attrs .= "</table>\n";
 	
-	&generate_downloads($project_id, 'attributes', $dir_out_projects, \%project_attrs);
+#	&generate_downloads($project_id, 'attributes', $dir_out_projects, \%project_attrs);
 
 	$html_ret_attrs .= "\n";
 	$attrs_ok = 1;
@@ -257,7 +407,7 @@ sub generate_project($$$) {
 
     # We read questions from file named "<project>_questions.json"
     my $questions_ok = 0;
-    my $json_questions = "${project_path}/${project_id}_questions.json";
+    my $json_questions = "${dir_out_projects}/${project_id}_questions.json";
     my $html_ret_questions = "";
     my %project_questions;
     if (-e $json_questions) {
@@ -293,7 +443,7 @@ sub generate_project($$$) {
 
 	$html_ret_questions .= "</table>\n";
 	
-	&generate_downloads($project_id, 'questions', $dir_out_projects, \%project_questions);
+#	&generate_downloads($project_id, 'questions', $dir_out_projects, \%project_questions);
 
 	$html_ret_questions .= "\n";
 	$questions_ok = 1;
@@ -303,78 +453,85 @@ sub generate_project($$$) {
         print $err;
     }
 
-    # Import Measures file for project
+    # XXX
+    # Read metrics from single file produced before.
     my $metrics_ok = 0;
-    my %project_values;
-    my %project_inds;
+    my $json_metrics = "${dir_out_projects}/${project_id}_metrics.json";
+    my $json_indicators = "${dir_out_projects}/${project_id}_indicators.json";
     my $html_ret_values = "";
+    my %project_values;
+    my %project_indicators;
 
-    # We read metrics from all files named "*_metrics*.json"
-    my @json_metrics_files = <${project_path}/${project_id}*_metrics*.json>;
-    for my $file (@json_metrics_files) {
-	print "    - Reading metrics values file from [$file]..\n";    
-	
-	my $raw_values = &read_json($file);
-	
-	# We want to be able to read files from bitergia (raw) AND
-	# from our scripts (extended).
-	if (exists($raw_values->{"name"})) {
-	    # Our format 
-	    foreach my $metric (sort keys %{$raw_values->{"children"}}) {
-		$project_values{$metric} = $raw_values->{"children"}->{$metric};
-	    }
-	} else {
-	    print "WARN Deprecated format for metrics values file [$file]. Reading anyway.\n" if ($debug);
-	    # Bitergia format
-	    foreach my $metric (keys %{$raw_values}) {
-		$project_values{uc($metric)} = $raw_values->{$metric};
-	    }        
-	}
-	$metrics_ok = 1;
-    }
+    if (-e $json_metrics) {
+        print "    - Reading metrics from [$json_metrics]..\n";    
     
-    # loop through values and display them in a table.
-    $html_ret_values .= "<table class=\"table table-striped table-condensed table-hover\">\n";
-    $html_ret_values .= "<tr><th width=\"40%\">Name</th>" 
-	. "<th width=\"20%\">Mnemo</th>" 
-	. "<th width=\"20%\">Value</th>" 
-	. "<th width=\"20%\">Indicator</th></tr>\n";
-    foreach my $v_mnemo (sort keys %project_values) {
-	if (exists($flat_metrics{$v_mnemo})) {
-	    my $v_name = $flat_metrics{$v_mnemo}->{"name"};
-	    $html_ret_values .= "<tr><td><a href=\"/documentation/metrics.html#" 
-		. $v_mnemo . "\">" . $v_name . "</a></td>" ;
-	    $html_ret_values .= "<td><a href=\"/documentation/metrics.html#" 
-		. $v_mnemo . "\">" . $v_mnemo . "</a></td>";
-	    $html_ret_values .= "<td>" . $project_values{$v_mnemo} . "</td>";
-	    if ($flat_metrics{$v_mnemo}{"active"}) {
-		my $ind = &compute_scale($project_values{$v_mnemo}, $flat_metrics{$v_mnemo}{"scale"});
-		$project_inds{$v_mnemo} = $ind;
-		$html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
-		    . $colours[$ind] . "\">" . $ind . "</span></td></tr>\n";
+        my $raw_metrics = &read_json($json_metrics);
+	%project_values = %{$raw_metrics->{"children"}};
+        my $raw_indicators = &read_json($json_indicators);
+	%project_indicators = %{$raw_indicators->{"children"}};
+
+	$html_ret_values .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+	$html_ret_values .= "<tr><th width=\"40%\">Name</th>" 
+	    . "<th width=\"20%\">Mnemo</th>" 
+	    . "<th width=\"20%\">Value</th>"
+	    . "<th width=\"20%\">Indicator</th></tr>\n";
+	foreach my $m_mnemo (sort keys %{$raw_metrics->{"children"}}) {
+	    my $m_value = $raw_metrics->{"children"}->{$m_mnemo};
+	    my $m_ind = $raw_indicators->{"children"}->{$m_mnemo} || 0;
+	    $project_values{$m_mnemo} = $m_value;
+
+	    if (exists($flat_metrics{$m_mnemo})) {
+		my $m_name = $flat_metrics{$m_mnemo}->{"name"};
+		$html_ret_values .= "<tr><td><a href=\"/documentation/metrics.html#" 
+		    . $m_mnemo . "\">" . $m_name . "</a></td>" ;
+		$html_ret_values .= "<td><a href=\"/documentation/metrics.html#" 
+		    . $m_mnemo . "\">" . $m_mnemo . "</a></td>";
+		$html_ret_values .= "<td>" . $project_values{$m_mnemo} . "</td>";
+		if ($flat_metrics{$m_mnemo}{"active"}) {
+		    my $ind = $project_indicators{$m_mnemo};
+		    $html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
+			. $colours[$ind] . "\">" . $ind . "</span></td></tr>\n";
+		} else {
+		    $html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
+			. "lightgray\"> Not Active </span></td></tr>\n";
+		}
 	    } else {
-		$html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
-		    . "lightgray\"> Not Active </span></td></tr>\n";
-	    }
-	} else {
-	    if ($debug) {
-		print "WARN: metric [" . $v_mnemo . "] is not referenced in metrics definition file.\n";
+		my $err = "INFO: metric [" . $m_mnemo . 
+		    "] is not referenced in metrics definition file.\n";
+		push( @{$project_errors{$project_id}}, $err);
+		if ($debug) {
+		    print $err;
+		}
 	    }
 	}
+
+	$html_ret_values .= "</table>\n";
+	$html_ret_values .= "\n";
+	$metrics_ok = 1;
+    } else {
+	my $err = "ERR: Cannot find metrics file [$json_attrs] for [$project_id].\n";
+	push( @{$project_errors{$project_id}}, $err);
+        print $err;
     }
-    $html_ret_values .= "</table>\n";
 
-    &generate_downloads($project_id, 'metrics', $dir_out_projects, \%project_values);
 
+    # # loop through values and display them in a table.
+    # $html_ret_values .= "<table class=\"table table-striped table-condensed table-hover\">\n";
+    # $html_ret_values .= "<tr><th width=\"40%\">Name</th>" 
+    # 	. "<th width=\"20%\">Mnemo</th>" 
+    # 	. "<th width=\"20%\">Value</th>" 
+    # 	. "<th width=\"20%\">Indicator</th></tr>\n";
+    # foreach my $v_mnemo (sort keys %project_values) {
+    # }
+    # $html_ret_values .= "</table>\n";
 
     # Generate quality model json file for project with values.
-    my $raw_qm = &read_json($qm_file);
-    &populate_qm($raw_qm->{"children"}, \%project_attrs, \%project_questions, \%project_values, \%project_inds);
-    my $out_json = $dir_out_projects . "/${project_id}_qm.json";
-    print "    - Writing qm JSON to file [$out_json]..\n";    
-    open(my $fh, '>', $out_json) or die "Could not open file '$out_json' $!";
-    print $fh encode_json($raw_qm);
-    close $fh;
+    # my $raw_qm = &read_json($qm_file);
+    # print "DBG Call populate_qm.\n";
+    # print Dumper(%project_attrs);
+    # print Dumper(%project_questions);
+    # print Dumper(%project_values);
+    # &populate_qm($raw_qm->{"children"}, \%project_attrs, \%project_questions, \%project_values, \%project_indicators);
 
 
     # Import Rules file for project
@@ -785,7 +942,7 @@ sub generate_doc_attributes($) {
 	$flat_attributes{$attr->{"mnemo"}} = $attr;
 	$vol_attrs++;
     }
-    
+
     print " [$vol_attrs] attributes found.\n";
     
     my $html_ret = '
@@ -889,28 +1046,17 @@ sub find_qm_node($$$$) {
     my $nodes_array = shift;
     my $father_mnemo = shift;
 
-#    print "DBG Dumper node\n";
-#    print Dumper(@{$raw_qm_array});
-    
     foreach my $child (@{$raw_qm_array}) {
-#	print "DBG search $mnemo type $type in node " . $child->{"mnemo"} . "\n";
-#	print "DBG Dumper child\n";
-#	print Dumper($child);
 	if (($child->{"type"} eq $type) and ($child->{"mnemo"} eq $mnemo)) {
-#	    print "DBG found node " . $child->{"mnemo"} . " with father " . $father_mnemo . "\n";
 	    $child->{"father"} = $father_mnemo;
 	    push(@{$nodes_array}, $child);
 	    next;
 	}
 	if (exists($child->{"children"})) {
-#	    print "DBG Invoking func on children of " . $child->{"mnemo"} . ".\n";
 	    &find_qm_node($child->{"children"}, $type, $mnemo, $nodes_array, $child->{"mnemo"});
 	} else {
-#		print "DBG No more children found (leaf).\n";
 	}
-#	print "DBG Next child now.\n";
     }
-#    print "DBG No more children (end of func).\n";
 }
 
 
@@ -974,9 +1120,7 @@ sub generate_doc_metrics($) {
 	}
 	$flat_metrics{$metric_mnemo}{"parents"} = \%tmp_nodes;
     }
- 
-#    print Dumper(%flat_metrics);
-   
+    
     # Create the tabs.
     $html_ret .= ' 
               <div class="tabbable">
