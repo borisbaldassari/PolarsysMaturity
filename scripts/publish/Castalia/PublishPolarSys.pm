@@ -207,7 +207,6 @@ sub aggregate_inds($$$$$) {
 	    
 	    $coef = $sum / $full_weight;
 	    my $coef_round = int($coef);
-	    print "DBG $coef rounded to $coef_round.\n";
 	    $raw_qm->{"ind"} = $coef_round;
 	    $coef = $coef_round;
 	}
