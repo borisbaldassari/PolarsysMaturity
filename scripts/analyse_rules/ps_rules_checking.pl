@@ -300,7 +300,7 @@ if (defined($opt_verbose)) {
 }
 
 my $total = 0;
-print Dumper(%violations);
+#print Dumper(%violations);
 foreach my $violation (keys %violations) {
 	if ( exists( $rules{$violation} ) ) {
 	    $total += $violations{$violation}->{"vol"};
