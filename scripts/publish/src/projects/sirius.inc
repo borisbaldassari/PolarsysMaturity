@@ -26,7 +26,7 @@
                           <div class="panel-body">
                             <dl>
                             <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div></div></dd>
-                            <dt>Ecosystem Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
+                            <dt>Ecosystem Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div></div></dd>
                             <dt>Process Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div></div></dd>
                             <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div></div></dd>
                             </dl>
@@ -43,7 +43,7 @@
                           <div class="panel-body">
                             <dl>
                             <dt>Activity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div></div></dd>
-                            <dt>Diversity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
+                            <dt>Diversity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div></div></dd>
                             <dt>Responsiveness</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
                             <dt>Support</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
                             </dl>
@@ -58,7 +58,7 @@
                         <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
                           <div class="panel-body">
                             <dl>
-                            <dt>Configuration Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
+                            <dt>Configuration Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div></div></dd>
                             <dt>Change Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div></div></dd>
                             <dt>Planning Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
                             <dt>Test Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
@@ -451,8 +451,8 @@ function click(d) {
 <tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>2</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_FEEDBACK">User feedback</a></td><td><a href="/documentation/attributes.html#QM_FEEDBACK">QM_FEEDBACK</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a></td><td><a href="/documentation/attributes.html#QM_PLAN">QM_PLAN</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
@@ -462,7 +462,7 @@ function click(d) {
 <tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a></td><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">QM_RESPONSIVENESS</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_REU">Reusability</a></td><td><a href="/documentation/attributes.html#QM_REU">QM_REU</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_SUPPORT">Support</a></td><td><a href="/documentation/attributes.html#QM_SUPPORT">QM_SUPPORT</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_USAGE">Usage</a></td><td><a href="/documentation/attributes.html#QM_USAGE">QM_USAGE</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 </table>
@@ -487,8 +487,8 @@ function click(d) {
 <tr><td><a href="/documentation/questions.html#PUB_ITS_INFO">ITS information access</a></td><td><a href="/documentation/questions.html#PUB_ITS_INFO">PUB_ITS_INFO</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PUB_SCM_INFO">SCM information access</a></td><td><a href="/documentation/questions.html#PUB_SCM_INFO">PUB_SCM_INFO</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_USAGE">SCM usage</a></td><td><a href="/documentation/questions.html#SCM_USAGE">SCM_USAGE</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_USAGE">SCM usage</a></td><td><a href="/documentation/questions.html#SCM_USAGE">SCM_USAGE</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 </table>
 
 
@@ -529,7 +529,7 @@ function click(d) {
 <tr><td><a href="/documentation/metrics.html#RULES_REU">Number of rules for reusability</a></td><td><a href="/documentation/metrics.html#RULES_REU">RULES_REU</a></td><td>18</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM_COMMITS_1M</a></td><td>126</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">SCM_COMMITTED_FILES_1M</a></td><td>2268</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>9</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>9</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 </table>
 
 </div>
