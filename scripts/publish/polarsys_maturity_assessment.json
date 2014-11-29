@@ -29,6 +29,10 @@
 		    "name": "Metrics",
 		    "url": "/documentation/metrics.html" 
 		},
+		{ 
+		    "name": "Scales",
+		    "url": "/documentation/scales.html" 
+		},
 		{
 		    "name": "Practices",
 		    "url": "/documentation/rules.html" 
