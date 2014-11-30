@@ -7,6 +7,8 @@
 
               <p>The <a href="http://marketplace.eclipse.org/">Eclipse marketplace</a> lists the products and companies that make the Eclipse ecosystem. Users can also directly install plugins from the marketplace into their own IDE by a single drag'n'drop. To setup the scales, we selected a set of 15 projects and applied the set of metrics to them. </p>
               
+              <hr />
+              
               <h4>Thresholds</h4>
 
               <p>The initial set of thresholds for metrics in Grimoire is the following.</p>
@@ -23,6 +25,8 @@
                   <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 500 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
               </ul>
+              
+              <hr />
 
               <h4>Discussion</h4>
               
@@ -48,6 +52,8 @@
                   <p>Users can directly install a product from the Marketplace itself with a simple drag and drop in the IDE. This is a good way to disseminate a product, since users can test it really easily. The number of successful install counts only components installed from the Marketplace during the last 30 days.</p>
                 </div>
               </div>
+              
+              <hr />
 
               <h4>List of projects used for the benchmark</h4>
               

@@ -11,6 +11,8 @@
               
               <p>The evaluation for rules is manual, since it implies compiling the code or retrieving binaries (class files) for FindBugs. To setup the scales, we selected a list of projects and applied our analysis script on the resulting set.</p>
               
+              <hr />
+              
               <h4>Thresholds</h4>
 
               <p>The initial set of thresholds for metrics for rules impacting <strong>Analysability</strong> is the following.</p>
@@ -20,13 +22,39 @@
                   <a href="metrics.html#NCC_ANA_IDX"><strong>Average number of non-conformities for analysability</strong></a> (NCC_ANA_IDX)<br />
                   <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
+                <li class="list-group-item">
                   <a href="metrics.html#ROKR_ANA"><strong>Adherence to analysability rules</strong></a> (ROKR_ANA)<br />
                   <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2 </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3 </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4 </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
               </ul>
               
               <p>The initial set of thresholds for metrics for rules impacting <strong>Changeability</strong> is the following.</p>
+              
+              <hr />
 
+              <h4>Discussion</h4>
+              
+              <p>The set of metrics used for the benchmark can be <a href="/data/metrics_rulechecking_all.csv">downloaded here</a>.</p>
+              
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="/images/number_of_favourites_on_the_marketplace_for_eclipse_projects.svg" class="thumbnail">
+                    <img src="/images/number_of_favourites_on_the_marketplace_for_eclipse_projects.svg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <p>People can select any number of projects as their favourites. This data is then displayed on the project's badge (in the UI) and made available through the Marketplace REST API. It shows the interest of people in projects. To improve this, some projects ask their users to go vote for them on the Marketplace.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="/images/number_of_successful_install_on_the_marketplace_for_eclipse_projects.svg" class="thumbnail">
+                    <img src="/images/number_of_successful_install_on_the_marketplace_for_eclipse_projects.svg" alt="...">
+                  </a>
+                </div>
+              </div>
+              
+              <hr />
 
               <h4>List of projects used for the benchmark</h4>
               

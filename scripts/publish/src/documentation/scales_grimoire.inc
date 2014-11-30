@@ -12,6 +12,8 @@
                 <li><a href="http://dashboard.eclipse.org/its.html"><i class="fa fa-li fa-check-square-o"></i>197 ticketing trackers</a>.</li>
               </ul>
               
+              <hr />
+              
               <h4>Thresholds</h4>
 
               <p>The initial set of thresholds for metrics in Grimoire is the following:</p>
@@ -36,6 +38,8 @@
                   [1.0, 1.14285714286, 1.4430952381, 3.79487179487]
                 </li>
               </ul>
+              
+              <hr />
               
               <h4>Discussion</h4>
             

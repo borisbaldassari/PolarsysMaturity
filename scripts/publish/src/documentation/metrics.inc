@@ -51,16 +51,15 @@
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="CLONE_IDX"><strong>Cloning density</strong> ( CLONE_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#CODE_CLONE">CODE_CLONE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
+<p class="desc">The amount of duplicated lines in the code, divided by the number of lines. This is expressed as a percentage; The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for duplications: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href="http://docs.codehaus.org/display/SONAR/Duplications">http://docs.codehaus.org/display/SONAR/Duplications</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 40 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="COMR"><strong>Comment rate</strong> ( COMR )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -95,7 +94,6 @@
 <p class="desc">The number of distinct operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DOPT"><strong>Number of distinct operators</strong> ( DOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -104,14 +102,12 @@
 <p class="desc">The number of distinct operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="FILES"><strong>Number of files</strong> ( FILES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of code files (e.g. with a <code>.java</code> for the Java language) in the source code hierarchy. The SonarQube measure used for this purpose is <mark>files</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="FUNCTIONS"><strong>Number of functions</strong> ( FUNCTIONS )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -120,7 +116,6 @@
 <p class="desc">The number of functions defined in the source files.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>functions</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Methods">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="IP_LOG_COV"><strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -173,7 +168,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_ISSUES_OPEN_1M"><strong>Number of issues opened during last month</strong> ( ITS_ISSUES_OPEN_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -181,7 +175,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_UPDATES_1M"><strong>ITS updates</strong> ( ITS_UPDATES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -342,7 +335,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_ANA_IDX"><strong>Average number of non-conformities for analysability</strong> ( NCC_ANA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -351,7 +343,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_CHA"><strong>Number of non-conformities for changeability</strong> ( NCC_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -359,7 +351,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -368,7 +359,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REL"><strong>Number of non-conformities for reliability</strong> ( NCC_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -376,7 +367,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -385,7 +375,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REU"><strong>Number of non-conformities for reusability</strong> ( NCC_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -393,7 +383,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -402,7 +391,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NEST"><strong>Maximum depth of nesting</strong> ( NEST )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -410,7 +399,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
 <p class="desc">Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PLAN_MILESTONES_VOL"><strong>Number of milestones</strong> ( PLAN_MILESTONES_VOL )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -444,7 +432,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -452,7 +439,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUB_CONF_VOL"><strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -486,28 +472,24 @@
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of analysability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_CHA"><strong>Number of violated rules for changeability</strong> ( RKO_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of changeability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_REL"><strong>Number of violated rules for reliability</strong> ( RKO_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reliability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_REU"><strong>Number of violated rules for reusability</strong> ( RKO_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reusability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ROKR_ANA"><strong>Adherence to analysability rules</strong> ( ROKR_ANA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -546,28 +528,24 @@
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for analysability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RULES_CHA"><strong>Number of rules for changeability</strong> ( RULES_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for changeability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RULES_REL"><strong>Number of rules for reliability</strong> ( RULES_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reliability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RULES_REU"><strong>Number of rules for reusability</strong> ( RULES_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reusability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITS_1M"><strong>SCM Commits</strong> ( SCM_COMMITS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -631,7 +609,6 @@
 <p class="desc">The total number of operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="TOPT"><strong>Total number of operators</strong> ( TOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -640,7 +617,6 @@
 <p class="desc">The total number of operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="TST_COV_BRANCHES"><strong>Percentage of branches covered by tests</strong> ( TST_COV_BRANCHES )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -735,7 +711,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_ISSUES_OPEN_1M"><strong>Number of issues opened during last month</strong> ( ITS_ISSUES_OPEN_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -743,7 +718,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_UPDATES_1M"><strong>ITS updates</strong> ( ITS_UPDATES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -983,7 +957,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_ANA_IDX"><strong>Average number of non-conformities for analysability</strong> ( NCC_ANA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -992,7 +965,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_CHA"><strong>Number of non-conformities for changeability</strong> ( NCC_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1000,7 +973,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1009,7 +981,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REL"><strong>Number of non-conformities for reliability</strong> ( NCC_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1017,7 +989,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1026,7 +997,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REU"><strong>Number of non-conformities for reusability</strong> ( NCC_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1034,7 +1005,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1043,35 +1013,31 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_ANA"><strong>Number of violated rules for analysability</strong> ( RKO_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of analysability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_CHA"><strong>Number of violated rules for changeability</strong> ( RKO_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of changeability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_REL"><strong>Number of violated rules for reliability</strong> ( RKO_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reliability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RKO_REU"><strong>Number of violated rules for reusability</strong> ( RKO_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of reusability rules that have at least one violation on the artefact.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ROKR_ANA"><strong>Adherence to analysability rules</strong> ( ROKR_ANA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1110,28 +1076,24 @@
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for analysability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RULES_CHA"><strong>Number of rules for changeability</strong> ( RULES_CHA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for changeability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RULES_REL"><strong>Number of rules for reliability</strong> ( RULES_REL )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reliability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="RULES_REU"><strong>Number of rules for reusability</strong> ( RULES_REU )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of rules checked for reusability.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                     </ul>
                   </div>  
@@ -1161,16 +1123,15 @@
 <p class="desc">The number of Java classes, including nested classes, interfaces, enums and annotations.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="CLONE_IDX"><strong>Cloning density</strong> ( CLONE_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#CODE_CLONE">CODE_CLONE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
+<p class="desc">The amount of duplicated lines in the code, divided by the number of lines. This is expressed as a percentage; The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for duplications: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href="http://docs.codehaus.org/display/SONAR/Duplications">http://docs.codehaus.org/display/SONAR/Duplications</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 40 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="COMR"><strong>Comment rate</strong> ( COMR )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1189,7 +1150,6 @@
 <p class="desc">The number of distinct operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="DOPT"><strong>Number of distinct operators</strong> ( DOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1198,14 +1158,12 @@
 <p class="desc">The number of distinct operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="FILES"><strong>Number of files</strong> ( FILES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of code files (e.g. with a <code>.java</code> for the Java language) in the source code hierarchy. The SonarQube measure used for this purpose is <mark>files</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="FUNCTIONS"><strong>Number of functions</strong> ( FUNCTIONS )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1214,7 +1172,6 @@
 <p class="desc">The number of functions defined in the source files.</p>
 <p class="desc">The SonarQube measure used for this purpose is <mark>functions</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.</p>
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Methods">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MDIT"><strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1249,7 +1206,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of nesting counts the highest number of imbricated code (including conditions and loops) in a function. </p>
 <p class="desc">Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API"><strong>Public API</strong> ( PUBLIC_API )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1257,7 +1213,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1265,7 +1220,6 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SLOC"><strong>Source Lines Of Code</strong> ( SLOC )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1283,7 +1237,6 @@
 <p class="desc">The total number of operands found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="TOPT"><strong>Total number of operators</strong> ( TOPT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1292,7 +1245,6 @@
 <p class="desc">The total number of operators found in the function. The measure was first introduced by Halstead in his <i>Elements of Software Sience</i> [<a href="Halstead1977">Halstead</a>]. An operand is an entity on which an operation is performed: e.g. a variable, constant, number. An operator is a construct that performs an operation: e.g. a function, concatenation, addition.</p>
 <p class="desc">Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).</p>
 <p class="desc">See also the Maisqual wiki: <a href="http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="TST_COV_BRANCHES"><strong>Percentage of branches covered by tests</strong> ( TST_COV_BRANCHES )</p>
 <p class="desc"><strong>Active</strong>: true</p>

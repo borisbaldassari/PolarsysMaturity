@@ -137,10 +137,10 @@
         "name": "Cloning density",
         "mnemo": "CLONE_IDX",
         "desc": [
-            "The amount of duplicated lines in the code, divided by the number of lines. The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.",
+            "The amount of duplicated lines in the code, divided by the number of lines. This is expressed as a percentage; The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.",
 	    "See also SonarQube's definition for duplications: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href=\"http://docs.codehaus.org/display/SONAR/Duplications\">http://docs.codehaus.org/display/SONAR/Duplications</a>."
         ],
-        "scale": [10,20,30,50],
+        "scale": [50,40,30,10],
         "ds": "SonarQube"
       },
       {
@@ -165,7 +165,6 @@
 	    "Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).",
 	    "See also the Maisqual wiki: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>."
         ],
-        "scale": [1,2,3,4],
         "ds": "SonarQube"
       },
       {
@@ -176,7 +175,6 @@
 	    "Useful measures derived from the set of Halstead operators include program vocabulary (<var>n</var>), program length (<var>N</var>), program volume (<var>V</var>) or estimated effort needed for program comprehension (<var>E</var>).",
 	    "See also the Maisqual wiki: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Halstead_Metrics</a>."
         ],
-        "scale": [1,2,3,4],
         "ds": "SonarQube"
       },
       {
@@ -248,7 +246,7 @@
             "The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.",
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
-        "scale": [2,5,10,100],
+        "scale": [100,30,10,5],
         "ds": "RuleCheckingScript"
       },
       {
@@ -258,7 +256,7 @@
             "The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.",
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
-        "scale": [1,2,5,10],
+        "scale": [10,5,2,1],
         "ds": "RuleCheckingScript"
       },
       {
@@ -268,7 +266,7 @@
             "The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.",
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
-        "scale": [1,2,5,10],
+        "scale": [10,5,2,1],
         "ds": "RuleCheckingScript"
       },
       {
@@ -278,7 +276,7 @@
             "The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.",
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
-        "scale": [10,20,50,100],
+        "scale": [100,50,20,10],
         "ds": "RuleCheckingScript"
       },
       {

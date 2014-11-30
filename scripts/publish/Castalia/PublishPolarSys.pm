@@ -145,6 +145,31 @@ sub populate_qm($$$$$) {
     }
 }
 
+sub is_ordered_scale($) {
+    my $scale = shift;
+
+    # Check if the scale is normal or reverse
+    my $scale_unsort = join(' ', @{$scale});
+    my $scale_sort = join(' ', sort { $a <=> $b } @{$scale});
+    my $scale_revsort = join(' ', sort { $b <=> $a } @{$scale});
+
+    my $is_sorted;
+    if ($scale_sort eq $scale_unsort) {
+	$is_sorted = 1;
+    } elsif ($scale_revsort eq $scale_unsort) {
+	$is_sorted = 0;
+    } else {
+	my $err = "WARN: scale [" . $scale_unsort . 
+	    "] is not right. Not using it.\n";
+	push( @{$project_errors{'MAIN'}}, $err);
+	if ($debug) {
+	    print $err;
+	}
+    }
+
+    return $is_sorted
+}
+
 
 # Computes indicators (range 1-5) from metrics (wide range).
 # Params:
@@ -154,15 +179,24 @@ sub compute_scale($$) {
     my $value = shift;
     my $scale = shift;
 
-    my $is_ordered = 0;
+    my $is_sorted = &is_ordered_scale($scale);
     my $indicator;
 
-    if (defined($value)) {
-	if ( $value < $scale->[0] ) { $indicator = 1 }
-	elsif ( $value < $scale->[1] ) { $indicator = 2 }
-	elsif ( $value < $scale->[2] ) { $indicator = 3 }
-	elsif ( $value < $scale->[3] ) { $indicator = 4 }
-	else { $indicator = 5 }
+    # If the value is not defined we want to return undef
+    if ( defined($value) ) {
+	if ( $is_sorted ) {
+	    if ( $value < $scale->[0] ) { $indicator = 1 }
+	    elsif ( $value < $scale->[1] ) { $indicator = 2 }
+	    elsif ( $value < $scale->[2] ) { $indicator = 3 }
+	    elsif ( $value < $scale->[3] ) { $indicator = 4 }
+	    else { $indicator = 5 }
+	} else {
+	    if ( $value > $scale->[0] ) { $indicator = 1 }
+	    elsif ( $value > $scale->[1] ) { $indicator = 2 }
+	    elsif ( $value > $scale->[2] ) { $indicator = 3 }
+	    elsif ( $value > $scale->[3] ) { $indicator = 4 }
+	    else { $indicator = 5 }	    
+	}
     }
 
     return $indicator;
@@ -187,7 +221,6 @@ sub aggregate_inds($$$$$) {
 	my $full_weight;
 	foreach my $child (@children) {
 	    my $child_value = &aggregate_inds($child, $values, $inds_ref, $questions_ref, $attrs_ref);
-#	    print "DBG Child indicator is [$child_value] for " . $child->{"mnemo"} . "\n";
 	    if (defined($child_value)) {
 		if (exists($child->{"weight"})) {
 		    $full_weight += $child->{"weight"};
@@ -1024,16 +1057,25 @@ sub describe_metric($) {
         $text .= "<p class=\"desc\">$desc</p>\n";
     }
 
-    my @scales;
-    for (my $i = 0 ; $i < 4 ; $i++) {
-	push(@scales, "</span> &lt; " . $metric_scale->[$i] 
-	     . " &le; <span class=\"label label-scale\" style=\"background-color: " 
-	     . $colours[$i+2] . ";\"> " . (${i} + 2) . " ");
+    if ($metric_active && defined($metric_scale)) {
+	my @scales;
+	for (my $i = 0 ; $i < 4 ; $i++) {
+	    my $is_sorted = &is_ordered_scale($metric_scale);
+	    if ($is_sorted == 1) {
+		push(@scales, "</span> &lt; " . $metric_scale->[$i] 
+		     . " &le; <span class=\"label label-scale\" style=\"background-color: " 
+		     . $colours[$i+2] . ";\"> " . (${i} + 2) . " ");
+	    } elsif ($is_sorted == 0) {
+		push(@scales, "</span> &gt; " . $metric_scale->[$i] 
+		     . " &ge; <span class=\"label label-scale\" style=\"background-color: " 
+		     . $colours[$i+2] . ";\"> " . (${i} + 2) . " ");
+	    } else { }
+	}
+	my $scale_str = "<span class=\"label label-scale\" style=\"background-color: " . $colours[1] 
+	    . "\"> 1 " . join(' ', @scales) . "</span>";
+	$text .= "<p class=\"desc\"><strong>Scale</strong>: $scale_str</p>\n";
     }
-    my $scale_str = "<span class=\"label label-scale\" style=\"background-color: " . $colours[1] 
-	. "\"> 1 " . join(' ', @scales) . "</span>";
-    $text .= "<p class=\"desc\"><strong>Scale</strong>: $scale_str</p>\n";
-
+    
     return $text;
 } 
 
