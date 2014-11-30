@@ -51,7 +51,7 @@
             "Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. ",
 	    "See also SonarQube's page on comment lines metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines\">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>."
         ],
-        "scale": [1,2,3,4],
+        "scale": [15.35,19.45,23.99,33.20],
         "ds": "SonarQube"
       },
       {
@@ -79,7 +79,7 @@
             "Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.",
 	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API\">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a>"
         ],
-        "scale": [1,2,3,4],
+        "scale": [48347,14018,6497.5,2420.75],
         "ds": "SonarQube"
       },
       {
@@ -130,7 +130,7 @@
             "Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.",
 	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code\">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a>"
         ],
-        "scale": [50000,100000,500000,1000000],
+        "scale": [915828.0,198290.25,97961.5,38776.25],
         "ds": "SonarQube"
       },
       {
@@ -391,16 +391,16 @@
         "name": "Percentage of lines of code covered by tests",
         "mnemo": "TST_COV_LINES",
         "desc": [
-            "The percentage of source lines of code that is exercised by the tests."
+            "The percentage of source lines of code that is exercised by the tests. The SonarQube measure used for this purpose is <mark>line_coverage</mark>."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0,20,48.89,87.70],
         "ds": "SonarQube"
       },
       {
         "name": "Percentage of branches covered by tests",
         "mnemo": "TST_COV_BRANCHES",
         "desc": [
-            "The percentage of branches that is exercised by the tests.",
+            "The percentage of branches that is exercised by the tests. The SonarQube measure used for this purpose is <mark>branch_coverage</mark>.",
             "On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?"
         ],
         "scale": [1,2,3,4],
@@ -420,7 +420,7 @@
         "name": "Test success density",
         "mnemo": "TST_SUCCESS_LAST",
         "desc": [
-            "The percentage of failed tests during the last execution of the test plan.",
+            "The percentage of failed tests during the last execution of the test plan. The SonarQube measure used for this purpose is <mark>test_success_density</mark>.",
             "Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception."
         ],
         "scale": [1,2,3,4],
@@ -533,7 +533,7 @@
             "Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.",
 	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.025078279624,0.0756446929809,0.264255236791,2.54688585321],
         "ds": "Grimoire"
       },
       {
@@ -543,7 +543,7 @@
             "Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.",
 	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.069052601156,0.294543274794,0.948385435841,38.8978930308],
         "ds": "Grimoire"
       },
       {
@@ -553,7 +553,7 @@
             "Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.",
 	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.00869816603364,0.0242054327998,0.0757305045383,1.47492625369],
         "ds": "Grimoire"
       },
       {
@@ -563,7 +563,7 @@
     	    "Average number of commits touching each file in source code management repositories dated during the last month. ",
 	        "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [1,2,3,4],
+        "scale": [3.79487179487,1.4430952381,1.14285714286,1],
         "ds": "Grimoire"
       },
       {
@@ -692,7 +692,7 @@
             "Is the source_repo info correctly filled in the PMI records? ",
             "The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible."
         ],
-        "scale": [2,3,4,5],
+        "scale": [1,2,3,4],
         "ds": "PMI"
       },
       {

@@ -549,14 +549,9 @@
                     "active": "false",
                     "children": [
                       {
-                        "mnemo": "ATTRS_PUBLIC",
+                        "mnemo": "PUBLIC_API",
                         "type": "metric",
-                        "active": "false"
-                      }, 
-                      {
-                        "mnemo": "METHS_PUBLIC",
-                        "type": "metric",
-                        "active": "false"
+                        "active": "true"
                       }
                     ]
                   },

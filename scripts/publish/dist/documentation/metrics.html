@@ -122,21 +122,19 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="repo_all"><br />
                   <ul class="list-group">
                 <li class="list-group-item"><p id="ATTRS"><strong>Average number of attributes</strong> ( ATTRS )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in a class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ATTRS_PUBLIC"><strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="CLASSES"><strong>Number of classes</strong> ( CLASSES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -163,23 +161,21 @@
 <p class="desc">The ratio of source lines of code on the number of comment lines of code.</p>
 <p class="desc">Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
 <p class="desc">See also SonarQube's page on comment lines metrics: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 15.35 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 19.45 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 23.99 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 33.2 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DL_REPO_1M"><strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ .</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DL_UPDATE_SITE_1M"><strong>Number of downloads on update site</strong> ( DL_UPDATE_SITE_1M )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DOPD"><strong>Number of distinct operands</strong> ( DOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -212,13 +208,12 @@
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Methods">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>.</p>
 </li>
                 <li class="list-group-item"><p id="IP_LOG_COV"><strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#IP_LOG">IP_LOG</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Percentage of contributions covered by an appropriate IP log.</p>
 <p class="desc">Eclipse foundation has a very strict <a href="https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf">IP policy</a> and this measure should always be 100%.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_AUTH_1M"><strong>ITS authors</strong> ( ITS_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -280,40 +275,36 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#LIC">LIC</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is there a list of the different licences used in the product?</p>
 <p class="desc">This measure may use an external tool like Ninka (<a href="http://ninka.turingmachine.org/">ninka.turingmachine.org</a>) to identify the licence of components used in the project. Another way would be to identify a file named LICENCES in the root folder.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MDIT"><strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#CPX">CPX</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">See also SonarQube's page on the depth in tree: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a></p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="METHS"><strong>Average number of methods</strong> ( METHS )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operators</a> (TOPT) considered at the class level.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="METHS_PUBLIC"><strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MKT_FAV"><strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -504,12 +495,11 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PLAN_ON_TIME">PLAN_ON_TIME</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the project on time for the next milestone?</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PLAN_REVIEWS_SUCCESS_RATE"><strong>Milestone success rate</strong> ( PLAN_REVIEWS_SUCCESS_RATE )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -521,11 +511,13 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API"><strong>Public API</strong> ( PUBLIC_API )</p>
-<p class="desc"><strong>Active</strong>: false</p>
-<p class="desc"><strong>Used by</strong>: </p>
+<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
+</p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 48347 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 14018 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 6497.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 2420.75 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -535,13 +527,12 @@
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. </p>
 </li>
                 <li class="list-group-item"><p id="PUB_CONF_VOL"><strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUB_CONF">PUB_CONF</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
 <p class="desc">This metric is not yet active because its retrieval is being debated.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="PUB_ITS_INFO_PMI"><strong>ITS information</strong> ( PUB_ITS_INFO_PMI )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -559,7 +550,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the source_repo info correctly filled in the PMI records? </p>
 <p class="desc">The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="RKO_ANA"><strong>Number of violated rules for analysability</strong> ( RKO_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -649,7 +640,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.025078279624 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0756446929809 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.264255236791 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2.54688585321 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITTED_FILES_1M"><strong>Files committed</strong> ( SCM_COMMITTED_FILES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -658,7 +649,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.069052601156 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.294543274794 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.948385435841 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 38.8978930308 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITTERS_1M"><strong>SCM committers</strong> ( SCM_COMMITTERS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -668,7 +659,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00869816603364 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0242054327998 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0757305045383 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.47492625369 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_STABILITY_1M"><strong>File stability index</strong> ( SCM_STABILITY_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -677,7 +668,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of commits touching each file in source code management repositories dated during the last month. </p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.79487179487 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 1.4430952381 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 1.14285714286 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SLOC"><strong>Source Lines Of Code</strong> ( SLOC )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -686,15 +677,14 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a></p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 50000 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 500000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1000000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 915828 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 198290.25 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 97961.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 38776.25 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SURVEY_INSTALL"><strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#INSTALL">INSTALL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="TOPD"><strong>Total number of operands</strong> ( TOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -717,7 +707,7 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#TST_COV">TST_COV</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The percentage of branches that is exercised by the tests.</p>
+<p class="desc">The percentage of branches that is exercised by the tests. The SonarQube measure used for this purpose is <mark>branch_coverage</mark>.</p>
 <p class="desc">On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
@@ -726,15 +716,15 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#TST_COV">TST_COV</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The percentage of source lines of code that is exercised by the tests.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">The percentage of source lines of code that is exercised by the tests. The SonarQube measure used for this purpose is <mark>line_coverage</mark>.</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 48.89 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 87.7 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="TST_SUCCESS_LAST"><strong>Test success density</strong> ( TST_SUCCESS_LAST )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#TST_SUCCESS">TST_SUCCESS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The percentage of failed tests during the last execution of the test plan.</p>
+<p class="desc">The percentage of failed tests during the last execution of the test plan. The SonarQube measure used for this purpose is <mark>test_success_density</mark>.</p>
 <p class="desc">Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
@@ -920,7 +910,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.025078279624 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0756446929809 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.264255236791 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2.54688585321 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITTED_FILES_1M"><strong>Files committed</strong> ( SCM_COMMITTED_FILES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -929,7 +919,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.069052601156 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.294543274794 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.948385435841 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 38.8978930308 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITTERS_1M"><strong>SCM committers</strong> ( SCM_COMMITTERS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -939,7 +929,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00869816603364 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0242054327998 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0757305045383 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.47492625369 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_STABILITY_1M"><strong>File stability index</strong> ( SCM_STABILITY_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -948,28 +938,26 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of commits touching each file in source code management repositories dated during the last month. </p>
 <p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.79487179487 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 1.4430952381 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 1.14285714286 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                     </ul>
                   </div>  
                   <div role="tabpanel" class="tab-pane fade" id="repo_Manual"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="PUB_CONF_VOL"><strong>Number of publications</strong> ( PUB_CONF_VOL )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUB_CONF">PUB_CONF</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of papers published in conferences, journals, and public web sites.</p>
 <p class="desc">This metric is not yet active because its retrieval is being debated.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SURVEY_INSTALL"><strong>Installation survey</strong> ( SURVEY_INSTALL )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#INSTALL">INSTALL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">A survey stating how much the software has been installed: number of users, geography (are the teams co-located or distributed?), etc.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                     </ul>
                   </div>  
@@ -1007,12 +995,11 @@
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PLAN_NEXT_MILESTONE"><strong>Project is on time for next milestone</strong> ( PLAN_NEXT_MILESTONE )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PLAN_ON_TIME">PLAN_ON_TIME</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the project on time for the next milestone?</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PLAN_REVIEWS_SUCCESS_RATE"><strong>Milestone success rate</strong> ( PLAN_REVIEWS_SUCCESS_RATE )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1039,7 +1026,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is the source_repo info correctly filled in the PMI records? </p>
 <p class="desc">The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                     </ul>
                   </div>  
@@ -1194,21 +1181,19 @@
                   <div role="tabpanel" class="tab-pane fade" id="repo_SonarQube"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="ATTRS"><strong>Average number of attributes</strong> ( ATTRS )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in a class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operands</a> (TOPD) considered at the class level, and is representative of the data complexity of the class (not including the complexity of methods).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ATTRS_PUBLIC"><strong>Average number of public attributes</strong> ( ATTRS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of attributes defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of attributes is meaningful for reusability: if there are a lot of public attributes available, it may be more time-consuming to find the right one. Also, good practices for object-oriented programming recommend to use getters and setters in most cases.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="CLASSES"><strong>Number of classes</strong> ( CLASSES )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1235,7 +1220,7 @@
 <p class="desc">The ratio of source lines of code on the number of comment lines of code.</p>
 <p class="desc">Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
 <p class="desc">See also SonarQube's page on comment lines metrics: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 15.35 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 19.45 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 23.99 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 33.2 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="DOPD"><strong>Number of distinct operands</strong> ( DOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1268,31 +1253,28 @@
 <p class="desc">See also SonarQube's definitions for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Methods">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>.</p>
 </li>
                       <li class="list-group-item"><p id="MDIT"><strong>Depth of Inheritance Tree</strong> ( MDIT )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#CPX">CPX</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href="/documentation/references.html#Chidamber1994">Chidamber1994</a>].</p>
 <p class="desc">See also SonarQube's page on the depth in tree: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a></p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="METHS"><strong>Average number of methods</strong> ( METHS )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ALL_DATA">ALL_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operators</a> (TOPT) considered at the class level.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="METHS_PUBLIC"><strong>Average number of public methods</strong> ( METHS_PUBLIC )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of methods defined in classes with a <code>public</code> modifier.</p>
 <p class="desc">Publicness of methods is meaningful for reusability: if there are a lot of public methods available, it may be more time-consuming to find the right one.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NEST"><strong>Maximum depth of nesting</strong> ( NEST )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1302,11 +1284,13 @@
 <p class="desc">Deeper nesting threatens understandability of code and induces more test cases to run the different branches. Practitioners usually consider that a function with three or more nested levels becomes significantly more difficult for the human mind to apprehend how it works.</p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API"><strong>Public API</strong> ( PUBLIC_API )</p>
-<p class="desc"><strong>Active</strong>: false</p>
-<p class="desc"><strong>Used by</strong>: </p>
+<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Used by</strong>: <a href="questions.html#PUBLIC_DATA">PUBLIC_DATA</a>
+</p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 48347 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 14018 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 6497.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 2420.75 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="PUBLIC_API_DOC"><strong>Public documented API</strong> ( PUBLIC_API_DOC )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1322,7 +1306,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.</p>
 <p class="desc">See also SonarQube's definition for size metrics: <a href="http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href="http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a></p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 50000 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 100000 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 500000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1000000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 915828 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 198290.25 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 97961.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 38776.25 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="TOPD"><strong>Total number of operands</strong> ( TOPD )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -1345,7 +1329,7 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#TST_COV">TST_COV</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The percentage of branches that is exercised by the tests.</p>
+<p class="desc">The percentage of branches that is exercised by the tests. The SonarQube measure used for this purpose is <mark>branch_coverage</mark>.</p>
 <p class="desc">On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
@@ -1354,15 +1338,15 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#TST_COV">TST_COV</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The percentage of source lines of code that is exercised by the tests.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">The percentage of source lines of code that is exercised by the tests. The SonarQube measure used for this purpose is <mark>line_coverage</mark>.</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 48.89 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 87.7 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="TST_SUCCESS_LAST"><strong>Test success density</strong> ( TST_SUCCESS_LAST )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#TST_SUCCESS">TST_SUCCESS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">The percentage of failed tests during the last execution of the test plan.</p>
+<p class="desc">The percentage of failed tests during the last execution of the test plan. The SonarQube measure used for this purpose is <mark>test_success_density</mark>.</p>
 <p class="desc">Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
@@ -1393,38 +1377,34 @@
                   <div role="tabpanel" class="tab-pane fade" id="repo_Unknown"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="DL_REPO_1M"><strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ .</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="DL_UPDATE_SITE_1M"><strong>Number of downloads on update site</strong> ( DL_UPDATE_SITE_1M )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#DOWNLOADS">DOWNLOADS</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="IP_LOG_COV"><strong>IP log code coverage</strong> ( IP_LOG_COV )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#IP_LOG">IP_LOG</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Percentage of contributions covered by an appropriate IP log.</p>
 <p class="desc">Eclipse foundation has a very strict <a href="https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf">IP policy</a> and this measure should always be 100%.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#LIC">LIC</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Is there a list of the different licences used in the product?</p>
 <p class="desc">This measure may use an external tool like Ninka (<a href="http://ninka.turingmachine.org/">ninka.turingmachine.org</a>) to identify the licence of components used in the project. Another way would be to identify a file named LICENCES in the root folder.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                     </ul>
                   </div>  

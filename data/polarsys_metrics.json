@@ -51,7 +51,7 @@
             "Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. ",
 	    "See also SonarQube's page on comment lines metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines\">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>."
         ],
-        "scale": [1,2,3,4],
+        "scale": [15.35,19.45,23.99,33.20],
         "ds": "SonarQube"
       },
       {
@@ -79,7 +79,7 @@
             "Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.",
 	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API\">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a>"
         ],
-        "scale": [1,2,3,4],
+        "scale": [48347,14018,6497.5,2420.75],
         "ds": "SonarQube"
       },
       {
@@ -393,7 +393,7 @@
         "desc": [
             "The percentage of source lines of code that is exercised by the tests. The SonarQube measure used for this purpose is <mark>line_coverage</mark>."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0,20,48.89,87.70],
         "ds": "SonarQube"
       },
       {
@@ -692,7 +692,7 @@
             "Is the source_repo info correctly filled in the PMI records? ",
             "The project management infrastructure file holds information about one or more source repositories. This test checks that at least one source repository is defined, and accessible."
         ],
-        "scale": [2,3,4,5],
+        "scale": [1,2,3,4],
         "ds": "PMI"
       },
       {

@@ -519,7 +519,7 @@ sub generate_project($$$) {
 		$html_ret_values .= "<td><a href=\"/documentation/metrics.html#" 
 		    . $m_mnemo . "\">" . $m_mnemo . "</a></td>";
 		$html_ret_values .= "<td>" . $project_values{$m_mnemo} . "</td>";
-		if ($flat_metrics{$m_mnemo}{"active"}) {
+		if (defined($flat_metrics{$m_mnemo}{"active"}) && $flat_metrics{$m_mnemo}{"active"} =~ m!true!) {
 		    my $ind = $project_indicators{$m_mnemo};
 		    $html_ret_values .= "<td><span class=\"label label-scale\" style=\"background-color: " 
 			. $colours[$ind] . "\">" . $ind . "</span></td></tr>\n";
@@ -1038,7 +1038,7 @@ sub describe_metric($) {
 
     my $text = "<p id=\"$mnemo\"><strong>$metric_name</strong> ( $mnemo )</p>\n";
 
-    if (defined($metric_active) && $metric_active) {
+    if (defined($metric_active) && ($metric_active =~ m!true!)) {
 	$text .= "<p class=\"desc\"><strong>Active</strong>: true</p>\n";
     } else {
 	$text .= "<p class=\"desc\"><strong>Active</strong>: false</p>\n";
@@ -1057,7 +1057,9 @@ sub describe_metric($) {
         $text .= "<p class=\"desc\">$desc</p>\n";
     }
 
-    if ($metric_active && defined($metric_scale)) {
+    if (defined($metric_active) 
+	&& ($metric_active =~ m!true!) 
+	&& defined($metric_scale)) {
 	my @scales;
 	for (my $i = 0 ; $i < 4 ; $i++) {
 	    my $is_sorted = &is_ordered_scale($metric_scale);
