@@ -11,13 +11,12 @@
                 <li><a href="http://dashboard.eclipse.org/mls.html"><i class="fa fa-li fa-check-square-o"></i>175 mailing lists</a>,</li>
                 <li><a href="http://dashboard.eclipse.org/its.html"><i class="fa fa-li fa-check-square-o"></i>197 ticketing trackers</a>.</li>
               </ul>
-            
-              <p>In order to make those metrics relative according to the first version of the maturity model, the lines of code were retrieved with an ad-hoc script. Those were based on the 471 Git repositories already mentioned.
-All metrics are made relative using thousands of lines of code (KSLOC).</p>
-
-              <div class="alert alert-warning" role="alert">Note: All of the Git repositories with no activity during the last month have been removed in the calculation of thresholds. From the original set, only 152/172 projects contained activity.</div>
+              
+              <h4>Thresholds</h4>
 
               <p>The initial set of thresholds for metrics in Grimoire is the following:</p>
+
+              <div class="alert alert-warning" role="alert">Note: All of the Git repositories with no activity during the last month have been removed in the calculation of thresholds. From the original set, only 152/172 projects contained activity.</div>
 
               <ul class="list-group">
                 <li class="list-group-item">
@@ -37,6 +36,12 @@ All metrics are made relative using thousands of lines of code (KSLOC).</p>
                   [1.0, 1.14285714286, 1.4430952381, 3.79487179487]
                 </li>
               </ul>
+              
+              <h4>Discussion</h4>
+            
+              <p>In order to make those metrics relative according to the first version of the maturity model, the lines of code were retrieved with an ad-hoc script. Those were based on the 471 Git repositories already mentioned.
+All metrics are made relative using thousands of lines of code (KSLOC).</p>
+
             </div>
           </div>
         </div>
