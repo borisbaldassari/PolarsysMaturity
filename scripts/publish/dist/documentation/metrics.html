@@ -108,11 +108,11 @@
                   <li role="presentation">
                     <a href="#repo_Manual" role="tab" data-toggle="tab">Manual&nbsp;<span class="badge">2</span></a></li>
                   <li role="presentation">
-                    <a href="#repo_MarketplaceScript" role="tab" data-toggle="tab">MarketplaceScript&nbsp;<span class="badge">2</span></a></li>
+                    <a href="#repo_Marketplace" role="tab" data-toggle="tab">Marketplace&nbsp;<span class="badge">2</span></a></li>
                   <li role="presentation">
                     <a href="#repo_PMI" role="tab" data-toggle="tab">PMI&nbsp;<span class="badge">5</span></a></li>
                   <li role="presentation">
-                    <a href="#repo_RuleCheckingScript" role="tab" data-toggle="tab">RuleCheckingScript&nbsp;<span class="badge">20</span></a></li>
+                    <a href="#repo_RuleChecking" role="tab" data-toggle="tab">RuleChecking&nbsp;<span class="badge">20</span></a></li>
                   <li role="presentation">
                     <a href="#repo_SonarQube" role="tab" data-toggle="tab">SonarQube&nbsp;<span class="badge">23</span></a></li>
                   <li role="presentation">
@@ -222,7 +222,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00791505127095 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0229812226388 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0527769809755 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 9.09090909091 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_BUGS_DENSITY"><strong>Defect density</strong> ( ITS_BUGS_DENSITY )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -231,7 +231,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of the total number of tickets in the issue tracking system to the size of the source code in KLOC, at the time of the data retrieval. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_BUGS_OPEN"><strong>Number of open bugs</strong> ( ITS_BUGS_OPEN )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -249,7 +249,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 1001.13 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 40.2625 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 11.62 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3.82 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_ISSUES_OPENERS_1M"><strong>Number of issue openers during last month</strong> ( ITS_ISSUES_OPENERS_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -272,7 +272,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.0229586565615 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0757059580589 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.193724583492 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 13.0988023952 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -340,7 +340,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 21 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_RESP_TIME_MED_1M"><strong>Developer ML response time</strong> ( MLS_DEV_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -349,16 +349,16 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_SUBJ_1M"><strong>Developer ML subjects</strong> ( MLS_DEV_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_SUPPORT">MLS_DEV_SUPPORT</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of threds of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
+<p class="desc">Number of threads of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_VOL_1M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -367,7 +367,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_AUTH_1M"><strong>User ML authors</strong> ( MLS_USR_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -385,7 +385,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 21 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_RESP_TIME_MED_1M"><strong>User ML response time</strong> ( MLS_USR_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -394,7 +394,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_SUBJ_1M"><strong>User ML subjects</strong> ( MLS_USR_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -403,7 +403,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_VOL_1M"><strong>User ML posts</strong> ( MLS_USR_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -412,7 +412,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_ANA"><strong>Number of non-conformities for analysability</strong> ( NCC_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -760,7 +760,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00791505127095 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0229812226388 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0527769809755 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 9.09090909091 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_BUGS_DENSITY"><strong>Defect density</strong> ( ITS_BUGS_DENSITY )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -769,7 +769,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of the total number of tickets in the issue tracking system to the size of the source code in KLOC, at the time of the data retrieval. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_BUGS_OPEN"><strong>Number of open bugs</strong> ( ITS_BUGS_OPEN )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -787,7 +787,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. </p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 1001.13 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 40.2625 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 11.62 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3.82 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_ISSUES_OPENERS_1M"><strong>Number of issue openers during last month</strong> ( ITS_ISSUES_OPENERS_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -810,7 +810,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.0229586565615 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0757059580589 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.193724583492 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 13.0988023952 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -828,7 +828,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 21 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_RESP_TIME_MED_1M"><strong>Developer ML response time</strong> ( MLS_DEV_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -837,16 +837,16 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_SUBJ_1M"><strong>Developer ML subjects</strong> ( MLS_DEV_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_SUPPORT">MLS_DEV_SUPPORT</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of threds of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
+<p class="desc">Number of threads of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_VOL_1M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -855,7 +855,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_AUTH_1M"><strong>User ML authors</strong> ( MLS_USR_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -873,7 +873,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 21 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_RESP_TIME_MED_1M"><strong>User ML response time</strong> ( MLS_USR_RESP_TIME_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -882,7 +882,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_SUBJ_1M"><strong>User ML subjects</strong> ( MLS_USR_SUBJ_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -891,7 +891,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_VOL_1M"><strong>User ML posts</strong> ( MLS_USR_VOL_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -900,7 +900,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. </p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITS_1M"><strong>SCM Commits</strong> ( SCM_COMMITS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -961,7 +961,7 @@
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane fade" id="repo_MarketplaceScript"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_Marketplace"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="MKT_FAV"><strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -1030,7 +1030,7 @@
 </li>
                     </ul>
                   </div>  
-                  <div role="tabpanel" class="tab-pane fade" id="repo_RuleCheckingScript"><br />
+                  <div role="tabpanel" class="tab-pane fade" id="repo_RuleChecking"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="NCC_ANA"><strong>Number of non-conformities for analysability</strong> ( NCC_ANA )</p>
 <p class="desc"><strong>Active</strong>: false</p>

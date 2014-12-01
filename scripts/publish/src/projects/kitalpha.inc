@@ -25,10 +25,10 @@
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
-                            <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div></div></dd>
+                            <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
                             <dt>Ecosystem Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div></div></dd>
                             <dt>Process Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
-                            <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
+                            <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
                             </dl>
                           </div>
                         </div>
@@ -72,7 +72,7 @@
                             <dl>
                             <dt>Analysability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
                             <dt>Changeability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
-                            <dt>Reliability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div></div></dd>
+                            <dt>Reliability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div></div></dd>
                             <dt>Reusability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div></div></dd>
                             </dl>
                           </div>
@@ -448,9 +448,9 @@ function click(d) {
 <tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 </table>
 
@@ -458,7 +458,7 @@ function click(d) {
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="questions"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
-<tr><td><a href="/documentation/questions.html#ITS_REL">ITS Reliability</a></td><td><a href="/documentation/questions.html#ITS_REL">ITS_REL</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/questions.html#ITS_REL">ITS Reliability</a></td><td><a href="/documentation/questions.html#ITS_REL">ITS_REL</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 <tr><td><a href="/documentation/questions.html#ITS_USAGE">ITS usage</a></td><td><a href="/documentation/questions.html#ITS_USAGE">ITS_USAGE</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
@@ -470,9 +470,9 @@ function click(d) {
                   <div role="tabpanel" class="tab-pane fade" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS_AUTH_1M</a></td><td>3</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>0.0105164635236463</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">ITS_FIX_MED_1M</a></td><td>0.12</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS_UPDATES_1M</a></td><td>8</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>0.0105164635236463</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">ITS_FIX_MED_1M</a></td><td>0.12</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS_UPDATES_1M</a></td><td>8</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM_COMMITS_1M</a></td><td>80</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">SCM_COMMITTED_FILES_1M</a></td><td>1582</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_1M">SCM_COMMITTERS_1M</a></td><td>3</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>

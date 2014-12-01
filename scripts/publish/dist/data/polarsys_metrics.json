@@ -207,7 +207,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of non-conformities for changeability",
@@ -217,7 +217,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of non-conformities for reliability",
@@ -227,7 +227,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of non-conformities for reusability",
@@ -237,7 +237,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Average number of non-conformities for analysability",
@@ -247,7 +247,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [100,30,10,5],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Average number of non-conformities for changeability",
@@ -257,7 +257,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [10,5,2,1],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Average number of non-conformities for reliability",
@@ -267,7 +267,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [10,5,2,1],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Average number of non-conformities for reusability",
@@ -277,7 +277,7 @@
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
         "scale": [100,50,20,10],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of violated rules for changeability",
@@ -286,7 +286,7 @@
             "The number of changeability rules that have at least one violation on the artefact."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of rules for changeability",
@@ -295,7 +295,7 @@
             "The total number of rules checked for changeability."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Adherence to changeability rules",
@@ -304,7 +304,7 @@
             "Ratio of conform changeability practices on the number of checked changeability practices."
         ],
         "scale": [20,40,60,80],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of violated rules for analysability",
@@ -313,7 +313,7 @@
             "The number of analysability rules that have at least one violation on the artefact."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of rules for analysability",
@@ -322,7 +322,7 @@
             "The total number of rules checked for analysability."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Adherence to analysability rules",
@@ -331,7 +331,7 @@
             "Ratio of conform analysability practices on the number of checked analysability practices."
         ],
         "scale": [20,40,60,80],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of violated rules for reliability",
@@ -340,7 +340,7 @@
             "The number of reliability rules that have at least one violation on the artefact."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of rules for reliability",
@@ -349,7 +349,7 @@
             "The total number of rules checked for reliability."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Adherence to reliability rules",
@@ -358,7 +358,7 @@
             "Ratio of conform reliability practices on the number of checked reliability practices."
         ],
         "scale": [20,40,60,80],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of violated rules for reusability",
@@ -367,7 +367,7 @@
             "The number of reusability rules that have at least one violation on the artefact."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Number of rules for reusability",
@@ -376,7 +376,7 @@
             "The total number of rules checked for reusability."
         ],
         "scale": [1,2,3,4],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Adherence to reusability rules",
@@ -385,7 +385,7 @@
             "Ratio of conform reusability practices on the number of checked reusability practices."
         ],
         "scale": [20,40,60,80],
-        "ds": "RuleCheckingScript"
+        "ds": "RuleChecking"
       },
       {
         "name": "Percentage of lines of code covered by tests",
@@ -433,7 +433,7 @@
             "Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.",
 	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.00765581777287,0.0277777777778,0.0907806209215,1.875],
         "ds": "Grimoire"
       },
       {
@@ -453,7 +453,7 @@
             "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. ",
     	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
-        "scale": [1,2,3,4],
+        "scale": [42.93,0.94,0.26,0.0425],
         "ds": "Grimoire"
       },
       {
@@ -463,17 +463,17 @@
             "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. ",
     	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.833333333333,1.24285714286,2.5125,21],
         "ds": "Grimoire"
       },
       {
         "name": "Developer ML subjects",
         "mnemo": "MLS_DEV_SUBJ_1M",
         "desc": [
-            "Number of threds of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. ",
+            "Number of threads of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. ",
 	        "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.00431595818232, 0.0167085169953, 0.0583188863413, 0.748502994012],
         "ds": "Grimoire"
       },
       {
@@ -483,7 +483,7 @@
            "Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. ",
 	       "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.00765581777287,0.0277777777778,0.0907806209215,1.875],
         "ds": "Grimoire"
       },
       {
@@ -503,7 +503,7 @@
             "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. ",
 	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
-        "scale": [1,2,3,4],
+        "scale": [42.93,0.94,0.26,0.0425],
         "ds": "Grimoire"
       },
       {
@@ -513,7 +513,7 @@
             "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. ",
 	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.833333333333,1.24285714286,2.5125,21],
         "ds": "Grimoire"
       },
       {
@@ -523,7 +523,7 @@
             "Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.",
 	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.00431595818232, 0.0167085169953, 0.0583188863413, 0.748502994012],
         "ds": "Grimoire"
       },
       {
@@ -573,7 +573,7 @@
             "Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. ",
 	        "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
-        "scale": [1,2,3,4],
+        "scale": [1001.13,40.2625,11.62,3.82],
         "ds": "Grimoire"
       },
       {
@@ -613,7 +613,7 @@
             "Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.",
 	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.0229586565615,0.0757059580589,0.193724583492,13.0988023952],
         "ds": "Grimoire"
       },
       {
@@ -623,7 +623,7 @@
             "Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.",
 	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
-        "scale": [1,2,3,4],
+        "scale": [0.00791505127095, 0.0229812226388, 0.0527769809755, 9.09090909091],
         "ds": "Grimoire"
       },
       {
@@ -633,7 +633,7 @@
             "Ratio of the total number of tickets in the issue tracking system to the size of the source code in KLOC, at the time of the data retrieval. ",
 	        "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository."
         ],
-        "scale": [1,2,3,4],
+        "scale": [3.36826347305,0.0755602867593,0.0335380213652,0.009367219332],
         "ds": "Grimoire"
       },
       {
@@ -722,7 +722,7 @@
             "This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero."
         ],
         "scale": [10,30,70,300],
-        "ds": "MarketplaceScript"
+        "ds": "Marketplace"
       },
       {
         "name": "Number of successfull installs on the Marketplace",
@@ -732,7 +732,7 @@
             "This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero."
         ],
         "scale": [100,500,1000,10000],
-        "ds": "MarketplaceScript"
+        "ds": "Marketplace"
       },
       {
         "name": "Number of downloads on update site",
