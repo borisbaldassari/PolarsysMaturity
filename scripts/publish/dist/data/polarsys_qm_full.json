@@ -551,7 +551,7 @@
                       {
                         "mnemo": "PUBLIC_API",
                         "type": "metric",
-                        "active": "true"
+                        "active": "false"
                       }
                     ]
                   },
@@ -614,12 +614,7 @@
                     "active": "false",
                     "children": [
                       {
-                        "mnemo": "ATTRS_PUBLIC",
-                        "type": "metric",
-                        "active": "false"
-                      }, 
-                      {
-                        "mnemo": "METHS_PUBLIC",
+                        "mnemo": "PUBLIC_API",
                         "type": "metric",
                         "active": "false"
                       }
@@ -706,12 +701,7 @@
                     "active": "false",
                     "children": [
                       {
-                        "mnemo": "ATTRS_PUBLIC",
-                        "type": "metric",
-                        "active": "false"
-                      }, 
-                      {
-                        "mnemo": "METHS_PUBLIC",
+                        "mnemo": "PUBLIC_API",
                         "type": "metric",
                         "active": "false"
                       }

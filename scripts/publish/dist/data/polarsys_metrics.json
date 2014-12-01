@@ -676,7 +676,7 @@
 	    "ds": "PMI"
       },
       {
-        "name": "Milestone success rate",
+        "name": "Reviews success rate",
         "mnemo": "PLAN_REVIEWS_SUCCESS_RATE",
         "desc": [
             "What is the percentage of successful reviews over the past 5 releases?",
