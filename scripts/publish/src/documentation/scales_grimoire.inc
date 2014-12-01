@@ -50,7 +50,7 @@
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#ITS_BUGS_OPEN"><strong>Number of open bugs</strong></a> (ITS_BUGS_OPEN)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#ITS_FIX_MED_1M"><strong>Median time to fix bug</strong></a> (ITS_FIX_MED_1M)<br />
@@ -67,7 +67,7 @@
               <ul class="list-group">
                 <li class="list-group-item">
                   <a href="metrics.html#MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong></a> (MLS_DEV_AUTH_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00411475861939 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0139607869416 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0461270538934 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.49700598802 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item">
                   <a href="metrics.html#MLS_DEV_RESP_RATIO_1M"><strong>Developer ML response ratio</strong></a> (MLS_DEV_RESP_RATIO_1M)<br />
