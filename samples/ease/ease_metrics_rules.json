@@ -1,245 +1,67 @@
 {
     "name": "Project metrics",
-    "children": [
-        {
-            "name": "NCC_ANA",
-            "value": "574"
-        }, 
-        {
-            "name": "NCC_CHA",
-            "value": "107"
-        }, 
-        {
-            "name": "NCC_COR",
-            "value": "5"
-        }, 
-        {
-            "name": "NCC_EFF",
-            "value": "81"
-        }, 
-        {
-            "name": "NCC_MAT",
-            "value": "2"
-        }, 
-        {
-            "name": "NCC_POR",
-            "value": "21"
-        }, 
-        {
-            "name": "NCC_REL",
-            "value": "265"
-        }, 
-        {
-            "name": "NCC_RES",
-            "value": "0"
-        }, 
-        {
-            "name": "NCC_REU",
-            "value": "2517"
-        }, 
-        {
-            "name": "NCC_SEC",
-            "value": "12"
-        }, 
-        {
-            "name": "NCC_TES",
-            "value": "26"
-        }, 
-        {
-            "name": "NCC_THR",
-            "value": "4"
-        }, 
-        {
-            "name": "RKO_ANA",
-            "value": "21"
-        }, 
-        {
-            "name": "RKO_CHA",
-            "value": "7"
-        }, 
-        {
-            "name": "RKO_COR",
-            "value": "2"
-        }, 
-        {
-            "name": "RKO_EFF",
-            "value": "7"
-        }, 
-        {
-            "name": "RKO_MAT",
-            "value": "1"
-        }, 
-        {
-            "name": "RKO_POR",
-            "value": "1"
-        }, 
-        {
-            "name": "RKO_REL",
-            "value": "11"
-        }, 
-        {
-            "name": "RKO_REU",
-            "value": "8"
-        }, 
-        {
-            "name": "RKO_SEC",
-            "value": "2"
-        }, 
-        {
-            "name": "RKO_TES",
-            "value": "1"
-        }, 
-        {
-            "name": "RKO_THR",
-            "value": "1"
-        }, 
-        {
-            "name": "ROKR_ANA",
-            "value": "66.6666666666667"
-        }, 
-        {
-            "name": "ROKR_CHA",
-            "value": "63.1578947368421"
-        }, 
-        {
-            "name": "ROKR_COR",
-            "value": "97.1014492753623"
-        }, 
-        {
-            "name": "ROKR_EFF",
-            "value": "58.8235294117647"
-        }, 
-        {
-            "name": "ROKR_MAT",
-            "value": "50"
-        }, 
-        {
-            "name": "ROKR_POR",
-            "value": "66.6666666666667"
-        }, 
-        {
-            "name": "ROKR_REL",
-            "value": "76.5957446808511"
-        }, 
-        {
-            "name": "ROKR_RES",
-            "value": "0"
-        }, 
-        {
-            "name": "ROKR_REU",
-            "value": "55.5555555555556"
-        }, 
-        {
-            "name": "ROKR_SEC",
-            "value": "92.3076923076923"
-        }, 
-        {
-            "name": "ROKR_TES",
-            "value": "0"
-        }, 
-        {
-            "name": "ROKR_THR",
-            "value": "87.5"
-        }, 
-        {
-            "name": "ROK_ANA",
-            "value": "42"
-        }, 
-        {
-            "name": "ROK_CHA",
-            "value": "12"
-        }, 
-        {
-            "name": "ROK_COR",
-            "value": "67"
-        }, 
-        {
-            "name": "ROK_EFF",
-            "value": "10"
-        }, 
-        {
-            "name": "ROK_MAT",
-            "value": "1"
-        }, 
-        {
-            "name": "ROK_POR",
-            "value": "2"
-        }, 
-        {
-            "name": "ROK_REL",
-            "value": "36"
-        }, 
-        {
-            "name": "ROK_RES",
-            "value": "0"
-        }, 
-        {
-            "name": "ROK_REU",
-            "value": "10"
-        }, 
-        {
-            "name": "ROK_SEC",
-            "value": "24"
-        }, 
-        {
-            "name": "ROK_TES",
-            "value": "0"
-        }, 
-        {
-            "name": "ROK_THR",
-            "value": "7"
-        }, 
-        {
-            "name": "RULES",
-            "value": "213"
-        }, 
-        {
-            "name": "RULES_ANA",
-            "value": "63"
-        }, 
-        {
-            "name": "RULES_CHA",
-            "value": "19"
-        }, 
-        {
-            "name": "RULES_COR",
-            "value": "69"
-        }, 
-        {
-            "name": "RULES_EFF",
-            "value": "17"
-        }, 
-        {
-            "name": "RULES_MAT",
-            "value": "2"
-        }, 
-        {
-            "name": "RULES_POR",
-            "value": "3"
-        }, 
-        {
-            "name": "RULES_REL",
-            "value": "47"
-        }, 
-        {
-            "name": "RULES_RES",
-            "value": "0"
-        }, 
-        {
-            "name": "RULES_REU",
-            "value": "18"
-        }, 
-        {
-            "name": "RULES_SEC",
-            "value": "26"
-        }, 
-        {
-            "name": "RULES_TES",
-            "value": "1"
-        }, 
-        {
-            "name": "RULES_THR",
-            "value": "8"
-        }
-    ]
+    "project": "ease",
+    "version": "HEAD-20141013",
+    "children": {
+      "NCC_ANA": "574",
+      "NCC_CHA": "107",
+      "NCC_COR": "5",
+      "NCC_EFF": "81",
+      "NCC_MAT": "2",
+      "NCC_POR": "21",
+      "NCC_REL": "265",
+      "NCC_RES": "0",
+      "NCC_REU": "2517",
+      "NCC_SEC": "12",
+      "NCC_TES": "26",
+      "NCC_THR": "4",
+      "RKO_ANA": "21",
+      "RKO_CHA": "7",
+      "RKO_COR": "2",
+      "RKO_EFF": "7",
+      "RKO_MAT": "1",
+      "RKO_POR": "1",
+      "RKO_REL": "11",
+      "RKO_REU": "8",
+      "RKO_SEC": "2",
+      "RKO_TES": "1",
+      "RKO_THR": "1",
+      "ROKR_ANA": "66.6666666666667",
+      "ROKR_CHA": "63.1578947368421",
+      "ROKR_COR": "97.1014492753623",
+      "ROKR_EFF": "58.8235294117647",
+      "ROKR_MAT": "50",
+      "ROKR_POR": "66.6666666666667",
+      "ROKR_REL": "76.5957446808511",
+      "ROKR_RES": "0",
+      "ROKR_REU": "55.5555555555556",
+      "ROKR_SEC": "92.3076923076923",
+      "ROKR_TES": "0",
+      "ROKR_THR": "87.5",
+      "ROK_ANA": "42",
+      "ROK_CHA": "12",
+      "ROK_COR": "67",
+      "ROK_EFF": "10",
+      "ROK_MAT": "1",
+      "ROK_POR": "2",
+      "ROK_REL": "36",
+      "ROK_RES": "0",
+      "ROK_REU": "10",
+      "ROK_SEC": "24",
+      "ROK_TES": "0",
+      "ROK_THR": "7",
+      "RULES": "213",
+      "RULES_ANA": "63",
+      "RULES_CHA": "19",
+      "RULES_COR": "69",
+      "RULES_EFF": "17",
+      "RULES_MAT": "2",
+      "RULES_POR": "3",
+      "RULES_REL": "47",
+      "RULES_RES": "0",
+      "RULES_REU": "18",
+      "RULES_SEC": "26",
+      "RULES_TES": "1",
+      "RULES_THR": "8"
+  }
 }

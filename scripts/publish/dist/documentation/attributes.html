@@ -1,0 +1,213 @@
+<!doctype html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/css/plugins/timeline.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!-- link href="/css/plugins/morris.css" rel="stylesheet" -->
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Our CSS sheets -->
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="#wrapper">
+
+
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <!-- div class="navbar-inner" -->
+          <!-- div class="container" -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><big>PolarSys Maturity Assessment Dashboard &mdash; Attributes</big></a>
+            </div>
+            <!-- /div -->
+            <!-- /div -->
+            <!-- /.navbar-header -->
+              <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <ul class="nav" id="side-menu">
+                    <li class="active"><a href="/index.html">Home</a></li>
+                    <li class="active"><a href="/about.html">About</a></li>
+                    <li class="active"><a href="/documentation/">Documentation<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/documentation/quality_model.html">Quality Model</a></li>
+                    <li><a href="/documentation/attributes.html">Attributes</a></li>
+                    <li><a href="/documentation/questions.html">Questions</a></li>
+                    <li><a href="/documentation/metrics.html">Metrics</a></li>
+                    <li><a href="/documentation/scales.html">Scales</a></li>
+                    <li><a href="/documentation/rules.html">Practices</a></li>
+                    <li><a href="/">Actions</a></li>
+                    <li><a href="/documentation/references.html">References</a></li>
+                  </ul></li>
+                    <li class="active"><a href="/projects/">Projects<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/projects/cdt.html">CDT</a></li>
+                    <li><a href="/projects/ease.html">EASE</a></li>
+                    <li><a href="/projects/example.html">Example</a></li>
+                    <li><a href="/projects/gendoc.html">Gendoc</a></li>
+                    <li><a href="/projects/kitalpha.html">Kitalpha</a></li>
+                    <li><a href="/projects/papyrus.html">Papyrus</a></li>
+                    <li><a href="/projects/sirius.html">Sirius</a></li>
+                  </ul></li>
+                    <li class="active"><a href="/contact.html">Contact</a></li></ul>
+          </div></div>
+        </nav>
+
+
+        <div id="page-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Definition of Attributes</h2>
+              <p>Attributes of quality represent our measurement goals for the given context. The first step when defining attributes is to gather quality requirements, in this case both for the Eclipse foundation and the PolarSys working group. These have been summarised <a href="https://polarsys.org/wiki/EclipseQualityRequirements">on a dedicated page of the wiki</a>. We relied on different standards and norms to formalise them: ISO 9126 and 250xx for the product, CMMi for the process, and open-source quality models for the community. </p><br />
+        
+
+              <ul class="list-group">
+                <li class="list-group-item"><p id="QM_ACTIVITY"><strong>Activity</strong> ( QM_ACTIVITY )</p>
+<p class="desc">How active is the project ecosystem? Are there a lot of actions and events happening?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_ANA"><strong>Analysability</strong> ( QM_ANA )</p>
+<p class="desc">Degree of effectiveness and efficiency with which it is possible to assess the impact on a product or system of an intended change to one or more of its parts, or to diagnose a product for deficiencies or causes of failures, or to identify parts to be modified. (ISO/IEC 25010)</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_CHA"><strong>Changeability</strong> ( QM_CHA )</p>
+<p class="desc">Degree to which a product or system can be effectively and efficiently modified without introducing defects or degrading existing product quality. (ISO/IEC 25010)</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_DIVERSITY"><strong>Diversity</strong> ( QM_DIVERSITY )</p>
+<p class="desc">How diverse is the project ecosystem? Are there enough different actors to ensure its sustainability?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_ECOSYSTEM"><strong>Ecosystem</strong> ( QM_ECOSYSTEM )</p>
+<p class="desc">The degree of maturity for the ecosystem evolving around the project: is it active, diversified, responsive?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_FEEDBACK"><strong>User feedback</strong> ( QM_FEEDBACK )</p>
+<p class="desc">How do the users of the software evaluate the project and product?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_IP"><strong>Intellectual Property Management</strong> ( QM_IP )</p>
+<p class="desc">How is intellectual property handled in the project? Is there an IP log? Are the project and the Eclipse Foundation safe regarding IP?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_ITS"><strong>Change Management</strong> ( QM_ITS )</p>
+<p class="desc">Do the project applies best practices regarding change management?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_PLAN"><strong>Planning Management</strong> ( QM_PLAN )</p>
+<p class="desc">Is the project behaviour predicable? Are outputs delivered on planned time and quality?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_PROCESS"><strong>Process</strong> ( QM_PROCESS )</p>
+<p class="desc">The maturity of the process: is it predictable, are good practices enforced, etc.</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_PRODUCT"><strong>Product</strong> ( QM_PRODUCT )</p>
+<p class="desc">The software product produced by the project, i.e. the source code, binaries, tests.</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_QUALITY"><strong>Project Quality</strong> ( QM_QUALITY )</p>
+<p class="desc">The overall quality of the project. In the context of embedded software, this is often assimilated to Maturity.</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_REL"><strong>Reliability</strong> ( QM_REL )</p>
+<p class="desc">Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time. (ISO/IEC 25010)</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_RESPONSIVENESS"><strong>Responsiveness</strong> ( QM_RESPONSIVENESS )</p>
+<p class="desc">How fast people get an answer when they have a problem working with the project?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_REU"><strong>Reusability</strong> ( QM_REU )</p>
+<p class="desc">Degree to which an asset can be used in more than one system, or in building other assets. (ISO/IEC 25010)</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_SCM"><strong>Configuration Management</strong> ( QM_SCM )</p>
+<p class="desc">Do the project applies best practices regarding software configuration management?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_SUPPORT"><strong>Support</strong> ( QM_SUPPORT )</p>
+<p class="desc">What is the amount of knowledge answered when someone requires help?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_TST"><strong>Test Management</strong> ( QM_TST )</p>
+<p class="desc">Is the product thoroughly tested? How many tests are there, what is the code coverage?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_USAGE"><strong>Usage</strong> ( QM_USAGE )</p>
+<p class="desc">The degree of usage of the project: is it widely used, by different people in different context?</p>
+
+                </li>
+                <li class="list-group-item"><p id="QM_VISIBILITY"><strong>Visibility</strong> ( QM_VISIBILITY )</p>
+<p class="desc">Do people talk about the software? Are there research articles, journal articles, and conference presentations?</p>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>    </div>
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-3675452-12', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/sb-admin-2.js"></script>
+        
+</body>
+</html>

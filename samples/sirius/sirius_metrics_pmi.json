@@ -1,41 +1,13 @@
 {
     "name": "Project metrics",
-    "children": [
-        {
-            "name": "PUB_ITS_INFO_PMI",
-            "value": "5"
-        }, 
-        {
-            "name": "PUB_SCM_INFO_PMI",
-            "value": "5"
-        }, 
-        {
-            "name": "PLAN_MILESTONES_VOL",
-            "value": "0"
-        }, 
-        {
-            "name": "PLAN_REVIEWS_SUCCESS_RATE",
-            "value": "0"
-        }, 
-        {
-            "name": "MKT_FAV",
-            "value": "0"
-        }, 
-        {
-            "name": "MKT_INSTALL_SUCCESS_1M",
-            "value": "357"
-        }, 
-        {
-            "name": "MKT_INSTALL_FAILED_1M",
-            "value": "87"
-        }, 
-        {
-            "name": "DL_UPDATE_SITE_1M",
-            "value": "0"
-        },
-        {
-            "name": "DL_REPO_1M",
-            "value": "0"
-        }
-    ]
+    "project": "sirius",
+    "version": "HEAD-20141013",
+    "children": {
+      "PUB_ITS_INFO_PMI": "5",
+      "PUB_SCM_INFO_PMI": "4",
+      "PLAN_MILESTONES_VOL": "3",
+      "PLAN_REVIEWS_SUCCESS_RATE": "60",
+      "MKT_FAV": "73",
+      "MKT_INSTALL_SUCCESS_1M": "4023"
+  }
 }

@@ -1,41 +1,14 @@
 {
     "name": "Project metrics",
-    "children": [
-        {
-            "name": "PUB_ITS_INFO_PMI",
-            "value": "5"
-        }, 
-        {
-            "name": "PUB_SCM_INFO_PMI",
-            "value": "5"
-        }, 
-        {
-            "name": "PLAN_MILESTONES_VOL",
-            "value": "21"
-        }, 
-        {
-            "name": "PLAN_REVIEWS_SUCCESS_RATE",
-            "value": "33"
-        }, 
-        {
-            "name": "MKT_FAV",
-            "value": "0"
-        }, 
-        {
-            "name": "MKT_INSTALL_SUCCESS_1M",
-            "value": "0"
-        }, 
-        {
-            "name": "MKT_INSTALL_FAILED_1M",
-            "value": "0"
-        }, 
-        {
-            "name": "DL_UPDATE_SITE_1M",
-            "value": "0"
-        },
-        {
-            "name": "DL_REPO_1M",
-            "value": "0"
-        }
-    ]
+    "children": {
+      "PUB_ITS_INFO_PMI": "5",
+      "PUB_SCM_INFO_PMI": "5",
+      "PLAN_MILESTONES_VOL": "21",
+      "PLAN_REVIEWS_SUCCESS_RATE": "33",
+      "MKT_FAV": "0",
+      "MKT_INSTALL_SUCCESS_1M": "0",
+      "MKT_INSTALL_FAILED_1M": "0",
+      "DL_UPDATE_SITE_1M": "0",
+      "DL_REPO_1M": "0"
+  }
 }

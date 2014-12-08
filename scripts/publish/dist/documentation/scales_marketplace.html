@@ -1,0 +1,207 @@
+<!doctype html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/css/plugins/timeline.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!-- link href="/css/plugins/morris.css" rel="stylesheet" -->
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Our CSS sheets -->
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="#wrapper">
+
+
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <!-- div class="navbar-inner" -->
+          <!-- div class="container" -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><big>PolarSys Maturity Assessment Dashboard &mdash; Scales_marketplace</big></a>
+            </div>
+            <!-- /div -->
+            <!-- /div -->
+            <!-- /.navbar-header -->
+              <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <ul class="nav" id="side-menu">
+                    <li class="active"><a href="/index.html">Home</a></li>
+                    <li class="active"><a href="/about.html">About</a></li>
+                    <li class="active"><a href="/documentation/">Documentation<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/documentation/quality_model.html">Quality Model</a></li>
+                    <li><a href="/documentation/attributes.html">Attributes</a></li>
+                    <li><a href="/documentation/questions.html">Questions</a></li>
+                    <li><a href="/documentation/metrics.html">Metrics</a></li>
+                    <li><a href="/documentation/scales.html">Scales</a></li>
+                    <li><a href="/documentation/rules.html">Practices</a></li>
+                    <li><a href="/">Actions</a></li>
+                    <li><a href="/documentation/references.html">References</a></li>
+                  </ul></li>
+                    <li class="active"><a href="/projects/">Projects<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/projects/cdt.html">CDT</a></li>
+                    <li><a href="/projects/ease.html">EASE</a></li>
+                    <li><a href="/projects/example.html">Example</a></li>
+                    <li><a href="/projects/gendoc.html">Gendoc</a></li>
+                    <li><a href="/projects/kitalpha.html">Kitalpha</a></li>
+                    <li><a href="/projects/papyrus.html">Papyrus</a></li>
+                    <li><a href="/projects/sirius.html">Sirius</a></li>
+                  </ul></li>
+                    <li class="active"><a href="/contact.html">Contact</a></li></ul>
+          </div></div>
+        </nav>
+
+
+        <div id="page-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <h3>Scales &gt; Marketplace</h3>
+
+              <p>The <a href="http://marketplace.eclipse.org/">Eclipse marketplace</a> lists the products and companies that make the Eclipse ecosystem. Users can also directly install plugins from the marketplace into their own IDE by a single drag'n'drop. To setup the scales, we selected a set of 15 projects and applied the set of metrics to them. </p>
+              
+              <hr />
+              
+              <h4>Thresholds</h4>
+
+              <p>The initial set of thresholds for metrics in Grimoire is the following.</p>
+              
+              <div class="alert alert-warning" role="alert">If an analysed project is not registered on the Marketplace, all values are supposed to be null (zeros). </div>
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="metrics.html#MKT_FAV"><strong>Number of favourites</strong></a> (MKT_FAV)<br />
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 70 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 300 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                </li>
+                <li class="list-group-item">
+                  <a href="metrics.html#MKT_INSTALL_SUCCESS_1M"><strong>Number of recent installs</strong></a> (MKT_INSTALL_SUCCESS_1M)<br />
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 500 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                </li>
+              </ul>
+              
+              <hr />
+
+              <h4>Discussion</h4>
+              
+              <p>The set of metrics used for the benchmark can be <a href="/data/metrics_marketplace_all.csv">downloaded here</a>.</p>
+              
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="/images/number_of_favourites_on_the_marketplace_for_eclipse_projects.svg" class="thumbnail">
+                    <img src="/images/number_of_favourites_on_the_marketplace_for_eclipse_projects.svg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <p>People can select any number of projects as their favourites. This data is then displayed on the project's badge (in the UI) and made available through the Marketplace REST API. It shows the interest of people in projects. To improve this, some projects ask their users to go vote for them on the Marketplace.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <a href="/images/number_of_successful_install_on_the_marketplace_for_eclipse_projects.svg" class="thumbnail">
+                    <img src="/images/number_of_successful_install_on_the_marketplace_for_eclipse_projects.svg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <p>Users can directly install a product from the Marketplace itself with a simple drag and drop in the IDE. This is a good way to disseminate a product, since users can test it really easily. The number of successful install counts only components installed from the Marketplace during the last 30 days.</p>
+                </div>
+              </div>
+              
+              <hr />
+
+              <h4>List of projects used for the benchmark</h4>
+              
+              <ul class="list-group">
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/android-development-tools-eclipse">Android Development Tools</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/arcon-architecture-conformance-validation-tool">ArCon architecture conformance validation tool</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">CDT</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/checkstyle-plug">CheckStyle plugin</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/eclemma-java-code-coverage">EclEmma Java code coverage</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/findbugs-eclipse-plugin">FindBugs plugin</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/gendoc2">Gendoc2</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/jboss-tools-kepler">JBoss tools (Kepler)</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/jboss-tools-luna">JBoss tools (Luna)</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/eclipse-jetty">Jetty</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/jrebel-eclipse">JRebel</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/maven-integration-eclipse-luna-and-newer">Maven integration (Luna and newer)</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/mylyn">Mylyn</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">PyDev Python IDE</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/eclipse-pmd">PMD plugin</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/sirius">Sirius</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/sonarqube">SonarQube</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/spring-tool-suite-sts-eclipse-luna-44">Spring tool suite</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/subclipse">Subclipse</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/subversive-svn-team-provider">Subversive</a></li>
+                <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/testng-eclipse">TestNG</a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-3675452-12', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/sb-admin-2.js"></script>
+        
+</body>
+</html>
