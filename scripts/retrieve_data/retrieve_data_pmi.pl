@@ -16,9 +16,10 @@ use LWP::Simple;
 my $debug = 1;
 my $base_url = "http://projects.eclipse.org/json/project/";
 
-die "Usage: $0 project_id\n" if (scalar @ARGV != 1);
+die "Usage: $0 project_id dir_out\n" if (scalar @ARGV != 2);
 
 my $project_id = shift;
+my $dir_out = shift;
 
 # Fetch json file from projects.eclipse.org
 my $url = $base_url . $project_id;
@@ -159,8 +160,8 @@ foreach my $project_id (@projects) {
 	"children" => $metrics{$project_id},
     };
     my $json_out = encode_json( $metrics_project );
-    my $file_json_out = $project_id . "_metrics_pmi.json";
-    print "  Writing json file to $file_json_out.\n";
+    my $file_json_out = $dir_out . "/" . $project_id . "_metrics_pmi.json";
+    print "  Writing json file to [$file_json_out].\n";
     open my $fh, ">", $file_json_out;
     print $fh $json_out;
     close $fh;
@@ -168,19 +169,19 @@ foreach my $project_id (@projects) {
 }
 
 # Write all projects (if several) to a csv file.
-my $csv_out = "project,plan_milestones_vol,plan_reviews_success_rate,pub_scm_info,pub_its_info\n";;
-foreach my $project (sort keys %metrics) {
-    $csv_out .= $project . "," 
-	. $metrics{$project}{"PLAN_MILESTONES_VOL"} . ","
-	. $metrics{$project}{"PLAN_REVIEWS_SUCCESS_RATE"} . ","
-	. $metrics{$project}{"PUB_SCM_INFO"} . ","
-	. $metrics{$project}{"PUB_ITS_INFO"}    . "\n";
-}
+# my $csv_out = "project,plan_milestones_vol,plan_reviews_success_rate,pub_scm_info,pub_its_info\n";;
+# foreach my $project (sort keys %metrics) {
+#     $csv_out .= $project . "," 
+# 	. $metrics{$project}{"PLAN_MILESTONES_VOL"} . ","
+# 	. $metrics{$project}{"PLAN_REVIEWS_SUCCESS_RATE"} . ","
+# 	. $metrics{$project}{"PUB_SCM_INFO"} . ","
+# 	. $metrics{$project}{"PUB_ITS_INFO"}    . "\n";
+# }
 
-my $file_csv_out = "metrics_pmi.csv";
-print "  Writing csv file to $file_csv_out.\n";
-open my $fh, ">", $file_csv_out;
-print $fh $csv_out;
-close $fh;
+# my $file_csv_out = "metrics_pmi.csv";
+# print "  Writing csv file to $file_csv_out.\n";
+# open my $fh, ">", $file_csv_out;
+# print $fh $csv_out;
+# close $fh;
  
 print "  Finished importing data from PMI JSON file.\n";

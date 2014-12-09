@@ -17,10 +17,11 @@ use LWP::Simple;
 my $debug = 1;
 my $base_url = "http://projects.eclipse.org/json/project/";
 
-die "Usage: $0 project_id url\n" if (scalar @ARGV != 2);
+die "Usage: $0 project_id url dir_out\n" if (scalar @ARGV != 3);
 
 my $project_id = shift;
 my $url = shift;
+my $dir_out = shift;
 
 # Fetch XML file from the marketplace
 my $content = get($url);
@@ -59,20 +60,20 @@ my $metrics_project = {
 
 
 my $json_out = encode_json( $metrics_project );
-my $file_json_out = $project_id . "_metrics_marketplace.json";
+my $file_json_out = $dir_out . "/" . $project_id . "_metrics_marketplace.json";
 print "  Writing json file to $file_json_out.\n";
 open my $fh, ">", $file_json_out;
 print $fh $json_out;
 close $fh;
 
-# Write this to a csv file
-my $csv_out = "project,mkt_fav,mkt_install\n";
-$csv_out .= $project_id . "," . $favs . ", " . $dl . "\n";
+# # Write this to a csv file
+# my $csv_out = "project,mkt_fav,mkt_install\n";
+# $csv_out .= $project_id . "," . $favs . ", " . $dl . "\n";
 
-my $file_csv_out = $project_id . "_metrics_marketplace.csv";
-print "  Writing csv file to $file_csv_out.\n";
-open $fh, ">", $file_csv_out;
-print $fh $csv_out;
-close $fh;
+# my $file_csv_out = $project_id . "_metrics_marketplace.csv";
+# print "  Writing csv file to $file_csv_out.\n";
+# open $fh, ">", $file_csv_out;
+# print $fh $csv_out;
+# close $fh;
  
 print "  Finished importing data from Marketplace.\n";
