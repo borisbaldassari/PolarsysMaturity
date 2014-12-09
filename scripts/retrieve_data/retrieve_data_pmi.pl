@@ -89,7 +89,7 @@ foreach my $project_id (@projects) {
 	if ($proj{"source_repo_url"} =~ m!\S+!) { $pub_scm_info++ };
 	if (head($proj{"source_repo_url"})) {
 	    $pub_scm_info++;
-	    print "  Got query url [" . $proj{"source_repo_url"} . "]!\n"; 
+	    print "  Got git url [" . $proj{"source_repo_url"} . "]!\n"; 
 	}
 
     }

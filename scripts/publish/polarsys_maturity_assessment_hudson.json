@@ -1,0 +1,100 @@
+{
+    "name": "Publish configuration file forPolarSys",
+    "menu": [
+	{
+	    "name": "Home",
+	    "url": "/index.html"
+	},
+	{
+	    "name": "About",
+	    "url": "/about.html"
+	},
+	{
+	    "name": "Documentation",
+	    "url": "/documentation/",
+	    "children": [
+		{ 
+		    "name": "Quality Model",
+		    "url": "/documentation/quality_model.html" 
+		},
+		{ 
+		    "name": "Attributes",
+		    "url": "/documentation/attributes.html" 
+		},
+		{
+		    "name": "Questions",
+		    "url": "/documentation/questions.html" 
+		},
+		{ 
+		    "name": "Metrics",
+		    "url": "/documentation/metrics.html" 
+		},
+		{ 
+		    "name": "Scales",
+		    "url": "/documentation/scales.html" 
+		},
+		{
+		    "name": "Practices",
+		    "url": "/documentation/rules.html" 
+		},
+		{
+		    "name": "Actions",
+		    "url": "/"
+		},
+		{
+		    "name": "References",
+		    "url": "/documentation/references.html"
+		}
+	    ]
+	},
+	{
+	    "name": "Projects",
+	    "url": "/projects/",
+	    "children": [
+		{
+		    "name": "CDT",
+		    "url": "/projects/cdt.html" 
+		},
+		{
+		    "name": "EASE",
+		    "url": "/projects/ease.html" 
+		},
+		{
+		    "name": "Example",
+		    "url": "/projects/example.html" 
+		},
+		{
+		    "name": "Gendoc",
+		    "url": "/projects/gendoc.html" 
+		},
+		{
+		    "name": "Kitalpha",
+		    "url": "/projects/kitalpha.html" 
+		},
+		{
+		    "name": "Papyrus",
+		    "url": "/projects/papyrus.html" 
+		},
+		{
+		    "name": "Sirius",
+		    "url": "/projects/sirius.html" 
+		}
+	    ]
+	},
+	{
+	    "name": "Contact",
+	    "url": "/contact.html"
+	}
+    ],
+    "website": {
+	"title": "Maturity Assessment Dashboard"
+    },
+    "init": {
+	"dir_src": "src/",
+	"dir_rules": "../../rules/",
+	"dir_inc": "includes/",
+	"dir_out": "dist/",
+	"dir_projects": "../../projects/",
+	"dir_data": "../../data/"	
+    }
+}
