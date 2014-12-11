@@ -161,7 +161,7 @@ foreach my $project_id (@projects) {
     };
     my $json_out = encode_json( $metrics_project );
     my $file_json_out = $dir_out . "/" . $project_id . "_metrics_pmi.json";
-    print "  Writing json file to [$file_json_out].\n";
+    print "  Writing metrics json file to [$file_json_out].\n";
     open my $fh, ">", $file_json_out;
     print $fh $json_out;
     close $fh;
@@ -183,5 +183,11 @@ foreach my $project_id (@projects) {
 # open my $fh, ">", $file_csv_out;
 # print $fh $csv_out;
 # close $fh;
+
+my $file_pmi_out = $dir_out . "/" . $project_id . "_pmi.json";
+print "  Writing raw PMI JSON file to $file_pmi_out.\n";
+open my $fh, ">", $file_pmi_out;
+print $fh $content;
+close $fh;
  
 print "  Finished importing data from PMI JSON file.\n";
