@@ -30,6 +30,6 @@ my $file_out = $dir_out . "/" . $project_id . "_metrics_grimoire.json";
 # Fetch json file from the dashboard.eclipse.org
 print "Fetching file from [$url].\n";
 my $content = getstore($url, $file_out);
-die "Could not get [$url]!" unless defined $content;
+print "HTTP response is [$content].\n";
  
 print "Finished importing data from Grimoire.\n";
