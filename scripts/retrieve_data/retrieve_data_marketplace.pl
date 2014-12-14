@@ -55,10 +55,10 @@ if (defined($content)) {
     }
     my @nodes_fav = $doc->findnodes("//favorited");
     $favs = $nodes_fav[0]->textContent();
-    $metrics_projects->{"children"}->{"MKT_FAV"} = $favs;
+    $metrics_project->{"children"}->{"MKT_FAV"} = $favs;
     my @nodes_dls = $doc->findnodes("//installsrecent");
     $dl = $nodes_dls[0]->textContent();
-    $metrics_projects->{"children"}->{"MKT_INSTALL_SUCCESS_1M"} = $favs;
+    $metrics_project->{"children"}->{"MKT_INSTALL_SUCCESS_1M"} = $favs;
 }
 
 
