@@ -31,5 +31,6 @@ my $file_out = $dir_out . "/" . $project_id . "_metrics_sonarqube.json";
 print "Fetching file from [$url].\n";
 my $content = getstore($url, $file_out);
 print "HTTP response is [$content].\n";
- 
+if ($content != 200) { die "Cannot find [$url].\n" };
+
 print "Finished importing data from SonarQube.\n";
