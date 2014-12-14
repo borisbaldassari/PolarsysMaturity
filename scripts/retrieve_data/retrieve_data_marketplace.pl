@@ -25,39 +25,44 @@ my $dir_out = shift;
 
 # Fetch XML file from the marketplace
 my $content = get($url);
-die "Could not get [$url]!" unless defined $content;
+#die "Could not get [$url]!" unless defined $content;
+
+my $favs = 0;
+my $dl = 0;
 
 my $fetch_date = localtime();
-
-my $parser = XML::LibXML->new;
-my $doc = $parser->load_xml(string => $content);
-
-my @nodes_name = $doc->findnodes("//node");
-my @name_attrs = $nodes_name[0]->attributes();
-my $name = "undef";
-
-foreach my $attr (@name_attrs) {
-    if ($attr->nodeName() eq 'name') {
-	$name = $attr->getValue();
-    }
-}
-my @nodes_fav = $doc->findnodes("//favorited");
-my $favs = $nodes_fav[0]->textContent();
-my @nodes_dls = $doc->findnodes("//installsrecent");
-my $dl = $nodes_dls[0]->textContent();
-
 
 # Write this to a json file.
 my $metrics_project = {
     "name" => "PMI Metrics for $project_id",
     "project" => $project_id,
     "version" => $fetch_date,
-    "children" => {
-	"MKT_FAV" => $favs,
-	"MKT_INSTALL_SUCCESS_1M" => $dl,
-    },
+    "children" => {},
 };
 
+if (defined($content)) {
+    my $parser = XML::LibXML->new;
+    my $doc = $parser->load_xml(string => $content);
+    
+    my @nodes_name = $doc->findnodes("//node");
+    my @name_attrs = $nodes_name[0]->attributes();
+    my $name = "undef";
+
+    foreach my $attr (@name_attrs) {
+	if ($attr->nodeName() eq 'name') {
+	    $name = $attr->getValue();
+	}
+    }
+    my @nodes_fav = $doc->findnodes("//favorited");
+    $favs = $nodes_fav[0]->textContent();
+    $metrics_projects->{"children"}->{"MKT_FAV"} = $favs;
+    my @nodes_dls = $doc->findnodes("//installsrecent");
+    $dl = $nodes_dls[0]->textContent();
+    $metrics_projects->{"children"}->{"MKT_INSTALL_SUCCESS_1M"} = $favs;
+}
+
+
+# Write this to a json file.
 
 my $json_out = encode_json( $metrics_project );
 my $file_json_out = $dir_out . "/" . $project_id . "_metrics_marketplace.json";
