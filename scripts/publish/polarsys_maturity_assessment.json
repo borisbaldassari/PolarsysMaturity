@@ -50,36 +50,7 @@
 	{
 	    "name": "Projects",
 	    "url": "/projects/",
-	    "children": [
-		{
-		    "name": "CDT",
-		    "url": "/projects/cdt.html" 
-		},
-		{
-		    "name": "EASE",
-		    "url": "/projects/ease.html" 
-		},
-		{
-		    "name": "Example",
-		    "url": "/projects/example.html" 
-		},
-		{
-		    "name": "Gendoc",
-		    "url": "/projects/gendoc.html" 
-		},
-		{
-		    "name": "Kitalpha",
-		    "url": "/projects/kitalpha.html" 
-		},
-		{
-		    "name": "Papyrus",
-		    "url": "/projects/papyrus.html" 
-		},
-		{
-		    "name": "Sirius",
-		    "url": "/projects/sirius.html" 
-		}
-	    ]
+	    "children": [ ]
 	},
 	{
 	    "name": "Contact",

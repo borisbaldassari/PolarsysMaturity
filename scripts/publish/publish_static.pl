@@ -164,9 +164,32 @@ if (not -e $dir_out_projects) {
 
 my @projects = <$dir_projects/*>;
 
+# Dynamically build the project list for the menu.
+# Find the projects menu entry in menu array.
+my $counter = 0;
+foreach my $entry (@{$menu_ref}) {
+    if ($entry->{"name"} =~ m!Projects!) {
+	last;
+    }
+    $counter++;
+}
+# Add all projects to the menu.
+foreach my $project (@projects) {
+    my @file_path = File::Spec->splitdir($project);
+    my $project_id = $file_path[-1];
+    my $tmp = {
+	'url' => '/projects/' . $project_id . '.html',
+	'name' => ucfirst($project_id)
+    };
+#    print Dumper($menu_ref->[$counter]);
+    push( @{$menu_ref->[$counter]->{"children"}}, $tmp );
+}
+
 foreach my $project (@projects) {
     my @path = File::Spec->splitdir($project);
     my $project_id = $path[-1];
+
+    print "  # Working on project [$project_id].\n";
 
     if (not -e $dir_src_projects) { 
 	print "  * Creating folder [$dir_src_projects].\n";
