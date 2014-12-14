@@ -177,11 +177,12 @@ foreach my $entry (@{$menu_ref}) {
 foreach my $project (@projects) {
     my @file_path = File::Spec->splitdir($project);
     my $project_id = $file_path[-1];
+    my @comps = split('\.', $project_id);
+    my $project_name = $comps[-1];
     my $tmp = {
 	'url' => '/projects/' . $project_id . '.html',
-	'name' => ucfirst($project_id)
+	'name' => ucfirst($project_name)
     };
-#    print Dumper($menu_ref->[$counter]);
     push( @{$menu_ref->[$counter]->{"children"}}, $tmp );
 }
 
