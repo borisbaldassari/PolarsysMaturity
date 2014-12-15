@@ -74,7 +74,7 @@ foreach my $project_id (@projects) {
 	    print "  Got query url [" . $proj{"bugzilla_query_url"} . "]!\n"; 
 	}
     }	
-    $metrics{$project_id}{"PUB_ITS_INFO"} = $pub_its_info;
+    $metrics{$project_id}{"PUB_ITS_INFO_PMI"} = $pub_its_info;
 
     # Retrieve information about source repos
     my $pub_scm_info = 0;
@@ -93,7 +93,7 @@ foreach my $project_id (@projects) {
 	}
 
     }
-    $metrics{$project_id}{"PUB_SCM_INFO"} = $pub_scm_info;
+    $metrics{$project_id}{"PUB_SCM_INFO_PMI"} = $pub_scm_info;
 
 
     # Now working on releases..
