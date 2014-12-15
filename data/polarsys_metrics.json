@@ -154,7 +154,7 @@
 	    "See also SonarQube's definition for code complexity: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity\">http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity</a>. There is also a discussion about its meaning here: <a href=\"http://www.sonarqube.org/discussing-cyclomatic-complexity/\">http://www.sonarqube.org/discussing-cyclomatic-complexity/</a>",
 	    "See also the Maisqual wiki for more details on complexity measures: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics</a>."
         ],
-        "scale": [5.29999,3.02499,2.79999,2.375],
+        "scale": [500,400,300,100],
         "ds": "SonarQube"
       },
       {
@@ -276,7 +276,7 @@
             "The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.",
 	    "See also the <a href=\"/documentation/rules.html\">page on practices</a> for a list of checked rules and their associated impact on quality characteristics."
         ],
-        "scale": [100,50,20,10],
+        "scale": [300,200,100,50],
         "ds": "RuleChecking"
       },
       {
