@@ -34,6 +34,7 @@ where:
   -pf|--pmd-file        The PMD XML results file with violations.
   -fr|--findbug-rules   The directory containing JSON PMD rules definition.
   -ff|--findbugs-file   The FindBugs XML results file with violations.
+  -l|--lines            The KSLOC value of the project for indexes.
   -o|--output           The file to write metrics to (JSON).
   -ov|--output-v        Write violations to specified files (optional).
 
@@ -57,6 +58,7 @@ my (
     $opt_pmd_file,
     $opt_fb_rules,
     $opt_fb_file,
+    $opt_ksloc,
     $opt_output,
     $opt_output_v,
     );
@@ -64,14 +66,15 @@ my (
 
 # Parse command-line options
 GetOptions(
-           'h|help' => \$opt_help,
-           'v|verbose' => \$opt_verbose,
-           'pr|pmd-rules=s' => \$opt_pmd_rules,
-           'pf|pmd-file=s' => \$opt_pmd_file,
-           'fr|findbugs-rules=s' => \$opt_fb_rules,
-           'ff|findbugs-file=s' => \$opt_fb_file,
-           'o|output=s' => \$opt_output,
-           'ov|output-v=s' => \$opt_output_v,
+    'h|help' => \$opt_help,
+    'v|verbose' => \$opt_verbose,
+    'pr|pmd-rules=s' => \$opt_pmd_rules,
+    'pf|pmd-file=s' => \$opt_pmd_file,
+    'fr|findbugs-rules=s' => \$opt_fb_rules,
+    'ff|findbugs-file=s' => \$opt_fb_file,
+    'l|lines' => \$opt_ksloc,
+    'o|output=s' => \$opt_output,
+    'ov|output-v=s' => \$opt_output_v,
     );
 
 if ( not defined($opt_pmd_rules) ) {
@@ -98,6 +101,11 @@ if (not defined($opt_output)) {
     die "Need a file to write JSON results to. \n";
 }
 
+if (not defined($opt_ksloc)) {
+    print "WARN: Need a KSLOC value. Using 1. \n";
+    $opt_ksloc = 1;
+}
+
 my $time = localtime();
 print "\nExecuting $0 on $time.\n";
 
@@ -112,12 +120,12 @@ my %rules;
 my %unknown_rules;
 my %metrics = (
     "RULES" => 0,
-    "RULES_ANA" => 0, "RKO_ANA" => 0, "ROK_ANA" => 0, "NCC_ANA" => 0, "ROKR_ANA" => 0,
-    "RULES_CHA" => 0, "RKO_CHA" => 0, "ROK_CHA" => 0, "NCC_CHA" => 0, "ROKR_CHA" => 0,
-    "RULES_REU" => 0, "RKO_REU" => 0, "ROK_REU" => 0, "NCC_REU" => 0, "ROKR_REU" => 0,
-    "RULES_REL" => 0, "RKO_REL" => 0, "ROK_REL" => 0, "NCC_REL" => 0, "ROKR_REL" => 0,
-    "RULES_TES" => 0, "RKO_TES" => 0, "ROK_TES" => 0, "NCC_TES" => 0, "ROKR_TES" => 0,
-    "RULES_RES" => 0, "RKO_CHA" => 0, "ROK_RES" => 0, "NCC_RES" => 0, "ROKR_RES" => 0,
+    "RULES_ANA" => 0, "RKO_ANA" => 0, "ROK_ANA" => 0, "NCC_ANA" => 0, "ROKR_ANA" => 0, "NCC_ANA_IDX" => 0,
+    "RULES_CHA" => 0, "RKO_CHA" => 0, "ROK_CHA" => 0, "NCC_CHA" => 0, "ROKR_CHA" => 0,"NCC_CHA_IDX" => 0,
+    "RULES_REU" => 0, "RKO_REU" => 0, "ROK_REU" => 0, "NCC_REU" => 0, "ROKR_REU" => 0,"NCC_REU_IDX" => 0,
+    "RULES_REL" => 0, "RKO_REL" => 0, "ROK_REL" => 0, "NCC_REL" => 0, "ROKR_REL" => 0,"NCC_REL_IDX" => 0,
+    "RULES_TES" => 0, "RKO_TES" => 0, "ROK_TES" => 0, "NCC_TES" => 0, "ROKR_TES" => 0,"NCC_TES_IDX" => 0,
+    "RULES_RES" => 0, "RKO_CHA" => 0, "ROK_RES" => 0, "NCC_RES" => 0, "ROKR_RES" => 0,"NCC_RES_IDX" => 0,
 );
 
 
@@ -272,6 +280,7 @@ foreach my $cat (sort keys %categories) {
 	print '* ' , $cat, ' violated ', $categories{ $cat }->{ 'vol' }, " times.\n";
     }
     $metrics{ 'NCC_' . $cat } = $categories{ $cat }->{ 'vol' };
+    $metrics{ 'NCC_' . $cat . '_IDX' } = ( $categories{ $cat }->{ 'vol' } ) / $opt_ksloc;
     
     # Children are violated rules, excepted for the 'vol' attribute which
     # is the volume of violations for the category.
