@@ -79,7 +79,8 @@ sub generate_downloads($$$$) {
 }
 
 
-sub generate_progressbar($$$) {
+sub generate_progressbar($$$$) {
+    my $name = shift;
     my $value = shift;
     my $conf = shift;
     my $project_id = shift || "";
@@ -92,12 +93,18 @@ sub generate_progressbar($$$) {
 
     my $percent = 20 * $value;
 
-    my $ret = '<div class="progress">';
-    $ret .= '<div class="progress-bar" role="progressbar" aria-valuenow="'
-	. $value . '" aria-valuemin="0" aria-valuemax="5"  style="background-color: ' . $colours[$value]
-	. ';width: ' . $percent . '%;">' . $value .  ' / 5 (confidence: ' . $conf
-	. ')</div></div>';
-
+    my $ret = '
+                  <dt>' . $name . ' <span class="pull-right">( ' . $conf . 
+		  ' metrics )</span></dt>
+                  <dd>
+                    <div class="progress">';
+    $ret .= '
+                      <div class="progress-bar" role="progressbar" aria-valuenow="'
+         . $value . '" aria-valuemin="0" aria-valuemax="5"  style="background-color: ' . $colours[$value]
+	 . ';width: ' . $percent . '%;">' . $value .  ' / 5</div>
+                    </div>
+                  </dd>';
+    
     return $ret;
 }
 
@@ -265,6 +272,7 @@ sub aggregate_inds($$$$$) {
 	
     } else {
 	# Yes: compute the ind value of leaf.
+#	print "DBG before compute_scale: for $mnemo.\n";
 	$coef = &compute_scale($values->{$mnemo}, $flat_metrics{$mnemo}{"scale"});
 	$raw_qm->{"ind"} = $coef;
 
@@ -447,19 +455,19 @@ sub generate_project($$$) {
 	$html_ret_attrs .= "<table class=\"table table-striped table-condensed table-hover\">\n";
 	$html_ret_attrs .= "<tr><th width=\"40%\">Name</th>" 
 	    . "<th width=\"20%\">Mnemo</th>" 
-	    . "<th width=\"20%\">Value</th>" 
+	    . "<th width=\"20%\">Value (confidence)</th>" 
 	    . "<th width=\"20%\">Indicator</th></tr>\n";
 	foreach my $a_mnemo (sort keys %{$raw_attrs->{"children"}}) {
 	    my $a_value = $raw_attrs->{"children"}->{$a_mnemo};
 	    my $a_conf = $raw_attrs_conf->{"children"}->{$a_mnemo};
-	    $project_attrs{$a_mnemo} = $a_value;
-	    $project_attrs_conf{$a_mnemo} = $a_conf;
+	    $project_attrs{$a_mnemo} = $a_value || 0;
+	    $project_attrs_conf{$a_mnemo} = $a_conf || 0;
 	    if (exists($flat_attributes{$a_mnemo})) {
 		$html_ret_attrs .= "<tr><td><a href=\"/documentation/attributes.html#" 
 		    . $a_mnemo . '">' . $flat_attributes{$a_mnemo}{'name'} . "</a></td><td>" ;
 		$html_ret_attrs .= "<a href=\"/documentation/attributes.html#" 
 		    . $a_mnemo . '">' . $a_mnemo . "</a></td><td>";
-		$html_ret_attrs .= "" . $a_value . " (${a_conf}\% of metrics available) </td>";
+		$html_ret_attrs .= "" . $a_value . " ( ${a_conf} metrics ) </td>";
 		$html_ret_attrs .= "<td><span class=\"label label-scale\" style=\"background-color: " 
 		    . $colours[$a_value] . "\">" . $a_value . "</span></td></tr>\n";
 	    } else {
@@ -648,13 +656,6 @@ sub generate_project($$$) {
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>';
 
-    if ($pmi_ok) {
-	$html_ret .= '
-                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
-    } else { 
-	$html_ret .= '
-                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>';
-    }
     $html_ret .= '
                   <li role="presentation" class=""><a href="#qm" role="tab" data-toggle="tab">QM</a></li>';
 
@@ -692,6 +693,20 @@ sub generate_project($$$) {
 
     $html_ret .= '
                   <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
+                  <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    Download <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li role="presentation"><a href="' . ${project_id} . '_attributes.json">Attributes JSON</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_attributes.csv">Attributes CSV</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_questions.json">Questions JSON</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_questions.csv">Questions CSV</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_metrics.json">Metrics JSON</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_metrics.csv">Metrics CSV</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_violations.csv">Violations JSON</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_attributes.csv">Violations CSV</a></li>
+                    </ul>
+                  </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
                 </ul>
 
@@ -702,6 +717,16 @@ sub generate_project($$$) {
     # Start grid for summary header
     $html_ret .= '
                     <div class="row">
+                      <div class="col-sm-6">
+                        <dl class="dl-vertical">
+                        <dt>Description</dt>
+                        <dd>' . ($project_pmi{'desc'} || "") . '</dd>
+                        </dl>
+                      </div>
+                      <div class="col-sm-6">
+                      </div>
+                    </div>
+                    <div class="row">
                       <div class="col-sm-8">';
 
     # Display rating for project
@@ -710,34 +735,23 @@ sub generate_project($$$) {
 	. 'Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= '
-                            <dt>Quality</dt><dd>';
-			    #. $project_attrs_conf{"QM_QUALITY"} . ' metrics avail.)</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_QUALITY"} || 0, 
-				       $project_attrs_conf{"QM_QUALITY"} || 0, 
+    $html_ret .= &generate_progressbar("Overall Maturity", 
+				       $project_attrs{"QM_QUALITY"}, 
+				       $project_attrs_conf{"QM_QUALITY"}, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Ecosystem Quality (' . $project_attrs_conf{"QM_ECOSYSTEM"} . ' metrics avail.)</dt><dd>';
-                           #. $project_attrs_conf{"QM_ECOSYSTEM"} . ' metrics avail.)</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_ECOSYSTEM"} || 0, 
-				       $project_attrs_conf{"QM_ECOSYSTEM"} || 0, 
+    $html_ret .= &generate_progressbar("Ecosystem Quality",
+				       $project_attrs{"QM_ECOSYSTEM"}, 
+				       $project_attrs_conf{"QM_ECOSYSTEM"}, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Process Quality</dt><dd>';
-                            # (' . $project_attrs_conf{"QM_PROCESS"} . ' metrics avail.)
-    $html_ret .= &generate_progressbar($project_attrs{"QM_PROCESS"} || 0, 
-				       $project_attrs_conf{"QM_PROCESS"} || 0, 
+    $html_ret .= &generate_progressbar("Process Quality", 
+				       $project_attrs{"QM_PROCESS"}, 
+				       $project_attrs_conf{"QM_PROCESS"}, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Product Quality</dt><dd>';
-                            # (' . $project_attrs_conf{"QM_PRODUCT"} . ' metrics avail.)
-    $html_ret .= &generate_progressbar($project_attrs{"QM_PRODUCT"} || 0, 
-				       $project_attrs_conf{"QM_PRODUCT"} || 0, 
+    $html_ret .= &generate_progressbar("Product Quality",
+				       $project_attrs{"QM_PRODUCT"}, 
+				       $project_attrs_conf{"QM_PRODUCT"}, 
 				       $project_id);
-    $html_ret .= '</dd>
+    $html_ret .= '
                             </dl>
                           </div>
                         </div>
@@ -747,16 +761,15 @@ sub generate_project($$$) {
     
     # Display download box.
     $html_ret .= '
-                        <div class="panel panel-primary"><div class="panel-heading">Downloads</div><ul class="list-group">'; 
-    $html_ret .= "<li class=\"list-group-item\">Project attributes: [ <a href=\"${project_id}_attributes.json\">JSON</a> ]" 
-	. " [ <a href=\"${project_id}_attributes.csv\">CSV</a> ]</li>";
-    $html_ret .= "<li class=\"list-group-item\">Project questions: [ <a href=\"${project_id}_questions.json\">JSON</a> ]" 
-	. " [ <a href=\"${project_id}_questions.csv\">CSV</a> ]</li>";
-    $html_ret .= "<li class=\"list-group-item\">Project metrics: [ <a href=\"${project_id}_metrics.json\">JSON</a> ]" 
-	. " [ <a href=\"${project_id}_metrics.csv\">CSV</a> ]</li>";
-    $html_ret .= "<li class=\"list-group-item\">Project violations: [ <a href=\"${project_id}_violations.json\">JSON</a> ]" 
-	. " [ <a href=\"${project_id}_violations.csv\">CSV</a> ]</li>";
-    $html_ret .= "</ul></div>";    
+                        <div class="panel panel-primary"><div class="panel-heading">Summary</div>
+                        <ul class="list-group">
+                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Web <a href="' . ($project_pmi{'web'} || "") . '">' . ($project_pmi{'web'} || "") . '</a></li>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Wiki <a href="' . ($project_pmi{'wiki'} || "") . '">' . ($project_pmi{'wiki'} || "") . '</a></li>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-download"></span> Downloads <a href="' . ($project_pmi{'dl'} || "") . '">' . ($project_pmi{'dl'} || "") . '</a></li>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Documentation <a href="' . ($project_pmi{'doc'} || "") . '">' . ($project_pmi{'doc'} || "") . '</a></dd>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Getting Started <a href="' . ($project_pmi{'gs'} || "") . '">' . ($project_pmi{'gs'} || "") . '</a></dd>
+                        </ul>
+                        </div>';
 
     # Close grid (col & row) for summary header
     $html_ret .= '
@@ -774,43 +787,28 @@ sub generate_project($$$) {
 	. 'Ecosystem quality</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= '
-                            <dt>Activity</dt><dd>';
-                            # (' . $project_attrs_conf{"QM_ACTIVITY"} . ' metrics avail.)
-    $html_ret .= &generate_progressbar($project_attrs{"QM_ACTIVITY"} || 0, 
+    $html_ret .= &generate_progressbar('Activity',
+				       $project_attrs{"QM_ACTIVITY"} || 0, 
 				       $project_attrs_conf{"QM_ACTIVITY"} || 0,
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Diversity</dt><dd>';
-                            # (' . $project_attrs_conf{"QM_DIVERSITY"} . ' metrics avail.)
-    $html_ret .= &generate_progressbar($project_attrs{"QM_DIVERSITY"} || 0,  
+    $html_ret .= &generate_progressbar('Diversity', 
+				       $project_attrs{"QM_DIVERSITY"} || 0,  
 				       $project_attrs_conf{"QM_DIVERSITY"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Responsiveness</dt><dd>';
-                            # (' . $project_attrs_conf{"QM_RESPONSIVENESS"} . ' metrics avail.)
-    $html_ret .= &generate_progressbar($project_attrs{"QM_RESPONSIVENESS"} || 0,  
+    $html_ret .= &generate_progressbar('Responsiveness', 
+				       $project_attrs{"QM_RESPONSIVENESS"} || 0,  
 				       $project_attrs_conf{"QM_RESPONSIVENESS"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Support</dt><dd>';
-                            # (' . $project_attrs_conf{"QM_SUPPORT"} . ' metrics avail.)
-    $html_ret .= &generate_progressbar($project_attrs{"QM_SUPPORT"} || 0,  
+    $html_ret .= &generate_progressbar('Support',
+				       $project_attrs{"QM_SUPPORT"} || 0,  
 				       $project_attrs_conf{"QM_SUPPORT"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>
-                            </dl>
-                            <dt>Usage</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_USAGE"} || 0,  
+    $html_ret .= &generate_progressbar('Usage',
+				       $project_attrs{"QM_USAGE"} || 0,  
 				       $project_attrs_conf{"QM_USAGE"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>
-                            </dl>
-                            <dt>User feedback</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_FEEDBACK"} || 0,  
+    $html_ret .= &generate_progressbar('User feedback',
+				       $project_attrs{"QM_FEEDBACK"} || 0,  
 				       $project_attrs_conf{"QM_FEEDBACK"} || 0, 
 				       $project_id);
     $html_ret .= '</dd>
@@ -827,31 +825,23 @@ sub generate_project($$$) {
 	. 'Process quality</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= '
-                            <dt>Configuration Management</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_SCM"} || 0,  
+    $html_ret .= &generate_progressbar('Configuration Management',
+				       $project_attrs{"QM_SCM"} || 0,  
 				       $project_attrs_conf{"QM_SCM"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Change Management</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_ITS"} || 0,  
+    $html_ret .= &generate_progressbar('Change Management',
+				       $project_attrs{"QM_ITS"} || 0,  
 				       $project_attrs_conf{"QM_ITS"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Planning Management</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_PLAN"} || 0,  
+    $html_ret .= &generate_progressbar('Planning Management',
+				       $project_attrs{"QM_PLAN"} || 0,  
 				       $project_attrs_conf{"QM_PLAN"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Test Management</dt><dd>';
-                            # (' . $project_attrs_conf{"QM_TST"} . ' metrics avail.)
-    $html_ret .= &generate_progressbar($project_attrs{"QM_TST"} || 0,  
+    $html_ret .= &generate_progressbar('Test Management',
+				       $project_attrs{"QM_TST"} || 0,  
 				       $project_attrs_conf{"QM_TST"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>
+    $html_ret .= '
                             </dl>
                           </div>
                         </div>
@@ -865,30 +855,23 @@ sub generate_project($$$) {
 	. 'Product quality</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= '
-                            <dt>Analysability</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_ANA"} || 0,  
+    $html_ret .= &generate_progressbar('Analysability',
+				       $project_attrs{"QM_ANA"} || 0,  
 				       $project_attrs_conf{"QM_ANA"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Changeability</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_CHA"} || 0,  
+    $html_ret .= &generate_progressbar('Changeability',
+				       $project_attrs{"QM_CHA"} || 0,  
 				       $project_attrs_conf{"QM_CHA"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Reliability</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_REL"} || 0,  
+    $html_ret .= &generate_progressbar('Reliability',
+				       $project_attrs{"QM_REL"} || 0,  
 				       $project_attrs_conf{"QM_REL"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>';
-    $html_ret .= '
-                            <dt>Reusability</dt><dd>';
-    $html_ret .= &generate_progressbar($project_attrs{"QM_REU"} || 0,  
+    $html_ret .= &generate_progressbar('Reusability',
+				       $project_attrs{"QM_REU"} || 0,  
 				       $project_attrs_conf{"QM_REU"} || 0, 
 				       $project_id);
-    $html_ret .= '</dd>
+    $html_ret .= '
                             </dl>
                           </div>
                         </div>
@@ -899,66 +882,6 @@ sub generate_project($$$) {
                     </div>';   
 
  
-    # # Display some more information about the project.
-    # $html_ret .= '
-    #                 <h4>Main caracteristics</h4>';
-    # $html_ret .= $project_pmi{'desc'} || "";
-
-    # $html_ret .= '<h4>Project rating</h4>';
-
-    # $html_ret .= '<h4>Errors during the analysis</h4>';
-
-    # $html_ret .= '
-    #                 <ul class="list-group">';
-
-    # foreach my $logline (@{$project_errors{$project_id}}) {
-    # 	if ($logline =~ m!^ERR\s*:?(.*)$!) { 
-    # 	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
-    # 	    $html_ret .= '
-    #                   <li class="list-group-item">' . $logline . '</li>';;
-    # 	}
-    # }
-
-    # $html_ret .= '
-    #                 </ul>';    
-
-    $html_ret .= '
-                  </div>
-                  <div role="tabpanel" class="tab-pane fade" id="pmi"><br />';
-
-    # Generic information
-    $html_ret .= '
-                    <dl class="dl-horizontal">
-                      <dt>Description</dt>
-                      <dd>' . ($project_pmi{'desc'} || "") . '</dd>
-                      <dt>Web</dt>
-                      <dd><a href="' . ($project_pmi{'web'} || "") . '">' . ($project_pmi{'web'} || "") . '</a></dd>
-                      <dt>Wiki</dt>
-                      <dd><a href="' . ($project_pmi{'wiki'} || "") . '">' . ($project_pmi{'wiki'} || "") . '</a></dd>
-                      <dt>Downloads</dt>
-                      <dd><a href="' . ($project_pmi{'dl'} || "") . '">' . ($project_pmi{'dl'} || "") . '</a></dd>
-                      <dt>Documentation</dt>
-                      <dd><a href="' . ($project_pmi{'doc'} || "") . '">' . ($project_pmi{'doc'} || "") . '</a></dd>
-                      <dt>Getting Started</dt>
-                      <dd><a href="' . ($project_pmi{'gs'} || "") . '">' . ($project_pmi{'gs'} || "") . '</a></dd>
-                    </dl>';
-
-                # <div class="panel panel-default">
-                #   <!-- Default panel contents -->
-                #   <div class="panel-heading">General information</div>
-                #   <div class="panel-body"></div>
-                #   <ul class="list-group">
-                #     <li class="list-group-item">' . $project_description . '</li>
-                #     <li class="list-group-item">' . $project_web . '</li>
-                #   </ul>
-                # </div>
-
-    # Bugzilla
-
-    # Code repo
-
-    # Milestone
-
     $html_ret .= '
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="qm">';
