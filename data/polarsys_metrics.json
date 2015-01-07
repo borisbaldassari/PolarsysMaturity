@@ -45,7 +45,7 @@
       },
       {
         "name": "Comment rate",
-        "mnemo": "COMR",
+        "mnemo": "COMMENT_LINES_DENSITY",
         "desc": [
             "The ratio of source lines of code on the number of comment lines of code.",
             "Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. ",
@@ -125,7 +125,7 @@
       },
       {
         "name": "Source Lines Of Code",
-        "mnemo": "SLOC",
+        "mnemo": "NCLOC",
         "desc": [
             "Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.",
 	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code\">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a>"
@@ -135,7 +135,7 @@
       },
       {
         "name": "Cloning density",
-        "mnemo": "CLONE_IDX",
+        "mnemo": "DUPLICATED_LINES_DENSITY",
         "desc": [
             "The amount of duplicated lines in the code, divided by the number of lines. This is expressed as a percentage; The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.",
 	    "See also SonarQube's definition for duplications: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href=\"http://docs.codehaus.org/display/SONAR/Duplications\">http://docs.codehaus.org/display/SONAR/Duplications</a>."
@@ -145,7 +145,7 @@
       },
       {
         "name": "Average Cyclomatic Complexity",
-        "mnemo": "VG",
+        "mnemo": "FUNCTION_COMPLEXITY",
         "desc": [
             "The average number of execution paths found in functions.",
 	    "Basically, the counter is incremented every time the control flow of the function splits, with any function having at least a cyclomatic number of 1. The sum of cyclomatic numbers for all functions is then divided by the number of functions. In SonarQube the measure is <code>function_complexity</code>.",
@@ -389,7 +389,7 @@
       },
       {
         "name": "Percentage of lines of code covered by tests",
-        "mnemo": "TST_COV_LINES",
+        "mnemo": "LINE_COVERAGE",
         "desc": [
             "The percentage of source lines of code that is exercised by the tests. The SonarQube measure used for this purpose is <mark>line_coverage</mark>."
         ],
@@ -398,7 +398,7 @@
       },
       {
         "name": "Percentage of branches covered by tests",
-        "mnemo": "TST_COV_BRANCHES",
+        "mnemo": "BRANCH_COVERAGE",
         "desc": [
             "The percentage of branches that is exercised by the tests. The SonarQube measure used for this purpose is <mark>branch_coverage</mark>.",
             "On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?"
@@ -418,7 +418,7 @@
       },
       {
         "name": "Test success density",
-        "mnemo": "TST_SUCCESS_LAST",
+        "mnemo": "TEST_SUCCESS_DENSITY",
         "desc": [
             "The percentage of failed tests during the last execution of the test plan. The SonarQube measure used for this purpose is <mark>test_success_density</mark>.",
             "Computation is as follows: Test success density = (Unit tests - (Unit test errors + Unit test failures)) / Unit tests * 100, where Unit test errors is the number of unit tests that have failed, Unit test failures is the number of unit tests that have failed with an unexpected exception."
@@ -431,7 +431,7 @@
         "mnemo": "MLS_DEV_VOL_1M",
         "desc": [
             "Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.",
-	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
+	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.00765581777287,0.0277777777778,0.0907806209215,1.875],
         "ds": "Grimoire"
@@ -441,7 +441,7 @@
         "mnemo": "MLS_DEV_AUTH_1M",
         "desc": [
             "Number of distinct senders for messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. ",
-	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis."
+	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.00411475861939,0.0139607869416,0.0461270538934,1.49700598802],
         "ds": "Grimoire"
@@ -451,7 +451,7 @@
         "mnemo": "MLS_DEV_RESP_TIME_MED_1M",
         "desc": [
             "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. ",
-    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
         "scale": [42.93,0.94,0.26,0.0425],
         "ds": "Grimoire"
@@ -461,7 +461,7 @@
         "mnemo": "MLS_DEV_RESP_RATIO_1M",
         "desc": [
             "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. ",
-    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [0.833333333333,1.24285714286,2.5125,21],
         "ds": "Grimoire"
@@ -471,7 +471,7 @@
         "mnemo": "MLS_DEV_SUBJ_1M",
         "desc": [
             "Number of threads of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. ",
-	        "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
+	        "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.00431595818232, 0.0167085169953, 0.0583188863413, 0.748502994012],
         "ds": "Grimoire"
@@ -481,7 +481,7 @@
         "mnemo": "MLS_USR_VOL_1M",
         "desc": [
            "Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. ",
-	       "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
+	       "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.00765581777287,0.0277777777778,0.0907806209215,1.875],
         "ds": "Grimoire"
@@ -491,7 +491,7 @@
         "mnemo": "MLS_USR_AUTH_1M",
         "desc": [
             "Number of distinct senders for messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.",
-	        "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis."
+	        "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [1,2,3,4],
         "ds": "Grimoire"
@@ -501,7 +501,7 @@
         "mnemo": "MLS_USR_RESP_TIME_MED_1M",
         "desc": [
             "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. ",
-	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
         "scale": [42.93,0.94,0.26,0.0425],
         "ds": "Grimoire"
@@ -511,7 +511,7 @@
         "mnemo": "MLS_USR_RESP_RATIO_1M",
         "desc": [
             "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. ",
-	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [0.833333333333,1.24285714286,2.5125,21],
         "ds": "Grimoire"
@@ -521,7 +521,7 @@
         "mnemo": "MLS_USR_SUBJ_1M",
         "desc": [
             "Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.",
-	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
+	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.00431595818232, 0.0167085169953, 0.0583188863413, 0.748502994012],
         "ds": "Grimoire"
@@ -531,7 +531,7 @@
         "mnemo": "SCM_COMMITS_1M",
         "desc": [
             "Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.",
-	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.025078279624,0.0756446929809,0.264255236791,2.54688585321],
         "ds": "Grimoire"
@@ -541,7 +541,7 @@
         "mnemo": "SCM_COMMITTED_FILES_1M",
         "desc": [
             "Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.",
-	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.069052601156,0.294543274794,0.948385435841,38.8978930308],
         "ds": "Grimoire"
@@ -551,7 +551,7 @@
         "mnemo": "SCM_COMMITTERS_1M",
         "desc": [
             "Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.",
-	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.00869816603364,0.0242054327998,0.0757305045383,1.47492625369],
         "ds": "Grimoire"
@@ -561,7 +561,7 @@
         "mnemo": "SCM_STABILITY_1M",
         "desc": [
     	    "Average number of commits touching each file in source code management repositories dated during the last month. ",
-	        "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+	        "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [3.79487179487,1.4430952381,1.14285714286,1],
         "ds": "Grimoire"
@@ -571,14 +571,14 @@
         "mnemo": "ITS_FIX_MED_1M",
         "desc": [
             "Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. ",
-	        "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+	        "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
         "scale": [1001.13,40.2625,11.62,3.82],
         "ds": "Grimoire"
       },
       {
         "name": "Number of open bugs",
-        "mnemo": "ITS_BUGS_OPEN",
+        "mnemo": "ITS_BUGS_OPENED_1M",
         "desc": [
             "Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system, divided by the number of thousands of lines of code.",
 	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed. Number of lines are those calculated at the end of the period of analysis."
@@ -591,7 +591,7 @@
         "mnemo": "ITS_ISSUES_OPEN_1M",
         "desc": [
             "Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [1,2,3,4],
         "ds": "Grimoire"
@@ -601,7 +601,7 @@
         "mnemo": "ITS_ISSUES_OPENERS_1M",
         "desc": [
             "Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [1,2,3,4],
         "ds": "Grimoire"
@@ -611,7 +611,7 @@
         "mnemo": "ITS_UPDATES_1M",
         "desc": [
             "Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.0229586565615,0.0757059580589,0.193724583492,13.0988023952],
         "ds": "Grimoire"
@@ -621,7 +621,7 @@
         "mnemo": "ITS_AUTH_1M",
         "desc": [
             "Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrival is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [0.00791505127095, 0.0229812226388, 0.0527769809755, 9.09090909091],
         "ds": "Grimoire"

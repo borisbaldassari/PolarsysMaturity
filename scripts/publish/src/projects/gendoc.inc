@@ -7,13 +7,26 @@
               <div class="tabbable">
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
-                  <li role="presentation"><a href="#pmi" role="tab" data-toggle="tab">PMI</a></li>
                   <li role="presentation" class=""><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
                   <li role="presentation" class="disabled"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>
                   <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
+                  <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    Download <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li role="presentation"><a href="gendoc_attributes.json">Attributes JSON</a></li>
+                      <li role="presentation"><a href="gendoc_attributes.csv">Attributes CSV</a></li>
+                      <li role="presentation"><a href="gendoc_questions.json">Questions JSON</a></li>
+                      <li role="presentation"><a href="gendoc_questions.csv">Questions CSV</a></li>
+                      <li role="presentation"><a href="gendoc_metrics.json">Metrics JSON</a></li>
+                      <li role="presentation"><a href="gendoc_metrics.csv">Metrics CSV</a></li>
+                      <li role="presentation"><a href="gendoc_violations.csv">Violations JSON</a></li>
+                      <li role="presentation"><a href="gendoc_attributes.csv">Violations CSV</a></li>
+                    </ul>
+                  </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
                 </ul>
 
@@ -21,69 +34,10 @@
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane fade in active" id="home"><br />
                     <div class="row">
-                      <div class="col-sm-8">
-                        <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
-                          <div class="panel-body">
-                            <dl>
-                            <dt>Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5 (confidence: 12 / 62)</div></div></dd>
-                            <dt>Ecosystem Quality (3 / 19 metrics avail.)</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5 (confidence: 3 / 19)</div></div></dd>
-                            <dt>Process Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5 (confidence: 4 / 15)</div></div></dd>
-                            <dt>Product Quality</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5 (confidence: 5 / 28)</div></div></dd>
-                            </dl>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Downloads</div><ul class="list-group"><li class="list-group-item">Project attributes: [ <a href="gendoc_attributes.json">JSON</a> ] [ <a href="gendoc_attributes.csv">CSV</a> ]</li><li class="list-group-item">Project questions: [ <a href="gendoc_questions.json">JSON</a> ] [ <a href="gendoc_questions.csv">CSV</a> ]</li><li class="list-group-item">Project metrics: [ <a href="gendoc_metrics.json">JSON</a> ] [ <a href="gendoc_metrics.csv">CSV</a> ]</li><li class="list-group-item">Project violations: [ <a href="gendoc_violations.json">JSON</a> ] [ <a href="gendoc_violations.csv">CSV</a> ]</li></ul></div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Ecosystem quality</div>
-                          <div class="panel-body">
-                            <dl>
-                            <dt>Activity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5 (confidence: 2 / 4)</div></div></dd>
-                            <dt>Diversity</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5 (confidence: 1 / 3)</div></div></dd>
-                            <dt>Responsiveness</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5 (confidence: 0)</div></div></dd>
-                            <dt>Support</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5 (confidence: 0)</div></div></dd>
-                            </dl>
-                            <dt>Usage</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5 (confidence: 0)</div></div></dd>
-                            </dl>
-                            <dt>User feedback</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5 (confidence: 0)</div></div></dd>
-                            </dl>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
-                          <div class="panel-body">
-                            <dl>
-                            <dt>Configuration Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5 (confidence: 2 / 3)</div></div></dd>
-                            <dt>Change Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5 (confidence: 2 / 3)</div></div></dd>
-                            <dt>Planning Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5 (confidence: 0)</div></div></dd>
-                            <dt>Test Management</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5 (confidence: 0)</div></div></dd>
-                            </dl>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Product quality</div>
-                          <div class="panel-body">
-                            <dl>
-                            <dt>Analysability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5 (confidence: 0)</div></div></dd>
-                            <dt>Changeability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5 (confidence: 1 / 6)</div></div></dd>
-                            <dt>Reliability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5 (confidence: 3 / 9)</div></div></dd>
-                            <dt>Reusability</dt><dd><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5 (confidence: 1 / 5)</div></div></dd>
-                            </dl>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div role="tabpanel" class="tab-pane fade" id="pmi"><br />
-                    <dl class="dl-horizontal">
-                      <dt>Description</dt>
-                      <dd><p>Gendoc extracts data from EMF models and generates documents that fully respect the appearance of your document template.</p>
+                      <div class="col-sm-6">
+                        <dl class="dl-vertical">
+                        <dt>Description</dt>
+                        <dd><p>Gendoc extracts data from EMF models and generates documents that fully respect the appearance of your document template.</p>
 <p>The generation can be performed in a few steps:</p>
 <table><tbody><tr><td>
 				<img src="http://www.eclipse.org/proposals/modeling.gendoc/1.png" /></td>
@@ -119,17 +73,166 @@
 <li>
 		Data structure description from specific EMF models</li>
 </ul></dd>
-                      <dt>Web</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Wiki</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Downloads</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Documentation</dt>
-                      <dd><a href=""></a></dd>
-                      <dt>Getting Started</dt>
-                      <dd><a href=""></a></dd>
-                    </dl>
+                        </dl>
+                      </div>
+                      <div class="col-sm-6">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
+                          <div class="panel-body">
+                            <dl>
+                  <dt>Overall Maturity <span class="pull-right">( 21 / 62 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Ecosystem Quality <span class="pull-right">( 3 / 19 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Process Quality <span class="pull-right">( 6 / 15 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Product Quality <span class="pull-right">( 12 / 28 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                    </div>
+                  </dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Summary</div>
+                        <ul class="list-group">
+                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Web <a href=""></a></li>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Wiki <a href=""></a></li>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-download"></span> Downloads <a href=""></a></li>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Documentation <a href=""></a></dd>
+                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Getting Started <a href=""></a></dd>
+                        </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Ecosystem quality</div>
+                          <div class="panel-body">
+                            <dl>
+                  <dt>Activity <span class="pull-right">( 2 / 4 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Diversity <span class="pull-right">( 1 / 3 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Responsiveness <span class="pull-right">( 0 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Support <span class="pull-right">( 0 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Usage <span class="pull-right">( 0 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>User feedback <span class="pull-right">( 0 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
+                    </div>
+                  </dd></dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
+                          <div class="panel-body">
+                            <dl>
+                  <dt>Configuration Management <span class="pull-right">( 2 / 3 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #FFFF66;width: 20%;">1 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Change Management <span class="pull-right">( 2 / 3 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Planning Management <span class="pull-right">( 0 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Test Management <span class="pull-right">( 2 / 4 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div>
+                    </div>
+                  </dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Product quality</div>
+                          <div class="panel-body">
+                            <dl>
+                  <dt>Analysability <span class="pull-right">( 3 / 8 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Changeability <span class="pull-right">( 2 / 6 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #33CC00;width: 100%;">5 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Reliability <span class="pull-right">( 4 / 9 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                    </div>
+                  </dd>
+                  <dt>Reusability <span class="pull-right">( 3 / 5 metrics )</span></dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div>
+                    </div>
+                  </dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="qm">              <h3>The Quality model</h3>
             
@@ -477,41 +580,52 @@ function click(d) {
 
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="attrs"><br /><table class="table table-striped table-condensed table-hover">
-<tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>1 (2 / 4% of metrics available) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>5 (1 / 6% of metrics available) </td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>1 (1 / 3% of metrics available) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>1 (3 / 19% of metrics available) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>2 (2 / 3% of metrics available) </td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>1 (4 / 15% of metrics available) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>4 (5 / 28% of metrics available) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>2 (12 / 62% of metrics available) </td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>4 (3 / 9% of metrics available) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_REU">Reusability</a></td><td><a href="/documentation/attributes.html#QM_REU">QM_REU</a></td><td>5 (1 / 5% of metrics available) </td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>1 (2 / 3% of metrics available) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value (confidence)</th><th width="20%">Indicator</th></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>1 ( 2 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>4 ( 3 / 8 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>5 ( 2 / 6 metrics ) </td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>1 ( 1 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>1 ( 3 / 19 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>2 ( 2 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>1 ( 6 / 15 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>4 ( 12 / 28 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>2 ( 21 / 62 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>4 ( 4 / 9 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REU">Reusability</a></td><td><a href="/documentation/attributes.html#QM_REU">QM_REU</a></td><td>3 ( 3 / 5 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>1 ( 2 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_TST">Test Management</a></td><td><a href="/documentation/attributes.html#QM_TST">QM_TST</a></td><td>2 ( 2 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
 </table>
 
 
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="questions"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
+<tr><td><a href="/documentation/questions.html#CODE_DOC">Code documentation</a></td><td><a href="/documentation/questions.html#CODE_DOC">CODE_DOC</a></td><td>2</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/questions.html#CODE_SIZE">Code size</a></td><td><a href="/documentation/questions.html#CODE_SIZE">CODE_SIZE</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#CPX">Code complexity</a></td><td><a href="/documentation/questions.html#CPX">CPX</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/questions.html#ITS_REL">ITS Reliability</a></td><td><a href="/documentation/questions.html#ITS_REL">ITS_REL</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
 <tr><td><a href="/documentation/questions.html#ITS_USAGE">ITS usage</a></td><td><a href="/documentation/questions.html#ITS_USAGE">ITS_USAGE</a></td><td>2</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PUBLIC_DATA">Public access points</a></td><td><a href="/documentation/questions.html#PUBLIC_DATA">PUBLIC_DATA</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_USAGE">SCM usage</a></td><td><a href="/documentation/questions.html#SCM_USAGE">SCM_USAGE</a></td><td>1</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/questions.html#TST_COV">Test coverage</a></td><td><a href="/documentation/questions.html#TST_COV">TST_COV</a></td><td>2</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
 </table>
 
 
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
+<tr><td><a href="/documentation/metrics.html#BRANCH_COVERAGE">Percentage of branches covered by tests</a></td><td><a href="/documentation/metrics.html#BRANCH_COVERAGE">BRANCH_COVERAGE</a></td><td>0</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#COMMENT_LINES_DENSITY">Comment rate</a></td><td><a href="/documentation/metrics.html#COMMENT_LINES_DENSITY">COMMENT_LINES_DENSITY</a></td><td>16.4</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#FUNCTIONS">Number of functions</a></td><td><a href="/documentation/metrics.html#FUNCTIONS">FUNCTIONS</a></td><td>1268</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#FUNCTION_COMPLEXITY">Average Cyclomatic Complexity</a></td><td><a href="/documentation/metrics.html#FUNCTION_COMPLEXITY">FUNCTION_COMPLEXITY</a></td><td>2.5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_1M">ITS_AUTH_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>500</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_1M">ITS_FIX_MED_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_1M">ITS_UPDATES_1M</a></td><td>1</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#LINE_COVERAGE">Percentage of lines of code covered by tests</a></td><td><a href="/documentation/metrics.html#LINE_COVERAGE">LINE_COVERAGE</a></td><td>0</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCLOC">Source Lines Of Code</a></td><td><a href="/documentation/metrics.html#NCLOC">NCLOC</a></td><td>17003</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#PUBLIC_API">Public API</a></td><td><a href="/documentation/metrics.html#PUBLIC_API">PUBLIC_API</a></td><td>1292</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_1M">SCM_COMMITS_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_1M">SCM_COMMITTED_FILES_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
@@ -523,19 +637,9 @@ function click(d) {
                   <div role="tabpanel" class="tab-pane fade" id="actions">...</div>
                   <div role="tabpanel" class="tab-pane fade" id="log"><br />
                     <ul class="list-group">
-                      <li class="list-group-item">INFO: metric [BRANCH_COVERAGE] is not referenced in metrics definition file.
-</li>
-                      <li class="list-group-item">INFO: metric [COMMENT_LINES_DENSITY] is not referenced in metrics definition file.
-</li>
                       <li class="list-group-item">INFO: metric [COMPLEXITY] is not referenced in metrics definition file.
 </li>
                       <li class="list-group-item">INFO: metric [DUPLICATED_LINES] is not referenced in metrics definition file.
-</li>
-                      <li class="list-group-item">INFO: metric [FUNCTION_COMPLEXITY] is not referenced in metrics definition file.
-</li>
-                      <li class="list-group-item">INFO: metric [LINE_COVERAGE] is not referenced in metrics definition file.
-</li>
-                      <li class="list-group-item">INFO: metric [NCLOC] is not referenced in metrics definition file.
 </li>
                       <li class="list-group-item">INFO: metric [TESTS] is not referenced in metrics definition file.
 </li>

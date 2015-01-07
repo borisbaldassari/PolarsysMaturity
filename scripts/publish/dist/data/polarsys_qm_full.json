@@ -412,12 +412,12 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "TST_COV_LINES",
+                        "mnemo": "LINE_COVERAGE",
                         "type": "metric",
                         "active": "true"
                       },
                       {
-                        "mnemo": "TST_COV_BRANCHES",
+                        "mnemo": "BRANCH_COVERAGE",
                         "type": "metric",
                         "active": "true"
                       }
@@ -441,7 +441,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "TST_SUCCESS_LAST",
+                        "mnemo": "TEST_SUCCESS_DENSITY",
                         "type": "metric",
                         "active": "true"
                       }
@@ -467,7 +467,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "SLOC",
+                        "mnemo": "NCLOC",
                         "type": "metric",
                         "active": "true"
                       }
@@ -496,7 +496,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "VG",
+                        "mnemo": "FUNCTION_COMPLEXITY",
                         "type": "metric",
                         "active": "true"
                       },
@@ -513,7 +513,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "COMR",
+                        "mnemo": "COMMENT_LINES_DENSITY",
                         "type": "metric",
                         "active": "true"
                       }
@@ -561,7 +561,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "VG",
+                        "mnemo": "FUNCTION_COMPLEXITY",
                         "type": "metric",
                         "active": "true"
                       },
@@ -578,7 +578,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "CLONE_IDX",
+                        "mnemo": "DUPLICATED_LINES_DENSITY",
                         "type": "metric",
                         "active": "true"
                       }
@@ -626,7 +626,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "VG",
+                        "mnemo": "FUNCTION_COMPLEXITY",
                         "type": "metric",
                         "active": "true"
                       },
@@ -660,7 +660,7 @@
                         "active": "true"
                       },
                       {
-                        "mnemo": "ITS_BUGS_OPEN",
+                        "mnemo": "ITS_BUGS_OPENED_1M",
                         "type": "metric",
                         "active": "true"
                       },
@@ -713,7 +713,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "TST_COV_LINES",
+                        "mnemo": "LINE_COVERAGE",
                         "type": "metric",
                         "active": "true"
                       }
@@ -725,7 +725,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "COMR",
+                        "mnemo": "COMMENT_LINES_DENSITY",
                         "type": "metric",
                         "active": "true"
                       }
