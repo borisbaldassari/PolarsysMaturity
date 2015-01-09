@@ -1127,6 +1127,7 @@ sub generate_doc_metrics($) {
     my $raw_qm = &read_json($qm_file);
 
     # Import metrics.
+    my $metrics_total;
     foreach my $tmp_metric (@{$raw_metrics->{"children"}}) {
         my $metric_mnemo = $tmp_metric->{"mnemo"};
         my $metric_ds = $tmp_metric->{"ds"};
@@ -1137,9 +1138,6 @@ sub generate_doc_metrics($) {
 	} else {
 	    $flat_metrics{$metric_mnemo} = $tmp_metric;
 	}
-	
-        # Populate metrics_ds
-        $metrics_ds{$metric_ds}++;
 
 	# Check if the metric is active in the qm 
 	# XXX
@@ -1159,6 +1157,14 @@ sub generate_doc_metrics($) {
 		$flat_metrics{$metric_mnemo}{"active"} = "false"; 
 	    }
 	}
+
+	# Populate metrics_ds
+	if ( defined($flat_metrics{$metric_mnemo}{"active"}) ) {
+	    $metrics_ds{$metric_ds}++;
+	    $metrics_total++;
+	} 
+
+
 	$flat_metrics{$metric_mnemo}{"parents"} = \%tmp_nodes;
     }
     
@@ -1167,7 +1173,7 @@ sub generate_doc_metrics($) {
               <div class="tabbable">
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#repo_all" role="tab" data-toggle="tab">All&nbsp;<span class="badge">' . 
-                  scalar keys(%flat_metrics) . '</span></a></li>';
+                  $metrics_total . '</span></a></li>';
 
     foreach my $repo (sort keys %metrics_ds) {
         $html_ret .= '
@@ -1183,10 +1189,12 @@ sub generate_doc_metrics($) {
                   <ul class="list-group">';
                   
     foreach my $tmp_metric (sort keys %flat_metrics) {
-        $html_ret .= '
+	if ( defined($flat_metrics{$tmp_metric}{"active"}) ) {
+	    $html_ret .= '
                 <li class="list-group-item">';
-        $html_ret .= &describe_metric($tmp_metric);
-        $html_ret .= "</li>";
+	    $html_ret .= &describe_metric($tmp_metric);
+	    $html_ret .= "</li>";
+	}
     }
     $html_ret .= '
                   </ul></div>';
@@ -1199,7 +1207,8 @@ sub generate_doc_metrics($) {
                     <ul class="list-group">';
                   
         foreach my $tmp_metric (sort keys %flat_metrics) {
-            if ($flat_metrics{$tmp_metric}->{"ds"} eq $repo) {
+            if ( defined($flat_metrics{$tmp_metric}{"active"}) &&
+		 $flat_metrics{$tmp_metric}->{"ds"} eq $repo ) {
             $html_ret .= '
                       <li class="list-group-item">';
             $html_ret .= &describe_metric($tmp_metric);
