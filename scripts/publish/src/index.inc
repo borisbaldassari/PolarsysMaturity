@@ -55,12 +55,18 @@
                 <div class="panel-heading">Projects</div>
                 <div class="panel-body">
                   <div class="list-group">
-                    <a href="projects/cdt.html" class="list-group-item">
-                        <i class="glyphicon glyphicon-folder-open"></i>&nbsp; CDT</a>
-                    <a href="projects/ease.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; EASE</a>
-                    <a href="projects/example.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Example</a>
-                    <a href="projects/papyrus.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Papyrus</a>
-                    <a href="projects/sirius.html" class="list-group-item"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Sirius</a>
+                    <a href="projects/modeling.emf.compare.html" class="list-group-item">
+                        <i class="glyphicon glyphicon-folder-open"></i>&nbsp; EMF Compare</a>
+                    <a href="projects/modeling.gendoc.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Gendoc</a>
+                    <a href="projects/modeling.sirius.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Sirius</a>
+                    <a href="projects/technology.ease.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; EASE</a>
+                    <a href="projects/tools.cdt.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; CDT</a>
+                    <a href="projects/tools.cdt.tcf.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; CDT TCF</a>
                   </div>
                 </div>
               </div>
