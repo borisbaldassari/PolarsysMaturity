@@ -375,7 +375,7 @@ sub generate_project_metrics($$$) {
     my %project_values;
     
     # We read metrics from all files named "*_metrics*.json"
-    my @json_metrics_files = <${project_from}/${project_id}*_metrics*.json>;
+    my @json_metrics_files = <${project_from}/${project_id}*metrics*.json>;
     for my $file (@json_metrics_files) {
 	print "    - Reading metrics values file from [$file]..\n";    
 	
