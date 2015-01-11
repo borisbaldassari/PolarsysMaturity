@@ -691,8 +691,9 @@ sub generate_project($$$) {
                   <li role="presentation" class="disabled"><a href="#practices" role="tab" data-toggle="tab">Practices</a></li>';
     }
 
+    #                  <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
+
     $html_ret .= '
-                  <li role="presentation" class="disabled"><a href="#actions" role="tab" data-toggle="tab">Actions</a></li>
                   <li role="presentation" class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
                     Download <span class="caret"></span></a>

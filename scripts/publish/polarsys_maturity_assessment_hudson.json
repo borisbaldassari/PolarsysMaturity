@@ -38,10 +38,6 @@
 		    "url": "/documentation/rules.html" 
 		},
 		{
-		    "name": "Actions",
-		    "url": "/"
-		},
-		{
 		    "name": "References",
 		    "url": "/documentation/references.html"
 		}
