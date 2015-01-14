@@ -72,7 +72,7 @@ GetOptions(
     'pf|pmd-file=s' => \$opt_pmd_file,
     'fr|findbugs-rules=s' => \$opt_fb_rules,
     'ff|findbugs-file=s' => \$opt_fb_file,
-    'l|lines' => \$opt_ksloc,
+    'l|lines=i' => \$opt_ksloc,
     'o|output=s' => \$opt_output,
     'ov|output-v=s' => \$opt_output_v,
     );
@@ -235,7 +235,7 @@ foreach my $violation (@violations_nodes) {
         }
     } else {
         $unknown_rules{ $v_name }++;
-        print "[WARN] Could not find rule $v_name.\n" if ($debug);
+        print "[WARN] FB: Could not find rule $v_name.\n" if ($debug);
     }
 }
 
@@ -267,7 +267,7 @@ foreach my $violation (@violations_nodes) {
         }
     } else {
         $unknown_rules{ $v_name }++;
-        print "ERR Could not find rule $v_name.\n" if ($debug);
+        print "[WARN] PMD: Could not find rule $v_name.\n" if ($debug);
     }
 }
 
