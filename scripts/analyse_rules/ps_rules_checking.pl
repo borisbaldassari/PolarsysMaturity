@@ -106,6 +106,10 @@ if (not defined($opt_ksloc)) {
     $opt_ksloc = 1;
 }
 
+if ($opt_ksloc == 0) { 
+    $opt_ksloc = 1;
+}
+
 my $time = localtime();
 print "\nExecuting $0 on $time.\n";
 
