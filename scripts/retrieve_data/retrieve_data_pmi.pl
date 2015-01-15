@@ -14,22 +14,27 @@ use LWP::Simple;
 
 # This can be changed for more verbose output
 my $debug = 1;
-my $base_url = "http://projects.eclipse.org/json/project/";
+my $eclipse_url = "http://projects.eclipse.org/json/project/";
+my $polarsys_url = "http://polarsys.org/json/project/";
 
 die "Usage: $0 project_id dir_out\n" if (scalar @ARGV != 2);
 
 my $project_id = shift;
 my $dir_out = shift;
 
-# Fetch json file from projects.eclipse.org
-my $url = $base_url . $project_id;
-my $content = get($url);
-die "Could not get [$url]!" unless defined $content;
-
 my $fetch_date = localtime();
 my %metrics;
 
-#print "File from [$url] is \n$content.\n";
+# Fetch json file from projects.eclipse.org
+my ($url, $content);
+if ($project_id =~ m!^polarsys!) {
+    $url = $polarsys_url . $project_id;
+    $content = get($url);
+} else {
+    $url = $eclipse_url . $project_id;
+    $content = get($url);
+}
+die "Could not get [$url]!" unless defined $content;
 
 # Decode the entire JSON
 my $raw_data = decode_json( $content );
