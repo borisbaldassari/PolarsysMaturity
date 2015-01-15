@@ -77,6 +77,8 @@ GetOptions(
     'ov|output-v=s' => \$opt_output_v,
     );
 
+my $parser = XML::LibXML->new;
+
 if ( not defined($opt_pmd_rules) ) {
     die "Need a directory containing PMD rules definition. (--pmd_rules=/path/to/dir)";
 }
@@ -216,33 +218,35 @@ $metrics{"RULES"} = $vol_rules;
 
 print "Reading FindBugs XML file [$opt_fb_file]..\n\n";
 
-my $parser = XML::LibXML->new;
-my $doc = $parser->parse_file($opt_fb_file);
-
-my @violations_nodes = $doc->findnodes("//BugInstance");
-
-foreach my $violation (@violations_nodes) {
-    my $v_name = $violation->getAttribute('type');
+if (-e $opt_fb_file) {
+    my $doc = $parser->parse_file($opt_fb_file);
     
-    if ( exists( $rules{ $v_name } ) ) {
-
-        # Get some information for the violation.
-        $violations{ $v_name }{ 'vol' }++;
-        $violations{ $v_name }{ 'pri' } = $violation->getAttribute('priority');
+    my @violations_nodes = $doc->findnodes("//BugInstance");
     
-    
-        # Count it against the categories defined
-        $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
-        foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
-            $categories{ $cat }->{ 'vol' }++;
-            $categories{ $cat }->{ $v_name }++;
-        }
-    } else {
+    foreach my $violation (@violations_nodes) {
+	my $v_name = $violation->getAttribute('type');
+	
+	if ( exists( $rules{ $v_name } ) ) {
+	    
+	    # Get some information for the violation.
+	    $violations{ $v_name }{ 'vol' }++;
+	    $violations{ $v_name }{ 'pri' } = $violation->getAttribute('priority');
+	    
+	    
+	    # Count it against the categories defined
+	    $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
+	    foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
+		$categories{ $cat }->{ 'vol' }++;
+		$categories{ $cat }->{ $v_name }++;
+	    }
+	} else {
         $unknown_rules{ $v_name }++;
         print "[WARN] FB: Could not find rule $v_name.\n" if ($debug);
+	}
     }
+} else { 
+    print "Could not find Findbugs XML [$opt_fb_file].\n";
 }
-
 
 #
 # Read violations from PMD XML file
@@ -250,9 +254,9 @@ foreach my $violation (@violations_nodes) {
 
 print "Reading PMD XML file [$opt_pmd_file]..\n\n";
 
-$doc = $parser->parse_file($opt_pmd_file);
+my $doc = $parser->parse_file($opt_pmd_file);
 
-@violations_nodes = $doc->findnodes("//violation");
+my @violations_nodes = $doc->findnodes("//violation");
 
 foreach my $violation (@violations_nodes) {
 
