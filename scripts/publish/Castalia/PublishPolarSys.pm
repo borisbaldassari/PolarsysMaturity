@@ -68,11 +68,15 @@ sub generate_downloads($$$$) {
 
     # Write all values to single json file.
     my $out_csv = $dir_out_projects . "/${project_id}_${type}.csv";
-    print "    - Writing " . $type . " to file [$out_csv]..\n";    
-    $out_data = "$type,${project_id}\n";
+    print "    - Writing " . $type . " to file [$out_csv]..\n";  
+    $out_data = "Project," . join(',', sort keys %{$project_values}) . "\n";
+#    $out_data = "$type,${project_id}\n";
+    my @values;
     foreach my $line (sort keys %{$project_values}) {
-	$out_data .= "$line," . $project_values->{$line} . "\n";
+	push(@values, $project_values->{$line});
+#	$out_data .= "$line," . $project_values->{$line};
     }
+    $out_data .= $project_id . "," . join(',', @values) . "\n";
     open($fh, '>', $out_csv) or die "Could not open file '$out_json' $!";
     print $fh $out_data;
     close $fh;
@@ -340,11 +344,11 @@ sub generate_inds($$$) {
 
     print "    - Generating project questions..\n";
     &generate_downloads($project_id, 'questions', $dir_out_projects, \%project_questions);
-    &generate_downloads($project_id, 'questions_conf', $dir_out_projects, \%project_questions_conf);
+    &generate_downloads($project_id, 'questions_confidence', $dir_out_projects, \%project_questions_conf);
 
     print "    - Generating project attributes..\n";
     &generate_downloads($project_id, 'attributes', $dir_out_projects, \%project_attrs);
-    &generate_downloads($project_id, 'attributes_conf', $dir_out_projects, \%project_attrs_conf);
+    &generate_downloads($project_id, 'attributes_confidence', $dir_out_projects, \%project_attrs_conf);
 
     &populate_qm($raw_qm->{"children"}, 
 		 \%project_attrs, 
@@ -442,7 +446,7 @@ sub generate_project($$$) {
     # We read attributes from file named "<project>_attributes.json"
     my $attrs_ok = 0;
     my $json_attrs = "${dir_out_projects}/${project_id}_attributes.json";
-    my $json_attrs_conf = "${dir_out_projects}/${project_id}_attributes_conf.json";
+    my $json_attrs_conf = "${dir_out_projects}/${project_id}_attributes_confidence.json";
     my $html_ret_attrs = "";
     my %project_attrs;
     my %project_attrs_conf;
