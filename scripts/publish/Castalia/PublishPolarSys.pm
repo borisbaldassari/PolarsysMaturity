@@ -7,9 +7,6 @@ use warnings;
 use Data::Dumper;
 use JSON qw( decode_json encode_json );
 
-# Used for ceil() and floor()
-use POSIX;
-
 use Castalia::PublishStatic qw( build_page read_json);
 use Castalia::PublishHTML qw( get_html_qm );
 
@@ -30,7 +27,8 @@ my %flat_questions;
 my %flat_attributes;
 my %flat_rules;
 my %flat_refs;
-my %global_values;
+my %global_attributes;
+my %global_metrics;
 
 my @colours = ("#ebebeb", "#FFFF66", "#CCF24D", "#99E633", "#66D91A", "#33CC00");
 
@@ -89,25 +87,24 @@ sub generate_global_downloads($$) {
     my $self = shift;
     my $dir_out_projects = shift;
 
+    # For attributes of quality
     my $type = 'attributes';
-
-    # Write all values to a single csv file.
     my $out_csv = $dir_out_projects . "/${type}.csv";
     print "    - Writing all " . $type . " to file [$out_csv]..\n";  
-    my $mnemos = join( ',', sort keys %global_values );
+    my $mnemos = join( ',', sort keys %global_attributes );
     my $out_data = "Project," . $mnemos . "\n";
     my %projects;
 
-    foreach my $mnemo ( sort keys %global_values ) { 
-    	foreach my $project ( keys %{$global_values{$mnemo}} ) {
+    foreach my $mnemo ( sort keys %global_attributes ) { 
+    	foreach my $project ( keys %{$global_attributes{$mnemo}} ) {
     	    $projects{$project}++;
     	}
     }
     
     foreach my $project (sort keys %projects) {
     	$out_data .= $project;
-    	foreach my $mnemo (sort keys %global_values) {
-	    my $value = $global_values{$mnemo}{$project} || "";
+    	foreach my $mnemo (sort keys %global_attributes) {
+	    my $value = $global_attributes{$mnemo}{$project} || "";
     	    $out_data .= ',' . $value;
     	}
     	$out_data .= "\n";
@@ -116,6 +113,33 @@ sub generate_global_downloads($$) {
     open(my $fh, '>', $out_csv) or die "Could not open file '$out_csv' $!";
     print $fh $out_data;
     close $fh;
+
+    # For metrics
+    $type = 'metrics';
+    $out_csv = $dir_out_projects . "/${type}.csv";
+    print "    - Writing all " . $type . " to file [$out_csv]..\n";  
+    $mnemos = join( ',', sort keys %global_metrics );
+    $out_data = "Project," . $mnemos . "\n";
+
+    foreach my $mnemo ( sort keys %global_metrics ) { 
+    	foreach my $project ( keys %{$global_metrics{$mnemo}} ) {
+    	    $projects{$project}++;
+    	}
+    }
+    
+    foreach my $project (sort keys %projects) {
+    	$out_data .= $project;
+    	foreach my $mnemo (sort keys %global_metrics) {
+	    my $value = $global_metrics{$mnemo}{$project} || "";
+    	    $out_data .= ',' . $value;
+    	}
+    	$out_data .= "\n";
+    }
+
+    open($fh, '>', $out_csv) or die "Could not open file '$out_csv' $!";
+    print $fh $out_data;
+    close $fh;
+
 }
 
 
@@ -301,6 +325,7 @@ sub aggregate_inds($$$$$) {
 	    map { $sum += $_ } @coefs;
 	    
 	    $coef = $sum / $full_weight;
+#	    my $coef_round = sprintf("%.1f", $coef);
 	    my $coef_round = int($coef);
 	    $raw_qm->{"ind"} = $coef_round;
 	    $coef = $coef_round;
@@ -387,8 +412,13 @@ sub generate_inds($$$) {
     &generate_downloads($project_id, 'attributes_confidence', $dir_out_projects, \%project_attrs_conf);
 
     # We want to group all values into a single hash to generate global values
+    foreach my $mnemo (keys %{$values}) {
+    	$global_metrics{$mnemo}{$project_id} = $values->{$mnemo};
+    }
+
+    # We want to group all values into a single hash to generate global values
     foreach my $mnemo (keys %project_attrs) {
-    	$global_values{$mnemo}{$project_id} = $project_attrs{$mnemo};
+    	$global_attributes{$mnemo}{$project_id} = $project_attrs{$mnemo};
     }
 
     &populate_qm($raw_qm->{"children"}, 

@@ -50,17 +50,6 @@ my $dir_out_data = $dir_out . "data/";
 my $dir_out_doc = $dir_out . "documentation/";
 my $dir_out_projects = $dir_out . "projects/";
 
-# Define categories.
-print "Selecting categories.. ";
-my @cats_all = <${dir_src}/*>;
-my @cats;
-# retain only directories
-foreach my $cat_item (@cats_all) { if (-d $cat_item) { push @cats, $cat_item } }
-print scalar @cats . " found.\n";
-
-# Get names out of categories.
-my @cats_n = map {basename($_)} @cats;
-
 # Clear dest
 my @cmd_out = `rm -r $dir_out`;
 
