@@ -210,6 +210,8 @@ foreach my $project (@projects) {
     open(my $fh, '>', $filename) or die "Could not open file '$filename' $!";
     print $fh $doc_project;
     close $fh;
+
+    $publish_ps->generate_global_downloads($dir_out_projects);
     
 }
 

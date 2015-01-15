@@ -1,3 +1,4 @@
+
 package Castalia::PublishPolarSys;
 
 use strict;
@@ -19,6 +20,7 @@ our @EXPORT_OK = qw(
     generate_doc_questions
     generate_doc_attributes
     generate_all_projects 
+    generate_global_downloads
 );
 
 my $debug = 0;
@@ -28,8 +30,8 @@ my %flat_questions;
 my %flat_attributes;
 my %flat_rules;
 my %flat_refs;
+my %global_values;
 
-#    my @colours = ("#ebebeb", "#ccffff", "#99d9ff", "#66b3ff", "#338cff", "#0066ff");
 my @colours = ("#ebebeb", "#FFFF66", "#CCF24D", "#99E633", "#66D91A", "#33CC00");
 
 my %project_errors;
@@ -54,7 +56,7 @@ sub generate_downloads($$$$) {
     my $dir_out_projects = shift;
     my $project_values = shift;
 
-    # Write all values to single csvfile.
+    # Write all values to a single json file.
     my $out_json = $dir_out_projects . "/${project_id}_${type}.json";
     print "    - Writing " . $type . " to file [$out_json]..\n";    
     my $out_data = {
@@ -66,18 +68,52 @@ sub generate_downloads($$$$) {
     print $fh encode_json($out_data);
     close $fh;
 
-    # Write all values to single json file.
+    # Write all values to a single csv file.
     my $out_csv = $dir_out_projects . "/${project_id}_${type}.csv";
     print "    - Writing " . $type . " to file [$out_csv]..\n";  
-    $out_data = "Project," . join(',', sort keys %{$project_values}) . "\n";
-#    $out_data = "$type,${project_id}\n";
+    my $mnemos = join(',', sort keys %{$project_values});
+    $out_data = "Project," . $mnemos . "\n";
     my @values;
     foreach my $line (sort keys %{$project_values}) {
 	push(@values, $project_values->{$line});
-#	$out_data .= "$line," . $project_values->{$line};
     }
     $out_data .= $project_id . "," . join(',', @values) . "\n";
-    open($fh, '>', $out_csv) or die "Could not open file '$out_json' $!";
+    open($fh, '>', $out_csv) or die "Could not open file '$out_csv' $!";
+    print $fh $out_data;
+    close $fh;
+    
+}
+
+
+sub generate_global_downloads($$) {
+    my $self = shift;
+    my $dir_out_projects = shift;
+
+    my $type = 'attributes';
+
+    # Write all values to a single csv file.
+    my $out_csv = $dir_out_projects . "/${type}.csv";
+    print "    - Writing all " . $type . " to file [$out_csv]..\n";  
+    my $mnemos = join( ',', sort keys %global_values );
+    my $out_data = "Project," . $mnemos . "\n";
+    my %projects;
+
+    foreach my $mnemo ( sort keys %global_values ) { 
+    	foreach my $project ( keys %{$global_values{$mnemo}} ) {
+    	    $projects{$project}++;
+    	}
+    }
+    
+    foreach my $project (sort keys %projects) {
+    	$out_data .= $project;
+    	foreach my $mnemo (sort keys %global_values) {
+	    my $value = $global_values{$mnemo}{$project} || "";
+    	    $out_data .= ',' . $value;
+    	}
+    	$out_data .= "\n";
+    }
+
+    open(my $fh, '>', $out_csv) or die "Could not open file '$out_csv' $!";
     print $fh $out_data;
     close $fh;
 }
@@ -349,6 +385,11 @@ sub generate_inds($$$) {
     print "    - Generating project attributes..\n";
     &generate_downloads($project_id, 'attributes', $dir_out_projects, \%project_attrs);
     &generate_downloads($project_id, 'attributes_confidence', $dir_out_projects, \%project_attrs_conf);
+
+    # We want to group all values into a single hash to generate global values
+    foreach my $mnemo (keys %project_attrs) {
+    	$global_values{$mnemo}{$project_id} = $project_attrs{$mnemo};
+    }
 
     &populate_qm($raw_qm->{"children"}, 
 		 \%project_attrs, 
