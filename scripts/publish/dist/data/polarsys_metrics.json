@@ -27,7 +27,7 @@
         "desc": [
             "The number of functions defined in the source files.",
             "The SonarQube measure used for this purpose is <mark>functions</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.",
-	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Methods\">http://docs.codehaus.org/display/SONAR/Metrics+-+Methods</a>."
+	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details on the metric: <a href=\"http://docs.sonarqube.org/display/SONAR/Metrics+-+Methods\">http://docs.sonarqube.org/display/SONAR/Metrics+-+Methods</a>."
         ],
         "scale": [100,1000,10000,100000],
         "ds": "SonarQube"
@@ -38,7 +38,7 @@
         "desc": [
             "The number of Java classes, including nested classes, interfaces, enums and annotations.",
             "The SonarQube measure used for this purpose is <mark>classes</mark>. This metric is often used as rule-of-thumb indicator for the size of software, and to make other measures relatives.",
-	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>."
+	    "See also SonarQube's definitions for size metrics: <a href=\"http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>."
         ],
         "scale": [100,1000,10000,100000],
         "ds": "SonarQube"
@@ -49,7 +49,7 @@
         "desc": [
             "The ratio of source lines of code on the number of comment lines of code.",
             "Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. ",
-	    "See also SonarQube's page on comment lines metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines\">http://docs.codehaus.org/display/SONAR/Metrics+-+Comment+lines</a>."
+	    "See also SonarQube's page on comment lines metrics: <a href=\"http://docs.sonarqube.org/display/SONAR/Metrics+-+Comment+lines\">http://docs.sonarqube.org/display/SONAR/Metrics+-+Comment+lines</a>."
         ],
         "scale": [15.35,19.45,23.99,33.20],
         "ds": "SonarQube"
@@ -77,7 +77,7 @@
         "mnemo": "PUBLIC_API",
         "desc": [
             "Number of public Classes + number of public Functions + number of public Properties. The SonarQube measure used for this purpose is <mark>public_api</mark>.",
-	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API\">http://docs.codehaus.org/display/SONAR/Metrics+-+Public+API</a>"
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.sonarqube.org/display/SONAR/Metrics+-+Public+API\">http://docs.sonarqube.org/display/SONAR/Metrics+-+Public+API</a>"
         ],
         "scale": [48347,14018,6497.5,2420.75],
         "ds": "SonarQube"
@@ -87,7 +87,7 @@
         "mnemo": "PUBLIC_API_DOC",
         "desc": [
             "The percentage of documented API accesses. Density of public documented API = (Public API - Public undocumented API) / Public API * 100. The SonarQube measure used for this purpose is <mark>public_documented_api_density</mark>.",
-	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. "
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. "
         ],
         "scale": [1,2,3,4],
         "ds": "SonarQube"
@@ -118,7 +118,7 @@
         "desc": [
 	    "The maximum depth of inheritance tree of a class within the inheritance hierarchy is defined as the maximum length from the considered class to the root of the class hierarchy tree and is measured by the number of ancestor classes. In cases involving multiple inheritance, the MDIT is the maximum length from the node to the root of the tree [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>].", 
 	    "A deep inheritance tree makes the understanding of the object-oriented architecture difficult. Well structured OO systems have a forest of classes rather than one large inheritance lattice. The deeper the class is within the hierarchy, the greater the number of methods it is likely to inherit, making it more complex to predict its behavior and, therefore, more fault-prone [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>]. However, the deeper a particular tree is in a class, the greater potential reuse of inherited methods [<a href=\"/documentation/references.html#Chidamber1994\">Chidamber1994</a>].",
-	    "See also SonarQube's page on the depth in tree: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree\">http://docs.codehaus.org/display/SONAR/Metrics+-+Depth+in+Tree</a>"
+	    "See also SonarQube's page on the depth in tree: <a href=\"http://docs.sonarqube.org/display/SONAR/Metrics+-+Depth+in+Tree\">http://docs.sonarqube.org/display/SONAR/Metrics+-+Depth+in+Tree</a>"
         ],
         "scale": [1,2,3,4],
         "ds": "SonarQube"
@@ -128,7 +128,7 @@
         "mnemo": "NCLOC",
         "desc": [
             "Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment. This is mapped to SonarQube's <mark>ncloc</mark> metric.",
-	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code\">http://docs.codehaus.org/display/SONAR/Metrics+-+Lines+of+code</a>"
+	    "See also SonarQube's definition for size metrics: <a href=\"http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size\">http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Size</a>. More details can be seen here: <a href=\"http://docs.sonarqube.org/display/SONAR/Metrics+-+Lines+of+code\">http://docs.sonarqube.org/display/SONAR/Metrics+-+Lines+of+code</a>"
         ],
         "scale": [915828.0,198290.25,97961.5,38776.25],
         "ds": "SonarQube"
@@ -138,7 +138,7 @@
         "mnemo": "DUPLICATED_LINES_DENSITY",
         "desc": [
             "The amount of duplicated lines in the code, divided by the number of lines. This is expressed as a percentage; The SonarQube metric used for this purpose is <mark>duplicated_lines_density</mark>.",
-	    "See also SonarQube's definition for duplications: <a href=\"http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications\">http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href=\"http://docs.codehaus.org/display/SONAR/Duplications\">http://docs.codehaus.org/display/SONAR/Duplications</a>."
+	    "See also SonarQube's definition for duplications: <a href=\"http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications\">http://docs.sonarqube.org/display/SONAR/Metric+definitions#Metricdefinitions-Duplications</a>. There is a longer description of the code cloning algorithm here: <a href=\"http://docs.sonarqube.org/display/SONAR/Duplications\">http://docs.sonarqube.org/display/SONAR/Duplications</a>."
         ],
         "scale": [50,40,30,10],
         "ds": "SonarQube"
@@ -151,7 +151,7 @@
 	    "Basically, the counter is incremented every time the control flow of the function splits, with any function having at least a cyclomatic number of 1. The sum of cyclomatic numbers for all functions is then divided by the number of functions. In SonarQube the measure is <code>function_complexity</code>.",
 	    "The cyclomatic number is a measure borrowed from graph theory and was introduced to software engineering by McCabe in [<a href=\"/documentation/references.html\">McCabe1976</a>]. It is defined as the number of linearly independent paths that comprise the program. To have good testability and maintainability, McCabe recommends that no program modules (or functions as for Java) should exceed a cyclomatic number of 10. It is primarily defined at the function level and is summed up for higher levels of artefacts.",
 	    "See also Wikipedia's entry on cyclomatic complexity: <a href=\"http://en.wikipedia.org/wiki/Cyclomatic_complexity\">http://en.wikipedia.org/wiki/Cyclomatic_complexity</a>.",
-	    "See also SonarQube's definition for code complexity: <a href=\"http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity\">http://docs.codehaus.org/display/SONAR/Metrics+-+Complexity</a>. There is also a discussion about its meaning here: <a href=\"http://www.sonarqube.org/discussing-cyclomatic-complexity/\">http://www.sonarqube.org/discussing-cyclomatic-complexity/</a>",
+	    "See also SonarQube's definition for code complexity: <a href=\"http://docs.sonarqube.org/display/SONAR/Metrics+-+Complexity\">http://docs.sonarqube.org/display/SONAR/Metrics+-+Complexity</a>. There is also a discussion about its meaning here: <a href=\"http://www.sonarqube.org/discussing-cyclomatic-complexity/\">http://www.sonarqube.org/discussing-cyclomatic-complexity/</a>",
 	    "See also the Maisqual wiki for more details on complexity measures: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics</a>."
         ],
         "scale": [500,400,300,100],

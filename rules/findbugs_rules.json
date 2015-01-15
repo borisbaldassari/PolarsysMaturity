@@ -2111,7 +2111,7 @@
         "mnemo": "DL_SYNCHRONIZATION_ON_BOOLEAN",
         "desc": [
             "The code synchronizes on a boxed primitive constant, such as an Boolean.</p> <pre> private static Boolean inited = Boolean.FALSE; ... synchronized(inited) { if (!inited) { init(); inited = Boolean.TRUE; } } ... </pre> Since there normally exist only two Boolean objects, this code could be synchronizing on the same object as other, unrelated code, leading to unresponsiveness and possible deadlock.",
-            "See CERT <a href=\"https://www.securecoding.cert.org/confluence/display/java/CON08-J.+Do+not+synchronize+on+objects+that+may+be+reused\">CON08-J. Do not synchronize on objects that may be reused</a> for more information."
+            "See CERT <a href=\"https://www.securecoding.cert.org/confluence/display/java/LCK01-J.+Do+not+synchronize+on+objects+that+may+be+reused\">LCK01-J. Do not synchronize on objects that may be reused</a> for more information."
         ]
       },
       { 
@@ -2119,7 +2119,7 @@
         "mnemo": "DL_SYNCHRONIZATION_ON_BOXED_PRIMITIVE",
         "desc": [
             "The code synchronizes on a boxed primitive constant, such as an Integer.</p> <pre> private static Integer count = 0; ... synchronized(count) { count++; } ... </pre> Since Integer objects can be cached and shared, this code could be synchronizing on the same object as other, unrelated code, leading to unresponsiveness and possible deadlock.",
-            "See CERT <a href=\"https://www.securecoding.cert.org/confluence/display/java/CON08-J.+Do+not+synchronize+on+objects+that+may+be+reused\">CON08-J. Do not synchronize on objects that may be reused</a> for more information."
+            "See CERT <a href=\"https://www.securecoding.cert.org/confluence/display/java/LCK01-J.+Do+not+synchronize+on+objects+that+may+be+reused\">LCK01-J. Do not synchronize on objects that may be reused</a> for more information."
         ]
       },
       { 
@@ -2127,7 +2127,7 @@
         "mnemo": "DL_SYNCHRONIZATION_ON_SHARED_CONSTANT",
         "desc": [
             "The code synchronizes on interned String. <pre> private static String LOCK = \"LOCK\"; ... synchronized(LOCK) { ...} ... </pre> Constant Strings are interned and shared across all other classes loaded by the JVM. Thus, this could is locking on something that other code might also be locking. This could result in very strange and hard to diagnose blocking and deadlock behavior. See <a href=\"http://www.javalobby.org/java/forums/t96352.html\">http://www.javalobby.org/java/forums/t96352.html</a> and <a href=\"http://jira.codehaus.org/browse/JETTY-352\">http://jira.codehaus.org/browse/JETTY-352</a>.",
-            "See CERT <a href=\"https://www.securecoding.cert.org/confluence/display/java/CON08-J.+Do+not+synchronize+on+objects+that+may+be+reused\">CON08-J. Do not synchronize on objects that may be reused</a> for more information."
+            "See CERT <a href=\"https://www.securecoding.cert.org/confluence/display/java/LCK01-J.+Do+not+synchronize+on+objects+that+may+be+reused\">LCK01-J. Do not synchronize on objects that may be reused</a> for more information."
         ]
       },
       { 
