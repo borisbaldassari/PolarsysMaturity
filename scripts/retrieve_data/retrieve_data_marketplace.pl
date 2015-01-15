@@ -58,7 +58,7 @@ if (defined($content)) {
     $metrics_project->{"children"}->{"MKT_FAV"} = $favs;
     my @nodes_dls = $doc->findnodes("//installsrecent");
     $dl = $nodes_dls[0]->textContent();
-    $metrics_project->{"children"}->{"MKT_INSTALL_SUCCESS_1M"} = $favs;
+    $metrics_project->{"children"}->{"MKT_INSTALL_SUCCESS_1M"} = $dl;
 }
 
 
