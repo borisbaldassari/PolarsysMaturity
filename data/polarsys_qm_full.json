@@ -660,7 +660,7 @@
                         "active": "true"
                       },
                       {
-                        "mnemo": "ITS_BUGS_OPENED_1M",
+                        "mnemo": "ITS_BUGS_OPEN",
                         "type": "metric",
                         "active": "true"
                       },
