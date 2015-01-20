@@ -195,9 +195,9 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ITS_USAGE">ITS_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
-<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00791505127095 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0229812226388 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0527769809755 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 9.09090909091 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system.</p>
+<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 9.75 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_BUGS_DENSITY"><strong>Defect density</strong> ( ITS_BUGS_DENSITY )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -208,13 +208,13 @@
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
-                <li class="list-group-item"><p id="ITS_BUGS_OPENED_1M"><strong>Number of open bugs</strong> ( ITS_BUGS_OPENED_1M )</p>
+                <li class="list-group-item"><p id="ITS_BUGS_OPEN"><strong>Number of open bugs</strong> ( ITS_BUGS_OPEN )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ITS_REL">ITS_REL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system, divided by the number of thousands of lines of code.</p>
-<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed. Number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system.</p>
+<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_FIX_MED_1M"><strong>Median time to fix bug</strong> ( ITS_FIX_MED_1M )</p>
@@ -231,9 +231,9 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ITS_USAGE">ITS_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
-<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.0229586565615 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0757059580589 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.193724583492 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 13.0988023952 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of updates to tickets during the last month, in the issue tracking system.</p>
+<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 13 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 37 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 596 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="LIC_IDENT"><strong>License identification</strong> ( LIC_IDENT )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -290,9 +290,9 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
-<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00411475861939 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0139607869416 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0461270538934 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.49700598802 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives. </p>
+<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_RESP_RATIO_1M"><strong>Developer ML response ratio</strong> ( MLS_DEV_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -317,8 +317,8 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_SUPPORT">MLS_DEV_SUPPORT</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of threads of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
-<p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of threads of messages dated during the last month, in developer mailing list archives. </p>
+<p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_VOL_1M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_1M )</p>
@@ -326,18 +326,18 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.</p>
-<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of messages dated during the last month, in developer mailing list archives.</p>
+<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 22 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 103 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_AUTH_1M"><strong>User ML authors</strong> ( MLS_USR_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_USR_DIVERSITY">MLS_USR_DIVERSITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of distinct senders for messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
-<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of distinct senders for messages dated during the last month, in user mailing list archives.</p>
+<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_RESP_RATIO_1M"><strong>User ML response ratio</strong> ( MLS_USR_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -362,8 +362,8 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_USR_SUPPORT">MLS_USR_SUPPORT</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
-<p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of threds of messages dated during the last month, in user mailing list archives.</p>
+<p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_VOL_1M"><strong>User ML posts</strong> ( MLS_USR_VOL_1M )</p>
@@ -371,8 +371,8 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_USR_ACTIVITY">MLS_USR_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. </p>
-<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of messages dated during the last month, in user mailing list archives. </p>
+<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_ANA_IDX"><strong>Average number of non-conformities for analysability</strong> ( NCC_ANA_IDX )</p>
@@ -382,7 +382,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -391,7 +391,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -400,7 +400,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -409,7 +409,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 300 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 300 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 150 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCLOC"><strong>Source Lines Of Code</strong> ( NCLOC )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -485,7 +485,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform analysability practices on the number of checked analysability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ROKR_CHA"><strong>Adherence to changeability rules</strong> ( ROKR_CHA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -493,7 +493,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform changeability practices on the number of checked changeability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ROKR_REL"><strong>Adherence to reliability rules</strong> ( ROKR_REL )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -501,7 +501,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reliability practices on the number of checked reliability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ROKR_REU"><strong>Adherence to reusability rules</strong> ( ROKR_REU )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -509,7 +509,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reusability practices on the number of checked reusability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITS_1M"><strong>SCM Commits</strong> ( SCM_COMMITS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -517,18 +517,18 @@
 , <a href="questions.html#SCM_USAGE">SCM_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.</p>
-<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.025078279624 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0756446929809 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.264255236791 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2.54688585321 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Total number of commits in source code management repositories dated during the last month.</p>
+<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 13 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 121 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITTED_FILES_1M"><strong>Files committed</strong> ( SCM_COMMITTED_FILES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
-<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.069052601156 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.294543274794 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.948385435841 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 38.8978930308 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Total number of files touched by commits in source code management repositories dated during the last month.</p>
+<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 19 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 95.75 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2189 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_COMMITTERS_1M"><strong>SCM committers</strong> ( SCM_COMMITTERS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -536,9 +536,9 @@
 , <a href="questions.html#SCM_USAGE">SCM_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
-<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00869816603364 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0242054327998 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0757305045383 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.47492625369 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month.</p>
+<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 18 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="SCM_STABILITY_1M"><strong>File stability index</strong> ( SCM_STABILITY_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -582,9 +582,9 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ITS_USAGE">ITS_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
-<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00791505127095 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0229812226388 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0527769809755 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 9.09090909091 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of distinct identities updating tickets during the last month, in the issue tracking system.</p>
+<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 9.75 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_BUGS_DENSITY"><strong>Defect density</strong> ( ITS_BUGS_DENSITY )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -595,13 +595,13 @@
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Source code is all source code found in the source code management repository.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
-                      <li class="list-group-item"><p id="ITS_BUGS_OPENED_1M"><strong>Number of open bugs</strong> ( ITS_BUGS_OPENED_1M )</p>
+                      <li class="list-group-item"><p id="ITS_BUGS_OPEN"><strong>Number of open bugs</strong> ( ITS_BUGS_OPEN )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ITS_REL">ITS_REL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system, divided by the number of thousands of lines of code.</p>
-<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed. Number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system.</p>
+<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_FIX_MED_1M"><strong>Median time to fix bug</strong> ( ITS_FIX_MED_1M )</p>
@@ -618,18 +618,18 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#ITS_USAGE">ITS_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of updates to tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.</p>
-<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.0229586565615 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0757059580589 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.193724583492 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 13.0988023952 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of updates to tickets during the last month, in the issue tracking system.</p>
+<p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 13 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 37 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 596 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
-<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00411475861939 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0139607869416 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0461270538934 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.49700598802 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives. </p>
+<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_RESP_RATIO_1M"><strong>Developer ML response ratio</strong> ( MLS_DEV_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -654,8 +654,8 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_SUPPORT">MLS_DEV_SUPPORT</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of threads of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code. </p>
-<p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of threads of messages dated during the last month, in developer mailing list archives. </p>
+<p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_VOL_1M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_1M )</p>
@@ -663,18 +663,18 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of messages dated during the last month, in developer mailing list archives, divided by the number of thousands of lines of code.</p>
-<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of messages dated during the last month, in developer mailing list archives.</p>
+<p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 22 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 103 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_AUTH_1M"><strong>User ML authors</strong> ( MLS_USR_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_USR_DIVERSITY">MLS_USR_DIVERSITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of distinct senders for messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
-<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages. The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Number of distinct senders for messages dated during the last month, in user mailing list archives.</p>
+<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_RESP_RATIO_1M"><strong>User ML response ratio</strong> ( MLS_USR_RESP_RATIO_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -699,8 +699,8 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_USR_SUPPORT">MLS_USR_SUPPORT</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of threds of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code.</p>
-<p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of threds of messages dated during the last month, in user mailing list archives.</p>
+<p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_VOL_1M"><strong>User ML posts</strong> ( MLS_USR_VOL_1M )</p>
@@ -708,8 +708,8 @@
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_USR_ACTIVITY">MLS_USR_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Number of messages dated during the last month, in user mailing list archives, divided by the number of thousands of lines of code. </p>
-<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
+<p class="desc">Number of messages dated during the last month, in user mailing list archives. </p>
+<p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITS_1M"><strong>SCM Commits</strong> ( SCM_COMMITS_1M )</p>
@@ -718,18 +718,18 @@
 , <a href="questions.html#SCM_USAGE">SCM_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Total number of commits in source code management repositories dated during the last month divided by the number of thousands of lines of code.</p>
-<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). The number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.025078279624 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0756446929809 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.264255236791 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2.54688585321 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Total number of commits in source code management repositories dated during the last month.</p>
+<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 13 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 121 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITTED_FILES_1M"><strong>Files committed</strong> ( SCM_COMMITTED_FILES_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Total number of files touched by commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
-<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.069052601156 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.294543274794 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.948385435841 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 38.8978930308 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Total number of files touched by commits in source code management repositories dated during the last month.</p>
+<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 19 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 95.75 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2189 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITTERS_1M"><strong>SCM committers</strong> ( SCM_COMMITTERS_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -737,9 +737,9 @@
 , <a href="questions.html#SCM_USAGE">SCM_USAGE</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
-<p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month, divided by the number of thousands of lines of code.</p>
-<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00869816603364 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0242054327998 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0757305045383 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.47492625369 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc">Total number of identities found as authors of commits in source code management repositories dated during the last month.</p>
+<p class="desc">Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 18 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_STABILITY_1M"><strong>File stability index</strong> ( SCM_STABILITY_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -849,7 +849,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -858,7 +858,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -867,7 +867,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 2 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -876,7 +876,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 300 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 300 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 150 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ROKR_ANA"><strong>Adherence to analysability rules</strong> ( ROKR_ANA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -884,7 +884,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform analysability practices on the number of checked analysability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ROKR_CHA"><strong>Adherence to changeability rules</strong> ( ROKR_CHA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -892,7 +892,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform changeability practices on the number of checked changeability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ROKR_REL"><strong>Adherence to reliability rules</strong> ( ROKR_REL )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -900,7 +900,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reliability practices on the number of checked reliability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ROKR_REU"><strong>Adherence to reusability rules</strong> ( ROKR_REU )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -908,7 +908,7 @@
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Ratio of conform reusability practices on the number of checked reusability practices.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 40 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 60 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 50 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 75 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                     </ul>
                   </div>  

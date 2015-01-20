@@ -341,8 +341,17 @@ sub aggregate_inds($$$$$) {
 	$coef = &compute_scale($values->{$mnemo}, $flat_metrics{$mnemo}{"scale"});
 	$raw_qm->{"ind"} = $coef;
 
+	print "DBG: " . Dumper($raw_qm);
+	my $raw_qm_active = ( $raw_qm->{'active'} =~ m!true! ) || 0;
+	print "DBG: $raw_qm_active.\n";
+
 	# Increment the total number of metrics used for this node.
-	$raw_qm->{"m_total"}++;
+	# We do want to count only active metrics for confidence.
+	if ($raw_qm_active) {
+	    $raw_qm->{"m_total"} = 1;
+	} else {
+	    $raw_qm->{"m_total"} = 0;
+	}
 	# If metric is defined also increment m_ok
 	if (defined($coef)) {
 	    $raw_qm->{"m_ok"} = 1;
