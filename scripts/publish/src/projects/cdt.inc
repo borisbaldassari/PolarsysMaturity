@@ -22,7 +22,7 @@
                       <li role="presentation"><a href="cdt_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="cdt_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="cdt_metrics.csv">Metrics CSV</a></li>
-                      <li role="presentation"><a href="cdt_violations.csv">Violations JSON</a></li>
+                      <!-- li role="presentation"><a href="cdt_violations.csv">Violations JSON</a></li -->
                       <li role="presentation"><a href="cdt_attributes.csv">Violations CSV</a></li>
                     </ul>
                   </li>

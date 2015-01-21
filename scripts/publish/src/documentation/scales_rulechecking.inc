@@ -34,7 +34,7 @@
 
               <h4>Discussion</h4>
               
-              <p>The set of metrics used for the benchmark can be <a href="/data/metrics_rulechecking_all.csv">downloaded here</a>.</p>
+              <p>The set of metrics used for the benchmark can be <a href="/data/metrics_rules_all.csv">downloaded here</a>.</p>
               
               <div class="row">
                 <div class="col-xs-6">

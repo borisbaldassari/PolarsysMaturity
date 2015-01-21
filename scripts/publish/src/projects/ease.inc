@@ -22,7 +22,7 @@
                       <li role="presentation"><a href="ease_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="ease_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="ease_metrics.csv">Metrics CSV</a></li>
-                      <li role="presentation"><a href="ease_violations.csv">Violations JSON</a></li>
+                      <!-- li role="presentation"><a href="ease_violations.csv">Violations JSON</a></li -->
                       <li role="presentation"><a href="ease_attributes.csv">Violations CSV</a></li>
                     </ul>
                   </li>

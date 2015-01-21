@@ -341,9 +341,7 @@ sub aggregate_inds($$$$$) {
 	$coef = &compute_scale($values->{$mnemo}, $flat_metrics{$mnemo}{"scale"});
 	$raw_qm->{"ind"} = $coef;
 
-	print "DBG: " . Dumper($raw_qm);
 	my $raw_qm_active = ( $raw_qm->{'active'} =~ m!true! ) || 0;
-	print "DBG: $raw_qm_active.\n";
 
 	# Increment the total number of metrics used for this node.
 	# We do want to count only active metrics for confidence.
@@ -722,6 +720,7 @@ sub generate_project($$$) {
 
 	$html_ret_rules .= "</table>\n";
 	$rules_ok = 1;
+	
     } else {
 	my $err = "ERR: Cannot find violations file [$json_violations] for [$project_id].";
 	push( @{$project_errors{$project_id}}, $err);
@@ -788,7 +787,7 @@ sub generate_project($$$) {
                       <li role="presentation"><a href="' . ${project_id} . '_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="' . ${project_id} . '_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="' . ${project_id} . '_metrics.csv">Metrics CSV</a></li>
-                      <li role="presentation"><a href="' . ${project_id} . '_violations.csv">Violations JSON</a></li>
+                      <!-- li role="presentation"><a href="' . ${project_id} . '_violations.csv">Violations JSON</a></li -->
                       <li role="presentation"><a href="' . ${project_id} . '_attributes.csv">Violations CSV</a></li>
                     </ul>
                   </li>

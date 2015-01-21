@@ -22,7 +22,7 @@
                       <li role="presentation"><a href="sirius_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="sirius_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="sirius_metrics.csv">Metrics CSV</a></li>
-                      <li role="presentation"><a href="sirius_violations.csv">Violations JSON</a></li>
+                      <!-- li role="presentation"><a href="sirius_violations.csv">Violations JSON</a></li -->
                       <li role="presentation"><a href="sirius_attributes.csv">Violations CSV</a></li>
                     </ul>
                   </li>
