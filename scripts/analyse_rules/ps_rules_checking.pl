@@ -228,20 +228,26 @@ if (-e $opt_fb_file) {
 	
 	if ( exists( $rules{ $v_name } ) ) {
 	    
-	    # Get some information for the violation.
-	    $violations{ $v_name }{ 'vol' }++;
-	    $violations{ $v_name }{ 'pri' } = $violation->getAttribute('priority');
-	    
-	    
-	    # Count it against the categories defined
-	    $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
-	    foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
-		$categories{ $cat }->{ 'vol' }++;
-		$categories{ $cat }->{ $v_name }++;
+	    my $pri = $violation->getAttribute('priority');
+
+	    # We do count only rules that have a high confidence 
+	    if ($pri < 2) {
+
+		# Get some information for the violation.
+		$violations{ $v_name }{ 'vol' }++;
+		$violations{ $v_name }{ 'pri' } = 
+		    
+		    
+		    # Count it against the categories defined
+		    $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
+		foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
+		    $categories{ $cat }->{ 'vol' }++;
+		    $categories{ $cat }->{ $v_name }++;
+		}
 	    }
 	} else {
-        $unknown_rules{ $v_name }++;
-        print "[WARN] FB: Could not find rule $v_name.\n" if ($debug);
+	    $unknown_rules{ $v_name }++;
+	    print "[WARN] FB: Could not find rule $v_name.\n" if ($debug);
 	}
     }
 } else { 
@@ -261,18 +267,22 @@ my @violations_nodes = $doc->findnodes("//violation");
 foreach my $violation (@violations_nodes) {
 
     my $v_name = $violation->getAttribute('rule');
+    my $v_pri = $violation->getAttribute('priority');
 
-    # Get some information for the violation.
-    $violations{ $v_name }{ 'vol' }++;
-    $violations{ $v_name }{ 'pri' } = $violation->getAttribute('priority');
-    
-    # Count it against the categories defined
-    if ( exists( $rules{ $v_name } ) ) {
-        $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
-        foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
-            $categories{ $cat }->{ 'vol' }++;
-            $categories{ $cat }->{ $v_name }++;
-        }
+    # We count only rules with priority == 1 or 2 (high risk).
+    if ($v_pri < 3) {
+	# Get some information for the violation.
+	$violations{ $v_name }{ 'vol' }++;
+	$violations{ $v_name }{ 'pri' } = $v_pri;
+	    
+	# Count it against the categories defined
+	if ( exists( $rules{ $v_name } ) ) {
+	    $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
+	    foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
+		$categories{ $cat }->{ 'vol' }++;
+		$categories{ $cat }->{ $v_name }++;
+	    }
+	}
     } else {
         $unknown_rules{ $v_name }++;
         print "[WARN] PMD: Could not find rule $v_name.\n" if ($debug);
