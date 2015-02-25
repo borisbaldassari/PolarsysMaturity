@@ -197,7 +197,7 @@
               {
                 "mnemo": "QM_USAGE",
                 "type": "attribute",
-                "active": "true",
+                "active": "false",
                 "children": [
                   {
                     "mnemo": "DOWNLOADS",
@@ -220,7 +220,7 @@
                   {
                     "mnemo": "INSTALL",
                     "type": "concept",
-                    "active": "true",
+                    "active": "false",
                     "children": [
                       {
                         "mnemo": "SURVEY_INSTALL",
@@ -230,7 +230,7 @@
                       {
                         "mnemo": "MKT_INSTALL_SUCCESS_1M",
                         "type": "metric",
-                        "active": "true"
+                        "active": "false"
                       }
                     ]
                   }
@@ -239,17 +239,17 @@
               {
                 "mnemo": "QM_FEEDBACK",
                 "type": "attribute",
-                "active": "true",
+                "active": "false",
                 "children": [
                   {
                     "mnemo": "MKT_FEEDBACK",
                     "type": "concept",
-                    "active": "true",
+                    "active": "false",
                     "children": [
                       {
                         "mnemo": "MKT_FAV",
                         "type": "metric",
-                        "active": "true"
+                        "active": "false"
                       }
                     ]
                   }
