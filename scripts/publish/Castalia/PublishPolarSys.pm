@@ -325,8 +325,8 @@ sub aggregate_inds($$$$$) {
 	    map { $sum += $_ } @coefs;
 	    
 	    $coef = $sum / $full_weight;
-#	    my $coef_round = sprintf("%.1f", $coef);
-	    my $coef_round = int($coef);
+	    my $coef_round = sprintf("%.1f", $coef);
+#	    my $coef_round = int($coef);
 	    $raw_qm->{"ind"} = $coef_round;
 	    $coef = $coef_round;
 	}
@@ -347,13 +347,14 @@ sub aggregate_inds($$$$$) {
 	# We do want to count only active metrics for confidence.
 	if ($raw_qm_active) {
 	    $raw_qm->{"m_total"} = 1;
+	    # If metric is defined also increment m_ok
+	    if (defined($coef)) {
+		$raw_qm->{"m_ok"} = 1;
+	    } else {
+		$raw_qm->{"m_ok"} = 0;
+	    }
 	} else {
 	    $raw_qm->{"m_total"} = 0;
-	}
-	# If metric is defined also increment m_ok
-	if (defined($coef)) {
-	    $raw_qm->{"m_ok"} = 1;
-	} else {
 	    $raw_qm->{"m_ok"} = 0;
 	}
 	
@@ -887,14 +888,14 @@ sub generate_project($$$) {
 				       $project_attrs{"QM_SUPPORT"} || 0,  
 				       $project_attrs_conf{"QM_SUPPORT"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Usage',
-				       $project_attrs{"QM_USAGE"} || 0,  
-				       $project_attrs_conf{"QM_USAGE"} || 0, 
-				       $project_id);
-    $html_ret .= &generate_progressbar('User feedback',
-				       $project_attrs{"QM_FEEDBACK"} || 0,  
-				       $project_attrs_conf{"QM_FEEDBACK"} || 0, 
-				       $project_id);
+    # $html_ret .= &generate_progressbar('Usage',
+    # 				       $project_attrs{"QM_USAGE"} || 0,  
+    # 				       $project_attrs_conf{"QM_USAGE"} || 0, 
+    # 				       $project_id);
+    # $html_ret .= &generate_progressbar('User feedback',
+    # 				       $project_attrs{"QM_FEEDBACK"} || 0,  
+    # 				       $project_attrs_conf{"QM_FEEDBACK"} || 0, 
+    # 				       $project_id);
     $html_ret .= '</dd>
                             </dl>
                           </div>

@@ -211,7 +211,7 @@ function update(source) {
   nodeEnter.append("circle")
       .attr("r", 1e-6)
       .style("fill", function(d) { 
-        return d.ind ? mycolours[d.ind] : "gray"; 
+        return d.ind ? mycolours[Math.floor(d.ind)] : "gray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
@@ -236,7 +236,7 @@ function update(source) {
   nodeUpdate.select("circle")
       .attr("r", 7)
       .style("fill", function(d) { 
-        return d.ind ? mycolours[d.ind] : "lightgray"; 
+        return d.ind ? mycolours[Math.floor(d.ind)] : "lightgray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
