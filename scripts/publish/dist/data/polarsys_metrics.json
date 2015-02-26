@@ -154,7 +154,7 @@
 	    "See also SonarQube's definition for code complexity: <a href=\"http://docs.sonarqube.org/display/SONAR/Metrics+-+Complexity\">http://docs.sonarqube.org/display/SONAR/Metrics+-+Complexity</a>. There is also a discussion about its meaning here: <a href=\"http://www.sonarqube.org/discussing-cyclomatic-complexity/\">http://www.sonarqube.org/discussing-cyclomatic-complexity/</a>",
 	    "See also the Maisqual wiki for more details on complexity measures: <a href=\"http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics\">http://maisqual.squoring.com/wiki/index.php/Category:Complexity_Metrics</a>."
         ],
-        "scale": [500,400,300,100],
+        "scale": [5.3,3.5,2.8,2.3],
         "ds": "SonarQube"
       },
       {
