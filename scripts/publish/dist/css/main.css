@@ -17,9 +17,6 @@ body {
 }
 
 div#tree {
-  background-image: url("/images/background.png");
-  background-repeat: repeat-y;
-
 }
 
 .label-scale {

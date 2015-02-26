@@ -7,7 +7,7 @@
         
 
               <ul class="list-group">
-                <li class="list-group-item"><p id="Basili1994"><strong>[Basili1994]</strong> Basili, V. R., Caldiera, G., & Rombach, H. D. (1994). The Goal Question Metric approach. In Encyclopedia of Software Engineering. Wiley. <br />See also <a href="http://maisqual.squoring.com/wiki/index.php/The Goal Question Metric Approach">http://maisqual.squoring.com/wiki/index.php/The Goal Question Metric Approach</a></p></li>
+                <li class="list-group-item"><p id="Basili1994"><strong>[Basili1994]</strong> Basili, V. R., Caldiera, G., & Rombach, H. D. (1994). The Goal Question Metric approach. In Encyclopedia of Software Engineering. Wiley. <br />See also <a href="http://en.wikipedia.org/wiki/GQM">http://en.wikipedia.org/wiki/GQM</a></p></li>
 
                 <li class="list-group-item"><p id="Chidamber1994"><strong>[Chidamber1994]</strong> Shyam R. Chidamber, & Chris F. Kemerer. (1994). A Metrics Suite for Object Oriented Design. IEEE Transactions on Software Engineering, 20(6), 476 – 493.</p></li>
 

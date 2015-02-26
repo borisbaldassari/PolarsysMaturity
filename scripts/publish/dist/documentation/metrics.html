@@ -79,13 +79,17 @@
                   </ul></li>
                     <li class="active"><a href="/projects/">Projects<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level active">
-                    <li><a href="/projects/cdt.html">Cdt</a></li>
-                    <li><a href="/projects/ease.html">Ease</a></li>
-                    <li><a href="/projects/example.html">Example</a></li>
-                    <li><a href="/projects/gendoc.html">Gendoc</a></li>
-                    <li><a href="/projects/kitalpha.html">Kitalpha</a></li>
-                    <li><a href="/projects/papyrus.html">Papyrus</a></li>
-                    <li><a href="/projects/sirius.html">Sirius</a></li>
+                    <li><a href="/projects/modeling.emfcompare.html">Emfcompare</a></li>
+                    <li><a href="/projects/modeling.gendoc.html">Gendoc</a></li>
+                    <li><a href="/projects/modeling.papyrus.html">Papyrus</a></li>
+                    <li><a href="/projects/modeling.sirius.html">Sirius</a></li>
+                    <li><a href="/projects/polarsys.capella.html">Capella</a></li>
+                    <li><a href="/projects/polarsys.kitalpha.html">Kitalpha</a></li>
+                    <li><a href="/projects/polarsys.reqcycle.html">Reqcycle</a></li>
+                    <li><a href="/projects/polarsys.tracecompass.html">Tracecompass</a></li>
+                    <li><a href="/projects/technology.ease.html">Ease</a></li>
+                    <li><a href="/projects/tools.cdt.html">Cdt</a></li>
+                    <li><a href="/projects/tools.cdt.tcf.html">Tcf</a></li>
                   </ul></li>
                     <li class="active"><a href="/contact.html">Contact</a></li></ul>
           </div></div>
@@ -268,22 +272,20 @@
 <p class="desc">Average number of methods defined in the class. This can be compared to the <a href="/documentation/metrics.html#TOPD">total number of operators</a> (TOPT) considered at the class level.</p>
 </li>
                 <li class="list-group-item"><p id="MKT_FAV"><strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MKT_FEEDBACK">MKT_FEEDBACK</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
 <p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 70 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 300 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#INSTALL">INSTALL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
 <p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 500 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -774,22 +776,20 @@
                   <div role="tabpanel" class="tab-pane fade" id="repo_Marketplace"><br />
                     <ul class="list-group">
                       <li class="list-group-item"><p id="MKT_FAV"><strong>Number of favourites on the Marketplace</strong> ( MKT_FAV )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#MKT_FEEDBACK">MKT_FEEDBACK</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of favourites on the Eclipse Marketplace for the project.</p>
 <p class="desc">This measure uses the MarketPlace REST API to retrieve the number of registered users who marked this project as a favourite. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 70 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 300 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MKT_INSTALL_SUCCESS_1M"><strong>Number of successfull installs on the Marketplace</strong> ( MKT_INSTALL_SUCCESS_1M )</p>
-<p class="desc"><strong>Active</strong>: true</p>
+<p class="desc"><strong>Active</strong>: false</p>
 <p class="desc"><strong>Used by</strong>: <a href="questions.html#INSTALL">INSTALL</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The number of successful installs for the project as reported on the Marketplace during the last month.</p>
 <p class="desc">This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href="http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 100 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 500 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 1000 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10000 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                     </ul>
                   </div>  
