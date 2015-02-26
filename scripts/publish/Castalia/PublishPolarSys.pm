@@ -288,6 +288,7 @@ sub aggregate_inds($$$$$) {
     my $questions_ref_conf = shift;
     my $attrs_ref = shift;
     my $attrs_ref_conf = shift;
+    my $project_id = shift;
 
     my $mnemo = $raw_qm->{"mnemo"};
     my $coef;
@@ -304,7 +305,8 @@ sub aggregate_inds($$$$$) {
 	    my $child_value = &aggregate_inds($child, $values, 
 					      $inds_ref, $inds_ref_conf, 
 					      $questions_ref, $questions_ref_conf, 
-					      $attrs_ref, $attrs_ref_conf);
+					      $attrs_ref, $attrs_ref_conf,
+		                              $project_id);
 	    $tmp_m_total += $child->{"m_total"};
 	    $tmp_m_ok += $child->{"m_ok"};
 	    if (defined($child_value)) {
@@ -352,6 +354,9 @@ sub aggregate_inds($$$$$) {
 		$raw_qm->{"m_ok"} = 1;
 	    } else {
 		$raw_qm->{"m_ok"} = 0;
+		
+		my $err = "ERR: Metric [$mnemo] is missing.";
+		push( @{$project_errors{$project_id}}, $err);
 	    }
 	} else {
 	    $raw_qm->{"m_total"} = 0;
@@ -405,7 +410,7 @@ sub generate_inds($$$) {
     &aggregate_inds($raw_qm->{"children"}->[0], $values, 
 		    \%project_indicators, \%project_indicators_conf, 
 		    \%project_questions, \%project_questions_conf, 
-		    \%project_attrs, \%project_attrs_conf);
+		    \%project_attrs, \%project_attrs_conf, $project_id);
 
     print "    - Generating project indicators..\n";
     &generate_downloads($project_id, 'indicators', $dir_out_projects, \%project_indicators);
@@ -507,7 +512,7 @@ sub generate_project($$$) {
 	my @projects_pmi = keys( $json_pmi->{"projects"} );
 	my $project = $json_pmi->{"projects"}->{$projects_pmi[0]};
 	$project_pmi{'title'} = $project->{"title"};
-	$project_pmi{'desc'} = $project->{"description"}->[0]->{"safe_value"} || "";
+	$project_pmi{'desc'} = $project->{"description"}->[0]->{"safe_summary"} || "";
 	$project_pmi{'web'} = $project->{"website_url"}->[0]->{"url"} || "";
 	$project_pmi{'wiki'} = $project->{"wiki_url"}->[0]->{"url"} || "";
 	$project_pmi{'dl'} = $project->{"download_url"}->[0]->{"url"} || "";
@@ -670,7 +675,7 @@ sub generate_project($$$) {
 	    } else {
 		my $err = "INFO: metric [" . $m_mnemo . 
 		    "] is not referenced in metrics definition file.\n";
-		push( @{$project_errors{$project_id}}, $err);
+		#push( @{$project_errors{$project_id}}, $err);
 		if ($debug) {
 		    print $err;
 		}
