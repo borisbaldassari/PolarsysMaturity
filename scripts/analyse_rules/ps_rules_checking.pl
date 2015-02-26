@@ -169,17 +169,20 @@ foreach my $file_rules (@json_files) {
     my $file_vol_rules;
     foreach my $rule_child (@{$raw_rules->{ 'children' }}) {
 	my $rule_mnemo = $rule_child->{ 'mnemo' };
-	if ( exists($rule_child->{ 'cat' }) ) {
-	    $rules{ $rule_child->{ 'mnemo' } } = $rule_child;
-	    print "DBG read ", $rule_child->{ 'mnemo' }, " " if ($debug);
-	    print $rule_child->{ 'name' }, "\n" if ($debug);
-	    $file_vol_rules++;
-	    my @rule_cats = split( ' ', $rule_child->{ 'cat' } );
-	    foreach my $rule_cat (@rule_cats) {
-		$metrics{ "RULES_" . $rule_cat }++;
+	my $rule_pri = $rule_child->{ 'priority' };
+	if ( $rule_pri < 3 ) {
+	    if ( exists($rule_child->{ 'cat' }) ) {
+		$rules{ $rule_child->{ 'mnemo' } } = $rule_child;
+		print "DBG read ", $rule_child->{ 'mnemo' }, " " if ($debug);
+		print $rule_child->{ 'name' }, "\n" if ($debug);
+		$file_vol_rules++;
+		my @rule_cats = split( ' ', $rule_child->{ 'cat' } );
+		foreach my $rule_cat (@rule_cats) {
+		    $metrics{ "RULES_" . $rule_cat }++;
+		}
+	    } else {
+		print "[ERROR] No category defined on $rule_mnemo.\n" if (defined($opt_verbose));
 	    }
-	} else {
-	    print "[ERROR] No category defined on $rule_mnemo.\n" if (defined($opt_verbose));
 	}
     }
     $vol_rules += $file_vol_rules;
@@ -231,7 +234,7 @@ if (-e $opt_fb_file) {
 	    my $pri = $violation->getAttribute('priority');
 
 	    # We do count only rules that have a high confidence 
-	    if ($pri < 2) {
+	    if ($pri < 3) {
 
 		# Get some information for the violation.
 		$violations{ $v_name }{ 'vol' }++;

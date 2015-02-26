@@ -35,7 +35,7 @@
         {
 	    "name": "Double Checked Locking",
 	    "mnemo": "DoubleCheckedLocking",
-            "priority": "",
+            "priority": "1",
 	    "cat": "REL",
 	    "desc": [
 		"Partially created objects can be returned by the Double Checked Locking pattern when used in Java. An optimizing JRE may assign a reference to the baz variable before it creates the object the reference is intended to point to. For more details refer to: http://www.javaworld.com/javaworld/jw-02-2001/jw-0209-double.html",
@@ -95,7 +95,7 @@
         {
 	    "name": "Avoid Decimal Literals In BigDecimal Constructor",
 	    "mnemo": "AvoidDecimalLiteralsInBigDecimalConstructor",
-            "priority": "",
+            "priority": "1",
 	    "cat": "REL CHA",
 	    "desc": [
 		"One might assume that the result of 'new BigDecimal(0.1)' is exactly equal to 0.1, but it is actually equal to .1000000000000000055511151231257827021181583404541015625. This is because 0.1 cannot be represented exactly as a double (or as a binary fraction of any finite length). Thus, the long value that is being passed in to the constructor is not exactly equal to 0.1, appearances notwithstanding. The (String) constructor, on the other hand, is perfectly predictable: 'new BigDecimal('0.1')' is exactly equal to 0.1, as one would expect. Therefore, it is generally recommended that the (String) constructor be used in preference to this one.",
@@ -105,7 +105,7 @@
         {
 	    "name": "Misplaced Null Check",
 	    "mnemo": "MisplacedNullCheck",
-            "priority": "",
+            "priority": "1",
 	    "cat": "REL ANA",
 	    "desc": [
 		"The null check here is misplaced. If the variable is null a NullPointerException will be thrown. Either the check is useless (the variable will never be 'null') or it is incorrect.",
@@ -175,7 +175,7 @@
         {
 	    "name": "Avoid Multiple Unary Operators",
 	    "mnemo": "AvoidMultipleUnaryOperators",
-            "priority": "",
+            "priority": "2",
 	    "cat": "ANA REL",
 	    "desc": [
 		"The use of multiple unary operators may be problematic, and/or confusing. Ensure that the intended usage is not a bug, or consider simplifying the expression.",
@@ -195,7 +195,7 @@
         {
 	    "name": "Check SkipResult",
 	    "mnemo": "CheckSkipResult",
-            "priority": "",
+            "priority": "2",
 	    "cat": "REL",
 	    "desc": [
 		"The <code>skip()</code> method may skip a smaller number of bytes than requested. Check the returned value to find out if it was the case or not.",
@@ -225,7 +225,7 @@
         {
 	    "name": "Dont Use Float Type For Loop Indices",
 	    "mnemo": "DontUseFloatTypeForLoopIndices",
-            "priority": "",
+            "priority": "1",
 	    "cat": "REL",
 	    "desc": [
 		"Don't use floating point for loop indices: the termination test may misbehave due to floating point granularity. If you must use floating point, use double unless you're certain that float provides enough precision and you have a compelling performance need (space or time).",
