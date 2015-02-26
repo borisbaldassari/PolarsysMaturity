@@ -11,6 +11,7 @@ use warnings;
 use Data::Dumper;
 use JSON qw( decode_json encode_json );
 use LWP::Simple;
+use Date::Parse;
 
 # This can be changed for more verbose output
 my $debug = 1;
@@ -23,6 +24,7 @@ my $project_id = shift;
 my $dir_out = shift;
 
 my $fetch_date = localtime();
+my $epoch_date = time();
 my %metrics;
 
 # Fetch json file from projects.eclipse.org
@@ -121,17 +123,25 @@ foreach my $project_id (@projects) {
 	    
 	    print " (", $tmp_rel{"date"}, " ", $tmp_rel{"date_tz"}, ")";
 	    
-	    # Playing with review
-	    $tmp_rel{"review_title"} = $rel->{"review"}->{"title"};
-	    $tmp_rel{"review_state"} = $rel->{"review"}->{"state"}->[0]->{"value"} || 0;
-	    $tmp_rel{"review_type"} = $rel->{"review"}->{"type"}->[0]->{"value"};
-	    $tmp_rel{"review_end_date"} = $rel->{"review"}->{"end_date"}->[0]->{"value"};
-	    $tmp_rel{"review_end_date_tz"} = $rel->{"review"}->{"end_date"}->[0]->{"timezone"};
-	    
-	    if ($tmp_rel{"review_state"} =~ m!success!i && $rel_count < 5) { 
-		$reviews_success++;
+	    my $release_date = str2time($tmp_rel{"date"});
+	    # Initialise release status to prevent undefined.
+	    $tmp_rel{"review_state"} = 0;
+	    # We only want releases that have not passed yet.
+	    if ($release_date < $epoch_date) {
+		# Playing with review
+		$tmp_rel{"review_title"} = $rel->{"review"}->{"title"};
+		$tmp_rel{"review_state"} = $rel->{"review"}->{"state"}->[0]->{"value"} || 0;
+		$tmp_rel{"review_type"} = $rel->{"review"}->{"type"}->[0]->{"value"};
+		$tmp_rel{"review_end_date"} = $rel->{"review"}->{"end_date"}->[0]->{"value"};
+		$tmp_rel{"review_end_date_tz"} = $rel->{"review"}->{"end_date"}->[0]->{"timezone"};
+		
+		if ($tmp_rel{"review_state"} =~ m!success!i && $rel_count < 5) { 
+		    $reviews_success++;
+		}
+		
+		$rel_count++;
 	    }
-	    
+
 	    # Playing with milestones
 	    $tmp_rel{"milestones_vol"} = scalar @{$rel->{"milestones"}};
 	    if ($rel_count < 5) { 
@@ -141,8 +151,7 @@ foreach my $project_id (@projects) {
 	    $milestones_vol += $tmp_rel{"milestones_vol"};
 	    
 	    print "with results ", $tmp_rel{"review_state"}, ".\n";
-#	    push( @releases, %tmp_rel );
-	    $rel_count++;
+
 	}
 	print "  Found [$milestones_vol] milestones.\n";
 
