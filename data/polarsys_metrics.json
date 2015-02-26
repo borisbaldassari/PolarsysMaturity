@@ -463,7 +463,7 @@
             "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. ",
     	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [0.833333333333,1.24285714286,2.5125,21],
+        "scale": [0.833333333333,1.24285714286,2.5125,10],
         "ds": "Grimoire"
       },
       {
@@ -473,7 +473,7 @@
             "Number of threads of messages dated during the last month, in developer mailing list archives. ",
 	        "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [0.00431595818232, 0.0167085169953, 0.0583188863413, 0.748502994012],
+        "scale": [1, 5, 15, 30],
         "ds": "Grimoire"
       },
       {
@@ -483,7 +483,7 @@
            "Number of messages dated during the last month, in user mailing list archives. ",
 	       "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [0.00765581777287,0.0277777777778,0.0907806209215,1.875],
+        "scale": [2,6,22,103],
         "ds": "Grimoire"
       },
       {
@@ -513,7 +513,7 @@
             "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. ",
 	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [0.833333333333,1.24285714286,2.5125,21],
+        "scale": [0.833333333333,1.24285714286,2.5125,10],
         "ds": "Grimoire"
       },
       {
@@ -523,7 +523,7 @@
             "Number of threds of messages dated during the last month, in user mailing list archives.",
 	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
-        "scale": [0.00431595818232, 0.0167085169953, 0.0583188863413, 0.748502994012],
+        "scale": [1, 5, 15, 30],
         "ds": "Grimoire"
       },
       {

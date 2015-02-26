@@ -21,15 +21,15 @@
               <ul class="list-group">
                 <li class="list-group-item">
                   <a href="metrics.html#SCM_COMMITS_1M"><strong>Number of commits</strong></a> (SCM_COMMITS_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.025078279624 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0756446929809 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.264255236791 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2.54688585321 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 13 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 121 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item">
                   <a href="metrics.html#SCM_COMMITTERS_1M"><strong>Number of committers</strong></a> (SCM_COMMITTERS_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00869816603364 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0242054327998 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0757305045383 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.47492625369 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 18 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#SCM_COMMITTED_FILES_1M"><strong>Number of committed files</strong></a> (SCM_COMMITTED_FILES_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.069052601156 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.294543274794 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.948385435841 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 38.8978930308 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 19 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 95.75 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 2189 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#SCM_STABILITY_1M"><strong>SCM Stability</strong></a> (SCM_STABILITY_1M)<br />
@@ -42,7 +42,7 @@
               <ul class="list-group">
                 <li class="list-group-item">
                   <a href="metrics.html#ITS_AUTH_1M"><strong>ITS authors</strong></a> (ITS_AUTH_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00791505127095 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0229812226388 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0527769809755 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 9.09090909091 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 9.75 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 80 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item">
                   <a href="metrics.html#ITS_BUGS_DENSITY"><strong>Defect density</strong></a> (ITS_BUGS_DENSITY)<br />
@@ -50,7 +50,7 @@
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#ITS_BUGS_OPEN"><strong>Number of open bugs</strong></a> (ITS_BUGS_OPEN)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 500 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#ITS_FIX_MED_1M"><strong>Median time to fix bug</strong></a> (ITS_FIX_MED_1M)<br />
@@ -58,7 +58,7 @@
                 </li>
                 <li class="list-group-item">
                   <a href="metrics.html#ITS_UPDATES_1M"><strong>ITS updates</strong></a> (ITS_UPDATES_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.0229586565615 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0757059580589 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.193724583492 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 13.0988023952 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 4 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 13 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 37 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 596 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
               </ul>
 
@@ -67,11 +67,11 @@
               <ul class="list-group">
                 <li class="list-group-item">
                   <a href="metrics.html#MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong></a> (MLS_DEV_AUTH_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00411475861939 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0139607869416 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0461270538934 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.49700598802 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item">
                   <a href="metrics.html#MLS_DEV_RESP_RATIO_1M"><strong>Developer ML response ratio</strong></a> (MLS_DEV_RESP_RATIO_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 21 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#MLS_DEV_RESP_TIME_MED_1M"><strong>Developer ML response time</strong></a> (MLS_DEV_RESP_TIME_MED_1M)<br />
@@ -79,11 +79,11 @@
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#MLS_DEV_SUBJ_1M"><strong>Developer ML subjects</strong></a> (MLS_DEV_SUBJ_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00431595818232 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0167085169953 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0583188863413 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 0.748502994012 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 15 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
                 <li class="list-group-item"> 
                   <a href="metrics.html#MLS_DEV_VOL_1M"><strong>Developer ML posts</strong></a> (MLS_DEV_VOL_1M)<br />
-                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.00765581777287 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 0.0277777777778 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 0.0907806209215 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 1.875 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+                  <p><span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 22 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 103 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
                 </li>
               </ul>
               
