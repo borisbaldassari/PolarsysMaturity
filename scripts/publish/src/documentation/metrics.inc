@@ -51,7 +51,7 @@
 <p class="desc">The ratio of source lines of code on the number of comment lines of code.</p>
 <p class="desc">Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
 <p class="desc">See also SonarQube's page on comment lines metrics: <a href="http://docs.sonarqube.org/display/SONAR/Metrics+-+Comment+lines">http://docs.sonarqube.org/display/SONAR/Metrics+-+Comment+lines</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 15.35 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 19.45 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 23.99 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 33.2 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 15 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="DL_REPO_1M"><strong>Number of downloads on the web site</strong> ( DL_REPO_1M )</p>
 <p class="desc"><strong>Active</strong>: false</p>
@@ -122,7 +122,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 500 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="ITS_FIX_MED_1M"><strong>Median time to fix bug</strong> ( ITS_FIX_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -287,7 +287,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -296,7 +296,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -305,7 +305,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -314,7 +314,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 300 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 150 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCLOC"><strong>Source Lines Of Code</strong> ( NCLOC )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -507,7 +507,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of tickets marked as still open at the time of the data retrieval, in the issue tracking system.</p>
 <p class="desc">The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Open means the state in which further actions are usually expected until the ticket is closed.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3.36826347305 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.0755602867593 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.0335380213652 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.009367219332 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 500 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ITS_FIX_MED_1M"><strong>Median time to fix bug</strong> ( ITS_FIX_MED_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -752,7 +752,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact analysability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 50 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 30 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_CHA_IDX"><strong>Average number of non-conformities for changeability</strong> ( NCC_CHA_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -761,7 +761,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact changeability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REL_IDX"><strong>Average number of non-conformities for reliability</strong> ( NCC_REL_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -770,7 +770,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reliability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 20 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 10 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.1 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="NCC_REU_IDX"><strong>Average number of non-conformities for reusability</strong> ( NCC_REU_IDX )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -779,7 +779,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">The total number of violations of rules that impact reusability in the source code, divided by the number of thousands of lines of code.</p>
 <p class="desc">See also the <a href="/documentation/rules.html">page on practices</a> for a list of checked rules and their associated impact on quality characteristics.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 300 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 200 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 150 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 100 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 3 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 1 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.5 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.3 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="ROKR_ANA"><strong>Adherence to analysability rules</strong> ( ROKR_ANA )</p>
 <p class="desc"><strong>Active</strong>: true</p>
@@ -841,7 +841,7 @@
 <p class="desc">The ratio of source lines of code on the number of comment lines of code.</p>
 <p class="desc">Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100. With such a formula, <var>50%</var> means that the number of lines of code equals the number of comment lines and <var>100%</var> means that the file only contains comment lines. The SonarQube measure used for this purpose is <mark>comment_lines_density</mark>. </p>
 <p class="desc">See also SonarQube's page on comment lines metrics: <a href="http://docs.sonarqube.org/display/SONAR/Metrics+-+Comment+lines">http://docs.sonarqube.org/display/SONAR/Metrics+-+Comment+lines</a>.</p>
-<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 15.35 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 19.45 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 23.99 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 33.2 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
+<p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 15 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 20 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="DUPLICATED_LINES_DENSITY"><strong>Cloning density</strong> ( DUPLICATED_LINES_DENSITY )</p>
 <p class="desc"><strong>Active</strong>: true</p>
