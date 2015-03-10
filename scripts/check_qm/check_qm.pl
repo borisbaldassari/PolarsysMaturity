@@ -15,7 +15,7 @@ use Data::Dumper;
 use JSON qw( decode_json );
 
 my $usage = <<EOU;
-$0 json_qm json_concepts json_metrics
+$0 json_qm json_attributes json_concepts json_metrics
 
 Applies various checks to the quality model, concepts and metrics 
 for the PolarSys Maturity task project.
