@@ -43,7 +43,7 @@ my $dir_src_projects = $dir_src . "projects/";
 my $file_metrics = $dir_data . "polarsys_metrics.json";
 my $file_questions = $dir_data . "polarsys_questions.json";
 my $file_attributes = $dir_data . "polarsys_attributes.json";
-my $file_qm = $dir_data . "polarsys_qm_full.json";
+my $file_qm = $dir_data . "polarsys_qm.json";
 my $file_refs = $dir_data . "references.json";
 
 my $dir_out_data = $dir_out . "data/";

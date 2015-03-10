@@ -47,28 +47,28 @@
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
-                  <dt>Overall Maturity <span class="pull-right">( 9 / 47 metrics )</span></dt>
+                  <dt>Overall Maturity <span class="pull-right">( 9 / 45 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="3.8" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 76%;">3.8 / 5</div>
                     </div>
                   </dd>
-                  <dt>Ecosystem Quality <span class="pull-right">( 3 / 15 metrics )</span></dt>
+                  <dt>Ecosystem Quality <span class="pull-right">( 3 / 13 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4.0 / 5</div>
                     </div>
                   </dd>
                   <dt>Process Quality <span class="pull-right">( 4 / 12 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="3.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3.0 / 5</div>
                     </div>
                   </dd>
                   <dt>Product Quality <span class="pull-right">( 2 / 20 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 90%;">4.5 / 5</div>
                     </div>
                   </dd>
                             </dl>
@@ -95,13 +95,13 @@
                   <dt>Activity <span class="pull-right">( 2 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4.0 / 5</div>
                     </div>
                   </dd>
                   <dt>Diversity <span class="pull-right">( 1 / 3 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4.0 / 5</div>
                     </div>
                   </dd>
                   <dt>Responsiveness <span class="pull-right">( 0 metrics )</span></dt>
@@ -111,18 +111,6 @@
                     </div>
                   </dd>
                   <dt>Support <span class="pull-right">( 0 metrics )</span></dt>
-                  <dd>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
-                    </div>
-                  </dd>
-                  <dt>Usage <span class="pull-right">( 0 metrics )</span></dt>
-                  <dd>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
-                    </div>
-                  </dd>
-                  <dt>User feedback <span class="pull-right">( 0 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #ebebeb;width: 0%;">0 / 5</div>
@@ -139,13 +127,13 @@
                   <dt>Configuration Management <span class="pull-right">( 2 / 3 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4.0 / 5</div>
                     </div>
                   </dd>
                   <dt>Change Management <span class="pull-right">( 2 / 3 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="2.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2.0 / 5</div>
                     </div>
                   </dd>
                   <dt>Planning Management <span class="pull-right">( 0 metrics )</span></dt>
@@ -183,7 +171,7 @@
                   <dt>Reliability <span class="pull-right">( 2 / 7 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 90%;">4.5 / 5</div>
                     </div>
                   </dd>
                   <dt>Reusability <span class="pull-right">( 0 metrics )</span></dt>
@@ -311,7 +299,7 @@ function update(source) {
   nodeEnter.append("circle")
       .attr("r", 1e-6)
       .style("fill", function(d) { 
-        return d.ind ? mycolours[d.ind] : "gray"; 
+        return d.ind ? mycolours[Math.floor(d.ind)] : "gray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
@@ -336,7 +324,7 @@ function update(source) {
   nodeUpdate.select("circle")
       .attr("r", 7)
       .style("fill", function(d) { 
-        return d.ind ? mycolours[d.ind] : "lightgray"; 
+        return d.ind ? mycolours[Math.floor(d.ind)] : "lightgray"; 
       })
       .style("stroke", function(d) {
 	  return "black";
@@ -545,26 +533,26 @@ function click(d) {
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="attrs"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value (confidence)</th><th width="20%">Indicator</th></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>4 ( 2 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>4 ( 1 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>4 ( 3 / 15 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>2 ( 2 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>3 ( 4 / 12 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>4 ( 2 / 20 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>3 ( 9 / 47 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>4 ( 2 / 7 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>4 ( 2 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>4.0 ( 2 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>4.0 ( 1 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>4.0 ( 3 / 13 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>2.0 ( 2 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>3.0 ( 4 / 12 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>4.5 ( 2 / 20 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>3.8 ( 9 / 45 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.8</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>4.5 ( 2 / 7 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>4.0 ( 2 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
 </table>
 
 
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="questions"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
-<tr><td><a href="/documentation/questions.html#ITS_REL">ITS Reliability</a></td><td><a href="/documentation/questions.html#ITS_REL">ITS_REL</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/questions.html#ITS_USAGE">ITS usage</a></td><td><a href="/documentation/questions.html#ITS_USAGE">ITS_USAGE</a></td><td>2</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_USAGE">SCM usage</a></td><td><a href="/documentation/questions.html#SCM_USAGE">SCM_USAGE</a></td><td>4</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/questions.html#ITS_REL">ITS Reliability</a></td><td><a href="/documentation/questions.html#ITS_REL">ITS_REL</a></td><td>4.5</td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#ITS_USAGE">ITS usage</a></td><td><a href="/documentation/questions.html#ITS_USAGE">ITS_USAGE</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_USAGE">SCM usage</a></td><td><a href="/documentation/questions.html#SCM_USAGE">SCM_USAGE</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
 </table>
 
 
@@ -585,6 +573,42 @@ function click(d) {
                   <div role="tabpanel" class="tab-pane fade" id="actions">...</div>
                   <div role="tabpanel" class="tab-pane fade" id="log"><br />
                     <ul class="list-group">
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_DEV_VOL_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_USR_VOL_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_DEV_AUTH_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_USR_AUTH_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_DEV_RESP_TIME_MED_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_USR_RESP_TIME_MED_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_DEV_RESP_RATIO_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_DEV_SUBJ_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_USR_RESP_RATIO_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_USR_SUBJ_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [PUB_SCM_INFO_PMI] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [PUB_ITS_INFO_PMI] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [PLAN_MILESTONES_VOL] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [PLAN_REVIEWS_SUCCESS_RATE] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [LINE_COVERAGE] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [BRANCH_COVERAGE] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [TST_VOL_IDX] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [TEST_SUCCESS_DENSITY] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCLOC] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [FUNCTION_COMPLEXITY] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [COMMENT_LINES_DENSITY] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCC_ANA_IDX] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [ROKR_ANA] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [FUNCTION_COMPLEXITY] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [DUPLICATED_LINES_DENSITY] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCC_CHA_IDX] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [ROKR_CHA] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [FUNCTION_COMPLEXITY] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [SCM_STABILITY_1M] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [ITS_BUGS_OPEN] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCC_REL_IDX] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [ROKR_REL] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [LINE_COVERAGE] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [COMMENT_LINES_DENSITY] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCC_REU_IDX] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [ROKR_REU] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find PMI file [../../samples//kitalpha/kitalpha_pmi.json] for [kitalpha].</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find violations file [../../samples//kitalpha/kitalpha_violations.json] for [kitalpha].</li>
                     </ul>
