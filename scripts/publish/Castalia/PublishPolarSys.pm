@@ -474,13 +474,22 @@ sub generate_project_metrics($$$) {
 	if (exists($raw_values->{"name"})) {
 	    # Our format 
 	    foreach my $metric (sort keys %{$raw_values->{"children"}}) {
-		$project_values{uc($metric)} = $raw_values->{"children"}->{$metric};
+		if ($raw_values->{"children"}->{$metric} =~ m![\d.]+!) {
+		    $project_values{uc($metric)} = $raw_values->{"children"}->{$metric};
+		} else {
+		    print "DBG null value for [$metric].\n";
+		}
 	    }
 	} else {
 	    print "WARN Deprecated format for metrics values file [$file]. Reading anyway.\n" if ($debug);
 	    # Bitergia format
 	    foreach my $metric (keys %{$raw_values}) {
-		$project_values{uc($metric)} = $raw_values->{$metric};
+		if ($raw_values->{$metric} =~ m![\d.]+!) {
+		    $project_values{uc($metric)} = $raw_values->{$metric};
+		    print "DBG metric [$metric] has value " . $raw_values->{$metric} . "\n";
+		} else {
+		    print "DBG null value for [$metric].\n";
+		}
 	    }        
 	}
     }
