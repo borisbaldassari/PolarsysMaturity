@@ -1,205 +1,123 @@
 * Code complexity (CPX)
-:Description: ARRAY(0x14ebcc8)
-:Concept is <b>active</b>.
-:Composed of VG, MDIT.
+:Description: 
 
 * Control flow complexity (CPX_CF)
-:Description: ARRAY(0x14ebda0)
-:Concept is <b>active</b>.
-:Composed of VG.
+:Description: 
 
 * Data flow complexity (CPX_DF)
-:Description: ARRAY(0x14d0ad0)
-:Concept is <b>active</b>.
-:Composed of DOPD, DOPT, TOPD, TOPT.
+:Description: 
 
 * OO complexity (CPX_OO)
-:Description: ARRAY(0x14d0ba8)
-:Concept is <b>active</b>.
-:Composed of MDIT.
+:Description: 
 
 * Code documentation (CODE_DOC)
-:Description: ARRAY(0x14d0c80)
-:Concept is <b>active</b>.
-:Composed of COMR.
+:Description: 
 
 * Code size (CODE_SIZE)
-:Description: ARRAY(0x14d0d58)
-:Concept is <b>active</b>.
-:Composed of SLOC.
+:Description: 
 
 * Access points (ALL_DATA)
-:Description: ARRAY(0x14d0e30)
-:Concept is <b>active</b>.
-:Composed of ATTRS, METHS.
+:Description: 
 
 * Public access points (PUBLIC_DATA)
-:Description: ARRAY(0x14d0f08)
-:Concept is <b>active</b>.
-:Composed of ATTRS_PUBLIC, METHS_PUBLIC.
+:Description: 
 
 * Code cloning (CODE_CLONE)
-:Description: ARRAY(0x14d0fe0)
-:Concept is <b>active</b>.
-:Composed of FU_CLONE.
+:Description: 
 
 * Licensing (LIC)
-:Description: ARRAY(0x14d10d0)
-:Concept is <b>active</b>.
-:Composed of LIC_IDENT.
+:Description: 
 
 * IP Log (IP_LOG)
-:Description: ARRAY(0x14d11a8)
-:Concept is <b>active</b>.
-:Composed of IP_LOG_COV.
+:Description: 
 
 * SCM Documentation (SCM_DOCS)
-:Description: ARRAY(0x14d1280)
-:Concept is <b>inactive</b> for now.
-:Composed of .
+:Description: 
 
 * ITS information access (PUB_ITS_INFO)
-:Description: ARRAY(0x14d1358)
-:Concept is <b>active</b>.
-:Composed of .
+:Description: 
 
 * ITS usage (ITS_USAGE)
-:Description: ARRAY(0x14d1430)
-:Concept is <b>active</b>.
-:Composed of ITS_UPDATES_1M, ITS_AUTH_1M.
+:Description: 
 
 * Installations (INSTALL)
-:Description: ARRAY(0x14d1508)
-:Concept is <b>inactive</b> for now.
-:Composed of SURVEY_INSTALL, MKT_INSTALL_SUCCESS.
+:Description: 
 
 * SCM information access (PUB_SCM_INFO)
-:Description: ARRAY(0x14d15e0)
-:Concept is <b>active</b>.
-:Composed of PUB_SCM_INFO_PMI.
+:Description: 
 
 * SCM usage (SCM_USAGE)
-:Description: ARRAY(0x14d16b8)
-:Concept is <b>active</b>.
-:Composed of SCM_COMMITS_1M, SCM_COMMITTERS_1M.
+:Description: 
 
 * SCM Stability (SCM_STABILITY)
-:Description: ARRAY(0x14d1790)
-:Concept is <b>active</b>.
-:Composed of SCM_STABILITY_1M.
+:Description: 
 
 * Analysability practices (PRACTICES_ANA)
-:Description: ARRAY(0x14d1868)
-:Concept is <b>active</b>.
-:Composed of NCC_ANA_IDX, ROKR_ANA.
+:Description: 
 
 * Changeability practices (PRACTICES_CHA)
-:Description: ARRAY(0x14d1940)
-:Concept is <b>active</b>.
-:Composed of NCC_CHA_IDX, ROKR_CHA.
+:Description: 
 
 * Reliability practices (PRACTICES_REL)
-:Description: ARRAY(0x14d1a18)
-:Concept is <b>active</b>.
-:Composed of NCC_REL_IDX, ROKR_REL.
+:Description: 
 
 * Reusability practices (PRACTICES_REU)
-:Description: ARRAY(0x14d53d8)
-:Concept is <b>active</b>.
-:Composed of NCC_REU_IDX, ROKR_REU.
+:Description: 
 
 * ITS Reliability (ITS_REL)
-:Description: ARRAY(0x14d54b0)
-:Concept is <b>active</b>.
-:Composed of ITS_FIX_MED_1M, ITS_BUGS_OPEN, ITS_BUGS_DENSITY.
+:Description: 
 
 * Test coverage (TST_COV)
-:Description: ARRAY(0x14d5588)
-:Concept is <b>active</b>.
-:Composed of TST_COV_LINES, TST_COV_BRANCHES.
+:Description: 
 
 * Number of tests (TST_VOL)
-:Description: ARRAY(0x14d5660)
-:Concept is <b>active</b>.
-:Composed of TST_VOL_IDX.
+:Description: 
 
 * Test success density (TST_SUCCESS)
-:Description: ARRAY(0x14d5738)
-:Concept is <b>active</b>.
-:Composed of TST_SUCCESS_LAST.
+:Description: 
 
 * Developer ML activity (MLS_DEV_ACTIVITY)
-:Description: ARRAY(0x14d5810)
-:Concept is <b>active</b>.
-:Composed of MLS_DEV_VOL_1M.
+:Description: 
 
 * User ML activity (MLS_USR_ACTIVITY)
-:Description: ARRAY(0x14d5900)
-:Concept is <b>active</b>.
-:Composed of MLS_USR_VOL_1M.
+:Description: 
 
 * SCM activity (SCM_ACTIVITY)
-:Description: ARRAY(0x14d59f0)
-:Concept is <b>active</b>.
-:Composed of SCM_COMMITS_1M, SCM_COMMITTED_FILES_1M.
+:Description: 
 
 * Developer ML diversity (MLS_DEV_DIVERSITY)
-:Description: ARRAY(0x14d5ae0)
-:Concept is <b>active</b>.
-:Composed of MLS_DEV_AUTH_1M.
+:Description: 
 
 * User ML diversity (MLS_USR_DIVERSITY)
-:Description: ARRAY(0x14d5bd0)
-:Concept is <b>active</b>.
-:Composed of MLS_USR_AUTH_1M.
+:Description: 
 
 * SCM diversity (SCM_DIVERSITY)
-:Description: ARRAY(0x14d5cc0)
-:Concept is <b>active</b>.
-:Composed of SCM_COMMITTERS_1M.
+:Description: 
 
 * Developer ML responsiveness (MLS_DEV_RESPONSIVENESS)
-:Description: ARRAY(0x14d5db0)
-:Concept is <b>active</b>.
-:Composed of MLS_DEV_RESP_TIME_MED_1M.
+:Description: 
 
 * User ML responsiveness (MLS_USR_RESPONSIVENESS)
-:Description: ARRAY(0x14d5ea0)
-:Concept is <b>active</b>.
-:Composed of MLS_USR_RESP_TIME_MED_1M.
+:Description: 
 
 * Developer ML support (MLS_DEV_SUPPORT)
-:Description: ARRAY(0x14d5f90)
-:Concept is <b>active</b>.
-:Composed of MLS_DEV_RESP_RATIO_1M, MLS_DEV_SUBJ_1M.
+:Description: 
 
 * User ML support (MLS_USR_SUPPORT)
-:Description: ARRAY(0x14d6080)
-:Concept is <b>active</b>.
-:Composed of MLS_USR_RESP_RATIO_1M, MLS_USR_SUBJ_1M.
+:Description: 
 
 * Plan on time (PLAN_ON_TIME)
-:Description: ARRAY(0x14d6170)
-:Concept is <b>inactive</b> for now.
-:Composed of PLAN_NEXT_MILESTONE.
+:Description: 
 
 * Milestones (PLAN_RELEASES)
-:Description: ARRAY(0x14d6248)
-:Concept is <b>active</b>.
-:Composed of PLAN_MILESTONES_VOL, PLAN_REVIEWS_SUCCESS_RATE.
+:Description: 
 
 * Downloads (DOWNLOADS)
-:Description: ARRAY(0x14d6320)
-:Concept is <b>active</b>.
-:Composed of DL_REPO_1M, DL_UPDATE_SITE_1M.
+:Description: 
 
 * Marketplace feedback (MKT_FEEDBACK)
-:Description: ARRAY(0x14d8e80)
-:Concept is <b>active</b>.
-:Composed of MKT_FAV.
+:Description: 
 
-* Visibility in research (VISIBILITY_CONF)
-:Description: ARRAY(0x14d8f70)
-:Concept is <b>active</b>.
-:Composed of VISIBILITY_CONF_VOL.
+* Visibility in research (PUB_CONF)
+:Description: 
 

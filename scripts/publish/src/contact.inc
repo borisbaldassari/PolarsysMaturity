@@ -14,7 +14,7 @@
               
               <p>If there are any question that you would like to discuss privately (say, a long discussion about a given metric that you do not want to bother the mailing list with) please do not hesitate to contact active members of the task force:</p>
               <ul class="list-group">
-                <li class="list-group-item"><strong>Boris Baldassari</strong> (individual)<br />
+                <li class="list-group-item"><strong>Boris Baldassari</strong> (Castalia Solutions)<br />
                     email: boris (dot) baldassari (by) gmail (dot) com.<br />
                     skype: boris (dot) baldassari</li>
                 <li class="list-group-item"><strong>Gaël Blondelle</strong> (Eclipse Foundation)<br />
@@ -28,7 +28,7 @@
               
               <h4>Meet us</h4>
               
-              <p>We are present at major Eclipse events: we talked about the maturity assessment task force in EclipseCon France 2013 and 2014, EclipseCon Europe 2014, and aim at presenting it at the EclipseCon NA 2015.</p>
+              <p>We are present at major Eclipse events: we talked about the maturity assessment task force in EclipseCon France 2013 and 2014, and EclipseCon Europe 2014.</p>
               
             </div>
           </div>

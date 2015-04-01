@@ -16,5 +16,3 @@ $ http-server ~/git
 ```
 
 The served page is then available at [http://localhost:8080/](http://localhost:8080/); go to [http://localhost:8080/PolarsysMaturity/qm_visualisation/polarsys_qm_full.html](http://localhost:8080/PolarsysMaturity/qm_visualisation/polarsys_qm_full.html).
-
-A complete tutorial is available to help use and develop these files on [http://castalia.solutions/](http://castalia.solutions/index.php/projects/polarsys/working-with-d3js).

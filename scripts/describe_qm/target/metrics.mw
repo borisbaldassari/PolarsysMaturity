@@ -1,232 +1,154 @@
-= Repository: Code Metrics =
+= Repository: Maximum depth of nesting =
 
-* Maximum depth of nesting (NEST)
-:Description: 
+= Repository: Number of files =
 
-* Number of files (FILES)
-:Description: 
+= Repository: Number of functions =
 
-* Comment rate (COMR)
-:Description: 
+= Repository: Number of classes =
 
-* Number of attributes (ATTRS)
-:Description: 
+= Repository: Comment rate =
 
-* Number of methods (METHS)
-:Description: 
+= Repository: Average number of attributes =
 
-* Number of public attributes (ATTRS_PUBLIC)
-:Description: 
+= Repository: Average number of methods =
 
-* Number of public methods (METHS_PUBLIC)
-:Description: 
+= Repository: Public API =
 
-* Depth of Inheritance Tree (MDIT)
-:Description: 
+= Repository: Public documented API =
 
-* Source Lines Of Code (SLOC)
-:Description: 
+= Repository: Average number of public attributes =
 
-* Function cloning (FU_CLONE)
-:Description: 
+= Repository: Average number of public methods =
 
-* Cyclomatic Complexity (VG)
-:Description: 
+= Repository: Depth of Inheritance Tree =
 
-* Number of distinct operands (DOPD)
-:Description: 
+= Repository: Source Lines Of Code =
 
-* Number of distinct operators (DOPT)
-:Description: 
+= Repository: Cloning density =
 
-* Total number of operands (TOPD)
-:Description: 
+= Repository: Average Cyclomatic Complexity =
 
-* Total number of operators (TOPT)
-:Description: 
+= Repository: Number of distinct operands =
 
-* Number of non-conformities for changeability (NCC_CHA)
-:Description: 
+= Repository: Number of distinct operators =
 
-* Number of violated rules for changeability (RKO_CHA)
-:Description: 
+= Repository: Total number of operands =
 
-* Number of rules for changeability (RULES_CHA)
-:Description: 
+= Repository: Total number of operators =
 
-* Non conformities index for changeability (NCC_CHA_IDX)
-:Description: 
+= Repository: Number of non-conformities for analysability =
 
-* Adherence to changeability rules (ROKR_CHA)
-:Description: 
+= Repository: Number of non-conformities for changeability =
 
-* Number of non-conformities for analysability (NCC_ANA)
-:Description: 
+= Repository: Number of non-conformities for reliability =
 
-* Number of violated rules for analysability (RKO_ANA)
-:Description: 
+= Repository: Number of non-conformities for reusability =
 
-* Number of rules for analysability (RULES_ANA)
-:Description: 
+= Repository: Average number of non-conformities for analysability =
 
-* Non conformities index for analysability (NCC_ANA_IDX)
-:Description: 
+= Repository: Average number of non-conformities for changeability =
 
-* Adherence to analysability rules (ROKR_ANA)
-:Description: 
+= Repository: Average number of non-conformities for reliability =
 
-* Number of non-conformities for reliability (NCC_REL)
-:Description: 
+= Repository: Average number of non-conformities for reusability =
 
-* Number of violated rules for reliability (RKO_REL)
-:Description: 
+= Repository: Number of violated rules for changeability =
 
-* Number of rules for reliability (RULES_REL)
-:Description: 
+= Repository: Number of rules for changeability =
 
-* Non conformities index for reliability (NCC_REL_IDX)
-:Description: 
+= Repository: Adherence to changeability rules =
 
-* Adherence to reliability rules (ROKR_REL)
-:Description: 
+= Repository: Number of violated rules for analysability =
 
-* Number of non-conformities for reusability (NCC_REU)
-:Description: 
+= Repository: Number of rules for analysability =
 
-* Number of violated rules for reusability (RKO_REU)
-:Description: 
+= Repository: Adherence to analysability rules =
 
-* Number of rules for reusability (RULES_REU)
-:Description: 
+= Repository: Number of violated rules for reliability =
 
-* Non conformities index for reusability (NCC_REU_IDX)
-:Description: 
+= Repository: Number of rules for reliability =
 
-* Adherence to reusability rules (ROKR_REU)
-:Description: 
+= Repository: Adherence to reliability rules =
 
-* Percentage of lines of code covered by tests (TST_COV_LINES)
-:Description: 
+= Repository: Number of violated rules for reusability =
 
-* Percentage of branches covered by tests (TST_COV_BRANCHES)
-:Description: 
+= Repository: Number of rules for reusability =
 
-* Number of tests relative to the code size (TST_VOL_IDX)
-:Description: 
+= Repository: Adherence to reusability rules =
 
-* Test success density (TST_SUCCESS_LAST)
-:Description: 
+= Repository: Percentage of lines of code covered by tests =
 
-= Repository: Communication Metrics =
+= Repository: Percentage of branches covered by tests =
 
-* Developer ML posts (MLS_DEV_VOL_1M)
-:Description: 
+= Repository: Number of tests relative to the code size =
 
-* Developer ML authors (MLS_DEV_AUTH_1M)
-:Description: 
+= Repository: Test success density =
 
-* Developer ML response time (MLS_DEV_RESP_TIME_MED_1M)
-:Description: 
+= Repository: Developer ML posts =
 
-* Developer ML response ratio (MLS_DEV_RESP_RATIO_1M)
-:Description: 
+= Repository: Developer ML authors =
 
-* Developer ML subjects (MLS_DEV_SUBJ_1M)
-:Description: 
+= Repository: Developer ML response time =
 
-* User ML posts (MLS_USR_VOL_1M)
-:Description: 
+= Repository: Developer ML response ratio =
 
-* User ML authors (MLS_USR_AUTH_1M)
-:Description: 
+= Repository: Developer ML subjects =
 
-* User ML response time (MLS_USR_RESP_TIME_MED_1M)
-:Description: 
+= Repository: User ML posts =
 
-* User ML response ratio (MLS_USR_RESP_RATIO_1M)
-:Description: 
+= Repository: User ML authors =
 
-* User ML subjects (MLS_USR_SUBJ_1M)
-:Description: 
+= Repository: User ML response time =
 
-= Repository: Configuration Management Metrics =
+= Repository: User ML response ratio =
 
-* SCM Commits (SCM_COMMITS_1M)
-:Description: 
+= Repository: User ML subjects =
 
-* Files committed (SCM_COMMITTED_FILES_1M)
-:Description: 
+= Repository: SCM Commits =
 
-* SCM committers (SCM_COMMITTERS_1M)
-:Description: 
+= Repository: Files committed =
 
-* File stability index (SCM_STABILITY_1M)
-:Description: 
+= Repository: SCM committers =
 
-= Repository: Issue Tracking System Metrics =
+= Repository: File stability index =
 
-* Median time to fix bug (ITS_FIX_MED_1M)
-:Description: 
+= Repository: Median time to fix bug =
 
-* Number of open bugs (ITS_BUGS_OPEN)
-:Description: 
+= Repository: Number of open bugs =
 
-* Number of issues opened during last month (ITS_ISSUES_OPEN_1M)
-:Description: 
+= Repository: Number of issues opened during last month =
 
-* Number of issue openers during last month (ITS_ISSUES_OPENERS_1M)
-:Description: 
+= Repository: Number of issue openers during last month =
 
-* ITS updates (ITS_UPDATES_1M)
-:Description: 
+= Repository: ITS updates =
 
-* ITS authors (ITS_AUTH_1M)
-:Description: 
+= Repository: ITS authors =
 
-* Defect density (ITS_BUGS_DENSITY)
-:Description: 
+= Repository: Defect density =
 
-= Repository: Process Repository Metrics =
+= Repository: License identification =
 
-* License identification (LIC_IDENT)
-:Description: 
+= Repository: IP log code coverage =
 
-* IP log code coverage (IP_LOG_COV)
-:Description: 
+= Repository: Project is on time for next milestone =
 
-* Project is on time for next milestone (PLAN_NEXT_MILESTONE)
-:Description: 
+= Repository: Number of milestones =
 
-* Number of milestones (PLAN_MILESTONES_VOL)
-:Description: 
+= Repository: Reviews success rate =
 
-* Milestone success rate (PLAN_REVIEWS_SUCCESS_RATE)
-:Description: 
+= Repository: SCM information =
 
-* SCM information (PUB_SCM_INFO_PMI)
-:Description: 
+= Repository: ITS information =
 
-* ITS information (PUB_ITS_INFO_PMI)
-:Description: 
+= Repository: Installation survey =
 
-* Installation survey (SURVEY_INSTALL)
-:Description: 
+= Repository: Number of favourites on the Marketplace =
 
-* Number of favourites on the Marketplace (MKT_FAV)
-:Description: 
+= Repository: Number of successfull installs on the Marketplace =
 
-* Number of successfull installs on the Marketplace (MKT_INSTALL_SUCCESS_1M)
-:Description: 
+= Repository: Number of downloads on update site =
 
-* Number of failed install on the Marketplace (MKT_INSTALL_FAILED_1M)
-:Description: 
+= Repository: Number of downloads on the web site =
 
-* Number of downloads on update site (DL_UPDATE_SITE_1M)
-:Description: 
-
-* Number of downloads on the web site (DL_REPO_1M)
-:Description: 
-
-* Number of publications (PUB_CONF_VOL)
-:Description: 
+= Repository: Number of publications =
 
