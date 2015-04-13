@@ -578,9 +578,6 @@ sub generate_project($$$) {
 	}
 
 	$html_ret_attrs .= "</table>\n";
-	
-#	&generate_downloads($project_id, 'attributes', $dir_out_projects, \%project_attrs);
-
 	$html_ret_attrs .= "\n";
 	$attrs_ok = 1;
     } else {
