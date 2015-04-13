@@ -5,7 +5,7 @@
         {
 	    "name": "Jumbled Incrementer",
 	    "mnemo": "JumbledIncrementer",
-        "priority": "3",
+        "priority": "2",
 	    "cat": "CHA REL",
 	    "desc": [
 		"Avoid jumbled loop incrementers - it is usually a mistake, and is confusing even if intentional.",
@@ -25,7 +25,7 @@
         {
 	    "name": "Override Both Equals And Hash code",
 	    "mnemo": "OverrideBothEqualsAndHashcode",
-        "priority": "3",
+        "priority": "2",
 	    "cat": "CHA REU",
 	    "desc": [
 		"Override both public boolean Object.equals(Object other), and public int Object.hashCode(), or override neither. Even if you are inheriting a hashCode() from a parent class, consider implementing hashCode and explicitly delegating to your superclass. ",
@@ -35,7 +35,7 @@
         {
 	    "name": "Double Checked Locking",
 	    "mnemo": "DoubleCheckedLocking",
-            "priority": "",
+            "priority": "1",
 	    "cat": "REL",
 	    "desc": [
 		"Partially created objects can be returned by the Double Checked Locking pattern when used in Java. An optimizing JRE may assign a reference to the baz variable before it creates the object the reference is intended to point to. For more details refer to: http://www.javaworld.com/javaworld/jw-02-2001/jw-0209-double.html",
@@ -45,7 +45,7 @@
         {
 	    "name": "Return From Finally Block",
 	    "mnemo": "ReturnFromFinallyBlock",
-            "priority": "3",
+            "priority": "2",
 	    "cat": "REL",
 	    "desc": [
 		"Avoid returning from a finally block, this can discard exceptions.",
@@ -55,10 +55,10 @@
         {
 	    "name": "Unconditional If Statement",
 	    "mnemo": "UnconditionalIfStatement",
-            "priority": "3",
+            "priority": "2",
 	    "cat": "ANA",
 	    "desc": [
-		"Avoid returning from a finally block, this can discard exceptions.",
+		"Do not use <code>if</code> statements that are always true or always false.",
 		"A maintainer will have trouble understanding why an unconditional if has been used. It further clutters the code."
 	    ]
 	},
@@ -95,7 +95,7 @@
         {
 	    "name": "Avoid Decimal Literals In BigDecimal Constructor",
 	    "mnemo": "AvoidDecimalLiteralsInBigDecimalConstructor",
-            "priority": "",
+            "priority": "2",
 	    "cat": "REL CHA",
 	    "desc": [
 		"One might assume that the result of 'new BigDecimal(0.1)' is exactly equal to 0.1, but it is actually equal to .1000000000000000055511151231257827021181583404541015625. This is because 0.1 cannot be represented exactly as a double (or as a binary fraction of any finite length). Thus, the long value that is being passed in to the constructor is not exactly equal to 0.1, appearances notwithstanding. The (String) constructor, on the other hand, is perfectly predictable: 'new BigDecimal('0.1')' is exactly equal to 0.1, as one would expect. Therefore, it is generally recommended that the (String) constructor be used in preference to this one.",
@@ -105,7 +105,7 @@
         {
 	    "name": "Misplaced Null Check",
 	    "mnemo": "MisplacedNullCheck",
-            "priority": "",
+            "priority": "1",
 	    "cat": "REL ANA",
 	    "desc": [
 		"The null check here is misplaced. If the variable is null a NullPointerException will be thrown. Either the check is useless (the variable will never be 'null') or it is incorrect.",
@@ -125,7 +125,7 @@
         {
 	    "name": "Broken NullCheck",
 	    "mnemo": "BrokenNullCheck",
-            "priority": "2",
+            "priority": "1",
 	    "cat": "REL",
 	    "desc": [
 		"The null check is broken since it will throw a NullPointerException itself. It is likely that you used || instead of && or vice versa.",
@@ -155,7 +155,7 @@
         {
 	    "name": "Avoid Using Hard Coded IP",
 	    "mnemo": "AvoidUsingHardCodedIP",
-            "priority": "3",
+            "priority": "2",
 	    "cat": "CHA REU POR",
 	    "desc": [
 		"Application with hard-coded IP addresses can become impossible to deploy in some cases. Externalizing IP adresses is preferable.",
@@ -175,7 +175,7 @@
         {
 	    "name": "Avoid Multiple Unary Operators",
 	    "mnemo": "AvoidMultipleUnaryOperators",
-            "priority": "",
+            "priority": "2",
 	    "cat": "ANA REL",
 	    "desc": [
 		"The use of multiple unary operators may be problematic, and/or confusing. Ensure that the intended usage is not a bug, or consider simplifying the expression.",
@@ -195,7 +195,7 @@
         {
 	    "name": "Check SkipResult",
 	    "mnemo": "CheckSkipResult",
-            "priority": "",
+            "priority": "3",
 	    "cat": "REL",
 	    "desc": [
 		"The <code>skip()</code> method may skip a smaller number of bytes than requested. Check the returned value to find out if it was the case or not.",
@@ -225,12 +225,13 @@
         {
 	    "name": "Dont Use Float Type For Loop Indices",
 	    "mnemo": "DontUseFloatTypeForLoopIndices",
-            "priority": "",
+            "priority": "2",
 	    "cat": "REL",
 	    "desc": [
 		"Don't use floating point for loop indices: the termination test may misbehave due to floating point granularity. If you must use floating point, use double unless you're certain that float provides enough precision and you have a compelling performance need (space or time).",
 		"This rule impacts reliability, since the loop may terminate at an unexpected time."
 	    ]
 	}
+	
     ]
 }

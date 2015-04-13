@@ -166,15 +166,19 @@ foreach my $file_rules (@json_files) {
     print "Rules name: [", $rules_name, "], ";
     print "version: [", $rules_version, "].\n";
     
-    my $file_vol_rules;
+    my $file_vol_rules = 0;
     foreach my $rule_child (@{$raw_rules->{ 'children' }}) {
 	my $rule_mnemo = $rule_child->{ 'mnemo' };
 	my $rule_pri = $rule_child->{ 'priority' };
-	if ( $rule_pri < 3 ) {
+
+	# Differentiate pmd rules (pri <= 3) and findbugs (pri < 3)
+	if ( defined($rule_pri) && $rule_pri < 3) {
+        #( ( $rules_version =~ m!pmd!i && $rule_pri < 3 ) || 
+        #( $rules_version =~ m!findbugs!i && $rule_pri <= 3 ) ) ) {
 	    if ( exists($rule_child->{ 'cat' }) ) {
 		$rules{ $rule_child->{ 'mnemo' } } = $rule_child;
 		print "DBG read ", $rule_child->{ 'mnemo' }, " " if ($debug);
-		print $rule_child->{ 'name' }, "\n" if ($debug);
+		print $rule_child->{ 'name' }, " pri [" , $rule_pri, "]\n" if ($debug);
 		$file_vol_rules++;
 		my @rule_cats = split( ' ', $rule_child->{ 'cat' } );
 		foreach my $rule_cat (@rule_cats) {
@@ -228,21 +232,23 @@ if (-e $opt_fb_file) {
     
     foreach my $violation (@violations_nodes) {
 	my $v_name = $violation->getAttribute('type');
+	my $v_pri_orig = $violation->getAttribute('priority');
 	
 	if ( exists( $rules{ $v_name } ) ) {
 	    
-	    my $pri = $violation->getAttribute('priority');
+	    my $v_pri = $rules{ $v_name }->{'priority'};
+
+	    print "DBG Using pri [$v_pri] instead of [$v_pri_orig] for [$v_name].\n" if ($debug);
 
 	    # We do count only rules that have a high confidence 
-	    if ($pri < 3) {
-
+	    if ($v_pri < 3) {
+		
 		# Get some information for the violation.
 		$violations{ $v_name }{ 'vol' }++;
-		$violations{ $v_name }{ 'pri' } = 
+		$violations{ $v_name }{ 'pri' } = $v_pri;
 		    
-		    
-		    # Count it against the categories defined
-		    $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
+		# Count it against the categories defined
+		$violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
 		foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
 		    $categories{ $cat }->{ 'vol' }++;
 		    $categories{ $cat }->{ $v_name }++;
@@ -270,20 +276,26 @@ my @violations_nodes = $doc->findnodes("//violation");
 foreach my $violation (@violations_nodes) {
 
     my $v_name = $violation->getAttribute('rule');
-    my $v_pri = $violation->getAttribute('priority');
+    my $v_pri_orig = $violation->getAttribute('priority');
 
     # We count only rules with priority == 1 or 2 (high risk).
-    if ($v_pri < 3) {
-	# Get some information for the violation.
-	$violations{ $v_name }{ 'vol' }++;
-	$violations{ $v_name }{ 'pri' } = $v_pri;
+    if ( exists( $rules{ $v_name } ) ) {
+
+	my $v_pri = $rules{ $v_name }->{'priority'};
+
+	print "DBG Using pri [$v_pri] instead of [$v_pri_orig] for [$v_name].\n" if ($debug);
+	if ( $v_pri < 3 ) {
+	    # Get some information for the violation.
+	    $violations{ $v_name }{ 'vol' }++;
+	    $violations{ $v_name }{ 'pri' } = $v_pri;
 	    
-	# Count it against the categories defined
-	if ( exists( $rules{ $v_name } ) ) {
-	    $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
-	    foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
-		$categories{ $cat }->{ 'vol' }++;
-		$categories{ $cat }->{ $v_name }++;
+	    # Count it against the categories defined
+	    if ( exists( $rules{ $v_name } ) ) {
+		$violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
+		foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
+		    $categories{ $cat }->{ 'vol' }++;
+		    $categories{ $cat }->{ $v_name }++;
+		}
 	    }
 	}
     } else {
@@ -296,6 +308,7 @@ foreach my $violation (@violations_nodes) {
 my $length = scalar keys %violations;
 
 print "\nWorking on category metrics...\n";
+print Dumper(%categories);
 foreach my $cat (sort keys %categories) {
     if (defined($opt_verbose)) {
 	print '* ' , $cat, ' violated ', $categories{ $cat }->{ 'vol' }, " times.\n";
@@ -338,7 +351,7 @@ foreach my $violation (keys %violations) {
 	    $total += $violations{$violation}->{"vol"};
     }
 }
-print "Found $total violations.";
+print "Found $total violations.\n";
 $metrics{"NCC"} = $total;
     
 # Write violations to a file if demanded
