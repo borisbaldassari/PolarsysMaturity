@@ -66,7 +66,7 @@
                 "active": "true",
                 "children": [
                   {
-                    "mnemo": "MLS_DEV_DIVERSITY",
+                    "mnemo": "MLS_DEV_ACTIVITY",
                     "type": "concept",
                     "active": "true",
                     "children": [
