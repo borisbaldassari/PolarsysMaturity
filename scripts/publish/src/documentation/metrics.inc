@@ -192,7 +192,7 @@
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
-<p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a>
+<p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_DIVERSITY">MLS_DEV_DIVERSITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives. </p>
@@ -529,7 +529,7 @@
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_AUTH_1M"><strong>Developer ML authors</strong> ( MLS_DEV_AUTH_1M )</p>
 <p class="desc"><strong>Active</strong>: true</p>
-<p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a>
+<p class="desc"><strong>Used by</strong>: <a href="questions.html#MLS_DEV_DIVERSITY">MLS_DEV_DIVERSITY</a>
 </p>
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last month, in developer mailing list archives. </p>
