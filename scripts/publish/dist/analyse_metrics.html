@@ -1,0 +1,289 @@
+<!doctype html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/css/plugins/timeline.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!-- link href="/css/plugins/morris.css" rel="stylesheet" -->
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Our CSS sheets -->
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="#wrapper">
+
+
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <!-- div class="navbar-inner" -->
+          <!-- div class="container" -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><big>PolarSys Maturity Assessment Dashboard &mdash; Analyse_metrics</big></a>
+            </div>
+            <!-- /div -->
+            <!-- /div -->
+            <!-- /.navbar-header -->
+              <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <ul class="nav" id="side-menu">
+                    <li class="active"><a href="/index.html">Home</a></li>
+                    <li class="active"><a href="/about.html">About</a></li>
+                    <li class="active"><a href="/documentation/">Documentation<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/documentation/quality_model.html">Quality Model</a></li>
+                    <li><a href="/documentation/attributes.html">Attributes</a></li>
+                    <li><a href="/documentation/questions.html">Questions</a></li>
+                    <li><a href="/documentation/metrics.html">Metrics</a></li>
+                    <li><a href="/documentation/scales.html">Scales</a></li>
+                    <li><a href="/documentation/rules.html">Practices</a></li>
+                    <li><a href="/documentation/references.html">References</a></li>
+                  </ul></li>
+                    <li class="active"><a href="/projects/">Projects<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level active">
+                    <li><a href="/projects/modeling.emfcompare.html">Emfcompare</a></li>
+                    <li><a href="/projects/modeling.gendoc.html">Gendoc</a></li>
+                    <li><a href="/projects/modeling.papyrus.html">Papyrus</a></li>
+                    <li><a href="/projects/modeling.sirius.html">Sirius</a></li>
+                    <li><a href="/projects/polarsys.capella.html">Capella</a></li>
+                    <li><a href="/projects/polarsys.kitalpha.html">Kitalpha</a></li>
+                    <li><a href="/projects/polarsys.reqcycle.html">Reqcycle</a></li>
+                    <li><a href="/projects/polarsys.tracecompass.html">Tracecompass</a></li>
+                    <li><a href="/projects/technology.ease.html">Ease</a></li>
+                    <li><a href="/projects/tools.cdt.html">Cdt</a></li>
+                    <li><a href="/projects/tools.cdt.tcf.html">Tcf</a></li>
+                  </ul></li>
+                    <li class="active"><a href="/contact.html">Contact</a></li></ul>
+          </div></div>
+        </nav>
+
+
+<div id="page-wrapper">
+
+
+<div class="row">
+
+  <div class="col-sm-7">
+
+
+    <h2>Summary of metrics for PolarSys projects</h2>
+
+    <p>This document gathers the metrics retrieved on all analysed projects, summarises them, and proposes a transverse perspective on the various projects. Its main purpose is to compare the values of metrics, and thus help define and understand the thresholds used to compute the indicators.</p>
+
+    <p>This is a <em>dynamically generated</em> document: it takes as input the <code>metrics.csv</code> file generated by the dashboard and analyses and plots the values for all projects. In this very case, <code class="knitr inline">11</code> projects with a total of <code class="knitr inline">92</code> metrics have been analysed.</p>
+
+  </div>
+  <div class="col-sm-4">
+      <br />
+      <br />
+      <div class="panel panel-success">
+          <!-- Default panel contents -->
+          <div class="panel-heading"><h3 class="panel-title">Contents</h3></div>
+          <div class="list-group">
+            <a href="#summary" class="list-group-item">Quick Summary</a>
+            <a href="#metrics_its" class="list-group-item">Issue tracking system</a>
+            <a href="#metrics_mls" class="list-group-item">Mailing lists</a>
+            <a href="#metrics_scm" class="list-group-item">Configuration management</a>
+            <a href="#download" class="list-group-item">Download data</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<hr />
+
+<h3 id="summary">Quick Summary</h3>
+
+<p></p>
+
+<div class="chunk" id="metrics.summary.plot"><div class="rimage default"><img src="figure/metrics.summary.plot-1.png" title="plot of chunk metrics.summary.plot" alt="plot of chunk metrics.summary.plot" class="img-responsive" class="plot" /></div></div>
+
+<hr />
+
+<h3 id="metrics_its">Issue Tracking System metrics</h3>
+
+<p>Issue Tracking System metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+
+<h4 id="metrics_its_fix_med">Median time to fix</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+
+
+    <p>Minimum value is <code class="knitr inline">0</code> days and <code class="knitr inline">0</code> hours, for project <code class="knitr inline">technology.ease</code>. <br />
+    Maximum value is <code class="knitr inline">132</code> days and <code class="knitr inline">2</code> hours, for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+    Median value is <code class="knitr inline">17</code> days and <code class="knitr inline">0</code> hours, for project <code class="knitr inline">polarsys.kitalpha</code>.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<div class="chunk" id="metric.its.fixmed.plots"><div class="rimage default"><img src="figure/metric.its.fixmed.plots-1.png" title="plot of chunk metric.its.fixmed.plots" alt="plot of chunk metric.its.fixmed.plots" class="img-responsive" class="plot" /></div></div>
+
+  </div>
+</div>
+
+<hr />
+
+<h3 id="metrics_mls">Mailing lists metrics</h3>
+
+<p>Mailing list metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+
+<h4 id="metrics_mls_dev_auth">Authors on Developer mailing list</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+
+
+    <p>Minimum value is <code class="knitr inline">1</code> distinct authors during last month, for project <code class="knitr inline">technology.ease</code>. <br />
+    Maximum value is <code class="knitr inline">19</code> distinct authors during last month, for project <code class="knitr inline">tools.cdt</code>. <br />
+    Median value is <code class="knitr inline">2.5</code> distinct authors during last month, for project <code class="knitr inline">NA</code>.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<div class="chunk" id="metric.mls.devauth.plots"><div class="rimage default"><img src="figure/metric.mls.devauth.plots-1.png" title="plot of chunk metric.mls.devauth.plots" alt="plot of chunk metric.mls.devauth.plots" class="img-responsive" class="plot" /></div></div>
+
+  </div>
+</div>
+
+<hr />
+
+<h3 id="metrics_scm">SCM metrics</h3>
+
+<p>SCM metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+
+<h4 id="metrics_scm_commits">SCM Commits</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+
+
+    <p>Minimum value is <code class="knitr inline">1</code> commits during last month, for project <code class="knitr inline">modeling.gendoc</code>. <br />
+    Maximum value is <code class="knitr inline">104</code> commits during last month, for project <code class="knitr inline">modeling.sirius</code>. <br />
+    Median value is <code class="knitr inline">37</code> commits during last month, for project <code class="knitr inline">polarsys.tracecompass</code>.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<div class="chunk" id="metric.scm.commits.plots"><div class="rimage default"><img src="figure/metric.scm.commits.plots-1.png" title="plot of chunk metric.scm.commits.plots" alt="plot of chunk metric.scm.commits.plots" class="img-responsive" class="plot" /></div></div>
+
+  </div>
+</div>
+
+<h4 id="metrics_scm_commits">SCM Committers</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+
+
+    <p>Minimum value is <code class="knitr inline">1</code> distinct committers during last month, for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+    Maximum value is <code class="knitr inline">14</code> distinct committers during last month, for project <code class="knitr inline">tools.cdt</code>. <br />
+    Median value is <code class="knitr inline">6</code> distinct committers during last month, for project <code class="knitr inline">tools.cdt.tcf</code>.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<div class="chunk" id="metric.scm.committers.plots"><div class="rimage default"><img src="figure/metric.scm.committers.plots-1.png" title="plot of chunk metric.scm.committers.plots" alt="plot of chunk metric.scm.committers.plots" class="img-responsive" class="plot" /></div></div>
+
+  </div>
+</div>
+
+<h4 id="metrics_scm_commits">SCM Committed files</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+
+
+    <p>Minimum value is <code class="knitr inline">1</code> files, for project <code class="knitr inline">modeling.gendoc</code>. <br />
+    Maximum value is <code class="knitr inline">1073</code> files, for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+    Median value is <code class="knitr inline">407</code> files, for project <code class="knitr inline">modeling.emfcompare</code>.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<div class="chunk" id="metric.scm.committedfiles.plots"><div class="rimage default"><img src="figure/metric.scm.committedfiles.plots-1.png" title="plot of chunk metric.scm.committedfiles.plots" alt="plot of chunk metric.scm.committedfiles.plots" class="plot" /></div></div>
+
+  </div>
+</div>
+
+<br />
+</div>
+    </div>
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			     ga('create', 'UA-3675452-13', 'auto');
+			     ga('send', 'pageview');
+
+			     </script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/sb-admin-2.js"></script>
+        
+</body>
+</html>
