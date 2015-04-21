@@ -331,7 +331,7 @@ foreach my $cat (sort keys %categories) {
     if ( exists($metrics{ 'ROK_' . $cat }) ) {
 	$metrics{ 'ROK_' . $cat } = $metrics{ 'RULES_' . $cat } - $metrics{ 'RKO_' . $cat };
     }
-    if ( exists($metrics{ 'RKOR_' . $cat }) ) {
+    if ( exists($metrics{ 'ROKR_' . $cat }) ) {
 	$metrics{ 'ROKR_' . $cat } = 100 * $metrics{ 'ROK_' . $cat } / $metrics{ 'RULES_' . $cat };
     }
 }
