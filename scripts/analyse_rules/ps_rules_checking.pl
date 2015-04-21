@@ -126,10 +126,10 @@ my %rules;
 my %unknown_rules;
 my %metrics = (
     "RULES" => 0,
-    "RULES_ANA" => 0, "RKO_ANA" => 0, "ROK_ANA" => 0, "NCC_ANA" => 0, "ROKR_ANA" => 0, #"NCC_ANA_IDX" => 0,
-    "RULES_CHA" => 0, "RKO_CHA" => 0, "ROK_CHA" => 0, "NCC_CHA" => 0, "ROKR_CHA" => 0, #"NCC_CHA_IDX" => 0,
-    "RULES_REU" => 0, "RKO_REU" => 0, "ROK_REU" => 0, "NCC_REU" => 0, "ROKR_REU" => 0, #"NCC_REU_IDX" => 0,
-    "RULES_REL" => 0, "RKO_REL" => 0, "ROK_REL" => 0, "NCC_REL" => 0, "ROKR_REL" => 0, #"NCC_REL_IDX" => 0,
+    "RULES_ANA" => 0, "RKO_ANA" => 0, "ROK_ANA" => 0, "NCC_ANA" => 0, "ROKR_ANA" => 0, "NCC_ANA_IDX" => 0,
+    "RULES_CHA" => 0, "RKO_CHA" => 0, "ROK_CHA" => 0, "NCC_CHA" => 0, "ROKR_CHA" => 0, "NCC_CHA_IDX" => 0,
+    "RULES_REU" => 0, "RKO_REU" => 0, "ROK_REU" => 0, "NCC_REU" => 0, "ROKR_REU" => 0, "NCC_REU_IDX" => 0,
+    "RULES_REL" => 0, "RKO_REL" => 0, "ROK_REL" => 0, "NCC_REL" => 0, "ROKR_REL" => 0, "NCC_REL_IDX" => 0,
 #    "RULES_TES" => 0, "RKO_TES" => 0, "ROK_TES" => 0, "NCC_TES" => 0, "ROKR_TES" => 0, #"NCC_TES_IDX" => 0,
 #    "RULES_RES" => 0, "RKO_CHA" => 0, "ROK_RES" => 0, "NCC_RES" => 0, "ROKR_RES" => 0, #"NCC_RES_IDX" => 0,
 );
@@ -182,7 +182,9 @@ foreach my $file_rules (@json_files) {
 		$file_vol_rules++;
 		my @rule_cats = split( ' ', $rule_child->{ 'cat' } );
 		foreach my $rule_cat (@rule_cats) {
-		    $metrics{ "RULES_" . $rule_cat }++;
+		    if ( exists($metrics{ "RULES_" . $rule_cat }) ) {
+			$metrics{ "RULES_" . $rule_cat }++;
+		    }
 		}
 	    } else {
 		print "[ERROR] No category defined on $rule_mnemo.\n" if (defined($opt_verbose));
@@ -313,17 +315,25 @@ foreach my $cat (sort keys %categories) {
     if (defined($opt_verbose)) {
 	print '* ' , $cat, ' violated ', $categories{ $cat }->{ 'vol' }, " times.\n";
     }
-    $metrics{ 'NCC_' . $cat } = $categories{ $cat }->{ 'vol' };
-    if ($opt_ksloc != 1) {
+    if ( exists( $metrics{ 'NCC_' . $cat } ) ) {
+	$metrics{ 'NCC_' . $cat } = $categories{ $cat }->{ 'vol' };
+    }
+    if ( exists( $metrics{ 'NCC_' . $cat . '_IDX' } ) && $opt_ksloc != 1 ) {
 	$metrics{ 'NCC_' . $cat . '_IDX' } = ( $categories{ $cat }->{ 'vol' } ) / $opt_ksloc;
     }
     
     # Children are violated rules, excepted for the 'vol' attribute which
     # is the volume of violations for the category.
     my $cat_length = scalar keys %{$categories{ $cat }};
-    $metrics{ 'RKO_' . $cat } = $cat_length - 1;
-    $metrics{ 'ROK_' . $cat } = $metrics{ 'RULES_' . $cat } - $metrics{ 'RKO_' . $cat };
-    $metrics{ 'ROKR_' . $cat } = 100 * $metrics{ 'ROK_' . $cat } / $metrics{ 'RULES_' . $cat };
+    if ( exists($metrics{ 'RKO_' . $cat }) ) {
+	$metrics{ 'RKO_' . $cat } = $cat_length - 1;
+    }
+    if ( exists($metrics{ 'ROK_' . $cat }) ) {
+	$metrics{ 'ROK_' . $cat } = $metrics{ 'RULES_' . $cat } - $metrics{ 'RKO_' . $cat };
+    }
+    if ( exists($metrics{ 'RKOR_' . $cat }) ) {
+	$metrics{ 'ROKR_' . $cat } = 100 * $metrics{ 'ROK_' . $cat } / $metrics{ 'RULES_' . $cat };
+    }
 }
 
 $metrics{"ROKR"} = $length * 100 / $vol_rules;
