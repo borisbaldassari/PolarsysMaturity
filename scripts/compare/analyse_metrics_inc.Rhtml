@@ -20,6 +20,61 @@ projects <- read.csv(file=file.metrics, header=T)
 projects.vol <- nrow(projects)
 projects.names <- projects[,1]
 
+# Plotting function
+myplot <- function(my.metric, my.xlab, my.ylab) {
+    # Needed to prevent ggplot to consider mymetric as a col name.
+    ggplot(projects, aes_string(x="Project", y=my.metric, fill="Project")) +
+        geom_bar(stat="identity") +
+        geom_text(aes_string(label=my.metric), size=4, vjust=1.5, colour="white") +
+        xlab(label = my.xlab) +
+        ylab(label = my.ylab) +
+        scale_fill_brewer(palette = "Set3") +
+        theme (
+          panel.background = element_rect(fill = "transparent",colour = NA),
+          plot.background = element_rect(fill = "white",colour = NA),
+          axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
+        )
+#
+  }
+
+metric.stats <- function(mymetric) {
+    # Find min, max, median.
+    mymetric <- "ITS_FIX_MED_1M"
+    metric.med <- median(projects[,c(mymetric)], na.rm=T)
+    metric.med.project <- projects[match(metric.med, projects[,c(mymetric)]), 1]
+    metric.med.days <- as.integer(metric.med)
+    metric.med.hours <- metric.med - metric.med.days
+    metric.med.hours <- as.integer(metric.med.hours * 24)
+
+    metric.min <- min(projects[,c(mymetric)], na.rm=T)
+    metric.min.project <- projects[which.min(projects[,c(mymetric)]), 1]
+    metric.min.days <- as.integer(metric.min)
+    metric.min.hours <- metric.min - metric.min.days
+    metric.min.hours <- as.integer(metric.min.hours * 24)
+
+    metric.max <- max(projects[,c(mymetric)], na.rm=T)
+    metric.max.project <- projects[which.max(projects[,c(mymetric)]), 1]
+    metric.max.days <- as.integer(metric.max)
+    metric.max.hours <- metric.max - metric.max.days
+    metric.max.hours <- as.integer(metric.max.hours * 24)
+
+    mymetric.stats <- list(metric.min, metric.min.days, metric.min.hours, metric.min.project,
+                           metric.max, metric.max.days, metric.max.hours, metric.max.project,
+                           metric.med, metric.med.days, metric.med.hours, metric.med.project)
+    names(mymetric.stats) <- c("metric.min", "metric.min.days", "metric.min.hours", "metric.min.project",
+                               "metric.max", "metric.max.days", "metric.max.hours", "metric.max.project",
+                               "metric.med", "metric.med.days", "metric.med.hours", "metric.med.project")
+    mymetric.stats
+  }
+
+metric.missing <- function(mymetric) {
+    projects[is.na(projects[,c(mymetric)]), 1]
+  }
+
+metric.zero <- function(mymetric) {
+    projects[projects[,c(mymetric)] == 0 & !is.na(projects[,c(mymetric)]), 1]
+  }
+
 end.rcode-->
 
 <div class="row">
@@ -37,7 +92,7 @@ end.rcode-->
   <div class="col-sm-4">
       <br />
       <br />
-      <div class="panel panel-success">
+      <div class="panel panel-default">
           <!-- Default panel contents -->
           <div class="panel-heading"><h3 class="panel-title">Contents</h3></div>
           <div class="list-group">
@@ -67,8 +122,9 @@ mymetrics.long[is.na(mymetrics.long$Available),4] <- "No"
 
 ggplot(data=mymetrics.long, aes(x=Project, y=Metric, fill=isna)) +
   geom_raster() +
-  scale_fill_manual(values = c("#FB8072", "#B3DE69")) +
+  scale_fill_manual(values = c("#FB8072", "#80B1D3")) +
   scale_y_discrete(limits=sort(unique(mymetrics.long$Metric), decreasing = T)) +
+  labs(fill="Availability") +
   theme(
       panel.background = element_rect(fill = "transparent", colour = NA),
       plot.background = element_rect(fill = "white", colour = NA),
@@ -83,37 +139,128 @@ end.rcode-->
 
 <p>Issue Tracking System metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
 
-<h4 id="metrics_its_fix_med">Median time to fix</h4>
+<h4 id="metrics_its_auth">ITS authors</h4>
 
 <div class="row">
   <div class="col-sm-6">
 
-<!--begin.rcode metric.its.fixmed.list
+<!--begin.rcode metric.its.auth.stats
 
-mymetric <- "ITS_FIX_MED_1M"
-metric.med <- median(projects[,c(mymetric)], na.rm=T)
-metric.med.project <- projects[match(metric.med, projects[,c(mymetric)]), 1]
-metric.med.days <- as.integer(metric.med)
-metric.med.hours <- metric.med - metric.med.days
-metric.med.hours <- as.integer(metric.med.hours * 24)
-
-metric.min <- min(projects[,c(mymetric)], na.rm=T)
-metric.min.project <- projects[which.min(projects[,c(mymetric)]), 1]
-metric.min.days <- as.integer(metric.min)
-metric.min.hours <- metric.min - metric.min.days
-metric.min.hours <- as.integer(metric.min.hours * 24)
-
-metric.max <- max(projects[,c(mymetric)], na.rm=T)
-metric.max.project <- projects[which.max(projects[,c(mymetric)]), 1]
-metric.max.days <- as.integer(metric.max)
-metric.max.hours <- metric.max - metric.max.days
-metric.max.hours <- as.integer(metric.max.hours * 24)
+mymetric <- "ITS_AUTH_1M"
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-    <p>Minimum value is <!-- rinline metric.min.days --> days and <!-- rinline metric.min.hours --> hours, for project <!-- rinline metric.min.project -->. <br />
-    Maximum value is <!-- rinline metric.max.days --> days and <!-- rinline metric.max.hours --> hours, for project <!-- rinline metric.max.project -->. <br />
-    Median value is <!-- rinline metric.med --> days and <!-- rinline metric.med.hours --> hours, for project <!-- rinline metric.med.project -->.</p>
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.auth.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Number of authors')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_its_bugsdensity">Defect density</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.bugsdensity.stats
+
+mymetric <- "ITS_BUGS_DENSITY"
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.bugsdensity.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Bugs per KLOC')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_its_bugsopen">Number of open bugs</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.bugsopen.stats
+
+mymetric <- "ITS_BUGS_OPEN"
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.bugsopen.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Bugs')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_its_fixmed">Median time to fix</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.fixmed.stats
+
+mymetric <- "ITS_FIX_MED_1M"
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -121,18 +268,41 @@ end.rcode-->
 
 <!--begin.rcode metric.its.fixmed.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-ggplot(projects, aes(x=Project, y=ITS_FIX_MED_1M, fill=Project)) +
-    geom_bar(stat="identity") +
-    geom_text(aes(label=ITS_FIX_MED_1M), vjust=1.5, colour="white") +
-    scale_fill_brewer(palette = "Set3") +
-    xlab('Projects') +
-    ylab('ITS fix median time (days)') +
-    theme(
-        panel.background = element_rect(fill = "transparent",colour = NA),
-        plot.background = element_rect(fill = "white",colour = NA),
-        axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
-    )
-#    scale_fill_manual(values=projects.colours) +
+myplot(mymetric, 'Projects', 'ITS fix median time (days)')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_its_updates">ITS updates</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.updates.stats
+
+mymetric <- "ITS_UPDATES_1M"
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.its.updates.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'ITS fix median time (days)')
 
 end.rcode-->
 
@@ -150,21 +320,21 @@ end.rcode-->
 <div class="row">
   <div class="col-sm-6">
 
-<!--begin.rcode metric.mls.devauth.list
+<!--begin.rcode metric.mls.devauth.stats
 
 mymetric <- "MLS_DEV_AUTH_1M"
-metric.med <- median(projects[,c(mymetric)], na.rm=T)
-metric.med.project <- projects[match(metric.med, projects[,c(mymetric)]), 1]
-metric.min <- min(projects[,c(mymetric)], na.rm=T)
-metric.min.project <- projects[which.min(projects[,c(mymetric)]), 1]
-metric.max <- max(projects[,c(mymetric)], na.rm=T)
-metric.max.project <- projects[which.max(projects[,c(mymetric)]), 1]
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-    <p>Minimum value is <!-- rinline metric.min --> distinct authors during last month, for project <!-- rinline metric.min.project -->. <br />
-    Maximum value is <!-- rinline metric.max --> distinct authors during last month, for project <!-- rinline metric.max.project -->. <br />
-    Median value is <!-- rinline metric.med --> distinct authors during last month, for project <!-- rinline metric.med.project -->.</p>
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -172,18 +342,7 @@ end.rcode-->
 
 <!--begin.rcode metric.mls.devauth.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-ggplot(projects, aes(x=Project, y=MLS_DEV_AUTH_1M, fill=Project)) +
-    geom_bar(stat="identity") +
-    geom_text(aes(label=MLS_DEV_AUTH_1M), vjust=1.5, colour="white") +
-    scale_fill_brewer(palette = "Set3") +
-    xlab('Projects') +
-    ylab('Number of disinct authors (1M)') +
-    theme(
-        panel.background = element_rect(fill = "transparent",colour = NA),
-        plot.background = element_rect(fill = "white",colour = NA),
-        axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
-    )
-#    scale_fill_manual(values=projects.colours) +
+myplot(mymetric, 'Projects', 'Number of distinct authors (1M)')
 
 end.rcode-->
 
@@ -201,21 +360,21 @@ end.rcode-->
 <div class="row">
   <div class="col-sm-6">
 
-<!--begin.rcode metric.scm.commits.list, results='asis'
+<!--begin.rcode metric.scm.commits.stats
 
 mymetric <- "SCM_COMMITS_1M"
-metric.med <- median(projects[,c(mymetric)], na.rm=T)
-metric.med.project <- projects[match(metric.med, projects[,c(mymetric)]), 1]
-metric.min <- min(projects[,c(mymetric)], na.rm=T)
-metric.min.project <- projects[which.min(projects[,c(mymetric)]), 1]
-metric.max <- max(projects[,c(mymetric)], na.rm=T)
-metric.max.project <- projects[which.max(projects[,c(mymetric)]), 1]
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-    <p>Minimum value is <!-- rinline metric.min --> commits during last month, for project <!-- rinline metric.min.project -->. <br />
-    Maximum value is <!-- rinline metric.max --> commits during last month, for project <!-- rinline metric.max.project -->. <br />
-    Median value is <!-- rinline metric.med --> commits during last month, for project <!-- rinline metric.med.project -->.</p>
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -223,18 +382,7 @@ end.rcode-->
 
 <!--begin.rcode metric.scm.commits.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-ggplot(projects, aes(x=Project, y=SCM_COMMITS_1M, fill=Project)) +
-    geom_bar(stat="identity") +
-    geom_text(aes(label=SCM_COMMITS_1M), vjust=1.5, colour="white") +
-    scale_fill_brewer(palette = "Set3") +
-    xlab('Projects') +
-    ylab('Commits (1M)') +
-    theme(
-        panel.background = element_rect(fill = "transparent",colour = NA),
-        plot.background = element_rect(fill = "white",colour = NA),
-        axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
-    )
-#    scale_fill_manual(values=projects.colours) +
+myplot(mymetric, 'Projects', 'Commits (1M)')
 
 end.rcode-->
 
@@ -246,20 +394,21 @@ end.rcode-->
 <div class="row">
   <div class="col-sm-6">
 
-<!--begin.rcode metric.scm.committers.list, results='asis'
+<!--begin.rcode metric.scm.committers.stats
+
 mymetric <- "SCM_COMMITTERS_1M"
-metric.med <- median(projects[,c(mymetric)], na.rm=T)
-metric.med.project <- projects[match(metric.med, projects[,c(mymetric)]), 1]
-metric.min <- min(projects[,c(mymetric)], na.rm=T)
-metric.min.project <- projects[which.min(projects[,c(mymetric)]), 1]
-metric.max <- max(projects[,c(mymetric)], na.rm=T)
-metric.max.project <- projects[which.max(projects[,c(mymetric)]), 1]
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-    <p>Minimum value is <!-- rinline metric.min --> distinct committers during last month, for project <!-- rinline metric.min.project -->. <br />
-    Maximum value is <!-- rinline metric.max --> distinct committers during last month, for project <!-- rinline metric.max.project -->. <br />
-    Median value is <!-- rinline metric.med --> distinct committers during last month, for project <!-- rinline metric.med.project -->.</p>
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -267,17 +416,7 @@ end.rcode-->
 
 <!--begin.rcode metric.scm.committers.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-ggplot(projects, aes(x=Project, y=SCM_COMMITTERS_1M, fill=Project)) +
-    geom_bar(stat="identity") +
-    geom_text(aes(label=SCM_COMMITTERS_1M), vjust=1.5, colour="white") +
-    scale_fill_brewer(palette = "Set3") +
-    xlab('Projects') +
-    ylab('Committers (1M)') +
-    theme(
-        panel.background = element_rect(fill = "transparent",colour = NA),
-        plot.background = element_rect(fill = "white",colour = NA),
-        axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
-    )
+myplot(mymetric, 'Projects', 'Committers (1M)')
 
 end.rcode-->
 
@@ -289,38 +428,29 @@ end.rcode-->
 <div class="row">
   <div class="col-sm-6">
 
-<!--begin.rcode metric.scm.committedfiles.list, results='asis'
+<!--begin.rcode metric.scm.committedfiles.stats
+
 mymetric <- "SCM_COMMITTED_FILES_1M"
-metric.med <- median(projects[,c(mymetric)], na.rm=T)
-metric.med.project <- projects[match(metric.med, projects[,c(mymetric)]), 1]
-metric.min <- min(projects[,c(mymetric)], na.rm=T)
-metric.min.project <- projects[which.min(projects[,c(mymetric)]), 1]
-metric.max <- max(projects[,c(mymetric)], na.rm=T)
-metric.max.project <- projects[which.max(projects[,c(mymetric)]), 1]
+metric.stats <- metric.stats(mymetric)
+metric.missing.ret <- metric.missing(mymetric)
+metric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-    <p>Minimum value is <!-- rinline metric.min --> files, for project <!-- rinline metric.min.project -->. <br />
-    Maximum value is <!-- rinline metric.max --> files, for project <!-- rinline metric.max.project -->. <br />
-    Median value is <!-- rinline metric.med --> files, for project <!-- rinline metric.med.project -->.</p>
+  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
   <div class="col-sm-6">
 
-<!--begin.rcode metric.scm.committedfiles.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), eval=TRUE, warning=F
+<!--begin.rcode metric.scm.committedfiles.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-ggplot(projects, aes(x=Project, y=SCM_COMMITTED_FILES_1M, fill=Project)) +
-    geom_bar(stat="identity") +
-    geom_text(aes(label=SCM_COMMITTED_FILES_1M), vjust=1.5, colour="white") +
-    scale_fill_brewer(palette = "Set3") +
-    xlab('Projects') +
-    ylab('Committed files (1M)') +
-    theme(
-        panel.background = element_rect(fill = "transparent",colour = NA),
-        plot.background = element_rect(fill = "white",colour = NA),
-        axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
-    )
+myplot(mymetric, 'Projects', 'Committed files (1M)')
 
 end.rcode-->
 
