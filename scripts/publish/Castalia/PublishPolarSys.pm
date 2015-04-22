@@ -130,7 +130,8 @@ sub generate_global_downloads($$) {
     foreach my $project (sort keys %projects) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_metrics) {
-	    my $value = $global_metrics{$mnemo}{$project} || "";
+	    my $value = $global_metrics{$mnemo}{$project};
+	    print "DBG [$mnemo] before [$global_metrics{$mnemo}{$project}] written [$value].\n" if ($debug);
     	    $out_data .= ',' . $value;
     	}
     	$out_data .= "\n";
@@ -339,7 +340,6 @@ sub aggregate_inds($$$$$) {
 	
     } else {
 	# Yes: compute the ind value of leaf.
-#	print "DBG before compute_scale: for $mnemo.\n";
 	$coef = &compute_scale($values->{$mnemo}, $flat_metrics{$mnemo}{"scale"});
 	$raw_qm->{"ind"} = $coef;
 
