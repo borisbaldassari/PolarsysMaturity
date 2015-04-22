@@ -54,8 +54,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.kitalpha</code>. <br />
+  Max value is <code class="knitr inline">41</code> for project <code class="knitr inline">tools.cdt</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.reqcycle</code>.<br />
@@ -81,9 +81,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">0.01</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  Max value is <code class="knitr inline">0.21</code> for project <code class="knitr inline">technology.ease</code>. <br />
+  Median value is  for project <code class="knitr inline">modeling.gendoc</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">2</code> projects <code class="knitr inline">modeling.papyrus, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -104,8 +104,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">6</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  Max value is <code class="knitr inline">4320</code> for project <code class="knitr inline">tools.cdt</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
@@ -150,8 +150,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">1</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  Max value is <code class="knitr inline">189</code> for project <code class="knitr inline">tools.cdt</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
@@ -179,9 +179,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">3</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">35</code> for project <code class="knitr inline">tools.cdt</code>. <br />
+  Median value is  for project <code class="knitr inline">tools.cdt.tcf</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -202,9 +202,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">0.09</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">6</code> for project <code class="knitr inline">technology.ease</code>. <br />
+  Median value is  for project <code class="knitr inline">tools.cdt.tcf</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -225,8 +225,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">0.03</code> for project <code class="knitr inline">technology.ease</code>. <br />
+  Max value is <code class="knitr inline">0.35</code> for project <code class="knitr inline">tools.cdt.tcf</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.emfcompare, modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
@@ -248,9 +248,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">3</code> for project <code class="knitr inline">technology.ease</code>. <br />
+  Max value is <code class="knitr inline">38</code> for project <code class="knitr inline">tools.cdt</code>. <br />
+  Median value is  for project <code class="knitr inline">polarsys.tracecompass</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -271,9 +271,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">12</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">169</code> for project <code class="knitr inline">tools.cdt</code>. <br />
+  Median value is  for project <code class="knitr inline">technology.ease</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -294,8 +294,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">4</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">40</code> for project <code class="knitr inline">tools.cdt</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
@@ -317,8 +317,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">0.75</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">2.66</code> for project <code class="knitr inline">modeling.sirius</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
@@ -340,8 +340,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">0.06</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">2.68</code> for project <code class="knitr inline">tools.cdt</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
@@ -363,8 +363,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">4</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">38</code> for project <code class="knitr inline">tools.cdt</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
@@ -386,8 +386,8 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  <p>Min value is <code class="knitr inline">7</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">106</code> for project <code class="knitr inline">modeling.sirius</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
@@ -415,9 +415,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">23</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">130</code> for project <code class="knitr inline">modeling.sirius</code>. <br />
+  Median value is  for project <code class="knitr inline">tools.cdt.tcf</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -438,9 +438,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">technology.ease</code>. <br />
+  Max value is <code class="knitr inline">16</code> for project <code class="knitr inline">tools.cdt</code>. <br />
+  Median value is  for project <code class="knitr inline">polarsys.capella</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -461,9 +461,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">94</code> for project <code class="knitr inline">modeling.emfcompare</code>. <br />
+  Max value is <code class="knitr inline">843</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
+  Median value is  for project <code class="knitr inline">polarsys.capella</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
@@ -484,9 +484,9 @@
 
 
 
-  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
-  Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
-  Median value is  for project <code class="knitr inline">NA</code>.</p>
+  <p>Min value is <code class="knitr inline">1.1</code> for project <code class="knitr inline">tools.cdt.tcf</code>. <br />
+  Max value is <code class="knitr inline">1.3</code> for project <code class="knitr inline">modeling.sirius</code>. <br />
+  Median value is  for project <code class="knitr inline">modeling.emfcompare</code>.</p>
 
   <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
   Value is null (zero) for <code class="knitr inline">0</code> projects .</p>

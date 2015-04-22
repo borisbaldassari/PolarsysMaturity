@@ -53,7 +53,6 @@ myplot.facet <- function(df, ylab) {
 
 metric.stats <- function(mymetric) {
     # Find min, max, median.
-    mymetric <- "ITS_FIX_MED_1M"
     metric.med <- median(projects[,c(mymetric)], na.rm=T)
     metric.med.project <- projects[match(metric.med, projects[,c(mymetric)]), 1]
     metric.med.days <- as.integer(metric.med)
