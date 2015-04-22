@@ -22,7 +22,7 @@ projects.names <- projects[,1]
 
 # Plotting function
 myplot <- function(my.metric, my.xlab, my.ylab) {
-    # Needed to prevent ggplot to consider mymetric as a col name.
+    # aes_string is needed to prevent ggplot to consider mymetric as a col name.
     ggplot(projects, aes_string(x="Project", y=my.metric, fill="Project")) +
         geom_bar(stat="identity") +
         geom_text(aes_string(label=my.metric), size=4, vjust=1.5, colour="white") +
@@ -34,7 +34,21 @@ myplot <- function(my.metric, my.xlab, my.ylab) {
           plot.background = element_rect(fill = "white",colour = NA),
           axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
         )
-#
+  }
+
+myplot.facet <- function(df, ylab) {
+    mymetrics.long <- melt(df, id.vars="Project", variable.name="Metric", value.name="Value")
+    ggplot(mymetrics.long, aes(x=Metric, y=Value, fill=factor(Metric))) +
+        geom_bar(stat="identity", position="dodge") +
+        facet_wrap( ~ Project, nrow=1) +
+        xlab(label = "Projects") +
+        ylab(label = ylab) +
+        scale_fill_brewer(palette = "Set2") +
+        theme (
+          panel.background = element_rect(fill = "transparent",colour = NA),
+          plot.background = element_rect(fill = "white",colour = NA),
+          axis.text.x = element_text(angle=30, hjust=1, vjust=1, size=11)
+        )
   }
 
 metric.stats <- function(mymetric) {
@@ -100,6 +114,8 @@ end.rcode-->
             <a href="#metrics_its" class="list-group-item">Issue tracking system</a>
             <a href="#metrics_mls" class="list-group-item">Mailing lists</a>
             <a href="#metrics_scm" class="list-group-item">Configuration management</a>
+            <a href="#metrics_rules" class="list-group-item">Rule-checking</a>
+            <a href="#metrics_sonar" class="list-group-item">SonarQube</a>
             <a href="#download" class="list-group-item">Download data</a>
           </div>
       </div>
@@ -137,7 +153,7 @@ end.rcode-->
 
 <h3 id="metrics_its">Issue Tracking System metrics</h3>
 
-<p>Issue Tracking System metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+<p>Issue Tracking System metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using <a href="http://vizgrimoire.bitergia.org/">Grimoire</a>, an open-source analysis engine developped by <a href="http://bitergia.com">Bitergia</a>.</p>
 
 <h4 id="metrics_its_auth">ITS authors</h4>
 
@@ -164,7 +180,7 @@ end.rcode-->
 
   <div class="col-sm-6">
 
-<!--begin.rcode metric.its.auth.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+<!--begin.rcode metric.its.auth.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE
 
 myplot(mymetric, 'Projects', 'Number of authors during last month')
 
@@ -313,7 +329,7 @@ end.rcode-->
 
 <h3 id="metrics_mls">Mailing lists metrics</h3>
 
-<p>Mailing list metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+<p>Mailing list metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using <a href="http://vizgrimoire.bitergia.org/">Grimoire</a>, an open-source analysis engine developped by <a href="http://bitergia.com">Bitergia</a>.</p>
 
 <h4 id="metrics_mls_devauth">Developer ML authors</h4>
 
@@ -659,7 +675,7 @@ end.rcode-->
 
 <h3 id="metrics_scm">SCM metrics</h3>
 
-<p>SCM metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+<p>SCM metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using <a href="http://vizgrimoire.bitergia.org/">Grimoire</a>, an open-source analysis engine developped by <a href="http://bitergia.com">Bitergia</a>.</p>
 
 <h4 id="metrics_scm_commits">SCM Commits</h4>
 
@@ -796,6 +812,52 @@ end.rcode-->
 
   </div>
 </div>
+
+<hr />
+
+<h3 id="metrics_rules">Rule-checking metrics</h3>
+
+<p>Rule-checking metrics are computed using two well-known open-source tools, <a href="http://pmd.sf.net">PMD</a> and <a href="http://findbugs.sf.net">FindBugs</a>. These are executed by the Maturity Assessment process because a restricted set of the most harmful rules is used, instead of the default SonarQube quality profile. The list of rules checked can be found in the <a href="/documentation/practices.html">online documentation</a>; only rules with a high priority are counted in the rating (i.e. &lt; 4 for PMD and &lt; 3 for FindBugs).</p>
+
+<h4 id="metrics_rules_ncc">Number of non-conformities</h4>
+
+
+<!--begin.rcode metric.ncc.plots, fig.width=24, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+projects.ncc <- projects[,c("Project", "NCC_ANA_IDX", "NCC_CHA_IDX", "NCC_REL_IDX", "NCC_REU_IDX")]
+
+#"NCC_ANA_IDX", "NCC_CHA_IDX", "NCC_REL_IDX", "NCC_REU_IDX")]
+#                              "NCC_ANA_IDX", "NCC_CHA_IDX", "NCC_REL_IDX", "NCC_REU_IDX",
+#                              "ROKR_ANA", "ROKR_CHA", "ROKR_REL", "ROKR_REU",
+
+myplot.facet(projects.ncc, "Number of non-conformities")
+
+end.rcode-->
+
+
+<h4 id="metrics_rules_ncc">Rate of acquired Practices</h4>
+
+
+<!--begin.rcode metric.rokr.plots, fig.width=24, fig.height=12, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+projects.rokr <- projects[,c("Project", "ROKR_ANA", "ROKR_CHA", "ROKR_REL", "ROKR_REU")]
+
+myplot.facet(projects.ncc, "Percentage of acquired practices")
+
+end.rcode-->
+
+
+<h4 id="metrics_rules_ncc">Number of violated rules</h4>
+
+
+<!--begin.rcode metric.rko.plots, fig.width=24, fig.height=12, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+projects.rokr <- projects[,c("Project", "RKO_ANA", "RKO_CHA", "RKO_REL", "RKO_REU")]
+
+myplot.facet(projects.ncc, "Percentage of acquired practices")
+
+end.rcode-->
+
 
 <br />
 </div>

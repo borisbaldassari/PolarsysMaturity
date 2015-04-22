@@ -25,6 +25,8 @@
             <a href="#metrics_its" class="list-group-item">Issue tracking system</a>
             <a href="#metrics_mls" class="list-group-item">Mailing lists</a>
             <a href="#metrics_scm" class="list-group-item">Configuration management</a>
+            <a href="#metrics_rules" class="list-group-item">Rule-checking</a>
+            <a href="#metrics_sonar" class="list-group-item">SonarQube</a>
             <a href="#download" class="list-group-item">Download data</a>
           </div>
       </div>
@@ -43,7 +45,7 @@
 
 <h3 id="metrics_its">Issue Tracking System metrics</h3>
 
-<p>Issue Tracking System metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+<p>Issue Tracking System metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using <a href="http://vizgrimoire.bitergia.org/">Grimoire</a>, an open-source analysis engine developped by <a href="http://bitergia.com">Bitergia</a>.</p>
 
 <h4 id="metrics_its_auth">ITS authors</h4>
 
@@ -52,18 +54,22 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
-  Value is null (zero) for <code class="knitr inline">2</code> projects <code class="knitr inline">modeling.gendoc, polarsys.reqcycle</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
   <div class="col-sm-6">
 
-<div class="chunk" id="metric.its.auth.plots"><div class="rimage default"><img src="figure/metric.its.auth.plots-1.png" title="plot of chunk metric.its.auth.plots" alt="plot of chunk metric.its.auth.plots" class="img-responsive" class="plot" /></div></div>
+<div class="chunk" id="metric.its.auth.plots"><div class="rcode"><div class="warning"><pre class="knitr r">## Warning: Removed 3 rows containing missing values (position_stack).
+</pre></div>
+<div class="warning"><pre class="knitr r">## Warning: Removed 3 rows containing missing values (geom_text).
+</pre></div>
+</div><div class="rimage default"><img src="figure/metric.its.auth.plots-1.png" title="plot of chunk metric.its.auth.plots" alt="plot of chunk metric.its.auth.plots" class="img-responsive" class="plot" /></div></div>
 
   </div>
 </div>
@@ -75,12 +81,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
-  Value is null (zero) for <code class="knitr inline">1</code> projects <code class="knitr inline">polarsys.reqcycle</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">2</code> projects <code class="knitr inline">modeling.papyrus, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -98,7 +104,7 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
@@ -121,12 +127,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
-  Value is null (zero) for <code class="knitr inline">2</code> projects <code class="knitr inline">modeling.gendoc, polarsys.reqcycle</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -144,7 +150,7 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
@@ -164,7 +170,7 @@
 
 <h3 id="metrics_mls">Mailing lists metrics</h3>
 
-<p>Mailing list metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+<p>Mailing list metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using <a href="http://vizgrimoire.bitergia.org/">Grimoire</a>, an open-source analysis engine developped by <a href="http://bitergia.com">Bitergia</a>.</p>
 
 <h4 id="metrics_mls_devauth">Developer ML authors</h4>
 
@@ -173,12 +179,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">5</code> projects <code class="knitr inline">modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.gendoc</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -196,12 +202,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">5</code> projects <code class="knitr inline">modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.gendoc</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -219,12 +225,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">5</code> projects <code class="knitr inline">modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">2</code> projects <code class="knitr inline">modeling.emfcompare, modeling.gendoc</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.emfcompare, modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -242,12 +248,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">5</code> projects <code class="knitr inline">modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.gendoc</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -265,12 +271,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">5</code> projects <code class="knitr inline">modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.gendoc</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">6</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, modeling.sirius, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -288,12 +294,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.tracecompass, tools.cdt.tcf</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -311,12 +317,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.tracecompass, tools.cdt.tcf</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -334,12 +340,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.tracecompass, tools.cdt.tcf</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -357,12 +363,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.tracecompass, tools.cdt.tcf</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -380,12 +386,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.tracecompass, tools.cdt.tcf</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">7</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.capella, polarsys.kitalpha, polarsys.reqcycle, polarsys.tracecompass, tools.cdt.tcf</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -400,7 +406,7 @@
 
 <h3 id="metrics_scm">SCM metrics</h3>
 
-<p>SCM metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
+<p>SCM metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using <a href="http://vizgrimoire.bitergia.org/">Grimoire</a>, an open-source analysis engine developped by <a href="http://bitergia.com">Bitergia</a>.</p>
 
 <h4 id="metrics_scm_commits">SCM Commits</h4>
 
@@ -409,12 +415,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.kitalpha, polarsys.reqcycle</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -432,12 +438,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.kitalpha, polarsys.reqcycle</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -455,12 +461,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.kitalpha, polarsys.reqcycle</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -478,12 +484,12 @@
 
 
 
-  <p>Min value is <code class="knitr inline">0</code> for project <code class="knitr inline">modeling.gendoc</code>. <br />
+  <p>Min value is <code class="knitr inline">2</code> for project <code class="knitr inline">polarsys.capella</code>. <br />
   Max value is <code class="knitr inline">237.25</code> for project <code class="knitr inline">polarsys.tracecompass</code>. <br />
   Median value is  for project <code class="knitr inline">NA</code>.</p>
 
-  <p>Value is missing (NA) for <code class="knitr inline">1</code> projects <code class="knitr inline">modeling.papyrus</code>.<br />
-  Value is null (zero) for <code class="knitr inline">3</code> projects <code class="knitr inline">modeling.gendoc, polarsys.kitalpha, polarsys.reqcycle</code>.</p>
+  <p>Value is missing (NA) for <code class="knitr inline">4</code> projects <code class="knitr inline">modeling.gendoc, modeling.papyrus, polarsys.kitalpha, polarsys.reqcycle</code>.<br />
+  Value is null (zero) for <code class="knitr inline">0</code> projects .</p>
 
   </div>
 
@@ -493,6 +499,30 @@
 
   </div>
 </div>
+
+<hr />
+
+<h3 id="metrics_rules">Rule-checking metrics</h3>
+
+<p>Rule-checking metrics are computed using two well-known open-source tools, <a href="http://pmd.sf.net">PMD</a> and <a href="http://findbugs.sf.net">FindBugs</a>. These are executed by the Maturity Assessment process because a restricted set of the most harmful rules is used, instead of the default SonarQube quality profile. The list of rules checked can be found in the <a href="/documentation/practices.html">online documentation</a>; only rules with a high priority are counted in the rating (i.e. &lt; 4 for PMD and &lt; 3 for FindBugs).</p>
+
+<h4 id="metrics_rules_ncc">Number of non-conformities</h4>
+
+
+<div class="chunk" id="metric.ncc.plots"><div class="rimage default"><img src="figure/metric.ncc.plots-1.png" title="plot of chunk metric.ncc.plots" alt="plot of chunk metric.ncc.plots" class="img-responsive" class="plot" /></div></div>
+
+
+<h4 id="metrics_rules_ncc">Rate of acquired Practices</h4>
+
+
+<div class="chunk" id="metric.rokr.plots"><div class="rimage default"><img src="figure/metric.rokr.plots-1.png" title="plot of chunk metric.rokr.plots" alt="plot of chunk metric.rokr.plots" class="img-responsive" class="plot" /></div></div>
+
+
+<h4 id="metrics_rules_ncc">Number of violated rules</h4>
+
+
+<div class="chunk" id="metric.rko.plots"><div class="rimage default"><img src="figure/metric.rko.plots-1.png" title="plot of chunk metric.rko.plots" alt="plot of chunk metric.rko.plots" class="img-responsive" class="plot" /></div></div>
+
 
 <br />
 </div>

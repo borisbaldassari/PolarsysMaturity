@@ -51,7 +51,7 @@
                   <dt>Overall Maturity <span class="pull-right">( 44 / 45 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="2.8" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 56%;">2.8 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="3.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3.0 / 5</div>
                     </div>
                   </dd>
                   <dt>Ecosystem Quality <span class="pull-right">( 13 / 13 metrics )</span></dt>
@@ -69,7 +69,7 @@
                   <dt>Product Quality <span class="pull-right">( 20 / 20 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 70%;">3.5 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 86%;">4.3 / 5</div>
                     </div>
                   </dd>
                             </dl>
@@ -160,25 +160,25 @@
                   <dt>Analysability <span class="pull-right">( 5 / 5 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 64%;">3.2 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 82%;">4.1 / 5</div>
                     </div>
                   </dd>
                   <dt>Changeability <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.8" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 76%;">3.8 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.6" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 92%;">4.6 / 5</div>
                     </div>
                   </dd>
                   <dt>Reliability <span class="pull-right">( 7 / 7 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.9" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 78%;">3.9 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.7" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 94%;">4.7 / 5</div>
                     </div>
                   </dd>
                   <dt>Reusability <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 64%;">3.2 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="3.8" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 76%;">3.8 / 5</div>
                     </div>
                   </dd>
                             </dl>
@@ -535,18 +535,18 @@ function click(d) {
                   <div role="tabpanel" class="tab-pane fade" id="attrs"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value (confidence)</th><th width="20%">Indicator</th></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ACTIVITY">Activity</a></td><td><a href="/documentation/attributes.html#QM_ACTIVITY">QM_ACTIVITY</a></td><td>1.0 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>3.2 ( 5 / 5 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.2</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>3.8 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.8</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>4.1 ( 5 / 5 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.1</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>4.6 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.6</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>1.0 ( 3 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>2.0 ( 13 / 13 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>3.0 ( 3 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a></td><td><a href="/documentation/attributes.html#QM_PLAN">QM_PLAN</a></td><td>3.5 ( 2 / 2 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.5</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>2.8 ( 11 / 12 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.8</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>3.5 ( 20 / 20 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.5</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>2.8 ( 44 / 45 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.8</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>3.9 ( 7 / 7 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.9</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>4.3 ( 20 / 20 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.3</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Quality</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>3.0 ( 44 / 45 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>4.7 ( 7 / 7 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.7</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a></td><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">QM_RESPONSIVENESS</a></td><td>5.0 ( 2 / 2 metrics ) </td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_REU">Reusability</a></td><td><a href="/documentation/attributes.html#QM_REU">QM_REU</a></td><td>3.2 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.2</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REU">Reusability</a></td><td><a href="/documentation/attributes.html#QM_REU">QM_REU</a></td><td>3.8 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.8</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>3.0 ( 3 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_SUPPORT">Support</a></td><td><a href="/documentation/attributes.html#QM_SUPPORT">QM_SUPPORT</a></td><td>1.0 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_TST">Test Management</a></td><td><a href="/documentation/attributes.html#QM_TST">QM_TST</a></td><td>1.5 ( 3 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1.5</span></td></tr>
@@ -571,10 +571,10 @@ function click(d) {
 <tr><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">User ML responsiveness</a></td><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">MLS_USR_RESPONSIVENESS</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">User ML support</a></td><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">MLS_USR_SUPPORT</a></td><td>1.0</td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PLAN_RELEASES">Milestones</a></td><td><a href="/documentation/questions.html#PLAN_RELEASES">PLAN_RELEASES</a></td><td>3.5</td><td><span class="label label-scale" style="background-color: #99E633">3.5</span></td></tr>
-<tr><td><a href="/documentation/questions.html#PRACTICES_ANA">Analysability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_ANA">PRACTICES_ANA</a></td><td>1.0</td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
-<tr><td><a href="/documentation/questions.html#PRACTICES_CHA">Changeability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_CHA">PRACTICES_CHA</a></td><td>1.0</td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
-<tr><td><a href="/documentation/questions.html#PRACTICES_REL">Reliability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_REL">PRACTICES_REL</a></td><td>1.0</td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
-<tr><td><a href="/documentation/questions.html#PRACTICES_REU">Reusability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_REU">PRACTICES_REU</a></td><td>3.0</td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#PRACTICES_ANA">Analysability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_ANA">PRACTICES_ANA</a></td><td>4.5</td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#PRACTICES_CHA">Changeability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_CHA">PRACTICES_CHA</a></td><td>4.5</td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
+<tr><td><a href="/documentation/questions.html#PRACTICES_REL">Reliability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_REL">PRACTICES_REL</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#PRACTICES_REU">Reusability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_REU">PRACTICES_REU</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PUBLIC_DATA">Public access points</a></td><td><a href="/documentation/questions.html#PUBLIC_DATA">PUBLIC_DATA</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PUB_ITS_INFO">ITS information access</a></td><td><a href="/documentation/questions.html#PUB_ITS_INFO">PUB_ITS_INFO</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PUB_SCM_INFO">SCM information access</a></td><td><a href="/documentation/questions.html#PUB_SCM_INFO">PUB_SCM_INFO</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
@@ -612,13 +612,13 @@ function click(d) {
 <tr><td><a href="/documentation/metrics.html#MLS_USR_SUBJ_1M">User ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_USR_SUBJ_1M">MLS_USR_SUBJ_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#MLS_USR_VOL_1M">User ML posts</a></td><td><a href="/documentation/metrics.html#MLS_USR_VOL_1M">MLS_USR_VOL_1M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_ANA">Number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA">NCC_ANA</a></td><td>103</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_ANA_IDX">Average number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA_IDX">NCC_ANA_IDX</a></td><td>6.05882352941176</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_ANA_IDX">Average number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA_IDX">NCC_ANA_IDX</a></td><td>0.00605775451390931</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_CHA">Number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA">NCC_CHA</a></td><td>77</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_CHA_IDX">Average number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA_IDX">NCC_CHA_IDX</a></td><td>4.52941176470588</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_CHA_IDX">Average number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA_IDX">NCC_CHA_IDX</a></td><td>0.00452861259777686</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REL">Number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL">NCC_REL</a></td><td>20</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_REL_IDX">Average number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL_IDX">NCC_REL_IDX</a></td><td>1.17647058823529</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_REL_IDX">Average number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL_IDX">NCC_REL_IDX</a></td><td>0.00117626301240957</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REU">Number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU">NCC_REU</a></td><td>1</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_REU_IDX">Average number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU_IDX">NCC_REU_IDX</a></td><td>0.0588235294117647</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_REU_IDX">Average number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU_IDX">NCC_REU_IDX</a></td><td>5.88131506204787e-05</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#NCLOC">Source Lines Of Code</a></td><td><a href="/documentation/metrics.html#NCLOC">NCLOC</a></td><td>17003</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>3</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Reviews success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>100</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
@@ -629,10 +629,10 @@ function click(d) {
 <tr><td><a href="/documentation/metrics.html#RKO_CHA">Number of violated rules for changeability</a></td><td><a href="/documentation/metrics.html#RKO_CHA">RKO_CHA</a></td><td>4</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RKO_REL">Number of violated rules for reliability</a></td><td><a href="/documentation/metrics.html#RKO_REL">RKO_REL</a></td><td>4</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RKO_REU">Number of violated rules for reusability</a></td><td><a href="/documentation/metrics.html#RKO_REU">RKO_REU</a></td><td>1</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ROKR_ANA">Adherence to analysability rules</a></td><td><a href="/documentation/metrics.html#ROKR_ANA">ROKR_ANA</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ROKR_CHA">Adherence to changeability rules</a></td><td><a href="/documentation/metrics.html#ROKR_CHA">ROKR_CHA</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ROKR_REL">Adherence to reliability rules</a></td><td><a href="/documentation/metrics.html#ROKR_REL">ROKR_REL</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ROKR_REU">Adherence to reusability rules</a></td><td><a href="/documentation/metrics.html#ROKR_REU">ROKR_REU</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ROKR_ANA">Adherence to analysability rules</a></td><td><a href="/documentation/metrics.html#ROKR_ANA">ROKR_ANA</a></td><td>50</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ROKR_CHA">Adherence to changeability rules</a></td><td><a href="/documentation/metrics.html#ROKR_CHA">ROKR_CHA</a></td><td>50</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ROKR_REL">Adherence to reliability rules</a></td><td><a href="/documentation/metrics.html#ROKR_REL">ROKR_REL</a></td><td>85.1851851851852</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ROKR_REU">Adherence to reusability rules</a></td><td><a href="/documentation/metrics.html#ROKR_REU">ROKR_REU</a></td><td>75</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RULES_ANA">Number of rules for analysability</a></td><td><a href="/documentation/metrics.html#RULES_ANA">RULES_ANA</a></td><td>12</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RULES_CHA">Number of rules for changeability</a></td><td><a href="/documentation/metrics.html#RULES_CHA">RULES_CHA</a></td><td>8</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RULES_REL">Number of rules for reliability</a></td><td><a href="/documentation/metrics.html#RULES_REL">RULES_REL</a></td><td>27</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
