@@ -130,7 +130,7 @@ sub generate_global_downloads($$) {
     foreach my $project (sort keys %projects) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_metrics) {
-	    my $value = $global_metrics{$mnemo}{$project};
+	    my $value = $global_metrics{$mnemo}{$project} || " ";
 	    print "DBG [$mnemo] before [$global_metrics{$mnemo}{$project}] written [$value].\n" if ($debug);
     	    $out_data .= ',' . $value;
     	}
@@ -486,7 +486,7 @@ sub generate_project_metrics($$$) {
 	    foreach my $metric (keys %{$raw_values}) {
 		if ($raw_values->{$metric} =~ m![\d.]+!) {
 		    $project_values{uc($metric)} = $raw_values->{$metric};
-		    print "DBG metric [$metric] has value " . $raw_values->{$metric} . "\n";
+		    print "DBG metric [$metric] has value [" . $raw_values->{$metric} . "].\n";
 		} else {
 		    print "DBG null value for [$metric].\n";
 		}
