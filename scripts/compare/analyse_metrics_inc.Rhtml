@@ -147,18 +147,18 @@ end.rcode-->
 <!--begin.rcode metric.its.auth.stats
 
 mymetric <- "ITS_AUTH_1M"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -166,7 +166,7 @@ end.rcode-->
 
 <!--begin.rcode metric.its.auth.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-myplot(mymetric, 'Projects', 'Number of authors')
+myplot(mymetric, 'Projects', 'Number of authors during last month')
 
 end.rcode-->
 
@@ -181,18 +181,18 @@ end.rcode-->
 <!--begin.rcode metric.its.bugsdensity.stats
 
 mymetric <- "ITS_BUGS_DENSITY"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -200,7 +200,7 @@ end.rcode-->
 
 <!--begin.rcode metric.its.bugsdensity.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-myplot(mymetric, 'Projects', 'Bugs per KLOC')
+myplot(mymetric, 'Projects', 'Bugs per KSLOC')
 
 end.rcode-->
 
@@ -215,18 +215,18 @@ end.rcode-->
 <!--begin.rcode metric.its.bugsopen.stats
 
 mymetric <- "ITS_BUGS_OPEN"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -249,18 +249,18 @@ end.rcode-->
 <!--begin.rcode metric.its.fixmed.stats
 
 mymetric <- "ITS_FIX_MED_1M"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -283,18 +283,18 @@ end.rcode-->
 <!--begin.rcode metric.its.updates.stats
 
 mymetric <- "ITS_UPDATES_1M"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -302,7 +302,7 @@ end.rcode-->
 
 <!--begin.rcode metric.its.updates.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-myplot(mymetric, 'Projects', 'ITS fix median time (days)')
+myplot(mymetric, 'Projects', 'Updates on ITS during last month')
 
 end.rcode-->
 
@@ -315,7 +315,7 @@ end.rcode-->
 
 <p>Mailing list metrics are retrieved from the <a href="http://dashboard.eclipse.org">Eclipse dashboard</a>. They are computed using Grimoire, an open-source analysis engine developped by Bitergia.</p>
 
-<h4 id="metrics_mls_dev_auth">Authors on Developer mailing list</h4>
+<h4 id="metrics_mls_devauth">Developer ML authors</h4>
 
 <div class="row">
   <div class="col-sm-6">
@@ -323,18 +323,18 @@ end.rcode-->
 <!--begin.rcode metric.mls.devauth.stats
 
 mymetric <- "MLS_DEV_AUTH_1M"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -342,7 +342,313 @@ end.rcode-->
 
 <!--begin.rcode metric.mls.devauth.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-myplot(mymetric, 'Projects', 'Number of distinct authors (1M)')
+myplot(mymetric, 'Projects', 'Number of distinct authors during last month')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_devauth">Developer ML response ratio</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devrespratio.stats
+
+mymetric <- "MLS_DEV_RESP_RATIO_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devrespratio.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Average number of answers during last month')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_devauth">Developer ML response time</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devresptime.stats
+
+mymetric <- "MLS_DEV_RESP_TIME_MED_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devresptime.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Days')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_devsubj">Developer ML subjects</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devsubj.stats
+
+mymetric <- "MLS_DEV_SUBJ_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devsubj.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Number of threads')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_devvol">Developer ML posts</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devvol.stats
+
+mymetric <- "MLS_DEV_VOL_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.devvol.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Number of posts')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_usrauth">User ML authors</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrauth.stats
+
+mymetric <- "MLS_USR_AUTH_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrauth.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Number of distinct authors during last month')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_usrauth">User ML response ratio</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrrespratio.stats
+
+mymetric <- "MLS_USR_RESP_RATIO_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrrespratio.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Average number of answers during last month')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_usrauth">User ML response time</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrresptime.stats
+
+mymetric <- "MLS_USR_RESP_TIME_MED_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrresptime.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Days')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_usrsubj">User ML subjects</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrsubj.stats
+
+mymetric <- "MLS_USR_SUBJ_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrsubj.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Number of threads')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_mls_usrvol">User ML posts</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrvol.stats
+
+mymetric <- "MLS_USR_VOL_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.mls.usrvol.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Number of posts')
 
 end.rcode-->
 
@@ -363,18 +669,18 @@ end.rcode-->
 <!--begin.rcode metric.scm.commits.stats
 
 mymetric <- "SCM_COMMITS_1M"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -389,7 +695,7 @@ end.rcode-->
   </div>
 </div>
 
-<h4 id="metrics_scm_commits">SCM Committers</h4>
+<h4 id="metrics_scm_committers">SCM Committers</h4>
 
 <div class="row">
   <div class="col-sm-6">
@@ -397,18 +703,18 @@ end.rcode-->
 <!--begin.rcode metric.scm.committers.stats
 
 mymetric <- "SCM_COMMITTERS_1M"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -423,7 +729,7 @@ end.rcode-->
   </div>
 </div>
 
-<h4 id="metrics_scm_commits">SCM Committed files</h4>
+<h4 id="metrics_scm_committedfiles">SCM Committed files</h4>
 
 <div class="row">
   <div class="col-sm-6">
@@ -431,18 +737,18 @@ end.rcode-->
 <!--begin.rcode metric.scm.committedfiles.stats
 
 mymetric <- "SCM_COMMITTED_FILES_1M"
-metric.stats <- metric.stats(mymetric)
-metric.missing.ret <- metric.missing(mymetric)
-metric.zero.ret <- metric.zero(mymetric)
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
 
 end.rcode-->
 
-  <p>Min value is <!-- rinline metric.stats[["metric.min"]] --> for project <!-- rinline metric.stats[["metric.min.project"]] -->. <br />
-  Max value is <!-- rinline metric.stats[["metric.max"]] --> for project <!-- rinline metric.stats[["metric.max.project"]] -->. <br />
-  Median value is <!-- rinline metric.stats[["metric"]] --> for project <!-- rinline metric.stats[["metric.med.project"]] -->.</p>
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
 
-  <p>Value is missing (NA) for <!-- rinline length(metric.missing.ret) --> projects <!-- rinline paste(metric.missing.ret, sep=", ") -->.<br />
-  Value is null (zero) for <!-- rinline length(metric.zero.ret) --> projects <!-- rinline paste(metric.zero.ret, sep=", ") -->.</p>
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
 
   </div>
 
@@ -451,6 +757,40 @@ end.rcode-->
 <!--begin.rcode metric.scm.committedfiles.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
 myplot(mymetric, 'Projects', 'Committed files (1M)')
+
+end.rcode-->
+
+  </div>
+</div>
+
+<h4 id="metrics_scm_stab">File stability index</h4>
+
+<div class="row">
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.scm.stab.stats
+
+mymetric <- "SCM_STABILITY_1M"
+mymetric.stats <- metric.stats(mymetric)
+mymetric.missing.ret <- metric.missing(mymetric)
+mymetric.zero.ret <- metric.zero(mymetric)
+
+end.rcode-->
+
+  <p>Min value is <!-- rinline mymetric.stats[["metric.min"]] --> for project <!-- rinline mymetric.stats[["metric.min.project"]] -->. <br />
+  Max value is <!-- rinline mymetric.stats[["metric.max"]] --> for project <!-- rinline mymetric.stats[["metric.max.project"]] -->. <br />
+  Median value is <!-- rinline mymetric.stats[["metric"]] --> for project <!-- rinline mymetric.stats[["metric.med.project"]] -->.</p>
+
+  <p>Value is missing (NA) for <!-- rinline length(mymetric.missing.ret) --> projects <!-- rinline paste(mymetric.missing.ret, sep=", ") -->.<br />
+  Value is null (zero) for <!-- rinline length(mymetric.zero.ret) --> projects <!-- rinline paste(mymetric.zero.ret, sep=", ") -->.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+
+<!--begin.rcode metric.scm.stab.plots, fig.width=12, fig.height=6, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
+
+myplot(mymetric, 'Projects', 'Stability index (1M)')
 
 end.rcode-->
 
