@@ -104,7 +104,7 @@ sub generate_global_downloads($$) {
     foreach my $project (sort keys %projects) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_attributes) {
-	    my $value = $global_attributes{$mnemo}{$project} || "";
+	    my $value = $global_attributes{$mnemo}{$project} || " ";
     	    $out_data .= ',' . $value;
     	}
     	$out_data .= "\n";
@@ -130,9 +130,14 @@ sub generate_global_downloads($$) {
     foreach my $project (sort keys %projects) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_metrics) {
-	    my $value = $global_metrics{$mnemo}{$project} || " ";
-	    print "DBG [$mnemo] before [$global_metrics{$mnemo}{$project}] written [$value].\n" if ($debug);
-    	    $out_data .= ',' . $value;
+	    # If there is a value (i.e. a number/float), then print it
+	    if ($global_metrics{$mnemo}{$project} =~ m![\d.]+!) {
+		my $value = $global_metrics{$mnemo}{$project};
+		print "DBG [$mnemo] before [$global_metrics{$mnemo}{$project}] written [$value].\n" if ($debug);
+		$out_data .= ',' . $value;
+	    } else {
+		$out_data .= ',';
+	    }
     	}
     	$out_data .= "\n";
     }
