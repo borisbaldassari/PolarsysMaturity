@@ -825,10 +825,6 @@ end.rcode-->
 
 projects.ncc <- projects[,c("Project", "NCC_ANA_IDX", "NCC_CHA_IDX", "NCC_REL_IDX", "NCC_REU_IDX")]
 
-#"NCC_ANA_IDX", "NCC_CHA_IDX", "NCC_REL_IDX", "NCC_REU_IDX")]
-#                              "NCC_ANA_IDX", "NCC_CHA_IDX", "NCC_REL_IDX", "NCC_REU_IDX",
-#                              "ROKR_ANA", "ROKR_CHA", "ROKR_REL", "ROKR_REU",
-
 myplot.facet(projects.ncc, "Number of non-conformities")
 
 end.rcode-->
@@ -841,7 +837,7 @@ end.rcode-->
 
 projects.rokr <- projects[,c("Project", "ROKR_ANA", "ROKR_CHA", "ROKR_REL", "ROKR_REU")]
 
-myplot.facet(projects.ncc, "Percentage of acquired practices")
+myplot.facet(projects.rokr, "Percentage of acquired practices")
 
 end.rcode-->
 
@@ -851,9 +847,9 @@ end.rcode-->
 
 <!--begin.rcode metric.rko.plots, fig.width=24, fig.height=5, dev.args=list(bg='transparent'), out.extra='class="img-responsive"', eval=TRUE, warning=F
 
-projects.rokr <- projects[,c("Project", "RKO_ANA", "RKO_CHA", "RKO_REL", "RKO_REU")]
+projects.rko <- projects[,c("Project", "RKO_ANA", "RKO_CHA", "RKO_REL", "RKO_REU")]
 
-myplot.facet(projects.ncc, "Percentage of acquired practices")
+myplot.facet(projects.rko, "Percentage of acquired practices")
 
 end.rcode-->
 
