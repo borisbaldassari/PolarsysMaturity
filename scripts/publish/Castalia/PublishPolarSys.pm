@@ -29,6 +29,7 @@ my %flat_rules;
 my %flat_refs;
 my %global_attributes;
 my %global_metrics;
+my %global_indicators;
 
 my @colours = ("#ebebeb", "#FFFF66", "#CCF24D", "#99E633", "#66D91A", "#33CC00");
 
@@ -114,6 +115,39 @@ sub generate_global_downloads($$) {
     print $fh $out_data;
     close $fh;
 
+
+    # For metrics indicators
+    $type = 'metrics_ind';
+    $out_csv = $dir_out_projects . "/${type}.csv";
+    print "    - Writing all " . $type . " to file [$out_csv]..\n";  
+    $mnemos = join( ',', sort keys %global_indicators );
+    $out_data = "Project," . $mnemos . "\n";
+
+    foreach my $mnemo ( sort keys %global_indicators ) { 
+    	foreach my $project ( keys %{$global_indicators{$mnemo}} ) {
+    	    $projects{$project}++;
+    	}
+    }
+    
+    foreach my $project (sort keys %projects) {
+    	$out_data .= $project;
+    	foreach my $mnemo (sort keys %global_indicators) {
+	    # If there is a value (i.e. a number/float), then print it
+	    my $value = $global_indicators{$mnemo}{$project} || " ";
+	    if ($value =~ m![\d.]+!) {
+		$out_data .= ',' . $value;
+	    } else {
+		$out_data .= ',';
+	    }
+    	}
+    	$out_data .= "\n";
+    }
+
+    open($fh, '>', $out_csv) or die "Could not open file '$out_csv' $!";
+    print $fh $out_data;
+    close $fh;
+
+
     # For metrics
     $type = 'metrics';
     $out_csv = $dir_out_projects . "/${type}.csv";
@@ -131,9 +165,8 @@ sub generate_global_downloads($$) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_metrics) {
 	    # If there is a value (i.e. a number/float), then print it
-	    if ($global_metrics{$mnemo}{$project} =~ m![\d.]+!) {
-		my $value = $global_metrics{$mnemo}{$project};
-		print "DBG [$mnemo] before [$global_metrics{$mnemo}{$project}] written [$value].\n" if ($debug);
+	    my $value = $global_metrics{$mnemo}{$project} || " ";
+	    if ($value =~ m![\d.]+!) {
 		$out_data .= ',' . $value;
 	    } else {
 		$out_data .= ',';
@@ -151,8 +184,8 @@ sub generate_global_downloads($$) {
 
 sub generate_progressbar($$$$) {
     my $name = shift;
-    my $value = shift;
-    my $conf = shift;
+    my $value = shift || 0;
+    my $conf = shift || 0;
     my $project_id = shift || "";
 
     if ($value < 0 or $value > 5) {
@@ -429,14 +462,19 @@ sub generate_inds($$$) {
     &generate_downloads($project_id, 'attributes', $dir_out_projects, \%project_attrs);
     &generate_downloads($project_id, 'attributes_confidence', $dir_out_projects, \%project_attrs_conf);
 
-    # We want to group all values into a single hash to generate global values
+    # We want to group all metrics values into a single hash to generate global values
     foreach my $mnemo (keys %{$values}) {
     	$global_metrics{$mnemo}{$project_id} = $values->{$mnemo};
     }
 
-    # We want to group all values into a single hash to generate global values
+    # We want to group all attributes values into a single hash to generate global values
     foreach my $mnemo (keys %project_attrs) {
     	$global_attributes{$mnemo}{$project_id} = $project_attrs{$mnemo};
+    }
+
+    # We want to group all indicators values into a single hash to generate global values
+    foreach my $mnemo (keys %project_indicators) {
+    	$global_indicators{$mnemo}{$project_id} = $project_indicators{$mnemo};
     }
 
     &populate_qm($raw_qm->{"children"}, 
@@ -482,7 +520,7 @@ sub generate_project_metrics($$$) {
 		if ($raw_values->{"children"}->{$metric} =~ m![\d.]+!) {
 		    $project_values{uc($metric)} = $raw_values->{"children"}->{$metric};
 		} else {
-		    print "DBG null value for [$metric].\n";
+		    print "DBG null value for [$metric].\n" if ($debug);
 		}
 	    }
 	} else {
@@ -491,9 +529,9 @@ sub generate_project_metrics($$$) {
 	    foreach my $metric (keys %{$raw_values}) {
 		if ($raw_values->{$metric} =~ m![\d.]+!) {
 		    $project_values{uc($metric)} = $raw_values->{$metric};
-		    print "DBG metric [$metric] has value [" . $raw_values->{$metric} . "].\n";
+		    print "DBG metric [$metric] has value [" . $raw_values->{$metric} . "].\n" if ($debug);
 		} else {
-		    print "DBG null value for [$metric].\n";
+		    print "DBG null value for [$metric].\n" if ($debug);
 		}
 	    }        
 	}
