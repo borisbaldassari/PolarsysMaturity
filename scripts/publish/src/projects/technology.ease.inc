@@ -47,25 +47,25 @@
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
-                  <dt>Overall Maturity <span class="pull-right">( 45 / 45 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_QUALITY">Overall Maturity</a> <span class="pull-right">( 45 / 45 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.6" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 72%;">3.6 / 5</div>
                     </div>
                   </dd>
-                  <dt>Ecosystem Quality <span class="pull-right">( 13 / 13 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem Quality</a> <span class="pull-right">( 13 / 13 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 70%;">3.5 / 5</div>
                     </div>
                   </dd>
-                  <dt>Process Quality <span class="pull-right">( 12 / 12 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_PROCESS">Process Quality</a> <span class="pull-right">( 12 / 12 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 68%;">3.4 / 5</div>
                     </div>
                   </dd>
-                  <dt>Product Quality <span class="pull-right">( 20 / 20 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_PRODUCT">Product Quality</a> <span class="pull-right">( 20 / 20 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.9" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 78%;">3.9 / 5</div>
@@ -92,25 +92,25 @@
                         <div class="panel panel-primary"><div class="panel-heading">Ecosystem quality</div>
                           <div class="panel-body">
                             <dl>
-                  <dt>Activity <span class="pull-right">( 4 / 4 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_ACTIVITY">Activity </a> <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.3" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 66%;">3.3 / 5</div>
                     </div>
                   </dd>
-                  <dt>Diversity <span class="pull-right">( 3 / 3 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity </a> <span class="pull-right">( 3 / 3 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3.0 / 5</div>
                     </div>
                   </dd>
-                  <dt>Responsiveness <span class="pull-right">( 2 / 2 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a> <span class="pull-right">( 2 / 2 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 90%;">4.5 / 5</div>
                     </div>
                   </dd>
-                  <dt>Support <span class="pull-right">( 4 / 4 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_SUPPORT">Support</a> <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3.0 / 5</div>
@@ -124,25 +124,25 @@
                         <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
                           <div class="panel-body">
                             <dl>
-                  <dt>Configuration Management <span class="pull-right">( 3 / 3 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a> <span class="pull-right">( 3 / 3 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="4.2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 84%;">4.2 / 5</div>
                     </div>
                   </dd>
-                  <dt>Change Management <span class="pull-right">( 3 / 3 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_ITS">Change Management</a> <span class="pull-right">( 3 / 3 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="4.2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 84%;">4.2 / 5</div>
                     </div>
                   </dd>
-                  <dt>Planning Management <span class="pull-right">( 2 / 2 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a> <span class="pull-right">( 2 / 2 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="2.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2.0 / 5</div>
                     </div>
                   </dd>
-                  <dt>Test Management <span class="pull-right">( 4 / 4 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_TST">Test Management</a> <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3.0 / 5</div>
@@ -156,25 +156,25 @@
                         <div class="panel panel-primary"><div class="panel-heading">Product quality</div>
                           <div class="panel-body">
                             <dl>
-                  <dt>Analysability <span class="pull-right">( 5 / 5 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_ANALYSABILITY">Analysability</a> <span class="pull-right">( 5 / 5 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="4.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4.0 / 5</div>
                     </div>
                   </dd>
-                  <dt>Changeability <span class="pull-right">( 4 / 4 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_CHANGEABILITY">Changeability</a> <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="4.6" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 92%;">4.6 / 5</div>
                     </div>
                   </dd>
-                  <dt>Reliability <span class="pull-right">( 7 / 7 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_RELIABILITY">Reliability</a> <span class="pull-right">( 7 / 7 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="4.1" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 82%;">4.1 / 5</div>
                     </div>
                   </dd>
-                  <dt>Reusability <span class="pull-right">( 4 / 4 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_REUSABILITY">Reusability</a> <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3.0 / 5</div>

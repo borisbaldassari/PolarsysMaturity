@@ -874,19 +874,19 @@ sub generate_project($$$) {
 	. 'Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= &generate_progressbar("Overall Maturity", 
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_QUALITY">Overall Maturity</a>', 
 				       $project_attrs{"QM_QUALITY"}, 
 				       $project_attrs_conf{"QM_QUALITY"}, 
 				       $project_id);
-    $html_ret .= &generate_progressbar("Ecosystem Quality",
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem Quality</a>',
 				       $project_attrs{"QM_ECOSYSTEM"}, 
 				       $project_attrs_conf{"QM_ECOSYSTEM"}, 
 				       $project_id);
-    $html_ret .= &generate_progressbar("Process Quality", 
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_PROCESS">Process Quality</a>', 
 				       $project_attrs{"QM_PROCESS"}, 
 				       $project_attrs_conf{"QM_PROCESS"}, 
 				       $project_id);
-    $html_ret .= &generate_progressbar("Product Quality",
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_PRODUCT">Product Quality</a>',
 				       $project_attrs{"QM_PRODUCT"}, 
 				       $project_attrs_conf{"QM_PRODUCT"}, 
 				       $project_id);
@@ -926,19 +926,19 @@ sub generate_project($$$) {
 	. 'Ecosystem quality</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= &generate_progressbar('Activity',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ACTIVITY">Activity </a>',
 				       $project_attrs{"QM_ACTIVITY"} || 0, 
 				       $project_attrs_conf{"QM_ACTIVITY"} || 0,
 				       $project_id);
-    $html_ret .= &generate_progressbar('Diversity', 
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_DIVERSITY">Diversity </a>', 
 				       $project_attrs{"QM_DIVERSITY"} || 0,  
 				       $project_attrs_conf{"QM_DIVERSITY"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Responsiveness', 
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a>', 
 				       $project_attrs{"QM_RESPONSIVENESS"} || 0,  
 				       $project_attrs_conf{"QM_RESPONSIVENESS"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Support',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_SUPPORT">Support</a>',
 				       $project_attrs{"QM_SUPPORT"} || 0,  
 				       $project_attrs_conf{"QM_SUPPORT"} || 0, 
 				       $project_id);
@@ -964,19 +964,19 @@ sub generate_project($$$) {
 	. 'Process quality</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= &generate_progressbar('Configuration Management',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_SCM">Configuration Management</a>',
 				       $project_attrs{"QM_SCM"} || 0,  
 				       $project_attrs_conf{"QM_SCM"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Change Management',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ITS">Change Management</a>',
 				       $project_attrs{"QM_ITS"} || 0,  
 				       $project_attrs_conf{"QM_ITS"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Planning Management',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_PLAN">Planning Management</a>',
 				       $project_attrs{"QM_PLAN"} || 0,  
 				       $project_attrs_conf{"QM_PLAN"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Test Management',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_TST">Test Management</a>',
 				       $project_attrs{"QM_TST"} || 0,  
 				       $project_attrs_conf{"QM_TST"} || 0, 
 				       $project_id);
@@ -994,19 +994,19 @@ sub generate_project($$$) {
 	. 'Product quality</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= &generate_progressbar('Analysability',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ANALYSABILITY">Analysability</a>',
 				       $project_attrs{"QM_ANA"} || 0,  
 				       $project_attrs_conf{"QM_ANA"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Changeability',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_CHANGEABILITY">Changeability</a>',
 				       $project_attrs{"QM_CHA"} || 0,  
 				       $project_attrs_conf{"QM_CHA"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Reliability',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_RELIABILITY">Reliability</a>',
 				       $project_attrs{"QM_REL"} || 0,  
 				       $project_attrs_conf{"QM_REL"} || 0, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('Reusability',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_REUSABILITY">Reusability</a>',
 				       $project_attrs{"QM_REU"} || 0,  
 				       $project_attrs_conf{"QM_REU"} || 0, 
 				       $project_id);
