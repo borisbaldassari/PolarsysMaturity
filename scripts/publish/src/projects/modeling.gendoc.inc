@@ -393,45 +393,29 @@ function click(d) {
       mynode = d;
       mynode.description = mymetrics[d.mnemo]["desc"]; 
       mynode.name = mymetrics[d.mnemo]["name"]; 
-//      mynode.ind = mymetrics[d.mnemo]["ind"];
-//      mynode.value = mymetrics[d.mnemo]["value"];
       mynode.datasource = mymetrics[d.mnemo]["ds"]; 
-
       var mydiv = d3.select("div#details-box-project");
 
       mydiv.text("");
 
       var ptitle = mydiv.append('p');
       ptitle.classed("title", true);
-      ptitle.text(d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+      var mytitlehtml = d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")";
+      mytitlehtml += ' &nbsp; <a href="/documentation/metrics.html#' + mynode.mnemo + '">More info <i class="fa fa-external-link"></i></a>';
+      ptitle.html(mytitlehtml); 
   
       p = mydiv.append('p');
-      ptitle = p.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Active:")
-      pactive = p.append('span');
-      pactive.classed("details", true);
-      pactive.text(mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1));
+      p.classed("details", true); 
+      p.html('<div class="row"><div class="col-sm-6"><b>Active:</b> ' + mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1) + ' &nbsp; </div><div class="col-sm-6"><b>Value:</b> ' + d.value + '</div></div>');
 
       p = mydiv.append('p');
-      ptitle = p.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Value:")
-      pactive = p.append('span');
-      pactive.classed("details", true);
-      pactive.text(d.value + " ( " + d.ind + " )");
-
-      p = mydiv.append('p');
-      ptitle = p.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Data source:")
-      psource = ptitle.append('span');
-      psource.classed("details", true);
-      psource.text(mynode.datasource);
+      p.classed("details", true); 
+      var mycolour = d.ind ? mycolours[Math.floor(d.ind)] : "gray";
+      p.html('<div class="row"><div class="col-sm-6"><b>Data source</b>: ' + mynode.datasource + ' &nbsp; </div><div class="col-sm-6"><b>Computed indicator:</b> <span class="label label-scale" style="background-color: ' + mycolour + '"> ' + d.ind + " </span></div></div>");
 
       pdesct = mydiv.append('p');
-      pdesct.classed("details-title", true); 
-      pdesct.text("Description:")
+      pdesct.classed("details", true); 
+      pdesct.html("<b>Description</b>:")
       for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
           var pdesc = mydiv.append('p');
           pdesc.classed("details", true);
@@ -449,34 +433,22 @@ function click(d) {
 
       var ptitle = mydiv.append('p');
       ptitle.classed("title", true);
-      ptitle.text(d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
+      mytitlehtml = d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")";
+      mytitlehtml += ' &nbsp; <a href="/documentation/questions.html#' + mynode.mnemo + '">More info <i class="fa fa-external-link"></i></a>';
+      ptitle.html(mytitlehtml); 
   
       p = mydiv.append('p');
-      ptitle = p.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Active:")
-      pactive = p.append('span');
-      pactive.classed("details", true);
-      pactive.text(mynode.active);
-
-      p = mydiv.append('p');
-      ptitle = p.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Value:")
-      pactive = p.append('span');
-      pactive.classed("details", true);
-      pactive.text(d.ind);
+      p.classed("details", true); 
+      var mycolour = d.ind ? mycolours[Math.floor(d.ind)] : "gray";
+      p.html('<div class="row"><div class="col-sm-6"><b>Active:</b> ' + mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1) + ' &nbsp; </div><div class="col-sm-6"><b>Value:</b> <span class="label label-scale" style="background-color: ' + mycolour + '"> ' + d.ind + " </span></div></div>");
 
       pdesct = mydiv.append('p');
-      pdesct.classed("details-title", true); 
-      pdesct.text("Question:")
-      var pdesc = mydiv.append('p');
-      pdesc.classed("details", true);
-      pdesc.text(mynode.question);
+      pdesct.classed("details", true); 
+      pdesct.html("<b>Question:</b><br />" + mynode.question);
       
       pdesct = mydiv.append('p');
-      pdesct.classed("details-title", true); 
-      pdesct.text("Description:")
+      pdesct.classed("details", true); 
+      pdesct.html("<b>Description:</b>")
       for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
           var pdesc = mydiv.append('p');
           pdesc.classed("details", true);
@@ -493,27 +465,18 @@ function click(d) {
 
       var ptitle = mydiv.append('p');
       ptitle.classed("title", true);
-      ptitle.text(d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")"); 
-    
-      var pactive = mydiv.append('p');
-      ptitle = pactive.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Active:")
-      pactive = pactive.append('span');
-      pactive.classed("details", true);
-      pactive.text(mynode.active);
-
+      mytitlehtml = d.type.charAt(0).toUpperCase() + d.type.slice(1) + ": " + mynode.name + " (" + mynode.mnemo + ")";
+      mytitlehtml += ' &nbsp; <a href="/documentation/attributes.html#' + mynode.mnemo + '">More info <i class="fa fa-external-link"></i></a>';
+      ptitle.html(mytitlehtml); 
+  
       p = mydiv.append('p');
-      ptitle = p.append('span');
-      ptitle.classed("details-title", true); 
-      ptitle.text("Value:")
-      pactive = p.append('span');
-      pactive.classed("details", true);
-      pactive.text(d.ind);
+      p.classed("details", true); 
+      var mycolour = d.ind ? mycolours[Math.floor(d.ind)] : "gray";
+      p.html('<div class="row"><div class="col-sm-6"><b>Active:</b> ' + mynode.active.charAt(0).toUpperCase() + mynode.active.slice(1) + ' &nbsp; </div><div class="col-sm-6"><b>Value:</b> <span class="label label-scale" style="background-color: ' + mycolour + '"> ' + d.ind + ' </span></div></div>');      
 
       pdesct = mydiv.append('p');
-      pdesct.classed("details-title", true); 
-      pdesct.text("Description:")
+      pdesct.classed("details", true); 
+      pdesct.html("<b>Description:</b>")
       for (desc_idx = 0 ; desc_idx < mynode.description.length ; desc_idx++) {
           var pdesc = mydiv.append('p');
           pdesc.classed("details", true);
