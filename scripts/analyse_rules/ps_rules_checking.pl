@@ -140,8 +140,8 @@ my %metrics = (
 #
 
 # Get a list of all rule-related files
-my @json_pmd_files = <$opt_pmd_rules/*.json>;
-my @json_fb_files = <$opt_fb_rules/*.json>;
+my @json_pmd_files = <$opt_pmd_rules/pmd_*.json>;
+my @json_fb_files = <$opt_fb_rules/findbugs_*.json>;
 my @json_files = ( @json_pmd_files, @json_fb_files );
 
 my $vol_rules;
@@ -171,10 +171,7 @@ foreach my $file_rules (@json_files) {
 	my $rule_mnemo = $rule_child->{ 'mnemo' };
 	my $rule_pri = $rule_child->{ 'priority' };
 
-	# Differentiate pmd rules (pri <= 3) and findbugs (pri < 3)
 	if ( defined($rule_pri) && $rule_pri < 3) {
-        #( ( $rules_version =~ m!pmd!i && $rule_pri < 3 ) || 
-        #( $rules_version =~ m!findbugs!i && $rule_pri <= 3 ) ) ) {
 	    if ( exists($rule_child->{ 'cat' }) ) {
 		$rules{ $rule_child->{ 'mnemo' } } = $rule_child;
 		print "DBG read ", $rule_child->{ 'mnemo' }, " " if ($debug);
