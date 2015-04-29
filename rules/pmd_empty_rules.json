@@ -5,7 +5,7 @@
     {
 	    "name": "Empty Catch Block",
 	    "mnemo": "EmptyCatchBlock",
-        "priority": "3",
+        "priority": "2",
 	    "cat": "REL",
 	    "desc": [
 	      "Empty Catch Block finds instances where an exception is caught, but nothing is done. In most circumstances, this swallows an exception which should either be acted on or reported.",
@@ -55,7 +55,7 @@
     {
 	    "name": "Empty Switch Statements",
 	    "mnemo": "EmptySwitchStatements",
-        "priority": "",
+        "priority": "3",
         "cat": "ANA",
 	    "desc": [
 		    "Empty switch statements serve no purpose and should be removed.",
@@ -85,7 +85,7 @@
     {
 	    "name": "Empty Initializer",
 	    "mnemo": "EmptyInitializer",
-        "priority": "",
+        "priority": "3",
         "cat": "ANA",
 	    "desc": [
 		    "Empty block statements serve no purpose and should be removed.",
@@ -105,7 +105,7 @@
     {
 	    "name": "Empty Static Initializer",
 	    "mnemo": "EmptyStaticInitializer",
-        "priority": "",
+        "priority": "3",
         "cat": "ANA",
 	    "desc": [
 		    "An empty static initializer serve no purpose and should be removed.",
