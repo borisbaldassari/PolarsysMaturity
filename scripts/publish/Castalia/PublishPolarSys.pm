@@ -20,7 +20,7 @@ our @EXPORT_OK = qw(
     generate_global_downloads
 );
 
-my $debug = 0;
+my $debug = 1;
 
 my %flat_metrics;
 my %flat_questions;

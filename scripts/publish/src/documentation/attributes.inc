@@ -78,7 +78,8 @@
 
                 </li>
                 <li class="list-group-item"><p id="QM_SCM"><strong>Configuration Management</strong> ( QM_SCM )</p>
-<p class="desc">Do the project applies best practices regarding software configuration management?</p>
+<p class="desc">The maturity of the project regarding access and usage of the configuration management system.</p>
+<p class="desc">Configuration management is an essential part of the collaboration in the project. Access to the source should be documented and facilitated for new comers to easily come in.</p>
 
                 </li>
                 <li class="list-group-item"><p id="QM_SUPPORT"><strong>Support</strong> ( QM_SUPPORT )</p>

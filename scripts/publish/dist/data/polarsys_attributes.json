@@ -93,7 +93,8 @@
         "name": "Configuration Management",
         "mnemo": "QM_SCM",
         "desc" : [
-            "Do the project applies best practices regarding software configuration management?"
+            "The maturity of the project regarding access and usage of the configuration management system.",
+            "Configuration management is an essential part of the collaboration in the project. Access to the source should be documented and facilitated for new comers to easily come in."
         ]
       },      {
         "name": "Change Management",
