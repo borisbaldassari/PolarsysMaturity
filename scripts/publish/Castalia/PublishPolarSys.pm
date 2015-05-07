@@ -20,7 +20,7 @@ our @EXPORT_OK = qw(
     generate_global_downloads
 );
 
-my $debug = 1;
+my $debug = 0;
 
 my %flat_metrics;
 my %flat_questions;
@@ -101,11 +101,11 @@ sub generate_global_downloads($$) {
     	    $projects{$project}++;
     	}
     }
-    
+
     foreach my $project (sort keys %projects) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_attributes) {
-	    my $value = $global_attributes{$mnemo}{$project} || " ";
+	    my $value = defined($global_attributes{$mnemo}{$project}) ? $global_attributes{$mnemo}{$project} : " ";
     	    $out_data .= ',' . $value;
     	}
     	$out_data .= "\n";
@@ -133,7 +133,7 @@ sub generate_global_downloads($$) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_indicators) {
 	    # If there is a value (i.e. a number/float), then print it
-	    my $value = $global_indicators{$mnemo}{$project} || " ";
+	    my $value = defined($global_indicators{$mnemo}{$project}) ? $global_indicators{$mnemo}{$project} : " ";
 	    if ($value =~ m![\d.]+!) {
 		$out_data .= ',' . $value;
 	    } else {
@@ -165,7 +165,7 @@ sub generate_global_downloads($$) {
     	$out_data .= $project;
     	foreach my $mnemo (sort keys %global_metrics) {
 	    # If there is a value (i.e. a number/float), then print it
-	    my $value = $global_metrics{$mnemo}{$project} || " ";
+	    my $value = defined($global_metrics{$mnemo}{$project}) ? $global_metrics{$mnemo}{$project} : " ";
 	    if ($value =~ m![\d.]+!) {
 		$out_data .= ',' . $value;
 	    } else {
