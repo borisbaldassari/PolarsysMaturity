@@ -46,7 +46,52 @@
 	{
 	    "name": "Projects",
 	    "url": "/projects/",
-	    "children": [ ]
+	    "children": [
+		{
+		    "name": "Capella", 
+		    "url": "/projects/polarsys.capella.html"
+		},
+		{
+		    "name": "CDT", 
+		    "url": "/projects/tools.cdt.html"
+		},
+		{
+		    "name": "CDT-TCF", 
+		    "url": "/projects/tools.cdt.tcf.html"
+		},
+		{
+		    "name": "EASE", 
+		    "url": "/projects/technology.ease.html"
+		},
+		{
+		    "name": "EMF-Compare", 
+		    "url": "/projects/modeling.emfcompare.html"
+		},
+		{
+		    "name": "Gendoc", 
+		    "url": "/projects/modeling.gendoc.html"
+		},
+		{
+		    "name": "Kitalpha", 
+		    "url": "/projects/polarsys.kitalpha.html"
+		},
+		{
+		    "name": "Papyrus", 
+		    "url": "/projects/modeling.mdt.papyrus.html"
+		},
+		{
+		    "name": "ReqCycle", 
+		    "url": "/projects/polarsys.reqcycle.html"
+		},
+		{
+		    "name": "Sirius", 
+		    "url": "/projects/modeling.sirius.html"
+		},
+		{
+		    "name": "Papyrus", 
+		    "url": "/projects/tools.tracecompass.html"
+		}
+	    ]
 	},
 	{
 	    "name": "Contact",

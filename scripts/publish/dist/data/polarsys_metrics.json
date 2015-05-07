@@ -428,150 +428,150 @@
       },
       {
         "name": "Developer ML posts",
-        "mnemo": "MLS_DEV_VOL_1M",
+        "mnemo": "MLS_DEV_VOL_3M",
         "desc": [
-            "Number of messages dated during the last month, in developer mailing list archives.",
-	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of messages dated during the last three months, in developer mailing list archives.",
+	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [2,6,22,103],
         "ds": "Grimoire"
       },
       {
         "name": "Developer ML authors",
-        "mnemo": "MLS_DEV_AUTH_1M",
+        "mnemo": "MLS_DEV_AUTH_3M",
         "desc": [
-            "Number of distinct senders for messages dated during the last month, in developer mailing list archives. ",
-	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
+            "Number of distinct senders for messages dated during the last three months, in developer mailing list archives. ",
+	        "Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
         ],
         "scale": [1.5,3,7.5,26],
         "ds": "Grimoire"
       },
       {
         "name": "Developer ML response time",
-        "mnemo": "MLS_DEV_RESP_TIME_MED_1M",
+        "mnemo": "MLS_DEV_RESP_TIME_MED_3M",
         "desc": [
-            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in developer mailing list archives. ",
-    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last three months, in developer mailing list archives. ",
+    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
         "scale": [42.93,0.94,0.26,0.0425],
         "ds": "Grimoire"
       },
       {
         "name": "Developer ML response ratio",
-        "mnemo": "MLS_DEV_RESP_RATIO_1M",
+        "mnemo": "MLS_DEV_RESP_RATIO_3M",
         "desc": [
-            "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in developer mailing list archives. ",
-    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Average number of messages in thread, minus one, for all threds of messages dated during the last three months, in developer mailing list archives. ",
+    	    "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [0.833333333333,1.24285714286,2.5125,10],
         "ds": "Grimoire"
       },
       {
         "name": "Developer ML subjects",
-        "mnemo": "MLS_DEV_SUBJ_1M",
+        "mnemo": "MLS_DEV_SUBJ_3M",
         "desc": [
-            "Number of threads of messages dated during the last month, in developer mailing list archives. ",
-	        "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of threads of messages dated during the last three months, in developer mailing list archives. ",
+	        "Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [1, 5, 15, 30],
         "ds": "Grimoire"
       },
       {
         "name": "User ML posts",
-        "mnemo": "MLS_USR_VOL_1M",
+        "mnemo": "MLS_USR_VOL_3M",
         "desc": [
-           "Number of messages dated during the last month, in user mailing list archives. ",
-	       "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+           "Number of messages dated during the last three months, in user mailing list archives. ",
+	       "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [2,6,22,103],
         "ds": "Grimoire"
       },
       {
         "name": "User ML authors",
-        "mnemo": "MLS_USR_AUTH_1M",
+        "mnemo": "MLS_USR_AUTH_3M",
         "desc": [
-            "Number of distinct senders for messages dated during the last month, in user mailing list archives.",
-	        "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
+            "Number of distinct senders for messages dated during the last three months, in user mailing list archives.",
+	        "User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages."
         ],
         "scale": [1.5,3,7.5,26],
         "ds": "Grimoire"
       },
       {
         "name": "User ML response time",
-        "mnemo": "MLS_USR_RESP_TIME_MED_1M",
+        "mnemo": "MLS_USR_RESP_TIME_MED_3M",
         "desc": [
-            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last month, in user mailing list archives. ",
-	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+            "Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last three months, in user mailing list archives. ",
+	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
         "scale": [42.93,0.94,0.26,0.0425],
         "ds": "Grimoire"
       },
       {
         "name": "User ML response ratio",
-        "mnemo": "MLS_USR_RESP_RATIO_1M",
+        "mnemo": "MLS_USR_RESP_RATIO_3M",
         "desc": [
-            "Average number of messages in thread, minus one, for all threds of messages dated during the last month, in user mailing list archives. ",
-	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Average number of messages in thread, minus one, for all threds of messages dated during the last three months, in user mailing list archives. ",
+	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [0.833333333333,1.24285714286,2.5125,10],
         "ds": "Grimoire"
       },
       {
         "name": "User ML subjects",
-        "mnemo": "MLS_USR_SUBJ_1M",
+        "mnemo": "MLS_USR_SUBJ_3M",
         "desc": [
-            "Number of threds of messages dated during the last month, in user mailing list archives.",
-	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of threds of messages dated during the last three months, in user mailing list archives.",
+	        "Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [1, 5, 15, 30],
         "ds": "Grimoire"
       },
       {
         "name": "SCM Commits",
-        "mnemo": "SCM_COMMITS_1M",
+        "mnemo": "SCM_COMMITS_3M",
         "desc": [
-            "Total number of commits in source code management repositories dated during the last month.",
-	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Total number of commits in source code management repositories dated during the last three months.",
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [2,5,13,121],
         "ds": "Grimoire"
       },
       {
         "name": "Files committed",
-        "mnemo": "SCM_COMMITTED_FILES_1M",
+        "mnemo": "SCM_COMMITTED_FILES_3M",
         "desc": [
-            "Total number of files touched by commits in source code management repositories dated during the last month.",
-	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Total number of files touched by commits in source code management repositories dated during the last three months.",
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [3,19,95.75,2189],
         "ds": "Grimoire"
       },
       {
         "name": "SCM committers",
-        "mnemo": "SCM_COMMITTERS_1M",
+        "mnemo": "SCM_COMMITTERS_3M",
         "desc": [
-            "Total number of identities found as authors of commits in source code management repositories dated during the last month.",
-	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Total number of identities found as authors of commits in source code management repositories dated during the last three months.",
+	    "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. Date used for each commit is 'author date' (when there is a difference between author date and committer date). An identity is considered as author if it appears as such in the commit record (for systems logging several identities related to the commit, authoring identity will be considered). Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [1,2,3,18],
         "ds": "Grimoire"
       },
       {
         "name": "File stability index",
-        "mnemo": "SCM_STABILITY_1M",
+        "mnemo": "SCM_STABILITY_3M",
         "desc": [
-    	    "Average number of commits touching each file in source code management repositories dated during the last month. ",
-	        "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+    	    "Average number of commits touching each file in source code management repositories dated during the last three months. ",
+	        "Source code management repositories are those considered as such in the project documentation. Commits in all branches are considered. A file is 'touched' by a commit if its content or its path are modified by the commit. Date used for each commit is 'author date' (when there is a difference between author date and committer date). Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [3.79487179487,1.4430952381,1.14285714286,1],
         "ds": "Grimoire"
       },
       {
         "name": "Median time to fix bug",
-        "mnemo": "ITS_FIX_MED_1M",
+        "mnemo": "ITS_FIX_MED_3M",
         "desc": [
-            "Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last month, in the issue tracking system. ",
-	        "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
+            "Median period from when a ticket is open to when a ticket is closed, for all tickets closed during the last three months, in the issue tracking system. ",
+	        "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Closed means the state in which no further action is usually performed in the ticket. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days."
         ],
         "scale": [1001.13,40.2625,11.62,3.82],
         "ds": "Grimoire"
@@ -587,41 +587,41 @@
         "ds": "Grimoire"
       },
       {
-        "name": "Number of issues opened during last month",
-        "mnemo": "ITS_ISSUES_OPEN_1M",
+        "name": "Number of issues opened during last three months",
+        "mnemo": "ITS_ISSUES_OPEN_3M",
         "desc": [
-            "Number of tickets opened (new) during the last month, in the issue tracking system out, divided by the number of thousands of lines of code",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+            "Number of tickets opened (new) during the last three months, in the issue tracking system out, divided by the number of thousands of lines of code",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [1,2,3,4],
         "ds": "Grimoire"
       },
       {
-        "name": "Number of issue openers during last month",
-        "mnemo": "ITS_ISSUES_OPENERS_1M",
+        "name": "Number of issue openers during last three months",
+        "mnemo": "ITS_ISSUES_OPENERS_3M",
         "desc": [
-            "Number of distinct identities opening tickets during the last month, in the issue tracking system, divided by the number of thousands of lines of code.",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
+            "Number of distinct identities opening tickets during the last three months, in the issue tracking system, divided by the number of thousands of lines of code.",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Opened means that the ticket information was submitted to the issue traking system for the first time for that ticket. Identities of openers are the character strings found in the corresponding field in the ticket information. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Number of lines are those calculated at the end of the period of analysis."
         ],
         "scale": [1,2,3,4],
         "ds": "Grimoire"
       },
       {
         "name": "ITS updates",
-        "mnemo": "ITS_UPDATES_1M",
+        "mnemo": "ITS_UPDATES_3M",
         "desc": [
-            "Number of updates to tickets during the last month, in the issue tracking system.",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of updates to tickets during the last three months, in the issue tracking system.",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [4,13,37,596],
         "ds": "Grimoire"
       },
       {
         "name": "ITS authors",
-        "mnemo": "ITS_AUTH_1M",
+        "mnemo": "ITS_AUTH_3M",
         "desc": [
-            "Number of distinct identities updating tickets during the last month, in the issue tracking system.",
-	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Last month is measured as one calendar month period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
+            "Number of distinct identities updating tickets during the last three months, in the issue tracking system.",
+	    "The subset of tickets considered from the issue tracking system are those specified in the project documentation, for example by specifying a tracker or a project name appearing in ticket data. Update means an operation on a ticket changing its state, or adding information. Opening and closing a ticket are considered as updates. Identities of updaters are the character strings found in the corresponding field in the ticket information. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included)."
         ],
         "scale": [2,4,9.75,80],
         "ds": "Grimoire"
@@ -728,7 +728,7 @@
         "name": "Number of successfull installs on the Marketplace",
         "mnemo": "MKT_INSTALL_SUCCESS_1M",
         "desc": [
-            "The number of successful installs for the project as reported on the Marketplace during the last month.",
+            "The number of successful installs for the project as reported on the Marketplace during the last three months.",
             "This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero."
         ],
         "scale": [100,500,1000,10000],
@@ -738,7 +738,7 @@
         "name": "Number of downloads on update site",
         "mnemo": "DL_UPDATE_SITE_1M",
         "desc": [
-            "The number of downloads on the update site of the project during last month. Is computed using successful and failed installs from marketplace."
+            "The number of downloads on the update site of the project during last three months. Is computed using successful and failed installs from marketplace."
         ],
         "scale": [1,2,3,4],
         "ds": "Unknown"
@@ -747,7 +747,7 @@
         "name": "Number of downloads on the web site",
         "mnemo": "DL_REPO_1M",
         "desc": [
-            "The number of downloads on the web site of the project (download page) during last month. Example of download page (for CDT) : http://www.eclipse.org/downloads/ ."
+            "The number of downloads on the web site of the project (download page) during last three months. Example of download page (for CDT) : http://www.eclipse.org/downloads/ ."
         ],
         "scale": [1,2,3,4],
         "ds": "Unknown"
