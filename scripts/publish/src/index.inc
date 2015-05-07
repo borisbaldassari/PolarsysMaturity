@@ -50,8 +50,18 @@
                         <i class="glyphicon glyphicon-folder-open"></i>&nbsp; EMF Compare</a>
                     <a href="projects/modeling.gendoc.html" class="list-group-item">
 		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Gendoc</a>
+                    <a href="projects/modeling.papyrus.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Papyrus</a>
                     <a href="projects/modeling.sirius.html" class="list-group-item">
 		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Sirius</a>
+                    <a href="projects/polarsys.capella.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Capella</a>
+                    <a href="projects/polarsys.kitalpha.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Kitalpha</a>
+                    <a href="projects/polarsys.reqcycle.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; ReqCycle</a>
+                    <a href="projects/polarsys.tracecompass.html" class="list-group-item">
+		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; TraceCompass</a>
                     <a href="projects/technology.ease.html" class="list-group-item">
 		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; EASE</a>
                     <a href="projects/tools.cdt.html" class="list-group-item">
