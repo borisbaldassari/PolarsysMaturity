@@ -151,33 +151,29 @@ if (not -e $dir_out_projects) {
     mkdir $dir_out_projects or die "Cannot create folder $dir_out_projects.\n";
 }
 
-my @projects = <$dir_projects/*>;
-
-# Dynamically build the project list for the menu.
-# Find the projects menu entry in menu array.
-my $counter = 0;
+# Find the projects menu entry in menu array, and extract the ids 
+# of the selected projets to work on.
+my %selected_projects;
 foreach my $entry (@{$menu_ref}) {
-    if ($entry->{"name"} =~ m!Projects!) {
+    if ( $entry->{"name"} =~ m!Projects! ) {
+	foreach my $project (@{$entry->{"children"}}) {
+	    my $id = $project->{'url'};
+	    $id =~ s!/projects/(.+).html!$1!;
+	    $selected_projects{$id} = 1;
+	}
 	last;
     }
-    $counter++;
 }
-# Add all projects to the menu.
-foreach my $project (@projects) {
-    my @file_path = File::Spec->splitdir($project);
-    my $project_id = $file_path[-1];
-    my @comps = split('\.', $project_id);
-    my $project_name = $comps[-1];
-    my $tmp = {
-	'url' => '/projects/' . $project_id . '.html',
-	'name' => ucfirst($project_name)
-    };
-    push( @{$menu_ref->[$counter]->{"children"}}, $tmp );
-}
+
+my @projects = <$dir_projects/*>;
 
 foreach my $project (@projects) {
     my @path = File::Spec->splitdir($project);
     my $project_id = $path[-1];
+
+    if ( not exists($selected_projects{$project_id}) ) {
+	next;
+    }
 
     print "  # Working on project [$project_id].\n";
 

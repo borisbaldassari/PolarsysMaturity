@@ -20,7 +20,7 @@ our @EXPORT_OK = qw(
     generate_global_downloads
 );
 
-my $debug = 0;
+my $debug = 1;
 
 my %flat_metrics;
 my %flat_questions;
@@ -40,9 +40,6 @@ my %metrics_ds;
 sub new($$$) {
     my $class = shift;
     my $self = {
-        # _f_metrics => shift,
-        # _f_questions  => shift,
-        # _f_attributes       => shift,
     };
 
     bless $self, $class;
