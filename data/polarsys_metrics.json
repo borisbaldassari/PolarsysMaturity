@@ -726,7 +726,7 @@
       },
       {
         "name": "Number of successfull installs on the Marketplace",
-        "mnemo": "MKT_INSTALL_SUCCESS_3M",
+        "mnemo": "MKT_INSTALL_SUCCESS_1M",
         "desc": [
             "The number of successful installs for the project as reported on the Marketplace during the last three months.",
             "This measure uses the list of successful installs available on the Marketplace for every registered project. Here is <a href=\"http://marketplace.eclipse.org/content/eclipse-cdt-cc-development-tooling\">an example of log page</a>, metrics tab. If the project is not registered on the Marketplace, the metric should be zero."
@@ -736,7 +736,7 @@
       },
       {
         "name": "Number of downloads on update site",
-        "mnemo": "DL_UPDATE_SITE_3M",
+        "mnemo": "DL_UPDATE_SITE_1M",
         "desc": [
             "The number of downloads on the update site of the project during last three months. Is computed using successful and failed installs from marketplace."
         ],
@@ -745,7 +745,7 @@
       },
       {
         "name": "Number of downloads on the web site",
-        "mnemo": "DL_REPO_3M",
+        "mnemo": "DL_REPO_1M",
         "desc": [
             "The number of downloads on the web site of the project (download page) during last three months. Example of download page (for CDT) : http://www.eclipse.org/downloads/ ."
         ],

@@ -205,12 +205,12 @@
                     "active": "false",
                     "children": [
                       {
-                        "mnemo": "DL_REPO_3M",
+                        "mnemo": "DL_REPO_1M",
                         "type": "metric",
                         "active": "false"
                       },
                       {
-                        "mnemo": "DL_UPDATE_SITE_3M",
+                        "mnemo": "DL_UPDATE_SITE_1M",
                         "type": "metric",
                         "active": "false"
                       }
@@ -228,7 +228,7 @@
                         "active": "false"
                       },
                       {
-                        "mnemo": "MKT_INSTALL_SUCCESS_3M",
+                        "mnemo": "MKT_INSTALL_SUCCESS_1M",
                         "type": "metric",
                         "active": "false"
                       }
