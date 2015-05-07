@@ -23,7 +23,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_DEV_VOL_1M",
+                        "mnemo": "MLS_DEV_VOL_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -35,7 +35,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_USR_VOL_1M",
+                        "mnemo": "MLS_USR_VOL_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -47,12 +47,12 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "SCM_COMMITS_1M",
+                        "mnemo": "SCM_COMMITS_3M",
                         "type": "metric",
                         "active": "true"
                       },
                       {
-                        "mnemo": "SCM_COMMITTED_FILES_1M",
+                        "mnemo": "SCM_COMMITTED_FILES_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -71,7 +71,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_DEV_AUTH_1M",
+                        "mnemo": "MLS_DEV_AUTH_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -83,7 +83,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_USR_AUTH_1M",
+                        "mnemo": "MLS_USR_AUTH_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -95,7 +95,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "SCM_COMMITTERS_1M",
+                        "mnemo": "SCM_COMMITTERS_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -114,7 +114,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_DEV_RESP_TIME_MED_1M",
+                        "mnemo": "MLS_DEV_RESP_TIME_MED_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -126,7 +126,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_USR_RESP_TIME_MED_1M",
+                        "mnemo": "MLS_USR_RESP_TIME_MED_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -145,12 +145,12 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_DEV_RESP_RATIO_1M",
+                        "mnemo": "MLS_DEV_RESP_RATIO_3M",
                         "type": "metric",
                         "active": "true"
                       },
                       {
-                        "mnemo": "MLS_DEV_SUBJ_1M",
+                        "mnemo": "MLS_DEV_SUBJ_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -162,12 +162,12 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "MLS_USR_RESP_RATIO_1M",
+                        "mnemo": "MLS_USR_RESP_RATIO_3M",
                         "type": "metric",
                         "active": "true"
                       },
                       {
-                        "mnemo": "MLS_USR_SUBJ_1M",
+                        "mnemo": "MLS_USR_SUBJ_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -205,12 +205,12 @@
                     "active": "false",
                     "children": [
                       {
-                        "mnemo": "DL_REPO_1M",
+                        "mnemo": "DL_REPO_3M",
                         "type": "metric",
                         "active": "false"
                       },
                       {
-                        "mnemo": "DL_UPDATE_SITE_1M",
+                        "mnemo": "DL_UPDATE_SITE_3M",
                         "type": "metric",
                         "active": "false"
                       }
@@ -228,7 +228,7 @@
                         "active": "false"
                       },
                       {
-                        "mnemo": "MKT_INSTALL_SUCCESS_1M",
+                        "mnemo": "MKT_INSTALL_SUCCESS_3M",
                         "type": "metric",
                         "active": "false"
                       }
@@ -285,12 +285,12 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "SCM_COMMITS_1M",
+                        "mnemo": "SCM_COMMITS_3M",
                         "type": "metric",
                         "active": "true"
                       },
                       {
-                        "mnemo": "SCM_COMMITTERS_1M",
+                        "mnemo": "SCM_COMMITTERS_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -321,12 +321,12 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "ITS_UPDATES_1M",
+                        "mnemo": "ITS_UPDATES_3M",
                         "type": "metric",
                         "active": "true"
                       },
                       {
-                        "mnemo": "ITS_AUTH_1M",
+                        "mnemo": "ITS_AUTH_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -643,7 +643,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "SCM_STABILITY_1M",
+                        "mnemo": "SCM_STABILITY_3M",
                         "type": "metric",
                         "active": "true"
                       }
@@ -655,7 +655,7 @@
                     "active": "true",
                     "children": [
                       {
-                        "mnemo": "ITS_FIX_MED_1M",
+                        "mnemo": "ITS_FIX_MED_3M",
                         "type": "metric",
                         "active": "true"
                       },
