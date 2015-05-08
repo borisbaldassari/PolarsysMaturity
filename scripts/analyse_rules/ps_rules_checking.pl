@@ -126,6 +126,7 @@ my %rules;
 my %unknown_rules;
 my %metrics = (
     "RULES" => 0,
+    "IS_PMD_OK" => 0, "IS_FB_OK" => 0,
     "RULES_ANA" => 0, "RKO_ANA" => 0, "ROK_ANA" => 0, "NCC_ANA" => 0, "ROKR_ANA" => "null", "NCC_ANA_IDX" => "null",
     "RULES_CHA" => 0, "RKO_CHA" => 0, "ROK_CHA" => 0, "NCC_CHA" => 0, "ROKR_CHA" => "null", "NCC_CHA_IDX" => "null",
     "RULES_REU" => 0, "RKO_REU" => 0, "ROK_REU" => 0, "NCC_REU" => 0, "ROKR_REU" => "null", "NCC_REU_IDX" => "null",
@@ -257,9 +258,12 @@ if (-e $opt_fb_file) {
 	    $unknown_rules{ $v_name }++;
 	    print "[WARN] FB: Could not find rule $v_name.\n" if ($debug);
 	}
+	
     }
+    $metrics{ 'IS_FB_OK' } = 1;
 } else { 
     print "Could not find Findbugs XML [$opt_fb_file].\n";
+    $metrics{ 'IS_FB_OK' } = 0;
 }
 
 #
@@ -268,39 +272,46 @@ if (-e $opt_fb_file) {
 
 print "Reading PMD XML file [$opt_pmd_file]..\n\n";
 
-my $doc = $parser->parse_file($opt_pmd_file);
 
-my @violations_nodes = $doc->findnodes("//violation");
+if (-e $opt_pmd_file) {
+    my $doc = $parser->parse_file($opt_pmd_file);
 
-foreach my $violation (@violations_nodes) {
-
-    my $v_name = $violation->getAttribute('rule');
-    my $v_pri_orig = $violation->getAttribute('priority');
-
-    # We count only rules with priority == 1 or 2 (high risk).
-    if ( exists( $rules{ $v_name } ) ) {
-
-	my $v_pri = $rules{ $v_name }->{'priority'};
-
-	print "DBG Using pri [$v_pri] instead of [$v_pri_orig] for [$v_name].\n" if ($debug);
-	if ( $v_pri < 3 ) {
-	    # Get some information for the violation.
-	    $violations{ $v_name }{ 'vol' }++;
-	    $violations{ $v_name }{ 'pri' } = $v_pri;
+    my @violations_nodes = $doc->findnodes("//violation");
+    
+    foreach my $violation (@violations_nodes) {
+	
+	my $v_name = $violation->getAttribute('rule');
+	my $v_pri_orig = $violation->getAttribute('priority');
+	
+	# We count only rules with priority == 1 or 2 (high risk).
+	if ( exists( $rules{ $v_name } ) ) {
 	    
-	    # Count it against the categories defined
-	    if ( exists( $rules{ $v_name } ) ) {
-		$violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
-		foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
-		    $categories{ $cat }->{ 'vol' }++;
-		    $categories{ $cat }->{ $v_name }++;
+	    my $v_pri = $rules{ $v_name }->{'priority'};
+	    
+	    print "DBG Using pri [$v_pri] instead of [$v_pri_orig] for [$v_name].\n" if ($debug);
+	    if ( $v_pri < 3 ) {
+		# Get some information for the violation.
+		$violations{ $v_name }{ 'vol' }++;
+		$violations{ $v_name }{ 'pri' } = $v_pri;
+		
+		# Count it against the categories defined
+		if ( exists( $rules{ $v_name } ) ) {
+		    $violations{ $v_name }{ 'cat' } = $rules{ $v_name }->{ 'cat' };
+		    foreach my $cat (split(' ', $rules{ $v_name }->{ 'cat' })) {
+			$categories{ $cat }->{ 'vol' }++;
+			$categories{ $cat }->{ $v_name }++;
+		    }
 		}
 	    }
+	} else {
+	    $unknown_rules{ $v_name }++;
+	    print "[WARN] PMD: Could not find rule $v_name.\n" if ($debug);
 	}
-    } else {
-        $unknown_rules{ $v_name }++;
-        print "[WARN] PMD: Could not find rule $v_name.\n" if ($debug);
     }
+    $metrics{ 'IS_PMD_OK' } = 1;
+} else { 
+    print "Could not find PMD XML [$opt_pmd_file].\n";
+    $metrics{ 'IS_PMD_OK' } = 0;
 }
 
 
