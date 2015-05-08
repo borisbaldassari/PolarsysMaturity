@@ -126,7 +126,7 @@ my %rules;
 my %unknown_rules;
 my %metrics = (
     "RULES" => 0,
-    "IS_PMD_OK" => 0, "IS_FB_OK" => 0,
+    "IS_PMD_OK" => "null", "IS_FB_OK" => "null",
     "RULES_ANA" => 0, "RKO_ANA" => 0, "ROK_ANA" => 0, "NCC_ANA" => 0, "ROKR_ANA" => "null", "NCC_ANA_IDX" => "null",
     "RULES_CHA" => 0, "RKO_CHA" => 0, "ROK_CHA" => 0, "NCC_CHA" => 0, "ROKR_CHA" => "null", "NCC_CHA_IDX" => "null",
     "RULES_REU" => 0, "RKO_REU" => 0, "ROK_REU" => 0, "NCC_REU" => 0, "ROKR_REU" => "null", "NCC_REU_IDX" => "null",
@@ -263,7 +263,7 @@ if (-e $opt_fb_file) {
     $metrics{ 'IS_FB_OK' } = 1;
 } else { 
     print "Could not find Findbugs XML [$opt_fb_file].\n";
-    $metrics{ 'IS_FB_OK' } = 0;
+    #$metrics{ 'IS_FB_OK' } = 0;
 }
 
 #
@@ -311,7 +311,7 @@ if (-e $opt_pmd_file) {
     $metrics{ 'IS_PMD_OK' } = 1;
 } else { 
     print "Could not find PMD XML [$opt_pmd_file].\n";
-    $metrics{ 'IS_PMD_OK' } = 0;
+    #$metrics{ 'IS_PMD_OK' } = 0;
 }
 
 
