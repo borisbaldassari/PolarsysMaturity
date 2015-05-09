@@ -261,7 +261,7 @@ if (-e $opt_fb_file) {
 	
     }
     $metrics{ 'IS_FB_OK' } = 1;
-    print "DBG Metric IS_PMD_OK set to 1.\n"
+    print "DBG Metric IS_PMD_OK set to 1.\n";
 } else { 
     print "Could not find Findbugs XML [$opt_fb_file].\n";
     #$metrics{ 'IS_FB_OK' } = 0;
@@ -309,7 +309,7 @@ if (-e $opt_pmd_file) {
 	    print "[WARN] PMD: Could not find rule $v_name.\n" if ($debug);
 	}
     }
-    print "DBG Metric IS_PMD_OK set to 1.\n"
+    print "DBG Metric IS_PMD_OK set to 1.\n";
     $metrics{ 'IS_PMD_OK' } = 1;
 } else { 
     print "Could not find PMD XML [$opt_pmd_file].\n";
