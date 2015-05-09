@@ -526,8 +526,8 @@ function click(d) {
                   <div role="tabpanel" class="tab-pane fade" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_ANA">Number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA">NCC_ANA</a></td><td>674</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_CHA">Number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA">NCC_CHA</a></td><td>237</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_REL">Number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL">NCC_REL</a></td><td>71</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_CHA">Number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA">NCC_CHA</a></td><td>238</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_REL">Number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL">NCC_REL</a></td><td>68</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REU">Number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU">NCC_REU</a></td><td>7</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Reviews success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>50</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
@@ -550,18 +550,18 @@ function click(d) {
 </div>
                   <div role="tabpanel" class="tab-pane fade" id="practices"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="40%">Mnemo</th><th width="20%">NCC</th></tr>
-<tr><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">Constructor Calls Overridable Method</a></td><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">ConstructorCallsOverridableMethod</a></td><td>38</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">Avoid Deeply Nested If Statements</a></td><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">AvoidDeeplyNestedIfStmts</a></td><td>94</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidUsingHardCodedIP">Avoid Using Hard Coded IP</a></td><td><a href="/documentation/rules.html#AvoidUsingHardCodedIP">AvoidUsingHardCodedIP</a></td><td>7</td></tr>
-<tr><td><a href="/documentation/rules.html#GodClass">God Class</a></td><td><a href="/documentation/rules.html#GodClass">GodClass</a></td><td>128</td></tr>
 <tr><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">Class With Only Private Constructors Should Be Final</a></td><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">ClassWithOnlyPrivateConstructorsShouldBeFinal</a></td><td>82</td></tr>
+<tr><td><a href="/documentation/rules.html#ConfusingTernary">Confusing Ternary</a></td><td><a href="/documentation/rules.html#ConfusingTernary">ConfusingTernary</a></td><td>338</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidUsingHardCodedIP">Avoid Using Hard Coded IP</a></td><td><a href="/documentation/rules.html#AvoidUsingHardCodedIP">AvoidUsingHardCodedIP</a></td><td>7</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">Avoid Deeply Nested If Statements</a></td><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">AvoidDeeplyNestedIfStmts</a></td><td>94</td></tr>
 <tr><td><a href="/documentation/rules.html#NonStaticInitializer">Non Static Initializer</a></td><td><a href="/documentation/rules.html#NonStaticInitializer">NonStaticInitializer</a></td><td>1</td></tr>
 <tr><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">Position Literals First In Comparisons</a></td><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">PositionLiteralsFirstInComparisons</a></td><td>18</td></tr>
-<tr><td><a href="/documentation/rules.html#ConfusingTernary">Confusing Ternary</a></td><td><a href="/documentation/rules.html#ConfusingTernary">ConfusingTernary</a></td><td>339</td></tr>
+<tr><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">Constructor Calls Overridable Method</a></td><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">ConstructorCallsOverridableMethod</a></td><td>38</td></tr>
+<tr><td><a href="/documentation/rules.html#GodClass">God Class</a></td><td><a href="/documentation/rules.html#GodClass">GodClass</a></td><td>129</td></tr>
 <tr><td><a href="/documentation/rules.html#PreserveStackTrace">Preserve Stack Trace</a></td><td><a href="/documentation/rules.html#PreserveStackTrace">PreserveStackTrace</a></td><td>21</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">Avoid Branching Statement As Last In Loop</a></td><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">AvoidBranchingStatementAsLastInLoop</a></td><td>9</td></tr>
+<tr><td><a href="/documentation/rules.html#NonThreadSafeSingleton">Non Thread Safe Singleton</a></td><td><a href="/documentation/rules.html#NonThreadSafeSingleton">NonThreadSafeSingleton</a></td><td>4</td></tr>
 <tr><td><a href="/documentation/rules.html#MissingBreakInSwitch">Missing Break In Switch</a></td><td><a href="/documentation/rules.html#MissingBreakInSwitch">MissingBreakInSwitch</a></td><td>8</td></tr>
-<tr><td><a href="/documentation/rules.html#NonThreadSafeSingleton">Non Thread Safe Singleton</a></td><td><a href="/documentation/rules.html#NonThreadSafeSingleton">NonThreadSafeSingleton</a></td><td>7</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">Avoid Branching Statement As Last In Loop</a></td><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">AvoidBranchingStatementAsLastInLoop</a></td><td>9</td></tr>
 </table>
 </div>
                   <div role="tabpanel" class="tab-pane fade" id="actions">...</div>

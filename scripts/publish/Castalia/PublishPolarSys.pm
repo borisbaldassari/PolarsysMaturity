@@ -166,7 +166,14 @@ sub generate_global_downloads($$) {
 	    if ($value =~ m![\d.]+!) {
 		$out_data .= ',' . $value;
 	    } else {
-		$out_data .= ',';
+		if ($value =~ m!^nan$!i) {
+		    print "DBG nan value for [$mnemo].\n" if ($debug);
+		    $out_data .= ',nan';
+#			$project_values{uc($metric)} = $raw_values->{"children"}->{$metric};			
+		} else {
+		    print "DBG null value for [$mnemo].\n" if ($debug);
+		    $out_data .= ',';
+		}
 	    }
     	}
     	$out_data .= "\n";
@@ -517,7 +524,12 @@ sub generate_project_metrics($$$) {
 		if ($raw_values->{"children"}->{$metric} =~ m![\d.]+!) {
 		    $project_values{uc($metric)} = $raw_values->{"children"}->{$metric};
 		} else {
-		    print "DBG null value for [$metric].\n" if ($debug);
+		    if ($raw_values->{"children"}->{$metric} =~ m!^nan$!i) {
+			print "DBG nan value for [$metric].\n" if ($debug);
+#			$project_values{uc($metric)} = $raw_values->{"children"}->{$metric};			
+		    } else {
+			print "DBG null value for [$metric].\n" if ($debug);
+		    }
 		}
 	    }
 	} else {
@@ -528,7 +540,12 @@ sub generate_project_metrics($$$) {
 		    $project_values{uc($metric)} = $raw_values->{$metric};
 		    print "DBG metric [$metric] has value [" . $raw_values->{$metric} . "].\n" if ($debug);
 		} else {
-		    print "DBG null value for [$metric].\n" if ($debug);
+		    if ($raw_values->{$metric} =~ m!^nan$!i) {
+			print "DBG nan value for [$metric].\n" if ($debug);
+#			$project_values{uc($metric)} = $raw_values->{$metric};			
+		    } else {
+			print "DBG null value for [$metric].\n" if ($debug);
+		    }
 		}
 	    }        
 	}
