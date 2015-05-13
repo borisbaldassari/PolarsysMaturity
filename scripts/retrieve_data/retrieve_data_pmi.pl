@@ -1,7 +1,7 @@
 #! perl
 #
-#
-#
+# Retrieves data from the PMI infrastructure.
+# Depending on the project name, either the Eclipse or PolarSys PMI servers will be queried.
 #
 #
 
@@ -121,19 +121,18 @@ foreach my $project_id (@projects) {
 	    $tmp_rel{"date_tz"} = $rel->{"date"}->[0]->{"timezone"};
 	    $tmp_rel{"desc"} = $rel->{"description"}->[0]->{"safe_value"};
 	    
-	    print " (", $tmp_rel{"date"}, " ", $tmp_rel{"date_tz"}, ")";
-	    
 	    my $release_date = str2time($tmp_rel{"date"});
+	    my $release_type = $rel->{"type"}->[0]->{"value"} || 5;
+
+	    print " (", $tmp_rel{"date"}, " ", $tmp_rel{"date_tz"}, ") type [$release_type]";
+	    
 	    # Initialise release status to prevent undefined.
 	    $tmp_rel{"review_state"} = 0;
 	    # We only want releases that have not passed yet.
-	    if ($release_date < $epoch_date) {
+	    if ( $release_date < $epoch_date && $release_type < 3 ) {
 		# Playing with review
 		$tmp_rel{"review_title"} = $rel->{"review"}->{"title"};
 		$tmp_rel{"review_state"} = $rel->{"review"}->{"state"}->[0]->{"value"} || 0;
-		$tmp_rel{"review_type"} = $rel->{"review"}->{"type"}->[0]->{"value"};
-		$tmp_rel{"review_end_date"} = $rel->{"review"}->{"end_date"}->[0]->{"value"};
-		$tmp_rel{"review_end_date_tz"} = $rel->{"review"}->{"end_date"}->[0]->{"timezone"};
 		
 		if ($tmp_rel{"review_state"} =~ m!success!i && $rel_count < 5) { 
 		    $reviews_success++;
