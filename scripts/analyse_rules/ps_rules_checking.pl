@@ -32,7 +32,7 @@ where:
   -h|--help             Print usage and exit.
   -pr|--pmd-rules       The directory containing JSON PMD rules definition.
   -pf|--pmd-file        The PMD XML results file with violations.
-  -fr|--findbug-rules   The directory containing JSON PMD rules definition.
+  -fr|--findbug-rules   The directory containing JSON FindBugs rules definition.
   -ff|--findbugs-file   The FindBugs XML results file with violations.
   -l|--lines            The KSLOC value of the project for indexes.
   -o|--output           The file to write metrics to (JSON).
@@ -376,6 +376,8 @@ $metrics{"NCC"} = $total;
     
 # Write violations to a file if demanded
 if (defined($opt_output_v) && $opt_output_v =~ m!\S+!) {
+
+    # Write file to json
     print "Writing violations to file [$opt_output_v].\n";
     my $json_violations;
     $json_violations = "{\n";
