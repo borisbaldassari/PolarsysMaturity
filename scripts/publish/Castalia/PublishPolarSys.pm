@@ -519,7 +519,7 @@ sub generate_project_metrics($$$) {
 	# We want to be able to read files from bitergia (raw) AND
 	# from our scripts (extended).
 	if (exists($raw_values->{"name"})) {
-	    # Our format 
+	    # Our first, initial format 
 	    foreach my $metric (sort keys %{$raw_values->{"children"}}) {
 		if ($raw_values->{"children"}->{$metric} =~ m![\d.]+!) {
 		    $project_values{uc($metric)} = $raw_values->{"children"}->{$metric};
@@ -533,8 +533,7 @@ sub generate_project_metrics($$$) {
 		}
 	    }
 	} else {
-	    print "WARN Deprecated format for metrics values file [$file]. Reading anyway.\n" if ($debug);
-	    # Bitergia format
+	    # New, Bitergia format
 	    foreach my $metric (keys %{$raw_values}) {
 		if ($raw_values->{$metric} =~ m![\d.]+!) {
 		    $project_values{uc($metric)} = $raw_values->{$metric};
@@ -856,8 +855,8 @@ sub generate_project($$$) {
                       <li role="presentation"><a href="' . ${project_id} . '_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="' . ${project_id} . '_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="' . ${project_id} . '_metrics.csv">Metrics CSV</a></li>
-                      <!-- li role="presentation"><a href="' . ${project_id} . '_violations.csv">Violations JSON</a></li -->
-                      <li role="presentation"><a href="' . ${project_id} . '_attributes.csv">Violations CSV</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_pmd.xml">PMD results XML</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_findbugs.xml">FindBugs results XML</a></li>
                     </ul>
                   </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>

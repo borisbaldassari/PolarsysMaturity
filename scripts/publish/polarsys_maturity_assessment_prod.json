@@ -49,42 +49,52 @@
 	    "children": [
 		{
 		    "name": "Capella", 
+		    "id": "polarsys.capella", 
 		    "url": "/projects/polarsys.capella.html"
 		},
 		{
 		    "name": "CDT", 
+		    "id": "tools.cdt", 
 		    "url": "/projects/tools.cdt.html"
 		},
 		{
 		    "name": "CDT-TCF", 
+		    "id": "tools.cdt.tcf", 
 		    "url": "/projects/tools.cdt.tcf.html"
 		},
 		{
 		    "name": "EASE", 
+		    "id": "technology.ease", 
 		    "url": "/projects/technology.ease.html"
 		},
 		{
 		    "name": "EMF-Compare", 
+		    "id": "modeling.emfcompare", 
 		    "url": "/projects/modeling.emfcompare.html"
 		},
 		{
 		    "name": "Gendoc", 
+		    "id": "modeling.gendoc", 
 		    "url": "/projects/modeling.gendoc.html"
 		},
 		{
 		    "name": "Kitalpha", 
+		    "id": "polarsys.kitalpha", 
 		    "url": "/projects/polarsys.kitalpha.html"
 		},
 		{
 		    "name": "Papyrus", 
+		    "id": "modeling.mdt.papyrus", 
 		    "url": "/projects/modeling.mdt.papyrus.html"
 		},
 		{
 		    "name": "Sirius", 
+		    "id": "modeling.sirius", 
 		    "url": "/projects/modeling.sirius.html"
 		},
 		{
 		    "name": "TraceCompass", 
+		    "id": "tools.tracecompass", 
 		    "url": "/projects/tools.tracecompass.html"
 		}
 	    ]
