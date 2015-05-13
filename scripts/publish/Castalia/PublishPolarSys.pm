@@ -855,8 +855,8 @@ sub generate_project($$$) {
                       <li role="presentation"><a href="' . ${project_id} . '_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="' . ${project_id} . '_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="' . ${project_id} . '_metrics.csv">Metrics CSV</a></li>
-                      <li role="presentation"><a href="' . ${project_id} . '_pmd.xml">PMD results XML</a></li>
-                      <li role="presentation"><a href="' . ${project_id} . '_findbugs.xml">FindBugs results XML</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_pmd.zip">PMD results XML</a></li>
+                      <li role="presentation"><a href="' . ${project_id} . '_findbugs.zip">FindBugs results XML</a></li>
                     </ul>
                   </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>

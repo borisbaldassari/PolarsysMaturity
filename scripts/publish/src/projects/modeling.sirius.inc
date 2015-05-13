@@ -22,8 +22,8 @@
                       <li role="presentation"><a href="modeling.sirius_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="modeling.sirius_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="modeling.sirius_metrics.csv">Metrics CSV</a></li>
-                      <!-- li role="presentation"><a href="modeling.sirius_violations.csv">Violations JSON</a></li -->
-                      <li role="presentation"><a href="modeling.sirius_attributes.csv">Violations CSV</a></li>
+                      <li role="presentation"><a href="modeling.sirius_pmd.zip">PMD results XML</a></li>
+                      <li role="presentation"><a href="modeling.sirius_findbugs.zip">FindBugs results XML</a></li>
                     </ul>
                   </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>

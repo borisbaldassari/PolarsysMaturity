@@ -22,8 +22,8 @@
                       <li role="presentation"><a href="tools.tracecompass_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="tools.tracecompass_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="tools.tracecompass_metrics.csv">Metrics CSV</a></li>
-                      <!-- li role="presentation"><a href="tools.tracecompass_violations.csv">Violations JSON</a></li -->
-                      <li role="presentation"><a href="tools.tracecompass_attributes.csv">Violations CSV</a></li>
+                      <li role="presentation"><a href="tools.tracecompass_pmd.zip">PMD results XML</a></li>
+                      <li role="presentation"><a href="tools.tracecompass_findbugs.zip">FindBugs results XML</a></li>
                     </ul>
                   </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>

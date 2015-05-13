@@ -22,8 +22,8 @@
                       <li role="presentation"><a href="modeling.gendoc_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="modeling.gendoc_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="modeling.gendoc_metrics.csv">Metrics CSV</a></li>
-                      <!-- li role="presentation"><a href="modeling.gendoc_violations.csv">Violations JSON</a></li -->
-                      <li role="presentation"><a href="modeling.gendoc_attributes.csv">Violations CSV</a></li>
+                      <li role="presentation"><a href="modeling.gendoc_pmd.zip">PMD results XML</a></li>
+                      <li role="presentation"><a href="modeling.gendoc_findbugs.zip">FindBugs results XML</a></li>
                     </ul>
                   </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
@@ -605,18 +605,18 @@ function click(d) {
 </div>
                   <div role="tabpanel" class="tab-pane fade" id="practices"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="40%">Mnemo</th><th width="20%">NCC</th></tr>
-<tr><td><a href="/documentation/rules.html#NonThreadSafeSingleton">Non Thread Safe Singleton</a></td><td><a href="/documentation/rules.html#NonThreadSafeSingleton">NonThreadSafeSingleton</a></td><td>1</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">Avoid Deeply Nested If Statements</a></td><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">AvoidDeeplyNestedIfStmts</a></td><td>29</td></tr>
-<tr><td><a href="/documentation/rules.html#ConfusingTernary">Confusing Ternary</a></td><td><a href="/documentation/rules.html#ConfusingTernary">ConfusingTernary</a></td><td>48</td></tr>
-<tr><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">Constructor Calls Overridable Method</a></td><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">ConstructorCallsOverridableMethod</a></td><td>2</td></tr>
-<tr><td><a href="/documentation/rules.html#PreserveStackTrace">Preserve Stack Trace</a></td><td><a href="/documentation/rules.html#PreserveStackTrace">PreserveStackTrace</a></td><td>14</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidReassigningParameters">Avoid Reassigning Parameters</a></td><td><a href="/documentation/rules.html#AvoidReassigningParameters">AvoidReassigningParameters</a></td><td>37</td></tr>
 <tr><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">Class With Only Private Constructors Should Be Final</a></td><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">ClassWithOnlyPrivateConstructorsShouldBeFinal</a></td><td>1</td></tr>
-<tr><td><a href="/documentation/rules.html#GodClass">God Class</a></td><td><a href="/documentation/rules.html#GodClass">GodClass</a></td><td>10</td></tr>
 <tr><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">Position Literals First In Comparisons</a></td><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">PositionLiteralsFirstInComparisons</a></td><td>16</td></tr>
-<tr><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">Switch Statements Should Have Default</a></td><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">SwitchStmtsShouldHaveDefault</a></td><td>1</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">Avoid Branching Statement As Last In Loop</a></td><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">AvoidBranchingStatementAsLastInLoop</a></td><td>1</td></tr>
+<tr><td><a href="/documentation/rules.html#GodClass">God Class</a></td><td><a href="/documentation/rules.html#GodClass">GodClass</a></td><td>10</td></tr>
+<tr><td><a href="/documentation/rules.html#ConfusingTernary">Confusing Ternary</a></td><td><a href="/documentation/rules.html#ConfusingTernary">ConfusingTernary</a></td><td>48</td></tr>
 <tr><td><a href="/documentation/rules.html#OverrideBothEqualsAndHashcode">Override Both Equals And Hash code</a></td><td><a href="/documentation/rules.html#OverrideBothEqualsAndHashcode">OverrideBothEqualsAndHashcode</a></td><td>1</td></tr>
+<tr><td><a href="/documentation/rules.html#NonThreadSafeSingleton">Non Thread Safe Singleton</a></td><td><a href="/documentation/rules.html#NonThreadSafeSingleton">NonThreadSafeSingleton</a></td><td>1</td></tr>
+<tr><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">Constructor Calls Overridable Method</a></td><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">ConstructorCallsOverridableMethod</a></td><td>2</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">Avoid Branching Statement As Last In Loop</a></td><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">AvoidBranchingStatementAsLastInLoop</a></td><td>1</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidReassigningParameters">Avoid Reassigning Parameters</a></td><td><a href="/documentation/rules.html#AvoidReassigningParameters">AvoidReassigningParameters</a></td><td>37</td></tr>
+<tr><td><a href="/documentation/rules.html#PreserveStackTrace">Preserve Stack Trace</a></td><td><a href="/documentation/rules.html#PreserveStackTrace">PreserveStackTrace</a></td><td>14</td></tr>
+<tr><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">Switch Statements Should Have Default</a></td><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">SwitchStmtsShouldHaveDefault</a></td><td>1</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">Avoid Deeply Nested If Statements</a></td><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">AvoidDeeplyNestedIfStmts</a></td><td>29</td></tr>
 </table>
 </div>
                   <div role="tabpanel" class="tab-pane fade" id="actions">...</div>

@@ -22,8 +22,8 @@
                       <li role="presentation"><a href="modeling.mdt.papyrus_questions.csv">Questions CSV</a></li>
                       <li role="presentation"><a href="modeling.mdt.papyrus_metrics.json">Metrics JSON</a></li>
                       <li role="presentation"><a href="modeling.mdt.papyrus_metrics.csv">Metrics CSV</a></li>
-                      <!-- li role="presentation"><a href="modeling.mdt.papyrus_violations.csv">Violations JSON</a></li -->
-                      <li role="presentation"><a href="modeling.mdt.papyrus_attributes.csv">Violations CSV</a></li>
+                      <li role="presentation"><a href="modeling.mdt.papyrus_pmd.zip">PMD results XML</a></li>
+                      <li role="presentation"><a href="modeling.mdt.papyrus_findbugs.zip">FindBugs results XML</a></li>
                     </ul>
                   </li>
                   <li role="presentation"><a href="#log" role="tab" data-toggle="tab">Errors</a></li>
