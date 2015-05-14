@@ -199,9 +199,11 @@ foreach my $project (@projects) {
     $publish_ps->generate_global_downloads($dir_out_projects);
     
     # Zip and copy analysis files to dashboard src.
-    print "Compressing PMD file [${project}${project_id}_pmd.xml] to [${dir_out_projects}${project_id}_pmd.zip].\n";
-    @cmd_out = `zip -r ${dir_out_projects}${project_id}_pmd.zip $project${project_id}_pmd.xml`;
-    @cmd_out = `zip -r ${dir_out_projects}${project_id}_findbugs.zip $project${project_id}_findbugs.xml`;
+    print "Compressing rule-checking metrics files [${project}${project_id}_pmd.xml] to [${dir_out_projects}${project_id}_pmd.zip].\n";
+    my $cmd = "cd $project && zip -r ../../scripts/publish/${dir_out_projects}${project_id}_pmd.zip ${project_id}_pmd.xml";
+    @cmd_out = `$cmd`;
+    $cmd = "cd $project && zip -r ../../scripts/publish/${dir_out_projects}${project_id}_findbugs.zip ${project_id}_findbugs.xml";
+    @cmd_out = `$cmd`;
 #    rcopy($project . "/${project_id}_pmd.xml", $dir_src_project);
 #    rcopy($project . "/${project_id}_findbugs.xml", $dir_src_project);
 #    rcopy($project . "/${project_id}_violations.json", $dir_src_project);
