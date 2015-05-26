@@ -1,0 +1,32 @@
+% layout 'polarsys';
+% title 'Welcome';
+
+<h2>Login</h2>
+
+<br />
+
+% my $reg_user = $self->session('user') || '';
+% if ($reg_user !~ m!^$!) {
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+  <p><strong>Info:</strong> You are now logged in as user <strong><%= $self->session('user') %></strong>. <a href="/comments/logout">Click here</a> to logout.</p>
+</div>
+% }
+
+<p>This page allows users to login to their project's account to add comments.</p>
+
+<form action="login" method="POST">
+  <p>Project: (<span style="color: red">*</span>)</p>
+  <p><input name="user" type="text" /></p>
+  <p>Password: (<span style="color: red">*</span>)</p>
+  <p><input name="password" type="password" /></p>
+  <br /><br />
+  <input type="submit" value="Login"></input>
+</form>
+
+<br />
+
+<p>You may want to <a href="/comments">go back</a> to the comments.</p>

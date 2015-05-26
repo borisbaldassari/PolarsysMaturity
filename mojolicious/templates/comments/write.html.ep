@@ -1,0 +1,37 @@
+% layout 'polarsys';
+% title 'Write a comment on project';
+
+% my $reg_user = $self->session('user') || '';
+% my @reg_projects = @{$self->users->projects($reg_user)};
+% my $reg_projects_str = join(', ', @reg_projects);
+
+<h2>Add a comment to project <%= $id %></h2>
+
+<br />
+              
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+  <p><strong>Info:</strong> You are logged in as user <strong><%= $reg_user %></strong>. <a href="/comments/logout">Click here</a> to logout.</p>
+</div>
+
+% if ( scalar( grep(/^${id}$/, @reg_projects) ) != 0 ) {
+<p>Please fill the following form to add a comment to the <code><%= $id %></code> project. The date is automatically set, and all fields marked (<span style="color: red">*</span>) are mandatory.</p>
+
+<br />
+
+<form action="<%= $id %>" method="POST">
+  <p>Author: (<span style="color: red">*</span>)</p>
+  <p><input name="author" type="text"></input></p>
+  <p>Text: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
+  <p><textarea name="text" cols="40" rows="20"></textarea></p>
+  <br /><br />
+  <input type="submit" value="Post comment"></input>
+  <input type="reset" value="Cancel"></input>
+</form>
+% } else {
+<p>Sorry, user <code><%= $self->session('user') %></code> is not authorised to post a comment on this project. You can only submit a comment on project(s) <code><%= $reg_projects_str %></code>.</p> 
+<p>Maybe you want to <a href="/comments/">go back to the list of projects</a>, or <a href="/comments/login">login</a> with the correct credentials?</p>
+% }

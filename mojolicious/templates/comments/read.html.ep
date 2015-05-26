@@ -1,0 +1,29 @@
+% layout 'polarsys';
+% title 'Welcome';
+
+<h2>Comments for <%= $id %></h2>
+
+<br />
+
+<p><%= $id %> has <%= scalar @{$comments} %> registered comment(s). </p>
+
+<br />
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Comments</div>
+        <ul class="list-group">
+% foreach my $comment (@{$comments}) {
+%   my $author = $comment->{"author"};
+%   my $date = $comment->{"date"};
+%   my $text = $comment->{"text"};
+          <li class="list-group-item">Message from <%= $author %> on <%= $date %>:<br />
+<%= $text %></li>
+% }
+        </ul>
+    </div>
+  </div>
+</div>
+
+<p>You may want to <a href="/comments/w/<%= $id %>">add a comment</a> on this project, <a href="/comments">go back</a> to the comments or <a href="/projects/<%= $id %>.html">have a look at the project's dashboard</a>.</p>

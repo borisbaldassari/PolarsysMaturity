@@ -1,0 +1,39 @@
+% layout 'polarsys';
+% title 'Welcome';
+
+<h2>Comments system</h2>
+
+<br />
+
+% my $reg_user = $self->session('user') || '';
+% my @reg_projects = []; 
+
+% if ($reg_user !~ m!^$!) {
+%   @reg_projects = @{$self->users->projects($reg_user)};
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+  <p><strong>Info:</strong> You are logged in as user <strong><%= $reg_user %></strong>. <a href="/comments/logout">Click here</a> to logout.</p>
+</div>
+% }
+
+<p>These pages allow teams to add custom comments to the projects, in order for users to better understand how the project is organised. Please note that you must be <a href="/comments/login">logged in</a> to write comments.</p>
+
+<p>&nbsp;</p>
+
+% my %projects = %{$projects};
+<ul class="list-group">
+% foreach my $project (sort keys %projects) {
+    <li class="list-group-item">
+      <span class="badge"><%= $projects->{$project} %></span>
+      % if ( scalar( grep(/^${project}$/, @reg_projects) ) != 0 ) {
+      <a href="/comments/w/<%= $project %>"><i class="fa fa-plus"></i></a> &nbsp; 
+      % }
+      <a href="/comments/r/<%= $project %>"><i class="fa fa-eye"></i></a> &nbsp; 
+      <%= $project %></li>
+% }
+</ul>
+
+
