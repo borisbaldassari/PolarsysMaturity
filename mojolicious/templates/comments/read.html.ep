@@ -1,11 +1,11 @@
 % layout 'polarsys';
-% title 'Welcome';
+% title 'Read comments';
 
-<h2>Comments for <%= $id %></h2>
+<h2>Comments for <%= $project %></h2>
 
 <br />
 
-<p><%= $id %> has <%= scalar @{$comments} %> registered comment(s). </p>
+<p><%= $project %> has <%= scalar @{$comments} %> registered comment(s). </p>
 
 <br />
 
@@ -15,15 +15,21 @@
       <div class="panel-heading">Comments</div>
         <ul class="list-group">
 % foreach my $comment (@{$comments}) {
+%   my $id = $comment->{"id"};
 %   my $author = $comment->{"author"};
-%   my $date = $comment->{"date"};
+%   my $date = localtime($id);
 %   my $text = $comment->{"text"};
-          <li class="list-group-item">Message from <%= $author %> on <%= $date %>:<br />
-<%= $text %></li>
+          <li class="list-group-item">
+	    <div class="pull-right">
+	      <a href="/comments/e/<%= $project %>/<%= $id %>"><i class="fa fa-pencil"></i></a> &nbsp;
+	      <a href="/comments/d/<%= $project %>/<%= $id %>"><i class="fa fa-trash-o"></i></a>
+	    </div>
+	    Message from <strong><%= $author %></strong> on <%= $date %>:<br />
+	    <%= $text %></li>
 % }
         </ul>
     </div>
   </div>
 </div>
 
-<p>You may want to <a href="/comments/w/<%= $id %>">add a comment</a> on this project, <a href="/comments">go back</a> to the comments or <a href="/projects/<%= $id %>.html">have a look at the project's dashboard</a>.</p>
+<p>You may want to <a href="/comments/w/<%= $project %>">add a comment</a> on this project, <a href="/comments">go back</a> to the comments or <a href="/projects/<%= $project %>.html">have a look at the project's dashboard</a>.</p>

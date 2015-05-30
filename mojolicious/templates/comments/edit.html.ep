@@ -1,11 +1,17 @@
 % layout 'polarsys';
-% title 'Write a comment on project';
+% title 'Edit comment';
 
 % my $reg_user = $self->session('user') || '';
 % my @reg_projects = @{$self->users->projects($reg_user)};
 % my $reg_projects_str = join(', ', @reg_projects);
 
-<h2>Add a comment to project <%= $project %></h2>
+% # retrieve data for comment.
+% my $id = stash "in_id";
+% my $author = stash "in_author";
+% my $date = localtime($id);
+% my $text = stash "in_text";
+
+<h2>Edit a comment to project <%= $project %></h2>
 
 <br />
               
@@ -22,13 +28,13 @@
 
 <br />
 
-<form action="<%= $project %>" method="POST">
+<form action="<%= $id %>" method="POST">
   <p>Author: (<span style="color: red">*</span>)</p>
-  <p><input name="author" type="text"></input></p>
+  <p><input name="author" type="text" value="<%= $author %>" disabled></input></p>
   <p>Text: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
-  <p><textarea name="text" cols="40" rows="20"></textarea></p>
+  <p><textarea name="text" cols="40" rows="20"><%= $text %></textarea></p>
   <br /><br />
-  <input type="submit" value="Post comment"></input>
+  <input type="submit" value="Edit comment"></input>
   <input type="reset" value="Cancel"></input>
 </form>
 % } else {

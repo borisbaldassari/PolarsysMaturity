@@ -11,41 +11,70 @@ use Castalia::PublishPolarSys;
 my $dir_data = "../projects/";
 my $publish_conf = "../scripts/publish/polarsys_maturity_assessment_prod.json";
 
+#
+# Utility to read json from a file name.
+#
+sub read_json($) {
+    my $file = shift || "";
+
+    my $json;
+
+    do { 
+	local $/;
+	open my $fhm, "<", $file or die "Could not read json file [$file].\n";
+	$json = <$fhm>;
+	close $fhm;
+    };
+    
+    # Decode the entire JSON
+    return decode_json( $json );
+}
+
+
+#
+# Utility to write json data into a file.
+#
+sub write_json($$) {
+    my $data = shift || "";
+    my $file = shift || "";
+    
+
+    my $json_out = encode_json( $data );
+    do { 
+        local $/;
+        open my $fhm, ">", $file or die "Could not write json file [$file].\n";
+        print $fhm $json_out;
+    	close $fhm;
+    };
+}
+
+
+#
 # Entry page
+# Displays the list of projects from comment data files, with number of comments.
+# 
 sub welcome {
     my $self = shift;
 
     my %projects;
+
+    # Find comment data files for all projets in $dir_data/
     my @comment_files = <$dir_data/*/*_comments.json>;
     foreach my $file (@comment_files) {
+	# For each file, 
 	$file =~ m!.*/([^_/]+)_comments.json!;
 	my $project = $1;
-	my $json;
-	do { 
-	    local $/;
-	    open my $fhm, "<", $file;
-	    $json = <$fhm>;
-	    close $fhm;
-	};
-	# Decode the entire JSON
-	my $raw = decode_json( $json );
+	my $raw = &read_json($file);
 	
 	$projects{$project} = scalar @{$raw->{"comments"}};
     }
     
-    my $json;
-    do { 
-        local $/;
-        open my $fhm, "<", $publish_conf;
-        $json = <$fhm>;
-    	close $fhm;
-    };
+    # Open configuration file.
+    my $json_conf = &read_json($publish_conf);
     
-    # Decode the entire JSON
-    my $json_conf = decode_json( $json );
-    
+    # Find "Projects" in menu entries to get the project that do not have yet
+    # a json comments data file.
     my $menu_ref = $json_conf->{"menu"};
-
     foreach my $entry (@{$menu_ref}) {
 	if ($entry->{"name"} =~ m!Projects!) {
 	    foreach my $proj (@{$entry->{"children"}}) {
@@ -58,14 +87,19 @@ sub welcome {
 	}
     }
 
+    # Prepare data for template.
     $self->stash(
 	projects => \%projects
         );    
 
     # Render template "comments/welcome.html.ep" with message
-    $self->render(msg => 'Welcome to the Mojolicious real-time web framework!');
+    $self->render();
 }
 
+
+#
+# Checks for the user auth. Called every time a protected page is encountered.
+#
 sub logged_in {
     my $self = shift;
     
@@ -77,14 +111,14 @@ sub logged_in {
 }
 
 
+#
+# Check login/password and setup the auth cookie if ok.
+#
 sub login_post {
     my $self = shift;
 
-    my $user = $self->param('user') || 'ff';
+    my $user = $self->param('user') || '';
     my $pass = $self->param('password') || '';
-
-    print Dumper($user);
-    print Dumper($pass);
 
     # If wrong login/pass then render comments/login_needed.html.ep
     return $self->render( template => 'comments/login_needed' ) unless $self->users->check($user, $pass);
@@ -98,6 +132,11 @@ sub login_post {
     
 }
 
+
+#
+# Reset the auth cookie. Called when accessing the logout page.
+# All subsequent requests to logged_in will return undef.
+#
 sub logout {
     my $self = shift;
 
@@ -111,31 +150,23 @@ sub logout {
 }
 
 
+#
 # This action reads all comments for a given project and displays them.
+#
 sub read {
     my $self = shift;
 
-    my $project = $self->param('id');
+    my $project = $self->param('project');
 
     my $file = $dir_data . "/" . $project . "/" . $project . "_comments.json";
 
     my @comments;
     if (-e $file) {
-	my $json;
-	do { 
-	    local $/;
-	    open my $fhm, "<", $file;
-	    $json = <$fhm>;
-	    close $fhm;
-	};
-	
-	# Decode the entire JSON
-	my $raw = decode_json( $json );
+	my $raw = &read_json($file);
 	@comments = @{$raw->{"comments"}};
-    } else {
-	
-    }
+    } 
      
+    # Prepare data for template.
     $self->stash(
 	comments => \@comments
         );
@@ -146,12 +177,14 @@ sub read {
 }
 
 
-# This action reads existing comments, adds the new entered comment,
+#
+# This action reads existing comments, adds the new comment,
 # and writes things in the same json file.
+#
 sub write_post {
     my $self = shift;
     
-    my $project = $self->param('id');
+    my $project = $self->param('project');
     my $in_user = $self->session('user');
     my $in_author = $self->param('author');
     my $in_text = $self->param('text');
@@ -163,19 +196,12 @@ sub write_post {
     # Read original json file
     my $raw;
     if (-e $file) {
-	my $json;
-	do { 
-	    local $/;
-	    open my $fhm, "<", $file;
-	    $json = <$fhm>;
-	    close $fhm;
-	};
-	# Decode the entire JSON
-	$raw = decode_json( $json );
+	$raw = &read_json($file);
     } else {
+	# If the file does not exist create an empty file.
 	$raw = {
 	    "name" => "$project",
-#	    "comments" => []
+	    "comments" => []
 	};
     }
 
@@ -190,19 +216,14 @@ sub write_post {
     push(@{$raw->{"comments"}}, $comment);
 
     # Encode the entire JSON and write it to file.
-    my $json_out = encode_json( $raw );
-    do { 
-        local $/;
-        open my $fhm, ">", $file;
-        print $fhm $json_out;
-    	close $fhm;
-    };
+    &write_json( $raw, $file );
 
     # Write a message to log about this comment.
     $self->app->log->info('User [' . $in_user . '] has created comment id [' . $in_id . ']..');
     
     my $message = "Wrote comment to [$file].";
      
+    # Prepare data for template rendering.
     $self->stash( in_author => $in_author );
     $self->stash( in_time => $in_time );
     $self->stash( in_text => $in_text );
@@ -210,6 +231,222 @@ sub write_post {
 
     # Render template "comments/write_post.html.ep" with message
     $self->render(msg => $message);
+}
+
+
+#
+# This action displays the current comment for editing.
+#
+sub edit {
+    my $self = shift;
+    
+    my $in_id = $self->param('id');
+    my $in_project = $self->param('project');
+    my $in_user = $self->session('user');
+    my $in_author = "None";
+    my $in_date = "None";
+    my $in_text = "None";
+    
+    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+
+    # Read original json file
+    my $raw;
+    if (-e $file) {
+	$raw = &read_json($file);
+    } else {
+	# If the file does not exist die.
+	return undef;
+    }
+    
+    foreach my $comment (@{$raw->{'comments'}}) {
+	if ($comment->{'id'} =~ m!^${in_id}$!) {
+	    print "Found comment.\n";
+	    $in_text = $comment->{"text"};
+	    $in_author = $comment->{"author"};
+	    $in_date = $comment->{"date"};
+	    last
+	};
+    } 
+
+    # Write a message to log about this comment.
+    $self->app->log->info('User [' . $in_user . '] editing comment id [' . $in_id . ']..');
+    
+    # Prepare data for template rendering.
+    $self->stash(
+	in_author => $in_author,
+	in_id => $in_id,
+	in_text => $in_text,
+	in_project => $in_project,
+        );
+
+    # Render template "comments/edit.html.ep" 
+    $self->render();
+}
+
+
+#
+# This action reads existing comments, edit the comment with the right id,
+# and writes things in the same json file.
+#
+sub edit_post {
+    my $self = shift;
+    
+    my $in_id = $self->param('id');
+    my $in_project = $self->param('project');
+    my $in_user = $self->session('user');
+    my $in_text = $self->param('text');
+    my $in_time = localtime($in_id);
+
+    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+
+    # Read original json file
+    my $raw;
+    if (-e $file) {
+	$raw = &read_json($file);
+    } else {
+	# If the file does not exist die.
+	return undef;
+    }
+
+    foreach my $comment (@{$raw->{'comments'}}) {
+	if ($comment->{'id'} =~ m!^${in_id}$!) {
+	    # Create a new comment entry
+	    $comment->{"text"} = $in_text;
+	    last
+	};
+    } 
+
+    # Encode the entire JSON and write it to file.
+    &write_json( $raw, $file );
+
+    # Write a message to log about this comment.
+    $self->app->log->info('User [' . $in_user . '] has created comment id [' . $in_id . ']..');
+    
+    my $message = "Wrote comment to [$file].";
+     
+    # Prepare data for template rendering.
+    $self->stash( in_time => $in_time );
+    $self->stash( in_id => $in_id );
+    $self->stash( in_text => $in_text );
+    $self->stash( project => $in_project );
+
+    # Render template "comments/edit_post.html.ep" with message
+    $self->render(msg => $message);
+}
+
+
+#
+# This action displays the current comment for deleting.
+#
+sub delete {
+    my $self = shift;
+    
+    my $in_id = $self->param('id');
+    my $in_project = $self->param('project');
+    my $in_user = $self->session('user');
+    my $in_author = "None";
+    my $in_date = "None";
+    my $in_text = "None";
+    
+    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+
+    # Read original json file
+    my $raw;
+    if (-e $file) {
+	$raw = &read_json($file);
+    } else {
+	# If the file does not exist die.
+	print "Can not find file [$file].\n";
+	return undef;
+    }
+    
+    foreach my $comment (@{$raw->{'comments'}}) {
+	if ($comment->{'id'} =~ m!^${in_id}$!) {
+	    print "Found comment.\n";
+	    $in_text = $comment->{"text"};
+	    $in_author = $comment->{"author"};
+	    $in_date = $comment->{"date"};
+	    last
+	};
+    } 
+
+    # Write a message to log about this comment.
+    $self->app->log->info('User [' . $in_user . '] editing comment id [' . $in_id . ']..');
+    
+    # Prepare data for template rendering.
+    $self->stash(
+	in_author => $in_author,
+	in_id => $in_id,
+	in_text => $in_text,
+	in_project => $in_project,
+        );
+
+    # Render template "comments/delete.html.ep" 
+    $self->render();
+}
+
+
+#
+# This action reads existing comments, delete the comment with the right id,
+# and writes things in the same json file.
+#
+sub delete_post {
+    my $self = shift;
+
+    my $in_id = $self->param('id');
+    my $in_project = $self->param('project');
+    my $in_user = $self->session('user');
+    my $in_author = $self->param('author');
+    my $in_text = $self->param('text');
+    my $in_time = localtime($in_id);
+
+    print "DBG in_id $in_id.\n";
+    print "DBG in_project $in_project.\n";
+    
+    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+
+    # Read original json file
+    my $raw;
+    if (-e $file) {
+	print "DBG reading [$file] json file.\n";
+	$raw = &read_json($file);
+    } else {
+	# If the file does not exist die.
+	return undef;
+    }
+
+    print Dumper($raw);
+
+    my @comments = @{$raw->{'comments'}};
+    my $index = -1;
+    my $comments_index = scalar(@comments) - 1;
+    print "DBG scalar is $comments_index.\n";
+    foreach my $i ( 0 .. $comments_index ) {
+	my $comment = $raw->{'comments'}->[$i];
+	print "DBG $i [" . $comment->{'id'} . "] and [" . $in_id . "]\n";
+	if ($comment->{'id'} =~ m!^${in_id}$!) {
+	    $index = $i;
+	    last
+	};
+    } 
+
+    print "DBG Index for deletion is $index.\n";
+
+    splice @comments, $index, 1;
+    @{$raw->{'comments'}} = @comments;
+
+    print Dumper($raw);
+
+    # Encode the entire JSON and write it to file.
+    &write_json( $raw, $file );
+
+    # Write a message to log about this comment.
+    $self->app->log->info('User [' . $in_user . '] has deleted comment id [' . $in_id . ']..');
+    
+    my $message = "Deleted comment from [$file].";
+     
+    # Render template "comments/delete_post.html.ep" with message
+    $self->redirect_to("/comments/r/${in_project}");
 }
 
 1;

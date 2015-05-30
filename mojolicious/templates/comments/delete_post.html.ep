@@ -1,9 +1,9 @@
 % layout 'polarsys';
-% title 'Written Comment';
+% title Delete Comment';
 
 % my $project = stash "project";
 
-<h2>Comment posted</h2>
+<h2>Comment deleted</h2>
 
 <br />
               

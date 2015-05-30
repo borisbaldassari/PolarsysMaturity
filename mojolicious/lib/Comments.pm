@@ -18,28 +18,71 @@ sub startup {
   # Use application logger
   $self->app->log->info('Comments application started.');
 
+  # Initialise helper for Users module.
   $self->helper(users => sub { state $users = Comments::Model::Users->new });
 
   # Router
   my $r = $self->routes;
 
-  # Normal route to controller
+  # Non-protected routes 
+
+  # Welcome page
   $r->any('/comments/')->to('comments#welcome')->name('welcome');
-  $r->any('/comments/r/#id')->to('comments#read');
+
+  # Route to read comments
+  $r->any('/comments/r/#project')->to('comments#read');
+
+  # Route to login (displays form)
   $r->get('/comments/login')->to( template => 'comments/login' );
+
+  # Route to login (authenticates data)
   $r->post('/comments/login')->to( 'comments#login_post' );
+
+  # Route to protected area (i.e. custom 403)
   $r->any('/comments/login_needed')->to( template => 'comments/login_needed' );
+
+  # Route to logout
   $r->any('/comments/logout')->to('comments#logout');
 
+
+  # Everything under comments/w needs authentication
   my $auth = $r->under('/comments/w/')->to('comments#logged_in');
   
-  $auth->get('/#id')
+  # Route for comment writing (displays form).
+  $auth->get('/#project')
       ->to( template => 'comments/write' )
       ->name('write');
   
-  $auth->post('/#id')
+  # Route for comment writing (saves changes).
+  $auth->post('/#project')
       ->to('comments#write_post')
       ->name('write_post');
+
+  # Everything under comments/e needs authentication
+  $auth = $r->under('/comments/e/')->to('comments#logged_in');
+  
+  # Route for comment editing (displays form).
+  $auth->get('/#project/:id')
+      ->to('comments#edit')
+      ->name('edit');
+  
+  # Route for comment editing (saves changes).
+  $auth->post('/#project/:id')
+      ->to('comments#edit_post')
+      ->name('edit_post');
+
+  # Everything under comments/d needs authentication
+  $auth = $r->under('/comments/d/')->to('comments#logged_in');
+  
+  # Route for comment deleting (displays form).
+  $auth->get('/#project/:id')
+      ->to('comments#delete')
+      ->name('delete');
+  
+  # Route for comment deleting (saves changes).
+  $auth->post('/#project/:id')
+      ->to('comments#delete_post')
+      ->name('delete_post');
 
 }
 

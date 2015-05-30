@@ -1,11 +1,17 @@
 % layout 'polarsys';
-% title 'Write a comment on project';
+% title 'Delete comment';
 
 % my $reg_user = $self->session('user') || '';
 % my @reg_projects = @{$self->users->projects($reg_user)};
 % my $reg_projects_str = join(', ', @reg_projects);
 
-<h2>Add a comment to project <%= $project %></h2>
+% # retrieve data for comment.
+% my $id = stash "in_id";
+% my $author = stash "in_author";
+% my $date = localtime($id);
+% my $text = stash "in_text";
+
+<h2>Delete a comment from project <%= $project %></h2>
 
 <br />
               
@@ -18,17 +24,17 @@
 </div>
 
 % if ( scalar( grep(/^${project}$/, @reg_projects) ) != 0 ) {
-<p>Please fill the following form to add a comment to the <code><%= $project %></code> project. The date is automatically set, and all fields marked (<span style="color: red">*</span>) are mandatory.</p>
+<p>Are you sure you want to delete this comment? Note that deletion si permanente.</p>
 
 <br />
 
-<form action="<%= $project %>" method="POST">
+<form action="<%= $id %>" method="POST">
   <p>Author: (<span style="color: red">*</span>)</p>
-  <p><input name="author" type="text"></input></p>
+  <p><input name="author" type="text" value="<%= $author %>" disabled></input></p>
   <p>Text: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
-  <p><textarea name="text" cols="40" rows="20"></textarea></p>
+  <p><textarea name="text" cols="40" rows="20" disabled><%= $text %></textarea></p>
   <br /><br />
-  <input type="submit" value="Post comment"></input>
+  <input type="submit" value="Delete comment"></input>
   <input type="reset" value="Cancel"></input>
 </form>
 % } else {
