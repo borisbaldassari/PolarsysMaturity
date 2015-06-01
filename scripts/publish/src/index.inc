@@ -50,7 +50,7 @@
                         <i class="glyphicon glyphicon-folder-open"></i>&nbsp; EMF Compare</a>
                     <a href="projects/modeling.gendoc.html" class="list-group-item">
 		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Gendoc</a>
-                    <a href="projects/modeling.papyrus.html" class="list-group-item">
+                    <a href="projects/modeling.mdt.papyrus.html" class="list-group-item">
 		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Papyrus</a>
                     <a href="projects/modeling.sirius.html" class="list-group-item">
 		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Sirius</a>
