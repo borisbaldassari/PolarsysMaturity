@@ -40,7 +40,7 @@ my $html_start = <<'EOHS';
     <link href="/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
 
     <!-- Our CSS sheets -->
     <link rel="stylesheet" href="/css/main.css">
