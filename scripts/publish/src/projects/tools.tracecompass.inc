@@ -1,7 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Project tools.tracecompass</h2>
 
               <div class="tabbable">
@@ -186,7 +183,8 @@
                       </div>
                     </div>
                   </div>
-                  <div role="tabpanel" class="tab-pane fade" id="qm">              <h3>The Quality model</h3>
+                  <div role="tabpanel" class="tab-pane fade" id="qm">
+              <h3>The Quality model</h3>
             
             <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>
               <div class="row">
@@ -608,6 +606,3 @@ function click(d) {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>

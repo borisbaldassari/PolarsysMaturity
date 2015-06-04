@@ -12,6 +12,8 @@ our @EXPORT_OK = qw(
   get_html_qm
 );
 
+my $local_time = localtime();
+
 
 # Piece of HTML that be printed at the beginning of every HTML  document.
 my $html_start = <<'EOHS';
@@ -37,9 +39,6 @@ my $html_start = <<'EOHS';
     <!-- Custom CSS -->
     <link href="/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <!-- link href="/css/plugins/morris.css" rel="stylesheet" -->
-
     <!-- Custom Fonts -->
     <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -56,14 +55,21 @@ my $html_start = <<'EOHS';
     
   </head>
   <body>
-    <div id="#wrapper">
+    <div id="wrapper">
 
 EOHS
 #'
 
 
 # Piece of HTML that be printed at the end of every HTML document.
-my $html_end = <<'EOHE';
+my $html_end = "         <hr />
+         <p>This page was generated on ${local_time}.</p>";
+
+$html_end .= <<'EOHE';
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--[if lt IE 7]>
@@ -99,6 +105,7 @@ EOHE
 #'
 
 my $html_qm = <<EOHQ;
+
               <h3>The Quality model</h3>
             
             <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>

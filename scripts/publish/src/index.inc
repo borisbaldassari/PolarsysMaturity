@@ -1,21 +1,12 @@
 
-        <div id="page-wrapper">
+
+          <img src="/images/logo_polarsys.png" class="img-responsive" style="margin: 25px 0px" alt="PolarSys logo" /> 
           <div class="row">
             <div class="col-lg-12">
 
-              <h3>Maturity Assessment Home</h3>
-              
-              <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert">
-                  <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
-                </button>
-                <strong>Info:</strong> This site is an on-going work. You can <a href="/about.html" class="alert-link">participate</a> or <a href="/contact.html" class="alert-link">tell us what you think</a>.<br />
-              </div>
-              
-              
+              <h1 class="text-right"><small>Welcome to the</small> PolarSys Maturity Assessment Dashboard</h1>
 
-              <img src="/images/logo_polarsys.png" class="img-responsive pull-right" style="margin: 5px" alt="PolarSys logo" /> 
+	      <br />
               <p>You just landed on the <strong>PolarSys Maturity Assessment dashboard</strong>. </p>
               <p><a href="http://polarsys.org">PolarSys</a> is an Eclipse <a href="http://www.eclipse.org/org/workinggroups/">Industry Working Group</a> created by large industry players and by tools providers to collaborate on the creation and support of Open Source tools for the development of embedded systems. Members of PolarSys started working on a <a href="https://polarsys.org/wiki/Maturity_Assessment_WG">Maturity Assessment task force</a> back in 2013, to provide an evaluation of the quality of software components entering the PolarSys umbrella, and provide advice and guidance to projects for improving it. </p>
 
@@ -72,5 +63,3 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>

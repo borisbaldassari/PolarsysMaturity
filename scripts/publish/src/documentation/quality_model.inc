@@ -1,8 +1,3 @@
-
-
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
             
               <h3>The Quality model</h3>
             
@@ -317,7 +312,3 @@ function click(d) {
 
 <div id="details-box"><p>Click on a node to get more details.</p></div>
 
-            </div>
-          </div>
-        </div>
-        

@@ -3,14 +3,17 @@
     "menu": [
 	{
 	    "name": "Home",
+	    "icon": "fa-home",
 	    "url": "/index.html"
 	},
 	{
 	    "name": "About",
+	    "icon": "fa-bullseye",
 	    "url": "/about.html"
 	},
 	{
 	    "name": "Documentation",
+	    "icon": "fa-life-ring",
 	    "url": "/documentation/",
 	    "children": [
 		{ 
@@ -45,6 +48,7 @@
 	},
 	{
 	    "name": "Projects",
+	    "icon": "fa-dashboard",
 	    "url": "/projects/",
 	    "children": [
 		{
@@ -101,6 +105,7 @@
 	},
 	{
 	    "name": "Contact",
+	    "icon": "fa-comment-o",
 	    "url": "/contact.html"
 	}
     ],

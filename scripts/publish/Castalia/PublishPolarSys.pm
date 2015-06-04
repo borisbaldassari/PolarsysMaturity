@@ -429,7 +429,11 @@ sub aggregate_inds($$$$$) {
     return $coef;
 }
 
-
+#
+# Populates the qm for the project. Then generates all csv/json files for the project 
+# through the dedicated methods: indicators, questions, attributes
+# plus their confidence interval counterparts. 
+#
 sub generate_inds($$$) {
     my $self = shift;
     my $project_id = shift;
@@ -456,7 +460,6 @@ sub generate_inds($$$) {
 
     print "    - Generating project indicators..\n";
     &generate_downloads($project_id, 'indicators', $dir_out_projects, \%project_indicators);
-#    &generate_downloads($project_id, 'indicators', $dir_out_projects, \%project_indicators_conf);
 
     print "    - Generating project questions..\n";
     &generate_downloads($project_id, 'questions', $dir_out_projects, \%project_questions);
@@ -493,6 +496,8 @@ sub generate_inds($$$) {
     open(my $fh, '>', $out_json) or die "Could not open file '$out_json' $!";
     print $fh encode_json($raw_qm);
     close $fh;
+
+    
 }
 
 
@@ -798,9 +803,6 @@ sub generate_project($$$) {
 
     # Create tabs
     my $html_ret = '
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Project ' . $project_id . '</h2>
 
               <div class="tabbable">
@@ -1084,9 +1086,6 @@ sub generate_project($$$) {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
 ';
 
     return $html_ret;
@@ -1128,9 +1127,6 @@ sub generate_doc_attributes($) {
     print " [$vol_attrs] attributes found.\n";
     
     my $html_ret = '
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Definition of Attributes</h2>
               <p>Attributes of quality represent our measurement goals for the given context. The first step when defining attributes is to gather quality requirements, in this case both for the Eclipse foundation and the PolarSys working group. These have been summarised <a href="https://polarsys.org/wiki/EclipseQualityRequirements">on a dedicated page of the wiki</a>. We relied on different standards and norms to formalise them: ISO 9126 and 250xx for the product, CMMi for the process, and open-source quality models for the community. </p><br />
         
@@ -1157,11 +1153,6 @@ sub generate_doc_attributes($) {
     $html_ret .= '
               </ul>';
         
-    $html_ret .= '
-            </div>
-          </div>
-        </div>';
-
 
     return $html_ret;
     
@@ -1266,9 +1257,6 @@ sub generate_doc_metrics($) {
     my $raw_metrics = &read_json($file_metrics);
     
     my $html_ret = '
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Definition of metrics</h2>
               <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
         
@@ -1373,9 +1361,6 @@ sub generate_doc_metrics($) {
     }
     
     $html_ret .= '
-              </div>
-            </div>
-          </div>
         </div>';
 
 
@@ -1409,9 +1394,6 @@ sub generate_doc_questions($) {
     print " [$file_vol_questions] rules found.\n";
     
     my $html_ret = '
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Definition of Questions</h2>
               <p>Questions are mapped to quality attributes, on one side, and to metrics on the other side. It acts as a generic definition for measurement, allowing users to analyse different types of projects with the same quality tree. Questions also preserve the semantics and consistency of measures regarding associated the quality attribute, see Basili\'s Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>] for more information on this approach.</p><br />
         
@@ -1443,12 +1425,6 @@ sub generate_doc_questions($) {
     $html_ret .= '
               </ul>';
         
-    $html_ret .= '
-            </div>
-          </div>
-        </div>';
-
-
     return $html_ret;
 
 }
@@ -1488,9 +1464,6 @@ sub generate_doc_rules($) {
     }
     
     my $html_ret = '
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Definition of rules</h2>
               <p>Rules are mapped to good and bad practices, as defined by the open-source community. They are computed by open-source rule-checking tools like PMD or FindBugs. They are classified by category associated to some quality characteristics.</p><br />
         
@@ -1518,12 +1491,6 @@ sub generate_doc_rules($) {
     $html_ret .= '
               </ul>';
         
-    $html_ret .= '
-            </div>
-          </div>
-        </div>';
-
-
     return $html_ret;
 
 }
@@ -1545,9 +1512,6 @@ sub generate_doc_refs($) {
     }
     
     my $html_ret = '
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>References</h2>
               <p>All refs used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
         
@@ -1567,12 +1531,6 @@ sub generate_doc_refs($) {
     $html_ret .= '
               </ul>';
         
-    $html_ret .= '
-            </div>
-          </div>
-        </div>';
-
-
     return $html_ret;
 }
 

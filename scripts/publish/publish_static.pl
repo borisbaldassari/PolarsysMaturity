@@ -186,7 +186,7 @@ foreach my $project (@projects) {
     my $metrics_full = $publish_ps->generate_project_metrics($project_id, $project, $dir_out_projects);    
 
     # Generating project indicators, questions and attributes for $project_id.
-    my $quality = $publish_ps->generate_inds($project_id, $file_qm, $metrics_full, $dir_out_projects);
+    $publish_ps->generate_inds($project_id, $file_qm, $metrics_full, $dir_out_projects);
 
     print "  * Generating project analysis for [$project_id] from [$project] in [$dir_src_projects].\n";
     

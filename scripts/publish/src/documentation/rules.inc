@@ -1,7 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Definition of rules</h2>
               <p>Rules are mapped to good and bad practices, as defined by the open-source community. They are computed by open-source rule-checking tools like PMD or FindBugs. They are classified by category associated to some quality characteristics.</p><br />
         
@@ -2355,6 +2352,3 @@
 
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>

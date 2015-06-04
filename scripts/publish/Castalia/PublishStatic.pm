@@ -45,7 +45,7 @@ sub build_page($$$$$) {
     my $menu_ref = shift; # array ref => for the menu
 
     my $html_ret = &get_HTML_start();
-    $html_ret .= &build_title("PolarSys Maturity Assessment Dashboard &mdash; " . $title);
+    $html_ret .= &build_title("PolarSys Dashboard &mdash; v1.3");
     $html_ret .= &build_menu($menu_ref);
     # if file is a directory, create index
     if (-d $file) {
@@ -73,6 +73,7 @@ sub build_title($) {
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <div class="navbar-header">
           <!-- div class="navbar-inner" -->
           <!-- div class="container" -->
             <div class="navbar-header">
@@ -82,10 +83,10 @@ sub build_title($) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><big>' . $title . '</big></a>
+              <a class="navbar-brand" href="index.html">' . $title . '</a>
             </div>
             <!-- /div -->
-            <!-- /div -->
+            </div>
             <!-- /.navbar-header -->';
 
 
@@ -132,8 +133,11 @@ sub build_menu($) {
 
     foreach my $entry (@{$array_ref}) {
 	$html_ret .= '
-                    <li class="active"><a href="' . $entry->{'url'} . '">' . 
-		    $entry->{"name"};
+                    <li class="active"><a href="' . $entry->{'url'} . '">';
+	if (exists($entry->{"icon"})) { 
+	    $html_ret .= '<i class="fa ' . $entry->{"icon"} . ' fa-fw"></i> ';
+	}
+	$html_ret .= $entry->{"name"};
 	if (exists $entry->{"children"}) {
 	    $html_ret .= '<span class="fa arrow"></span></a>';
 	    $html_ret .= '
@@ -157,6 +161,14 @@ sub build_menu($) {
           </div></div>
         </nav>
 
+';
+
+    $html_ret .= '
+      <div id="page-wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <p class="text-right"><img class="img-responsive pull-right" src="/images/header-bg-icons.png" style="margin: 10px" alt="header icons" /></p>
 ';
     
     return $html_ret;
@@ -196,34 +208,31 @@ sub build_content_dir($) {
     }	
     
     my $html_ret = '
-      <div id="page-wrapper">
-      <div class="row">
-      <div class="col-lg-12">
       <h3>' . $path_join . '</h3>
-        <p>No index found. Here is the content of the directory:</p>
-        <br />
 
-        <div class="panel panel-default">
-          <div class="panel-heading"><b>Sub-folders</b></div>
-            <div class="panel-body">
-              <div class="list-group">
-                ' .
-		  $folders_list . '
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading"><b>Files</b></div>
-            <div class="panel-body">
-              <div class="list-group">
-                ' .
-		  $files_list . '
-              </div>
+      <br />
+
+      <p>No index found. Here is the content of the directory:</p>
+      <br />
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>Sub-folders</b></div>
+          <div class="panel-body">
+            <div class="list-group">
+              ' .
+	      $folders_list . '
             </div>
           </div>
         </div>
-      </div>
-    </div>';
+        <div class="panel panel-default">
+          <div class="panel-heading"><b>Files</b></div>
+          <div class="panel-body">
+            <div class="list-group">
+              ' .
+		  $files_list . '
+            </div>
+          </div>
+        </div>';
     $html_ret .= "";
     
     return $html_ret;

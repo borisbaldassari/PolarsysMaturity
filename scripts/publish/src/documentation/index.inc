@@ -1,8 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-
               <h3>Maturity Assessment Documentation</h3>
 
               <p>The full process is self-documented; everything needed to get the most out of the analysis process should be available from this web site. If anything is missing, please do not hesitate to <a href="/contact.html">contact us</a>.</p>
@@ -45,6 +41,3 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
