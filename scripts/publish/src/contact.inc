@@ -1,5 +1,5 @@
 
-              <h1>Contact us</h1>
+              <h2>Contact us</h2>
               
 	      <br />
 

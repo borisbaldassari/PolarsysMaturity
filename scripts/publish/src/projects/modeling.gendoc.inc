@@ -4,7 +4,7 @@
               <div class="tabbable">
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
-                  <li role="presentation" class=""><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
@@ -38,10 +38,11 @@
                         </dl>
                       </div>
                       <div class="col-sm-6">
+                        <p class="text-right" style="font-weight: bold">Global rating: <span style="color: #DA7A08; font-size: 300%">3.0</span> / 5 &mdash; Completeness: 41 / 45</p><br />
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-8">
+                      <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
@@ -74,13 +75,31 @@
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Summary</div>
+                        <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Web <a href="http://www.eclipse.org/gendoc">http://www.eclipse.org/gendoc</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Wiki <a href="https://wiki.eclipse.org/Gendoc">https://wiki.eclipse.org/Gendoc</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-download"></span> Downloads <a href=""></a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Documentation <a href=""></a></dd>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Getting Started <a href=""></a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/gendoc">http://www.eclipse.org/gendoc</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="https://wiki.eclipse.org/Gendoc">https://wiki.eclipse.org/Gendoc</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href=""></a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href=""></a></dd>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href=""></a></dd>
+                        </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Comments</div>
+                        <ul class="list-group">
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/modeling.gendoc/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.gendoc/1432622852"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BB2</strong> on Mon May 25 11:08:32 2015<br />this is another authorised comment.
+sqdf</li>
+                          <li class="list-group-item">
+                            <a href="/comments/w/modeling.gendoc">
+                            <div class="pull-right"><span class="fa fa-plus"></span></div>
+                            Add a comment? (Authentication required)</a>
+                          </li>
                         </ul>
                         </div>
                       </div>

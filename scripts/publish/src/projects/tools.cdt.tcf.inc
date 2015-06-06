@@ -4,7 +4,7 @@
               <div class="tabbable">
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
-                  <li role="presentation" class=""><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
@@ -37,10 +37,11 @@
                         </dl>
                       </div>
                       <div class="col-sm-6">
+                        <p class="text-right" style="font-weight: bold">Global rating: <span style="color: #DA7A08; font-size: 300%">3.3</span> / 5 &mdash; Completeness: 27 / 45</p><br />
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-8">
+                      <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
@@ -73,13 +74,24 @@
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Summary</div>
+                        <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Web <a href="http://www.eclipse.org/tcf">http://www.eclipse.org/tcf</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Wiki <a href="http://wiki.eclipse.org/TCF">http://wiki.eclipse.org/TCF</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-download"></span> Downloads <a href="http://eclipse.org/tcf/downloads.php">http://eclipse.org/tcf/downloads.php</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Documentation <a href="http://git.eclipse.org/c/tcf/org.eclipse.tcf.git/plain/docs/index.html">http://git.eclipse.org/c/tcf/org.eclipse.tcf.git/plain/docs/index.html</a></dd>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Getting Started <a href="http://eclipse.org/tcf/documentation.php">http://eclipse.org/tcf/documentation.php</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/tcf">http://www.eclipse.org/tcf</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="http://wiki.eclipse.org/TCF">http://wiki.eclipse.org/TCF</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href="http://eclipse.org/tcf/downloads.php">http://eclipse.org/tcf/downloads.php</a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href="http://git.eclipse.org/c/tcf/org.eclipse.tcf.git/plain/docs/index.html">http://git.eclipse.org/c/tcf/org.eclipse.tcf.git/plain/docs/index.html</a></dd>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href="http://eclipse.org/tcf/documentation.php">http://eclipse.org/tcf/documentation.php</a></dd>
+                        </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Comments</div>
+                        <ul class="list-group">
+                          <li class="list-group-item">
+                            <a href="/comments/w/tools.cdt.tcf">
+                            <div class="pull-right"><span class="fa fa-plus"></span></div>
+                            Add a comment? (Authentication required)</a>
+                          </li>
                         </ul>
                         </div>
                       </div>
@@ -625,6 +637,7 @@ function click(d) {
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [LINE_COVERAGE] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [COMMENT_LINES_DENSITY] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCC_REU_IDX] is missing.</li>
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find comments file [../../projects//tools.cdt.tcf/tools.cdt.tcf_comments.json] for [tools.cdt.tcf].</li>
                     </ul>
                   </div>
                 </div>

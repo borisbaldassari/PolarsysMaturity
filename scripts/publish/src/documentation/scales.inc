@@ -1,5 +1,5 @@
 
-              <h3>Scales</h3>
+              <h2>Scales</h2>
 
               <p><strong>Scales</strong> are used to <em>normalise values of projects</em>; few people can tell if a value of 2.3 violations per thousands of lines of code is high, fair or low. In order to help people understand and better grasp the meaning and consequences of the values, a 5-level scale has been setup. These pages give more information on the selection of thresholds for all metrics, sorted according to their origin (repository).</p>
               

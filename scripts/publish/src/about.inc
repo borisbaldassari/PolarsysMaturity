@@ -1,5 +1,5 @@
 
-	      <h1 id="about_maturity_assessment">About the maturity assessment project</h1>
+	      <h2 id="about_maturity_assessment">About the maturity assessment project</h2>
 
 	      <br />
 
