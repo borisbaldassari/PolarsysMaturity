@@ -76,11 +76,13 @@
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/emf/compare/">http://www.eclipse.org/emf/compare/</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href="http://www.eclipse.org/emf/compare/downloads/">http://www.eclipse.org/emf/compare/downloads/</a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href="http://wiki.eclipse.org/EMF_Compare/User_Guide">http://wiki.eclipse.org/EMF_Compare/User_Guide</a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="http://dashboard.eclipse.org/project.html?project=modeling.emfcompare">Link to dashboard</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="http://www.eclipse.org/emf/compare/">http://www.eclipse.org/emf/compare/</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href="http://www.eclipse.org/emf/compare/downloads/">http://www.eclipse.org/emf/compare/downloads/</a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href="http://wiki.eclipse.org/EMF_Compare/User_Guide">http://wiki.eclipse.org/EMF_Compare/User_Guide</a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://dev.eclipse.org/mailman/listinfo/emf-dev">Developer ML</a> ] &nbsp; [ <a href="http://eclipse.org/forums/eclipse.emfcompare">User Forums</a> ]</dd>
                         </ul>
                         </div>
                       </div>
@@ -89,22 +91,22 @@
                         <ul class="list-group">
                           <li class="list-group-item">
                             <div class="pull-right">
-	                      <a href="/comments/e/modeling.emfcompare/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
-                              <a href="/comments/d/modeling.emfcompare/1432622852"><i class="fa fa-trash-o"></i></a>
-	    </div>
-                            <strong>qsdf</strong> on Thu May 21 13:02:35 2015<br />qsdfsdqf</li>
-                          <li class="list-group-item">
-                            <div class="pull-right">
 	                      <a href="/comments/e/modeling.emfcompare/1432622853"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.emfcompare/1432622853"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB1</strong> on Mon May 25 11:08:04 2015<br />this is an authorised comment.</li>
+                            <strong>BB1</strong> on NCC_ANA_IDX (Mon May 25 11:08:04 2015)<br />this is an authorised comment.</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/modeling.emfcompare/1432622855"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.emfcompare/1432622855"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>dsg</strong> on Mon May 25 16:23:09 2015<br />sdfgsdfgsdfgs</li>
+                            <strong>dsg</strong> on QM_ACTIVITY (Mon May 25 16:23:09 2015)<br />sdfgsdfgsdfgs</li>
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/modeling.emfcompare/1433658766"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.emfcompare/1433658766"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BBaldassari</strong> on  (Sun Jun  7 08:32:46 2015)<br />this is a test just to make sure everything actually works. No mnemo?</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.emfcompare">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>

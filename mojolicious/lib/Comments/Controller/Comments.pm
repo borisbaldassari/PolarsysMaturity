@@ -1,6 +1,7 @@
 package Comments::Controller::Comments;
 use Mojo::Base 'Mojolicious::Controller';
 
+use List::MoreUtils qw(uniq);
 use Data::Dumper;
 use JSON qw( decode_json encode_json );
 
@@ -185,14 +186,15 @@ sub find_nodes($) {
     my @nodes_ret;
 
     foreach my $node (@{$nodes}) {
-	push(@nodes_ret, $node->{'mnemo'});
+	my $mnemo = $node->{'mnemo'};
+	push(@nodes_ret, $mnemo);
 	if (exists($node->{'children'})) {
 	    my @nodes_new = &find_nodes($node->{'children'});
 	    push(@nodes_ret, @{nodes_new});
 	}
     }
     
-    return @nodes_ret;
+    return uniq(@nodes_ret);
 
 }
 
@@ -306,7 +308,6 @@ sub edit {
     
     foreach my $comment (@{$raw->{'comments'}}) {
 	if ($comment->{'id'} =~ m!^${in_id}$!) {
-	    print "Found comment.\n";
 	    $in_text = $comment->{"text"};
 	    $in_author = $comment->{"author"};
 	    $in_date = $comment->{"date"};
@@ -314,6 +315,14 @@ sub edit {
 	    last
 	};
     } 
+
+    my $file_list = $dir_data . "/polarsys_qm.json";    
+    $raw = &read_json($file_list);
+    my $children = $raw->{'children'};
+    my @mnemos = &find_nodes($children);
+
+    # Prepare data for template rendering.
+    $self->stash( mnemos => \@mnemos );
 
     # Write a message to log about this comment.
     $self->app->log->info('User [' . $in_user . '] editing comment id [' . $in_id . ']..');
@@ -325,6 +334,7 @@ sub edit {
 	in_text => $in_text,
 	in_project => $in_project,
 	in_mnemo => $in_mnemo,
+	in_list => \@mnemos,
         );
 
     # Render template "comments/edit.html.ep" 
@@ -396,6 +406,7 @@ sub delete {
     my $in_project = $self->param('project');
     my $in_user = $self->session('user');
     my $in_author = "None";
+    my $in_mnemo = "None";
     my $in_date = "None";
     my $in_text = "None";
     
@@ -413,9 +424,9 @@ sub delete {
     
     foreach my $comment (@{$raw->{'comments'}}) {
 	if ($comment->{'id'} =~ m!^${in_id}$!) {
-	    print "Found comment.\n";
 	    $in_text = $comment->{"text"};
 	    $in_author = $comment->{"author"};
+	    $in_mnemo = $comment->{"mnemo"};
 	    $in_date = $comment->{"date"};
 	    last
 	};
@@ -428,6 +439,7 @@ sub delete {
     $self->stash(
 	in_author => $in_author,
 	in_id => $in_id,
+	in_mnemo => $in_mnemo,
 	in_text => $in_text,
 	in_project => $in_project,
         );
@@ -463,8 +475,6 @@ sub delete_post {
 	return undef;
     }
 
-    print Dumper($raw);
-
     my @comments = @{$raw->{'comments'}};
     my $index = -1;
     my $comments_index = scalar(@comments) - 1;
@@ -478,8 +488,6 @@ sub delete_post {
 
     splice @comments, $index, 1;
     @{$raw->{'comments'}} = @comments;
-
-    print Dumper($raw);
 
     # Encode the entire JSON and write it to file.
     &write_json( $raw, $file );

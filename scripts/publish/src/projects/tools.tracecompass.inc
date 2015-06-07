@@ -76,11 +76,13 @@
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/tracecompass">http://www.eclipse.org/tracecompass</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="https://wiki.eclipse.org/Trace_Compass">https://wiki.eclipse.org/Trace_Compass</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href="http://download.eclipse.org/tracecompass/releases/0.1.0/rcp/">http://download.eclipse.org/tracecompass/releases/0.1.0/rcp/</a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href="https://wiki.eclipse.org/Trace_Compass#User_Guides">https://wiki.eclipse.org/Trace_Compass#User_Guides</a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href="https://wiki.eclipse.org/Trace_Compass/Development_Environment_Setup">https://wiki.eclipse.org/Trace_Compass/Development_Environment_Setup</a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="http://dashboard.eclipse.org/project.html?project=tools.tracecompass">Link to dashboard</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="http://www.eclipse.org/tracecompass">http://www.eclipse.org/tracecompass</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="https://wiki.eclipse.org/Trace_Compass">https://wiki.eclipse.org/Trace_Compass</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href="http://download.eclipse.org/tracecompass/releases/0.1.0/rcp/">http://download.eclipse.org/tracecompass/releases/0.1.0/rcp/</a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href="https://wiki.eclipse.org/Trace_Compass#User_Guides">https://wiki.eclipse.org/Trace_Compass#User_Guides</a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href="https://wiki.eclipse.org/Trace_Compass/Development_Environment_Setup">https://wiki.eclipse.org/Trace_Compass/Development_Environment_Setup</a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://dev.eclipse.org/mailman/listinfo/tracecompass-dev">Developer ML</a> ] &nbsp; [ <a href="irc://irc.oftc.net/tracecompass">User Forums</a> ]</dd>
                         </ul>
                         </div>
                       </div>
@@ -92,7 +94,7 @@
 	                      <a href="/comments/e/tools.tracecompass/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/tools.tracecompass/1432622852"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB2</strong> on Tue May 12 09:17:29 2015<br />This is another test 
+                            <strong>BB2</strong> on  (Tue May 12 09:17:29 2015)<br />This is another test 
 
 It should be put on txo separate paragraphs.</li>
                           <li class="list-group-item">
@@ -100,13 +102,13 @@ It should be put on txo separate paragraphs.</li>
 	                      <a href="/comments/e/tools.tracecompass/1432622855"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/tools.tracecompass/1432622855"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB3</strong> on Tue May 12 09:18:26 2015<br />this is another thrid test.</li>
+                            <strong>BB3</strong> on  (Tue May 12 09:18:26 2015)<br />this is another thrid test.</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/tools.tracecompass/1432622853"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/tools.tracecompass/1432622853"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB4</strong> on Tue May 12 09:22:20 2015<br />tests are numerous.
+                            <strong>BB4</strong> on  (Tue May 12 09:22:20 2015)<br />tests are numerous.
 
 Everything should work fine now.</li>
                           <li class="list-group-item">

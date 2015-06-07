@@ -77,11 +77,13 @@
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/gendoc">http://www.eclipse.org/gendoc</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="https://wiki.eclipse.org/Gendoc">https://wiki.eclipse.org/Gendoc</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href=""></a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href=""></a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href=""></a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="http://dashboard.eclipse.org/project.html?project=modeling.gendoc">Link to dashboard</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="http://www.eclipse.org/gendoc">http://www.eclipse.org/gendoc</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="https://wiki.eclipse.org/Gendoc">https://wiki.eclipse.org/Gendoc</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href=""></a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href=""></a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href=""></a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://dev.eclipse.org/mailman/listinfo/gendoc-dev">Developer ML</a> ] &nbsp; [ <a href="http://eclipse.org/forums/eclipse.gendoc">User Forums</a> ]</dd>
                         </ul>
                         </div>
                       </div>
@@ -93,7 +95,7 @@
 	                      <a href="/comments/e/modeling.gendoc/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.gendoc/1432622852"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB2</strong> on Mon May 25 11:08:32 2015<br />this is another authorised comment.
+                            <strong>BB2</strong> on  (Mon May 25 11:08:32 2015)<br />this is another authorised comment.
 sqdf</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.gendoc">

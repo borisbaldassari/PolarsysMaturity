@@ -76,11 +76,13 @@
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/cdt">http://www.eclipse.org/cdt</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="http://wiki.eclipse.org/index.php/CDT">http://wiki.eclipse.org/index.php/CDT</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href="http://wiki.eclipse.org/index.php/CDT">http://wiki.eclipse.org/index.php/CDT</a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href="http://dev.eclipse.org/viewcvs/indextools.cgi/%7Echeckout%7E/cdt-home/user/Tutorials.html">http://dev.eclipse.org/viewcvs/indextools.cgi/%7Echeckout%7E/cdt-home/user/Tutorials.html</a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="http://dashboard.eclipse.org/project.html?project=tools.cdt">Link to dashboard</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="http://www.eclipse.org/cdt">http://www.eclipse.org/cdt</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="http://wiki.eclipse.org/index.php/CDT">http://wiki.eclipse.org/index.php/CDT</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href="http://wiki.eclipse.org/index.php/CDT">http://wiki.eclipse.org/index.php/CDT</a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href="http://dev.eclipse.org/viewcvs/indextools.cgi/%7Echeckout%7E/cdt-home/user/Tutorials.html">http://dev.eclipse.org/viewcvs/indextools.cgi/%7Echeckout%7E/cdt-home/user/Tutorials.html</a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://dev.eclipse.org/mailman/listinfo/cdt-dev">Developer ML</a> ] &nbsp; [ <a href="http://www.eclipse.org/forums/eclipse.tools.cdt">User Forums</a> ]</dd>
                         </ul>
                         </div>
                       </div>

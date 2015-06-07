@@ -11,6 +11,7 @@
 % my $mnemo = stash "in_mnemo";
 % my $date = localtime($id);
 % my $text = stash "in_text";
+% my $mnemos = stash "mnemos";
 
 <h2>Edit a comment to project <%= $project %></h2>
 
@@ -30,15 +31,26 @@
 <br />
 
 <form action="<%= $id %>" method="POST">
-  <p>Author: (<span style="color: red">*</span>)</p>
+  <div class="row"><div class="col-md-6">
+  <p><strong>Author</strong>: (<span style="color: red">*</span>)</p>
   <p><input name="author" type="text" value="<%= $author %>" disabled></input></p>
-  <p>Node mnemo: (<span style="color: red">*</span>)</p>
-  <p><input name="mnemo" type="text" value="<%= $mnemo %>"></input></p>
-  <p>Text: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
-  <p><textarea name="text" cols="40" rows="20"><%= $text %></textarea></p>
-  <br /><br />
+  <p><strong>Node mnemo</strong>: (<span style="color: red">*</span>)</p>
+  <p><select name="mnemo">
+% foreach my $node (sort @{$mnemos}) {
+%   if ($node =~ m!^${mnemo}$!) {
+    <option selected="selected"><%= $node %></option>
+%   } else {
+    <option><%= $node %></option>
+%   }
+% }
+  </select></p>
+  </div><div class="col-md-6">
+  <p><strong>Text</strong>: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
+  <p><textarea name="text" cols="40" rows="6"><%= $text %></textarea></p>
+  </div></div>
+  <br />
   <input type="submit" value="Edit comment"></input>
-  <input type="reset" value="Cancel"></input>
+  <input type="button" value="Cancel" onclick="history.go(-1);" /></input>
 </form>
 % } else {
 <p>Sorry, user <code><%= $self->session('user') %></code> is not authorised to post a comment on this project. You can only submit a comment on project(s) <code><%= $reg_projects_str %></code>.</p> 

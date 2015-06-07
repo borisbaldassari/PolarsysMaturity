@@ -77,17 +77,31 @@
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="https://polarsys.org/kitalpha/">https://polarsys.org/kitalpha/</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="https://polarsys.org/wiki/kitalpha">https://polarsys.org/wiki/kitalpha</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href=""></a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href=""></a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href=""></a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="">Not defined</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="https://polarsys.org/kitalpha/">https://polarsys.org/kitalpha/</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="https://polarsys.org/wiki/kitalpha">https://polarsys.org/wiki/kitalpha</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href=""></a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href=""></a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href=""></a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://polarsys.org/mailman/listinfo/kitalpha-dev">Developer ML</a> ] &nbsp; [ <a href="None">Usr not defined</a> ]</dd>
                         </ul>
                         </div>
                       </div>
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">Comments</div>
                         <ul class="list-group">
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/polarsys.kitalpha/1433661345"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/polarsys.kitalpha/1433661345"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BBaldassari</strong> on MLS_USR_DIVERSITY (Sun Jun  7 09:15:45 2015)<br />this isq mlaj mlakj malkzerj a mlkj. ANOTHER TEST.</li>
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/polarsys.kitalpha/1433663596"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/polarsys.kitalpha/1433663596"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BBaldassari</strong> on PLAN_REVIEWS_SUCCESS_RATE (Sun Jun  7 09:53:16 2015)<br />dsqf sqsqd fqs fs</li>
                           <li class="list-group-item">
                             <a href="/comments/w/polarsys.kitalpha">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -624,7 +638,6 @@ function click(d) {
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [LINE_COVERAGE] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [COMMENT_LINES_DENSITY] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCC_REU_IDX] is missing.</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find comments file [../../projects//polarsys.kitalpha/polarsys.kitalpha_comments.json] for [polarsys.kitalpha].</li>
                     </ul>
                   </div>
                 </div>

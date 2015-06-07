@@ -76,11 +76,13 @@
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/ease">http://www.eclipse.org/ease</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="https://wiki.eclipse.org/EASE">https://wiki.eclipse.org/EASE</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href=""></a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href=""></a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href=""></a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="http://dashboard.eclipse.org/project.html?project=technology.ease">Link to dashboard</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="http://www.eclipse.org/ease">http://www.eclipse.org/ease</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="https://wiki.eclipse.org/EASE">https://wiki.eclipse.org/EASE</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href=""></a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href=""></a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href=""></a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://dev.eclipse.org/mailman/listinfo/ease-dev">Developer ML</a> ] &nbsp; [ <a href="None">Usr not defined</a> ]</dd>
                         </ul>
                         </div>
                       </div>
@@ -92,7 +94,7 @@
 	                      <a href="/comments/e/technology.ease/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/technology.ease/1432622852"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BBaldassari</strong> on Thu May 21 12:33:05 2015<br />trset alkj mklaa </li>
+                            <strong>BBaldassari</strong> on  (Thu May 21 12:33:05 2015)<br />trset alkj mklaa </li>
                           <li class="list-group-item">
                             <a href="/comments/w/technology.ease">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>

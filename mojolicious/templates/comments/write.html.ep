@@ -24,6 +24,7 @@
 <br />
 
 <form action="<%= $project %>" method="POST">
+<div class="row"><div class="col-md-6">
   <p>Author: (<span style="color: red">*</span>)</p>
   <p><input name="author" type="text"></input></p>
   <p>Node: (<span style="color: red">*</span>)</p>
@@ -32,11 +33,13 @@
     <option><%= $node %></option>
 % }
   </select></p>
+</div><div class="col-md-6">
   <p>Text: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
-  <p><textarea name="text" cols="40" rows="20"></textarea></p>
-  <br /><br />
+  <p><textarea name="text" cols="40" rows="6"></textarea></p>
+</div></div>
+  <br />
   <input type="submit" value="Post comment"></input>
-  <input type="reset" value="Cancel"></input>
+  <input type="button" value="Cancel" onclick="history.go(-1);" /></input>
 </form>
 % } else {
 <p>Sorry, user <code><%= $self->session('user') %></code> is not authorised to post a comment on this project. You can only submit a comment on project(s) <code><%= $reg_projects_str %></code>.</p> 

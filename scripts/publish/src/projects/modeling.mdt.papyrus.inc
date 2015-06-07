@@ -76,17 +76,31 @@
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="http://www.eclipse.org/papyrus">http://www.eclipse.org/papyrus</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="http://wiki.eclipse.org/MDT/Papyrus">http://wiki.eclipse.org/MDT/Papyrus</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href="http://www.eclipse.org/modeling/mdt/papyrus/downloads/">http://www.eclipse.org/modeling/mdt/papyrus/downloads/</a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href="http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php">http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php</a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href="http://www.eclipse.org/papyrus/updates/index.php">http://www.eclipse.org/papyrus/updates/index.php</a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="http://dashboard.eclipse.org/project.html?project=modeling.mdt.papyrus">Link to dashboard</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="http://www.eclipse.org/papyrus">http://www.eclipse.org/papyrus</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="http://wiki.eclipse.org/MDT/Papyrus">http://wiki.eclipse.org/MDT/Papyrus</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href="http://www.eclipse.org/modeling/mdt/papyrus/downloads/">http://www.eclipse.org/modeling/mdt/papyrus/downloads/</a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href="http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php">http://www.eclipse.org/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php</a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href="http://www.eclipse.org/papyrus/updates/index.php">http://www.eclipse.org/papyrus/updates/index.php</a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://dev.eclipse.org/mailman/listinfo/mdt-papyrus.dev">Developer ML</a> ] &nbsp; [ <a href="http://www.eclipse.org/forums/eclipse.papyrus">User Forums</a> ]</dd>
                         </ul>
                         </div>
                       </div>
                       <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">Comments</div>
                         <ul class="list-group">
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/modeling.mdt.papyrus/1433660996"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.mdt.papyrus/1433660996"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BB2</strong> on  (Sun Jun  7 09:09:56 2015)<br />this is a simple test.</li>
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/modeling.mdt.papyrus/1433661211"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.mdt.papyrus/1433661211"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BBaldassari</strong> on dd (Sun Jun  7 09:13:31 2015)<br /> mlkj mlkqs jmlkjsmlzekjrmazl jmlakja er</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.mdt.papyrus">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -643,7 +657,6 @@ function click(d) {
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [LINE_COVERAGE] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [COMMENT_LINES_DENSITY] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [NCC_REU_IDX] is missing.</li>
-                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Cannot find comments file [../../projects//modeling.mdt.papyrus/modeling.mdt.papyrus_comments.json] for [modeling.mdt.papyrus].</li>
                     </ul>
                   </div>
                 </div>

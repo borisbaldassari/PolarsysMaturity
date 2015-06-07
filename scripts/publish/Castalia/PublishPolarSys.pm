@@ -587,11 +587,23 @@ sub generate_project($$$) {
 	$project_pmi{'dl'} = $project->{"download_url"}->[0]->{"url"} || "";
 	$project_pmi{'doc'} = $project->{"documentation_url"}->[0]->{"url"} || "";
 	$project_pmi{'gs'} = $project->{"gettingstarted_url"}->[0]->{"url"} || "";
+	if ( ref( $project->{"dev_list"} ) =~ m!HASH!) {
+	    $project_pmi{'mls_dev'} = $project->{"dev_list"}->{"url"} || "";
+	} else {
+	    $project_pmi{'mls_dev'} = "";
+	}
+	$project_pmi{'mls_usr'} = $project->{"forums"}->[0]->{"url"} || "";
 	$pmi_ok = 1;
     } else {
 	my $err = "ERR: Cannot find PMI file [$path_pmi] for [$project_id].";
 	push( @{$project_errors{$project_id}}, $err);
         print "\n$err\n";
+    }
+
+    # Try to guess the dashboard url.
+    my $url_dashboard = "";
+    if ($project_id !~ m/^polarsys./i) { 
+	$url_dashboard = 'http://dashboard.eclipse.org/project.html?project=' . $project_id;
     }
 
     # Import attributes file for project
@@ -913,14 +925,20 @@ sub generate_project($$$) {
                       <div class="col-sm-4">';
     
     # Display Summpary for PMI.
+    my $url_dashboard_ok = $url_dashboard !~ m!^$! ? "Link to dashboard" : "Not defined";
+    my $mls_dev_ok = $project_pmi{'mls_dev'} !~ m!^$! ? "Developer ML" : "Dev not defined";
+    my $mls_usr_ok = $project_pmi{'mls_usr'} !~ m!^$! ? "User Forums" : "Usr not defined";
     $html_ret .= '
                         <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Web <a href="' . ($project_pmi{'web'} || "") . '">' . ($project_pmi{'web'} || "") . '</a></li>
-                          <li class="list-group-item"><span class="fa fa-globe"></span> Wiki <a href="' . ($project_pmi{'wiki'} || "") . '">' . ($project_pmi{'wiki'} || "") . '</a></li>
-                          <li class="list-group-item"><span class="fa fa-download"></span> Downloads <a href="' . ($project_pmi{'dl'} || "") . '">' . ($project_pmi{'dl'} || "") . '</a></li>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Documentation <a href="' . ($project_pmi{'doc'} || "") . '">' . ($project_pmi{'doc'} || "") . '</a></dd>
-                          <li class="list-group-item"><span class="fa fa-question-circle"></span> Getting Started <a href="' . ($project_pmi{'gs'} || "") . '">' . ($project_pmi{'gs'} || "") . '</a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="' . ($url_dashboard || "") . '">' . $url_dashboard_ok . '</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="' . ($project_pmi{'web'} || "") . '">' . ($project_pmi{'web'} || "") . '</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="' . ($project_pmi{'wiki'} || "") . '">' . ($project_pmi{'wiki'} || "") . '</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href="' . ($project_pmi{'dl'} || "") . '">' . ($project_pmi{'dl'} || "") . '</a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href="' . ($project_pmi{'doc'} || "") . '">' . ($project_pmi{'doc'} || "") . '</a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href="' . ($project_pmi{'gs'} || "") . '">' . ($project_pmi{'gs'} || "") . '</a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="' . ($project_pmi{'mls_dev'} || "") . '">' . $mls_dev_ok 
+			  . '</a> ] &nbsp; [ <a href="' . ($project_pmi{'mls_usr'} || "None") . '">' . $mls_usr_ok . '</a> ]</dd>
                         </ul>
                         </div>';
 
@@ -952,8 +970,9 @@ sub generate_project($$$) {
 	                      <a href="/comments/e/' . $project_id . '/' . $comment->{'id'} . '"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/' . $project_id . '/' . $comment->{'id'} . '"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>' . $comment->{'author'} . '</strong> on ' 
-			  . $comment->{'date'} . '<br />'
+                            <strong>' . $comment->{'author'} . '</strong> on <strong>' 
+			  . ( $comment->{'mnemo'} || "" ) . '</strong> ('
+			  . ( $comment->{'date'} || "" ) . ')<br />'
 			  . $comment->{'text'} . '</li>';
     }
 
