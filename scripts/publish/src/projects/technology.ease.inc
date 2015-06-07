@@ -94,7 +94,7 @@
 	                      <a href="/comments/e/technology.ease/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/technology.ease/1432622852"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BBaldassari</strong> on  (Thu May 21 12:33:05 2015)<br />trset alkj mklaa </li>
+                            <strong>BBaldassari</strong> on <strong></strong> (Thu May 21 12:33:05 2015)<br />trset alkj mklaa </li>
                           <li class="list-group-item">
                             <a href="/comments/w/technology.ease">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -325,12 +325,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 

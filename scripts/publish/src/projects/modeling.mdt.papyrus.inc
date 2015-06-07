@@ -94,13 +94,13 @@
 	                      <a href="/comments/e/modeling.mdt.papyrus/1433660996"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.mdt.papyrus/1433660996"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB2</strong> on  (Sun Jun  7 09:09:56 2015)<br />this is a simple test.</li>
+                            <strong>BB2</strong> on <strong></strong> (Sun Jun  7 09:09:56 2015)<br />this is a simple test.</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/modeling.mdt.papyrus/1433661211"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.mdt.papyrus/1433661211"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BBaldassari</strong> on dd (Sun Jun  7 09:13:31 2015)<br /> mlkj mlkqs jmlkjsmlzekjrmazl jmlakja er</li>
+                            <strong>BBaldassari</strong> on <strong>dd</strong> (Sun Jun  7 09:13:31 2015)<br /> mlkj mlkqs jmlkjsmlzekjrmazl jmlakja er</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.mdt.papyrus">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -331,12 +331,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 

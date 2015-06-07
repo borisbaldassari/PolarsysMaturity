@@ -94,19 +94,19 @@
 	                      <a href="/comments/e/modeling.emfcompare/1432622853"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.emfcompare/1432622853"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB1</strong> on NCC_ANA_IDX (Mon May 25 11:08:04 2015)<br />this is an authorised comment.</li>
+                            <strong>BB1</strong> on <strong>NCC_ANA_IDX</strong> (Mon May 25 11:08:04 2015)<br />this is an authorised comment.</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/modeling.emfcompare/1432622855"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.emfcompare/1432622855"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>dsg</strong> on QM_ACTIVITY (Mon May 25 16:23:09 2015)<br />sdfgsdfgsdfgs</li>
+                            <strong>dsg</strong> on <strong>QM_ACTIVITY</strong> (Mon May 25 16:23:09 2015)<br />sdfgsdfgsdfgs</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/modeling.emfcompare/1433658766"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.emfcompare/1433658766"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BBaldassari</strong> on  (Sun Jun  7 08:32:46 2015)<br />this is a test just to make sure everything actually works. No mnemo?</li>
+                            <strong>BBaldassari</strong> on <strong></strong> (Sun Jun  7 08:32:46 2015)<br />this is a test just to make sure everything actually works. No mnemo?</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.emfcompare">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -337,12 +337,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 

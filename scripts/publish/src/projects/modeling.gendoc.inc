@@ -95,7 +95,7 @@
 	                      <a href="/comments/e/modeling.gendoc/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.gendoc/1432622852"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB2</strong> on  (Mon May 25 11:08:32 2015)<br />this is another authorised comment.
+                            <strong>BB2</strong> on <strong></strong> (Mon May 25 11:08:32 2015)<br />this is another authorised comment.
 sqdf</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.gendoc">
@@ -327,12 +327,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 

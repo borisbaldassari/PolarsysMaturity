@@ -94,7 +94,7 @@
 	                      <a href="/comments/e/tools.tracecompass/1432622852"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/tools.tracecompass/1432622852"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB2</strong> on  (Tue May 12 09:17:29 2015)<br />This is another test 
+                            <strong>BB2</strong> on <strong></strong> (Tue May 12 09:17:29 2015)<br />This is another test 
 
 It should be put on txo separate paragraphs.</li>
                           <li class="list-group-item">
@@ -102,13 +102,13 @@ It should be put on txo separate paragraphs.</li>
 	                      <a href="/comments/e/tools.tracecompass/1432622855"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/tools.tracecompass/1432622855"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB3</strong> on  (Tue May 12 09:18:26 2015)<br />this is another thrid test.</li>
+                            <strong>BB3</strong> on <strong></strong> (Tue May 12 09:18:26 2015)<br />this is another thrid test.</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/tools.tracecompass/1432622853"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/tools.tracecompass/1432622853"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BB4</strong> on  (Tue May 12 09:22:20 2015)<br />tests are numerous.
+                            <strong>BB4</strong> on <strong></strong> (Tue May 12 09:22:20 2015)<br />tests are numerous.
 
 Everything should work fine now.</li>
                           <li class="list-group-item">
@@ -341,12 +341,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 

@@ -94,13 +94,13 @@
 	                      <a href="/comments/e/polarsys.capella/1432622532"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/polarsys.capella/1432622532"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>C</strong> on  (Tue May 26 08:42:12 2015)<br />C</li>
+                            <strong>C</strong> on <strong></strong> (Tue May 26 08:42:12 2015)<br />C</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/polarsys.capella/1432622712"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/polarsys.capella/1432622712"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>anonymous</strong> on  (Tue May 26 08:45:12 2015)<br />ahahahah i'm anonymous!</li>
+                            <strong>anonymous</strong> on <strong></strong> (Tue May 26 08:45:12 2015)<br />ahahahah i'm anonymous!</li>
                           <li class="list-group-item">
                             <a href="/comments/w/polarsys.capella">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -331,12 +331,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 

@@ -95,19 +95,19 @@
 	                      <a href="/comments/e/modeling.sirius/1433008941"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.sirius/1433008941"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>qsdf</strong> on  (Sat May 30 20:02:21 2015)<br />qsfdqsd qs q qd q</li>
+                            <strong>qsdf</strong> on <strong></strong> (Sat May 30 20:02:21 2015)<br />qsfdqsd qs q qd q</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/modeling.sirius/1433009053"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.sirius/1433009053"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>sdf s fsfsf s</strong> on  (Sat May 30 20:04:13 2015)<br />fsdvsfvsdbsdb</li>
+                            <strong>sdf s fsfsf s</strong> on <strong></strong> (Sat May 30 20:04:13 2015)<br />fsdvsfvsdbsdb</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/modeling.sirius/1433010619"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/modeling.sirius/1433010619"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>dsfs</strong> on  (Sat May 30 20:30:19 2015)<br />sfg</li>
+                            <strong>dsfs</strong> on <strong></strong> (Sat May 30 20:30:19 2015)<br />sfg</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.sirius">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -338,12 +338,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 

@@ -95,13 +95,13 @@
 	                      <a href="/comments/e/polarsys.kitalpha/1433661345"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/polarsys.kitalpha/1433661345"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BBaldassari</strong> on MLS_USR_DIVERSITY (Sun Jun  7 09:15:45 2015)<br />this isq mlaj mlakj malkzerj a mlkj. ANOTHER TEST.</li>
+                            <strong>BBaldassari</strong> on <strong>MLS_USR_DIVERSITY</strong> (Sun Jun  7 09:15:45 2015)<br />this isq mlaj mlakj malkzerj a mlkj. ANOTHER TEST.</li>
                           <li class="list-group-item">
                             <div class="pull-right">
 	                      <a href="/comments/e/polarsys.kitalpha/1433663596"><i class="fa fa-pencil"></i></a> &nbsp;
                               <a href="/comments/d/polarsys.kitalpha/1433663596"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>BBaldassari</strong> on PLAN_REVIEWS_SUCCESS_RATE (Sun Jun  7 09:53:16 2015)<br />dsqf sqsqd fqs fs</li>
+                            <strong>BBaldassari</strong> on <strong>PLAN_REVIEWS_SUCCESS_RATE</strong> (Sun Jun  7 09:53:16 2015)<br />dsqf sqsqd fqs fs</li>
                           <li class="list-group-item">
                             <a href="/comments/w/polarsys.kitalpha">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -332,12 +332,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 
