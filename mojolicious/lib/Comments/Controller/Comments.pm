@@ -8,7 +8,8 @@ use JSON qw( decode_json encode_json );
 use lib "../scripts/publish/";
 use Castalia::PublishPolarSys;
 
-my $dir_data = "../projects/";
+my $dir_projects = "../projects/";
+my $dir_data = "../data/";
 my $publish_conf = "../scripts/publish/polarsys_maturity_assessment_prod.json";
 
 #
@@ -58,8 +59,8 @@ sub welcome {
 
     my %projects;
 
-    # Find comment data files for all projets in $dir_data/
-    my @comment_files = <$dir_data/*/*_comments.json>;
+    # Find comment data files for all projets in $dir_projects/
+    my @comment_files = <$dir_projects/*/*_comments.json>;
     foreach my $file (@comment_files) {
 	# For each file, 
 	$file =~ m!.*/([^_/]+)_comments.json!;
@@ -158,7 +159,7 @@ sub read {
 
     my $project = $self->param('project');
 
-    my $file = $dir_data . "/" . $project . "/" . $project . "_comments.json";
+    my $file = $dir_projects . "/" . $project . "/" . $project . "_comments.json";
 
     my @comments;
     if (-e $file) {
@@ -177,6 +178,47 @@ sub read {
 }
 
 
+# Utility to find all node mnemos in the qm tree
+sub find_nodes($) {
+    my $nodes = shift;
+
+    my @nodes_ret;
+
+    foreach my $node (@{$nodes}) {
+	push(@nodes_ret, $node->{'mnemo'});
+	if (exists($node->{'children'})) {
+	    my @nodes_new = &find_nodes($node->{'children'});
+	    push(@nodes_ret, @{nodes_new});
+	}
+    }
+    
+    return @nodes_ret;
+
+}
+
+
+#
+# This action displays the current comment for editing.
+#
+sub writec {
+    my $self = shift;
+    
+    my $in_project = $self->param('project');
+
+    my $file = $dir_data . "/polarsys_qm.json";    
+    my $raw = &read_json($file);
+    my $children = $raw->{'children'};
+    my @mnemos = &find_nodes($children);
+
+    # Prepare data for template rendering.
+    $self->stash( mnemos => \@mnemos );
+
+    # Render template "comments/write.html.ep" with message
+    $self->render('comments/write');
+    
+}
+
+
 #
 # This action reads existing comments, adds the new comment,
 # and writes things in the same json file.
@@ -187,11 +229,12 @@ sub write_post {
     my $project = $self->param('project');
     my $in_user = $self->session('user');
     my $in_author = $self->param('author');
+    my $in_mnemo = $self->param('mnemo');
     my $in_text = $self->param('text');
     my $in_id = time();
     my $in_time = localtime();
 
-    my $file = $dir_data . "/" . $project . "/" . $project . "_comments.json";
+    my $file = $dir_projects . "/" . $project . "/" . $project . "_comments.json";
 
     # Read original json file
     my $raw;
@@ -211,6 +254,7 @@ sub write_post {
 	"user" => $in_user,
 	"author" => $in_author,
 	"date" => $in_time,
+	"mnemo" => $in_mnemo,
 	"text" => $in_text
     };
     push(@{$raw->{"comments"}}, $comment);
@@ -227,6 +271,7 @@ sub write_post {
     $self->stash( in_author => $in_author );
     $self->stash( in_time => $in_time );
     $self->stash( in_text => $in_text );
+    $self->stash( in_mnemo => $in_mnemo );
     $self->stash( project => $project );
 
     # Render template "comments/write_post.html.ep" with message
@@ -244,10 +289,11 @@ sub edit {
     my $in_project = $self->param('project');
     my $in_user = $self->session('user');
     my $in_author = "None";
+    my $in_mnemo = "None";
     my $in_date = "None";
     my $in_text = "None";
     
-    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+    my $file = $dir_projects . "/" . $in_project . "/" . $in_project . "_comments.json";
 
     # Read original json file
     my $raw;
@@ -264,6 +310,7 @@ sub edit {
 	    $in_text = $comment->{"text"};
 	    $in_author = $comment->{"author"};
 	    $in_date = $comment->{"date"};
+	    $in_mnemo = $comment->{"mnemo"};
 	    last
 	};
     } 
@@ -277,6 +324,7 @@ sub edit {
 	in_id => $in_id,
 	in_text => $in_text,
 	in_project => $in_project,
+	in_mnemo => $in_mnemo,
         );
 
     # Render template "comments/edit.html.ep" 
@@ -295,9 +343,10 @@ sub edit_post {
     my $in_project = $self->param('project');
     my $in_user = $self->session('user');
     my $in_text = $self->param('text');
+    my $in_mnemo = $self->param('mnemo');
     my $in_time = localtime($in_id);
 
-    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+    my $file = $dir_projects . "/" . $in_project . "/" . $in_project . "_comments.json";
 
     # Read original json file
     my $raw;
@@ -310,7 +359,8 @@ sub edit_post {
 
     foreach my $comment (@{$raw->{'comments'}}) {
 	if ($comment->{'id'} =~ m!^${in_id}$!) {
-	    # Create a new comment entry
+	    # Edit comment entry
+	    $comment->{"mnemo"} = $in_mnemo;
 	    $comment->{"text"} = $in_text;
 	    last
 	};
@@ -328,6 +378,7 @@ sub edit_post {
     $self->stash( in_time => $in_time );
     $self->stash( in_id => $in_id );
     $self->stash( in_text => $in_text );
+    $self->stash( in_mnemo => $in_mnemo );
     $self->stash( project => $in_project );
 
     # Render template "comments/edit_post.html.ep" with message
@@ -348,7 +399,7 @@ sub delete {
     my $in_date = "None";
     my $in_text = "None";
     
-    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+    my $file = $dir_projects . "/" . $in_project . "/" . $in_project . "_comments.json";
 
     # Read original json file
     my $raw;
@@ -371,7 +422,7 @@ sub delete {
     } 
 
     # Write a message to log about this comment.
-    $self->app->log->info('User [' . $in_user . '] editing comment id [' . $in_id . ']..');
+    $self->app->log->info('User [' . $in_user . '] deleting comment id [' . $in_id . ']..');
     
     # Prepare data for template rendering.
     $self->stash(
@@ -400,10 +451,7 @@ sub delete_post {
     my $in_text = $self->param('text');
     my $in_time = localtime($in_id);
 
-    print "DBG in_id $in_id.\n";
-    print "DBG in_project $in_project.\n";
-    
-    my $file = $dir_data . "/" . $in_project . "/" . $in_project . "_comments.json";
+    my $file = $dir_projects . "/" . $in_project . "/" . $in_project . "_comments.json";
 
     # Read original json file
     my $raw;
@@ -420,17 +468,13 @@ sub delete_post {
     my @comments = @{$raw->{'comments'}};
     my $index = -1;
     my $comments_index = scalar(@comments) - 1;
-    print "DBG scalar is $comments_index.\n";
     foreach my $i ( 0 .. $comments_index ) {
 	my $comment = $raw->{'comments'}->[$i];
-	print "DBG $i [" . $comment->{'id'} . "] and [" . $in_id . "]\n";
 	if ($comment->{'id'} =~ m!^${in_id}$!) {
 	    $index = $i;
 	    last
 	};
     } 
-
-    print "DBG Index for deletion is $index.\n";
 
     splice @comments, $index, 1;
     @{$raw->{'comments'}} = @comments;

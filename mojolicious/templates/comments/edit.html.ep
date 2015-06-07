@@ -8,6 +8,7 @@
 % # retrieve data for comment.
 % my $id = stash "in_id";
 % my $author = stash "in_author";
+% my $mnemo = stash "in_mnemo";
 % my $date = localtime($id);
 % my $text = stash "in_text";
 
@@ -31,6 +32,8 @@
 <form action="<%= $id %>" method="POST">
   <p>Author: (<span style="color: red">*</span>)</p>
   <p><input name="author" type="text" value="<%= $author %>" disabled></input></p>
+  <p>Node mnemo: (<span style="color: red">*</span>)</p>
+  <p><input name="mnemo" type="text" value="<%= $mnemo %>"></input></p>
   <p>Text: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
   <p><textarea name="text" cols="40" rows="20"><%= $text %></textarea></p>
   <br /><br />

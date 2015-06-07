@@ -17,6 +17,7 @@
 % foreach my $comment (@{$comments}) {
 %   my $id = $comment->{"id"};
 %   my $author = $comment->{"author"};
+%   my $node = $comment->{"mnemo"};
 %   my $date = localtime($id);
 %   my $text = $comment->{"text"};
           <li class="list-group-item">
@@ -24,7 +25,7 @@
 	      <a href="/comments/e/<%= $project %>/<%= $id %>"><i class="fa fa-pencil"></i></a> &nbsp;
 	      <a href="/comments/d/<%= $project %>/<%= $id %>"><i class="fa fa-trash-o"></i></a>
 	    </div>
-	    Message from <strong><%= $author %></strong> on <%= $date %>:<br />
+	    Message from <strong><%= $author %></strong> on node <strong><%= $node %></strong> (<%= $date %>):<br />
 	    <%= $text %></li>
 % }
         </ul>

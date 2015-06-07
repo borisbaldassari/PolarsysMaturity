@@ -31,7 +31,7 @@
       <div class="panel-heading">Comments</div>
       <div class="panel-body">
 	<p>Author: <%= stash "in_author" %></p>
-	
+	<p>Node mnemo: <%= stash "in_mnemo" %></p>
 	<p>Date registered: <%= stash "in_time" %></p>
 	
 	<p>Text:</p>
@@ -41,7 +41,7 @@
   </div>
 </div>
 % } else {
-<p>Name and text fields are both mandatory. Please <a href="/comments/w/<%= $project %>">try again</a>.</p>
+<p>Name, mnemo and text fields are both mandatory. Please <a href="/comments/w/<%= $project %>">try again</a>.</p>
 % }
 
 

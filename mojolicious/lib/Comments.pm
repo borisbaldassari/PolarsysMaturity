@@ -50,7 +50,7 @@ sub startup {
   
   # Route for comment writing (displays form).
   $auth->get('/#project')
-      ->to( template => 'comments/write' )
+      ->to('comments#writec')
       ->name('write');
   
   # Route for comment writing (saves changes).

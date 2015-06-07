@@ -4,6 +4,7 @@
 % my $reg_user = $self->session('user') || '';
 % my @reg_projects = @{$self->users->projects($reg_user)};
 % my $reg_projects_str = join(', ', @reg_projects);
+% my $mnemos = stash "mnemos";
 
 <h2>Add a comment to project <%= $project %></h2>
 
@@ -25,6 +26,12 @@
 <form action="<%= $project %>" method="POST">
   <p>Author: (<span style="color: red">*</span>)</p>
   <p><input name="author" type="text"></input></p>
+  <p>Node: (<span style="color: red">*</span>)</p>
+  <p><select name="mnemo">
+% foreach my $node (sort @{$mnemos}) {
+    <option><%= $node %></option>
+% }
+  </select></p>
   <p>Text: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
   <p><textarea name="text" cols="40" rows="20"></textarea></p>
   <br /><br />
