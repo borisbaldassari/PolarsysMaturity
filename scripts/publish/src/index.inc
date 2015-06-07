@@ -17,44 +17,56 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="panel panel-default">
-                <div class="panel-heading">Documentation</div>
+                <div class="panel-heading"><i class="fa fa-life-ring fa-fw"></i> Documentation</div>
                 <div class="panel-body">
                   <div class="list-group">
-                    <a href="documentation/quality_model.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> The full quality model</a>
-                    <a href="documentation/attributes.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Quality attributes definition</a>
-                    <a href="documentation/questions.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Questions definition</a>
-                    <a href="documentation/metrics.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Metrics definition</a>
-                    <a href="documentation/rules.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Rules (PMD, FindBugs)</a>
-                    <a href="documentation/references.html" class="list-group-item"><i class="glyphicon glyphicon-file"></i> References</a>
+                    <a href="documentation/quality_model.html" class="list-group-item"><i class="fa fa-file-o"></i> The full quality model</a>
+                    <a href="documentation/attributes.html" class="list-group-item"><i class="fa fa-file-o"></i> Quality attributes definition</a>
+                    <a href="documentation/questions.html" class="list-group-item"><i class="fa fa-file-o"></i> Questions definition</a>
+                    <a href="documentation/metrics.html" class="list-group-item"><i class="fa fa-file-o"></i> Metrics definition</a>
+                    <a href="documentation/rules.html" class="list-group-item"><i class="fa fa-file-o"></i> Rules (PMD, FindBugs)</a>
+                    <a href="documentation/references.html" class="list-group-item"><i class="fa fa-file-o"></i> References</a>
                   </div>
                 </div>
               </div>
+	      <br />
+
+              <div class="panel panel-default">
+                <div class="panel-heading"><i class="fa fa-life-ring fa-fw"></i> Administration tools</div>
+                <div class="panel-body">
+                  <div class="list-group">
+                    <a href="analyse_metrics.html" class="list-group-item"><i class="fa fa-file-o"></i> List of available metrics per project</a>
+                    <a href="documentation/attributes.html" class="list-group-item"><i class="fa fa-file-o"></i> Comments administration panel</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div class="col-lg-6">
               <div class="panel panel-default">
-                <div class="panel-heading">Projects</div>
+                <div class="panel-heading"><i class="fa fa-dashboard fa-fw"></i> Projects</div>
                 <div class="panel-body">
                   <div class="list-group">
                     <a href="projects/polarsys.capella.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Capella</a>
+		       <i class="fa fa-file-o"></i>&nbsp; Capella</a>
                     <a href="projects/tools.cdt.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; CDT</a>
+		       <i class="fa fa-file-o"></i>&nbsp; CDT</a>
                     <a href="projects/tools.cdt.tcf.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; CDT TCF</a>
+		       <i class="fa fa-file-o"></i>&nbsp; CDT TCF</a>
                     <a href="projects/technology.ease.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; EASE</a>
+		       <i class="fa fa-file-o"></i>&nbsp; EASE</a>
                     <a href="projects/modeling.emf.compare.html" class="list-group-item">
-                        <i class="glyphicon glyphicon-folder-open"></i>&nbsp; EMF Compare</a>
+                        <i class="fa fa-file-o"></i>&nbsp; EMF Compare</a>
                     <a href="projects/modeling.gendoc.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Gendoc</a>
+		       <i class="fa fa-file-o"></i>&nbsp; Gendoc</a>
                     <a href="projects/polarsys.kitalpha.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Kitalpha</a>
+		       <i class="fa fa-file-o"></i>&nbsp; Kitalpha</a>
                     <a href="projects/modeling.mdt.papyrus.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Papyrus</a>
+		       <i class="fa fa-file-o"></i>&nbsp; Papyrus</a>
                     <a href="projects/modeling.sirius.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; Sirius</a>
+		       <i class="fa fa-file-o"></i>&nbsp; Sirius</a>
                     <a href="projects/polarsys.tracecompass.html" class="list-group-item">
-		       <i class="glyphicon glyphicon-folder-open"></i>&nbsp; TraceCompass</a>
+		       <i class="fa fa-file-o"></i>&nbsp; TraceCompass</a>
                   </div>
                 </div>
               </div>
