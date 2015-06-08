@@ -3,14 +3,17 @@
     "menu": [
 	{
 	    "name": "Home",
+	    "icon": "fa-home",
 	    "url": "/index.html"
 	},
 	{
 	    "name": "About",
+	    "icon": "fa-bullseye",
 	    "url": "/about.html"
 	},
 	{
 	    "name": "Documentation",
+	    "icon": "fa-life-ring",
 	    "url": "/documentation/",
 	    "children": [
 		{ 
@@ -45,6 +48,7 @@
 	},
 	{
 	    "name": "Projects",
+	    "icon": "fa-dashboard",
 	    "url": "/projects/",
 	    "children": [
 		{
@@ -56,11 +60,6 @@
 		    "name": "CDT", 
 		    "id": "tools.cdt", 
 		    "url": "/projects/tools.cdt.html"
-		},
-		{
-		    "name": "CDT-TCF", 
-		    "id": "tools.cdt.tcf", 
-		    "url": "/projects/tools.cdt.tcf.html"
 		},
 		{
 		    "name": "EASE", 
@@ -78,16 +77,6 @@
 		    "url": "/projects/modeling.gendoc.html"
 		},
 		{
-		    "name": "Kitalpha", 
-		    "id": "polarsys.kitalpha", 
-		    "url": "/projects/polarsys.kitalpha.html"
-		},
-		{
-		    "name": "Papyrus", 
-		    "id": "modeling.mdt.papyrus", 
-		    "url": "/projects/modeling.mdt.papyrus.html"
-		},
-		{
 		    "name": "Sirius", 
 		    "id": "modeling.sirius", 
 		    "url": "/projects/modeling.sirius.html"
@@ -101,6 +90,7 @@
 	},
 	{
 	    "name": "Contact",
+	    "icon": "fa-comment-o",
 	    "url": "/contact.html"
 	}
     ],
