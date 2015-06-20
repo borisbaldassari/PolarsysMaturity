@@ -36,7 +36,7 @@
                 <div class="panel-body">
                   <div class="list-group">
                     <a href="analyse_metrics.html" class="list-group-item"><i class="fa fa-file-o"></i> List of available metrics per project</a>
-                    <a href="documentation/attributes.html" class="list-group-item"><i class="fa fa-file-o"></i> Comments administration panel</a>
+                    <a href="comments/" class="list-group-item"><i class="fa fa-file-o"></i> Comments administration panel</a>
                   </div>
                 </div>
               </div>
