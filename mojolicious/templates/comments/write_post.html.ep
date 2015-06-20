@@ -23,7 +23,7 @@
     <br />
     <p>The message has been registered on project <%= $project %>. </p>
     <br />
-    <p>You may now <a href="/comments/r/<%= $project %>">read comments</a> on the project or <a href="/projects/<%= $id %>.html">go back to the project's dashboard</a>.</p>
+    <p>You may now <a href="/comments/r/<%= $project %>">read comments</a> on the project or <a href="/projects/<%= $project %>.html">go back to the project's dashboard</a>.</p>
 
   </div>
   <div class="col-lg-6">
@@ -31,7 +31,7 @@
       <div class="panel-heading">Comments</div>
       <div class="panel-body">
 	<p>Author: <%= stash "in_author" %></p>
-	
+	<p>Node mnemo: <%= stash "in_mnemo" %></p>
 	<p>Date registered: <%= stash "in_time" %></p>
 	
 	<p>Text:</p>
@@ -41,7 +41,7 @@
   </div>
 </div>
 % } else {
-<p>Name and text fields are both mandatory. Please <a href="/comments/w/<%= $project %>">try again</a>.</p>
+<p>Name, mnemo and text fields are both mandatory. Please <a href="/comments/w/<%= $project %>">try again</a>.</p>
 % }
 
 

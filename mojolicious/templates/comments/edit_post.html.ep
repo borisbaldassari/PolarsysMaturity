@@ -1,0 +1,46 @@
+% layout 'polarsys';
+% title 'Edit Comment';
+
+% my $project = stash "project";
+
+<h2>Comment posted</h2>
+
+<br />
+              
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+  <p><strong>Info:</strong> You are logged in as user <strong><%= $self->session('user') %></strong>. <a href="/comments/logout">Click here</a> to logout.</p>
+</div>
+
+% if ( stash("in_text") !~ m!^$! ) {
+<div class="row">
+  <div class="col-lg-6">
+
+    <br />
+    <p>The message has been registered on project <%= $project %>. </p>
+    <br />
+    <p>You may now <a href="/comments/r/<%= $project %>">read comments</a> on the project or <a href="/projects/<%= $project %>.html">go back to the project's dashboard</a>.</p>
+
+  </div>
+  <div class="col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Comments</div>
+      <div class="panel-body">
+	<p>Author: <%= stash "in_author" %></p>
+	<p>Node mnemo: <%= stash "in_mnemo" %></p>
+	<p>Date registered: <%= stash "in_time" %></p>
+	
+	<p>Text:</p>
+	<p><%= stash "in_text" %></p>
+      </div>
+    </div>
+  </div>
+</div>
+% } else {
+<p>Text field is mandatory. Please <a href="/comments/w/<%= $project %>">try again</a>.</p>
+% }
+
+

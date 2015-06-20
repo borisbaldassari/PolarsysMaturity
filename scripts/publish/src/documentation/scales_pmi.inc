@@ -1,8 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-
               <h3>Scales &gt; PMI</h3>
 
               <p>The PMI (Project Management Infrastructure) maintains a list of Eclipse projects with a set of associated meta data. It includes information about the various documentation pieces for the project (web site, wiki, getting started guide, etc.), the repositories used for development (code, bugzilla), and releases (date, milestones, review, etc.).</p>
@@ -71,6 +67,3 @@
                 </div>
               </div>
               
-            </div>
-          </div>
-        </div>

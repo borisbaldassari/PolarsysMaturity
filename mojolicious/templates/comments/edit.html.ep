@@ -1,0 +1,58 @@
+% layout 'polarsys';
+% title 'Edit comment';
+
+% my $reg_user = $self->session('user') || '';
+% my @reg_projects = @{$self->users->projects($reg_user)};
+% my $reg_projects_str = join(', ', @reg_projects);
+
+% # retrieve data for comment.
+% my $id = stash "in_id";
+% my $author = stash "in_author";
+% my $mnemo = stash "in_mnemo";
+% my $date = localtime($id);
+% my $text = stash "in_text";
+% my $mnemos = stash "mnemos";
+
+<h2>Edit a comment to project <%= $project %></h2>
+
+<br />
+              
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+  <p><strong>Info:</strong> You are logged in as user <strong><%= $reg_user %></strong>. <a href="/comments/logout">Click here</a> to logout.</p>
+</div>
+
+% if ( scalar( grep(/^${project}$/, @reg_projects) ) != 0 ) {
+<p>Please fill the following form to add a comment to the <code><%= $project %></code> project. The date is automatically set, and all fields marked (<span style="color: red">*</span>) are mandatory.</p>
+
+<br />
+
+<form action="<%= $id %>" method="POST">
+  <div class="row"><div class="col-md-6">
+  <p><strong>Author</strong>: (<span style="color: red">*</span>)</p>
+  <p><input name="author" type="text" value="<%= $author %>" disabled></input></p>
+  <p><strong>Node mnemo</strong>: (<span style="color: red">*</span>)</p>
+  <p><select name="mnemo">
+% foreach my $node (sort @{$mnemos}) {
+%   if ($node =~ m!^${mnemo}$!) {
+    <option selected="selected"><%= $node %></option>
+%   } else {
+    <option><%= $node %></option>
+%   }
+% }
+  </select></p>
+  </div><div class="col-md-6">
+  <p><strong>Text</strong>: simple text, no HTML allowed (<span style="color: red">*</span>)</p>
+  <p><textarea name="text" cols="40" rows="6"><%= $text %></textarea></p>
+  </div></div>
+  <br />
+  <input type="submit" value="Edit comment"></input>
+  <input type="button" value="Cancel" onclick="history.go(-1);" /></input>
+</form>
+% } else {
+<p>Sorry, user <code><%= $self->session('user') %></code> is not authorised to post a comment on this project. You can only submit a comment on project(s) <code><%= $reg_projects_str %></code>.</p> 
+<p>Maybe you want to <a href="/comments/">go back to the list of projects</a>, or <a href="/comments/login">login</a> with the correct credentials?</p>
+% }

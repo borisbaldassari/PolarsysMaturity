@@ -1,7 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Definition of metrics</h2>
               <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
         
@@ -960,7 +957,4 @@
 </li>
                     </ul>
                   </div>  
-              </div>
-            </div>
-          </div>
         </div>

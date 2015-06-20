@@ -7,6 +7,7 @@
 
 % my $reg_user = $self->session('user') || '';
 % my @reg_projects = []; 
+% my $project = stash "projects";
 
 % if ($reg_user !~ m!^$!) {
 %   @reg_projects = @{$self->users->projects($reg_user)};
@@ -24,16 +25,21 @@
 <p>&nbsp;</p>
 
 % my %projects = %{$projects};
-<ul class="list-group">
+<div class="row"><div class="col-lg-6">
+<table class="table table-striped">
 % foreach my $project (sort keys %projects) {
-    <li class="list-group-item">
-      <span class="badge"><%= $projects->{$project} %></span>
+    <tr>
+      <td><%= $project %></td>
+      <td width="1cm"><a href="/comments/r/<%= $project %>"><i class="fa fa-eye"></i></a></td>
+      <td width="1cm"><span class="badge"><%= $projects->{$project} %></span></td>
+      <td width="1cm">
       % if ( scalar( grep(/^${project}$/, @reg_projects) ) != 0 ) {
-      <a href="/comments/w/<%= $project %>"><i class="fa fa-plus"></i></a> &nbsp; 
+	<a href="/comments/w/<%= $project %>"><i class="fa fa-plus"></i></a>
       % }
-      <a href="/comments/r/<%= $project %>"><i class="fa fa-eye"></i></a> &nbsp; 
-      <%= $project %></li>
+      </td></tr>
 % }
-</ul>
-
+</table>
+  </div>
+  <div class="col-lg-6"></div>
+</div>
 

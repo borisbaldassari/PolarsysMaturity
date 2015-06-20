@@ -1,8 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-
               <h3>Scales &gt; Rule-checking</h3>
 
               <p>Well-known open-source tools like PMD and FindBugs help projects find bad patterns in their code: e.g. naming conventions, idiomatic usage, common errors. These rules can be considered as <em>coding practices</em> in the project, and are classified according to the quality attribute(s) they impact.</p> 
@@ -114,6 +110,3 @@
                 <li class="list-group-item"><a href="http://www.eclipse.org/subversive/">Subversive</a></li>
               </ul>
               
-            </div>
-          </div>
-        </div>

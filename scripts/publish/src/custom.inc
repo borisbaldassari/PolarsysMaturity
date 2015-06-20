@@ -1,7 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h3 class="page-header">Example Custom page</h3>
               <p>This page is an example of what could be the home page of this web site. Just add a file with the inc extension in the src directory and it will be transformed and integrated in the generated web site.</p>
         
@@ -51,8 +48,4 @@
                 </div>
               </div>
               
-            </div>
-          
-          </div>
-        </div>
-      
+       

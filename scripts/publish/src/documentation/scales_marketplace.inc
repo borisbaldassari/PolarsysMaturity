@@ -1,8 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-
               <h3>Scales &gt; Marketplace</h3>
 
               <p>The <a href="http://marketplace.eclipse.org/">Eclipse marketplace</a> lists the products and companies that make the Eclipse ecosystem. Users can also directly install plugins from the marketplace into their own IDE by a single drag'n'drop. To setup the scales, we selected a set of 15 projects and applied the set of metrics to them. </p>
@@ -81,6 +77,3 @@
                 <li class="list-group-item"><a href="https://marketplace.eclipse.org/content/testng-eclipse">TestNG</a></li>
               </ul>
               
-            </div>
-          </div>
-        </div>

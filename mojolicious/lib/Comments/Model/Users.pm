@@ -20,8 +20,6 @@ sub new {
 
     $users = decode_json( $pass_str );
 
-    print Dumper($users);
-
     bless {}, $self;
 }
 

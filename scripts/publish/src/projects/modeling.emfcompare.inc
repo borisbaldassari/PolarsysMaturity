@@ -1,13 +1,10 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
               <h2>Project modeling.emfcompare</h2>
 
               <div class="tabbable">
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Summary</a></li>
-                  <li role="presentation" class=""><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
+                  <li role="presentation"><a href="#qm" role="tab" data-toggle="tab">QM</a></li>
                   <li role="presentation"><a href="#attrs" role="tab" data-toggle="tab">Attributes</a></li>
                   <li role="presentation"><a href="#questions" role="tab" data-toggle="tab">Questions</a></li>
                   <li role="presentation"><a href="#metrics" role="tab" data-toggle="tab">Metrics</a></li>
@@ -40,10 +37,11 @@
                         </dl>
                       </div>
                       <div class="col-sm-6">
+                        <p class="text-right" style="font-weight: bold">Global rating: <span style="color: #DA7A08; font-size: 300%">3.8</span> / 5 &mdash; Completeness: 42 / 45</p><br />
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-8">
+                      <div class="col-sm-4">
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
@@ -76,13 +74,44 @@
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Summary</div>
+                        <div class="panel panel-primary"><div class="panel-heading">PMI Summary</div>
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Web <a href="http://www.eclipse.org/emf/compare/">http://www.eclipse.org/emf/compare/</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-globe"></span> Wiki <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-download"></span> Downloads <a href="http://www.eclipse.org/emf/compare/downloads/">http://www.eclipse.org/emf/compare/downloads/</a></li>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Documentation <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></dd>
-                          <li class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span> Getting Started <a href="http://wiki.eclipse.org/EMF_Compare/User_Guide">http://wiki.eclipse.org/EMF_Compare/User_Guide</a></dd>
+                          <li class="list-group-item"><span class="fa fa-dashboard"></span> &nbsp; Eclipse Dashboard <a href="http://dashboard.eclipse.org/project.html?project=modeling.emfcompare">Link to dashboard</a></dd>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Web <a href="http://www.eclipse.org/emf/compare/">http://www.eclipse.org/emf/compare/</a></li>
+                          <li class="list-group-item"><span class="fa fa-globe"></span> &nbsp; Wiki <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></li>
+                          <li class="list-group-item"><span class="fa fa-download"></span> &nbsp; Downloads <a href="http://www.eclipse.org/emf/compare/downloads/">http://www.eclipse.org/emf/compare/downloads/</a></li>
+                          <li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Documentation <a href="http://wiki.eclipse.org/EMF_Compare">http://wiki.eclipse.org/EMF_Compare</a></dd>
+                          <!-- li class="list-group-item"><span class="fa fa-question-circle"></span> &nbsp; Getting Started <a href="http://wiki.eclipse.org/EMF_Compare/User_Guide">http://wiki.eclipse.org/EMF_Compare/User_Guide</a></dd -->
+                          <li class="list-group-item"><span class="fa fa-envelope"></span> &nbsp; Mailing lists [ <a href="https://dev.eclipse.org/mailman/listinfo/emf-dev">Developer ML</a> ] &nbsp; [ <a href="http://eclipse.org/forums/eclipse.emfcompare">User Forums</a> ]</dd>
+                        </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary"><div class="panel-heading">Comments</div>
+                        <ul class="list-group">
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/modeling.emfcompare/1432622853"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.emfcompare/1432622853"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BB1</strong> on <strong>NCC_ANA_IDX</strong> (Mon May 25 11:08:04 2015)<br />this is an authorised comment.</li>
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/modeling.emfcompare/1432622855"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.emfcompare/1432622855"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>dsg</strong> on <strong>QM_ACTIVITY</strong> (Mon May 25 16:23:09 2015)<br />sdfgsdfgsdfgs</li>
+                          <li class="list-group-item">
+                            <div class="pull-right">
+	                      <a href="/comments/e/modeling.emfcompare/1433658766"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.emfcompare/1433658766"><i class="fa fa-trash-o"></i></a>
+	    </div>
+                            <strong>BBaldassari</strong> on <strong></strong> (Sun Jun  7 08:32:46 2015)<br />this is a test just to make sure everything actually works. No mnemo?</li>
+                          <li class="list-group-item">
+                            <a href="/comments/w/modeling.emfcompare">
+                            <div class="pull-right"><span class="fa fa-plus"></span></div>
+                            Add a comment? (Authentication required)</a>
+                          </li>
                         </ul>
                         </div>
                       </div>
@@ -186,7 +215,8 @@
                       </div>
                     </div>
                   </div>
-                  <div role="tabpanel" class="tab-pane fade" id="qm">              <h3>The Quality model</h3>
+                  <div role="tabpanel" class="tab-pane fade" id="qm">
+              <h3>The Quality model</h3>
             
             <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>
               <div class="row">
@@ -307,12 +337,14 @@ function update(source) {
       });
 
   nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -20 : 20; })
+      .attr("x", function(d) { return d.children || d._children ? -15 : 20; })
       .attr("dy", function(d) { return d.children || d._children ? "-0.5em" : ".35em" })
       .attr("text-anchor", function(d) { return d.children || d.children ? "end" : "start"; })
       .attr("fill", function(d) { return d.active == "true" ? "black" : "gray";})
       .text(function(d) { 
-        return d.value ? d.name + " (" + d.value + " / " + d.ind + ")" : d.name;
+        value = d.value ? d.value + " / " : "";
+	ind = d.ind ? " (" + value + d.ind + ")" : "";
+	return d.name + ind;
       })
       .style("fill-opacity", 1e-6);
 
@@ -635,6 +667,3 @@ function click(d) {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>

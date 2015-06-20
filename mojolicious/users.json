@@ -2,6 +2,8 @@
   "boris": {
     "pwd": "boris",
     "projects": [
+      "modeling.emfcompare",
+      "modeling.mdt.papyrus",
       "modeling.sirius",
       "polarsys.kitalpha"
     ]

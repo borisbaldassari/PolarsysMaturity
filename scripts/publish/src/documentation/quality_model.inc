@@ -1,10 +1,5 @@
-
-
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
             
-              <h3>The Quality model</h3>
+              <h2>The Quality model</h2>
             
             <p>The quality model shows the complete hierarchy tree, from <a href="/documentation/attributes.html">quality attributes</a> to <a href="/documentation/questions.html">measurement concepts</a> (questions) and <a href="/documentation/metrics.html">metrics</a>. Following Basili's Goal-Question-Metric approach [<a href="/documentation/references.html#Basili1994">Basili1994</a>], the quality attributes (the 3 first columns) are goals for our measurement, concepts (4th col) are mapped to questions, and metrics (right col) are the base measures.</p>
             
@@ -317,7 +312,3 @@ function click(d) {
 
 <div id="details-box"><p>Click on a node to get more details.</p></div>
 
-            </div>
-          </div>
-        </div>
-        

@@ -1,9 +1,8 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 id="about_maturity_assessment">About the maturity assessment project</h3>
-              
+	      <h2 id="about_maturity_assessment">About the maturity assessment project</h2>
+
+	      <br />
+
               <p><a href="http://polarsys.org">PolarSys</a> is an Eclipse <a href="http://www.eclipse.org/org/workinggroups/">Industry Working Group</a> created by large industry players and by tools providers to collaborate on the creation and support of Open Source tools for the development of embedded systems. Members of PolarSys started working on a <a href="https://polarsys.org/wiki/Maturity_Assessment_WG">Maturity Assessment task force</a> back in 2013, to assess and help improve quality of projects entering the PolarSys umbrella.</p>
               
               <p>This project is driven by the PolarSys members: the definition of the quality model, attributes, metrics has been discussed on the public mailing list, and the full retrieval and analysis process has been presented a few times:</p>
@@ -14,7 +13,7 @@
                 <li>EclipseCon France 2013: <a href="http://www.eclipsecon.org/france2013/sessions/software-quality-eclipse-way-and-beyond">http://www.eclipsecon.org/france2013/sessions/software-quality-eclipse-way-and-beyond</a></li>
               </ul>
     
-              <h3 id="contributing">Contributing</h3>
+              <h2 id="contributing">Contributing</h2>
                             
               <p>This process is self-documented; most of the information available is directly integrated into this very web site: check the <a href="/documentation">documentation</a> page first</p>
 
@@ -30,7 +29,7 @@
     
               Feedback, comments and contributions are welcome. The best place for discussing features and providing feedback is on the PolarSys mailing list.
         
-              <h3 id="your_project">What about <strong>your</strong> project?</h3>
+              <h2 id="your_project">What about <strong>your</strong> project?</h2>
         
               <p>Any project willing to enter the maturity assessment dashboard is welcome. However, the analysis requires some information in order to compute indicators, questions and attributes of quality. The following list details the mandatory data sources for a project to be analysed:</p>
               <ul>
@@ -41,6 +40,3 @@
               <p><strong>We're ready to help!</strong>. Do not hesitate to <a href="/contact.html">get in touch with us</a> for any question about the process, or if you want to add your project to the dashboard.</p>
               <p></p>
         
-            </div>
-          </div>
-        </div>

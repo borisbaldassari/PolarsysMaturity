@@ -1,7 +1,4 @@
 
-        <div id="page-wrapper">
-          <div class="row">
-            <div class="col-lg-12">
 
               <h3>Scales &gt; SonarQube</h3>
             
@@ -57,6 +54,3 @@
 
               <p>Note: All of the Git repositories with no activity during the last month have been removed in the calculation of thresholds. From the original set, only 152/172 projects contained activity. It should also be noted that there may be several git repositories for a single project and set of mailing lists.</p>
 
-            </div>
-          </div>
-        </div>
