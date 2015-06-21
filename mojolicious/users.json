@@ -6,6 +6,9 @@
       "modeling.mdt.papyrus",
       "modeling.sirius",
       "polarsys.kitalpha"
+      "technology.ease",
+      "tools.cdt",
+      "tools.tracecompass"
     ]
   }
 }
