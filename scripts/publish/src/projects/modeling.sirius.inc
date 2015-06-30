@@ -38,7 +38,7 @@
                         </dl>
                       </div>
                       <div class="col-sm-6">
-                        <p class="text-right" style="font-weight: bold">Global rating: <span style="color: #DA7A08; font-size: 300%">3.4</span> / 5 &mdash; Completeness: 40 / 45</p><br />
+                        <p class="text-right" style="font-weight: bold">Completeness: <span style="color: #DA7A08; font-size: 200%">39 / 45</span></p><br />
                       </div>
                     </div>
                     <div class="row">
@@ -46,25 +46,25 @@
                         <div class="panel panel-primary"><div class="panel-heading">Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>
-                  <dt><a href="/documentation/attributes.html#QM_QUALITY">Overall Maturity</a> <span class="pull-right">( 40 / 45 metrics )</span></dt>
+                  <dt>Completeness of metrics</dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 68%;">3.4 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="45"  style="background-color: #66D91A;width: 86.6666666666667%;">39 / 45</div>
                     </div>
                   </dd>
-                  <dt><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem Quality</a> <span class="pull-right">( 13 / 13 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a> <span class="pull-right">( 12 / 13 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="2.9" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 58%;">2.9 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="2.8" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 56%;">2.8 / 5</div>
                     </div>
                   </dd>
-                  <dt><a href="/documentation/attributes.html#QM_PROCESS">Process Quality</a> <span class="pull-right">( 8 / 12 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_PROCESS">Process</a> <span class="pull-right">( 8 / 12 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.8" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 76%;">3.8 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 88%;">4.4 / 5</div>
                     </div>
                   </dd>
-                  <dt><a href="/documentation/attributes.html#QM_PRODUCT">Product Quality</a> <span class="pull-right">( 19 / 20 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_PRODUCT">Product</a> <span class="pull-right">( 19 / 20 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="3.4" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 68%;">3.4 / 5</div>
@@ -92,22 +92,10 @@
                         <ul class="list-group">
                           <li class="list-group-item">
                             <div class="pull-right">
-	                      <a href="/comments/e/modeling.sirius/1433008941"><i class="fa fa-pencil"></i></a> &nbsp;
-                              <a href="/comments/d/modeling.sirius/1433008941"><i class="fa fa-trash-o"></i></a>
+	                      <a href="/comments/e/modeling.sirius/1432644924"><i class="fa fa-pencil"></i></a> &nbsp;
+                              <a href="/comments/d/modeling.sirius/1432644924"><i class="fa fa-trash-o"></i></a>
 	    </div>
-                            <strong>qsdf</strong> on <strong></strong> (Sat May 30 20:02:21 2015)<br />qsfdqsd qs q qd q</li>
-                          <li class="list-group-item">
-                            <div class="pull-right">
-	                      <a href="/comments/e/modeling.sirius/1433009053"><i class="fa fa-pencil"></i></a> &nbsp;
-                              <a href="/comments/d/modeling.sirius/1433009053"><i class="fa fa-trash-o"></i></a>
-	    </div>
-                            <strong>sdf s fsfsf s</strong> on <strong></strong> (Sat May 30 20:04:13 2015)<br />fsdvsfvsdbsdb</li>
-                          <li class="list-group-item">
-                            <div class="pull-right">
-	                      <a href="/comments/e/modeling.sirius/1433010619"><i class="fa fa-pencil"></i></a> &nbsp;
-                              <a href="/comments/d/modeling.sirius/1433010619"><i class="fa fa-trash-o"></i></a>
-	    </div>
-                            <strong>dsfs</strong> on <strong></strong> (Sat May 30 20:30:19 2015)<br />sfg</li>
+                            <strong>BB1</strong> on <strong>QM_ANA</strong> (Tue May 26 08:55:24 2015)<br />This is a sample comment on Analysability node.</li>
                           <li class="list-group-item">
                             <a href="/comments/w/modeling.sirius">
                             <div class="pull-right"><span class="fa fa-plus"></span></div>
@@ -119,7 +107,7 @@
                     </div>
                     <div class="row">
                       <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Ecosystem quality</div>
+                        <div class="panel panel-primary"><div class="panel-heading">Ecosystem</div>
                           <div class="panel-body">
                             <dl>
                   <dt><a href="/documentation/attributes.html#QM_ACTIVITY">Activity </a> <span class="pull-right">( 4 / 4 metrics )</span></dt>
@@ -134,7 +122,7 @@
                       <div class="progress-bar" role="progressbar" aria-valuenow="4.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4.0 / 5</div>
                     </div>
                   </dd>
-                  <dt><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a> <span class="pull-right">( 2 / 2 metrics )</span></dt>
+                  <dt><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a> <span class="pull-right">( 1 / 2 metrics )</span></dt>
                   <dd>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="2.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2.0 / 5</div>
@@ -143,7 +131,7 @@
                   <dt><a href="/documentation/attributes.html#QM_SUPPORT">Support</a> <span class="pull-right">( 4 / 4 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="3.5" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 70%;">3.5 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="3.2" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 64%;">3.2 / 5</div>
                     </div>
                   </dd></dd>
                             </dl>
@@ -151,7 +139,7 @@
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Process quality</div>
+                        <div class="panel panel-primary"><div class="panel-heading">Process</div>
                           <div class="panel-body">
                             <dl>
                   <dt><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a> <span class="pull-right">( 3 / 3 metrics )</span></dt>
@@ -169,7 +157,7 @@
                   <dt><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a> <span class="pull-right">( 2 / 2 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="2.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 40%;">2.0 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="4.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #66D91A;width: 80%;">4.0 / 5</div>
                     </div>
                   </dd>
                   <dt><a href="/documentation/attributes.html#QM_TST">Test Management</a> <span class="pull-right">( 0 metrics )</span></dt>
@@ -183,7 +171,7 @@
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="panel panel-primary"><div class="panel-heading">Product quality</div>
+                        <div class="panel panel-primary"><div class="panel-heading">Product</div>
                           <div class="panel-body">
                             <dl>
                   <dt><a href="/documentation/attributes.html#QM_ANALYSABILITY">Analysability</a> <span class="pull-right">( 5 / 5 metrics )</span></dt>
@@ -201,7 +189,7 @@
                   <dt><a href="/documentation/attributes.html#QM_RELIABILITY">Reliability</a> <span class="pull-right">( 7 / 7 metrics )</span></dt>
                   <dd>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="2.9" aria-valuemin="0" aria-valuemax="5"  style="background-color: #CCF24D;width: 58%;">2.9 / 5</div>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="3.0" aria-valuemin="0" aria-valuemax="5"  style="background-color: #99E633;width: 60%;">3.0 / 5</div>
                     </div>
                   </dd>
                   <dt><a href="/documentation/attributes.html#QM_REUSABILITY">Reusability</a> <span class="pull-right">( 3 / 4 metrics )</span></dt>
@@ -533,18 +521,18 @@ function click(d) {
 <tr><td><a href="/documentation/attributes.html#QM_ANA">Analysability</a></td><td><a href="/documentation/attributes.html#QM_ANA">QM_ANA</a></td><td>3.2 ( 5 / 5 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.2</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_CHA">Changeability</a></td><td><a href="/documentation/attributes.html#QM_CHA">QM_CHA</a></td><td>3.5 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.5</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_DIVERSITY">Diversity</a></td><td><a href="/documentation/attributes.html#QM_DIVERSITY">QM_DIVERSITY</a></td><td>4.0 ( 3 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>2.9 ( 13 / 13 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.9</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a></td><td><a href="/documentation/attributes.html#QM_ECOSYSTEM">QM_ECOSYSTEM</a></td><td>2.8 ( 12 / 13 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.8</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_FEEDBACK">User feedback</a></td><td><a href="/documentation/attributes.html#QM_FEEDBACK">QM_FEEDBACK</a></td><td>1.0 ( 0 / 0 metrics ) </td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_ITS">Change Management</a></td><td><a href="/documentation/attributes.html#QM_ITS">QM_ITS</a></td><td>4.5 ( 3 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a></td><td><a href="/documentation/attributes.html#QM_PLAN">QM_PLAN</a></td><td>2.0 ( 2 / 2 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>3.8 ( 8 / 12 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.8</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PLAN">Planning Management</a></td><td><a href="/documentation/attributes.html#QM_PLAN">QM_PLAN</a></td><td>4.0 ( 2 / 2 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_PROCESS">Process</a></td><td><a href="/documentation/attributes.html#QM_PROCESS">QM_PROCESS</a></td><td>4.4 ( 8 / 12 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.4</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_PRODUCT">Product</a></td><td><a href="/documentation/attributes.html#QM_PRODUCT">QM_PRODUCT</a></td><td>3.4 ( 19 / 20 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Maturity</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>3.4 ( 40 / 45 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.4</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>2.9 ( 7 / 7 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.9</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a></td><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">QM_RESPONSIVENESS</a></td><td>2.0 ( 2 / 2 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_QUALITY">Project Maturity</a></td><td><a href="/documentation/attributes.html#QM_QUALITY">QM_QUALITY</a></td><td>3.5 ( 39 / 45 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.5</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_REL">Reliability</a></td><td><a href="/documentation/attributes.html#QM_REL">QM_REL</a></td><td>3.0 ( 7 / 7 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">Responsiveness</a></td><td><a href="/documentation/attributes.html#QM_RESPONSIVENESS">QM_RESPONSIVENESS</a></td><td>2.0 ( 1 / 2 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_REU">Reusability</a></td><td><a href="/documentation/attributes.html#QM_REU">QM_REU</a></td><td>4.0 ( 3 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_SCM">Configuration Management</a></td><td><a href="/documentation/attributes.html#QM_SCM">QM_SCM</a></td><td>4.8 ( 3 / 3 metrics ) </td><td><span class="label label-scale" style="background-color: #66D91A">4.8</span></td></tr>
-<tr><td><a href="/documentation/attributes.html#QM_SUPPORT">Support</a></td><td><a href="/documentation/attributes.html#QM_SUPPORT">QM_SUPPORT</a></td><td>3.5 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.5</span></td></tr>
+<tr><td><a href="/documentation/attributes.html#QM_SUPPORT">Support</a></td><td><a href="/documentation/attributes.html#QM_SUPPORT">QM_SUPPORT</a></td><td>3.2 ( 4 / 4 metrics ) </td><td><span class="label label-scale" style="background-color: #99E633">3.2</span></td></tr>
 <tr><td><a href="/documentation/attributes.html#QM_USAGE">Usage</a></td><td><a href="/documentation/attributes.html#QM_USAGE">QM_USAGE</a></td><td>2.0 ( 0 / 0 metrics ) </td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
 </table>
 
@@ -557,18 +545,17 @@ function click(d) {
 <tr><td><a href="/documentation/questions.html#CODE_SIZE">Code size</a></td><td><a href="/documentation/questions.html#CODE_SIZE">CODE_SIZE</a></td><td>3.0</td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#CPX">Code complexity</a></td><td><a href="/documentation/questions.html#CPX">CPX</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#INSTALL">Installations</a></td><td><a href="/documentation/questions.html#INSTALL">INSTALL</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
-<tr><td><a href="/documentation/questions.html#ITS_REL">ITS Reliability</a></td><td><a href="/documentation/questions.html#ITS_REL">ITS_REL</a></td><td>2.7</td><td><span class="label label-scale" style="background-color: #CCF24D">2.7</span></td></tr>
+<tr><td><a href="/documentation/questions.html#ITS_REL">ITS Reliability</a></td><td><a href="/documentation/questions.html#ITS_REL">ITS_REL</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#ITS_USAGE">ITS usage</a></td><td><a href="/documentation/questions.html#ITS_USAGE">ITS_USAGE</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MKT_FEEDBACK">Marketplace feedback</a></td><td><a href="/documentation/questions.html#MKT_FEEDBACK">MKT_FEEDBACK</a></td><td>1.0</td><td><span class="label label-scale" style="background-color: #FFFF66">1.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MLS_DEV_ACTIVITY">Developer ML activity</a></td><td><a href="/documentation/questions.html#MLS_DEV_ACTIVITY">MLS_DEV_ACTIVITY</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MLS_DEV_DIVERSITY">Developer ML diversity</a></td><td><a href="/documentation/questions.html#MLS_DEV_DIVERSITY">MLS_DEV_DIVERSITY</a></td><td>3.0</td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_DEV_RESPONSIVENESS">Developer ML responsiveness</a></td><td><a href="/documentation/questions.html#MLS_DEV_RESPONSIVENESS">MLS_DEV_RESPONSIVENESS</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MLS_DEV_SUPPORT">Developer ML support</a></td><td><a href="/documentation/questions.html#MLS_DEV_SUPPORT">MLS_DEV_SUPPORT</a></td><td>2.5</td><td><span class="label label-scale" style="background-color: #CCF24D">2.5</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MLS_USR_ACTIVITY">User ML activity</a></td><td><a href="/documentation/questions.html#MLS_USR_ACTIVITY">MLS_USR_ACTIVITY</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MLS_USR_DIVERSITY">User ML diversity</a></td><td><a href="/documentation/questions.html#MLS_USR_DIVERSITY">MLS_USR_DIVERSITY</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">User ML responsiveness</a></td><td><a href="/documentation/questions.html#MLS_USR_RESPONSIVENESS">MLS_USR_RESPONSIVENESS</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
-<tr><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">User ML support</a></td><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">MLS_USR_SUPPORT</a></td><td>4.5</td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
-<tr><td><a href="/documentation/questions.html#PLAN_RELEASES">Milestones</a></td><td><a href="/documentation/questions.html#PLAN_RELEASES">PLAN_RELEASES</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">User ML support</a></td><td><a href="/documentation/questions.html#MLS_USR_SUPPORT">MLS_USR_SUPPORT</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#PLAN_RELEASES">Milestones</a></td><td><a href="/documentation/questions.html#PLAN_RELEASES">PLAN_RELEASES</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PRACTICES_ANA">Analysability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_ANA">PRACTICES_ANA</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PRACTICES_CHA">Changeability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_CHA">PRACTICES_CHA</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#PRACTICES_REL">Reliability practices</a></td><td><a href="/documentation/questions.html#PRACTICES_REL">PRACTICES_REL</a></td><td>3.0</td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
@@ -578,7 +565,7 @@ function click(d) {
 <tr><td><a href="/documentation/questions.html#PUB_SCM_INFO">SCM information access</a></td><td><a href="/documentation/questions.html#PUB_SCM_INFO">PUB_SCM_INFO</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM activity</a></td><td><a href="/documentation/questions.html#SCM_ACTIVITY">SCM_ACTIVITY</a></td><td>5.0</td><td><span class="label label-scale" style="background-color: #33CC00">5.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM diversity</a></td><td><a href="/documentation/questions.html#SCM_DIVERSITY">SCM_DIVERSITY</a></td><td>4.0</td><td><span class="label label-scale" style="background-color: #66D91A">4.0</span></td></tr>
-<tr><td><a href="/documentation/questions.html#SCM_STABILITY">SCM Stability</a></td><td><a href="/documentation/questions.html#SCM_STABILITY">SCM_STABILITY</a></td><td>2.0</td><td><span class="label label-scale" style="background-color: #CCF24D">2.0</span></td></tr>
+<tr><td><a href="/documentation/questions.html#SCM_STABILITY">SCM Stability</a></td><td><a href="/documentation/questions.html#SCM_STABILITY">SCM_STABILITY</a></td><td>3.0</td><td><span class="label label-scale" style="background-color: #99E633">3.0</span></td></tr>
 <tr><td><a href="/documentation/questions.html#SCM_USAGE">SCM usage</a></td><td><a href="/documentation/questions.html#SCM_USAGE">SCM_USAGE</a></td><td>4.5</td><td><span class="label label-scale" style="background-color: #66D91A">4.5</span></td></tr>
 </table>
 
@@ -586,39 +573,38 @@ function click(d) {
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="metrics"><br /><table class="table table-striped table-condensed table-hover">
 <tr><th width="40%">Name</th><th width="20%">Mnemo</th><th width="20%">Value</th><th width="20%">Indicator</th></tr>
-<tr><td><a href="/documentation/metrics.html#COMMENT_LINES_DENSITY">Comment rate</a></td><td><a href="/documentation/metrics.html#COMMENT_LINES_DENSITY">COMMENT_LINES_DENSITY</a></td><td>27.3</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#COMMENT_LINES_DENSITY">Comment rate</a></td><td><a href="/documentation/metrics.html#COMMENT_LINES_DENSITY">COMMENT_LINES_DENSITY</a></td><td>27.2</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#DUPLICATED_LINES_DENSITY">Cloning density</a></td><td><a href="/documentation/metrics.html#DUPLICATED_LINES_DENSITY">DUPLICATED_LINES_DENSITY</a></td><td>3.2</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#FUNCTIONS">Number of functions</a></td><td><a href="/documentation/metrics.html#FUNCTIONS">FUNCTIONS</a></td><td>11946</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#FUNCTIONS">Number of functions</a></td><td><a href="/documentation/metrics.html#FUNCTIONS">FUNCTIONS</a></td><td>12061</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#FUNCTION_COMPLEXITY">Average Cyclomatic Complexity</a></td><td><a href="/documentation/metrics.html#FUNCTION_COMPLEXITY">FUNCTION_COMPLEXITY</a></td><td>2.5</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_AUTH_3M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_3M">ITS_AUTH_3M</a></td><td>26</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>0.06</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_BUGS_OPEN">Number of open bugs</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_OPEN">ITS_BUGS_OPEN</a></td><td>385</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_3M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_3M">ITS_FIX_MED_3M</a></td><td>28.82</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#ITS_UPDATES_3M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_3M">ITS_UPDATES_3M</a></td><td>438</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_AUTH_3M">ITS authors</a></td><td><a href="/documentation/metrics.html#ITS_AUTH_3M">ITS_AUTH_3M</a></td><td>24</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">Defect density</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_DENSITY">ITS_BUGS_DENSITY</a></td><td>0.35</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_BUGS_OPEN">Number of open bugs</a></td><td><a href="/documentation/metrics.html#ITS_BUGS_OPEN">ITS_BUGS_OPEN</a></td><td>493</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_FIX_MED_3M">Median time to fix bug</a></td><td><a href="/documentation/metrics.html#ITS_FIX_MED_3M">ITS_FIX_MED_3M</a></td><td>44.03</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#ITS_UPDATES_3M">ITS updates</a></td><td><a href="/documentation/metrics.html#ITS_UPDATES_3M">ITS_UPDATES_3M</a></td><td>474</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#MKT_FAV">Number of favourites on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_FAV">MKT_FAV</a></td><td>6</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">Number of successfull installs on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">MKT_INSTALL_SUCCESS_1M</a></td><td>219</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_AUTH_3M">Developer ML authors</a></td><td><a href="/documentation/metrics.html#MLS_DEV_AUTH_3M">MLS_DEV_AUTH_3M</a></td><td>6</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_3M">Developer ML response ratio</a></td><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_3M">MLS_DEV_RESP_RATIO_3M</a></td><td>0.15</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_RESP_TIME_MED_3M">Developer ML response time</a></td><td><a href="/documentation/metrics.html#MLS_DEV_RESP_TIME_MED_3M">MLS_DEV_RESP_TIME_MED_3M</a></td><td>1.83</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_3M">Developer ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_3M">MLS_DEV_SUBJ_3M</a></td><td>26</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_DEV_VOL_3M">Developer ML posts</a></td><td><a href="/documentation/metrics.html#MLS_DEV_VOL_3M">MLS_DEV_VOL_3M</a></td><td>30</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_USR_AUTH_3M">User ML authors</a></td><td><a href="/documentation/metrics.html#MLS_USR_AUTH_3M">MLS_USR_AUTH_3M</a></td><td>41</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_USR_RESP_RATIO_3M">User ML response ratio</a></td><td><a href="/documentation/metrics.html#MLS_USR_RESP_RATIO_3M">MLS_USR_RESP_RATIO_3M</a></td><td>3.01</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_3M">User ML response time</a></td><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_3M">MLS_USR_RESP_TIME_MED_3M</a></td><td>1</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_USR_SUBJ_3M">User ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_USR_SUBJ_3M">MLS_USR_SUBJ_3M</a></td><td>73</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#MLS_USR_VOL_3M">User ML posts</a></td><td><a href="/documentation/metrics.html#MLS_USR_VOL_3M">MLS_USR_VOL_3M</a></td><td>293</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_ANA">Number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA">NCC_ANA</a></td><td>1637</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_ANA_IDX">Average number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA_IDX">NCC_ANA_IDX</a></td><td>12.4015151515152</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_CHA">Number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA">NCC_CHA</a></td><td>985</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_CHA_IDX">Average number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA_IDX">NCC_CHA_IDX</a></td><td>7.46212121212121</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_REL">Number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL">NCC_REL</a></td><td>332</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_REL_IDX">Average number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL_IDX">NCC_REL_IDX</a></td><td>2.51515151515152</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">Number of successfull installs on the Marketplace</a></td><td><a href="/documentation/metrics.html#MKT_INSTALL_SUCCESS_1M">MKT_INSTALL_SUCCESS_1M</a></td><td>187</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_DEV_AUTH_3M">Developer ML authors</a></td><td><a href="/documentation/metrics.html#MLS_DEV_AUTH_3M">MLS_DEV_AUTH_3M</a></td><td>3</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_3M">Developer ML response ratio</a></td><td><a href="/documentation/metrics.html#MLS_DEV_RESP_RATIO_3M">MLS_DEV_RESP_RATIO_3M</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_3M">Developer ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_DEV_SUBJ_3M">MLS_DEV_SUBJ_3M</a></td><td>24</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_DEV_VOL_3M">Developer ML posts</a></td><td><a href="/documentation/metrics.html#MLS_DEV_VOL_3M">MLS_DEV_VOL_3M</a></td><td>25</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_USR_AUTH_3M">User ML authors</a></td><td><a href="/documentation/metrics.html#MLS_USR_AUTH_3M">MLS_USR_AUTH_3M</a></td><td>30</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_USR_RESP_RATIO_3M">User ML response ratio</a></td><td><a href="/documentation/metrics.html#MLS_USR_RESP_RATIO_3M">MLS_USR_RESP_RATIO_3M</a></td><td>20.57</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_3M">User ML response time</a></td><td><a href="/documentation/metrics.html#MLS_USR_RESP_TIME_MED_3M">MLS_USR_RESP_TIME_MED_3M</a></td><td>1.37</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_USR_SUBJ_3M">User ML subjects</a></td><td><a href="/documentation/metrics.html#MLS_USR_SUBJ_3M">MLS_USR_SUBJ_3M</a></td><td>7</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#MLS_USR_VOL_3M">User ML posts</a></td><td><a href="/documentation/metrics.html#MLS_USR_VOL_3M">MLS_USR_VOL_3M</a></td><td>199</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_ANA">Number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA">NCC_ANA</a></td><td>1663</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_ANA_IDX">Average number of non-conformities for analysability</a></td><td><a href="/documentation/metrics.html#NCC_ANA_IDX">NCC_ANA_IDX</a></td><td>12.410447761194</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_CHA">Number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA">NCC_CHA</a></td><td>1005</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_CHA_IDX">Average number of non-conformities for changeability</a></td><td><a href="/documentation/metrics.html#NCC_CHA_IDX">NCC_CHA_IDX</a></td><td>7.5</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_REL">Number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL">NCC_REL</a></td><td>331</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_REL_IDX">Average number of non-conformities for reliability</a></td><td><a href="/documentation/metrics.html#NCC_REL_IDX">NCC_REL_IDX</a></td><td>2.47014925373134</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#NCC_REU">Number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU">NCC_REU</a></td><td>8</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCC_REU_IDX">Average number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU_IDX">NCC_REU_IDX</a></td><td>0.0606060606060606</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#NCLOC">Source Lines Of Code</a></td><td><a href="/documentation/metrics.html#NCLOC">NCLOC</a></td><td>132900</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>5</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Reviews success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>0</td><td><span class="label label-scale" style="background-color: #FFFF66">1</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#PUBLIC_API">Public API</a></td><td><a href="/documentation/metrics.html#PUBLIC_API">PUBLIC_API</a></td><td>7408</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCC_REU_IDX">Average number of non-conformities for reusability</a></td><td><a href="/documentation/metrics.html#NCC_REU_IDX">NCC_REU_IDX</a></td><td>0.0597014925373134</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#NCLOC">Source Lines Of Code</a></td><td><a href="/documentation/metrics.html#NCLOC">NCLOC</a></td><td>134274</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">Number of milestones</a></td><td><a href="/documentation/metrics.html#PLAN_MILESTONES_VOL">PLAN_MILESTONES_VOL</a></td><td>13</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">Reviews success rate</a></td><td><a href="/documentation/metrics.html#PLAN_REVIEWS_SUCCESS_RATE">PLAN_REVIEWS_SUCCESS_RATE</a></td><td>60</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#PUBLIC_API">Public API</a></td><td><a href="/documentation/metrics.html#PUBLIC_API">PUBLIC_API</a></td><td>7444</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">ITS information</a></td><td><a href="/documentation/metrics.html#PUB_ITS_INFO_PMI">PUB_ITS_INFO_PMI</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">SCM information</a></td><td><a href="/documentation/metrics.html#PUB_SCM_INFO_PMI">PUB_SCM_INFO_PMI</a></td><td>5</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RKO_ANA">Number of violated rules for analysability</a></td><td><a href="/documentation/metrics.html#RKO_ANA">RKO_ANA</a></td><td>8</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
@@ -633,37 +619,38 @@ function click(d) {
 <tr><td><a href="/documentation/metrics.html#RULES_CHA">Number of rules for changeability</a></td><td><a href="/documentation/metrics.html#RULES_CHA">RULES_CHA</a></td><td>8</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RULES_REL">Number of rules for reliability</a></td><td><a href="/documentation/metrics.html#RULES_REL">RULES_REL</a></td><td>27</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
 <tr><td><a href="/documentation/metrics.html#RULES_REU">Number of rules for reusability</a></td><td><a href="/documentation/metrics.html#RULES_REU">RULES_REU</a></td><td>4</td><td><span class="label label-scale" style="background-color: lightgray"> Not Active </span></td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITS_3M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_3M">SCM_COMMITS_3M</a></td><td>397</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_3M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_3M">SCM_COMMITTED_FILES_3M</a></td><td>2787</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_3M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_3M">SCM_COMMITTERS_3M</a></td><td>13</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
-<tr><td><a href="/documentation/metrics.html#SCM_STABILITY_3M">File stability index</a></td><td><a href="/documentation/metrics.html#SCM_STABILITY_3M">SCM_STABILITY_3M</a></td><td>1.5</td><td><span class="label label-scale" style="background-color: #CCF24D">2</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_COMMITS_3M">SCM Commits</a></td><td><a href="/documentation/metrics.html#SCM_COMMITS_3M">SCM_COMMITS_3M</a></td><td>312</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_3M">Files committed</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTED_FILES_3M">SCM_COMMITTED_FILES_3M</a></td><td>2811</td><td><span class="label label-scale" style="background-color: #33CC00">5</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_COMMITTERS_3M">SCM committers</a></td><td><a href="/documentation/metrics.html#SCM_COMMITTERS_3M">SCM_COMMITTERS_3M</a></td><td>11</td><td><span class="label label-scale" style="background-color: #66D91A">4</span></td></tr>
+<tr><td><a href="/documentation/metrics.html#SCM_STABILITY_3M">File stability index</a></td><td><a href="/documentation/metrics.html#SCM_STABILITY_3M">SCM_STABILITY_3M</a></td><td>1.42</td><td><span class="label label-scale" style="background-color: #99E633">3</span></td></tr>
 </table>
 
 </div>
                   <div role="tabpanel" class="tab-pane fade" id="practices"><br /><table class="table table-striped table-condensed table-hover">
-<tr><th width="40%">Name</th><th width="40%">Mnemo</th><th width="20%">NCC</th></tr>
-<tr><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">Avoid Deeply Nested If Statements</a></td><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">AvoidDeeplyNestedIfStmts</a></td><td>464</td></tr>
-<tr><td><a href="/documentation/rules.html#CloseResource">Close Resource</a></td><td><a href="/documentation/rules.html#CloseResource">CloseResource</a></td><td>36</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">Avoid Branching Statement As Last In Loop</a></td><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">AvoidBranchingStatementAsLastInLoop</a></td><td>6</td></tr>
-<tr><td><a href="/documentation/rules.html#BooleanInstantiation">Boolean Instantiation</a></td><td><a href="/documentation/rules.html#BooleanInstantiation">BooleanInstantiation</a></td><td>4</td></tr>
-<tr><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">Switch Statements Should Have Default</a></td><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">SwitchStmtsShouldHaveDefault</a></td><td>254</td></tr>
-<tr><td><a href="/documentation/rules.html#MissingBreakInSwitch">Missing Break In Switch</a></td><td><a href="/documentation/rules.html#MissingBreakInSwitch">MissingBreakInSwitch</a></td><td>21</td></tr>
-<tr><td><a href="/documentation/rules.html#PositionLiteralsFirstInCaseInsensitiveComparisons">Position Literals First In Case Insensitive Comparisons</a></td><td><a href="/documentation/rules.html#PositionLiteralsFirstInCaseInsensitiveComparisons">PositionLiteralsFirstInCaseInsensitiveComparisons</a></td><td>4</td></tr>
-<tr><td><a href="/documentation/rules.html#OverrideBothEqualsAndHashcode">Override Both Equals And Hash code</a></td><td><a href="/documentation/rules.html#OverrideBothEqualsAndHashcode">OverrideBothEqualsAndHashcode</a></td><td>8</td></tr>
-<tr><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">Class With Only Private Constructors Should Be Final</a></td><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">ClassWithOnlyPrivateConstructorsShouldBeFinal</a></td><td>13</td></tr>
-<tr><td><a href="/documentation/rules.html#GodClass">God Class</a></td><td><a href="/documentation/rules.html#GodClass">GodClass</a></td><td>327</td></tr>
-<tr><td><a href="/documentation/rules.html#ConfusingTernary">Confusing Ternary</a></td><td><a href="/documentation/rules.html#ConfusingTernary">ConfusingTernary</a></td><td>795</td></tr>
-<tr><td><a href="/documentation/rules.html#PreserveStackTrace">Preserve Stack Trace</a></td><td><a href="/documentation/rules.html#PreserveStackTrace">PreserveStackTrace</a></td><td>20</td></tr>
-<tr><td><a href="/documentation/rules.html#NonThreadSafeSingleton">Non Thread Safe Singleton</a></td><td><a href="/documentation/rules.html#NonThreadSafeSingleton">NonThreadSafeSingleton</a></td><td>18</td></tr>
-<tr><td><a href="/documentation/rules.html#NonStaticInitializer">Non Static Initializer</a></td><td><a href="/documentation/rules.html#NonStaticInitializer">NonStaticInitializer</a></td><td>8</td></tr>
-<tr><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">Constructor Calls Overridable Method</a></td><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">ConstructorCallsOverridableMethod</a></td><td>17</td></tr>
-<tr><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">Position Literals First In Comparisons</a></td><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">PositionLiteralsFirstInComparisons</a></td><td>18</td></tr>
-<tr><td><a href="/documentation/rules.html#AvoidReassigningParameters">Avoid Reassigning Parameters</a></td><td><a href="/documentation/rules.html#AvoidReassigningParameters">AvoidReassigningParameters</a></td><td>165</td></tr>
+<tr><th width="40%">Name</th><th width="25%">Mnemo</th><th width="10%">Priority</th><th width="10%">NCC</th><th width="15%">Tool</th></tr>
+<tr><td><a href="/documentation/rules.html#PositionLiteralsFirstInCaseInsensitiveComparisons">Position Literals First In Case Insensitive Comparisons</a></td><td><a href="/documentation/rules.html#PositionLiteralsFirstInCaseInsensitiveComparisons">PositionLiteralsFirstInCaseInsensitiveComparisons</a></td><td>2</td><td>4</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#BooleanInstantiation">Boolean Instantiation</a></td><td><a href="/documentation/rules.html#BooleanInstantiation">BooleanInstantiation</a></td><td>2</td><td>4</td><td>PMD Basic Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">Avoid Branching Statement As Last In Loop</a></td><td><a href="/documentation/rules.html#AvoidBranchingStatementAsLastInLoop">AvoidBranchingStatementAsLastInLoop</a></td><td>2</td><td>6</td><td>PMD Basic Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#NonStaticInitializer">Non Static Initializer</a></td><td><a href="/documentation/rules.html#NonStaticInitializer">NonStaticInitializer</a></td><td>2</td><td>8</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#OverrideBothEqualsAndHashcode">Override Both Equals And Hash code</a></td><td><a href="/documentation/rules.html#OverrideBothEqualsAndHashcode">OverrideBothEqualsAndHashcode</a></td><td>2</td><td>8</td><td>PMD Basic Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">Class With Only Private Constructors Should Be Final</a></td><td><a href="/documentation/rules.html#ClassWithOnlyPrivateConstructorsShouldBeFinal">ClassWithOnlyPrivateConstructorsShouldBeFinal</a></td><td>2</td><td>13</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">Constructor Calls Overridable Method</a></td><td><a href="/documentation/rules.html#ConstructorCallsOverridableMethod">ConstructorCallsOverridableMethod</a></td><td>2</td><td>17</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#NonThreadSafeSingleton">Non Thread Safe Singleton</a></td><td><a href="/documentation/rules.html#NonThreadSafeSingleton">NonThreadSafeSingleton</a></td><td>2</td><td>17</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">Position Literals First In Comparisons</a></td><td><a href="/documentation/rules.html#PositionLiteralsFirstInComparisons">PositionLiteralsFirstInComparisons</a></td><td>2</td><td>18</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#PreserveStackTrace">Preserve Stack Trace</a></td><td><a href="/documentation/rules.html#PreserveStackTrace">PreserveStackTrace</a></td><td>2</td><td>20</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#MissingBreakInSwitch">Missing Break In Switch</a></td><td><a href="/documentation/rules.html#MissingBreakInSwitch">MissingBreakInSwitch</a></td><td>2</td><td>21</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#CloseResource">Close Resource</a></td><td><a href="/documentation/rules.html#CloseResource">CloseResource</a></td><td>2</td><td>36</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidReassigningParameters">Avoid Reassigning Parameters</a></td><td><a href="/documentation/rules.html#AvoidReassigningParameters">AvoidReassigningParameters</a></td><td>2</td><td>165</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">Switch Statements Should Have Default</a></td><td><a href="/documentation/rules.html#SwitchStmtsShouldHaveDefault">SwitchStmtsShouldHaveDefault</a></td><td>1</td><td>254</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#GodClass">God Class</a></td><td><a href="/documentation/rules.html#GodClass">GodClass</a></td><td>2</td><td>334</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">Avoid Deeply Nested If Statements</a></td><td><a href="/documentation/rules.html#AvoidDeeplyNestedIfStmts">AvoidDeeplyNestedIfStmts</a></td><td>2</td><td>477</td><td>PMD Design Rules 5.1.2</td></tr>
+<tr><td><a href="/documentation/rules.html#ConfusingTernary">Confusing Ternary</a></td><td><a href="/documentation/rules.html#ConfusingTernary">ConfusingTernary</a></td><td>2</td><td>801</td><td>PMD Design Rules 5.1.2</td></tr>
 </table>
 </div>
                   <div role="tabpanel" class="tab-pane fade" id="actions">...</div>
                   <div role="tabpanel" class="tab-pane fade" id="log"><br />
                     <ul class="list-group">
+                      <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [MLS_DEV_RESP_TIME_MED_3M] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [LINE_COVERAGE] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [BRANCH_COVERAGE] is missing.</li>
                       <li class="list-group-item"><span class="label label-danger">ERROR</span>  Metric [TST_VOL_IDX] is missing.</li>

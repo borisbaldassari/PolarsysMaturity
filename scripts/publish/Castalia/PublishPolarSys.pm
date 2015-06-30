@@ -784,16 +784,21 @@ sub generate_project($$$) {
 	# loop through values and display them in a table.
 	$html_ret_rules .= "<table class=\"table table-striped table-condensed table-hover\">\n";
 	$html_ret_rules .= "<tr><th width=\"40%\">Name</th>" 
-	    . "<th width=\"40%\">Mnemo</th>" 
-	    . "<th width=\"20%\">NCC</th></tr>\n";
-	foreach my $rule (@{$raw_rules->{"children"}}) {
+	    . "<th width=\"25%\">Mnemo</th>" 
+	    . "<th width=\"10%\">Priority</th>" 
+	    . "<th width=\"10%\">NCC</th>" 
+	    . "<th width=\"15%\">Tool</th></tr>\n";
+
+	foreach my $rule ( sort {$a->{'value'} <=> $b->{'value'} } @{$raw_rules->{"children"}}) {
 	    if (exists($flat_rules{$rule->{"name"}})) {
 		my $v_mnemo = $rule->{'name'};
 		$html_ret_rules .= "<tr><td><a href=\"/documentation/rules.html#" 
 		    . $v_mnemo . '">' . $flat_rules{$v_mnemo}{'name'} . "</a></td>" ;
 		$html_ret_rules .= "<td><a href=\"/documentation/rules.html#" 
 		    . $v_mnemo . '">' . $v_mnemo . "</a></td>";
-		$html_ret_rules .= "<td>" . $rule->{'value'} . "</td></tr>\n";
+		$html_ret_rules .= '<td>' . $flat_rules{$v_mnemo}{'priority'} . "</td>";
+		$html_ret_rules .= "<td>" . $rule->{'value'} . "</td>";
+		$html_ret_rules .= '<td>' . $flat_rules{$v_mnemo}{'from'} . "</td></tr>\n";
 	    } else {
 		my $err = "WARN: metric [" . $rule->{'name'} . 
 		    "] is not referenced in metrics definition file.";
@@ -889,7 +894,7 @@ sub generate_project($$$) {
                         </dl>
                       </div>
                       <div class="col-sm-6">
-                        <p class="text-right" style="font-weight: bold">Global rating: <span style="color: #DA7A08; font-size: 300%">' . $project_attrs{"QM_QUALITY"} . '</span> / 5 &mdash; Completeness: ' . $project_attrs_conf{"QM_QUALITY"} . '</p><br />
+                        <p class="text-right" style="font-weight: bold">Completeness: <span style="color: #DA7A08; font-size: 200%">' . $project_attrs_conf{"QM_QUALITY"} . '</span></p><br />
                       </div>
                     </div>
                     <div class="row">
@@ -901,19 +906,34 @@ sub generate_project($$$) {
 	. 'Rating for main quality attributes</div>
                           <div class="panel-body">
                             <dl>'; 
-    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_QUALITY">Overall Maturity</a>', 
-				       $project_attrs{"QM_QUALITY"}, 
-				       $project_attrs_conf{"QM_QUALITY"}, 
-				       $project_id);
-    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem Quality</a>',
+    # Generate progressbar for completeness.
+    my ($comp_a, $comp_b) = split( ' / ', $project_attrs_conf{"QM_QUALITY"} );
+    my $percent = 100 * $comp_a / $comp_b;
+    my $ind = 5 * $comp_a / $comp_b;
+    my $ret = '
+                  <dt>Completeness of metrics</dt>
+                  <dd>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="'
+         . $comp_a . '" aria-valuemin="0" aria-valuemax="' . $comp_b . '"  style="background-color: ' 
+	 . $colours[$ind] . ';width: ' . $percent . '%;">' . $comp_a .  ' / ' . $comp_b . '</div>
+                    </div>
+                  </dd>';
+    $html_ret .= $ret;
+
+#    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_QUALITY">Overall Maturity</a>', 
+#				       $project_attrs{"QM_QUALITY"}, 
+#				       $project_attrs_conf{"QM_QUALITY"}, 
+#				       $project_id);
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ECOSYSTEM">Ecosystem</a>',
 				       $project_attrs{"QM_ECOSYSTEM"}, 
 				       $project_attrs_conf{"QM_ECOSYSTEM"}, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_PROCESS">Process Quality</a>', 
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_PROCESS">Process</a>', 
 				       $project_attrs{"QM_PROCESS"}, 
 				       $project_attrs_conf{"QM_PROCESS"}, 
 				       $project_id);
-    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_PRODUCT">Product Quality</a>',
+    $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_PRODUCT">Product</a>',
 				       $project_attrs{"QM_PRODUCT"}, 
 				       $project_attrs_conf{"QM_PRODUCT"}, 
 				       $project_id);
@@ -951,7 +971,7 @@ sub generate_project($$$) {
         my $raw_comments = &read_json($json_comments);
 	@comments = @{$raw_comments->{"comments"}};
     } else {
-	my $err = "ERR: Cannot find comments file [$json_comments] for [$project_id].";
+	my $err = "WARN: Cannot find comments file [$json_comments] for [$project_id].";
 	push( @{$project_errors{$project_id}}, $err);
         print "$err\n";
     }
@@ -995,7 +1015,7 @@ sub generate_project($$$) {
     # Display rating for project: ECOSYSTEM
     $html_ret .= '
                         <div class="panel panel-primary"><div class="panel-heading">'
-	. 'Ecosystem quality</div>
+	. 'Ecosystem</div>
                           <div class="panel-body">
                             <dl>'; 
     $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ACTIVITY">Activity </a>',
@@ -1033,7 +1053,7 @@ sub generate_project($$$) {
                       <div class="col-sm-4">';
     $html_ret .= '
                         <div class="panel panel-primary"><div class="panel-heading">'
-	. 'Process quality</div>
+	. 'Process</div>
                           <div class="panel-body">
                             <dl>'; 
     $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_SCM">Configuration Management</a>',
@@ -1063,7 +1083,7 @@ sub generate_project($$$) {
                       <div class="col-sm-4">';
     $html_ret .= '
                         <div class="panel panel-primary"><div class="panel-heading">'
-	. 'Product quality</div>
+	. 'Product</div>
                           <div class="panel-body">
                             <dl>'; 
     $html_ret .= &generate_progressbar('<a href="/documentation/attributes.html#QM_ANALYSABILITY">Analysability</a>',
@@ -1132,7 +1152,7 @@ sub generate_project($$$) {
 	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $1;
 	}
 	if ($logline =~ m!^WARN\s*:?!) { 
-	    $logline = "<span class=\"label label-danger\">ERROR</span> " . $logline;
+	    $logline = "<span class=\"label label-warning\">WARNING</span> " . $logline;
 	}
 	$html_ret .= '
                       <li class="list-group-item">' . $logline . '</li>';;
@@ -1510,6 +1530,7 @@ sub generate_doc_rules($) {
         my $rules_from = $rules_name . " " . $rules_version;
         
         my $file_vol_rules;
+#	print Dumper($raw_rules->{'children'});
         foreach my $rule_child (@{$raw_rules->{"children"}}) {
             $flat_rules{$rule_child->{"mnemo"}} = $rule_child;
             $flat_rules{$rule_child->{"mnemo"}}->{"from"} = $rules_from;

@@ -45,7 +45,7 @@ sub build_page($$$$$) {
     my $menu_ref = shift; # array ref => for the menu
 
     my $html_ret = &get_HTML_start();
-    $html_ret .= &build_title("PolarSys Dashboard &mdash; v1.3");
+    $html_ret .= &build_title('PolarSys Dashboard &mdash; v1.3 <span style="font-weight: bold">&beta;</span>');
     $html_ret .= &build_menu($menu_ref);
     # if file is a directory, create index
     if (-d $file) {
