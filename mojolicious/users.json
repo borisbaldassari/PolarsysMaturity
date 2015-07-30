@@ -1,14 +1,59 @@
 {
-  "boris": {
-    "pwd": "boris",
-    "projects": [
-      "modeling.emfcompare",
-      "modeling.mdt.papyrus",
-      "modeling.sirius",
-      "polarsys.kitalpha"
-      "technology.ease",
-      "tools.cdt",
-      "tools.tracecompass"
-    ]
-  }
+    "boris": {
+        "pwd": "boris",
+        "projects": [
+            "polarsys.capella",
+            "modeling.emfcompare",
+            "modeling.mdt.papyrus",
+            "modeling.sirius",
+            "polarsys.kitalpha"
+            "technology.ease",
+            "tools.cdt",
+            "tools.tracecompass"
+        ]
+    },
+    "camille.letavernier": {
+        "pwd": "BelOyShrum2",
+        "projects": [
+            "modeling.mdt.papyrus"
+        ]
+    },
+    "matthieu.helleboid": {
+        "pwd": "drengidutIj1",
+        "projects": [
+            "polarsys.capella",
+            "polarsys.kitalpha"
+        ]
+    },
+    "christophe.gatti": {
+        "pwd": "vinkOw4odWa",
+        "projects": [
+            "polarsys.capella",
+            "polarsys.kitalpha"
+        ]
+    },
+    "christian.pontesegger": {
+        "pwd": "cycsAdam0",
+        "projects": [
+            "technology.ease"
+        ]
+    },
+    "anne.haugommard": {
+        "pwd": "godhihothIv1",
+        "projects": [
+            "modeling.gendoc"
+        ]
+    },
+    "laurent.redor": {
+        "pwd": "IvKowed2",
+        "projects": [
+            "modeling.sirius"
+        ]
+    },
+    "user.tracecompass": {
+        "pwd": "JiOfdycs8",
+        "projects": [
+            "tools.tracecompass"
+        ]
+    },
 }

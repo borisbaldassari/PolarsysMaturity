@@ -1335,7 +1335,8 @@ sub generate_doc_metrics($) {
     
     my $html_ret = '
               <h2>Definition of metrics</h2>
-              <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
+              <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p>
+              <p>Metrics are classified according to their source. Grimoire includes all data related to configuration management, mailing lists, forums, and issues.</p><br />
         
 ';
 
