@@ -2,6 +2,7 @@ package Comments::Controller::Comments;
 use Mojo::Base 'Mojolicious::Controller';
 
 use IPC::System::Simple qw(system);
+use Cwd;
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
 use JSON qw( decode_json encode_json );
@@ -57,8 +58,10 @@ sub write_json($$) {
 #
 sub generate_web() {
     print `pwd; ls ..`;
+    my $dir = getcwd();
     chdir("../scripts/publish");
     system( "perl", "publish_static.pl", "polarsys_maturity_assessment_prod.json" );
+    chdir($dir);
 }
 
 
@@ -83,6 +86,7 @@ sub welcome {
     }
     
     # Open configuration file.
+    print Dumper(`pwd; ls`);
     my $json_conf = &read_json($publish_conf);
     
     # Find "Projects" in menu entries to get the project that do not have yet
@@ -174,6 +178,7 @@ sub read {
     my $file = $dir_projects . "/" . $project . "/" . $project . "_comments.json";
 
     my @comments;
+    print "Reading file $file. " . `pwd` . " and " . `ls` . "\n";
     if (-e $file) {
 	my $raw = &read_json($file);
 	@comments = @{$raw->{"comments"}};
