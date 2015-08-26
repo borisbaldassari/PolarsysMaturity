@@ -517,6 +517,9 @@ sub delete_post {
     # Encode the entire JSON and write it to file.
     &write_json( $raw, $file );
 
+    # Re-generate static web files.
+    &generate_web();
+
     # Write a message to log about this comment.
     $self->app->log->info('User [' . $in_user . '] has deleted comment id [' . $in_id . ']..');
     
