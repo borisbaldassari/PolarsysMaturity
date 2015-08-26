@@ -1,6 +1,7 @@
 package Comments::Controller::Comments;
 use Mojo::Base 'Mojolicious::Controller';
 
+use IPC::System::Simple qw(system);
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
 use JSON qw( decode_json encode_json );
@@ -48,6 +49,16 @@ sub write_json($$) {
         print $fhm $json_out;
     	close $fhm;
     };
+}
+
+
+#
+# Utility to re-generate the web site (and dashboards, most importantly)
+#
+sub generate_web() {
+    print `pwd; ls ..`;
+    chdir("../scripts/publish");
+    system( "perl", "publish_static.pl", "polarsys_maturity_assessment_prod.json" );
 }
 
 
@@ -264,6 +275,9 @@ sub write_post {
     # Encode the entire JSON and write it to file.
     &write_json( $raw, $file );
 
+    # Re-generate static web files.
+    &generate_web();
+
     # Write a message to log about this comment.
     $self->app->log->info('User [' . $in_user . '] has created comment id [' . $in_id . ']..');
     
@@ -378,6 +392,9 @@ sub edit_post {
 
     # Encode the entire JSON and write it to file.
     &write_json( $raw, $file );
+
+    # Re-generate static web files.
+    &generate_web();
 
     # Write a message to log about this comment.
     $self->app->log->info('User [' . $in_user . '] has created comment id [' . $in_id . ']..');
