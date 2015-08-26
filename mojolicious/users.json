@@ -5,6 +5,7 @@
             "polarsys.capella",
             "modeling.emfcompare",
             "modeling.mdt.papyrus",
+	    "modeling.gendoc",
             "modeling.sirius",
             "polarsys.kitalpha",
             "technology.ease",
