@@ -17,6 +17,7 @@ sub new {
 
     open my $fh, '<', $pass_file or die "Could not open users file [$pass_file].\n";
     while (<$fh>) { chomp; $pass_str .= $_; }
+    close $fh;
 
     $users = decode_json( $pass_str );
 
