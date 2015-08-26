@@ -6,6 +6,7 @@ use Cwd;
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
 use JSON qw( decode_json encode_json );
+use File::Copy::Recursive qw(rcopy);
 
 # Include library for Publishing
 use lib "../scripts/publish/";
@@ -14,6 +15,7 @@ use Castalia::PublishPolarSys;
 my $dir_projects = "../projects/";
 my $dir_data = "../data/";
 my $publish_conf = "../scripts/publish/polarsys_maturity_assessment_prod.json";
+my $http_dir = "/srv/www/htdocs/";
 
 #
 # Utility to read json from a file name.
@@ -57,10 +59,12 @@ sub write_json($$) {
 # Utility to re-generate the web site (and dashboards, most importantly)
 #
 sub generate_web() {
-    print `pwd; ls ..`;
+    $self->app->log->info("Re-generating the dashboard..\n");
+    $self->app->log->info(print `pwd; ls ..`);
     my $dir = getcwd();
     chdir("../scripts/publish");
     system( "perl", "publish_static.pl", "polarsys_maturity_assessment_prod.json" );
+    rcopy("dist/projects", $http_dir);
     chdir($dir);
 }
 
