@@ -59,8 +59,7 @@ sub write_json($$) {
 # Utility to re-generate the web site (and dashboards, most importantly)
 #
 sub generate_web() {
-    $self->app->log->info("Re-generating the dashboard..\n");
-    $self->app->log->info(print `pwd; ls ..`);
+    print("Re-generating the dashboard..\n");
     my $dir = getcwd();
     chdir("../scripts/publish");
     system( "perl", "publish_static.pl", "polarsys_maturity_assessment_prod.json" );
