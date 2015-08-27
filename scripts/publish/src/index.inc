@@ -51,8 +51,8 @@
                   <a href="projects/modeling.emf.compare.html" class="list-group-item">
                         <i class="fa fa-file-o"></i>&nbsp; EMF Compare</a>
                   <a href="projects/modeling.gendoc.html" class="list-group-item">
-		       <i class="fa fa-file-o"></i>&nbsp; Gendoc</a>
-                  <a href="projects/polarsys.kitalpha.html" class="list-group-item">
+		       <!-- i class="fa fa-file-o"></i>&nbsp; Gendoc</a>
+                  <a href="projects/polarsys.kitalpha.html" class="list-group-item" -->
 		       <i class="fa fa-file-o"></i>&nbsp; Kitalpha</a>
                   <a href="projects/modeling.sirius.html" class="list-group-item">
 		       <i class="fa fa-file-o"></i>&nbsp; Sirius</a>
