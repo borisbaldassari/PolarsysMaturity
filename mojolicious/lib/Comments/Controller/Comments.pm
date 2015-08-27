@@ -15,7 +15,7 @@ use Castalia::PublishPolarSys;
 my $dir_projects = "../projects/";
 my $dir_data = "../data/";
 my $publish_conf = "../scripts/publish/polarsys_maturity_assessment_prod.json";
-my $http_dir = "/srv/www/htdocs/";
+my $http_dir = "/srv/www/htdocs/projects";
 
 #
 # Utility to read json from a file name.
@@ -63,7 +63,7 @@ sub generate_web() {
     my $dir = getcwd();
     chdir("../scripts/publish");
     system( "perl", "publish_static.pl", "polarsys_maturity_assessment_prod.json" );
-    rcopy("dist/projects", $http_dir);
+    rcopy("dist/projects/*", $http_dir);
     chdir($dir);
 }
 
@@ -89,7 +89,6 @@ sub welcome {
     }
     
     # Open configuration file.
-    print Dumper(`pwd; ls`);
     my $json_conf = &read_json($publish_conf);
     
     # Find "Projects" in menu entries to get the project that do not have yet
@@ -181,7 +180,6 @@ sub read {
     my $file = $dir_projects . "/" . $project . "/" . $project . "_comments.json";
 
     my @comments;
-    print "Reading file $file. " . `pwd` . " and " . `ls` . "\n";
     if (-e $file) {
 	my $raw = &read_json($file);
 	@comments = @{$raw->{"comments"}};
