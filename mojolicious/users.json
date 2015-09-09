@@ -56,5 +56,11 @@
         "projects": [
             "tools.tracecompass"
         ]
+    },
+    "tristan.faure": {
+        "pwd": "toidVocwuod2",
+        "projects": [
+            "modeling.gendoc"
+        ]
     }
 }
