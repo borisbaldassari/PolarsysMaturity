@@ -48,7 +48,7 @@
 		       <i class="fa fa-file-o"></i>&nbsp; CDT</a>
                   <a href="projects/technology.ease.html" class="list-group-item">
 		       <i class="fa fa-file-o"></i>&nbsp; EASE</a>
-                  <a href="projects/modeling.emf.compare.html" class="list-group-item">
+                  <a href="projects/modeling.emfcompare.html" class="list-group-item">
                         <i class="fa fa-file-o"></i>&nbsp; EMF Compare</a>
                   <a href="projects/modeling.gendoc.html" class="list-group-item">
 		       <!-- i class="fa fa-file-o"></i>&nbsp; Gendoc</a>
