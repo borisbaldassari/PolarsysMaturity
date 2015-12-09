@@ -1,6 +1,7 @@
 
               <h2>Definition of metrics</h2>
-              <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p><br />
+              <p>All metrics used in the maturity assessment process are described thereafter, with useful information and references.</p>
+              <p>Metrics are classified according to their source. Grimoire includes all data related to configuration management, mailing lists, forums, and issues.</p><br />
         
  
               <div class="tabbable">
@@ -194,6 +195,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_RESP_RATIO_3M"><strong>Developer ML response ratio</strong> ( MLS_DEV_RESP_RATIO_3M )</p>
@@ -203,6 +205,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_RESP_TIME_MED_3M"><strong>Developer ML response time</strong> ( MLS_DEV_RESP_TIME_MED_3M )</p>
@@ -212,6 +215,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_SUBJ_3M"><strong>Developer ML subjects</strong> ( MLS_DEV_SUBJ_3M )</p>
@@ -221,6 +225,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threads of messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 15 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_DEV_VOL_3M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_3M )</p>
@@ -230,6 +235,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last three months, in developer mailing list archives.</p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 22 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 103 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_AUTH_3M"><strong>User ML authors</strong> ( MLS_USR_AUTH_3M )</p>
@@ -239,6 +245,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last three months, in user mailing list archives.</p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_RESP_RATIO_3M"><strong>User ML response ratio</strong> ( MLS_USR_RESP_RATIO_3M )</p>
@@ -248,6 +255,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last three months, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_RESP_TIME_MED_3M"><strong>User ML response time</strong> ( MLS_USR_RESP_TIME_MED_3M )</p>
@@ -257,6 +265,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last three months, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_SUBJ_3M"><strong>User ML subjects</strong> ( MLS_USR_SUBJ_3M )</p>
@@ -266,6 +275,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last three months, in user mailing list archives.</p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 15 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="MLS_USR_VOL_3M"><strong>User ML posts</strong> ( MLS_USR_VOL_3M )</p>
@@ -275,6 +285,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last three months, in user mailing list archives. </p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 22 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 103 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                 <li class="list-group-item"><p id="NCC_ANA_IDX"><strong>Average number of non-conformities for analysability</strong> ( NCC_ANA_IDX )</p>
@@ -531,6 +542,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_RESP_RATIO_3M"><strong>Developer ML response ratio</strong> ( MLS_DEV_RESP_RATIO_3M )</p>
@@ -540,6 +552,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_RESP_TIME_MED_3M"><strong>Developer ML response time</strong> ( MLS_DEV_RESP_TIME_MED_3M )</p>
@@ -549,6 +562,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_SUBJ_3M"><strong>Developer ML subjects</strong> ( MLS_DEV_SUBJ_3M )</p>
@@ -558,6 +572,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threads of messages dated during the last three months, in developer mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 15 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_DEV_VOL_3M"><strong>Developer ML posts</strong> ( MLS_DEV_VOL_3M )</p>
@@ -567,6 +582,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last three months, in developer mailing list archives.</p>
 <p class="desc">Developer mailing list is the list or lists considered as 'for developers' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 22 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 103 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_AUTH_3M"><strong>User ML authors</strong> ( MLS_USR_AUTH_3M )</p>
@@ -576,6 +592,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of distinct senders for messages dated during the last three months, in user mailing list archives.</p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Distinct senders are those with distinct email addresses. Email addresses used are the strings found in 'From:' fields in messages.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1.5 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 3 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 7.5 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 26 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_RESP_RATIO_3M"><strong>User ML response ratio</strong> ( MLS_USR_RESP_RATIO_3M )</p>
@@ -585,6 +602,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Average number of messages in thread, minus one, for all threds of messages dated during the last three months, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 0.833333333333 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 1.24285714286 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 2.5125 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 10 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_RESP_TIME_MED_3M"><strong>User ML response time</strong> ( MLS_USR_RESP_TIME_MED_3M )</p>
@@ -594,6 +612,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Median period from first message in thread to second message in thread, for all threds with at least two messages dated during the last three months, in user mailing list archives. </p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included). Unit is days.</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &gt; 42.93 &ge; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &gt; 0.94 &ge; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &gt; 0.26 &ge; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &gt; 0.0425 &ge; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_SUBJ_3M"><strong>User ML subjects</strong> ( MLS_USR_SUBJ_3M )</p>
@@ -603,6 +622,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of threds of messages dated during the last three months, in user mailing list archives.</p>
 <p class="desc">Threads are identified using 'In-Reply-To' message headers. User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 1 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 5 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 15 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 30 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="MLS_USR_VOL_3M"><strong>User ML posts</strong> ( MLS_USR_VOL_3M )</p>
@@ -612,6 +632,7 @@
 <p class="desc"><strong>Description</strong>:</p>
 <p class="desc">Number of messages dated during the last three months, in user mailing list archives. </p>
 <p class="desc">User mailing list is the list or lists considered as 'for users' in the project documentation. The date used is the mailing list server date, as stamped in the message. Time range is measured as three calendar months period starting the day before the data retrieval (example: if retrieval is on Feb 3rd, period is from Jan 3rd to Feb 2nd, both included).</p>
+<p class="desc">Note that developer communications are measured through the mailing list, and user communications are measured through the forums.</p>
 <p class="desc"><strong>Scale</strong>: <span class="label label-scale" style="background-color: #FFFF66"> 1 </span> &lt; 2 &le; <span class="label label-scale" style="background-color: #CCF24D;"> 2  </span> &lt; 6 &le; <span class="label label-scale" style="background-color: #99E633;"> 3  </span> &lt; 22 &le; <span class="label label-scale" style="background-color: #66D91A;"> 4  </span> &lt; 103 &le; <span class="label label-scale" style="background-color: #33CC00;"> 5 </span></p>
 </li>
                       <li class="list-group-item"><p id="SCM_COMMITS_3M"><strong>SCM Commits</strong> ( SCM_COMMITS_3M )</p>
